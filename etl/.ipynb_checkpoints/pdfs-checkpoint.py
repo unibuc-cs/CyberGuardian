@@ -22,7 +22,7 @@ stub = modal.Stub(
 
 
 @stub.local_entrypoint()
-def main(json_path="data/llm-papers.json", collection=None, db=None):
+def main(json_path="data/pdfpapers.json", collection=None, db=None):
     """Calls the ETL pipeline using a JSON file with PDF metadata.
 
     modal run etl/pdfs.py --json-path /path/to/json
@@ -131,7 +131,7 @@ def extract_pdf(paper_data):
 
 @stub.function()
 def fetch_papers(collection_name="all-content"):
-    """Fetches papers from the LLM Lit Review, https://tfs.ai/llm-lit-review."""
+    """Fetches other_papers from the LLM Lit Review, https://tfs.ai/llm-lit-review."""
     import docstore
 
     client = docstore.connect()

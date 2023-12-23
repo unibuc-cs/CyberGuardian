@@ -1,14 +1,39 @@
-#import modal
 
 import etl.shared
+import json
 
-"""
-# extend the shared image with PDF-handling dependencies
-image = etl.shared.image.pip_install(
-    "arxiv==1.4.7",
-    "pypdf==3.8.1",
-)
-"""
+def transform_papers_to_json(papers_path):
+    with open(papers_path) as f:
+        pdf_infos = json.load(f)
+
+    # print(pdf_infos[:100:20])
+
+    # E nrich the paper data by finding direct PDF URLs where we can
+    paper_data = map(get_pdf_url, pdf_infos)
+
+    # turn the PDFs into JSON documents
+    it = map(extract_pdf, paper_data)
+    documents = etl.shared.unchunk(it)
+
+    # Test out debug
+    #pp.pprint(documents[0]["metadata"])
+
+    # Split document list into 10 pieces
+    chunked_documents = etl.shared.chunk_into(documents, 10)
+    results = list(map(etl.shared.add_to_document_db, chunked_documents))
+
+    # Pull only arxiv other_papers
+    """
+    query = {"metadata.source": {"$regex": "arxiv\.org", "$options": "i"}}
+    # Project out the text field, it can get large
+    projection = {"text": 0}
+    # get just one result to show it worked
+    result = docstore.query_one(query, projection)
+
+
+    pp.pprint(result)
+    """
+
 
 def main(json_path, collection=None, db=None):
     """Calls the ETL pipeline using a JSON file with PDF metadata.
@@ -46,16 +71,21 @@ def extract_pdf(paper_data):
 
     import arxiv
 
-    from langchain.document_loaders import PyPDFLoader
+    from langchain.document_loaders import PyPDFLoader, PyPDFDirectoryLoader
 
-    pdf_url = paper_data.get("pdf_url")
-    if pdf_url is None:
-        return []
+    pdf_url = None
+    if "folder" in paper_data:
+        loader = PyPDFDirectoryLoader(paper_data["folder"])
+        #docs = loader.load_and_split()
+    else:
+        pdf_url = paper_data.get("pdf_url")
+        if pdf_url is None:
+            return []
 
-    logger = logging.getLogger("pypdf")
-    logger.setLevel(logging.ERROR)
+        logger = logging.getLogger("pypdf")
+        logger.setLevel(logging.ERROR)
 
-    loader = PyPDFLoader(pdf_url)
+        loader = PyPDFLoader(pdf_url)
 
     try:
         documents = loader.load_and_split()
@@ -69,24 +99,27 @@ def extract_pdf(paper_data):
         )
         document.pop("page_content")
 
-    if "arxiv" in pdf_url:
-        arxiv_id = extract_arxiv_id_from_url(pdf_url)
-        # create an arXiV database client with a 5 second delay between requests
-        client = arxiv.Client(page_size=1, delay_seconds=5, num_retries=5)
-        # describe a search of arXiV's database
-        search_query = arxiv.Search(id_list=[arxiv_id], max_results=1)
-        try:
-            # execute the search with the client and get the first result
-            result = next(client.results(search_query))
-        except ConnectionResetError as e:
-            raise Exception("Triggered request limit on arxiv.org, retrying") from e
-        metadata = {
-            "arxiv_id": arxiv_id,
-            "title": result.title,
-            "date": result.updated,
-        }
+    if pdf_url is not None:
+        if "arxiv" in pdf_url:
+            arxiv_id = extract_arxiv_id_from_url(pdf_url)
+            # create an arXiV database client with a 5 second delay between requests
+            client = arxiv.Client(page_size=1, delay_seconds=5, num_retries=5)
+            # describe a search of arXiV's database
+            search_query = arxiv.Search(id_list=[arxiv_id], max_results=1)
+            try:
+                # execute the search with the client and get the first result
+                result = next(client.results(search_query))
+            except ConnectionResetError as e:
+                raise Exception("Triggered request limit on arxiv.org, retrying") from e
+            metadata = {
+                "arxiv_id": arxiv_id,
+                "title": result.title,
+                "date": result.updated,
+            }
+        else:
+            metadata = {"title": paper_data.get("title")}
     else:
-        metadata = {"title": paper_data.get("title")}
+        metadata = {"title": "notknown"}
 
     documents = annotate_endmatter(documents)
 
@@ -107,7 +140,7 @@ def extract_pdf(paper_data):
 
 #@stub.function()
 def fetch_papers(collection_name="all-content"):
-    """Fetches papers from the LLM Lit Review, https://tfs.ai/llm-lit-review."""
+    """Fetches other_papers from the LLM Lit Review, https://tfs.ai/llm-lit-review."""
     import docstore
 
     client = docstore.connect()
@@ -146,6 +179,10 @@ def fetch_papers(collection_name="all-content"):
 
 #@stub.function()
 def get_pdf_url(paper_data):
+
+    if "folder" in paper_data:
+        return paper_data
+
     """Attempts to extract a PDF URL from a paper's URL."""
     url = paper_data["url"]
     if url.strip("#/").endswith(".pdf"):
@@ -167,7 +204,12 @@ def annotate_endmatter(pages, min_pages=3):
     """Heuristic for detecting reference sections."""
     out, after_references = [], False
     for idx, page in enumerate(pages):
-        after_references = False # This change was made because there could be appendices
+
+        # Starting a new chunk ? Then remove after_references
+        if after_references is True and ('metadata' in page and 'page' in page['metadata']):
+            if page['metadata']['page'] == 0:
+                after_references = False
+
         content = page["text"].lower()
         if idx >= min_pages and ("references" in content or "bibliography" in content):
             after_references = True

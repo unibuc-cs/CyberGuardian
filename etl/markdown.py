@@ -1,10 +1,12 @@
-#import modal
-
+from pathlib import Path
+import os
 import etl.shared
+import functools
+import projsecrets
+
+from langchain.document_loaders import BSHTMLLoader
 
 
-# run simple coordinating code locally, with dependency-inducing processing in the cloud
-#@stub.local_entrypoint()
 def main(json_path, collection=None, db=None):
     """Calls the ETL pipeline using a JSON file with markdown file metadata.
     """
@@ -13,39 +15,33 @@ def main(json_path, collection=None, db=None):
     with open(json_path) as f:
         markdown_corpus = json.load(f)
 
-    website_url, md_url = (
-        markdown_corpus["website_url_base"],
-        markdown_corpus["md_url_base"],
-    )
+    for contentName, content in markdown_corpus.items():
+        assert isinstance(content, list)
 
-    lectures = markdown_corpus["lectures"]
+        """
+        allurls = []
+        alltitles = []
+        for entry in content:
+            allurls.append(entry["url"])
+            alltitles.append(entry["title"])
+        """
 
-    documents = (
-        etl.shared.unchunk(  # each lecture creates multiple documents, so we flatten
-            to_documents.map(
-                lectures,
-                kwargs={"website_url": website_url, "md_url": md_url},
-                return_exceptions=True,
+        documents = (
+                etl.shared.unchunk(  # each lecture creates multiple documents, so we flatten
+                map(functools.partial(to_documents), content))
             )
-        )
-    )
 
-    with etl.shared.stub.run():
         chunked_documents = etl.shared.chunk_into(documents, 10)
-        list(
-            etl.shared.add_to_document_db.map(
-                chunked_documents, kwargs={"db": db, "collection": collection}
-            )
-        )
-
+        res = list(map(etl.shared.add_to_document_db, chunked_documents))
+        res = res
 
 #@stub.function(image=image)
-def to_documents(lecture, website_url, md_url):
-    title, title_slug = lecture["title"], lecture["slug"]
-    markdown_url = f"{md_url}/{title_slug}/index.md"
-    website_url = f"{website_url}/{title_slug}"
+def to_documents(content):
+    title = content["title"]
+    website_url = Path("data") / Path("markdowncontent") / content["url"]
 
-    text = get_text_from(markdown_url)
+    """
+    text = get_text_from(website_url)
     headings, heading_slugs = get_target_headings_and_slugs(text)
 
     subtexts = split_by_headings(text, headings)
@@ -54,18 +50,33 @@ def to_documents(lecture, website_url, md_url):
     sources = [f"{website_url}#{heading}" for heading in heading_slugs]
     metadatas = [
         {
-            "source": source,
+            "source": website_url,
             "heading": heading,
             "title": title,
             "full-title": f"{title} - {heading}",
         }
-        for heading, source in zip(headings, sources)
+        for heading, website_url in zip(headings, sources)
     ]
 
     documents = [
         {"text": subtext, "metadata": metadata}
         for subtext, metadata in zip(subtexts, metadatas)
     ]
+    """
+
+    loader = BSHTMLLoader(website_url)
+    data = loader.load()
+
+
+    metadatas = [{
+            "source" : os.path.basename(docData.metadata["source"]),
+            "title" : docData.metadata["title"]}
+        for docData in data]
+
+    documents =  [
+        {"text": docData.page_content.replace("\n", " ").encode("utf-8", errors="replace").decode(),
+         "metadata": metadata}
+        for docData, metadata in zip(data, metadatas)]
 
     documents = etl.shared.enrich_metadata(documents)
 
@@ -92,14 +103,14 @@ def get_target_headings_and_slugs(text):
     parsed_text = markdown_parser(text)
 
     heading_objects = [obj for obj in parsed_text if obj["type"] == "heading"]
-    h2_objects = [obj for obj in heading_objects if obj["level"] == 2]
+    h2_objects = [obj for obj in heading_objects if obj["attrs"]["level"] == 2]
 
     targets = [
         obj
         for obj in h2_objects
-        if not (obj["children"][0]["text"].startswith("description: "))
+        if not (obj["children"][0]["raw"].startswith("description: "))
     ]
-    target_headings = [tgt["children"][0]["text"] for tgt in targets]
+    target_headings = [tgt["children"][0]["raw"] for tgt in targets]
 
     heading_slugs = [slugify(target_heading) for target_heading in target_headings]
 
@@ -115,3 +126,6 @@ def split_by_headings(text, headings):
     texts.append(text)
     texts = list(reversed(texts))
     return texts
+
+if __name__ == "__main__":
+    main("data/webcontent.json")

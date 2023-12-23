@@ -1,18 +1,7 @@
-#import modal
-
 import etl.shared
-
-"""
-# extend the shared image with YouTube-handling dependencies
-image = etl.shared.image.pip_install("youtube-transcript-api==0.6.1", "srt==3.5.3")
-"""
 
 #@stub.local_entrypoint()
 def main(json_path="data/videos.json", collection=None, db=None):
-    """Calls the ETL pipeline using a JSON file with YouTube video metadata.
-
-    modal run etl/videos.py --json-path /path/to/json
-    """
     import json
 
     with open(json_path) as f:
@@ -20,27 +9,27 @@ def main(json_path="data/videos.json", collection=None, db=None):
 
     documents = (
         etl.shared.unchunk(  # each video creates multiple documents, so we flatten
-            extract_subtitles.map(video_infos, return_exceptions=True)
+            map(extract_subtitles, video_infos)
         )
     )
 
-    with etl.shared.stub.run():
-        chunked_documents = etl.shared.chunk_into(documents, 10)
-        list(
-            etl.shared.add_to_document_db.map(
-                chunked_documents, kwargs={"db": db, "collection": collection}
-            )
-        )
+    chunked_documents = etl.shared.chunk_into(documents, 10)
+    res = list(map(etl.shared.add_to_document_db, chunked_documents))
 
-
-#@stub.function(retries=modal.Retries(max_retries=3, backoff_coefficient=2.0, initial_delay=5.0))
 def extract_subtitles(video_info):
     video_id, video_title = video_info["id"], video_info["title"]
     subtitles = get_transcript(video_id)
+    if subtitles is None:
+        return []
+
     chapters = get_chapters(video_id)
+    if chapters is None:
+        return []
+
     chapters = add_transcript(chapters, subtitles)
 
-    documents = create_documents(chapters, video_id, video_title)
+    if subtitles is not None:
+        documents = create_documents(chapters, video_id, video_title)
 
     return documents
 
@@ -63,10 +52,15 @@ def get_chapters(video_id):
     response.raise_for_status()
 
     chapters = response.json()["items"][0]["chapters"]["chapters"]
-    assert len(chapters) >= 0, "Video has no chapters"
+
+    # "Video has no chapters" - add one single
+    if len(chapters) == 0:
+        chapters.append({"thumbnails":None, "time":0, "title":"entire clip"})
+
 
     for chapter in chapters:
-        del chapter["thumbnails"]
+        if chapter["thumbnails"] is not None:
+            del chapter["thumbnails"]
 
     return chapters
 
@@ -145,3 +139,6 @@ def seconds_float_to_timedelta(x_seconds):
     from datetime import timedelta
 
     return timedelta(seconds=x_seconds)
+
+if __name__ == "__main__":
+    main()

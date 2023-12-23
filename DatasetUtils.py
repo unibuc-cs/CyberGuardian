@@ -1,5 +1,7 @@
 """Drops a collection from the document storage."""
 import os
+
+import etl.pdfs
 import projsecrets
 
 import json
@@ -67,41 +69,6 @@ def create_vector_index(collection: str = None, db: str = None):
     vector_index.save_local(folder_path=vecstore.VECTOR_DIR, index_name=vecstore.INDEX_NAME)
     pretty_log(f"vector index {vecstore.INDEX_NAME} created")
 
-def transform_papers_to_json():
-    papers_path = Path("data") / "llm-papers.json"
-
-    with open(papers_path) as f:
-        pdf_infos = json.load(f)
-
-    # print(pdf_infos[:100:20])
-
-    # E nrich the paper data by finding direct PDF URLs where we can
-    paper_data = map(pdfs.get_pdf_url, pdf_infos[::25])
-
-    # turn the PDFs into JSON documents
-    it = map(pdfs.extract_pdf, paper_data)
-    documents = shared.unchunk(it)
-
-    # Store the collection of docs on the server
-    docstore.drop(os.environ["MONGODB_COLLECTION"], os.environ["MONGODB_DATABASE"], os.environ["MONGODB_CLIENT"])
-
-    # Test out debug
-    #pp.pprint(documents[0]["metadata"])
-
-    # Split document list into 10 pieces
-    chunked_documents = shared.chunk_into(documents, 10)
-    results = list(map(shared.add_to_document_db, chunked_documents))
-
-    # Pull only arxiv papers
-    query = {"metadata.source": {"$regex": "arxiv\.org", "$options": "i"}}
-    # Project out the text field, it can get large
-    projection = {"text": 0}
-    # get just one result to show it worked
-    result = docstore.query_one(query, projection)
-
-
-    pp.pprint(result)
-
 def solve_vector_storage():
     VECTOR_DIR = vecstore.VECTOR_DIR
     vector_storage = "vector-vol"
@@ -109,9 +76,21 @@ def solve_vector_storage():
     create_vector_index(os.environ["MONGODB_COLLECTION"], os.environ["MONGODB_DATABASE"])
 
 
-def __main__():
-    transform_papers_to_json()
+def drop_collection():
+    docstore.drop(os.environ["MONGODB_COLLECTION"], os.environ["MONGODB_DATABASE"], os.environ["MONGODB_CLIENT"])
+
+
+def create_knowledge_database():
+    drop_collection()
+
+    etl.pdfs.transform_papers_to_json(Path("data") / "pdfpapers.json")
+    etl.markdown.main(Path("data") / "webcontent.json")
+    etl.videos.main(Path("data") / "videos.json")
+
     solve_vector_storage()
+
+def __main__():
+    create_knowledge_database()
 
 if __name__ == "__main__":
     __main__()

@@ -1,6 +1,35 @@
 [
   {
-    "id": "-Iob-FW5jVM",
-    "title": "Lecture 01: When to Use ML and Course Vision (FSDL 2022)"
+    "id": "Zo5M1lrMU1I",
+    "title" : "Yale Engineering Dean's Invited Speaker Series featuring Royal Hansen, VP, Cybersecurity, Google"
+  },
+  {
+    "id": "bDAY-oUP0DQ",
+    "title": "IBM - Denial of Service Attacks Explained"
+  },
+
+  {
+    "id": "YfzAySXZBls",
+    "title": "2023 Cybersecurity Highlights – TECH Talk Year in Review"
+  },
+  {
+    "id": "kUovJpWqEMk",
+    "title": "CS50 Cybersecurity - Lecture 0 - Securing Accounts"
+  },
+  {
+    "id": "X3DVaMnl5n8",
+    "title": "CS50 Cybersecurity - Lecture 1 - Securing Data"
+  },
+  {
+    "id": "9phdZjF8qOk",
+    "title": "CS50 Cybersecurity - Lecture 2 - Securing Systems"
+  },
+  {
+    "id": "5rsKrTh3fAo",
+    "title": "CS50 Cybersecurity - Lecture 3 - Securing Software"
+  },
+  {
+    "id": "6IeqJtudKnk",
+    "title": "CS50 Cybersecurity - Lecture 4 - Preserving Privacy"
   }
 ]

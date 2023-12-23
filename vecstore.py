@@ -4,7 +4,7 @@ from pathlib import Path
 
 from utils import pretty_log
 
-INDEX_NAME = "dynabicChatbot"
+INDEX_NAME = "knowledgedb"
 VECTOR_DIR = Path(os.environ["VECTOR_DIR"])
 
 
@@ -33,7 +33,7 @@ def get_embedding_engine(**kwargs):
 
 def create_vector_index(index_name, embedding_engine, documents, metadatas):
     """Creates a vector index that offers similarity search."""
-    from langchain import FAISS
+    from langchain.vectorstores import FAISS
 
     files = VECTOR_DIR.glob(f"{index_name}.*")
     if files:

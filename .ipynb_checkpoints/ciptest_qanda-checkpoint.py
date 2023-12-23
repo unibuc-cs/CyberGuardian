@@ -162,7 +162,7 @@ def qanda(query: str, request_id=None, with_logging: bool = False) -> str:
     return answer
 
 def transform_papers_to_json():
-    papers_path = Path("data") / "llm-papers.json"
+    papers_path = Path("data") / "pdfpapers.json"
 
     with open(papers_path) as f:
         pdf_infos = json.load(f)
@@ -186,7 +186,7 @@ def transform_papers_to_json():
     chunked_documents = shared.chunk_into(documents, 10)
     results = list(map(shared.add_to_document_db, chunked_documents))
 
-    # Pull only arxiv papers
+    # Pull only arxiv other_papers
     query = {"metadata.source": {"$regex": "arxiv\.org", "$options": "i"}}
     # Project out the text field, it can get large
     projection = {"text": 0}
