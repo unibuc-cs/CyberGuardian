@@ -31,5 +31,289 @@
   {
     "id": "6IeqJtudKnk",
     "title": "CS50 Cybersecurity - Lecture 4 - Preserving Privacy"
+  },
+  {
+    "id": "MUVFMF9DgM0",
+    "title": "AZ-900 Episode 24 | Azure DDoS Protection | Distributed Denial of Service"
+  },
+  {
+    "id": "Kgn_Y9nkv94",
+    "title": "Protect your web applications using WAF with Azure Front Door | Azure Friday"
+  },
+  {
+    "id": "Kgn_Y9nkv94",
+    "title": "Protect your web applications using WAF with Azure Front Door | Azure Friday"
+  },
+  {
+    "id": "6PK88DDU3K4",
+    "title": "Azure Networking - #13 - Azure Front Door"
+  },
+  {
+    "id": "aCopf4Q9CuE",
+    "title": "Azure Networking - #14 - Azure Load Balancer"
+  },
+  {
+    "id": "yghrkFzaYTU",
+    "title": "Azure Networking - #12 - Azure NAT Gateway"
+  },
+  {
+    "id": "gxsitRRgylI",
+    "title": "Azure Virtual Network Service Endpoints - explained in plain English with a story and demo"
+  },
+  {
+    "id": "bPVaOlJ6ln0",
+    "title": "Cybersecurity: Crash Course Computer Science #31"
+  },  
+  {
+    "id": "_GzE99AmAQU",
+    "title": "Hackers & Cyber Attacks: Crash Course Computer Science #32"
+  },  
+  {
+    "id": "jhXCTbFnK8o",
+    "title": "Cryptography: Crash Course Computer Science #33"
+  },  
+  {
+    "id": "jhXCTbFnK8o",
+    "title": "Cryptography: Crash Course Computer Science #33"
+  }, 
+  {
+    "id": "SSo_EIwHSd4",
+    "title": "How does a blockchain work - Simply Explained"
+  }, 
+  {
+    "id": "QphJEO9ZX6s",
+    "title": "Blockchain Explained"
+  }, 
+  {
+    "id": "cbmBDiR6WaY",
+    "title": "XSS - Cross Site Scripting Explained"
+  }, 
+  {
+    "id": "yJSnggHSH1U",
+    "title": "Reflected XSS (Cross-site Scripting) | CISSPAnswers"
+  }, 
+  {
+    "id": "NIRXtMg-0z8",
+    "title": "Internet Networks & Network Security | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "gmzQgmlR1eI",
+    "title": "The Basics of Computing Security: Linux & SQL | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "Rgl7C0P6NsE",
+    "title": "Cybersecurity Assets, Network Threats & Vulnerabilities | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "Rgl7C0P6NsE",
+    "title": "Cybersecurity Assets, Network Threats & Vulnerabilities | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "gmzQgmlR1eI",
+    "title": "The Basics of Computing Security: Linux & SQL | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "MsGl6lX-YaI",
+    "title": "Cybersecurity IDR: Incident Detection & Response | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "4pe1fn3Gus0",
+    "title": "Fundamentals of Python for Cybersecurity | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "4pe1fn3Gus0",
+    "title": "Fundamentals of Python for Cybersecurity | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "3EgYr7jR4NI",
+    "title": "How To Prepare For Your Cybersecurity Career | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "3EgYr7jR4NI",
+    "title": "How To Prepare For Your Cybersecurity Career | Google Cybersecurity Certificate"
+  }, 
+  {
+    "id": "qjmDDGaGmys",
+    "title": "What Are Threats, Risks, & Vulnerabilities in Cybersecurity? | Google Career Certificates"
+  }, 
+  {
+    "id": "CPlBi_gEToE",
+    "title": "Cybersecurity Incident Detection & Response for Beginners | Google Career Certificates"
+  }, 
+  {
+    "id": "4-hx0L4DQPQ",
+    "title": "Cybersecurity Threats for Beginners | Google Career Certificates"
+  }, 
+  {
+    "id": "S6T51TMBrwM",
+    "title": "Linux Distributions for Cybersecurity | Google Career Certificates"
+  }, 
+  {
+    "id": "-E97kKJTBxc",
+    "title": "Linux in Cybersecurity for Beginners | Google Career Certificates"
+  }, 
+  {
+    "id": "-E97kKJTBxc",
+    "title": "Linux in Cybersecurity for Beginners | Google Career Certificates"
+  }, 
+  {
+    "id": "-E97kKJTBxc",
+    "title": "Linux in Cybersecurity for Beginners | Google Career Certificates"
+  }, 
+  {
+    "id": "JoeiLuFNBc4",
+    "title": "Introduction to Cryptography and Network Security"
+  }, 
+  {
+    "id": "gx0vlRpdFnc",
+    "title": "CIA Triad"
+  }, 
+  {
+    "id": "bRgL_Dry7uw",
+    "title": "Security Services"
+  }, 
+  {
+    "id": "UG26SS9pjwE",
+    "title": "The OSI Security Architecture"
+  }, 
+  {
+    "id": "yIm0Ol9Dg4Y",
+    "title": "Security Attacks"
+  }, 
+  {
+    "id": "zd0U1zNBYNk",
+    "title": "Network Security Model"
+  }, 
+  {
+    "id": "6_Cxj5WKpIw",
+    "title": "Cryptography"
+  }, 
+  {
+    "id": "Xb4_VT4y9kQ",
+    "title": "Cryptography – Key Terms"
+  }, 
+  {
+    "id": "Kejs-saINOo",
+    "title": "Cryptanalysis"
+  }, 
+  {
+    "id": "DoBqnt7Bf24",
+    "title": "Brute Force Attack"
+  }, 
+  {
+    "id": "DoBqnt7Bf24",
+    "title": "Brute Force Attack"
+  }, 
+  {
+    "id": "UJiLgUtddlM",
+    "title": "Classical Encryption Techniques"
+  }, 
+  {
+    "id": "JtbKh_12ctg",
+    "title": "Caesar Cipher (Part 1)"
+  }, 
+  {
+    "id": "na5rapg1XsI",
+    "title": "Caesar Cipher (Part 2)"
+  }, 
+  {
+    "id": "J-utjSeUq_c",
+    "title": "Monoalphabetic Cipher"
+  }, 
+  {
+    "id": "UURjVI5cw4g",
+    "title": "Playfair Cipher (Part 1)"
+  }, 
+  {
+    "id": "whEJfas9MAI",
+    "title": "Playfair Cipher (Part 2)"
+  }, 
+  {
+    "id": "-EQ8UomTrAQ",
+    "title": "Hill Cipher (Encryption)"
+  }, 
+  {
+    "id": "JK3ur6W4rvw",
+    "title": "Hill Cipher (Decryption)"
+  }, 
+  {
+    "id": "Ic4BzVggNY8",
+    "title": "Polyalphabetic Cipher (Vigenère Cipher)"
+  }, 
+  {
+    "id": "Qojvtgf7SQw",
+    "title": "Polyalphabetic Cipher (Vernam Cipher)"
+  }, 
+  {
+    "id": "6iYqHn3q8sY",
+    "title": "One Time Pad"
+  }, 
+  {
+    "id": "knE4G8DGLoY",
+    "title": "Rail Fence Technique"
+  }, 
+  {
+    "id": "cPQXaYUMOjQ",
+    "title": "Row Column Transposition Ciphering Technique"
+  }, 
+  {
+    "id": "Te8Cao2Smsk",
+    "title": "Steganography"
+  }, 
+  {
+    "id": "yNo58UiIMKU",
+    "title": "LSB Steganography - Demo"
+  }, 
+  {
+    "id": "5J3l894CiMI",
+    "title": "Prime Numbers in Cryptography"
+  }, 
+  {
+    "id": "j53iXhTSi_s",
+    "title": "Introduction to Data Encryption Standard (DES)"
+  }, 
+  {
+    "id": "nynAQ593HdU",
+    "title": "Single Round of DES Algorithm"
+  }, 
+  {
+    "id": "OePPcJR--F4",
+    "title": "The F Function of DES (Mangler Function)"
+  }, 
+  {
+    "id": "S-vLA7d1ORI",
+    "title": "Key Scheduling and Decryption in DES"
+  }, 
+  {
+    "id": "kF_h9gl-vyw",
+    "title": "Avalanche Effect and the Strength of DES"
+  }, 
+  {
+    "id": "3MPkc-PFSRI",
+    "title": "Introduction to Advanced Encryption Standard (AES)"
+  }, 
+  {
+    "id": "4KiwoeDJFiA",
+    "title": "AES Encryption and Decryption"
+  }, 
+  {
+    "id": "IpuvKyeCrvU",
+    "title": "AES Round Transformation"
+  }, 
+  {
+    "id": "0RxLUf4fxs8",
+    "title": "AES Key Expansion"
+  }, 
+  {
+    "id": "oQuBvLAKUM8",
+    "title": "AES Security and Implementation Aspects"
+  }, 
+  {
+    "id": "4R_kocR1roM",
+    "title": "Multiple Encryption and Triple DES"
+  }, 
+  {
+    "id": "D0vR6YNRCww",
+    "title": "How to defend against denial-of-service attacks with Azure DDoS Protection | Azure Friday"
   }
 ]
