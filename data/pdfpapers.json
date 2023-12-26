@@ -6,6 +6,204 @@
     "url": "https://arxiv.org/abs/2312.14018"
   },
   {
+    "tags": [
+      "Software Security, Hardware Security, Evolution of Malware"]
+    "title": "Cybersecurity: Past, Present and Future",
+    "url": "https://arxiv.org/abs/2207.01227"
+  },
+  {
+    "tags": [
+      "Cybersecurity in Democracy"],
+    "title": "Cybersecurity Considerations for the Democratic Process for  Latin America and the Caribbean",
+    "url": "https://www.oas.org/en/sms/cicte/docs/ENG-Cybersecurity-Democratic-Process-LAC"
+  },
+  {
+    "tags": [
+      "Healthcare Cybersecurity"],
+    "title": "Healthcare Sector Cybersecurity",
+    "url": "https://aspr.hhs.gov/cyber/Documents/Health-Care-Sector-Cybersecurity-Dec2023-508"
+  },
+  {
+    "tags": [
+      "Financial Cybersecurity"],
+    "title": "Cybersecurity Risk Supervision",
+    "url": "https://www.imf.org/en/Publications/Departmental-Papers-Policy-Papers/Issues/2019/09/23/Cybersecurity-Risk-Supervision-46238"
+  },
+  {
+    "tags": [
+      "Cybersecurity in Energy"],
+    "title": "Benchmark Evaluation of Anomaly-Based Intrusion Detection Systems in the Context of Smart Grids",
+    "url": "https://arxiv.org/abs/2312.13705"
+  },
+  {
+    "tags": [
+      "Cybersecurity in Energy"],
+    "title": "Fortify Your Defenses: Strategic Budget Allocation to Enhance Power Grid Cybersecurity",
+    "url": "https://arxiv.org/abs/2312.13476"
+  },
+  {
+    "tags": [
+      "Cybersecurity, EV"],
+    "title": "DynamiQS: Quantum Secure Authentication for Dynamic Charging of Electric Vehicles",
+    "url": "https://arxiv.org/abs/2312.12879"
+  },
+  {
+    "tags": [
+      "Infrastracture Security, AI"],
+    "title": "Prometheus: Infrastructure Security Posture Analysis with AI-generated Attack Graphss",
+    "url": "https://arxiv.org/abs/2312.13119"
+  },
+  {
+    "tags": [
+      "Infrastracture Security, AI"],
+    "title": "Prometheus: Infrastructure Security Posture Analysis with AI-generated Attack Graphs",
+    "url": "https://arxiv.org/abs/2312.13119"
+  },
+  {
+    "tags": [
+      "Cybersecurity, Malware detection with AI"],
+    "title": "Towards an in-depth detection of malware using distributed QCNN",
+    "url": "https://arxiv.org/abs/2312.12161"
+  },
+  {
+    "tags": [
+      "Smart Home"],
+    "title": "Applications, Systems and Methods in Smart Home Technology: A Review",
+    "url": "https://www.academia.edu/download/33169395/4"
+  },
+  {
+    "tags": [
+      "Smart Home"],
+    "title": "Categories and functionality of smart home technology for energy management",
+    "url": "https://escholarship.org/content/qt7n05h3t7/qt7n05h3t7"
+  },
+  {
+    "tags": [
+      "Smart Home"],
+    "title": "Smart-home technologies to assist older people to live well at home",
+    "url": "https://dro.deakin.edu.au/articles/journal_contribution/Smart-home_technologies_to_assist_older_people_to_live_well_at_home/20951680/1/files/37236460"
+  },
+  {
+    "tags": [
+      "Smart Home in Healthcare"],
+    "title": "Health smart home: information technology for patients at home",
+    "url": "https://www.academia.edu/download/87667821/1530562026050753020220617-1-110l0iv"
+  },
+  {
+    "tags": [
+      "Smart Home Barriers"],
+    "title": "Pre-installation challenges: classifying barriers to the introduction of smart home technology",
+    "url": "https://repository.lboro.ac.uk/articles/Pre-installation_challenges_classifying_barriers_to_the_introduction_of_smart_home_technology/9341294/files/16949999"
+  },
+  {
+    "tags": [
+      "Smart Home Research"],
+    "title": "“Home is where the smart is”? Evaluating smart home research and approaches against the concept of home",
+    "url": "https://ora.ox.ac.uk/objects/uuid:3d5ca446-c101-42de-b965-b244afcf415c/download_file?file_format=application%2Fpdf&safe_filename=Home%2Bis%2Bwhere%2Bthe%2Bsmart%2Bis.%2Bsubmitted_150917"
+  },
+  {
+    "tags": [
+      "Smart Home Adoption"],
+    "title": "Are households ready to engage with smart home technology?",
+    "url": "https://eprints.qut.edu.au/133424/1/Manuscript_Unformatted_Authors%20copy"
+  },
+  {
+    "tags": [
+      "Smart Home"],
+    "title": "Smart home system",
+    "url": "https://www.academia.edu/download/36584215/12.JACS10087"
+  },
+  {
+    "tags": [
+      "Smart Home"],
+    "title": "Critically reviewing smart home technology applications and business models in Europe",
+    "url": "https://www.academia.edu/download/85715447/02052020-Manuscript-Final_20JEPO"
+  },
+  {
+    "tags": [
+      "Smart Home"],
+    "title": "An ecological view of smart home technologies",
+    "url": "https://inria.hal.science/hal-01211137/file/Crowley-Ami2015v3"
+  },
+  {
+    "tags": [
+      "Smart Home"],
+    "title": "Smart home technologies: Insights into generation-specific acceptance motives",
+    "url": "https://www.academia.edu/download/41562071/Smart_Home_Technologies_Insights_into_Ge20160125-3193-30g1d9"
+  },
+  {
+    "tags": [
+      "Smart Home"],
+    "title": "Energy impacts of smart home technologies",
+    "url": "https://www.aceee.org/sites/default/files/publications/researchreports/a1801"
+  },
+  {
+    "tags": [
+      "DNA Cryptography"],
+    "title": "New field of cryptography: DNA cryptography",
+    "url": "https://www.researchgate.net/profile/Xuejia-Lai/publication/227268565_New_field_of_cryptography_DNA_cryptography/links/583cefae08ae502a85e3edbf/New-field-of-cryptography-DNA-cryptography"
+  },
+  {
+    "tags": [
+      "Cryptography"],
+    "title": "Cryptography: A comparative analysis for modern techniques",
+    "url": "https://pdfs.semanticscholar.org/8331/4e07dfb9d15145fa79734f63e47932866101"
+  },
+  {
+    "tags": [
+      "Cryptography"],
+    "title": "Kleptography: Using cryptography against cryptography",
+    "url": "https://www.researchgate.net/profile/Moti-Yung/publication/221348188_Kleptography_Using_Cryptography_Against_Cryptography/links/00b7d53b88cb0ca63f000000/Kleptography-Using-Cryptography-Against-Cryptography"
+  },
+  {
+    "tags": [
+      "Quantum Cryptography"],
+    "title": "Quantum cryptography",
+    "url": "https://cds.cern.ch/record/242059/files/C92-01-25_Proceedings"
+  },
+  {
+    "tags": [
+      "Quantum Cryptography"],
+    "title": "Cryptography in a Quantum World",
+    "url": "https://arxiv.org/abs/0806.3483"
+  },
+  {
+    "tags": [
+      "Quantum Cryptography"],
+    "title": "Securing the Internet of Things in a quantum world",
+    "url": "http://www.cs.unb.ca/~rlu1/paper/ChengLAT17"
+  },  
+  {
+    "tags": [
+      "Quantum Cryptography"],
+    "title": "Introduction to post-quantum cryptography",
+    "url": "http://cr.yp.to/talks/2022.08.25/slides-dan+tanja-20220825-pqcrypto-16x9.pdf"
+  },
+  {
+    "tags": [
+      "Quantum Cryptography"],
+    "title": "Quantum cryptography in algorithmica",
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3564246.3585225"
+  },
+  {
+    "tags": [
+      "Cybersecurity, Cloud Computing"],
+    "title": "Network security for virtual machine in cloud computing",
+    "url": "https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=01bb6d0a18d0e8c90527c5d9ffd20bedf5a71664"
+  },
+  {
+    "tags": [
+      "Cybersecurity, Cloud Computing"],
+    "title": "CloudWatcher: Network security monitoring using OpenFlow in dynamic cloud networks (or: How to provide security monitoring as a service in clouds?)",
+    "url": "https://koasas.kaist.ac.kr/bitstream/10203/205916/1/cloudwatcher"
+  },
+  {
+    "tags": [
+      "Cybersecurity, Cloud Computing"],
+    "title": "Improving cloud network security using the Tree-Rule firewall",
+    "url": "https://research.utwente.nl/files/6779068/1-s2.0-S0167739X13001386-main"
+  },
+  {
     "folder": "data/papers"
   }
 ]
