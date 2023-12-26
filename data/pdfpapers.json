@@ -202,6 +202,1210 @@
       "Cybersecurity, Cloud Computing"],
     "title": "Improving cloud network security using the Tree-Rule firewall",
     "url": "https://research.utwente.nl/files/6779068/1-s2.0-S0167739X13001386-main"
+=======
+      "Criptography", "Security"],
+    "title": "A Survey on Post-Quantum Cryptography: State-of-the-Art and Challenges",
+    "url": "https://arxiv.org/abs/2312.10430"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Unclonable Cryptography with Unbounded Collusions",
+    "url": "https://arxiv.org/abs/2311.18318"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Unclonable Cryptography in the Plain Model",
+    "url": "https://arxiv.org/abs/2311.16663"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Subsets of groups in public-key cryptography",
+    "url": "https://arxiv.org/abs/2311.15039"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A Modular Approach to Unclonable Cryptography",
+    "url": "https://arxiv.org/abs/2311.11890"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "DNA Encoded Elliptic Curve Cryptography System for IoT Security",
+    "url": "https://arxiv.org/abs/2311.11393"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "An Efficient Elliptic Curve Cryptography Arithmetic Using Nikhilam Multiplication",
+    "url": "https://arxiv.org/abs/2311.11392"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "QKD Entity Source Authentication: Defense-in-Depth for Post Quantum Cryptography",
+    "url": "https://arxiv.org/abs/2311.10636"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Homomorphic Polynomial Public Key Cryptography for Quantum-secure Digital Signature",
+    "url": "https://arxiv.org/abs/2311.08967"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "On the Masking-Friendly Designs for Post-Quantum Cryptography",
+    "url": "https://arxiv.org/abs/2311.08040"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Robust Constant-Time Cryptography",
+    "url": "https://arxiv.org/abs/2311.05831"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A Comprehensive Survey of Threshold Digital Signatures: NIST Standards, Post-Quantum Cryptography, Exotic Techniques, and Real-World Applications",
+    "url": "https://arxiv.org/abs/2311.05514"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A one-query lower bound for unitary synthesis and breaking quantum cryptography",
+    "url": "https://arxiv.org/abs/2310.08870"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Comparing AI Algorithms for Optimizing Elliptic Curve Cryptography Parameters in Third-Party E-Commerce Integrations: A Pre-Quantum Era Analysis",
+    "url": "https://arxiv.org/abs/2310.06752"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Mathematical problems and solutions of the Ninth International Olympiad in Cryptography NSUCRYPTO",
+    "url": "https://arxiv.org/abs/2310.05641"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Red Teaming Generative AI/NLP, the BB84 quantum cryptography protocol and the NIST-approved Quantum-Resistant Cryptographic Algorithms",
+    "url": "https://arxiv.org/abs/2310.04425"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Tropical cryptography III: digital signatures",
+    "url": "https://arxiv.org/abs/2309.11256"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Cryptography: Against AI and QAI Odds",
+    "url": "https://arxiv.org/abs/2309.07022"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Security Analysis of Pairing-based Cryptography",
+    "url": "https://arxiv.org/abs/2309.04693"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Study of Zero-Knowledge protocols and Elliptic Curve Cryptography and their implementation in Smart Card environments using Java Card",
+    "url": "https://arxiv.org/abs/2308.16666"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "How does post-quantum cryptography affect Central Bank Digital Currency?",
+    "url": "https://arxiv.org/abs/2308.15787"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Applications of Finite non-Abelian Simple Groups to Cryptography in the Quantum Era",
+    "url": "https://arxiv.org/abs/2308.14725"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Reinforcing Security and Usability of Crypto-Wallet with Post-Quantum Cryptography and Zero-Knowledge Proof",
+    "url": "https://arxiv.org/abs/2308.07309"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "PQC-HA: A Framework for Prototyping and In-Hardware Evaluation of Post-Quantum Cryptography Hardware Accelerators",
+    "url": "https://arxiv.org/abs/2308.06621"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Migrating to Post-Quantum Cryptography: a Framework Using Security Dependency Analysis",
+    "url": "https://arxiv.org/abs/2307.06520"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Lightweight usable cryptography: a usability evaluation of the Ascon 1.2 family",
+    "url": "https://arxiv.org/abs/2307.05504"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A Cryptography Inspired Model for Non-local Correlations: Decrypting the Enigmas",
+    "url": "https://arxiv.org/abs/2307.03395"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Cryptography and Key Management Schemes for Wireless Sensor Networks",
+    "url": "https://arxiv.org/abs/2307.00872"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Cuckoo Hashing in Cryptography: Optimal Parameters, Robustness and Applications",
+    "url": "https://arxiv.org/abs/2306.11220"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Quantum Cryptography for Enhanced Network Security: A Comprehensive Survey of Research, Developments, and Future Directions",
+    "url": "https://arxiv.org/abs/2306.09248"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Cryptography approach for Secure Outsourced Data Storage in Cloud Environment",
+    "url": "https://arxiv.org/abs/2306.08322"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Modification in Elliptic Curve Cryptography based Mutual authentication scheme for smart grid communication using biometric approach",
+    "url": "https://arxiv.org/abs/2306.08002"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "SXVCS: An XOR-based Visual Cryptography Scheme without Noise via Linear Algebra",
+    "url": "https://arxiv.org/abs/2305.14168"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Secure Communication Model For Quantum Federated Learning: A Post Quantum Cryptography (PQC) Framework",
+    "url": "https://arxiv.org/abs/2304.13413"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A Comprehensive Survey on the Implementations, Attacks, and Countermeasures of the Current NIST Lightweight Cryptography Standard",
+    "url": "https://arxiv.org/abs/2304.06222"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Code-based Cryptography: Lecture Notes",
+    "url": "https://arxiv.org/abs/2304.03541"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Applying of The new Integral KAJ Transform in Cryptography",
+    "url": "https://arxiv.org/abs/2303.17340"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Review of the NIST Light-weight Cryptography Finalists",
+    "url": "https://arxiv.org/abs/2303.14785"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Decoding algorithm for HL-codes and performance of the DHH-cryptosystem -- a candidate for post-quantum cryptography",
+    "url": "https://arxiv.org/abs/2303.09820"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Revocable Cryptography from Learning with Errors",
+    "url": "https://arxiv.org/abs/2302.14860"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Designing a Visual Cryptography Curriculum for K-12 Education",
+    "url": "https://arxiv.org/abs/2302.11655"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "CryptoScratch: Developing and evaluating a block-based programming tool for teaching K-12 cryptography education using Scratch",
+    "url": "https://arxiv.org/abs/2302.11606"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "One-out-of-Many Unclonable Cryptography: Definitions, Constructions, and More",
+    "url": "https://arxiv.org/abs/2302.09836"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Homomorphic Hashing Based on Elliptic Curve Cryptography",
+    "url": "https://arxiv.org/abs/2302.03290"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Generalized Uncertainty Principles for Quantum Cryptography",
+    "url": "https://arxiv.org/abs/2302.01026"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "XCRYPT: Accelerating Lattice Based Cryptography with Memristor Crossbar Arrays",
+    "url": "https://arxiv.org/abs/2302.00095"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Secure synchronization of artificial neural networks used to correct errors in quantum cryptography",
+    "url": "https://arxiv.org/abs/2301.11440"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Code-based Cryptography in IoT: A HW/SW Co-Design of HQC",
+    "url": "https://arxiv.org/abs/2301.04888"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Realization Scheme for Visual Cryptography with Computer-generated Holograms",
+    "url": "https://arxiv.org/abs/2212.11233"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Use of Cryptography in Malware Obfuscation",
+    "url": "https://arxiv.org/abs/2212.04008"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Quantum Cryptography in Algorithmica",
+    "url": "https://arxiv.org/abs/2212.00879"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Applications of Quantum Annealing in Cryptography",
+    "url": "https://arxiv.org/abs/2211.10076"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Secret Sharing for Generic Theoretic Cryptography",
+    "url": "https://arxiv.org/abs/2211.01658"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Real-World Chaos-Based Cryptography Using Synchronised Chua Chaotic Circuits",
+    "url": "https://arxiv.org/abs/2210.11299"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "",
+    "url": ""
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Authentication and encryption for a robotic ad hoc network using identity-based cryptography",
+    "url": "https://arxiv.org/abs/2209.11861"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Integral Sampler and Polynomial Multiplication Architecture for Lattice-based Cryptography",
+    "url": "https://arxiv.org/abs/2208.14270"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Categorical composable cryptography: extended version",
+    "url": "https://arxiv.org/abs/2208.13232"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A Tutorial Introduction to Lattice-based Cryptography and Homomorphic Encryption",
+    "url": "https://arxiv.org/abs/2208.08125"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Near Threshold Computation of Partitioned Ring Learning With Error (RLWE) Post Quantum Cryptography on Reconfigurable Architecture",
+    "url": "https://arxiv.org/abs/2208.08093"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Using identity-based cryptography in mobile applications",
+    "url": "https://arxiv.org/abs/2208.06594"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Computation of Trusted Short Weierstrass Elliptic Curves for Cryptography",
+    "url": "https://arxiv.org/abs/2208.01635"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Evaluation of Computational Approaches of Short Weierstrass Elliptic Curves for Cryptography",
+    "url": "https://arxiv.org/abs/2208.01634"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "SALSA: Attacking Lattice Cryptography with Transformers",
+    "url": "https://arxiv.org/abs/2207.04785"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "RQC revisited and more cryptanalysis for Rank-based Cryptography",
+    "url": "https://arxiv.org/abs/2207.01410"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Linear recurrent cryptography: golden-like cryptography for higher order linear recurrences",
+    "url": "https://arxiv.org/abs/2206.11411"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Securing the Future Internet of Things with Post-Quantum Cryptography",
+    "url": "https://arxiv.org/abs/2206.10473"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "LNGate2: Secure Bidirectional IoT Micro-payments using Bitcoin's Lightning Network and Threshold Cryptography",
+    "url": "https://arxiv.org/abs/2206.02248"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Multiplierless Design of Very Large Constant Multiplications in Cryptography",
+    "url": "https://arxiv.org/abs/2205.10591"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Public key cryptography based on skew dihedral group rings",
+    "url": "https://arxiv.org/abs/2205.02997"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Interactivity in Constructive Cryptography : Modeling and Applications to Updatable Encryption and Private Information Retrieval",
+    "url": "https://arxiv.org/abs/2204.11653"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Cryptography Is Not Enough: Relay Attacks on Authenticated GNSS Signals",
+    "url": "https://arxiv.org/abs/2204.11641"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "An overview of the Eight International Olympiad in Cryptography \"Non-Stop University CRYPTO\"",
+    "url": "https://arxiv.org/abs/2204.11502"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "PiouCrypt: Decentralized Lattice-based Method for Visual Symmetric Cryptography",
+    "url": "https://arxiv.org/abs/2204.08017"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Post-Quantum Cryptography Algorithms Standardization and Performance Analysis",
+    "url": "https://arxiv.org/abs/2204.02571"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "On the Sustainability of Lightweight Cryptography Based on PUFs Implemented on NAND Flash Memories Using Programming Disturbances",
+    "url": "https://arxiv.org/abs/2204.02498"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "cryptolib: Comparing and selecting cryptography libraries (long version of EICC 2022 publication)",
+    "url": "https://arxiv.org/abs/2203.16370"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "The root extraction problem in braid group-based cryptography",
+    "url": "https://arxiv.org/abs/2203.15898"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A Memristive Based Design of a Core Digital Circuit for Elliptic Curve Cryptography",
+    "url": "https://arxiv.org/abs/2203.14358"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A novel public key cryptography based on generalized Lucas matrices",
+    "url": "https://arxiv.org/abs/2202.08156"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Group-based Cryptography in the Quantum Era",
+    "url": "https://arxiv.org/abs/2202.05917"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Post Quantum Cryptography: Techniques, Challenges, Standardization, and Directions for Future Research",
+    "url": "https://arxiv.org/abs/2202.02826"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "A Survey on Code-Based Cryptography",
+    "url": "https://arxiv.org/abs/2201.07119"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Online Unplugged and Block-Based Cryptography in Grade 10",
+    "url": "https://arxiv.org/abs/2112.10437"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Public key cryptography based on twisted dihedral group algebras",
+    "url": "https://arxiv.org/abs/2112.07798"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Quantum-Resistant Cryptography",
+    "url": "https://arxiv.org/abs/2112.00399"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Cryptography Vulnerabilities on HackerOne",
+    "url": "https://arxiv.org/abs/2111.03859"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "High-Speed VLSI Architectures for Modular Polynomial Multiplication via Fast Filtering and Applications to Lattice-Based Cryptography",
+    "url": "https://arxiv.org/abs/2110.12127"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Worrisome Patterns in Developers: A Survey in Cryptography",
+    "url": "https://arxiv.org/abs/2109.14363"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "On computations with Double Schubert Automaton and stable maps of Multivariate Cryptography",
+    "url": "https://arxiv.org/abs/2108.08288"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "FluentCrypto: Cryptography in Easy Mode",
+    "url": "https://arxiv.org/abs/2108.07211"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "LNGate: Powering IoT with Next Generation Lightning Micro-payments using Threshold Cryptography",
+    "url": "https://arxiv.org/abs/2105.08902"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Categorical composable cryptography",
+    "url": "https://arxiv.org/abs/2105.05949"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Providing a hybrid cryptography algorithm for lightweight authentication protocol in RFID with urban traffic usage case",
+    "url": "https://arxiv.org/abs/2104.07714"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Hurdles for Developers in Cryptography",
+    "url": "https://arxiv.org/abs/2108.07141"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "An authentication model based on cryptography",
+    "url": "https://arxiv.org/abs/2108.06807"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Hidden Cosets and Applications to Unclonable Cryptography",
+    "url": "https://arxiv.org/abs/2107.05692"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Comparative Analysis of Impact of Cryptography Algorithms on Wireless Sensor Networks",
+    "url": "https://arxiv.org/abs/2107.01810"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "The Seventh International Olympiad in Cryptography: problems and solutions",
+    "url": "https://arxiv.org/abs/2106.01053"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Improving Utility of Differentially Private Mechanisms through Cryptography-based Technologies: a Survey",
+    "url": "https://arxiv.org/abs/2011.00976"
+  },
+  {
+    "tags": [
+      "Criptography", "Security"],
+    "title": "Java Cryptography Uses in the Wild",
+    "url": "https://arxiv.org/abs/2009.01101"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Dynamic Mining Interval to Improve Blockchain Throughput",
+    "url": "https://arxiv.org/abs/2312.14038"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "How Does Stake Distribution Influence Consensus? Analyzing Blockchain Decentralization",
+    "url": "https://arxiv.org/abs/2312.13938"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Investigating Assumptions and Proposals for Blockchain Integration in the Circular Economy. A Delphi Study",
+    "url": "https://arxiv.org/abs/2312.13774"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Research on the Development of Blockchain-based Distributed Intelligent Healthcare Industry -- A Policy Analysis Perspective",
+    "url": "https://arxiv.org/abs/2312.12817"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Blockchain-Based Identity Authentication Oriented to Multi-Cluster UAV Networking",
+    "url": "https://arxiv.org/abs/2312.12381"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Approval-Based Committee Voting in Practice: A Case Study of (Over-)Representation in the Polkadot Blockchain",
+    "url": "https://arxiv.org/abs/2312.11408"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Healthcare Policy Compliance: A Blockchain Smart Contract-Based Approach",
+    "url": "https://arxiv.org/abs/2312.10214"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Directed Acyclic Graph Based Blockchain Systems",
+    "url": "https://arxiv.org/abs/2312.09816"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "MRL-PoS: A Multi-agent Reinforcement Learning based Proof of Stake Consensus Algorithm for Blockchain",
+    "url": "https://arxiv.org/abs/2312.09123"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Gas Cost Analysis of Proxy and Diamond Patterns: Towards Trusted Smart Contract Engineering in EVM Blockchains",
+    "url": "https://arxiv.org/abs/2312.08945"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Symbiotic Blockchain Consensus: Cognitive Backscatter Communications-enabled Wireless Blockchain Consensus",
+    "url": "https://arxiv.org/abs/2312.08899"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Performance evaluation of Private and Public Blockchains for multi-cloud service federation",
+    "url": "https://arxiv.org/abs/2312.08510"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "ConChain: A Scheme for Contention-free and Attack Resilient BlockChain",
+    "url": "https://arxiv.org/abs/2312.08305"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Scaling Culture in Blockchain Gaming: Generative AI and Pseudonymous Engagement",
+    "url": "https://arxiv.org/abs/2312.07693"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Transformation rules for the decentralization of a blockchain-extended global process model",
+    "url": "https://arxiv.org/abs/2312.07388"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Blockchain-Based Security Architecture for Unmanned Aerial Vehicles in B5G/6G Services and Beyond: A Comprehensive Approach",
+    "url": "https://arxiv.org/abs/2312.06928"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "The Internet of Responsibilities-Connecting Human Responsibilities using Big Data and Blockchain",
+    "url": "https://arxiv.org/abs/2312.04729"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "MuFuzz: Sequence-Aware Mutation and Seed Mask Guidance for Blockchain Smart Contract Fuzzing",
+    "url": "https://arxiv.org/abs/2312.04512"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Dynamic Data-Driven Digital Twins for Blockchain Systems",
+    "url": "https://arxiv.org/abs/2312.04226"
+  },
+  {
+    "tags": [
+      "Blockchain", "Networking"],
+    "title": "TI-DNS: A Trusted and Incentive DNS Resolution Architecture based on Blockchain",
+    "url": "https://arxiv.org/abs/2312.04114"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Blockchain Participation Games",
+    "url": "https://arxiv.org/abs/2312.02769"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "ESP2CS: Securing Internet of Vehicles through Blockchain-enabled Communications and Payments",
+    "url": "https://arxiv.org/abs/2312.02589"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Towards Blockchain-based Remote Management Systems for Patients with Movement Disorders",
+    "url": "https://arxiv.org/abs/2312.02556"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Driver Safety Reward with Cooperative Platooning using Blockchain",
+    "url": "https://arxiv.org/abs/2312.02164"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "DFTWS for blockchain: Deterministic, Fair and Transparent Winner Selection",
+    "url": "https://arxiv.org/abs/2312.01951"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Lennard Jones Token: a blockchain solution to scientific data curation",
+    "url": "https://arxiv.org/abs/2312.00902"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Crystal: Enhancing Blockchain Mining Transparency with Quorum Certificate",
+    "url": "https://arxiv.org/abs/2312.00741"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Applicability of Blockchain Technology in Avionics Systems",
+    "url": "https://arxiv.org/abs/2312.00681"
+  },
+  {
+    "tags": [
+      "Blockchain", "Threats", "Security"],
+    "title": "Unveiling the Landscape of Smart Contract Vulnerabilities: A Detailed Examination and Codification of Vulnerabilities in Prominent Blockchains",
+    "url": "https://arxiv.org/abs/2312.00499"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Scale-out Decentralized Blockchain Ledger System for Web3.0",
+    "url": "https://arxiv.org/abs/2312.00281"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Tokenized Model: A Blockchain-Empowered Decentralized Model Ownership Verification Platform",
+    "url": "https://arxiv.org/abs/2312.00048"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "FBChain: A Blockchain-based Federated Learning Model with Efficiency and Secure Communication",
+    "url": "https://arxiv.org/abs/2312.00035"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Decentralized Deepfake Detection Blockchain Network using Dynamic Algorithm management",
+    "url": "https://arxiv.org/abs/2311.18545"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Eden: An Ultra Fast, Provably Secure, and Fully Decentralized Blockchain Interoperability Protocol",
+    "url": "https://arxiv.org/abs/2311.17454"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Blockchain-based Zero Trust on the Edge",
+    "url": "https://arxiv.org/abs/2311.16744"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "VeryFL: A Verify Federated Learning Framework Embedded with Blockchain",
+    "url": "https://arxiv.org/abs/2311.15617"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "An End-to-End Performance Comparison of Seven Permissioned Blockchain Systems",
+    "url": "https://arxiv.org/abs/2311.15433"
+  },
+  {
+    "tags": [
+      "Blockchain", "Threats", "Security"],
+    "title": "Challenges in Blockchain as a Solution for IoT Ecosystem Threats and Access Control: A Survey",
+    "url": "https://arxiv.org/abs/2311.15290"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Forecasting Cryptocurrency Prices Using Deep Learning: Integrating Financial, Blockchain, and Text Data",
+    "url": "https://arxiv.org/abs/2311.14759"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Decoding Social Sentiment in DAO: A Comparative Analysis of Blockchain Governance Communities",
+    "url": "https://arxiv.org/abs/2311.14676"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Blockchain Solution for Collaborative Machine Learning over IoT",
+    "url": "https://arxiv.org/abs/2311.14136"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Survey of Blockchain, Artificial Intelligence, and Edge Computing for Web 3.0",
+    "url": "https://arxiv.org/abs/2311.13731"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Serial Monopoly on Blockchains",
+    "url": "https://arxiv.org/abs/2311.12731"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Heuristics for Detecting CoinJoin Transactions on the Bitcoin Blockchain",
+    "url": "https://arxiv.org/abs/2311.12491"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Private and Secure Post-Quantum Verifiable Random Function with NIZK Proof and Ring-LWE Encryption in Blockchain",
+    "url": "https://arxiv.org/abs/2311.11734"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Towards Stronger Blockchains: Security Against Front-Running Attacks",
+    "url": "https://arxiv.org/abs/2311.10253"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "On the Relevance of Blockchain Evaluations on Bare Metal",
+    "url": "https://arxiv.org/abs/2311.09440"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Moonrise: Novel and Cartoon Writing System Built Upon Blockchain Systems",
+    "url": "https://arxiv.org/abs/2311.08684"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A New Paradigm in Blockchain-based Financial Aid Distribution",
+    "url": "https://arxiv.org/abs/2311.08494"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Exploration of Hyperledger Besu in Designing Private Blockchain-based Financial Distribution Systems",
+    "url": "https://arxiv.org/abs/2311.08483"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Generalized Hybrid Search and Applications to Blockchain and Hash Function Security",
+    "url": "https://arxiv.org/abs/2311.03723"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "BlockEmulator: An Emulator Enabling to Test Blockchain Sharding Protocols",
+    "url": "https://arxiv.org/abs/2311.03612"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "DonationChain: A New Platform for Blockchain-Based Donation-Tracking System",
+    "url": "https://arxiv.org/abs/2311.03573"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Aid Nexus : A Blockchain Based Financial Distribution System",
+    "url": "https://arxiv.org/abs/2311.08372"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "SeDe: Balancing Blockchain Privacy and Regulatory Compliance by Selective De-Anonymization",
+    "url": "https://arxiv.org/abs/2311.08167"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Robust softmax aggregation on blockchain based federated learning with convergence guarantee",
+    "url": "https://arxiv.org/abs/2311.07027"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Blockchain-Enabled Federated Learning Approach for Vehicular Networks",
+    "url": "https://arxiv.org/abs/2311.06372"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Deep Learning meets Blockchain for Automated and Secure Access Control",
+    "url": "https://arxiv.org/abs/2311.06236"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Proposal for a Lean and Functional Delivery versus Payment across two Blockchains",
+    "url": "https://arxiv.org/abs/2311.05966"
+  },
+  {
+    "tags": [
+      "Blockchain", "Networking"],
+    "title": "DAG-Sword: A Simulator of Large-Scale Network Topologies for DAG-Oriented Proof-of-Work Blockchains",
+    "url": "https://arxiv.org/abs/2311.04638"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "RecAGT: Shard Testable Codes with Adaptive Group Testing for Malicious Nodes Identification in Sharding Permissioned Blockchain",
+    "url": "https://arxiv.org/abs/2311.02582"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Dynamic Redundancy-aware Blockchain-based Partial Computation Offloading for the Metaverse in In-network Computing",
+    "url": "https://arxiv.org/abs/2311.01914"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Survey on Coin Selection Algorithms in UTXO-based Blockchains",
+    "url": "https://arxiv.org/abs/2311.01113"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "healthAIChain: Improving security and safety using Blockchain Technology applications in AI-based healthcare systems",
+    "url": "https://arxiv.org/abs/2311.00842"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Towards a Structural Equation Model of Open Source Blockchain Software Health",
+    "url": "https://arxiv.org/abs/2310.20277"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Student Certificate Sharing System Using Blockchain and NFTs",
+    "url": "https://arxiv.org/abs/2310.20036"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Incorporating Zero-Knowledge Succinct Non-interactive Argument of Knowledge for Blockchain-based Identity Management with off-chain computations",
+    "url": "https://arxiv.org/abs/2310.19452"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Enhancing Scalability and Reliability in Semi-Decentralized Federated Learning With Blockchain: Trust Penalization and Asynchronous Functionality",
+    "url": "https://arxiv.org/abs/2310.19287"
+  },
+  {
+    "tags": [
+      "Blockchain", "Threats", "Security"],
+    "title": "A technique to avoid Blockchain Denial of Service (BDoS) and Selfish Mining Attack",
+    "url": "https://arxiv.org/abs/2310.19170"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Securing Refugee Identity: A Literature Review on Blockchain-based Smart Contract",
+    "url": "https://arxiv.org/abs/2310.19018"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "The Telehealth Chain: a protocol for secure and transparent telemedicine transactions on the blockchain",
+    "url": "https://arxiv.org/abs/2310.18839"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "FinBTech: Blockchain-Based Video and Voice Authentication System for Enhanced Security in Financial Transactions Utilizing FaceNet512 and Gaussian Mixture Models",
+    "url": "https://arxiv.org/abs/2310.18668"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "How Hard is Takeover in DPoS Blockchains? Understanding the Security of Coin-based Voting Governance",
+    "url": "https://arxiv.org/abs/2310.18596"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Sui Lutris: A Blockchain Combining Broadcast and Consensus",
+    "url": "https://arxiv.org/abs/2310.18042"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "FabricCRDT: A Conflict-Free Replicated Datatypes Approach to Permissioned Blockchains",
+    "url": "https://arxiv.org/abs/2310.15988"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "B^2SFL: A Bi-level Blockchained Architecture for Secure Federated Learning-based Traffic Prediction",
+    "url": "https://arxiv.org/abs/2310.14669"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "BRFL: A Blockchain-based Byzantine-Robust Federated Learning Model",
+    "url": "https://arxiv.org/abs/2310.13403"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "VDKMS: Vehicular Decentralized Key Management System for Cellular Vehicular-to-Everything Networks, A Blockchain-Based Approach",
+    "url": "https://arxiv.org/abs/2310.12381"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Building Random, Fair, and Verifiable Games on Blockchain. Raffle smart contract designs on Sui Network",
+    "url": "https://arxiv.org/abs/2310.12305"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "A Two-Layer Blockchain Sharding Protocol Leveraging Safety and Liveness for Enhanced Performance",
+    "url": "https://arxiv.org/abs/2310.11373"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "A High-throughput and Secure Coded Blockchain for IoT",
+    "url": "https://arxiv.org/abs/2310.08822"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "The Implications of Decentralization in Blockchained Federated Learning: Evaluating the Impact of Model Staleness and Inconsistencies",
+    "url": "https://arxiv.org/abs/2310.07471"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Decentralization of Energy Systems with Blockchain: Bridging Top-down and Bottom-up Management of the Electricity Grid",
+    "url": "https://arxiv.org/abs/2310.07103"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security"],
+    "title": "Secure Decentralized Learning with Blockchain",
+    "url": "https://arxiv.org/abs/2310.07079"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "EtrusChain: File Storage with DNA and Blockchain",
+    "url": "https://arxiv.org/abs/2310.07074"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "BC4LLM: Trusted Artificial Intelligence When Blockchain Meets Large Language Models",
+    "url": "https://arxiv.org/abs/2310.06278"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "The Mediating Effect of Blockchain Technology on the Cryptocurrency Purchase Intention",
+    "url": "https://arxiv.org/abs/2310.05970"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Blockchain-driven Architecture for Usage Control in Solid",
+    "url": "https://arxiv.org/abs/2310.05731"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Blockchain-Envisioned Disaster Relief Networks: Architecture, Opportunities, and Open Issues",
+    "url": "https://arxiv.org/abs/2310.05180"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "CO-ASnet :A Smart Contract Architecture Design based on Blockchain Technology with Active Sensor Networks",
+    "url": "https://arxiv.org/abs/2310.05070"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Trustworthy and Consistent Blockchain Oracle Scheme for Industrial Internet of Things",
+    "url": "https://arxiv.org/abs/2310.04975"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Data Transmissions in Blockchain enabled AGVs",
+    "url": "https://arxiv.org/abs/2310.01594"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Distributed Efficient Blockchain Oracle Scheme for Internet of Things",
+    "url": "https://arxiv.org/abs/2310.00254"
+  },
+  {
+    "tags": [
+      "Blockchain", "Threats", "Security"],
+    "title": "Understanding and managing blockchain protocol risks",
+    "url": "https://arxiv.org/abs/2310.10797"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Economics unchained: Investigating the role of cryptocurrency, blockchain and intricacies of Bitcoin price fluctuations",
+    "url": "https://arxiv.org/abs/2310.09745"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "A Blockchain-empowered Multi-Aggregator Federated Learning Architecture in Edge Computing with Deep Reinforcement Learning Optimization",
+    "url": "https://arxiv.org/abs/2310.09665"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "VBFT: Veloce Byzantine Fault Tolerant Consensus for Blockchains",
+    "url": "https://arxiv.org/abs/2310.09663"
+  },
+  {
+    "tags": [
+      "Blockchain", "Security", "Networking"],
+    "title": "Tikuna: An Ethereum Blockchain Network Security Monitoring System",
+    "url": "https://arxiv.org/abs/2310.09193"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "DocCert: Nostrification, Document Verification and Authenticity Blockchain Solution",
+    "url": "https://arxiv.org/abs/2310.09136"
+  },
+  {
+    "tags": [
+      "Blockchain"],
+    "title": "Credit Blockchain for Faster Transactions in P2P Energy Trading",
+    "url": "https://arxiv.org/abs/2310.09020"
   },
   {
     "folder": "data/papers"
