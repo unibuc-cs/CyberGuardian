@@ -1,37 +1,32 @@
 from enum import Enum
 
 class SecurityOfficerExpertise(Enum):
-    BEGINNER = 1
-    MIDDLE = 2
-    ADVANCED = 3
+    BEGINNER = 0
+    MIDDLE = 1
+    ADVANCED = 2
 
 class Preference_ResponseType(Enum):
-    DETAILED = 1
-    CONCISE = 2
+    DETAILED = 0
+    CONCISE = 1
 
 
 class Preference_Politely(Enum):
-    POLITE_PRESENTATION = 1
-    FORMAL_PRESENTATION = 2
+    POLITE_PRESENTATION = 0
+    FORMAL_PRESENTATION = 1
 
 class Preference_Emojis(Enum):
     USE_EMOJIS = 1
     NO_EMOJIS = 2
 
-class User:
-    def __init__(self):
-        self.__name : str= ""
-        self.__loggedin : bool = False
-
-    def isLoggedIn(self) -> bool:
-        return self.__loggedin
-
-    def getName(self) -> str:
-        return self.__name
-
-class SecurityOfficer(User):
+class SecurityOfficer():
     def __init__(self):
         super().__init__()
+
+        self.loggedin : bool = False
+
+        self.name: str = ""
+        self.username: str = ""
+        self.password: str = ""
 
         self.expertise: SecurityOfficerExpertise = SecurityOfficerExpertise.BEGINNER
         self.preference: Preference_ResponseType = Preference_ResponseType.DETAILED
@@ -51,3 +46,6 @@ class SecurityOfficer(User):
 
         # If 0 - does not report when seeing strange situation from colleagues, 1 - report everything as expected
         self.correct_teamwork: float = 1.0
+
+    def isLoggedIn(self) -> bool:
+        return self.loggedin
