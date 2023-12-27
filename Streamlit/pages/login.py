@@ -17,13 +17,7 @@ def login(self, form_name: str, location: str = 'main') -> tuple:
         The location of the login form i.e. main or sidebar.
     Returns
     -------
-    str
-        Name of the authenticated user.
-    bool
-        The status of authentication, None: no credentials entered,
-        False: incorrect credentials, True: correct credentials.
-    str
-        Username of the authenticated user.
+   Fills in the user in session state
     """
     if location not in ['main', 'sidebar']:
         raise ValueError("Location must be one of 'main' or 'sidebar'")

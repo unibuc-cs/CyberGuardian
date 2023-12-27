@@ -1,6 +1,9 @@
 
 import streamlit as st
 import clientserverUtils as csu
+import userUtils
+
+st.session_state.user : userUtils.SecurityOfficer = userUtils.SecurityOfficer()
 
 #https://www.youtube.com/watch?v=eCbH2nPL9sU&ab_channel=CodingIsFun
 
@@ -38,17 +41,4 @@ if csu.logged_in():
     logout('Logout', 'sidebar', key='unique_key')
     st.write(f'Welcome *{st.session_state["name"]}*')
     st.title('Some content')
-elif st.session_state["authentication_status"] is False:
-    st.error('Username/password is incorrect')
-elif st.session_state["authentication_status"] is None:
-    st.warning('Please enter your username and password')
 
-
-"""
-try:
-    if authenticator.register_user('Register user', preauthorization=False):
-        st.success('User registered successfully')
-except Exception as e:
-    st.error(e)
-
-"""

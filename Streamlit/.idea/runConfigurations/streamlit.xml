@@ -9,13 +9,13 @@
     </envs>
     <option name="SDK_HOME" value="" />
     <option name="SDK_NAME" value="Python 3.11" />
-    <option name="WORKING_DIRECTORY" value="C:\Users\cipri\PycharmProjects\Streamlit" />
+    <option name="WORKING_DIRECTORY" value="D:\DynabicChatbot\Streamlit" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
     <option name="SCRIPT_NAME" value="streamlit" />
-    <option name="PARAMETERS" value="run main.py" />
+    <option name="PARAMETERS" value="run main_page.py" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="true" />

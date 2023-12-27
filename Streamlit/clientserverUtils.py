@@ -2,8 +2,6 @@ import streamlit as st
 from userUtils import SecurityOfficer
 
 
-st.session_state.user : SecurityOfficer = SecurityOfficer()
-
 def logged_in() -> bool:
     return st.session_state.user.isLoggedIn()
 
