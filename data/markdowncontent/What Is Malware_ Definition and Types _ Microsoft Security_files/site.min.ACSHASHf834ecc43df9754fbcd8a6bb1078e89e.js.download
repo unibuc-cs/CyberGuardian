@@ -1,1 +1,0 @@
-'use strict';window.onload=function(){var a=document.getElementsByClassName("dynamic-feature")[0];a&&(a=a.querySelectorAll(".dynamic-feature-component")[0])&&(a=a.querySelectorAll(".btn")[0])&&a.classList.contains("my-0")&&a.classList.remove("my-0","px-4","mr-4")};
