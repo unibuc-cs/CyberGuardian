@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"><script src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/rules-p-5faSDXBkovfz2.js.download" async=""></script><script src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/quant.js.download" async="" type="text/javascript"></script><script src="chrome-extension://nimlmejbmnecnaghgmbahmbaddhjbecg/content/location/location.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-merge-styles="true"></style>
+    <style data-merge-styles="true"></style><style data-merge-styles="true"></style><style data-merge-styles="true"></style><style data-merge-styles="true"></style><style data-merge-styles="true"></style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://helpdeskgeek.com/wp-content/themes/hdg/images/favicon.ico">
+    <meta name="theme-color" content="#13a638">
+
+    
+    <meta name="description" content="A distributed denial of service (DDoS) attack can happen to anyone, at any time. If you have a website that’s running on a dedicated web server, it’s important to understand what a DDoS attack is, how to identify it, and what to do to stop and prevent it.">
+
+    <style>
+        body.dark {
+            background: #252b31;
+            color: #dddddd;
+        }
+    </style>
+
+    <link rel="pingback" href="https://helpdeskgeek.com/xmlrpc.php">
+
+    <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","id":"https:\/\/helpdeskgeek.com\/how-to\/how-to-identify-a-ddos-attack-on-your-server-stop-it\/"},"publisher":{"@type":"Organization","name":"Help Desk Geek","logo":{"@type":"ImageObject","url":"https:\/\/helpdeskgeek.com\/wp-content\/themes\/akic\/images\/favicon.ico","height":16,"width":16}},"headline":"How To Identify a DDoS Attack On Your Server &#038; Stop It","name":"How To Identify a DDoS Attack On Your Server &#038; Stop It","datePublished":"2019-08-24T20:01:29+00:00","dateModified":"2019-08-26T11:53:03+00:00","author":[{"@type":"Person","name":"Ryan Dube"}],"description":"","image":{"@type":"ImageObject","url":"https:\/\/helpdeskgeek.com\/wp-content\/pictures\/2019\/08\/neo-urban-1808082_640.jpg","width":700,"height":300}}</script><title>How To Identify a DDoS Attack On Your Server &amp; Stop It</title>
+<meta name="robots" content="max-image-preview:large">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PS7041Y6B');
+</script>
+
+<meta name="facebook-domain-verification" content="ar4ylgbo46t3fwyxiyrt0ck3rf3fl1"><link rel="alternate" type="application/rss+xml" title="Help Desk Geek » Feed" href="https://helpdeskgeek.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Help Desk Geek » Comments Feed" href="https://helpdeskgeek.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Help Desk Geek » How To Identify a DDoS Attack On Your Server &amp; Stop It Comments Feed" href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/feed/">
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.22.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/js(1)" data-cfasync="false" data-wpfc-render="false" type="text/javascript" async=""></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '8.22.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-Z4BL81Y5HT',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+										__gtagTracker('config', 'G-Z4BL81Y5HT', {"forceSSL":"true","author":"Ryan Dube","category":"how-to","published_at":"2019-08-24T20:01:29-04:00"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="ub-extension-style-css-css" href="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/autoptimize_single_acafea1bb8f4f2c0f6543feb0b339f8d.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpda_wpdp_public-css" href="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/autoptimize_single_076b9cf89c72c83d46380e8d6c4207b0.css" type="text/css" media="all">
+<link rel="stylesheet" id="akic-style-css" href="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="hdgeek-style-css" href="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/style(1).min.css" type="text/css" media="all">
+
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id="monsterinsights-frontend-script-js-extra">/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/helpdeskgeek.com","hash_tracking":"false","v4_id":"G-Z4BL81Y5HT"};/* ]]> */
+</script>
+<script type="text/javascript" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/jquery.min.js.download" id="jquery-core-js"></script>
+
+
+
+<script type="text/javascript" id="wp-api-request-js-extra">
+/* <![CDATA[ */
+var wpApiSettings = {"root":"https:\/\/helpdeskgeek.com\/wp-json\/","nonce":"908455d362","versionString":"wp\/v2\/"};
+/* ]]> */
+</script>
+
+
+<script type="text/javascript" id="wpda_rest_api-js-extra">
+/* <![CDATA[ */
+var wpdaApiSettings = {"path":"wpda"};
+/* ]]> */
+</script>
+
+<link rel="https://api.w.org/" href="https://helpdeskgeek.com/wp-json/"><link rel="alternate" type="application/json" href="https://helpdeskgeek.com/wp-json/wp/v2/posts/34885"><link rel="canonical" href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/">
+<link rel="shortlink" href="https://helpdeskgeek.com/?p=34885">
+<link rel="alternate" type="application/json+oembed" href="https://helpdeskgeek.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhelpdeskgeek.com%2Fhow-to%2Fhow-to-identify-a-ddos-attack-on-your-server-stop-it%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://helpdeskgeek.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhelpdeskgeek.com%2Fhow-to%2Fhow-to-identify-a-ddos-attack-on-your-server-stop-it%2F&amp;format=xml">
+<meta property="og:title" name="og:title" content="How To Identify a DDoS Attack On Your Server &amp; Stop It">
+<meta property="og:type" name="og:type" content="article">
+<meta property="og:image" name="og:image" content="https://helpdeskgeek.com/wp-content/pictures/2019/08/cropped-neo-urban-1808082_640.jpg">
+<meta property="og:url" name="og:url" content="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/">
+<meta property="og:description" name="og:description" content="A distributed denial of service (DDoS) attack can happen to anyone, at any time. If you have a website that’s running on a dedicated web server, it’s important to understand [...]">
+<meta property="og:locale" name="og:locale" content="en_US">
+<meta property="og:site_name" name="og:site_name" content="Help Desk Geek">
+<meta property="twitter:card" name="twitter:card" content="summary_large_image">
+<meta property="twitter:creator" name="twitter:creator" content="@rdube">
+<meta property="article:section" name="article:section" content="How-To">
+<meta property="article:published_time" name="article:published_time" content="2019-08-24T20:01:29-04:00">
+<meta property="article:modified_time" name="article:modified_time" content="2019-08-26T11:53:03-04:00">
+<meta property="article:author" name="article:author" content="https://helpdeskgeek.com/author/rdube/">
+
+	<style></style>
+
+	<!-- DISQUS UPDATE !-->
+		        <script type="text/javascript">
+			        if (!window.disqus_config) {
+				        window.disqus_config = {
+					        call: function(that) {
+						        that.callbacks.onNewComment = [
+							        function(comment) {
+							            jQuery.post("/wp-admin/admin-ajax.php?action=comment_webhook", {
+							            	commentId: comment.id,
+							            	postId:    jQuery('div.post').attr('id').replace(/post-/, "")
+							            }, function(result){
+							                console.log("DISQUS API comment webhook response", result);
+							            });
+							        }
+							    ];
+					        }
+				        }
+
+				        console.log("DISQUS update integrated");
+			        } else {
+				        console.log("DISQUS update is not integrated");
+				    }
+		        </script><script>var wpIsMobile = false;</script>
+	<link rel="dns-prefetch" href="https://secure.gravatar.com/">
+    <link rel="preconnect" href="https://secure.gravatar.com/">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+    <link rel="preconnect" href="https://www.google-analytics.com/">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com/">
+    <link rel="dns-prefetch" href="https://tpc.googlesyndication.com/">
+    <link rel="preconnect" href="https://tpc.googlesyndication.com/">
+    <link rel="dns-prefetch" href="https://www.googletagservices.com/">
+    <link rel="preconnect" href="https://www.googletagservices.com/">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+    <link rel="preconnect" href="https://www.google-analytics.com/">
+    <link rel="dns-prefetch" href="https://stats.g.doubleclick.net/">
+    <link rel="preconnect" href="https://stats.g.doubleclick.net/">
+    <link rel="dns-prefetch" href="https://connect.facebook.net/">
+    <link rel="preconnect" href="https://connect.facebook.net/">
+	<link rel="amphtml" href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/amp/">
+        <script data-cfasync="false" type="text/javascript">
+        // Upd 20220908
+        if (window.innerWidth < 768) {
+            window.snigelPubConf = {
+                "adengine": {
+                    "activeLots": [
+                        {adUnit: "Video_Outstream", placement: "adngin-Video_Outstream-0"},
+                        {adUnit: "Adhesion_Mobile", placement: "adngin-Adhesion_Mobile-0"},
+                        {adUnit: "InContent_1", placement: "adngin-InContent_1-0", lazyLoad: true},
+                        {adUnit: "InContent_2", placement: "adngin-InContent_2-0", lazyLoad: true},
+                        {adUnit: "InContent_3", placement: "adngin-InContent_3-0", lazyLoad: true},
+                        {adUnit: "Sidebar_01", placement: "adngin-Sidebar_01-0"},
+                        {adUnit: "Sidebar_02", placement: "adngin-Sidebar_02-0", lazyLoad: true},
+                        {adUnit: "Sidebar_03", placement: "adngin-Sidebar_03-0", lazyLoad: true}
+                    ]
+                }
+            }
+        } else {
+            window.snigelPubConf = {
+                "adengine": {
+                    "activeLots": [
+                        {adUnit: "Video_Outstream", placement: "adngin-Video_Outstream-0"},
+                        {adUnit: "Adhesion_Mobile", placement: "adngin-Adhesion_Mobile-0"},
+                        {adUnit: "InContent_1", placement: "adngin-InContent_1-0", lazyLoad: true},
+                        {adUnit: "InContent_2", placement: "adngin-InContent_2-0", lazyLoad: true},
+                        {adUnit: "InContent_3", placement: "adngin-InContent_3-0", lazyLoad: true},
+                        {adUnit: "Sidebar_01", placement: "adngin-Sidebar_01-0"},
+                        {adUnit: "Sidebar_02", placement: "adngin-Sidebar_02-0", lazyLoad: true},
+                        {adUnit: "Sidebar_03", placement: "adngin-Sidebar_03-0", lazyLoad: true},
+                        {adUnit: "bottom_adhesive_dskt", placement: "adngin-bottom_adhesive_dskt-0"},
+                        {adUnit: "hdg_sidebar_right", placement: "adngin-hdg_sidebar_right-0", lazyLoad: true}
+                    ]
+                }
+            }
+        }
+    </script>
+    <script data-cfasync="false" async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/loader.js.download" type="text/javascript"></script>
+    <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><script src="chrome-extension://nimlmejbmnecnaghgmbahmbaddhjbecg/libs/extend-native-history-api.js"></script><style>.resizable-component[data-v-761d614a]{position:absolute}.resizable-component>.resizable-r[data-v-761d614a]{cursor:e-resize;height:100%;top:0;width:6px;z-index:90}.resizable-component>.resizable-r[data-v-761d614a],.resizable-component>.resizable-rb[data-v-761d614a]{display:block;position:absolute;right:-6px;touch-action:none;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none}.resizable-component>.resizable-rb[data-v-761d614a]{bottom:-6px;cursor:se-resize;height:12px;width:12px;z-index:91}.resizable-component>.resizable-b[data-v-761d614a]{cursor:s-resize;left:0;width:100%;z-index:90}.resizable-component>.resizable-b[data-v-761d614a],.resizable-component>.resizable-lb[data-v-761d614a]{bottom:-6px;display:block;height:12px;position:absolute;touch-action:none;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none}.resizable-component>.resizable-lb[data-v-761d614a]{cursor:sw-resize;left:-6px;width:12px;z-index:91}.resizable-component>.resizable-l[data-v-761d614a]{cursor:w-resize;height:100%;top:0;z-index:90}.resizable-component>.resizable-l[data-v-761d614a],.resizable-component>.resizable-lt[data-v-761d614a]{display:block;left:-6px;position:absolute;touch-action:none;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;width:12px}.resizable-component>.resizable-lt[data-v-761d614a]{cursor:nw-resize;height:12px;top:-6px;z-index:91}.resizable-component>.resizable-t[data-v-761d614a]{cursor:n-resize;left:0;width:100%;z-index:90}.resizable-component>.resizable-rt[data-v-761d614a],.resizable-component>.resizable-t[data-v-761d614a]{display:block;height:12px;position:absolute;top:-6px;touch-action:none;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none}.resizable-component>.resizable-rt[data-v-761d614a]{cursor:ne-resize;right:-6px;width:12px;z-index:91}</style><style>:root{--it-color-primary:#3d81d1;--it-color-primary-darker:#316bae;--it-color-white:#fff;--it-color-gray-200:#eff2f7;--it-color-gray-800:#3c4858;--it-color-green:#5cb945;--it-color-red:#e2757a;--it-color-text:#2e3238;--it-color-contrast-low:var(--it-color-gray-200);--it-color-contrast-medium:var(--it-color-gray-800);--it-color-bg-change-highlight:#3d81d126;--it-radius:.3em;--it-radius-md:var(--it-radius,0.25em);--it-font-primary:"Inter",sans-serif;--it-font-size-base:15px;--it-top-toolbar-height:44px;--it-bottom-toolbar-height:50px;--it-space-unit:17px;--it-space-xxxxs:calc(var(--it-space-unit)*0.125);--it-space-xxxs:calc(var(--it-space-unit)*0.25);--it-space-xxs:calc(var(--it-space-unit)*0.375);--it-space-xs:calc(var(--it-space-unit)*0.5);--it-space-sm:calc(var(--it-space-unit)*0.75);--it-space-md:calc(var(--it-space-unit)*1.25);--it-space-lg:calc(var(--it-space-unit)*2);--it-space-xl:calc(var(--it-space-unit)*3.25);--it-space-xxl:calc(var(--it-space-unit)*5.25);--it-space-xxxl:calc(var(--it-space-unit)*8.5);--it-space-xxxxl:calc(var(--it-space-unit)*13.75);--it-scrollbar-width:6px;--it-shadow-xs:0 0.1px 0.3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.12);--it-shadow-sm:0 0.3px 0.4px rgba(0,0,0,.025),0 0.9px 1.5px rgba(0,0,0,.05),0 3.5px 6px rgba(0,0,0,.1);--it-shadow-md:0 0.9px 1.5px rgba(0,0,0,.03),0 3.1px 5.5px rgba(0,0,0,.08),0 14px 25px rgba(0,0,0,.12);--it-shadow-lg:0 1.2px 1.9px -1px rgba(0,0,0,.014),0 3.3px 5.3px -1px rgba(0,0,0,.038),0 8.5px 12.7px -1px rgba(0,0,0,.085),0 30px 42px -1px rgba(0,0,0,.15);--it-shadow-xl:0 1.5px 2.1px -6px rgba(0,0,0,.012),0 3.6px 5.2px -6px rgba(0,0,0,.035),0 7.3px 10.6px -6px rgba(0,0,0,.07),0 16.2px 21.9px -6px rgba(0,0,0,.117),0 46px 60px -6px rgba(0,0,0,.2)}.it-btn,a.it-btn{--it-btn-padding-x:var(--it-space-sm);--it-btn-padding-y:var(--it-space-xxs);--it-btn-radius:999em;--it-btn-icon-size:18px;--it-btn-color:#fff;-webkit-font-smoothing:antialiased;align-items:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--it-color-primary);background-image:none;border:0;border:2px solid var(--it-color-primary);border-radius:0;border-radius:var(--it-btn-radius);box-shadow:none;color:#fff;cursor:pointer;display:inline-flex;font-size:14px;font-weight:400;font-weight:500;height:auto;justify-content:center;line-height:normal;margin:0;padding:var(--it-btn-padding-y) var(--it-btn-padding-x);position:relative;text-align:center;text-decoration:none;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .1s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;white-space:nowrap;width:auto}.it-btn:disabled,a.it-btn:disabled{opacity:.6;pointer-events:none}.it-btn.it-btn-outline,a.it-btn.it-btn-outline{background-color:transparent;color:var(--it-color-primary)}.it-btn:active,a.it-btn:active{transform:scale(.95)}.it-btn.hover,.it-btn.it-btn-outline.hover,.it-btn.it-btn-outline:active,.it-btn.it-btn-outline:hover,.it-btn:active,.it-btn:hover,a.it-btn.hover,a.it-btn.it-btn-outline.hover,a.it-btn.it-btn-outline:active,a.it-btn.it-btn-outline:hover,a.it-btn:active,a.it-btn:hover{background-color:var(--it-color-primary-darker);border-color:var(--it-color-primary-darker);color:#fff;text-decoration:none}.it-btn>mark,a.it-btn>mark{align-items:center;background:#273444!important;border-radius:2px;bottom:100%;color:var(--it-btn-color);cursor:pointer;font-size:13px;font-style:normal;font-weight:400;left:50%;line-height:1.5;margin:0;padding:3px 8px;pointer-events:none;position:absolute;transform:translate(-50%);transition:visibility 0s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;visibility:hidden;z-index:9999}.it-btn>mark:after,a.it-btn>mark:after{border:4px solid rgba(136,183,213,0);border-top-color:#273444;content:"";height:0;left:50%;margin-left:-4px;pointer-events:none;position:absolute;top:100%;width:0}.it-btn.hover>mark,.it-btn:active>mark,.it-btn:hover>mark,a.it-btn.hover>mark,a.it-btn:active>mark,a.it-btn:hover>mark{transition-delay:1s;visibility:visible}.it-btn.it-btn-wide,a.it-btn.it-btn-wide{padding-left:calc(var(--it-btn-padding-x)*2);padding-right:calc(var(--it-btn-padding-x)*2)}.it-btn-group .it-btn{background-color:#fff;border-color:rgba(0,0,0,.12);border-width:1px;box-shadow:var(--it-shadow-sm);color:var(--it-color-contrast-medium);font-size:16px;height:36px;padding:8px}.it-btn-group .it-btn.it-btn-sm{font-size:13px;height:30px;padding:6px 10px}.it-btn-group .it-btn.it-btn-primary{background-color:var(--it-color-primary);border-color:var(--it-color-primary);color:var(--it-color-white);font-weight:500;padding:8px 16px}.it-btn-group .it-btn.it-btn-primary.hover,.it-btn-group .it-btn.it-btn-primary:active,.it-btn-group .it-btn.it-btn-primary:hover{background-color:var(--it-color-primary-darker);border-color:var(--it-color-primary-darker);color:var(--it-color-white)}.it-btn-group .it-btn:not(:first-child){margin-left:5px}[dir=rtl] .it-btn-group .it-btn:not(:first-child){margin-left:0;margin-right:5px}.it-btn-group .it-btn.hover,.it-btn-group .it-btn:active,.it-btn-group .it-btn:hover{background-color:#dee3ef;color:#2e72c2}.it-btn-group .it-btn.hover>svg use,.it-btn-group .it-btn:active>svg use,.it-btn-group .it-btn:hover>svg use{fill:#2e72c2}.it-btn-group-inline{align-items:center;display:inline-flex;position:relative;vertical-align:middle}.it-btn-group-inline .it-btn{background-color:rgba(229,233,242,0);border-color:rgba(229,233,242,.5);border-width:0;display:inline-flex;padding:6px}.it-btn-group-inline .it-btn.hover,.it-btn-group-inline .it-btn:active,.it-btn-group-inline .it-btn:hover{background-color:rgba(222,227,239,.5);border-color:rgba(222,227,239,.5)}.it-btn-group-inline .it-btn.hover>mark,.it-btn-group-inline .it-btn:active>mark,.it-btn-group-inline .it-btn:hover>mark{transition-delay:1s;visibility:visible}.it-btn-group-inline .it-btn.hover>svg use,.it-btn-group-inline .it-btn:active>svg use,.it-btn-group-inline .it-btn:hover>svg use{fill:#2e72c2}.it-btn-group-inline .it-btn:not(:first-child){margin-left:2px}[dir=rtl] .it-btn-group-inline .it-btn:not(:first-child){margin-left:0;margin-right:2px}.it-btn-group-inline .it-btn>svg,.it-btn-group .it-btn>svg{height:var(--it-btn-icon-size);max-width:none;width:var(--it-btn-icon-size)}.it-btn-group-inline .it-btn>svg:first-child+span,.it-btn-group .it-btn>svg:first-child+span{margin-left:4px}[dir=rtl] .it-btn-group-inline .it-btn>svg:first-child+span,[dir=rtl] .it-btn-group .it-btn>svg:first-child+span{margin-left:0;margin-right:4px}.it-btn-group-inline .it-btn>svg use,.it-btn-group .it-btn>svg use{fill:var(--it-color-contrast-medium)}.it-margin-bottom-base{margin-bottom:var(--it-space-unit)}.it-margin-bottom-sm{margin-bottom:var(--it-space-sm)}.it-margin-bottom-lg,.it-margin-bottom-md{margin-bottom:var(--it-space-md)}.it-margin-top-base{margin-top:var(--it-space-unit)}.it-margin-top-sm{margin-top:var(--it-space-sm)}.it-margin-top-lg,.it-margin-top-md{margin-top:var(--it-space-md)}.it-text-link{color:var(--it-color-primary);cursor:pointer;font-weight:600;text-decoration:none;transition:color .2s}.it-text-link:active,.it-text-link:hover{color:var(--it-color-primary-darker)}:root{--it-editor-width:clamp(28rem,30vw,36rem);--it-editor-height:clamp(14rem,35vh,24rem);--it-editor-padding-top:calc(0.5rem + var(--it-top-toolbar-height));--it-editor-padding-bottom:calc(0.5rem + var(--it-bottom-toolbar-height)*0.5);--it-editor-padding-left:clamp(24px,3%,100px);--it-editor-padding-right:var(--it-editor-padding-left);--it-editor-msg-bottom-padding:10px;--it-editor-color-bg:var(--it-color-white);--it-editor-color-bg-semi-transparent:hsla(0,0%,100%,.9);--it-editor-color-scrollbar-bg:#ddd;--it-editor-added-bg:rgba(92,185,69,.1);--it-editor-added:#5cb945;--it-editor-removed:#cc3434}.it-editor,.it-editor-wrapper{display:flex}.it-editor{background-color:var(--it-editor-color-bg);border:2px solid var(--it-color-primary);border-radius:var(--it-radius);box-shadow:var(--it-shadow-lg);color:var(--it-color-text);flex-direction:column;font-size:var(--it-font-size-base);height:100%;margin-left:auto;margin-top:auto;outline:none;position:relative;transition:width .15s,height .15s,border-color .25s;width:100%}[dir=rtl] .it-editor{margin-left:0;margin-right:auto}.it-editor .it-reqs{display:flex;flex-wrap:wrap;font-size:12px;justify-content:space-between;justify-content:flex-end;margin-right:8px;text-align:right}[dir=rtl] .it-editor .it-reqs{margin-left:8px;margin-right:0}.it-editor .it-reqs>a{margin-left:5px}[dir=rtl] .it-editor .it-reqs>a{margin-left:0;margin-right:5px}.it-editor.it-editor-loading{height:calc(90px + var(--it-editor-msg-bottom-padding));width:320px}.it-editor.it-editor-error{width:320px}.it-editor.it-editor-error.it-editor-error-lg{height:auto;width:350px}.it-editor .it-limit-notice{font-size:13px;padding:10px 20px 20px}.it-editor .it-limit-notice h3{font-size:16px;font-weight:500}.it-editor .it-limit-notice>div{margin-top:12px}.it-editor .it-limit-notice svg{height:auto;margin-bottom:12px;max-width:90px}.it-editor ::-webkit-scrollbar{height:var(--it-scrollbar-width);width:var(--it-scrollbar-width);z-index:99999999}.it-editor ::-webkit-scrollbar-track,.it-editor :hover::-webkit-scrollbar-track{background:var(--it-editor-color-scrollbar-bg)}.it-editor ::-webkit-scrollbar-thumb{background:var(--it-color-primary)}.it-editor ::-webkit-scrollbar-thumb:active,.it-editor ::-webkit-scrollbar-thumb:hover{background:var(--it-color-primary-darker);cursor:-webkit-grab;cursor:grab}.it-editor .noTextDiff span mark{display:none!important}.it-editor .noTextDiff span.api-removed{display:none}.it-editor .noTextDiff span.api-added{background-color:transparent;color:inherit}.it-editor *{font-family:var(--it-font-primary)!important}.it-editor pre{border:0;box-sizing:border-box;flex:1;font-family:inherit!important;font-size:16px;line-height:1.7;margin:0;max-height:100%;outline:none;overflow-x:hidden;overflow-y:scroll;padding:var(--it-editor-padding-top) var(--it-editor-padding-right) var(--it-editor-padding-bottom) var(--it-editor-padding-left);white-space:pre-wrap;width:100%}.it-editor pre span.original>mark{display:none}.it-editor pre span.api-added,.it-editor pre span.api-removed{position:relative}.it-editor pre span.api-added>*,.it-editor pre span.api-removed>*{display:inline-block;position:relative}.it-editor pre span.api-added>*>mark,.it-editor pre span.api-removed>*>mark{align-items:center;border-radius:2px;bottom:100%;box-shadow:var(--it-shadow-md);cursor:pointer;display:flex;left:50%;line-height:1.5;margin:0;padding:0;position:absolute;transform:translate(-50%);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:9999}.it-editor pre span.api-added>*>mark .accept-icon,.it-editor pre span.api-added>*>mark .reject-icon,.it-editor pre span.api-removed>*>mark .accept-icon,.it-editor pre span.api-removed>*>mark .reject-icon{align-items:center;background:var(--it-editor-color-bg);border-radius:2px;display:inline-flex;padding:4px 8px;position:relative}.it-editor pre span.api-added>*>mark .accept-icon.hover,.it-editor pre span.api-added>*>mark .accept-icon:hover,.it-editor pre span.api-added>*>mark .reject-icon.hover,.it-editor pre span.api-added>*>mark .reject-icon:hover,.it-editor pre span.api-removed>*>mark .accept-icon.hover,.it-editor pre span.api-removed>*>mark .accept-icon:hover,.it-editor pre span.api-removed>*>mark .reject-icon.hover,.it-editor pre span.api-removed>*>mark .reject-icon:hover{background-color:var(--it-color-contrast-low)}.it-editor pre span.api-added>*>mark .accept-icon svg,.it-editor pre span.api-added>*>mark .reject-icon svg,.it-editor pre span.api-removed>*>mark .accept-icon svg,.it-editor pre span.api-removed>*>mark .reject-icon svg{height:22px;max-width:none;pointer-events:none;width:22px}.it-editor pre span.api-added>*>mark .accept-icon svg use,.it-editor pre span.api-added>*>mark .reject-icon svg use,.it-editor pre span.api-removed>*>mark .accept-icon svg use,.it-editor pre span.api-removed>*>mark .reject-icon svg use{fill:var(--it-color-primary)}.it-editor pre span.api-added>*>mark .reject-icon,.it-editor pre span.api-removed>*>mark .reject-icon{border-bottom-left-radius:0;border-left:1px solid var(--it-color-contrast-low);border-top-left-radius:0}.it-editor pre span.api-added>*>mark .accept-icon,.it-editor pre span.api-removed>*>mark .accept-icon{border-bottom-right-radius:0;border-top-right-radius:0}.it-editor pre span.api-added>*>mark>i,.it-editor pre span.api-removed>*>mark>i{font-size:16px;margin-left:3px}.it-editor pre span.api-added>*>mark:after,.it-editor pre span.api-removed>*>mark:after{border:4px solid transparent;border-top:4px solid var(--it-color-contrast-medium);content:"";height:0;left:50%;margin-left:-4px;pointer-events:none;position:absolute;top:100%;width:0}.it-editor pre span.api-added.active,.it-editor pre span.api-removed.active{background-color:var(--it-color-bg-change-highlight)}.it-editor pre span.api-added{background-color:var(--it-editor-added-bg);border-bottom:2px solid var(--it-editor-added);line-height:1.15;position:relative}.it-editor pre span.api-removed{position:relative;text-decoration:line-through}.it-editor pre span.api-removed:before{content:"";pointer-events:none}.it-editor pre span.api-removed>span.word{display:inline}.it-editor pre span.api-removed+span:not(.it-ss){margin-left:4px}.it-editor pre span.api-removed>span:after{color:var(--it-editor-removed);content:attr(data-removedtext);pointer-events:none;text-decoration:line-through}.it-editor pre span.api-added:not(.it-es)+span.api-removed:not(.it-noss),.it-editor pre span.original:not(.it-es)+span.api-removed:not(.it-noss){margin-left:4px}.it-editor .it-editor-top-toolbar{background-image:linear-gradient(to bottom,var(--it-editor-color-bg) 50%,transparent 100%);border-top-left-radius:var(--it-radius);border-top-right-radius:var(--it-radius);height:var(--it-top-toolbar-height);padding:10px 16px 5px;top:0;z-index:99}.it-editor .it-editor-bottom-toolbar{bottom:0;height:var(--it-bottom-toolbar-height);padding:10px 16px;transform:translateY(50%)}.it-editor .it-editor-bottom-toolbar,.it-editor .it-editor-bottom-toolbar:before{border-bottom-left-radius:var(--it-radius);border-bottom-right-radius:var(--it-radius)}.it-editor .it-editor-bottom-toolbar:before{background-image:linear-gradient(to top,var(--it-editor-color-bg) 15%,transparent 100%);content:"";height:80%;left:0;position:absolute;top:10%;transform:translateY(-50%);width:100%}.it-editor .it-editor-error-msg,.it-editor .it-editor-loader{align-items:center;display:flex;font-size:14px;height:100%;justify-content:center;padding:1.2rem;pointer-events:none;position:relative;text-align:center;width:100%;z-index:100}.it-editor .it-editor-error-msg>svg,.it-editor .it-editor-loader>svg{margin-right:10px}[dir=rtl] .it-editor .it-editor-error-msg>svg,[dir=rtl] .it-editor .it-editor-loader>svg{margin-left:10px;margin-right:0}.it-editor .it-editor-error-msg{padding:1.2rem 1.2rem calc(1.2rem + var(--it-editor-msg-bottom-padding))}.it-pointer-events-all{pointer-events:all!important}.it-editor-toolbar{display:flex;justify-content:space-between;left:0;position:absolute;right:var(--it-scrollbar-width);z-index:100}[dir=rtl] .it-editor-toolbar{left:var(--it-scrollbar-width);right:0}.it-editor-close-warning,.it-editor-toolbar .it-editor-drag{height:100%;left:0;position:absolute;top:0;width:100%}.it-editor-close-warning{align-items:center;background-color:var(--it-editor-color-bg-semi-transparent);border-radius:var(--it-radius);display:flex;justify-content:center;overflow:hidden;text-align:center;z-index:100}.it-editor-close-warning .it-editor-drag{height:100%;left:0;position:absolute;top:0;width:100%}</style><style>@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap);</style><style>#it-editor{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;bottom:2rem;left:1rem;pointer-events:none;position:fixed;right:1rem;top:1rem;z-index:9999999}#it-editor>*{pointer-events:all}#it-editor *{box-sizing:border-box}.fadeup-enter-active,.fadeup-leave-active{transform:translateY(0);transition:opacity .1s ease,transform .1s}.fadeup-enter-from,.fadeup-leave-to{opacity:0;transform:translateY(1rem)}.fade-enter-active,.fade-leave-active{transition:opacity .1s}.fade-enter-from,.fade-leave-to{opacity:0}</style><script type="text/javascript" async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/prebid.js.download"></script><script type="text/javascript" async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/apstag.js.download"></script><script type="text/javascript" async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/f.txt"></script><script type="text/javascript" async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/f(1).txt"></script><script type="text/javascript" async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/adngin.js.download"></script><script type="text/javascript" async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/argus.js.download"></script><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><style type="text/css">.snigel-cmp-framework .sn-inner {background-color:#fffefe!important;}.snigel-cmp-framework .sn-b-def {border-color:#13a638!important;color:#13a638!important;}.snigel-cmp-framework .sn-b-def.sn-blue {color:#ffffff!important;background-color:#13a638!important;border-color:#13a638!important;}.snigel-cmp-framework .sn-selector ul li {color:#000000!important;}.snigel-cmp-framework .sn-selector ul li:after {background-color:#000000!important;}.snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#000000!important;}.snigel-cmp-framework .sn-arrow:after,.snigel-cmp-framework .sn-arrow:before {background-color:#13a638!important;}.snigel-cmp-framework .sn-switch input:checked + span::before {background-color:#13a638!important;}#adconsent-usp-link {border: 1px solid #13a638!important;color:#13a638!important;}#adconsent-usp-banner-optout input:checked + .adconsent-usp-slider {background-color:#13a638!important;}#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #13a638!important;background-color:#13a638!important; }</style><script type="text/javascript" async="" charset="utf-8" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/adconsent__tcfapi.js.download"></script><script src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/3927" type="text/javascript" async="async"></script><style type="text/css">.snigel-adhesive{box-sizing:content-box;position:fixed;left:0;right:0;z-index:99999;text-align:center;padding-top:5px;padding-bottom:5px;background-color:#f2f6f7;transition:all 1500ms ease-out}.snigel-adhesive.bottom{bottom:0}.snigel-adhesive.top{top:0}.snigel-adhesive-center{position:absolute;top:0;bottom:0;right:0;left:0}.snigel-adhesive-centered{position:absolute;margin:0;transform:translateY(-50%);right:0;left:0}.close-adhesive{box-sizing:content-box;width:16px;height:16px;position:absolute;right:0;padding:5px;background-color:#f2f6f7;text-align:center;cursor:pointer}.close-adhesive.bottom{top:0}.close-adhesive.top{bottom:0}.close-adhesive.bottom.extern{top:-21px;padding-bottom:0}.close-adhesive.top.extern{bottom:-21px;padding-top:0}.close-adhesive>svg{display:block}.close-adhesive-icon{fill:gray;stroke-width:3;stroke:#73d9c6}.logo-adhesive{cursor:pointer;opacity:0.65;position:absolute;left:5px;top:5px;width:24px;height:24px;background:url('https://cdn.snigelweb.com/resources/img/logo/snigel-icon.png') no-repeat 50% 50%/contain}.logo-adhesive:hover{opacity:1}.logo-adhesive.adhesive-hidden{left:-500px}</style><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/f(2).txt" async=""></script><script type="text/javascript" async="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/recovery" crossorigin="anonymous"></script><style>#adngin-bottom_adhesive-0-adhesive { display: none !important; }</style><style>
+#adngin-Sidebar_03-0 {
+  position: static !important;
+}</style></head>
+<body class="post-template-default single single-post postid-34885 single-format-standard how-to no-ie dark" dir="ltr" itemscope="itemscope" itemtype="http://schema.org/Blog" data-new-gr-c-s-check-loaded="14.1049.0" data-gr-ext-installed="">
+
+
+<header id="header" class="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+    <div class="header-container">
+        <div class="header-inner">
+          <div class="logo">
+              <a href="https://helpdeskgeek.com/" title="Help Desk Geek">
+                  Help Desk Geek              </a>
+          </div>
+          <button class="search-toggle icon-search">
+              <svg style="width: 25px; height: 23px; fill: #535151;">
+                  <use xlink:href="/wp-content/themes/akic/images/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="screen-reader-text">Search</span>
+          </button>
+          <button class="menu-toggle icon-reorder">
+              <svg style="width: 25px; height: 25px; fill: #535151;">
+                  <use xlink:href="/wp-content/themes/akic/images/sprite.svg#icon-bars"></use>
+              </svg>
+              <span class="screen-reader-text">Menu</span>
+          </button>
+          <nav class="nav-primary"><ul id="menu-main-menu" class="menu menu-primary menu-wrap"><li id="menu-item-30133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30133"><a href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/#">Windows</a>
+<ul class="sub-menu">
+	<li id="menu-item-55499" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55499"><a href="https://helpdeskgeek.com/category/windows-11/">Windows 11</a></li>
+	<li id="menu-item-32296" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32296"><a href="https://helpdeskgeek.com/category/windows-10/">Windows 10</a></li>
+	<li id="menu-item-30135" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30135"><a href="https://helpdeskgeek.com/category/windows-8/">Windows 8</a></li>
+	<li id="menu-item-30134" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30134"><a href="https://helpdeskgeek.com/category/windows-7/">Windows 7</a></li>
+	<li id="menu-item-30137" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30137"><a href="https://helpdeskgeek.com/category/windows-xp-tips/">Windows XP</a></li>
+</ul>
+</li>
+<li id="menu-item-30153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30153"><a href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/#">Reviews</a>
+<ul class="sub-menu">
+	<li id="menu-item-30139" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30139"><a href="https://helpdeskgeek.com/category/reviews/">Software</a></li>
+	<li id="menu-item-30141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30141"><a href="https://helpdeskgeek.com/category/free-tools-review/">Tools</a></li>
+	<li id="menu-item-30140" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30140"><a href="https://helpdeskgeek.com/category/product-reviews/">Products</a></li>
+</ul>
+</li>
+<li id="menu-item-30142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30142"><a href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/#">Tips</a>
+<ul class="sub-menu">
+	<li id="menu-item-30144" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-30144"><a href="https://helpdeskgeek.com/category/how-to/">How-To</a></li>
+	<li id="menu-item-30143" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30143"><a href="https://helpdeskgeek.com/category/help-desk/">Help Desk</a></li>
+	<li id="menu-item-30146" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30146"><a href="https://helpdeskgeek.com/category/office-tips/">MS Office</a></li>
+	<li id="menu-item-30145" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30145"><a href="https://helpdeskgeek.com/category/linux-tips/">Linux</a></li>
+</ul>
+</li>
+<li id="menu-item-30147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30147"><a href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/#">Other</a>
+<ul class="sub-menu">
+	<li id="menu-item-30148" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30148"><a href="https://helpdeskgeek.com/category/networking/">Networking</a></li>
+	<li id="menu-item-30149" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-30149"><a href="https://helpdeskgeek.com/category/virtualization/">Virtualization</a></li>
+	<li id="menu-item-37669" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-37669"><a href="https://helpdeskgeek.com/category/wordpress/">WordPress</a></li>
+	<li id="menu-item-37680" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-37680"><a href="https://helpdeskgeek.com/category/featured-posts/">Featured Posts</a></li>
+</ul>
+</li>
+</ul></nav>          <div class="header-btns">
+            <button class="hamburger-toggle-wrap icon-reorder">
+                <svg style="width: 24px; height: 23px; fill: #535151;">
+                    <use xlink:href="/wp-content/themes/akic/images/sprite.svg#icon-bars"></use>
+                </svg>
+                <span class="hamburger-toggle screen-reader-text">Secondary Menu</span>
+            </button>
+            <button class="search-toggle-desktop icon-search">
+                <svg style="width: 22px; height: 22px; fill: #535151;">
+                    <use xlink:href="/wp-content/themes/akic/images/sprite.svg#icon-search"></use>
+                </svg>
+                <span class="screen-reader-text">Search</span>
+            </button>
+            <div class="search-primary hidden"><form class="search-form" method="get" id="cse-search-box" action="https://helpdeskgeek.com/" role="search"><input type="hidden" name="s" id="forcesearch"><input type="search" name="q" id="txtGoogleSearch" placeholder="Search this website" autocomplete="off" value="" spellcheck="false" data-ms-editor="true"><button type="submit" aria-label="Search">Go</button></form></div>
+            <nav id="hamburger" class="hamburger hidden">
+    <div class="hamburger_categories">
+        <div class="hamburger_categories_title">ALL CATEGORIES</div>
+        <div class="hamburger_categories_content"><div id="hamburger_col1" class="menu-hamburger1-container"><ul id="menu-hamburger1" class="menu"><li id="menu-item-41544" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-41544"><a href="https://helpdeskgeek.com/category/how-to/" data-type="taxonomy" data-object="category" data-id="24">How-To</a></li>
+<li id="menu-item-41545" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41545"><a href="https://helpdeskgeek.com/category/help-desk/" data-type="taxonomy" data-object="category" data-id="41">Help Desk</a></li>
+<li id="menu-item-41546" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41546"><a href="https://helpdeskgeek.com/category/networking/" data-type="taxonomy" data-object="category" data-id="9">Networking</a></li>
+<li id="menu-item-41547" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41547"><a href="https://helpdeskgeek.com/category/office-tips/" data-type="taxonomy" data-object="category" data-id="12">Office Tips</a></li>
+<li id="menu-item-41548" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41548"><a href="https://helpdeskgeek.com/category/virtualization/" data-type="taxonomy" data-object="category" data-id="42">Virtualization</a></li>
+</ul></div><div id="hamburger_col2" class="menu-hamburger2-container"><ul id="menu-hamburger2" class="menu"><li id="menu-item-55563" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55563"><a href="https://helpdeskgeek.com/category/windows-11/" data-type="taxonomy" data-object="category" data-id="10345">Windows 11</a></li>
+<li id="menu-item-41549" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41549"><a href="https://helpdeskgeek.com/category/windows-10/" data-type="taxonomy" data-object="category" data-id="361">Windows 10</a></li>
+<li id="menu-item-41550" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41550"><a href="https://helpdeskgeek.com/category/free-tools-review/" data-type="taxonomy" data-object="category" data-id="35">Tools Review</a></li>
+<li id="menu-item-41551" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41551"><a href="https://helpdeskgeek.com/category/reviews/" data-type="taxonomy" data-object="category" data-id="141">Reviews</a></li>
+<li id="menu-item-41552" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41552"><a href="https://helpdeskgeek.com/category/product-reviews/" data-type="taxonomy" data-object="category" data-id="44">Product Reviews</a></li>
+<li id="menu-item-41553" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-41553"><a href="https://helpdeskgeek.com/category/linux-tips/" data-type="taxonomy" data-object="category" data-id="48">Linux Tips</a></li>
+</ul></div></div>
+    </div>
+    <div class="hamburger_network">
+        <div class="hamburger_network_title">Our Network</div>
+        <div class="hamburger_network_content"><div id="hamburger_col3" class="menu-hamburger3-container"><ul id="menu-hamburger3" class="menu"><li id="menu-item-41555" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41555"><a href="https://www.online-tech-tips.com/" data-type="custom" data-object="custom" data-id="41555">Online Tech Tips</a></li>
+<li id="menu-item-41556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41556"><a href="https://www.switchingtomac.com/" data-type="custom" data-object="custom" data-id="41556">Switching to Mac</a></li>
+<li id="menu-item-41557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41557"><a href="https://thebackroomtech.com/" data-type="custom" data-object="custom" data-id="41557">The Back Room Tech</a></li>
+<li id="menu-item-41558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41558"><a href="https://akinternetconsulting.com/" data-type="custom" data-object="custom" data-id="41558">AK Internet Consulting, Inc.</a></li>
+</ul></div></div>
+    </div>
+    <div class="hamburger_about">
+        <div class="hamburger_about_title">About Us</div>
+        <div class="hamburger_about_content"><div id="hamburger_col4" class="menu-hamburger4-container"><ul id="menu-hamburger4" class="menu"><li id="menu-item-41559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41559"><a href="https://helpdeskgeek.com/about/" data-type="post_type" data-object="page" data-id="39765">About Help Desk Geek</a></li>
+<li id="menu-item-41560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41560"><a href="https://helpdeskgeek.com/privacy-policy/" data-type="post_type" data-object="page" data-id="1181">Privacy Policy</a></li>
+<li id="menu-item-69705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69705"><a href="https://helpdeskgeek.com/terms/" data-type="post_type" data-object="page" data-id="69560">Terms of Use</a></li>
+<li id="menu-item-41561" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41561"><a href="https://www.youtube.com/user/onlinetechtips" data-type="custom" data-object="custom" data-id="41561">OTT YouTube Channel</a></li>
+<li id="menu-item-59044" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59044"><a href="https://www.instagram.com/helpdeskgeek/" data-type="custom" data-object="custom" data-id="59044">HDG Instagram</a></li>
+</ul></div></div>
+    </div>
+    <div class="posts_container" style="display: none;"><div class="get_back_link"><a href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/#">❮ Go Back</a></div><div class="main_content"><div class="category_title"></div><div class="posts_listing"><div class="posts_category cat_selector_10338" data-category-id="10338"></div><div class="posts_category cat_selector_142" data-category-id="142"><a href="https://helpdeskgeek.com/networking/how-to-troubleshoot-wifi-wireless-printers/">How to Troubleshoot WiFi (Wireless) Printers</a><a href="https://helpdeskgeek.com/free-tools-review/5-free-programs-to-completely-wipe-a-hard-drive/">5 Free Programs to Completely Wipe a Hard Drive</a><a href="https://helpdeskgeek.com/free-tools-review/best-freeware-programs-for-windows/">99 of the Best Windows Freeware Programs You May Not Know Of</a><a href="https://helpdeskgeek.com/how-to/remove-windows-dot-old-folder/">How to Delete the Windows.old folder in Windows 7/8/10</a><a href="https://helpdeskgeek.com/featured-posts/5-cool-things-you-can-do-with-old-ram/">5 Cool Things You Can Do With Old RAM</a><a href="https://helpdeskgeek.com/how-to/create-a-windows-10-system-image-backup/">Create a Windows 10 System Image Backup</a><a href="https://helpdeskgeek.com/how-to/retrieve-your-wireless-network-security-key-in-windows/">Retrieve Your Wireless Network Security Key in Windows</a><a href="https://helpdeskgeek.com/featured-posts/hdg-explains-what-is-bluetooth-what-it-is-most-commonly-used-for/">HDG Explains : What Is Bluetooth &amp; What Is It Most Commonly Used For?</a><a href="https://helpdeskgeek.com/featured-posts/best-time-to-buy-a-computer-for-amazing-deals/">Best Time to Buy a Computer for Amazing Deals</a><a href="https://helpdeskgeek.com/featured-posts/what-does-end-of-life-mean-for-software-and-should-you-care/">What Does End of Life Mean for Software and Should You Care?</a></div><div class="posts_category cat_selector_41" data-category-id="41"><a href="https://helpdeskgeek.com/help-desk/fix-your-device-isnt-compatible-with-this-version-on-android/">FIX: "Your Device Isn't Compatible with This Version" on Android</a><a href="https://helpdeskgeek.com/help-desk/are-the-keys-swapped-on-windows-10-how-to-fix-it/">Are the @ &amp; " Keys Swapped On Windows 10? - How To Fix It</a><a href="https://helpdeskgeek.com/help-desk/6-ways-to-fix-virtualbox-result-code-e_fail-0x80004005-error-in-windows/">6 Ways to Fix VirtualBox Result Code: E_FAIL (0x80004005) Error in Windows</a><a href="https://helpdeskgeek.com/help-desk/how-to-fix-the-requested-url-was-rejected-please-consult-with-your-administrator-browser-error/">How to Fix “The Requested URL Was Rejected. Please Consult With Your Administrator” Browser Error</a><a href="https://helpdeskgeek.com/help-desk/how-to-fix-could-not-create-the-java-virtual-machine-error/">How to Fix "Could Not Create the Java Virtual Machine" Error</a><a href="https://helpdeskgeek.com/help-desk/how-to-fix-trusted-platform-module-has-malfunctioned-error-in-windows/">How to Fix “Trusted Platform Module Has Malfunctioned” Error in Windows</a><a href="https://helpdeskgeek.com/help-desk/how-to-fix-the-emergency-calls-only-error-on-android/">How to Fix the "Emergency Calls Only" Error on Android</a><a href="https://helpdeskgeek.com/help-desk/how-to-fix-your-printers-driver-is-unavailable-error-on-windows/">How to Fix Your Printer's "Driver is unavailable" Error on Windows</a><a href="https://helpdeskgeek.com/help-desk/no-displayport-signal-from-your-device-10-ways-to-fix/">No DisplayPort Signal From Your Device? 10 Ways to Fix</a><a href="https://helpdeskgeek.com/help-desk/getting-your-internet-access-is-blocked-10-ways-to-fix/">Getting "Your Internet Access is Blocked"? 10 Ways to Fix</a></div><div class="posts_category cat_selector_24" data-category-id="24"><a href="https://helpdeskgeek.com/how-to/how-to-join-a-playstation-party-chat-on-your-pc/">How to Join a PlayStation Party Chat on Your PC</a><a href="https://helpdeskgeek.com/how-to/how-to-fix-virus-scan-failed-in-google-chrome/">How to Fix "Virus scan failed" in Google Chrome</a><a href="https://helpdeskgeek.com/how-to/active-directory-force-replication/">Force Replication Between Two Domain Controllers in Active Directory</a><a href="https://helpdeskgeek.com/how-to/7-ways-to-clear-memory-and-boost-ram-on-windows/">7 Ways to Clear Memory and Boost RAM on Windows</a><a href="https://helpdeskgeek.com/how-to/how-to-fix-the-application-was-unable-to-start-correctly-0xc0000142-error-in-windows/">How to Fix “The Application Was Unable to Start Correctly (0xc0000142)” Error in Windows</a><a href="https://helpdeskgeek.com/how-to/how-to-fix-time-synchronization-failed-in-windows/">How to Fix Time Synchronization Failed in Windows</a><a href="https://helpdeskgeek.com/how-to/how-to-fix-filename-is-too-long-issue-in-windows/">How To Fix 'Filename Is Too Long' Issue In Windows</a><a href="https://helpdeskgeek.com/how-to/how-to-make-a-phone-call-from-your-computer-for-free/">How to Make a Phone Call From Your Computer for Free</a><a href="https://helpdeskgeek.com/how-to/redirect-output-from-command-line-to-text-file/">Redirect Output from the Windows Command Line to a Text File</a><a href="https://helpdeskgeek.com/how-to/how-to-allocate-more-ram-to-specific-apps-in-windows/">How to Allocate More RAM to Specific Apps in Windows</a></div><div class="posts_category cat_selector_48" data-category-id="48"><a href="https://helpdeskgeek.com/linux-tips/top-3-ways-to-fix-no-space-left-on-device-error-in-linux/">Top 3 Ways to Fix "No Space Left on Device" Error in Linux</a><a href="https://helpdeskgeek.com/linux-tips/linux-file-permissions-what-is-chmod-777-and-how-to-use-it/">Linux File Permissions - What Is Chmod 777 and How to Use It</a><a href="https://helpdeskgeek.com/linux-tips/6-easy-ways-to-check-memory-usage-on-linux/">6 Easy Ways to Check Memory Usage on Linux</a><a href="https://helpdeskgeek.com/linux-tips/forcefully-close-a-program-in-ubuntu/">Forcefully Close a Program in Ubuntu</a><a href="https://helpdeskgeek.com/linux-tips/7-ways-to-zip-and-unzip-files-in-linux/">7 Ways to Zip and Unzip Files in Linux</a><a href="https://helpdeskgeek.com/linux-tips/how-to-uninstall-ubuntu-in-a-windows-10-dual-boot-system/">How to Uninstall Ubuntu in a Windows 10 Dual-Boot System</a><a href="https://helpdeskgeek.com/linux-tips/find-and-change-your-hostname-in-ubuntu/">Find and Change Your Hostname in Ubuntu</a><a href="https://helpdeskgeek.com/linux-tips/4-best-linux-tablets-and-why-you-should-use-one/">4 Best Linux Tablets and Why You Should Use One</a><a href="https://helpdeskgeek.com/linux-tips/how-to-reinstall-linux-mint-without-losing-your-data-settings/">How To Reinstall Linux Mint Without Losing Your Data &amp; Settings</a><a href="https://helpdeskgeek.com/linux-tips/how-to-install-almost-any-printer-on-ubuntu/">How To Install Almost Any Printer On Ubuntu</a></div><div class="posts_category cat_selector_9" data-category-id="9"><a href="https://helpdeskgeek.com/networking/how-to-connect-to-only-2-4ghz-or-5ghz-wi-fi-band-prevent-switching/">How to Connect to Only 2.4GHz or 5GHz Wi-Fi Band (Prevent Switching)</a><a href="https://helpdeskgeek.com/help-desk/microsoft-teams-profile-picture-not-updating-or-syncing-7-fixes-to-try/">Microsoft Teams Profile Picture Not Updating or Syncing? 7 Fixes to Try</a><a href="https://helpdeskgeek.com/networking/change-ip-address-and-dns-servers-using-the-command-prompt/">Change IP Address and DNS Servers using the Command Prompt</a><a href="https://helpdeskgeek.com/networking/how-to-network-two-computers-together-running-windows-11-10/">How To Network Two Computers Together Running Windows 11/10</a><a href="https://helpdeskgeek.com/networking/cannot-see-other-computers-on-network-in-my-network-places/">Can't See Other Computers on a Network? Fixes For Windows, Mac, and Linux</a><a href="https://helpdeskgeek.com/help-desk/why-does-my-android-hotspot-keep-turning-off-7-fixes/">Why Does My Android Hotspot Keep Turning Off? 7 Fixes</a><a href="https://helpdeskgeek.com/networking/network-adapter-not-working-12-things-to-try/">Network Adapter Not Working? 12 Things to Try</a><a href="https://helpdeskgeek.com/networking/release-and-renew-an-ip-address/">How to Release and Renew an IP Address</a><a href="https://helpdeskgeek.com/networking/determine-open-and-blocked-ports/">How to Find Open and Blocked TCP/UDP Ports</a><a href="https://helpdeskgeek.com/networking/internet-connection-problem-proxy-settings/">How To Check the Proxy Server Settings on Your Computer</a></div><div class="posts_category cat_selector_12" data-category-id="12"><a href="https://helpdeskgeek.com/office-tips/how-to-fix-the-outlook-disconnected-error-on-windows/">How to Fix the Outlook Disconnected Error on Windows</a><a href="https://helpdeskgeek.com/office-tips/how-to-fix-the-word-experienced-an-error-trying-to-open-the-file-error/">How to Fix the "Word experienced an error trying to open the file" Error</a><a href="https://helpdeskgeek.com/office-tips/how-to-sum-across-multiple-sheets-in-excel/">How to Sum Across Multiple Sheets in Excel</a><a href="https://helpdeskgeek.com/office-tips/how-to-fix-outlook-search-not-working/">How to Fix Outlook Search Not Working</a><a href="https://helpdeskgeek.com/office-tips/how-to-print-on-an-envelope-in-microsoft-excel/">How to Print on an Envelope in Microsoft Excel</a><a href="https://helpdeskgeek.com/office-tips/embed-an-excel-worksheet-into-word/">How to Insert an Excel Worksheet into a Word Doc</a><a href="https://helpdeskgeek.com/office-tips/why-microsoft-word-is-black-on-your-pc-and-how-to-fix-it/">Why Microsoft Word Is Black on Your PC (And How to Fix It)</a><a href="https://helpdeskgeek.com/office-tips/how-to-fix-bookmark-not-defined-error-in-word/">How to Fix Bookmark Not Defined Error in Word</a><a href="https://helpdeskgeek.com/office-tips/5-ways-to-convert-text-to-numbers-in-excel/">5 Ways To Convert Text to Numbers In Excel</a><a href="https://helpdeskgeek.com/office-tips/outlook-data-file-cannot-be-accessed-4-fixes-to-try/">Outlook Data File Cannot Be Accessed: 4 Fixes To Try</a></div><div class="posts_category cat_selector_44" data-category-id="44"><a href="https://helpdeskgeek.com/product-reviews/4k-wallpapers-for-desktop-6-sites-to-find-the-best-ones/">4K Desktop Wallpapers: 6 Sites to Grab Awesome High-Resolution Backgrounds Now</a><a href="https://helpdeskgeek.com/product-reviews/7-best-printers-for-printing-checks/">7 Best Printers for Printing Checks</a><a href="https://helpdeskgeek.com/product-reviews/5-best-chromecast-ethernet-adapters-for-a-wired-connection/">5 Best Chromecast Ethernet Adapters for a Wired Connection</a><a href="https://helpdeskgeek.com/product-reviews/7-best-wireless-keyboard-and-mouse-combos-for-any-budget/">7 Best Wireless Keyboard And Mouse Combos For Any Budget</a><a href="https://helpdeskgeek.com/product-reviews/10-best-wireless-intercom-systems-for-home-or-small-business/">10 Best Wireless Intercom Systems For Home Or Small Business</a><a href="https://helpdeskgeek.com/product-reviews/best-affordable-tablets-for-drawing-and-sketching-with-pen/">Best Affordable Tablets for Drawing and Sketching with Pen (2022)</a><a href="https://helpdeskgeek.com/product-reviews/7-best-usb-bluetooth-adapters-dongles-for-windows-pc/">7 Best USB Bluetooth Adapters/Dongles for Windows PC</a><a href="https://helpdeskgeek.com/product-reviews/oculus-quest-review-a-vr-headset-worth-buying/">Oculus Quest Review - A VR Headset Worth Buying</a><a href="https://helpdeskgeek.com/product-reviews/the-4-best-wearable-translators/">The 4 Best Wearable Translators</a><a href="https://helpdeskgeek.com/product-reviews/the-4-best-pre-built-plex-servers/">The 4 Best Pre-Built Plex Servers</a></div><div class="posts_category cat_selector_141" data-category-id="141"><a href="https://helpdeskgeek.com/reviews/10-best-remote-desktop-connection-managers-for-windows/">10 Best Remote Desktop Connection Managers for Windows</a><a href="https://helpdeskgeek.com/free-tools-review/how-to-convert-bin-to-iso/">5 Tools to Convert BIN Files to ISO Images</a><a href="https://helpdeskgeek.com/reviews/the-16-best-free-mouse-cursors-for-windows-11-10/">The 16 Best Free Mouse Cursors for Windows 11/10</a><a href="https://helpdeskgeek.com/reviews/10-free-alternatives-to-windows-operating-systems/">10 Free Alternatives to Windows Operating Systems</a><a href="https://helpdeskgeek.com/free-tools-review/4-tools-to-create-windows-installer-packages/">4 Great Tools to Create Windows Installer Packages</a><a href="https://helpdeskgeek.com/reviews/7-best-email-clients-for-chromebook/">7 Best Email Clients for Chromebook</a><a href="https://helpdeskgeek.com/reviews/10-best-monitor-calibration-tools-for-windows-in-2022/">10 Best Monitor Calibration Tools for Windows in 2022</a><a href="https://helpdeskgeek.com/reviews/the-amazon-fire-tablet-web-browser-a-full-user-guide/">The Amazon Fire Tablet Web Browser: A Full User Guide</a><a href="https://helpdeskgeek.com/free-tools-review/5-free-programs-to-completely-wipe-a-hard-drive/">5 Free Programs to Completely Wipe a Hard Drive</a><a href="https://helpdeskgeek.com/reviews/4-best-arcade-emulators-for-windows/">4 Best Arcade Emulators for Windows</a></div><div class="posts_category cat_selector_35" data-category-id="35"><a href="https://helpdeskgeek.com/free-tools-review/open-access-database/">7 Ways To Open An MDB File Without Microsoft Access</a><a href="https://helpdeskgeek.com/free-tools-review/5-best-safe-apk-download-sites-for-android-apps/">5 Best Safe APK Download Sites for Android Apps</a><a href="https://helpdeskgeek.com/free-tools-review/best-weather-widgets-for-windows-10-11/">Best Weather Widgets for Windows 10/11</a><a href="https://helpdeskgeek.com/free-tools-review/windows-7-8-10-hyperterminal/">4 HyperTerminal Alternatives for Windows 10</a><a href="https://helpdeskgeek.com/free-tools-review/how-to-convert-bin-to-iso/">5 Tools to Convert BIN Files to ISO Images</a><a href="https://helpdeskgeek.com/free-tools-review/6-best-apps-to-check-cpu-temperature-in-windows-11-10/">6 Best Apps to Check CPU Temperature in Windows 11/10</a><a href="https://helpdeskgeek.com/free-tools-review/6-best-sites-to-download-movie-subtitles-for-free/">6 Best Sites to Download Movie Subtitles for Free</a><a href="https://helpdeskgeek.com/free-tools-review/4-best-port-forwarding-software-apps-and-how-to-use-them/">4 Best Port Forwarding Software Apps and How to Use Them</a><a href="https://helpdeskgeek.com/free-tools-review/4-tools-to-create-windows-installer-packages/">4 Great Tools to Create Windows Installer Packages</a><a href="https://helpdeskgeek.com/free-tools-review/findstr-examples-and-tips-using-this-handy-cmd-windows-tool/">Findstr: Examples and Tips Using This Handy CMD Windows Tool</a></div><div class="posts_category cat_selector_42" data-category-id="42"><a href="https://helpdeskgeek.com/virtualization/how-to-set-up-a-windows-xp-virtual-machine-for-free/">How to Set Up a Windows XP Virtual Machine for Free</a><a href="https://helpdeskgeek.com/virtualization/how-to-completely-uninstall-virtualbox-in-windows/">How to Completely Uninstall VirtualBox in Windows</a><a href="https://helpdeskgeek.com/virtualization/how-to-fix-vt-x-is-not-available-verr_vmx-no-vmx-error-in-virtualbox/">How to Fix “VT-X Is Not Available (verr_vmx-No-Vmx)” Error in VirtualBox</a><a href="https://helpdeskgeek.com/virtualization/virtualbox-share-folder-host-guest/">Share Folders between Host and Guest OS in VirtualBox</a><a href="https://helpdeskgeek.com/virtualization/change-the-host-key-in-virtualbox/">Change the Host Key in VirtualBox</a><a href="https://helpdeskgeek.com/virtualization/how-to-install-a-new-operating-system-in-vmware-workstation-pro/">How to Install a New Operating System in VMware Workstation Pro</a><a href="https://helpdeskgeek.com/virtualization/how-to-install-chrome-os-in-vmware/">How to Install Chrome OS in VMWare</a><a href="https://helpdeskgeek.com/virtualization/hide-the-menu-bar-and-status-bar-in-virtualbox/">Hide the Menu Bar and Status Bar in VirtualBox</a><a href="https://helpdeskgeek.com/virtualization/what-is-a-virtual-machine-and-what-can-it-be-used-for/">What Is a Virtual Machine and What Can It Be Used For?</a><a href="https://helpdeskgeek.com/virtualization/convert-a-physical-server-to-xen-virtual-server-p2v/">How to Convert a Physical Server to a Citrix Xen Virtual Server (P2V)</a></div><div class="posts_category cat_selector_361" data-category-id="361"><a href="https://helpdeskgeek.com/windows-10/how-to-fix-windows-hello-fingerprint-not-working-in-windows-10/">How To Fix Windows Hello Fingerprint Not Working In Windows 10</a><a href="https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/">How to Add to Windows PATH Environment Variable</a><a href="https://helpdeskgeek.com/windows-10/how-to-force-delete-a-file-or-folder-in-windows/">How to Force Delete a File or Folder in Windows</a><a href="https://helpdeskgeek.com/windows-10/how-to-migrate-windows-10-to-a-new-hard-drive/">How to Migrate Windows 10 to a New Hard Drive</a><a href="https://helpdeskgeek.com/windows-10/how-to-fix-no-audio-output-device-is-installed-in-windows-10/">How to Fix "No Audio Output Device Is Installed" in Windows 10</a><a href="https://helpdeskgeek.com/windows-10/how-to-uninstall-programs-that-wont-uninstall-on-windows-10/">How To Uninstall Programs That Won't Uninstall on Windows 10</a><a href="https://helpdeskgeek.com/windows-10/how-to-factory-reset-windows-10-without-the-admin-password/">How To Factory Reset Windows 10 Without The Admin Password</a><a href="https://helpdeskgeek.com/windows-10/how-to-set-up-windows-10-to-login-automatically/">How to Set Up Windows 10 to Login Automatically</a><a href="https://helpdeskgeek.com/windows-10/how-to-change-fn-key-settings-in-windows-10/">How to Change Fn Key Settings in Windows 10</a><a href="https://helpdeskgeek.com/windows-10/how-to-fix-a-microphone-not-working-on-windows-10/">How to Fix a Microphone Not Working on Windows 10 or 11</a></div><div class="posts_category cat_selector_10345" data-category-id="10345"><a href="https://helpdeskgeek.com/windows-11/how-to-fix-the-referenced-account-is-currently-locked-out-error-in-windows/">How to Fix “The Referenced Account Is Currently Locked Out” Error in Windows</a><a href="https://helpdeskgeek.com/windows-11/how-to-customize-the-right-click-context-menu-in-windows-11/">How to Customize the Right-Click Context Menu in Windows 11</a><a href="https://helpdeskgeek.com/windows-11/how-to-fix-this-app-has-been-blocked-by-your-system-administrator-error-in-windows/">How to Fix “This App Has Been Blocked by Your System Administrator” Error in Windows</a><a href="https://helpdeskgeek.com/windows-11/fix-windows-11-saying-your-processor-is-not-supported/">Fix Windows 11 Saying "Your Processor is Not Supported"</a><a href="https://helpdeskgeek.com/windows-11/what-is-the-winsxs-folder-why-is-it-huge-and-how-to-cleanup/">What Is the WinSxS Folder, Why Is It Huge, and How to Cleanup?</a><a href="https://helpdeskgeek.com/windows-11/what-is-the-killer-network-service-in-windows-and-is-it-safe/">What Is the “Killer Network Service” in Windows (And Is It Safe)?</a><a href="https://helpdeskgeek.com/windows-11/how-to-schedule-a-batch-file-to-run-in-windows-11-10-using-task-scheduler/">How to Schedule a Batch File to Run in Windows 11/10 Using Task Scheduler</a><a href="https://helpdeskgeek.com/windows-11/extend-volume-option-grayed-out-in-windows-try-these-5-fixes/">“Extend Volume” Option Grayed Out in Windows? Try These 5 Fixes</a><a href="https://helpdeskgeek.com/windows-11/windows-pc-stuck-restarting-try-these-13-fixes/">Windows PC Stuck Restarting? Try These 13 Fixes</a><a href="https://helpdeskgeek.com/windows-11/how-to-change-the-time-and-date-in-windows/">How to Change the Time and Date in Windows</a></div><div class="posts_category cat_selector_49" data-category-id="49"><a href="https://helpdeskgeek.com/windows-7/easily-flush-the-windows-memory-cache/">How To Clear The Windows Memory Cache</a><a href="https://helpdeskgeek.com/windows-7/windows-7-how-to-delete-files-protected-by-trustedinstaller/">Windows 7/8/10 - How to Delete Files Protected by TrustedInstaller</a><a href="https://helpdeskgeek.com/windows-7/safe-mode-f8-doesnt-work/">F8 Not Working In Windows 10? 5 Things To Try</a><a href="https://helpdeskgeek.com/windows-7/difference-between-windows-7-home-professional-and-ultimate/">Difference between Windows 7 Home, Professional and Ultimate</a><a href="https://helpdeskgeek.com/windows-7/windows-7-hosts-file/">How to Edit the Hosts File in Windows</a><a href="https://helpdeskgeek.com/windows-7/lost-windows-7-install-disc-create-a-new-one-from-scratch/">Lost Windows 7 Install Disc? Create a New One From Scratch</a><a href="https://helpdeskgeek.com/windows-7/windows-7-versions/">Windows 7 Version Comparison - Home, Professional, Ultimate</a><a href="https://helpdeskgeek.com/windows-7/fix-windows-explorer-window-opening-on-startup/">Fix Windows Explorer Window Opening on Startup</a><a href="https://helpdeskgeek.com/windows-7/how-to-uninstall-windows-7/">How to Uninstall Windows 7</a><a href="https://helpdeskgeek.com/windows-7/what-is-microsoft-virtual-wifi-miniport-adapter/">What is Microsoft Virtual WiFi Miniport Adapter?</a></div><div class="posts_category cat_selector_134" data-category-id="134"><a href="https://helpdeskgeek.com/windows-8/windows-8-desktop-gadgets/">Windows 8/10 Desktop Gadgets</a><a href="https://helpdeskgeek.com/windows-8/refresh-reinstall-or-restore-windows-8/">Refresh, Reinstall or Restore Windows 8</a><a href="https://helpdeskgeek.com/windows-8/fix-your-pcs-cpu-isnt-compatible-with-windows-8-10-error/">Fix "Your PC's CPU isn't compatible with Windows 8/10" Error</a><a href="https://helpdeskgeek.com/windows-8/change-default-media-player-and-photo-viewer-in-windows-8/">Change Default Media Player and Photo Viewer in Windows 8</a><a href="https://helpdeskgeek.com/windows-8/should-you-upgrade-to-windows-8/">Should You Upgrade to Windows 8?</a><a href="https://helpdeskgeek.com/windows-8/join-windows-7-homegroup-from-windows-8/">Join Windows 7 HomeGroup from Windows 8</a></div><div class="posts_category cat_selector_33" data-category-id="33"></div><div class="posts_category cat_selector_6" data-category-id="6"><a href="https://helpdeskgeek.com/office-tips/why-your-outlook-inbox-view-changed-and-how-to-change-it-back/">Why Your Outlook Inbox View Changed (And How to Change It Back)</a><a href="https://helpdeskgeek.com/windows-xp-tips/4-ways-to-delete-or-remove-a-service-in-windows/">4 Ways to Delete or Remove a Service in Windows</a><a href="https://helpdeskgeek.com/windows-11/how-to-uninstall-microsoft-edge-from-your-windows-11-pc/">How to Uninstall Microsoft Edge From Your Windows 11 PC</a><a href="https://helpdeskgeek.com/windows-xp-tips/how-to-fix-input-signal-out-of-range-error-in-windows/">How to Fix “Input Signal Out of Range” Error in Windows</a><a href="https://helpdeskgeek.com/help-desk/microsoft-surface-not-charging-7-ways-to-fix/">Microsoft Surface Not Charging? 7 Ways to Fix</a><a href="https://helpdeskgeek.com/how-to/how-to-take-partial-screenshots-on-windows/">How to Take Partial Screenshots on Windows</a><a href="https://helpdeskgeek.com/help-desk/5g-not-showing-up-on-android-or-iphone-12-fixes-to-try/">5G Not Showing Up on Android or iPhone? 12 Fixes to Try</a><a href="https://helpdeskgeek.com/windows-xp-tips/how-to-fix-youtube-app-not-working/">How to Fix YouTube App Not Working (Android &amp; iOS)</a><a href="https://helpdeskgeek.com/windows-11/is-8gb-ram-good-enough-for-a-windows-pc/">Is 8GB RAM Good Enough for a Windows PC?</a><a href="https://helpdeskgeek.com/office-tips/how-to-add-holidays-to-your-outlook-calendar/">How to Add Holidays to Your Outlook Calendar</a></div><div class="posts_category cat_selector_10337" data-category-id="10337"><a href="https://helpdeskgeek.com/wordpress/how-to-remove-all-traces-of-a-wordpress-plugin/">How to Remove all Traces of a WordPress Plugin</a><a href="https://helpdeskgeek.com/wordpress/11-best-wordpress-podcast-plugins/">11 Best WordPress Podcast Plugins</a><a href="https://helpdeskgeek.com/wordpress/how-to-install-a-theme-on-wordpress/">How to Install a Theme on WordPress</a><a href="https://helpdeskgeek.com/wordpress/how-to-speed-up-a-wordpress-site-in-11-steps/">How to Speed Up a WordPress Site in 11 Steps</a><a href="https://helpdeskgeek.com/wordpress/how-to-install-a-wordpress-test-site-on-your-computer/">How to Install a WordPress Test Site on Your Computer</a><a href="https://helpdeskgeek.com/wordpress/how-to-find-your-wordpress-admin-login/">How To Find Your WordPress Admin Login</a><a href="https://helpdeskgeek.com/wordpress/how-to-manually-set-up-wordpress-on-a-domain/">How To Manually Set Up WordPress On a Domain</a><a href="https://helpdeskgeek.com/wordpress/7-wordpress-tips-for-a-mobile-friendly-website/">7 WordPress Tips For a Mobile Friendly Website</a><a href="https://helpdeskgeek.com/wordpress/how-to-update-php-in-wordpress/">How to Update PHP in WordPress</a><a href="https://helpdeskgeek.com/wordpress/wordpress-jetpack-what-is-it-and-is-it-worth-installing/">WordPress Jetpack: What Is It and Is It Worth Installing?</a></div></div></div><div class="category_link"><a href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/#">❯&nbsp; Browse all articles</a></div></div>
+</nav>          </div>
+
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="theme-switch">
+              <input type="checkbox" id="theme-switch">
+              <span class="slider round">
+                <div class="switched-circle">
+                    <img class="sun" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/sun.svg">
+                    <img class="moon" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/moon.svg">
+                </div>
+              </span>
+            </label>
+          </div>
+
+          <script>
+             window.localStorageAvailable = typeof Storage !== "undefined";
+             window._switchTheme          = false;
+
+             if (window.localStorageAvailable) {
+                 var savedTheme = localStorage.getItem('theme');
+                 if (savedTheme === null) {
+                     window._switchTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                 } else {
+                     window._switchTheme = savedTheme == 'dark' ? true : false;
+                 }
+
+                 if (window._switchTheme) {
+                     document.body.className = document.body.className + ' dark';
+                 } else {
+                     document.body.className = document.body.className.replace("dark", "");
+                 }
+             }
+
+             document.getElementById("theme-switch").checked = window._switchTheme;
+
+             window.onload = function() {
+                 document.getElementById('theme-switch').addEventListener("change", function() {
+                     if (document.getElementById('theme-switch').checked == true) {
+                         document.body.className = document.body.className + ' dark';
+
+                         if (window.localStorageAvailable) {
+                             localStorage.setItem("theme", 'dark');
+                         }
+                     } else {
+                         document.body.className = document.body.className.replace("dark", "");
+
+                         if (window.localStorageAvailable) {
+                             localStorage.setItem("theme", 'light');
+                         }
+                     }
+                 });
+             }
+          </script>
+
+        </div>
+    </div>
+</header>
+<div class="scroll-nav shown">
+    <div class="scroll-nav-logo">
+        <a href="https://helpdeskgeek.com/" title="Help Desk Geek">
+          <img class="light-mode" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/header-logo.png" alt="site logo">
+          <img class="dark-mode" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/hdg-banner-white.png" alt="site logo">
+        </a>
+    </div>
+    <div class="scroll-nav-title"><b>Reading:</b> <span>How To Identify a DDoS Attack On Your Server &amp; Stop It</span></div>
+    <div class="scroll-nav-scroll-top">
+        <a href="https://helpdeskgeek.com/how-to/how-to-identify-a-ddos-attack-on-your-server-stop-it/#">
+            Back To Top
+        </a>
+    </div>
+</div>
+<div class="site-container">
+    <div class="entry-header">
+	<h1 class="entry-title" itemprop="headline">How To Identify a DDoS Attack On Your Server &amp; Stop It</h1>
+
+	<div class="entry-content"><p>Reduce your downtime and speed up recovery</p>
+</div>    <div class="akic-authorheader">
+        <div class="avatar-img">
+            <img alt="Author avatar" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/59b16fe991ab5ba89fae01a626db1d30.jpeg" srcset="https://secure.gravatar.com/avatar/59b16fe991ab5ba89fae01a626db1d30?s=96&amp;d=blank&amp;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy" decoding="async">        </div>
+        <div class="akic-byline">
+                            <span class="akic-no-mobile-written-by">Written </span>by: <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="entry-author"><a href="https://helpdeskgeek.com/author/rdube/" itemprop="url"><span itemprop="name">Ryan Dube</span></a></span>, <span>Twitter: <a target="_blank" href="https://twitter.com/rdube">@rdube</a></span>                <br>
+                <span class="akic-no-mobile-posted-on">Posted on: </span><time class="entry-published updated" datetime="2019-08-24T20:01:29-04:00" itemprop="datePublished" title="Saturday, August 24, 2019, 8:01 pm">August 24th, 2019</time>                <span class="category">in: <a href="https://helpdeskgeek.com/category/how-to/" rel="category tag">How-To</a></span>
+                    </div>
+    </div>
+    </div>
+    <div id="content-wrap" class="content-wrap wrap">
+
+<main id="content" class="content" role="main">
+    <script>
+        var tocEnabled = "";
+    </script>
+
+            
+            <div id="post-34885" class="post-34885 post type-post status-publish format-standard has-post-thumbnail category-how-to how-to" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+                <div class="entry-content" itemprop="articleBody">
+                    <div class="post-ad-top adsense-block" id="adsense-block-5" style="min-height: 300px !important;">		<div class="adsense-block-wrap" style="width: 336px;">
+			<div class="ads-block">
+				<ins class="adsbygoogle adsense-block-5" style="display:block" data-ad-client="ca-pub-8156617711959851" data-ad-slot="8605969107" data-ad-format="rectangle">
+				</ins>
+			</div>
+		</div>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		</div>                    <div class="KonaBody">
+<p>A distributed denial of service (DDoS) attack can happen to anyone, at any time. If <a href="https://www.online-tech-tips.com/web-site-tips/how-to-create-your-own-google-sites-website/" target="_blank" rel="noopener" aria-label=" (opens in a new tab)" data-lasso-id="4005">you have a website</a> that’s running on a dedicated web server, it’s important to understand what a DDoS attack is, how to identify it, and what to do to stop and prevent it.</p>
+
+
+
+			<div class="wp-block-image">
+			<figure class="aligncenter"><img decoding="async" fetchpriority="high" width="640" height="426" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/neo-urban-1808082_640.jpg" data-lazy-type="image" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640.jpg" alt="" class="lazy wp-image-34890 lazy-loaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640.jpg 640w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-300x200.jpg 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-610x406.jpg 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-75x50.jpg 75w" data-lazy-sizes="(max-width: 640px) 100vw, 640px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640.jpg 640w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-300x200.jpg 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-610x406.jpg 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-75x50.jpg 75w" sizes="(max-width: 640px) 100vw, 640px"><noscript><img decoding="async" fetchpriority="high" width="640" height="426" src="https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640.jpg" alt="" class="wp-image-34890" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640.jpg 640w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-300x200.jpg 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-610x406.jpg 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/neo-urban-1808082_640-75x50.jpg 75w" sizes="(max-width: 640px) 100vw, 640px" /></noscript></figure></div>
+		
+
+
+<h3 class="wp-block-heading" id="03PlEgeNh4">What
+Is a DDoS Attack?</h3>
+
+
+
+<p>A distributed denial of service attack is when a hacker uses <a href="https://www.online-tech-tips.com/computer-tips/virus-vs-trojan-vs-worm-vs-rootkit/" target="_blank" rel="noopener" aria-label="a botnet (opens in a new tab)" data-lasso-id="4006">a botnet</a> to send your web server an overwhelming number of HTTP requests in a very short period of time.</p>
+    <div id="sticky-wrapper" class="sticky-wrapper is-sticky" style="height: 281.333px; top: 503.5px;"><div class="table-of-contents show" style="width: 200px; position: fixed; top: 89.0005px; z-index: inherit;">
+        <div class="title">Table of Contents</div>
+
+        <!-- Table of contents -->
+        <ul id="table-of-contents"><li class="pl-3"><a data-id="03PlEgeNh4">What
+Is a DDoS Attack?</a></li><li class="pl-3"><a data-id="DkVJas9afj">How To Identify a DDoS Attack?</a></li><li class="pl-3"><a data-id="HDP8F3Oktw">How To Stop a DDoS Attack</a></li><li class="pl-3 current"><a data-id="4J03nhcoKy">How To Beat a DDoS Attack</a></li></ul>
+    </div></div>
+    
+
+
+
+<p>A
+botnet is a very large network of computers across the internet that
+are infected with a virus that transforms them into a relay for the
+hacker’s software. Most computers on a botnet are regular computers
+that have become infected by a virus, and the user doesn’t even
+realize it.</p>
+
+
+
+<p>During
+normal operation, a web server provides your web page to visitors as
+follows:</p>
+
+
+
+<ul><li>A person types your URL into their web browser. </li><li>The web browser issues an HTTP request to the website URL. </li><li>Your ISP’s <a rel="noopener" aria-label=" (opens in a new tab)" href="https://www.online-tech-tips.com/cool-websites/free-dns-server/" target="_blank" data-lasso-id="4007">DNS servers</a> converts the URL into the correct IP address of the web server. </li><li>The HTTP request gets directed across the internet to the web server. </li><li>The web server uses the page requested in the URL to find the correct HTML file. </li><li>The web server responds with all of the content contained in that HTML file. </li><li>The user’s browser receives the HTML file and displays the page to the user. </li></ul>
+
+
+
+			<div class="wp-block-image">
+			<figure class="aligncenter"><img decoding="async" width="680" height="425" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/ddos-network.png" data-lazy-type="image" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network.png" alt="" class="lazy wp-image-34886 lazy-loaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network.png 680w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-300x188.png 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-610x381.png 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-80x50.png 80w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-70x43.png 70w" data-lazy-sizes="(max-width: 680px) 100vw, 680px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network.png 680w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-300x188.png 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-610x381.png 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-80x50.png 80w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-70x43.png 70w" sizes="(max-width: 680px) 100vw, 680px"><noscript><img decoding="async" width="680" height="425" src="https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network.png" alt="" class="wp-image-34886" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network.png 680w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-300x188.png 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-610x381.png 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-80x50.png 80w, https://helpdeskgeek.com/wp-content/pictures/2019/08/ddos-network-70x43.png 70w" sizes="(max-width: 680px) 100vw, 680px" /></noscript></figure></div>
+		
+
+
+<p>Most
+web servers are sized with CPU and network hardware to handle the
+average expected traffic per day. For some websites, that could be up
+to a hundred thousand, or even a million visitors in one day.</p>
+
+
+
+<p>However,
+a hacker hoping to attack your website with a DDoS attack will
+utilize a botnet of millions of computers from around the world, to
+send thousands of HTTP requests per second to your web server.</p><div id="adngin-InContent_1-0" style="margin:8px 0;text-align:center;"></div>
+
+
+
+<p>Since your web server wasn’t sized for that volume of traffic, the web server will respond to your regular website visitors with the error message, <strong>Service Unavailable.</strong> This is also known as HTTP error 503.</p>
+
+
+
+<p>In
+rare cases where your site is running on a very small web server with
+few available resources, the server itself will actually freeze or
+crash.</p>
+
+
+
+<h3 class="wp-block-heading" id="DkVJas9afj">How To Identify a DDoS Attack?</h3>
+
+
+
+<p>How
+do you know if your website just went down because of a DDoS attack?
+There are a few symptoms that are a dead giveaway.</p>
+
+
+
+<p>Usually,
+the HTTP Error 503 described above is a clear indication. However,
+another sign of a DDoS attack is a very strong spike in bandwidth.</p>
+
+
+
+<p>You can view this by logging into your account with your web host and opening <strong>Cpanel</strong>. Scroll down to the <strong>Logs</strong> section and select <strong>Bandwidth</strong>.  </p>
+
+
+
+<p>A
+normal bandwidth chart for the last 24 hours should show a relatively
+constant line, with the exception of a few small spikes.</p>
+
+
+
+			<div class="wp-block-image">
+			<figure class="aligncenter"><img decoding="async" width="680" height="406" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/site-bandwidth.png" data-lazy-type="image" data-lazy-src="https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth.png" alt="" class="lazy wp-image-34887 lazy-loaded" data-lazy-srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth.png 680w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-300x179.png 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-610x364.png 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-80x48.png 80w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-70x43.png 70w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-140x85.png 140w" data-lazy-sizes="(max-width: 680px) 100vw, 680px" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth.png 680w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-300x179.png 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-610x364.png 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-80x48.png 80w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-70x43.png 70w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-140x85.png 140w" sizes="(max-width: 680px) 100vw, 680px"><noscript><img decoding="async" width="680" height="406" src="https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth.png" alt="" class="wp-image-34887" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth.png 680w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-300x179.png 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-610x364.png 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-80x48.png 80w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-70x43.png 70w, https://helpdeskgeek.com/wp-content/pictures/2019/08/site-bandwidth-140x85.png 140w" sizes="(max-width: 680px) 100vw, 680px" /></noscript></figure></div>
+		
+
+
+<p>However,
+a recent disproportionate spike in bandwidth that remains high over
+an hour or more is a clear indication that you’re facing a DDoS
+attack against your web server.</p>
+
+
+
+<p>If you believe you’ve identified a DDoS attack in progress, it’s important to act fast. These attacks consume a lot of network bandwidth and if you’ve paid for a hosting provider, that means their data server will experience the same spike in bandwidth. This can have an adverse impact on their other customers as well.</p>
+
+
+
+<h3 class="wp-block-heading" id="HDP8F3Oktw">How To Stop a DDoS Attack</h3>
+
+
+
+<p>There is nothing you can do yourself if you’re facing a DDoS attack. But by calling <a href="https://www.online-tech-tips.com/web-site-tips/how-to-find-out-who-hosts-a-web-site-web-hosting-company/" target="_blank" rel="noopener" aria-label=" (opens in a new tab)" data-lasso-id="4008">your web hosting provider</a>, they can immediately block all incoming HTTP requests headed toward your web server.</p>
+
+
+
+			<div class="wp-block-image">
+			<figure class="aligncenter"><img decoding="async" loading="lazy" width="680" height="373" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/network-equipment.png" alt="" class="wp-image-34888" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/network-equipment.png 680w, https://helpdeskgeek.com/wp-content/pictures/2019/08/network-equipment-300x165.png 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/network-equipment-610x335.png 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/network-equipment-80x44.png 80w" sizes="(max-width: 680px) 100vw, 680px"></figure></div>
+		
+
+
+<p>This
+instantly relieves the demand on your web server, so that the server
+itself won’t crash. It also prevents the attack from adversely
+affecting the hosting provider’s other customers.</p>
+
+
+
+<p>The
+next step is to wait until the DDoS attack is over. 
+</p>
+
+
+
+<p>Such
+an attack actually requires significant resources for hackers.
+Usually, the attack is paid for by someone who wanted to shut your
+website down. These payments are for an attack that last a specific
+period of time, from an hour to several hours.</p>
+
+
+
+<p>The
+good news is that there will be an end to the attack. The bad news is
+that by blocking all traffic to your web server until the attack is
+over, the person who wanted to shut down your website essentially
+won.</p>
+
+
+
+<h3 class="wp-block-heading" id="4J03nhcoKy">How To Beat a DDoS Attack</h3>
+
+
+
+<p>Unfortunately,
+DDoS attacks are a simple and inexpensive way to shut down a website
+for a short period of time.</p>
+
+
+
+<p>The
+attacks are never permanent, but they’re intended to send a
+message. It means that something you’ve published on your website
+upset someone enough that they were willing to pay hackers to attack
+your site.</p>
+
+
+
+<p>If
+you run a critical online operation such as a large business, and
+need your site to be resistant to DDoS attacks, it’s possible but
+it isn’t cheap.</p>
+
+
+
+<p>DDoS
+protection services work by establishing a sort of counter botnet
+that’s larger than the botnet running the DDoS attack. This creates
+a distributed response to the incoming HTTP requests, even if there
+are hundreds of thousands or millions of those requests. 
+</p>
+
+
+
+			<div class="wp-block-image">
+			<figure class="aligncenter"><img decoding="async" loading="lazy" width="680" height="409" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/botnet-attack.png" alt="" class="wp-image-34889" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/08/botnet-attack.png 680w, https://helpdeskgeek.com/wp-content/pictures/2019/08/botnet-attack-300x180.png 300w, https://helpdeskgeek.com/wp-content/pictures/2019/08/botnet-attack-610x367.png 610w, https://helpdeskgeek.com/wp-content/pictures/2019/08/botnet-attack-80x48.png 80w, https://helpdeskgeek.com/wp-content/pictures/2019/08/botnet-attack-70x43.png 70w, https://helpdeskgeek.com/wp-content/pictures/2019/08/botnet-attack-140x85.png 140w" sizes="(max-width: 680px) 100vw, 680px"></figure></div>
+		
+
+
+<p>There
+are monthly service fees that come with those services. But if you
+find yourself a frequent victim of DDoS attacks, these DDoS
+protection services may very well be worth the cost.</p>
+
+
+
+<p>DDoS
+attacks can be at best a minor nuisance that causes you a few hours
+of website downtime. At worst, it could cost you a significant amount
+of lost online business, not to mention a drop in customers who trust
+your website.</p>
+
+
+
+<p>Understanding
+how to identify a DDoS attack and how to stop it could reduce your
+downtime, and reduce the time it takes for you and your hosting
+provider to recover from it.</p>
+<p></p><!-- AI CONTENT END 1 -->
+</div>
+                    <script>
+                        if (window.innerWidth < 768) {
+                            var adEl      = document.getElementsByClassName("post-ad-top")[0],
+                                tocEl     = document.getElementsByClassName('table-of-contents')[0],
+                                tocHTML   = tocEl.outerHTML,
+                                adHTML    = adEl.outerHTML,
+                                newHTML   = '<div class="mobile-content-ads">'+adHTML+'</div>';
+
+                            document.getElementsByClassName("post-ad-top")[0].outerHTML = '';
+
+                            tocEl.outerHTML = tocHTML + newHTML;
+                        }
+                    </script>
+                </div>
+
+                <div class="entry-footer">
+
+    <div class="aboveauthorbox">
+        <div id="adngin-InContent_2-0"></div>
+    </div>
+
+    <div class="authorbox">
+        <div class="authoravatar">
+        <img alt="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/59b16fe991ab5ba89fae01a626db1d30(1).jpeg" srcset="https://secure.gravatar.com/avatar/59b16fe991ab5ba89fae01a626db1d30?s=192&amp;d=blank&amp;r=g 2x" class="avatar avatar-96 photo" height="96" width="96" loading="lazy" decoding="async">        </div>
+        <div class="authorpostinfo">
+            <div itemprop="description">
+                <p>Ryan has been writing how-to and other technology-based articles online since 2007. He has a BSc degree in Electrical Engineering and he's worked 13 years in automation engineering, 5 years in IT, and now is an Apps Engineer. <a href="https://helpdeskgeek.com/author/rdube/">Read Ryan's Full Bio</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+
+        
+    
+    <div class="related-posts">
+	<h4 id="related">Read More Posts:</h4>
+	<div class="related-posts-flex">
+								<div class="related-thumbnails-horizontal">
+					<a class="related-thumbnail item-image" href="https://helpdeskgeek.com/networking/accessing-local-files-and-folders-on-remote-desktop-session/" rel="bookmark">
+						<img width="140" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/RDC-Featured-140x85.png" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/11/RDC-Featured-140x85.png 140w, https://helpdeskgeek.com/wp-content/pictures/2019/11/RDC-Featured-70x43.png 70w" sizes="(max-width: 140px) 100vw, 140px">					</a>
+					<span>
+						<a class="related-thumbnail item-title" href="https://helpdeskgeek.com/networking/accessing-local-files-and-folders-on-remote-desktop-session/" rel="bookmark">Accessing Local Files and Folders on Remote Desktop Session</a>
+					</span>
+				</div>
+							<div class="related-thumbnails-horizontal">
+					<a class="related-thumbnail item-image" href="https://helpdeskgeek.com/help-desk/how-to-fix-youtube-comments-not-loading-in-chrome/" rel="bookmark">
+						<img width="140" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/youtube-140x85.jpg" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2021/05/youtube-140x85.jpg 140w, https://helpdeskgeek.com/wp-content/pictures/2021/05/youtube-70x43.jpg 70w" sizes="(max-width: 140px) 100vw, 140px">					</a>
+					<span>
+						<a class="related-thumbnail item-title" href="https://helpdeskgeek.com/help-desk/how-to-fix-youtube-comments-not-loading-in-chrome/" rel="bookmark">How to Fix YouTube Comments Not Loading in Chrome</a>
+					</span>
+				</div>
+							<div class="related-thumbnails-horizontal">
+					<a class="related-thumbnail item-image" href="https://helpdeskgeek.com/free-tools-review/the-3-best-open-source-video-editors/" rel="bookmark">
+						<img width="140" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/cropped-Best-Open-Source-Video-Editors-140x85.jpg" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2019/09/cropped-Best-Open-Source-Video-Editors-140x85.jpg 140w, https://helpdeskgeek.com/wp-content/pictures/2019/09/cropped-Best-Open-Source-Video-Editors-70x43.jpg 70w" sizes="(max-width: 140px) 100vw, 140px">					</a>
+					<span>
+						<a class="related-thumbnail item-title" href="https://helpdeskgeek.com/free-tools-review/the-3-best-open-source-video-editors/" rel="bookmark">The 3 Best Open-Source Video Editors</a>
+					</span>
+				</div>
+							<div class="related-thumbnails-horizontal">
+					<a class="related-thumbnail item-image" href="https://helpdeskgeek.com/how-to/create-keyboard-shortcut-to-access-the-safely-remove-hardware-dialog/" rel="bookmark">
+						<img width="140" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/01_safely_remove_hardware_icon_w7_thumb-150x150-140x85.png" class="attachment-pop-posts-thumb size-pop-posts-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2011/11/01_safely_remove_hardware_icon_w7_thumb-150x150-140x85.png 140w, https://helpdeskgeek.com/wp-content/pictures/2011/11/01_safely_remove_hardware_icon_w7_thumb-150x150-70x43.png 70w" sizes="(max-width: 140px) 100vw, 140px">					</a>
+					<span>
+						<a class="related-thumbnail item-title" href="https://helpdeskgeek.com/how-to/create-keyboard-shortcut-to-access-the-safely-remove-hardware-dialog/" rel="bookmark">Create Keyboard Shortcut to Access Safely Remove Hardware Dialog</a>
+					</span>
+				</div>
+					</div>
+</div>
+
+    
+	<section id="comments" class="comments-area comment-block">
+
+		
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply</h3><form action="https://helpdeskgeek.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="" spellcheck="false" data-ms-editor="true"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required="" spellcheck="false" data-ms-editor="true"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required=""></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="34885" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div><!-- #respond -->
+	
+	</section><!-- #comments -->
+
+
+    <div class="akic_after_comments">
+    <div class="hdg-in-content-bhdgom" style="text-align:center;">
+	<div id="adngin-InContent_3-0"></div>
+</div>
+    </div>
+</main> <!-- End content -->
+
+<aside class="sidebar" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	<div class="widget social-signup" id="social-signup-2"><h4 class="widgettitle">Daily Email Newsletter</h4>		<!-- Begin Mailchimp Signup Form -->
+		<div id="mc_embed_signup" class="sidebar-signup-form">
+			<form action="https://online-tech-tips.us7.list-manage.com/subscribe/post?u=cea4775e8e99a3e05dd31829e&amp;id=9806833103" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+			    <div id="mc_embed_signup_scroll">
+			    	<div class="mc-field-group">
+						<input type="email" value="" name="EMAIL" class="required email sideform-email" id="mce-EMAIL" placeholder="Enter your email and hit enter">
+						<input class="sideform-submit" type="submit" value="►" name="subscribe" id="mc-embedded-subscribe">
+					</div>
+
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cea4775e8e99a3e05dd31829e_15faf51d16" tabindex="-1" value="" spellcheck="false" data-ms-editor="true"></div>
+			    </div>
+			</form>
+		</div>
+		<!--End mc_embed_signup-->
+		<div class="social-links"><span class="social-icon"><a target="blank" rel="nofollow" class="icon-twitter" href="https://twitter.com/helpdeskgeek"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-twitter"></use></svg></a></span><span class="social-icon"><a target="blank" rel="nofollow" class="icon-insta" href="https://www.instagram.com/helpdeskgeek/"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-instagram"></use></svg></a></span><span class="social-icon"><a target="blank" rel="nofollow" class="icon-facebook" href="https://www.facebook.com/helpdeskgeek"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-facebook"></use></svg></a></span><span class="social-icon"><a target="blank" rel="nofollow" class="icon-linkedin" href="https://www.linkedin.com/company/helpdeskgeek"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-linkedin"></use></svg></a></span><span class="social-icon"><a target="blank" rel="nofollow" class="icon-envelope" href="mailto:akishore@helpdeskgeek.com"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-email"></use></svg></a></span><span class="social-icon"><a target="blank" class="icon-rss" href="https://helpdeskgeek.com/feed/"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-rss"></use></svg></a></span></div></div><div class="widget widget_text" id="text-10">			<div class="textwidget"><div id="adngin-Sidebar_01-0" style="text-align: center;"></div></div>
+		</div><div class="widget featured-posts widget-post-list" id="featured-posts-2"><h4 class="widgettitle">Trending Articles</h4><ul><li><a class="item-image" href="https://helpdeskgeek.com/help-desk/snipping-tool-not-working-8-ways-to-fix-it-on-windows/" rel="bookmark" title="Snipping Tool Not Working? 8 Ways to Fix It on Windows"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/windows-2-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-2-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-2-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-2-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/help-desk/snipping-tool-not-working-8-ways-to-fix-it-on-windows/" rel="bookmark" title="Snipping Tool Not Working? 8 Ways to Fix It on Windows">Snipping Tool Not Working? 8 Ways to Fix It on Windows</a></li><li><a class="item-image" href="https://helpdeskgeek.com/office-tips/how-to-copy-and-paste-formulas-in-microsoft-excel/" rel="bookmark" title="How to Copy and Paste Formulas in Microsoft Excel"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/excel-4-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-4-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-4-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-4-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/office-tips/how-to-copy-and-paste-formulas-in-microsoft-excel/" rel="bookmark" title="How to Copy and Paste Formulas in Microsoft Excel">How to Copy and Paste Formulas in Microsoft Excel</a></li><li><a class="item-image" href="https://helpdeskgeek.com/windows-11/what-is-windows-input-experience-in-windows/" rel="bookmark" title="What Is “Windows Input Experience” in Windows?"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/windows-1-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-1-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-1-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/windows-11/what-is-windows-input-experience-in-windows/" rel="bookmark" title="What Is “Windows Input Experience” in Windows?">What Is “Windows Input Experience” in Windows?</a></li><li><a class="item-image" href="https://helpdeskgeek.com/how-to/how-to-disable-efficiency-mode-for-google-chrome-in-windows/" rel="bookmark" title="How to Disable Efficiency Mode for Google Chrome in Windows"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/preview-media-how-to-disable-efficiency-mode-for-google-chrome-in-windows-1-130x85.png" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/preview-media-how-to-disable-efficiency-mode-for-google-chrome-in-windows-1-130x85.png 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/preview-media-how-to-disable-efficiency-mode-for-google-chrome-in-windows-1-384x254.png 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/how-to/how-to-disable-efficiency-mode-for-google-chrome-in-windows/" rel="bookmark" title="How to Disable Efficiency Mode for Google Chrome in Windows">How to Disable Efficiency Mode for Google Chrome in Windows</a></li><li><a class="item-image" href="https://helpdeskgeek.com/office-tips/how-to-copy-cell-formatting-in-microsoft-excel/" rel="bookmark" title="How to Copy Cell Formatting in Microsoft Excel"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/excel-2-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-2-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-2-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-2-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/office-tips/how-to-copy-cell-formatting-in-microsoft-excel/" rel="bookmark" title="How to Copy Cell Formatting in Microsoft Excel">How to Copy Cell Formatting in Microsoft Excel</a></li><li><a class="item-image" href="https://helpdeskgeek.com/office-tips/how-to-alternate-row-and-column-colors-in-microsoft-excel/" rel="bookmark" title="How to Alternate Row and Column Colors in Microsoft Excel"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/excel-1-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-1-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-1-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/office-tips/how-to-alternate-row-and-column-colors-in-microsoft-excel/" rel="bookmark" title="How to Alternate Row and Column Colors in Microsoft Excel">How to Alternate Row and Column Colors in Microsoft Excel</a></li><li><a class="item-image" href="https://helpdeskgeek.com/windows-11/calendar-app-crashing-on-windows-heres-how-to-fix-it/" rel="bookmark" title="Calendar App Crashing on Windows? Here’s How to Fix It"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/windows-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/windows-11/calendar-app-crashing-on-windows-heres-how-to-fix-it/" rel="bookmark" title="Calendar App Crashing on Windows? Here’s How to Fix It">Calendar App Crashing on Windows? Here’s How to Fix It</a></li><li><a class="item-image" href="https://helpdeskgeek.com/office-tips/how-to-change-your-profile-picture-in-microsoft-outlook/" rel="bookmark" title="How to Change Your Profile Picture in Microsoft Outlook"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/outlook-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/outlook-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/outlook-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/outlook-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/office-tips/how-to-change-your-profile-picture-in-microsoft-outlook/" rel="bookmark" title="How to Change Your Profile Picture in Microsoft Outlook">How to Change Your Profile Picture in Microsoft Outlook</a></li></ul></div><div class="widget widget_text" id="text-11">			<div class="textwidget"><div id="adngin-Sidebar_02-0" style="text-align: center;"></div></div>
+		</div><div class="widget recent-posts widget-post-list" id="recent-posts-3"><h4 class="widgettitle">Recent Articles</h4><ul><li><a class="item-image" href="https://helpdeskgeek.com/office-tips/how-to-view-excel-files-version-history-and-restore-previous-versions/" rel="bookmark" title="How to View Excel Files Version History (And Restore Previous Versions)"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/excel-5-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-5-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-5-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/excel-5-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/office-tips/how-to-view-excel-files-version-history-and-restore-previous-versions/" rel="bookmark" title="How to View Excel Files Version History (And Restore Previous Versions)">How to View Excel Files Version History (And Restore Previous Versions)</a></li><li><a class="item-image" href="https://helpdeskgeek.com/office-tips/how-to-create-a-table-of-contents-in-powerpoint/" rel="bookmark" title="How to Create a Table of Contents in PowerPoint"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/preview-media-how-to-create-a-table-of-contents-in-powerpoint-1-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/preview-media-how-to-create-a-table-of-contents-in-powerpoint-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/preview-media-how-to-create-a-table-of-contents-in-powerpoint-1-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/office-tips/how-to-create-a-table-of-contents-in-powerpoint/" rel="bookmark" title="How to Create a Table of Contents in PowerPoint">How to Create a Table of Contents in PowerPoint</a></li><li><a class="item-image" href="https://helpdeskgeek.com/how-to/how-to-remove-the-discover-bing-chat-button-in-microsoft-edge/" rel="bookmark" title="How to Remove the Discover/Bing Chat Button in Microsoft Edge"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/preview-media-how-to-remove-the-discoverbing-chat-button-in-microsoft-edge-1-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/preview-media-how-to-remove-the-discoverbing-chat-button-in-microsoft-edge-1-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/preview-media-how-to-remove-the-discoverbing-chat-button-in-microsoft-edge-1-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/how-to/how-to-remove-the-discover-bing-chat-button-in-microsoft-edge/" rel="bookmark" title="How to Remove the Discover/Bing Chat Button in Microsoft Edge">How to Remove the Discover/Bing Chat Button in Microsoft Edge</a></li><li><a class="item-image" href="https://helpdeskgeek.com/help-desk/snipping-tool-not-working-8-ways-to-fix-it-on-windows/" rel="bookmark" title="Snipping Tool Not Working? 8 Ways to Fix It on Windows"><img width="130" height="85" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/windows-2-130x85.jpeg" class="attachment-side-bar-thumb size-side-bar-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-2-130x85.jpeg 130w, https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-2-75x50.jpeg 75w, https://helpdeskgeek.com/wp-content/pictures/2023/12/windows-2-384x254.jpeg 384w" sizes="(max-width: 130px) 100vw, 130px"></a><a class="item-title" href="https://helpdeskgeek.com/help-desk/snipping-tool-not-working-8-ways-to-fix-it-on-windows/" rel="bookmark" title="Snipping Tool Not Working? 8 Ways to Fix It on Windows">Snipping Tool Not Working? 8 Ways to Fix It on Windows</a></li></ul></div><div class="widget widget_text" id="text-13">			<div class="textwidget"><div id="adngin-Sidebar_03-0" style="text-align: center; right: 215px;" class="fixed"></div>
+</div>
+		</div>
+        <div class="sidebarFloatingBanner">
+        <div id="adngin-hdg_sidebar_right-0"></div>
+    </div>
+    </aside>
+
+	</div> <!-- Ending content-wrap -->
+</div> <!-- close site-container -->
+
+	<footer id="footer" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+		<div class="footer-widget-row">
+			<div class="wrap">
+				<div class="footer-widget-block footer-widget-left">
+					<div class="widget_text widget widget_custom_html" id="custom_html-3"><h4 class="widgettitle">Our Publishing Family</h4><div class="textwidget custom-html-widget"><div style="color:white">
+	Help Desk Geek is part of the AK Internet Consulting publishing family. 
+</div>
+<div>
+	<ul style="padding-top:10px;color:white">
+<li style="padding-bottom:3px">
+<a href="https://www.online-tech-tips.com/" target="_blank" rel="nofollow noopener" style="color:white">ONLINE TECH TIPS</a>
+</li>
+<li style="padding-bottom:3px">
+<a href="https://thebackroomtech.com/" target="_blank" rel="nofollow noopener" style="color:white">THE BACK ROOM TECH</a>
+</li>
+<li>
+<a href="https://www.switchingtomac.com/" target="_blank" rel="nofollow noopener" style="color:white">SWITCHING TO MAC</a>
+</li>
+	</ul>
+</div></div></div>				</div>
+
+				<div class="footer-widget-block footer-widget-center">
+					<div class="widget social-signup" id="social-signup-3"><h4 class="widgettitle">Daily Email Newsletter</h4>		<!-- Begin Mailchimp Signup Form -->
+		<div id="mc_embed_signup" class="sidebar-signup-form">
+			<form action="https://online-tech-tips.us7.list-manage.com/subscribe/post?u=cea4775e8e99a3e05dd31829e&amp;id=9806833103" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+			    <div id="mc_embed_signup_scroll">
+			    	<div class="mc-field-group">
+						<input type="email" value="" name="EMAIL" class="required email sideform-email" id="mce-EMAIL" placeholder="Enter your email and hit enter">
+						<input class="sideform-submit" type="submit" value="►" name="subscribe" id="mc-embedded-subscribe">
+					</div>
+
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cea4775e8e99a3e05dd31829e_15faf51d16" tabindex="-1" value="" spellcheck="false" data-ms-editor="true"></div>
+			    </div>
+			</form>
+		</div>
+		<!--End mc_embed_signup-->
+		<h4 class="widgettitle">CONNECT WITH US</h4><div class="social-links"><span class="social-icon"><a target="blank" rel="nofollow" class="icon-twitter" href="https://twitter.com/helpdeskgeek"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-twitter"></use></svg></a></span><span class="social-icon"><a target="blank" rel="nofollow" class="icon-insta" href="https://www.instagram.com/helpdeskgeek/"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-instagram"></use></svg></a></span><span class="social-icon"><a target="blank" rel="nofollow" class="icon-facebook" href="https://www.facebook.com/helpdeskgeek"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-facebook"></use></svg></a></span><span class="social-icon"><a target="blank" rel="nofollow" class="icon-linkedin" href="https://www.linkedin.com/company/helpdeskgeek"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-linkedin"></use></svg></a></span><span class="social-icon"><a target="blank" rel="nofollow" class="icon-envelope" href="mailto:akishore@helpdeskgeek.com"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-email"></use></svg></a></span><span class="social-icon"><a target="blank" class="icon-rss" href="https://helpdeskgeek.com/feed/"><svg><use xlink:href="/wp-content/themes/akic/images/icons-sprite.svg#icon-rss"></use></svg></a></span></div></div>				</div>
+
+				<div class="footer-widget-block footer-widget-right">
+					<div class="widget about-block" id="about-block-2"><h4 class="widgettitle">About Help Desk Geek</h4><p>Welcome to Help Desk Geek- a blog full of tech tips from trusted tech experts. We have thousands of articles and guides to help you troubleshoot any issue. Our articles have been read over 150 million times since we launched in 2008.</p>
+</div>				</div>
+			</div>
+		</div>
+
+		<div class="footer-info-row">
+			<div class="wrap">
+				<p><a href="https://helpdeskgeek.com/">Home</a>
+<a href="https://helpdeskgeek.com/about/">About Us</a>
+<a href="https://helpdeskgeek.com/about/#editorial-standards">Editorial Standards</a>
+<a href="https://helpdeskgeek.com/about/#contact-us">Contact Us</a>
+<a href="https://helpdeskgeek.com/terms/">Terms of Use</a>
+</p>
+				    <p class="copyright">Copyright © 2008-2023 Help Desk Geek.com, LLC All Rights Reserved</p>
+    			</div>
+		</div>
+
+	</footer>
+
+	<!--/22152718/online-tech-tips.com//outstream_video-->
+<div id="adngin-Video_Outstream-0"></div>
+
+<!--/22152718/online-tech-tips.com//sticky_mobile-->
+<div id="adngin-Adhesion_Mobile-0"></div>
+
+<script src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/tag" async=""></script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+window._qevents = window._qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+window._qevents.push({
+qacct:"p-5faSDXBkovfz2",
+uid:"__INSERT_EMAIL_HERE__"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-5faSDXBkovfz2.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag --><div id="ccpa" style="background: rgb(243,110,33); color: #fff; text-align: center; cursor: pointer; display: none; text-decoration: underline; cursor: pointer; display: none;">Do not share my Personal Information.</div>
+<script type="text/javascript">
+		/* MonsterInsights Scroll Tracking */
+		if ( typeof(jQuery) !== 'undefined' ) {
+		jQuery( document ).ready(function(){
+		function monsterinsights_scroll_tracking_load() {
+		if ( ( typeof(__gaTracker) !== 'undefined' && __gaTracker && __gaTracker.hasOwnProperty( "loaded" ) && __gaTracker.loaded == true ) || ( typeof(__gtagTracker) !== 'undefined' && __gtagTracker ) ) {
+		(function(factory) {
+		factory(jQuery);
+		}(function($) {
+
+		/* Scroll Depth */
+		"use strict";
+		var defaults = {
+		percentage: true
+		};
+
+		var $window = $(window),
+		cache = [],
+		scrollEventBound = false,
+		lastPixelDepth = 0;
+
+		/*
+		* Plugin
+		*/
+
+		$.scrollDepth = function(options) {
+
+		var startTime = +new Date();
+
+		options = $.extend({}, defaults, options);
+
+		/*
+		* Functions
+		*/
+
+		function sendEvent(action, label, scrollDistance, timing) {
+		if ( 'undefined' === typeof MonsterInsightsObject || 'undefined' === typeof MonsterInsightsObject.sendEvent ) {
+		return;
+		}
+			var paramName = action.toLowerCase();
+	var fieldsArray = {
+	send_to: 'G-Z4BL81Y5HT',
+	non_interaction: true
+	};
+	fieldsArray[paramName] = label;
+
+	if (arguments.length > 3) {
+	fieldsArray.scroll_timing = timing
+	MonsterInsightsObject.sendEvent('event', 'scroll_depth', fieldsArray);
+	} else {
+	MonsterInsightsObject.sendEvent('event', 'scroll_depth', fieldsArray);
+	}
+			}
+
+		function calculateMarks(docHeight) {
+		return {
+		'25%' : parseInt(docHeight * 0.25, 10),
+		'50%' : parseInt(docHeight * 0.50, 10),
+		'75%' : parseInt(docHeight * 0.75, 10),
+		/* Cushion to trigger 100% event in iOS */
+		'100%': docHeight - 5
+		};
+		}
+
+		function checkMarks(marks, scrollDistance, timing) {
+		/* Check each active mark */
+		$.each(marks, function(key, val) {
+		if ( $.inArray(key, cache) === -1 && scrollDistance >= val ) {
+		sendEvent('Percentage', key, scrollDistance, timing);
+		cache.push(key);
+		}
+		});
+		}
+
+		function rounded(scrollDistance) {
+		/* Returns String */
+		return (Math.floor(scrollDistance/250) * 250).toString();
+		}
+
+		function init() {
+		bindScrollDepth();
+		}
+
+		/*
+		* Public Methods
+		*/
+
+		/* Reset Scroll Depth with the originally initialized options */
+		$.scrollDepth.reset = function() {
+		cache = [];
+		lastPixelDepth = 0;
+		$window.off('scroll.scrollDepth');
+		bindScrollDepth();
+		};
+
+		/* Add DOM elements to be tracked */
+		$.scrollDepth.addElements = function(elems) {
+
+		if (typeof elems == "undefined" || !$.isArray(elems)) {
+		return;
+		}
+
+		$.merge(options.elements, elems);
+
+		/* If scroll event has been unbound from window, rebind */
+		if (!scrollEventBound) {
+		bindScrollDepth();
+		}
+
+		};
+
+		/* Remove DOM elements currently tracked */
+		$.scrollDepth.removeElements = function(elems) {
+
+		if (typeof elems == "undefined" || !$.isArray(elems)) {
+		return;
+		}
+
+		$.each(elems, function(index, elem) {
+
+		var inElementsArray = $.inArray(elem, options.elements);
+		var inCacheArray = $.inArray(elem, cache);
+
+		if (inElementsArray != -1) {
+		options.elements.splice(inElementsArray, 1);
+		}
+
+		if (inCacheArray != -1) {
+		cache.splice(inCacheArray, 1);
+		}
+
+		});
+
+		};
+
+		/*
+		* Throttle function borrowed from:
+		* Underscore.js 1.5.2
+		* http://underscorejs.org
+		* (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+		* Underscore may be freely distributed under the MIT license.
+		*/
+
+		function throttle(func, wait) {
+		var context, args, result;
+		var timeout = null;
+		var previous = 0;
+		var later = function() {
+		previous = new Date;
+		timeout = null;
+		result = func.apply(context, args);
+		};
+		return function() {
+		var now = new Date;
+		if (!previous) previous = now;
+		var remaining = wait - (now - previous);
+		context = this;
+		args = arguments;
+		if (remaining <= 0) {
+		clearTimeout(timeout);
+		timeout = null;
+		previous = now;
+		result = func.apply(context, args);
+		} else if (!timeout) {
+		timeout = setTimeout(later, remaining);
+		}
+		return result;
+		};
+		}
+
+		/*
+		* Scroll Event
+		*/
+
+		function bindScrollDepth() {
+
+		scrollEventBound = true;
+
+		$window.on('scroll.scrollDepth', throttle(function() {
+		/*
+		* We calculate document and window height on each scroll event to
+		* account for dynamic DOM changes.
+		*/
+
+		var docHeight = $(document).height(),
+		winHeight = window.innerHeight ? window.innerHeight : $window.height(),
+		scrollDistance = $window.scrollTop() + winHeight,
+
+		/* Recalculate percentage marks */
+		marks = calculateMarks(docHeight),
+
+		/* Timing */
+		timing = +new Date - startTime;
+
+		checkMarks(marks, scrollDistance, timing);
+		}, 500));
+
+		}
+
+		init();
+		};
+
+		/* UMD export */
+		return $.scrollDepth;
+
+		}));
+
+		jQuery.scrollDepth();
+		} else {
+		setTimeout(monsterinsights_scroll_tracking_load, 200);
+		}
+		}
+		monsterinsights_scroll_tracking_load();
+		});
+		}
+		/* End MonsterInsights Scroll Tracking */
+		
+</script>
+
+
+
+
+
+    <style>
+      .adsbygoogle, .adsbygoogle:not([data-ad-status=filled]) [aria-label="Advertisement"], #adngin-Sidebar_01-0,
+      [id^=adngin-]:not([id^=adngin-bottom_adhesive_dskt]):not([id^=adngin-Adhesion_Mobile]), #adngin-Video_Outstream-0, #adngin-Adhesion_Mobile-0,
+      #adngin-Sidebar_01-0, #adngin-Sidebar_02-0, #adngin-Sidebar_03-0, #adngin-Video_Outstream-0, #adngin-Adhesion_Mobile-0,
+      #adngin-Sidebar_01-0, #adngin-Sidebar_02-0, #adngin-Sidebar_03-0, #adngin-bottom_adhesive_dskt-0 {
+        height: auto !important;
+        min-height: auto !important;
+      }
+    </style>
+    <script>
+        jQuery().ready(function(){
+            let footerAdsSelector = '#adngin-bottom_adhesive_dskt-0-adhesive';
+            let footerAdsElement = null;
+            let bottomAdsSizing = function(){
+                let height = 0;
+                if (!jQuery('body').find(footerAdsSelector).hasClass('adhesive-hidden')) {
+                    height = jQuery('body').find(footerAdsSelector).outerHeight(true);
+                }
+                jQuery('body').css('margin-bottom', height+'px');
+            }
+            jQuery('body').on('DOMNodeInserted', footerAdsSelector, function () {
+                if (!footerAdsElement) {
+                    footerAdsElement = document.querySelector(footerAdsSelector)
+                    const observer = new MutationObserver(function(){
+                        bottomAdsSizing();
+                    })
+                    observer.observe(footerAdsElement, {attributes: true})
+                }
+                bottomAdsSizing();
+            });
+            jQuery('body').on('change', footerAdsSelector, function(){
+                bottomAdsSizing();
+            });
+            jQuery('body').on('DOMSubtreeModified', footerAdsSelector, function(){
+                bottomAdsSizing();
+            });
+            if (jQuery(footerAdsSelector).length) {
+                bottomAdsSizing();
+            }
+        });
+    </script>
+<script defer="" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/autoptimize_ff11dff364abf504c797667582ec4c9b.js.download"></script>
+
+
+
+
+<script src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/f(1).txt" async=""></script><iframe name="__tcfapiLocator" style="display: none;" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/saved_resource.html"></iframe><iframe name="__uspapiLocator" style="display: none;" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/saved_resource(1).html"></iframe><iframe name="__adconsentLocator" style="display: none;" src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/saved_resource(2).html"></iframe><img src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/px.gif" style="display: none !important; width: 1px !important; height: 1px !important;"><img src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/favicon.ico" style="display: none !important; width: 1px !important; height: 1px !important;"><img src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/px(1).gif" style="display: none !important; width: 1px !important; height: 1px !important;"><iframe src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/safeFrame.html" style="width: 0px; height: 0px; display: none !important;"></iframe><iframe src="./How To Identify a DDoS Attack On Your Server &amp; Stop It_files/robots.html" style="width: 0px; height: 0px; display: none;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color: initial; font: initial; font-palette: initial; font-synthesis: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation-composition: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-depth: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"><div style="all: initial;"><template shadowrootmode="open"></template></div></div><div style="color: initial; font: initial; font-palette: initial; font-synthesis: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation-composition: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-depth: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"></div></div></editor-card><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color: initial; font: initial; font-palette: initial; font-synthesis: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation-composition: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-depth: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"><div style="all: initial;"><template shadowrootmode="open"></template></div></div><div style="color: initial; font: initial; font-palette: initial; font-synthesis: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation-composition: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-depth: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"></div></div></editor-card></html>

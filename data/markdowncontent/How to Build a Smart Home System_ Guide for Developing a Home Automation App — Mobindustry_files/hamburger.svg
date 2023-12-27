@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+    <title>31C99E7D-01D4-4505-9981-3C252BD8C1A2</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.078815 0 0 0 0 0.120100 0 0 0 0 0.257026 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Contact-us-Pop-up-—-Tablet" transform="translate(-721.000000, -80.000000)">
+            <g id="icon/burger" transform="translate(25.000000, 77.000000)" filter="url(#filter-1)">
+                <g transform="translate(696.000000, 3.000000)" id="ic_xmark" fill="#141F42">
+                    <polygon id="Path" points="5.6 4 12 10.4 18.4 4 20 5.6 13.6 12 20 18.4 18.4 20 12 13.6 5.6 20 4 18.4 10.4 12 4 5.6"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

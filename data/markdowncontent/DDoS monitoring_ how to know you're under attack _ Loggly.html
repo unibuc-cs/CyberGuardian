@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/ -->
+<html lang="en-US"><script async="" id="demandbase_js_lib" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/e3XHeVLC.min.js.download"></script><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/munchkin.js.download"></script><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/js"></script><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/analytics.js.download"></script><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/js(1)"></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/bat.js.download" async=""></script><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/insight.min.js.download"></script><script async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/uwt.js.download"></script><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/analytics.min.js.download"></script><script src="chrome-extension://nimlmejbmnecnaghgmbahmbaddhjbecg/content/location/location.js"></script><head class="at-element-marker"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-merge-styles="true"></style>
+		<style data-merge-styles="true"></style><style data-merge-styles="true"></style><style data-merge-styles="true"></style><style data-merge-styles="true"></style><style data-merge-styles="true"></style><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/v4.js.download"></script>
+    <script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/launch-e9b5a5e5ac3f.min.js.download" async=""></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.10 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>DDoS monitoring: how to know you're under attack | Loggly</title>
+	<meta name="description" content="DDoS attacks can be difficult and costly to recognize and mitigate. Jennifer Marsh shares a few strategies to alert admins to these attacks as they begin.">
+	<link rel="canonical" href="https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="DDoS monitoring: how to know you&#39;re under attack | Loggly">
+	<meta property="og:description" content="DDoS attacks can be difficult and costly to recognize and mitigate. Jennifer Marsh shares a few strategies to alert admins to these attacks as they begin.">
+	<meta property="og:url" content="https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/">
+	<meta property="og:site_name" content="Log Analysis | Log Monitoring by Loggly">
+	<meta property="article:publisher" content="https://www.facebook.com/loggly/">
+	<meta property="article:published_time" content="2017-01-25T00:00:36+00:00">
+	<meta property="article:modified_time" content="2022-10-25T09:42:00+00:00">
+	<meta property="og:image" content="https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1.png">
+	<meta name="author" content="Jennifer Marsh">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@loggly">
+	<meta name="twitter:site" content="@loggly">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Jennifer Marsh">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="9 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/#article","isPartOf":{"@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/"},"author":{"name":"Jennifer Marsh","@id":"https://www.loggly.com/#/schema/person/2d8f2601bab6d2ed610e15746d4b0b4a"},"headline":"DDoS monitoring: how to know you&#8217;re under attack","datePublished":"2017-01-25T00:00:36+00:00","dateModified":"2022-10-25T09:42:00+00:00","mainEntityOfPage":{"@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/"},"wordCount":1681,"commentCount":2,"publisher":{"@id":"https://www.loggly.com/#organization"},"image":{"@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/#primaryimage"},"thumbnailUrl":"https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1.png","keywords":["ddos"],"articleSection":["DevOps","How-tos","Security"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/#respond"]}]},{"@type":"WebPage","@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/","url":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/","name":"DDoS monitoring: how to know you're under attack | Loggly","isPartOf":{"@id":"https://www.loggly.com/#website"},"primaryImageOfPage":{"@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/#primaryimage"},"image":{"@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/#primaryimage"},"thumbnailUrl":"https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1.png","datePublished":"2017-01-25T00:00:36+00:00","dateModified":"2022-10-25T09:42:00+00:00","description":"DDoS attacks can be difficult and costly to recognize and mitigate. Jennifer Marsh shares a few strategies to alert admins to these attacks as they begin.","breadcrumb":{"@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/#primaryimage","url":"https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1.png","contentUrl":"https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1.png","width":430,"height":70},{"@type":"BreadcrumbList","@id":"https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.loggly.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.loggly.com/blog/"},{"@type":"ListItem","position":3,"name":"DDoS monitoring: how to know you&#8217;re under attack"}]},{"@type":"WebSite","@id":"https://www.loggly.com/#website","url":"https://www.loggly.com/","name":"Log Analysis | Log Monitoring by Loggly","description":"Loggly is a log analysis / log management solution based in the cloud.","publisher":{"@id":"https://www.loggly.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.loggly.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.loggly.com/#organization","name":"SolarWinds Loggly","url":"https://www.loggly.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.loggly.com/#/schema/logo/image/","url":"https://www.loggly.com/wp-content/uploads/2018/04/loggly-logo-grey.png","contentUrl":"https://www.loggly.com/wp-content/uploads/2018/04/loggly-logo-grey.png","width":320,"height":107,"caption":"SolarWinds Loggly"},"image":{"@id":"https://www.loggly.com/#/schema/logo/image/"},"sameAs":["https://www.linkedin.com/company/loggly","https://youtube.com/c/LogglyInc","https://www.facebook.com/loggly/","https://twitter.com/loggly"]},{"@type":"Person","@id":"https://www.loggly.com/#/schema/person/2d8f2601bab6d2ed610e15746d4b0b4a","name":"Jennifer Marsh","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.loggly.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/9899938e942c28e110226ede6fd0c54a?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/9899938e942c28e110226ede6fd0c54a?s=96&d=mm&r=g","caption":"Jennifer Marsh"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Log Analysis | Log Monitoring by Loggly » Feed" href="https://www.loggly.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Log Analysis | Log Monitoring by Loggly » Comments Feed" href="https://www.loggly.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Log Analysis | Log Monitoring by Loggly » DDoS monitoring: how to know you’re under attack Comments Feed" href="https://www.loggly.com/blog/ddos-monitoring-how-to-know-youre-under-attack/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.loggly.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/style.min.css" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link rel="stylesheet" id="sw-announcement-styles-css" href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/announcement.css" type="text/css" media="all">
+<link rel="stylesheet" id="loggly-style-css" href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/style(1).min.css" type="text/css" media="all">
+<link rel="stylesheet" id="tablepress-default-css" href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/tablepress-combined.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/announcement.js.download" id="sw-announcement-js-js"></script>
+<script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/jquery.min.js.download" id="jquery-core-js"></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/AppMeasurement.min.js.download" async=""></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/AppMeasurement_Module_ActivityMap.min.js.download" async=""></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/analytics.js.download" async=""></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/js(2)" async=""></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/6si.min.js.download" async=""></script>
+<script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/jquery-migrate.min.js.download" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.loggly.com/wp-json/"><link rel="alternate" type="application/json" href="https://www.loggly.com/wp-json/wp/v2/posts/18331"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.loggly.com/xmlrpc.php?rsd">
+<link rel="shortlink" href="https://www.loggly.com/?p=18331">
+<link rel="alternate" type="application/json+oembed" href="https://www.loggly.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.loggly.com%2Fblog%2Fddos-monitoring-how-to-know-youre-under-attack%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.loggly.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.loggly.com%2Fblog%2Fddos-monitoring-how-to-know-youre-under-attack%2F&amp;format=xml">
+<!-- Related Posts for WP Premium CSS -->
+<style type="text/css">
+.rp4wp-related-posts { width:100%; overflow:hidden;}ul.rp4wp-posts-list {width:100%; margin:0 !important; padding:0 !important; list-style:none !important; float:left;}ul.rp4wp-posts-list .rp4wp-col {width:100% !important;margin-bottom:30px !important;list-style:none !important;box-sizing:border-box;overflow:hidden;float:left;}.rp4wp_component_wrapper {width:100% !important;float:left;}.rp4wp_component {width:100% !important;padding:0 0 5% !important;box-sizing:border-box;float:left;overflow:hidden !important;}.rp4wp_component a {border:0 !important;}.rp4wp_component_image a {display:block; height:100% !important;} .rp4wp_component_image img {width:100% !important;height:100% !important;}.rp4wp_component_title a {text-decoration:none !important; font-weight:bold; border:0 !important;}@media (min-width: 768px) {ul.rp4wp-posts-list .rp4wp-col {width:34.3333333333% !important;height:px !important;padding:0 2% !important;}ul.rp4wp-posts-list .rp4wp-col-first {width:32.3333333333% !important;padding-left:0 !important;padding-right:2% !important;}ul.rp4wp-posts-list .rp4wp-col-last {width:32.3333333333% !important;padding-right:0 !important;padding-left:2% !important;}.rp4wp_component_wrapper {width:50% !important;}.rp4wp_component_wrapper_left {padding-right:5% !important;}.rp4wp_component_wrapper_right {padding-left:5% !important;}}.rp4wp_component_2{height:40% !important;}.rp4wp_component_3{height:20% !important;}.rp4wp_component_4{height:20% !important;}
+</style>
+<link rel="icon" href="https://www.loggly.com/wp-content/uploads/2023/06/cropped-android-chrome-192x192-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://www.loggly.com/wp-content/uploads/2023/06/cropped-android-chrome-192x192-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.loggly.com/wp-content/uploads/2023/06/cropped-android-chrome-192x192-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://www.loggly.com/wp-content/uploads/2023/06/cropped-android-chrome-192x192-1-270x270.png">
+		<link href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/css" rel="stylesheet">
+		<script type="text/javascript">
+		!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++)
+		{var e=analytics.methods[t];analytics[e]=analytics.factory(e)}
+		analytics.load=function(t)
+		{var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}
+		;analytics.SNIPPET_VERSION="4.0.0";
+		analytics.load("wqAh1NyfnGbNW6YlhDTjYoMP3s7599tu");
+		analytics.page();
+		}}();
+		</script>
+	<script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/RCae6252de3d684d7cb929c52155d320fe-source.min.js.download" async=""></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/RC8adfe51c46064631a45ed8b02ddb7a8a-source.min.js.download" async=""></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/RC4d468f2912fe4170873f782ecb15d2c7-source.min.js.download" async=""></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/wp-emoji-release.min.js.download" defer=""></script><script src="chrome-extension://nimlmejbmnecnaghgmbahmbaddhjbecg/libs/extend-native-history-api.js"></script><style>.resizable-component[data-v-761d614a]{position:absolute}.resizable-component>.resizable-r[data-v-761d614a]{cursor:e-resize;height:100%;top:0;width:6px;z-index:90}.resizable-component>.resizable-r[data-v-761d614a],.resizable-component>.resizable-rb[data-v-761d614a]{display:block;position:absolute;right:-6px;touch-action:none;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none}.resizable-component>.resizable-rb[data-v-761d614a]{bottom:-6px;cursor:se-resize;height:12px;width:12px;z-index:91}.resizable-component>.resizable-b[data-v-761d614a]{cursor:s-resize;left:0;width:100%;z-index:90}.resizable-component>.resizable-b[data-v-761d614a],.resizable-component>.resizable-lb[data-v-761d614a]{bottom:-6px;display:block;height:12px;position:absolute;touch-action:none;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none}.resizable-component>.resizable-lb[data-v-761d614a]{cursor:sw-resize;left:-6px;width:12px;z-index:91}.resizable-component>.resizable-l[data-v-761d614a]{cursor:w-resize;height:100%;top:0;z-index:90}.resizable-component>.resizable-l[data-v-761d614a],.resizable-component>.resizable-lt[data-v-761d614a]{display:block;left:-6px;position:absolute;touch-action:none;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none;width:12px}.resizable-component>.resizable-lt[data-v-761d614a]{cursor:nw-resize;height:12px;top:-6px;z-index:91}.resizable-component>.resizable-t[data-v-761d614a]{cursor:n-resize;left:0;width:100%;z-index:90}.resizable-component>.resizable-rt[data-v-761d614a],.resizable-component>.resizable-t[data-v-761d614a]{display:block;height:12px;position:absolute;top:-6px;touch-action:none;-ms-user-select:none;user-select:none;-moz-user-select:none;-webkit-user-select:none}.resizable-component>.resizable-rt[data-v-761d614a]{cursor:ne-resize;right:-6px;width:12px;z-index:91}</style><style>:root{--it-color-primary:#3d81d1;--it-color-primary-darker:#316bae;--it-color-white:#fff;--it-color-gray-200:#eff2f7;--it-color-gray-800:#3c4858;--it-color-green:#5cb945;--it-color-red:#e2757a;--it-color-text:#2e3238;--it-color-contrast-low:var(--it-color-gray-200);--it-color-contrast-medium:var(--it-color-gray-800);--it-color-bg-change-highlight:#3d81d126;--it-radius:.3em;--it-radius-md:var(--it-radius,0.25em);--it-font-primary:"Inter",sans-serif;--it-font-size-base:15px;--it-top-toolbar-height:44px;--it-bottom-toolbar-height:50px;--it-space-unit:17px;--it-space-xxxxs:calc(var(--it-space-unit)*0.125);--it-space-xxxs:calc(var(--it-space-unit)*0.25);--it-space-xxs:calc(var(--it-space-unit)*0.375);--it-space-xs:calc(var(--it-space-unit)*0.5);--it-space-sm:calc(var(--it-space-unit)*0.75);--it-space-md:calc(var(--it-space-unit)*1.25);--it-space-lg:calc(var(--it-space-unit)*2);--it-space-xl:calc(var(--it-space-unit)*3.25);--it-space-xxl:calc(var(--it-space-unit)*5.25);--it-space-xxxl:calc(var(--it-space-unit)*8.5);--it-space-xxxxl:calc(var(--it-space-unit)*13.75);--it-scrollbar-width:6px;--it-shadow-xs:0 0.1px 0.3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.12);--it-shadow-sm:0 0.3px 0.4px rgba(0,0,0,.025),0 0.9px 1.5px rgba(0,0,0,.05),0 3.5px 6px rgba(0,0,0,.1);--it-shadow-md:0 0.9px 1.5px rgba(0,0,0,.03),0 3.1px 5.5px rgba(0,0,0,.08),0 14px 25px rgba(0,0,0,.12);--it-shadow-lg:0 1.2px 1.9px -1px rgba(0,0,0,.014),0 3.3px 5.3px -1px rgba(0,0,0,.038),0 8.5px 12.7px -1px rgba(0,0,0,.085),0 30px 42px -1px rgba(0,0,0,.15);--it-shadow-xl:0 1.5px 2.1px -6px rgba(0,0,0,.012),0 3.6px 5.2px -6px rgba(0,0,0,.035),0 7.3px 10.6px -6px rgba(0,0,0,.07),0 16.2px 21.9px -6px rgba(0,0,0,.117),0 46px 60px -6px rgba(0,0,0,.2)}.it-btn,a.it-btn{--it-btn-padding-x:var(--it-space-sm);--it-btn-padding-y:var(--it-space-xxs);--it-btn-radius:999em;--it-btn-icon-size:18px;--it-btn-color:#fff;-webkit-font-smoothing:antialiased;align-items:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--it-color-primary);background-image:none;border:0;border:2px solid var(--it-color-primary);border-radius:0;border-radius:var(--it-btn-radius);box-shadow:none;color:#fff;cursor:pointer;display:inline-flex;font-size:14px;font-weight:400;font-weight:500;height:auto;justify-content:center;line-height:normal;margin:0;padding:var(--it-btn-padding-y) var(--it-btn-padding-x);position:relative;text-align:center;text-decoration:none;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .1s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;white-space:nowrap;width:auto}.it-btn:disabled,a.it-btn:disabled{opacity:.6;pointer-events:none}.it-btn.it-btn-outline,a.it-btn.it-btn-outline{background-color:transparent;color:var(--it-color-primary)}.it-btn:active,a.it-btn:active{transform:scale(.95)}.it-btn.hover,.it-btn.it-btn-outline.hover,.it-btn.it-btn-outline:active,.it-btn.it-btn-outline:hover,.it-btn:active,.it-btn:hover,a.it-btn.hover,a.it-btn.it-btn-outline.hover,a.it-btn.it-btn-outline:active,a.it-btn.it-btn-outline:hover,a.it-btn:active,a.it-btn:hover{background-color:var(--it-color-primary-darker);border-color:var(--it-color-primary-darker);color:#fff;text-decoration:none}.it-btn>mark,a.it-btn>mark{align-items:center;background:#273444!important;border-radius:2px;bottom:100%;color:var(--it-btn-color);cursor:pointer;font-size:13px;font-style:normal;font-weight:400;left:50%;line-height:1.5;margin:0;padding:3px 8px;pointer-events:none;position:absolute;transform:translate(-50%);transition:visibility 0s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;visibility:hidden;z-index:9999}.it-btn>mark:after,a.it-btn>mark:after{border:4px solid rgba(136,183,213,0);border-top-color:#273444;content:"";height:0;left:50%;margin-left:-4px;pointer-events:none;position:absolute;top:100%;width:0}.it-btn.hover>mark,.it-btn:active>mark,.it-btn:hover>mark,a.it-btn.hover>mark,a.it-btn:active>mark,a.it-btn:hover>mark{transition-delay:1s;visibility:visible}.it-btn.it-btn-wide,a.it-btn.it-btn-wide{padding-left:calc(var(--it-btn-padding-x)*2);padding-right:calc(var(--it-btn-padding-x)*2)}.it-btn-group .it-btn{background-color:#fff;border-color:rgba(0,0,0,.12);border-width:1px;box-shadow:var(--it-shadow-sm);color:var(--it-color-contrast-medium);font-size:16px;height:36px;padding:8px}.it-btn-group .it-btn.it-btn-sm{font-size:13px;height:30px;padding:6px 10px}.it-btn-group .it-btn.it-btn-primary{background-color:var(--it-color-primary);border-color:var(--it-color-primary);color:var(--it-color-white);font-weight:500;padding:8px 16px}.it-btn-group .it-btn.it-btn-primary.hover,.it-btn-group .it-btn.it-btn-primary:active,.it-btn-group .it-btn.it-btn-primary:hover{background-color:var(--it-color-primary-darker);border-color:var(--it-color-primary-darker);color:var(--it-color-white)}.it-btn-group .it-btn:not(:first-child){margin-left:5px}[dir=rtl] .it-btn-group .it-btn:not(:first-child){margin-left:0;margin-right:5px}.it-btn-group .it-btn.hover,.it-btn-group .it-btn:active,.it-btn-group .it-btn:hover{background-color:#dee3ef;color:#2e72c2}.it-btn-group .it-btn.hover>svg use,.it-btn-group .it-btn:active>svg use,.it-btn-group .it-btn:hover>svg use{fill:#2e72c2}.it-btn-group-inline{align-items:center;display:inline-flex;position:relative;vertical-align:middle}.it-btn-group-inline .it-btn{background-color:rgba(229,233,242,0);border-color:rgba(229,233,242,.5);border-width:0;display:inline-flex;padding:6px}.it-btn-group-inline .it-btn.hover,.it-btn-group-inline .it-btn:active,.it-btn-group-inline .it-btn:hover{background-color:rgba(222,227,239,.5);border-color:rgba(222,227,239,.5)}.it-btn-group-inline .it-btn.hover>mark,.it-btn-group-inline .it-btn:active>mark,.it-btn-group-inline .it-btn:hover>mark{transition-delay:1s;visibility:visible}.it-btn-group-inline .it-btn.hover>svg use,.it-btn-group-inline .it-btn:active>svg use,.it-btn-group-inline .it-btn:hover>svg use{fill:#2e72c2}.it-btn-group-inline .it-btn:not(:first-child){margin-left:2px}[dir=rtl] .it-btn-group-inline .it-btn:not(:first-child){margin-left:0;margin-right:2px}.it-btn-group-inline .it-btn>svg,.it-btn-group .it-btn>svg{height:var(--it-btn-icon-size);max-width:none;width:var(--it-btn-icon-size)}.it-btn-group-inline .it-btn>svg:first-child+span,.it-btn-group .it-btn>svg:first-child+span{margin-left:4px}[dir=rtl] .it-btn-group-inline .it-btn>svg:first-child+span,[dir=rtl] .it-btn-group .it-btn>svg:first-child+span{margin-left:0;margin-right:4px}.it-btn-group-inline .it-btn>svg use,.it-btn-group .it-btn>svg use{fill:var(--it-color-contrast-medium)}.it-margin-bottom-base{margin-bottom:var(--it-space-unit)}.it-margin-bottom-sm{margin-bottom:var(--it-space-sm)}.it-margin-bottom-lg,.it-margin-bottom-md{margin-bottom:var(--it-space-md)}.it-margin-top-base{margin-top:var(--it-space-unit)}.it-margin-top-sm{margin-top:var(--it-space-sm)}.it-margin-top-lg,.it-margin-top-md{margin-top:var(--it-space-md)}.it-text-link{color:var(--it-color-primary);cursor:pointer;font-weight:600;text-decoration:none;transition:color .2s}.it-text-link:active,.it-text-link:hover{color:var(--it-color-primary-darker)}:root{--it-editor-width:clamp(28rem,30vw,36rem);--it-editor-height:clamp(14rem,35vh,24rem);--it-editor-padding-top:calc(0.5rem + var(--it-top-toolbar-height));--it-editor-padding-bottom:calc(0.5rem + var(--it-bottom-toolbar-height)*0.5);--it-editor-padding-left:clamp(24px,3%,100px);--it-editor-padding-right:var(--it-editor-padding-left);--it-editor-msg-bottom-padding:10px;--it-editor-color-bg:var(--it-color-white);--it-editor-color-bg-semi-transparent:hsla(0,0%,100%,.9);--it-editor-color-scrollbar-bg:#ddd;--it-editor-added-bg:rgba(92,185,69,.1);--it-editor-added:#5cb945;--it-editor-removed:#cc3434}.it-editor,.it-editor-wrapper{display:flex}.it-editor{background-color:var(--it-editor-color-bg);border:2px solid var(--it-color-primary);border-radius:var(--it-radius);box-shadow:var(--it-shadow-lg);color:var(--it-color-text);flex-direction:column;font-size:var(--it-font-size-base);height:100%;margin-left:auto;margin-top:auto;outline:none;position:relative;transition:width .15s,height .15s,border-color .25s;width:100%}[dir=rtl] .it-editor{margin-left:0;margin-right:auto}.it-editor .it-reqs{display:flex;flex-wrap:wrap;font-size:12px;justify-content:space-between;justify-content:flex-end;margin-right:8px;text-align:right}[dir=rtl] .it-editor .it-reqs{margin-left:8px;margin-right:0}.it-editor .it-reqs>a{margin-left:5px}[dir=rtl] .it-editor .it-reqs>a{margin-left:0;margin-right:5px}.it-editor.it-editor-loading{height:calc(90px + var(--it-editor-msg-bottom-padding));width:320px}.it-editor.it-editor-error{width:320px}.it-editor.it-editor-error.it-editor-error-lg{height:auto;width:350px}.it-editor .it-limit-notice{font-size:13px;padding:10px 20px 20px}.it-editor .it-limit-notice h3{font-size:16px;font-weight:500}.it-editor .it-limit-notice>div{margin-top:12px}.it-editor .it-limit-notice svg{height:auto;margin-bottom:12px;max-width:90px}.it-editor ::-webkit-scrollbar{height:var(--it-scrollbar-width);width:var(--it-scrollbar-width);z-index:99999999}.it-editor ::-webkit-scrollbar-track,.it-editor :hover::-webkit-scrollbar-track{background:var(--it-editor-color-scrollbar-bg)}.it-editor ::-webkit-scrollbar-thumb{background:var(--it-color-primary)}.it-editor ::-webkit-scrollbar-thumb:active,.it-editor ::-webkit-scrollbar-thumb:hover{background:var(--it-color-primary-darker);cursor:-webkit-grab;cursor:grab}.it-editor .noTextDiff span mark{display:none!important}.it-editor .noTextDiff span.api-removed{display:none}.it-editor .noTextDiff span.api-added{background-color:transparent;color:inherit}.it-editor *{font-family:var(--it-font-primary)!important}.it-editor pre{border:0;box-sizing:border-box;flex:1;font-family:inherit!important;font-size:16px;line-height:1.7;margin:0;max-height:100%;outline:none;overflow-x:hidden;overflow-y:scroll;padding:var(--it-editor-padding-top) var(--it-editor-padding-right) var(--it-editor-padding-bottom) var(--it-editor-padding-left);white-space:pre-wrap;width:100%}.it-editor pre span.original>mark{display:none}.it-editor pre span.api-added,.it-editor pre span.api-removed{position:relative}.it-editor pre span.api-added>*,.it-editor pre span.api-removed>*{display:inline-block;position:relative}.it-editor pre span.api-added>*>mark,.it-editor pre span.api-removed>*>mark{align-items:center;border-radius:2px;bottom:100%;box-shadow:var(--it-shadow-md);cursor:pointer;display:flex;left:50%;line-height:1.5;margin:0;padding:0;position:absolute;transform:translate(-50%);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:9999}.it-editor pre span.api-added>*>mark .accept-icon,.it-editor pre span.api-added>*>mark .reject-icon,.it-editor pre span.api-removed>*>mark .accept-icon,.it-editor pre span.api-removed>*>mark .reject-icon{align-items:center;background:var(--it-editor-color-bg);border-radius:2px;display:inline-flex;padding:4px 8px;position:relative}.it-editor pre span.api-added>*>mark .accept-icon.hover,.it-editor pre span.api-added>*>mark .accept-icon:hover,.it-editor pre span.api-added>*>mark .reject-icon.hover,.it-editor pre span.api-added>*>mark .reject-icon:hover,.it-editor pre span.api-removed>*>mark .accept-icon.hover,.it-editor pre span.api-removed>*>mark .accept-icon:hover,.it-editor pre span.api-removed>*>mark .reject-icon.hover,.it-editor pre span.api-removed>*>mark .reject-icon:hover{background-color:var(--it-color-contrast-low)}.it-editor pre span.api-added>*>mark .accept-icon svg,.it-editor pre span.api-added>*>mark .reject-icon svg,.it-editor pre span.api-removed>*>mark .accept-icon svg,.it-editor pre span.api-removed>*>mark .reject-icon svg{height:22px;max-width:none;pointer-events:none;width:22px}.it-editor pre span.api-added>*>mark .accept-icon svg use,.it-editor pre span.api-added>*>mark .reject-icon svg use,.it-editor pre span.api-removed>*>mark .accept-icon svg use,.it-editor pre span.api-removed>*>mark .reject-icon svg use{fill:var(--it-color-primary)}.it-editor pre span.api-added>*>mark .reject-icon,.it-editor pre span.api-removed>*>mark .reject-icon{border-bottom-left-radius:0;border-left:1px solid var(--it-color-contrast-low);border-top-left-radius:0}.it-editor pre span.api-added>*>mark .accept-icon,.it-editor pre span.api-removed>*>mark .accept-icon{border-bottom-right-radius:0;border-top-right-radius:0}.it-editor pre span.api-added>*>mark>i,.it-editor pre span.api-removed>*>mark>i{font-size:16px;margin-left:3px}.it-editor pre span.api-added>*>mark:after,.it-editor pre span.api-removed>*>mark:after{border:4px solid transparent;border-top:4px solid var(--it-color-contrast-medium);content:"";height:0;left:50%;margin-left:-4px;pointer-events:none;position:absolute;top:100%;width:0}.it-editor pre span.api-added.active,.it-editor pre span.api-removed.active{background-color:var(--it-color-bg-change-highlight)}.it-editor pre span.api-added{background-color:var(--it-editor-added-bg);border-bottom:2px solid var(--it-editor-added);line-height:1.15;position:relative}.it-editor pre span.api-removed{position:relative;text-decoration:line-through}.it-editor pre span.api-removed:before{content:"";pointer-events:none}.it-editor pre span.api-removed>span.word{display:inline}.it-editor pre span.api-removed+span:not(.it-ss){margin-left:4px}.it-editor pre span.api-removed>span:after{color:var(--it-editor-removed);content:attr(data-removedtext);pointer-events:none;text-decoration:line-through}.it-editor pre span.api-added:not(.it-es)+span.api-removed:not(.it-noss),.it-editor pre span.original:not(.it-es)+span.api-removed:not(.it-noss){margin-left:4px}.it-editor .it-editor-top-toolbar{background-image:linear-gradient(to bottom,var(--it-editor-color-bg) 50%,transparent 100%);border-top-left-radius:var(--it-radius);border-top-right-radius:var(--it-radius);height:var(--it-top-toolbar-height);padding:10px 16px 5px;top:0;z-index:99}.it-editor .it-editor-bottom-toolbar{bottom:0;height:var(--it-bottom-toolbar-height);padding:10px 16px;transform:translateY(50%)}.it-editor .it-editor-bottom-toolbar,.it-editor .it-editor-bottom-toolbar:before{border-bottom-left-radius:var(--it-radius);border-bottom-right-radius:var(--it-radius)}.it-editor .it-editor-bottom-toolbar:before{background-image:linear-gradient(to top,var(--it-editor-color-bg) 15%,transparent 100%);content:"";height:80%;left:0;position:absolute;top:10%;transform:translateY(-50%);width:100%}.it-editor .it-editor-error-msg,.it-editor .it-editor-loader{align-items:center;display:flex;font-size:14px;height:100%;justify-content:center;padding:1.2rem;pointer-events:none;position:relative;text-align:center;width:100%;z-index:100}.it-editor .it-editor-error-msg>svg,.it-editor .it-editor-loader>svg{margin-right:10px}[dir=rtl] .it-editor .it-editor-error-msg>svg,[dir=rtl] .it-editor .it-editor-loader>svg{margin-left:10px;margin-right:0}.it-editor .it-editor-error-msg{padding:1.2rem 1.2rem calc(1.2rem + var(--it-editor-msg-bottom-padding))}.it-pointer-events-all{pointer-events:all!important}.it-editor-toolbar{display:flex;justify-content:space-between;left:0;position:absolute;right:var(--it-scrollbar-width);z-index:100}[dir=rtl] .it-editor-toolbar{left:var(--it-scrollbar-width);right:0}.it-editor-close-warning,.it-editor-toolbar .it-editor-drag{height:100%;left:0;position:absolute;top:0;width:100%}.it-editor-close-warning{align-items:center;background-color:var(--it-editor-color-bg-semi-transparent);border-radius:var(--it-radius);display:flex;justify-content:center;overflow:hidden;text-align:center;z-index:100}.it-editor-close-warning .it-editor-drag{height:100%;left:0;position:absolute;top:0;width:100%}</style><style>@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap);</style><style>#it-editor{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;bottom:2rem;left:1rem;pointer-events:none;position:fixed;right:1rem;top:1rem;z-index:9999999}#it-editor>*{pointer-events:all}#it-editor *{box-sizing:border-box}.fadeup-enter-active,.fadeup-leave-active{transform:translateY(0);transition:opacity .1s ease,transform .1s}.fadeup-enter-from,.fadeup-leave-to{opacity:0;transform:translateY(1rem)}.fade-enter-active,.fade-leave-active{transition:opacity .1s}.fade-enter-from,.fade-leave-to{opacity:0}</style><style id="_6si-shortening">/* This stylesheet is created by 6sense */
+            .mktoForm .mktoFormRow:has(._6si_sff_filled) {
+                display: none;
+            }
+            .mktoForm .mktoFormRow ._6si_sff_filled {
+                display: none;
+            }
+            .hs-form .hs-form-field:has(._6si_sff_filled) {
+                display: none;
+            }
+            .hs-form .hs-form-field ._6si_sff_filled {
+                display: none;
+            }
+            form.form .form-field:not(.error):has(._6si_sff_filled) {
+                display: none;
+            }
+            form.form .form-field:not(.error) ._6si_sff_filled {
+                display: none;
+            }
+            .elq-form .row:has(._6si_sff_filled) {
+                display: none;
+            }
+            .elq-form .row ._6si_sff_filled {
+                display: none;
+            }</style><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/munchkin-beta.js.download"></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/5976050.js.download" type="text/javascript" async="" data-ueto="ueto_e5006afdf4"></script><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><style type="text/css">.vidyard-player-container .play-button{position:absolute;width:16%;height:auto;border-radius:50%;border:none;cursor:pointer;opacity:.65;filter:alpha(opacity = 65);transition:opacity .2s linear;overflow:hidden;font-size:0;padding:0;min-width:20px;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-appearance:initial!important;-moz-appearance:initial!important;appearance:initial!important}.vidyard-player-container .play-button .play-button-size{padding-top:100%;width:100%}.vidyard-player-container .play-button .arrow-size{position:absolute;top:50%;left:50%;width:35%;height:auto;margin:-25% 0 0 -12%;overflow:hidden}.vidyard-player-container .play-button .arrow-size-ratio{padding-top:150%;width:100%}.vidyard-player-container .play-button .arrow{position:absolute;top:50%;left:auto;right:0;bottom:auto;width:0;height:0;margin:-200px 0 -200px -300px;border:200px solid transparent;border-left:300px solid #fff;border-right:none}.vidyard-lightbox-thumbnail:hover .play-button{opacity:1;filter:alpha(opacity = 100);zoom:1}.vidyard-player-container{position:relative;height:100%;text-align:center}.vidyard-player-container img{height:100%}.vidyard-player-container .play-button{display:none}.vidyard-close-container{position:fixed;right:20px;top:20px;height:34px;width:34px;cursor:pointer;z-index:1000}.vidyard-close-container:focus{outline:1px dotted grey}.vidyard-close-x{position:absolute;height:100%;width:100%;color:#fff;font-size:2em;text-align:center;line-height:34px}.vidyard-close-x:hover{color:#ddd}.vidyard-close-x:hover:after,.vidyard-close-x:hover:before{background:#ddd}.vidyard-close-x:after,.vidyard-close-x:before{content:"";position:absolute;background:#fff;display:block;left:50%;top:50%;height:65%;width:2px;transition:all .2s;-ms-high-contrast-adjust:none}.vidyard-close-x:before{transform:translate(-50%,-50%) rotate(45deg);-ms-transform:translate(-50%,-50%) rotate(45deg)}.vidyard-close-x:after{transform:translate(-50%,-50%) rotate(-45deg);-ms-transform:translate(-50%,-50%) rotate(-45deg)}.vidyard-close-x.simple-close:after,.vidyard-close-x.simple-close:before{display:none}.vidyard-lightbox-thumbnail{width:100%;height:100%;margin:auto}.vidyard-lightbox-image{height:100%;left:0;position:absolute;top:0;width:100%}.vidyard-lightbox-centering{cursor:pointer;height:0;max-width:100%;overflow:hidden;padding-bottom:56.25%;position:relative}.vidyard-lightbox-content-backer{-webkit-transform:opacity 1s,filter 1s;-ms-transform:opacity 1s,filter 1s;transition:opacity 1s,filter 1s;background-color:#000;height:100%;width:100%;position:absolute}#vidyard-overlay-wrapper,.vidyard-lightbox-content-backer{filter:alpha(opacity = 0);opacity:0;top:0;right:0;bottom:0;left:0}#vidyard-overlay-wrapper{position:relative;box-sizing:border-box;display:none;transition:opacity .5s,filter .5s}#vidyard-overlay{top:0;right:0;bottom:0;left:0;opacity:.9;filter:alpha(opacity = 90);width:100%;height:100%;background-color:#000;z-index:800}#vidyard-content-fixed,#vidyard-overlay{position:fixed;box-sizing:border-box;display:none}#vidyard-content-fixed{opacity:1;z-index:900;text-align:center;top:5%;right:5%;bottom:5%;left:5%;width:90%}#vidyard-popbox{display:inline-block;position:absolute;left:50%;top:50%;-webit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}#vidyard-popbox-constraint{opacity:0;filter:alpha(opacity = 0);display:block;visibility:hidden}#vidyard-popbox-constraint.landscape{height:90vh}#vidyard-popbox-constraint.portrait{width:90vw}.vidyard-player-container div[class^=vidyard-iframe-]{z-index:1}.vidyard-player-container div[class^=vidyard-div-]{background-repeat:no-repeat;background-position:0 50%;background-size:100%}img.vidyard-player-embed{width:100%}img.vidyard-player-embed.inserted{position:absolute;top:0;left:0;z-index:0;max-width:100%!important}.vidyard-player-container.playlist-open{padding-right:319px;width:auto!important}.vidyard-player-container.playlist-open div[class^=vidyard-div-]{width:calc(100% + 319px);max-width:calc(100% + 319px)!important;background-size:calc(100% - 319px);background-color:#f5f9ff}.vidyard-player-container.playlist-open div[class^=vidyard-div-] img.vidyard-player-embed{width:calc(100% - 319px)!important}#backlink-icon{height:15px;width:15px;margin-right:6px;transition:.3s}#backlink{align-items:center;border-radius:4px;border:3px solid #ebeeff;display:inline-block;float:left;line-height:18px;margin:8px 0 0;outline:none;padding:1px 8px 1px 5px;position:relative;*zoom:1;font-family:Arial,Helvetica Neue,Helvetica,sans-serif;font-style:normal;font-weight:400;font-size:12px;text-decoration:none}#backlink:after,#backlink:before{content:" ";display:table}#backlink:after{clear:both}#backlink:link,#backlink:visited{background:#ebeeff;border-color:#ebeeff;color:#414dd4}#backlink:hover{background:#bfc2ff;color:#1b1a82;cursor:pointer}#backlink:focus,#backlink:hover{border-color:#bfc2ff}#backlink:active{background:#8f97ff;border-color:#8f97ff;color:#0c084d}#backlink-icon{float:left;height:18px;margin-right:5px;position:relative;width:18px}#backlink-text{float:left}</style><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/RCbb89d14c8b88441aa78d4809fbeae756-source.min.js.download" async=""></script><style id="at-makers-style" class="at-flicker-control">
+.mboxDefault {visibility: hidden;}
+</style><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/RC9472e67526c443df8eebc5bd8f09f96a-source.min.js.download" async=""></script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/RCfb8363d5fb28435c861715feb9765ee7-source.min.js.download" async=""></script><meta http-equiv="origin-trial" content="AwnOWg2dzaxHPelVjqOT/Y02cSxnG2FkjXO7DlX9VZF0eyD0In8IIJ9fbDFZGXvxNvn6HaF51qFHycDGLOkj1AUAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5jb206NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY5NTE2Nzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="></head>
+	<body class="post-template-default single single-post postid-18331 single-format-standard" data-new-gr-c-s-check-loaded="14.1049.0" data-gr-ext-installed="">
+		
+<svg id="sw19-svg-lib" height="0">
+    <mask id="sw19-plus-mask" maskContentUnits="objectBoundingBox">
+        <rect x="0" y="0" width="1" height="1" fill="white"></rect>
+        <line x1=".25" y1=".5" x2=".75" y2=".5" stroke="black" stroke-width=".1"></line>
+        <line x1=".5" y1=".25" x2=".5" y2=".75" stroke="black" stroke-width=".1"></line>
+    </mask>
+    <mask id="sw19-minus-mask" maskContentUnits="objectBoundingBox">
+        <rect x="0" y="0" width="1" height="1" fill="white"></rect>
+        <line x1=".25" y1=".5" x2=".75" y2=".5" stroke="black" stroke-width=".1"></line>
+    </mask>
+    <symbol id="sw19-arrow-right" viewBox="0 0 90 110"><polyline fill="none" stroke-width="20px" points="20 10 65 55 20 100"></polyline></symbol>
+    <symbol id="sw19-circle-plus" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" mask="url(#sw19-plus-mask)"></circle></symbol>
+    <symbol id="sw19-circle-minus" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" mask="url(#sw19-minus-mask)"></circle></symbol>
+    <symbol id="sw19-close" width="26" height="26" stroke="#666" stroke-width="15" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke-width="10"></circle><line x1="33" y1="33" x2="67" y2="67"></line><line x1="33" y1="67" x2="67" y2="33"></line></symbol>
+</svg>
+
+
+
+<div class="sw19b-header-logo-area">
+    <div class="sw19s-std-wrap">
+        <a href="https://www.loggly.com/" class="logo" aria-label="Home Link Logo" data-linktype="Default Header" data-linkdetail="Site Logo">
+                        <img src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/SW_Logo_Division_Loggly_Web_Orange.svg" class="attachment-full size-full" alt="" decoding="async">                    </a>
+        <div class="nav">
+            <a href="https://www.solarwinds.com/" data-linktype="Default Header" target="_blank" data-linkdetail="SolarWinds.com" rel="noreferrer, noopener">SolarWinds.com</a> <a href="https://www.loggly.com/blog/" data-linktype="Default Header" data-linkdetail="Blog">Blog</a> <a href="https://www.loggly.com/about/contact/" data-linktype="Default Header" data-linkdetail="Contact Us">Contact Us</a>                    </div>
+    </div>
+</div>
+
+<div class="sw19b-header-top-mobile">
+    <div class="sw19s-std-wrap">
+        <div class="logo-and-lang">
+            <a href="https://www.loggly.com/" class="logo" aria-label="Home Link Logo" data-linktype="Default Header" data-linkdetail="Site Logo">
+                <div class="full-logo">
+                                        <img src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/SW_Logo_Division_Loggly_Web_White.svg" class="attachment-full size-full" alt="" decoding="async">                                    </div>
+                <div class="just-flame">
+                                        <img src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/SW_Logo_Flame_Web_White.svg" class="attachment-full size-full" alt="" decoding="async">                                    </div>
+            </a>
+                    </div>
+        <a class="swhamburger"></a>
+    </div>
+</div>
+
+
+<header class="sw19b-header-navbar">
+    <nav class="sw19s-std-wrap SetHeight">
+        <div class="links">
+                                                <a data-toplevel-id="79154" href="https://www.loggly.com/product/" class=" parent" data-linktype="Top Menu" target="" data-linkdetail="PRODUCT">
+                PRODUCT <svg>
+                    <use xlink:href="#sw19-arrow-right"></use>
+                </svg>
+            </a>
+                                                            <a href="https://www.loggly.com/plans-and-pricing/" data-linktype="Top Menu" class="" target="" data-linkdetail="PRICING">PRICING</a>                                                            <a data-toplevel-id="79166" href="https://www.loggly.com/docs-index/log-sources/" class=" parent" data-linktype="Top Menu" target="" data-linkdetail="LOG SOURCES">
+                LOG SOURCES <svg>
+                    <use xlink:href="#sw19-arrow-right"></use>
+                </svg>
+            </a>
+                                                            <a data-toplevel-id="79191" href="https://www.loggly.com/intro-to-log-management/" class=" parent" data-linktype="Top Menu" target="" data-linkdetail="RESOURCES">
+                RESOURCES <svg>
+                    <use xlink:href="#sw19-arrow-right"></use>
+                </svg>
+            </a>
+                                                            <a href="https://www.loggly.com/login/" data-linktype="Top Menu" class="" target="" data-linkdetail="LOG IN">LOG IN</a>                                </div>
+        <div class="extra">
+            <div class="extra-links">
+                <a href="https://www.loggly.com/demo-request/" class="sw19-nav-button-default" data-linktype="Top Menu" data-linkdetail="REQUEST DEMO">REQUEST DEMO</a><a href="https://www.loggly.com/signup/" class="sw19-nav-button-orange" data-linktype="Top Menu" data-linkdetail="FREE TRIAL">FREE TRIAL</a>            </div>
+            <form action="https://www.loggly.com/search-results/" class="search-box">
+                <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 144 1007 1008"><path d="M994 1015q14 14 14 34t-14 33l-56 56q-14 14-33.5 14t-33.5-14L675 942q-14-14-14-34v-32q-110 87-252 87-111 0-205-55T55 759 0 553.5 55 348t149-149 205.5-55T615 199t149 149 55 205q0 142-87 252h32q20 0 34 14zM409.5 805q104.5 0 178-73.5t73.5-178T587.5 375t-178-74T231 375t-74 178.5 74 178T409.5 805z"></path></svg></button>
+                <input type="text" name="q" placeholder="Search loggly.com" required="" spellcheck="false" data-ms-editor="true">
+            </form>
+            <button aria-label="Show Searchbox" class="search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 144 1007 1008"><path d="M994 1015q14 14 14 34t-14 33l-56 56q-14 14-33.5 14t-33.5-14L675 942q-14-14-14-34v-32q-110 87-252 87-111 0-205-55T55 759 0 553.5 55 348t149-149 205.5-55T615 199t149 149 55 205q0 142-87 252h32q20 0 34 14zM409.5 805q104.5 0 178-73.5t73.5-178T587.5 375t-178-74T231 375t-74 178.5 74 178T409.5 805z"></path></svg>                <span>×</span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<div class="sw19b-nav-panel multi-panel" data-toplevel-id="79154">
+    <div class="sw19s-std-wrap">
+                        <div class="subnav tab-callout">
+            <div class="tabs">
+                                                                <a data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS" data-linktype="Top Menu" href="https://www.loggly.com/product/" class=" sw-subnav-0 selected" target="">
+                                                            <div class="svg-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 144 1244 1008"><path d="M1062 334q-11 0-26 2h-1q-28-84-104-138t-171-54q-53 0-102.5 18T569 213.5 505 292q-67-9-126 25t-86 95q-4 9-.5 17.5t12 12.5 17.5.5 12-11.5q23-52 73.5-78T513 339q18 4 26-13 19-41 52.5-72t77.5-48 91-17q80 0 144 44.5T991 349q-33 14-59 40-6 7-6 16t6.5 15.5T948 427q10 0 17-6 25-26 59-36h1q8-2 17-4h3q9-1 17-1 57 0 97 40t40 97q0 36-11 63t-25.5 40.5-33 21.5-28 9.5-16.5 1.5H809q-10 0-16.5 6.5t-6.5 16 6.5 16T809 698l276 1q24-1 49-10.5t51-28.5 43-56.5 17-86.5q0-30-9.5-58t-26.5-50.5-39-39-50-26-58-9.5zM428 451q-7 8-17 8-9 0-15-6-7-6-8-15.5t5-16.5q36-41 90-41 9 0 15.5 7t6.5 16-6.5 16-15.5 7q-14 0-30 7t-25 18zm680 339q9 0 16 7t7 16.5-7 16-16 6.5H814q-6 0-11.5-3t-8.5-8.5-3-11.5q0-9 6.5-16t16.5-7h294zm-73 126q9 0 16 6.5t7 16-7 16-16 6.5H814q-10 0-16.5-6.5t-6.5-16 6.5-16T814 916h221zm-887-54q-9 0-16 7t-7 16v142q0 9 7 15.5t16 6.5 16-6.5 7-15.5V885q0-9-7-16t-16-7zm110.5-58q-9.5 0-16 6.5T236 827v200q0 9 6.5 15.5t16 6.5 16-6.5 6.5-15.5V827q0-10-6.5-16.5t-16-6.5zM368 723q-9 0-15.5 6.5T346 745v282q0 9 6.5 15.5t16 6.5 16-6.5 6.5-15.5V745q0-6-3-11t-8-8-12-3zm322 329q0 22-16 38.5t-39 16.5H100q-22 0-38.5-16.5T45 1052V618q0-22 16.5-38.5T100 563h535q15 0 27.5 7.5t20 20T690 618v434zm-55-534H100q-41 0-70.5 29.5T0 618v434q0 41 29.5 70.5T100 1152h535q42 0 71-29.5t29-70.5V618q0-41-29-70.5T635 518zm-11 107H116q-9 0-16 6.5t-7 16 6.5 16.5 16.5 7h508q9 0 15.5-7t6.5-16q0-6-3-11.5t-8-8.5-11-3z"></path></svg>                    </div>
+                                        LOG MANAGEMENT AND ANALYTICS                </a>
+                                                                <a data-linkdetail="PRODUCT:INFRASTRUCTURE MONITORING" data-linktype="Top Menu" href="https://www.loggly.com/product/infrastructure-and-application-performance-monitoring/" class=" sw-subnav-1" target="">
+                                                            <div class="svg-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 144 985 1008"><path d="M897 539H535q-8 0-14-6t-6-14q0-5 3-9.5t7.5-7.5 9.5-3h362q20 0 34.5-14t14.5-35V342q0-20-14.5-34T897 294H542q-8 0-14-6t-6-14 6-14 14-6h355q37 0 62.5 26t25.5 63v107q0 37-25.5 63T897 539zM717 418H561q-9 0-14.5-6t-5.5-14q0-5 2.5-10t7-7.5T561 378h156q9 0 14.5 6t5.5 14-5.5 14-14.5 6zm149 0h-70q-6 0-10.5-3t-7-7.5-2.5-9.5q0-8 6-14t14-6h70q8 0 14 6t6 14-6 14-14 6zm31 455H216q-33 0-56.5-23.5T136 792V688q0-6 2.5-10.5t7-7T156 668q8 0 13.5 6t5.5 14v105q0 16 12 28t29 12h681q13 0 24.5-6.5t18-17.5 6.5-25V676q0-20-14.5-34T897 628H474q-9 0-14.5-6t-5.5-14 5.5-14 14.5-6h423q37 0 62.5 26t25.5 62v108q0 37-25.5 63T897 873zM717 749H256q-8 0-13.5-6t-5.5-14 5.5-14 13.5-6h461q9 0 14.5 6t5.5 14-5.5 14-14.5 6zm149 0h-70q-8 0-14-6t-6-14 6-14 14-6h70q8 0 14 6t6 14-6 14-14 6zm-322.5 301q8.5 0 14-6t5.5-14V853q0-8-5.5-14t-14-6-14 6-5.5 14v177q0 8 5.5 14t14 6zm-97.5 56H199q-8 0-14-5.5t-6-13.5q0-6 2.5-10.5t7-7 10.5-2.5h247q8 0 14 6t6 14-6 13.5-14 5.5zm442 0q9 0 14.5-5.5t5.5-13.5-5.5-14-14.5-6H644q-8 0-13.5 6t-5.5 14 5.5 13.5 13.5 5.5h244zm-289 46H492q-27 0-46-19t-19-46 19-46.5 46-19.5h107q27 0 46 19.5t19 46.5-19 46-46 19zm-107-91q-7 0-13 3.5t-9.5 9.5-3.5 13q0 10 7.5 17.5t18.5 7.5h107q10 0 17.5-7.5t7.5-18-7.5-18-17.5-7.5H492zM249.5 643Q146 643 73 570T0 393.5 73 217t176.5-73T426 217t73 176.5T426 570t-176.5 73zm0-459q-86.5 0-148 61.5T40 393.5 101.5 542t148 62T398 542t62-148.5-62-148T249.5 184zM292 549h-86q-5 0-9.5-3t-7-7.5-2.5-9.5v-73h-73q-8 0-14-5.5T94 436v-86q0-8 6-13.5t14-5.5h73v-73q0-8 5.5-14t13.5-6h86q9 0 14.5 6t5.5 14v73h73q8 0 14 5.5t6 13.5v86q0 6-3 10.5t-7.5 7-9.5 2.5h-73v73q0 8-5.5 14t-14.5 6zm-66-40h47v-73q0-8 5.5-13.5T292 417h73v-47h-73q-8 0-13.5-5.5T273 351v-73h-47v73q0 8-5.5 13.5T206 370h-72v47h72q9 0 14.5 5.5T226 436v73z"></path></svg>                    </div>
+                                        INFRASTRUCTURE MONITORING                </a>
+                                                                <a data-linkdetail="PRODUCT:APPLICATION MONITORING" data-linktype="Top Menu" href="https://www.loggly.com/product/infrastructure-and-application-performance-monitoring/" class=" sw-subnav-2" target="">
+                                                            <div class="svg-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 144 1189 1008"><path d="M246 656q6 0 11 3t8 8 3 11v99q0 10 10 10h638q5 0 9-3.5t4-8.5v-97q0-9 6.5-15.5T951 656t15.5 6.5T973 678v97q0 15-7.5 28t-21 20.5T916 831H278q-23 0-38.5-16T224 777v-99q0-9 6-15.5t16-6.5zm705-153q-9 0-15.5-6.5T929 481V322q0-6-4-9.5t-9-3.5H280q-5 0-8.5 3.5T268 321v160q0 10-6.5 16.5t-16 6.5-15.5-6.5-6-16.5V321q0-23 16.5-39.5T280 265h636q23 0 40 16.5t17 40.5v159q0 9-6.5 15.5T951 503zm120.5 153q9.5 0 16 6.5t6.5 15.5v148q0 52-37.5 89.5T967 953H784l37 155h127q10 0 16 6.5t6 15.5q0 4-1 7t-3 6-4.5 5-6 3-7.5 1H247q-9 0-15.5-6.5T225 1130t6.5-15.5 15.5-6.5h128l36-155H235q-55 0-94-39t-39-94V678q0-9 6.5-15.5T124 656t15.5 6.5T146 678v142q0 36 26 62t63 26h732q34 0 58-24t24-58V678q0-9 6.5-15.5t16-6.5zM776 1108l-37-155H457l-37 155h356zM124 504q-9 0-15.5-6.5T102 481V277q0-55 39-94t94-39h719q29 0 54.5 11t44 29.5 30 44.5 11.5 54v198q0 10-6.5 16.5t-16 6.5-16-6.5-6.5-16.5V283q0-39-27.5-67T954 188H235q-37 0-63 26t-26 63v204q0 10-6.5 16.5T124 504zm1043 53q10 0 16.5 6.5t6.5 15.5-6.5 15.5-16.5 6.5H872q-9 0-16-7L716 442 565 624q-6 8-16 8t-17-7l-82-90-55 61q-7 8-16 8H22q-9 0-15.5-6.5T0 582t6.5-15.5T22 560h347l65-73q6-7 16-7t16 7l82 89 150-181q6-8 16-8 10-1 17 7l151 163h285z"></path></svg>                    </div>
+                                        APPLICATION MONITORING                </a>
+                                                                <a data-linkdetail="PRODUCT:DIGITAL EXPERIENCE" data-linktype="Top Menu" href="https://www.loggly.com/product/digital-experience-monitoring/" class=" sw-subnav-3" target="">
+                                                            <div class="svg-wrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 144 1076 1008"><path d="M986 430q37 0 64 26.5t27 64.5v6q0 37-27 64t-64 27H740q-8 0-14-5.5t-6-13.5 6-14 14-6h246q21 0 36.5-15.5T1038 527v-6q0-22-15.5-37T986 469h-42q-9 0-14.5-6t-5.5-14q0-4 2-8 8-19 8-41 0-42-30-72.5T831 297q-27 0-51 14-5 3-10 3-4 0-7-2-9-3-12-12-15-52-58.5-84.5T595 183t-97 31.5-59 83.5q-2 8-9 11.5t-15 1.5-11.5-9.5T402 287q20-64 73-103.5T595 144q61 0 112 34t74 90q24-9 50-9 59 0 100.5 41.5T973 400q0 15-3 30h16zm-442 28q16 0 27 11t11 28v302q0 11-5 20t-14 14-19 5H139q-16 0-27.5-11.5T100 799V497q0-17 11.5-28t27.5-11h405zm0 341V497H139v302h405zm56 269q8 0 13.5 6t5.5 14-5.5 13.5-13.5 5.5H456q-7 20-23.5 32.5T395 1152H290q-21 0-38-12.5t-23-32.5H78q-8 0-13.5-5.5T59 1088t5.5-14 13.5-6h151q3-9 9-17.5t13.5-14.5 17.5-9 21-3h31v-88H86q-36 0-61-25T0 850V446q0-35 25-60.5T86 360h509q12 0 23 3t20.5 9 17.5 13.5 13.5 17 8.5 21 3 22.5v404q0 36-25 61t-61 25H360v88h35q21 0 37.5 12.5T456 1068h144zM86 897h509q20 0 33.5-13.5T642 850V446q0-19-13.5-33T595 399H86q-20 0-33.5 14T39 446v404q0 20 13.5 33.5T86 897zm309 216q10 0 17.5-7.5t7.5-18-7.5-18-17.5-7.5H290q-11 0-18.5 7.5T264 1088q0 7 3.5 12.5t9.5 9 13 3.5h105zm519-385 68 65q6 5 6 13t-5.5 14-13.5 6-13-5l-35-34v160q0 20-10 36.5t-26.5 26-35.5 9.5H713l39 36q6 5 6.5 13t-5.5 14q-5 7-14 7-7 0-13-6l-73-66q-6-5-6-13v-1q0-8 5-13l73-76q5-6 13.5-6.5t14 5.5 5.5 14-5 13l-38 40h134q13 0 23-9.5t10-23.5V793l-27 29q-5 6-14 6-8 0-13-5-6-5-6.5-13t4.5-14l61-67q5-6 13.5-6.5T914 728zM203 587q-8 0-13.5-6t-5.5-14 5.5-13.5T203 548h45q8 0 14 5.5t6 13.5q0 4-1.5 7.5t-4.5 6-6.5 4.5-7.5 2h-45zm0 86q-8 0-13.5-6t-5.5-14 5.5-13.5T203 634h45q8 0 14 5.5t6 13.5-6 14-14 6h-45zm122-86q-8 0-13.5-6t-5.5-14 5.5-13.5T325 548h153q8 0 14 5.5t6 13.5-6 14-14 6H325zm0 86q-8 0-13.5-6t-5.5-14 5.5-13.5T325 634h153q8 0 14 5.5t6 13.5-6 14-14 6H325z"></path></svg>                    </div>
+                                        DIGITAL EXPERIENCE                </a>
+                                                            </div>
+                        <div class="callout">
+                <div class="color-line">
+                    <svg preserveAspectRatio="none" viewBox="0 0 246 1">
+                        <path stroke="#00C8DC" d="M9 .5h20"></path>
+                        <path stroke="#CCC" d="M29 .5h20"></path>
+                        <path stroke="#AADC33" d="M49 .5h20"></path>
+                        <path stroke="#FBDC44" d="M69 .5h20"></path>
+                        <path stroke="#FF6200" d="M89 .5h20"></path>
+                    </svg>
+                </div>
+                <p>Get unified visibility and intelligent insights with SolarWinds Observability</p>
+                                <a href="https://www.solarwinds.com/solarwinds-observability" class="learn-more" data-linktype="Top Menu" data-linkdetail="PRODUCT:LEARN MORE" target="_blank" rel="noreferrer, noopener">LEARN MORE</a>            </div>
+                    </div>
+                                <div class="description sw-subnav-0 columns-1 selected">
+            <p class="strong-title"> Log Management and Analytics </p>
+            <p class="desc">Explore the full capabilities of Log Management and Analytics powered by SolarWinds Loggly</p>
+                                    <a href="https://www.loggly.com/product/" class="view-more" data-linktype="Top Menu" data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS:View Product Info">View Product Info</a>                                                
+            <p class="title ">FEATURES</p>
+            
+            <div class="links ">
+                <a href="https://www.loggly.com/product/log-monitoring/" data-linktype="Top Menu" data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS:Proactive Log Monitoring" class="" target="">Proactive Log Monitoring</a><a href="https://www.loggly.com/product/log-troubleshooting/" data-linktype="Top Menu" data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS:Troubleshooting and Diagnostics with Logs" class="" target="">Troubleshooting and Diagnostics with Logs</a><a href="https://www.loggly.com/product/security/" data-linktype="Top Menu" data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS:Security and Compliance" class="" target="">Security and Compliance</a><a href="https://www.loggly.com/product/log-analysis/" data-linktype="Top Menu" data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS:Log Analysis and Reporting" class="" target="">Log Analysis and Reporting</a><a href="https://www.loggly.com/product/devops-integration/" data-linktype="Top Menu" data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS:DevOps Integrations" class="" target="">DevOps Integrations</a><a href="https://www.loggly.com/product/enterprise-log-management/" data-linktype="Top Menu" data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS:Loggly for Enterprise Scale" class="" target="">Loggly for Enterprise Scale</a><a href="https://www.loggly.com/product/devops-monitoring-tools/" data-linktype="Top Menu" data-linkdetail="PRODUCT:LOG MANAGEMENT AND ANALYTICS:DevOps Products" class="" target="">DevOps Products</a>            </div>
+                    </div>
+                                        <div class="description sw-subnav-1 columns-1">
+            <p class="strong-title"> Infrastructure Monitoring Powered by SolarWinds AppOptics </p>
+            <p class="desc">Instant visibility into servers, virtual hosts, and containerized environments</p>
+                                    <a href="https://www.loggly.com/product/infrastructure-and-application-performance-monitoring/" class="view-more" data-linktype="Top Menu" data-linkdetail="PRODUCT:INFRASTRUCTURE MONITORING:View Infrastructure Monitoring Info">View Infrastructure Monitoring Info</a>                                                        </div>
+                                        <div class="description sw-subnav-2 columns-1">
+            <p class="strong-title"> Application Performance Monitoring Powered by SolarWinds AppOptics </p>
+            <p class="desc">Comprehensive, full-stack visibility, and troubleshooting</p>
+                                    <a href="https://www.loggly.com/product/infrastructure-and-application-performance-monitoring/" class="view-more" data-linktype="Top Menu" data-linkdetail="PRODUCT:APPLICATION MONITORING:View Application Performance Monitoring Info">View Application Performance Monitoring Info</a>                                                        </div>
+                                        <div class="description sw-subnav-3 columns-1">
+            <p class="strong-title"> Digital Experience Monitoring Powered by SolarWinds Pingdom </p>
+            <p class="desc">Make your websites faster and more reliable with easy-to-use web performance and digital experience monitoring</p>
+                                    <a href="https://www.loggly.com/product/digital-experience-monitoring/" class="view-more" data-linktype="Top Menu" data-linkdetail="PRODUCT:DIGITAL EXPERIENCE:View Digital Experience Monitoring Info">View Digital Experience Monitoring Info</a>                                                        </div>
+                    </div>
+</div>
+<div class=" sw19b-nav-panel single-column" data-toplevel-id="79166">
+    <div class="sw19s-std-wrap">
+        <div class="description">
+                        <p class="title">SUPPORTED LOG SOURCES</p>
+                        <div class="links multi-column">
+                                <a href="https://www.loggly.com/solution/android-log-viewer/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Android" class="" target="">Android</a>                                <a href="https://www.loggly.com/solution/docker-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Docker" class="" target="">Docker</a>                                <a href="https://www.loggly.com/solution/nginx-log-analyzer/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Nginx" class="" target="">Nginx</a>                                <a href="https://www.loggly.com/solution/linux-log-viewer/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Linux" class="" target="">Linux</a>                                <a href="https://www.loggly.com/solution/apache-log-analyzer/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Apache" class="" target="">Apache</a>                                <a href="https://www.loggly.com/solution/dotnet-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:.NET" class="" target="">.NET</a>                                <a href="https://www.loggly.com/solution/python-log-analysis/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Python" class="" target="">Python</a>                                <a href="https://www.loggly.com/solution/php-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:PHP Syslog" class="" target="">PHP Syslog</a>                                <a href="https://www.loggly.com/solution/aws-monitoring/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:AWS CloudTrail" class="" target="">AWS CloudTrail</a>                                <a href="https://www.loggly.com/solution/heroku-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Heroku" class="" target="">Heroku</a>                                <a href="https://www.loggly.com/solution/tomcat-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Tomcat" class="" target="">Tomcat</a>                                <a href="https://www.loggly.com/solution/syslog-viewer/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Syslog endpoint" class="" target="">Syslog endpoint</a>                                <a href="https://www.loggly.com/solution/digitalocean-monitoring/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:DigitalOcean" class="" target="">DigitalOcean</a>                                <a href="https://www.loggly.com/solution/iis-log-analyzer/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:IIS" class="" target="">IIS</a>                                <a href="https://www.loggly.com/solution/kubernetes-cluster-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Kubernetes" class="" target="">Kubernetes</a>                                <a href="https://www.loggly.com/solution/mysql-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:MySQL" class="" target="">MySQL</a>                                <a href="https://www.loggly.com/solution/docker-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Docker" class="" target="">Docker</a>                                <a href="https://www.loggly.com/solution/network-log-analyzer/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Network devices and routers" class="" target="">Network devices and routers</a>                                <a href="https://www.loggly.com/solution/windows-syslog-analyzer/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Windows system logs" class="" target="">Windows system logs</a>                                <a href="https://www.loggly.com/solution/java-log-analysis/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Java" class="" target="">Java</a>                                <a href="https://www.loggly.com/solution/node-js-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Node.js" class="" target="">Node.js</a>                                <a href="https://www.loggly.com/solution/javascript-logging/" data-linktype="Top Menu" data-linkdetail="LOG SOURCES:Javascript" class="" target="">Javascript</a>                            </div>
+                                                <a href="https://www.loggly.com/docs-index/log-sources/" class="view-more" data-linktype="Top Menu" data-linkdetail="View All Supported Log Sources">View All Supported Log Sources</a>                    </div>
+            </div>
+</div>
+<div class="sw19b-nav-panel multi-column" data-toplevel-id="79191">
+    <div class="sw19s-std-wrap">
+        <div class="links-and-more">
+            <div class="description">
+                                <div class="link-column">
+                    <p class="subtitle">
+                        Technical Resources                    </p>
+                                        <div class="links">
+                                                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/using-loggly.htm?cshid=loggly_using-loggly" data-linktype="Top Menu" data-linkdetail="RESOURCES:Technical Resources:Using Loggly" class="" target="_blank" rel="noreferrer, noopener">Using Loggly</a>                                                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/loggly_Documentation.htm" data-linktype="Top Menu" data-linkdetail="RESOURCES:Technical Resources:Product Documentation" class="" target="_blank" rel="noreferrer, noopener">Product Documentation</a>                                                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/api-overview.htm?cshid=loggly_api-overview" data-linktype="Top Menu" data-linkdetail="RESOURCES:Technical Resources:API" class="" target="_blank" rel="noreferrer, noopener">API</a>                                                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/loggly-libraries-catalog.htm?cshid=loggly_loggly-libraries-catalog" data-linktype="Top Menu" data-linkdetail="RESOURCES:Technical Resources:Loggly Library Catalog" class="" target="_blank" rel="noreferrer, noopener">Loggly Library Catalog</a>                                                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/logging-setup.htm?cshid=loggly_logging-setup" data-linktype="Top Menu" data-linkdetail="RESOURCES:Technical Resources:Sending Logs to Loggly" class="" target="_blank" rel="noreferrer, noopener">Sending Logs to Loggly</a>                                                                        <a href="https://www.loggly.com/ultimate-guide/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Technical Resources:Ultimate Guide to Logging" class="" target="">Ultimate Guide to Logging</a>                                                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/troubleshooting.htm?cshid=loggly_troubleshooting" data-linktype="Top Menu" data-linkdetail="RESOURCES:Technical Resources:Troubleshooting" class="" target="_blank" rel="noreferrer, noopener">Troubleshooting</a>                                            </div>
+                                    </div>
+                                <div class="link-column">
+                    <p class="subtitle">
+                        Educational Resources                    </p>
+                                        <div class="links">
+                                                                        <a href="https://www.loggly.com/resources/types/videos-webinars/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Educational Resources:Videos &amp; Webinars" class="" target="">Videos &amp; Webinars</a>                                                                        <a href="https://www.loggly.com/resources/types/infographics/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Educational Resources:Infographics" class="" target="">Infographics</a>                                                                        <a href="https://www.loggly.com/resources/types/whitepapers/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Educational Resources:Whitepapers" class="" target="">Whitepapers</a>                                                                        <a href="https://www.loggly.com/resources/types/case-studies/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Educational Resources:Case Studies" class="" target="">Case Studies</a>                                                                        <a href="https://www.loggly.com/loggly-use-cases/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Educational Resources:Use Cases" class="" target="">Use Cases</a>                                            </div>
+                                    </div>
+                                <div class="link-column">
+                    <p class="subtitle">
+                        APM Integrated Experience                    </p>
+                                        <div class="links">
+                                                                        <a href="https://www.solarwinds.com/resources/datasheet/apm-integrated-experience-datasheet" data-linktype="Top Menu" data-linkdetail="RESOURCES:APM Integrated Experience:Datasheet" class="" target="">Datasheet</a>                                                                        <a href="https://video.solarwinds.com/watch/nsS5pYU4SuvwazUSvdHN2T?mkt_tok=NTY0LVZGUi0wMDgAAAF8TBcU2uBPK-bOF_dmIRmJi79GqHS3NvuNAXgiVxoRqT_K-hii5PPN1rQofy8GZEtt-VvHD-NpyT3y77UMs4foOPlNtTWCHc4fwInesHbew1Ot2zCz" data-linktype="Top Menu" data-linkdetail="RESOURCES:APM Integrated Experience:Webinar Achieve Comprehensive Observability" class="" target="">Webinar Achieve Comprehensive Observability</a>                                                                        <a href="https://www.solarwinds.com/resources/infographic/apm-integrated-experience" data-linktype="Top Menu" data-linkdetail="RESOURCES:APM Integrated Experience:Infographic" class="" target="">Infographic</a>                                                                        <a href="https://www.youtube.com/watch?v=zpBiQ6w8XU4" data-linktype="Top Menu" data-linkdetail="RESOURCES:APM Integrated Experience:Video: Failed Transaction Check" class="" target="">Video: Failed Transaction Check</a>                                                                        <a href="https://www.solarwinds.com/apm-integrated-experience/competitor-comparison/dynatrace" data-linktype="Top Menu" data-linkdetail="RESOURCES:APM Integrated Experience:SolarWinds vs Dynatrace" class="" target="">SolarWinds vs Dynatrace</a>                                                                        <a href="https://www.solarwinds.com/apm-integrated-experience/competitor-comparison/datadog" data-linktype="Top Menu" data-linkdetail="RESOURCES:APM Integrated Experience:SolarWinds vs Datadog" class="" target="">SolarWinds vs Datadog</a>                                                                        <a href="https://www.solarwinds.com/apm-integrated-experience/competitor-comparison/appdynamics" data-linktype="Top Menu" data-linkdetail="RESOURCES:APM Integrated Experience:SolarWinds vs AppDynamics" class="" target="">SolarWinds vs AppDynamics</a>                                                                        <a href="https://www.solarwinds.com/apm-integrated-experience/competitor-comparison/new-relic" data-linktype="Top Menu" data-linkdetail="RESOURCES:APM Integrated Experience:SolarWinds vs New Relic" class="" target="">SolarWinds vs New Relic</a>                                            </div>
+                                    </div>
+                                <div class="link-column">
+                    <p class="subtitle">
+                        Connect with Us                    </p>
+                                        <div class="links">
+                                                                        <a href="https://status.loggly.com/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Connect with Us:System Status" class="" target="_blank" rel="noreferrer, noopener">System Status</a>                                                                        <a href="https://www.loggly.com/login/?next=/support/new/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Connect with Us:Support Request" class="" target="">Support Request</a>                                                                        <a href="https://www.loggly.com/blog/" data-linktype="Top Menu" data-linkdetail="RESOURCES:Connect with Us:Blog" class="" target="">Blog</a>                                                                        <a href="https://www.solarwinds.com/covid-19-resources" data-linktype="Top Menu" data-linkdetail="RESOURCES:Connect with Us:COVID-19 Resource Center" class="" target="_blank" rel="noreferrer, noopener">COVID-19 Resource Center</a>                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+</div>
+
+<nav class="sw19b-header-mobile">
+    <div class="sw19s-std-wrap">
+                        <div class="menu-and-panel">
+                        <a data-linkdetail="PRODUCT" data-linktype="Top Menu" href="https://www.loggly.com/product/" class="" target="">
+                PRODUCT            </a>
+                        <div class="panel">
+                <a href="https://www.loggly.com/product/" class="" target="">
+                    LOG MANAGEMENT AND ANALYTICS                                        <svg class="menu-toggle">
+                        <use xlink:href="#sw19-circle-plus"></use>
+                    </svg>
+                                    </a>
+                                <div class="subnav collapsable">
+                                        <a href="https://www.loggly.com/product/log-monitoring/" data-linktype="Top Menu" class="" target="" data-linkdetail="Proactive Log Monitoring">Proactive Log Monitoring</a>                                        <a href="https://www.loggly.com/product/log-troubleshooting/" data-linktype="Top Menu" class="" target="" data-linkdetail="Troubleshooting and Diagnostics with Logs">Troubleshooting and Diagnostics with Logs</a>                                        <a href="https://www.loggly.com/product/security/" data-linktype="Top Menu" class="" target="" data-linkdetail="Security and Compliance">Security and Compliance</a>                                        <a href="https://www.loggly.com/product/log-analysis/" data-linktype="Top Menu" class="" target="" data-linkdetail="Log Analysis and Reporting">Log Analysis and Reporting</a>                                        <a href="https://www.loggly.com/product/devops-integration/" data-linktype="Top Menu" class="" target="" data-linkdetail="DevOps Integrations">DevOps Integrations</a>                                        <a href="https://www.loggly.com/product/enterprise-log-management/" data-linktype="Top Menu" class="" target="" data-linkdetail="Loggly for Enterprise Scale">Loggly for Enterprise Scale</a>                                        <a href="https://www.loggly.com/product/devops-monitoring-tools/" data-linktype="Top Menu" class="" target="" data-linkdetail="DevOps Products">DevOps Products</a>                                    </div>
+                            </div>
+                        <div class="panel">
+                <a href="https://www.loggly.com/product/infrastructure-and-application-performance-monitoring/" class="" target="">
+                    INFRASTRUCTURE MONITORING                                    </a>
+                            </div>
+                        <div class="panel">
+                <a href="https://www.loggly.com/product/infrastructure-and-application-performance-monitoring/" class="" target="">
+                    APPLICATION MONITORING                                    </a>
+                            </div>
+                        <div class="panel">
+                <a href="https://www.loggly.com/product/digital-experience-monitoring/" class="" target="">
+                    DIGITAL EXPERIENCE                                    </a>
+                            </div>
+                                                        </div>
+                        <div class="menu-and-panel">
+                        <a href="https://www.loggly.com/plans-and-pricing/" data-linktype="Top Menu" class="" target="" data-linkdetail="PRICING">PRICING</a>                    </div>
+                        <div class="menu-and-panel">
+                        <a href="https://www.loggly.com/docs-index/log-sources/" class="" target="">
+                LOG SOURCES            </a>
+                                    <div class="panel">
+                <p>
+                    SUPPORTED LOG SOURCES                                        <svg class="menu-toggle">
+                        <use xlink:href="#sw19-circle-plus"></use>
+                    </svg>
+                                    </p>
+                <div class="subnav collapsable">
+                                        <a href="https://www.loggly.com/solution/android-log-viewer/" data-linktype="Top Menu" class="" target="" data-linkdetail="Android">Android</a>                                        <a href="https://www.loggly.com/solution/docker-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="Docker">Docker</a>                                        <a href="https://www.loggly.com/solution/nginx-log-analyzer/" data-linktype="Top Menu" class="" target="" data-linkdetail="Nginx">Nginx</a>                                        <a href="https://www.loggly.com/solution/linux-log-viewer/" data-linktype="Top Menu" class="" target="" data-linkdetail="Linux">Linux</a>                                        <a href="https://www.loggly.com/solution/apache-log-analyzer/" data-linktype="Top Menu" class="" target="" data-linkdetail="Apache">Apache</a>                                        <a href="https://www.loggly.com/solution/dotnet-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail=".NET">.NET</a>                                        <a href="https://www.loggly.com/solution/python-log-analysis/" data-linktype="Top Menu" class="" target="" data-linkdetail="Python">Python</a>                                        <a href="https://www.loggly.com/solution/php-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="PHP Syslog">PHP Syslog</a>                                        <a href="https://www.loggly.com/solution/aws-monitoring/" data-linktype="Top Menu" class="" target="" data-linkdetail="AWS CloudTrail">AWS CloudTrail</a>                                        <a href="https://www.loggly.com/solution/heroku-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="Heroku">Heroku</a>                                        <a href="https://www.loggly.com/solution/tomcat-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="Tomcat">Tomcat</a>                                        <a href="https://www.loggly.com/solution/syslog-viewer/" data-linktype="Top Menu" class="" target="" data-linkdetail="Syslog endpoint">Syslog endpoint</a>                                        <a href="https://www.loggly.com/solution/digitalocean-monitoring/" data-linktype="Top Menu" class="" target="" data-linkdetail="DigitalOcean">DigitalOcean</a>                                        <a href="https://www.loggly.com/solution/iis-log-analyzer/" data-linktype="Top Menu" class="" target="" data-linkdetail="IIS">IIS</a>                                        <a href="https://www.loggly.com/solution/kubernetes-cluster-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="Kubernetes">Kubernetes</a>                                        <a href="https://www.loggly.com/solution/mysql-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="MySQL">MySQL</a>                                        <a href="https://www.loggly.com/solution/docker-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="Docker">Docker</a>                                        <a href="https://www.loggly.com/solution/network-log-analyzer/" data-linktype="Top Menu" class="" target="" data-linkdetail="Network devices and routers">Network devices and routers</a>                                        <a href="https://www.loggly.com/solution/windows-syslog-analyzer/" data-linktype="Top Menu" class="" target="" data-linkdetail="Windows system logs">Windows system logs</a>                                        <a href="https://www.loggly.com/solution/java-log-analysis/" data-linktype="Top Menu" class="" target="" data-linkdetail="Java">Java</a>                                        <a href="https://www.loggly.com/solution/node-js-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="Node.js">Node.js</a>                                        <a href="https://www.loggly.com/solution/javascript-logging/" data-linktype="Top Menu" class="" target="" data-linkdetail="Javascript">Javascript</a>                                    </div>
+            </div>
+                                </div>
+                        <div class="menu-and-panel">
+                        <a href="https://www.loggly.com/intro-to-log-management/" class="" target="">
+                RESOURCES            </a>
+                                    <div class="panel">
+                <p>
+                    Technical Resources                                        <svg class="menu-toggle">
+                        <use xlink:href="#sw19-circle-plus"></use>
+                    </svg>
+                                    </p>
+                <div class="subnav collapsable">
+                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/using-loggly.htm?cshid=loggly_using-loggly" data-linktype="Top Menu" class="" target="_blank" data-linkdetail="Using Loggly" rel="noreferrer, noopener">Using Loggly</a>                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/loggly_Documentation.htm" data-linktype="Top Menu" class="" target="_blank" data-linkdetail="Product Documentation" rel="noreferrer, noopener">Product Documentation</a>                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/api-overview.htm?cshid=loggly_api-overview" data-linktype="Top Menu" class="" target="_blank" data-linkdetail="API" rel="noreferrer, noopener">API</a>                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/loggly-libraries-catalog.htm?cshid=loggly_loggly-libraries-catalog" data-linktype="Top Menu" class="" target="_blank" data-linkdetail="Loggly Library Catalog" rel="noreferrer, noopener">Loggly Library Catalog</a>                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/logging-setup.htm?cshid=loggly_logging-setup" data-linktype="Top Menu" class="" target="_blank" data-linkdetail="Sending Logs to Loggly" rel="noreferrer, noopener">Sending Logs to Loggly</a>                                        <a href="https://www.loggly.com/ultimate-guide/" data-linktype="Top Menu" class="" target="" data-linkdetail="Ultimate Guide to Logging">Ultimate Guide to Logging</a>                                        <a href="https://documentation.solarwinds.com/en/Success_Center/loggly/Content/admin/troubleshooting.htm?cshid=loggly_troubleshooting" data-linktype="Top Menu" class="" target="_blank" data-linkdetail="Troubleshooting" rel="noreferrer, noopener">Troubleshooting</a>                                    </div>
+            </div>
+                        <div class="panel">
+                <p>
+                    Educational Resources                                        <svg class="menu-toggle">
+                        <use xlink:href="#sw19-circle-plus"></use>
+                    </svg>
+                                    </p>
+                <div class="subnav collapsable">
+                                        <a href="https://www.loggly.com/resources/types/videos-webinars/" data-linktype="Top Menu" class="" target="" data-linkdetail="Videos &amp; Webinars">Videos &amp; Webinars</a>                                        <a href="https://www.loggly.com/resources/types/infographics/" data-linktype="Top Menu" class="" target="" data-linkdetail="Infographics">Infographics</a>                                        <a href="https://www.loggly.com/resources/types/whitepapers/" data-linktype="Top Menu" class="" target="" data-linkdetail="Whitepapers">Whitepapers</a>                                        <a href="https://www.loggly.com/resources/types/case-studies/" data-linktype="Top Menu" class="" target="" data-linkdetail="Case Studies">Case Studies</a>                                        <a href="https://www.loggly.com/loggly-use-cases/" data-linktype="Top Menu" class="" target="" data-linkdetail="Use Cases">Use Cases</a>                                    </div>
+            </div>
+                        <div class="panel">
+                <p>
+                    APM Integrated Experience                                        <svg class="menu-toggle">
+                        <use xlink:href="#sw19-circle-plus"></use>
+                    </svg>
+                                    </p>
+                <div class="subnav collapsable">
+                                        <a href="https://www.solarwinds.com/resources/datasheet/apm-integrated-experience-datasheet" data-linktype="Top Menu" class="" target="" data-linkdetail="Datasheet">Datasheet</a>                                        <a href="https://video.solarwinds.com/watch/nsS5pYU4SuvwazUSvdHN2T?mkt_tok=NTY0LVZGUi0wMDgAAAF8TBcU2uBPK-bOF_dmIRmJi79GqHS3NvuNAXgiVxoRqT_K-hii5PPN1rQofy8GZEtt-VvHD-NpyT3y77UMs4foOPlNtTWCHc4fwInesHbew1Ot2zCz" data-linktype="Top Menu" class="" target="" data-linkdetail="Webinar Achieve Comprehensive Observability">Webinar Achieve Comprehensive Observability</a>                                        <a href="https://www.solarwinds.com/resources/infographic/apm-integrated-experience" data-linktype="Top Menu" class="" target="" data-linkdetail="Infographic">Infographic</a>                                        <a href="https://www.youtube.com/watch?v=zpBiQ6w8XU4" data-linktype="Top Menu" class="" target="" data-linkdetail="Video: Failed Transaction Check">Video: Failed Transaction Check</a>                                        <a href="https://www.solarwinds.com/apm-integrated-experience/competitor-comparison/dynatrace" data-linktype="Top Menu" class="" target="" data-linkdetail="SolarWinds vs Dynatrace">SolarWinds vs Dynatrace</a>                                        <a href="https://www.solarwinds.com/apm-integrated-experience/competitor-comparison/datadog" data-linktype="Top Menu" class="" target="" data-linkdetail="SolarWinds vs Datadog">SolarWinds vs Datadog</a>                                        <a href="https://www.solarwinds.com/apm-integrated-experience/competitor-comparison/appdynamics" data-linktype="Top Menu" class="" target="" data-linkdetail="SolarWinds vs AppDynamics">SolarWinds vs AppDynamics</a>                                        <a href="https://www.solarwinds.com/apm-integrated-experience/competitor-comparison/new-relic" data-linktype="Top Menu" class="" target="" data-linkdetail="SolarWinds vs New Relic">SolarWinds vs New Relic</a>                                    </div>
+            </div>
+                        <div class="panel">
+                <p>
+                    Connect with Us                                        <svg class="menu-toggle">
+                        <use xlink:href="#sw19-circle-plus"></use>
+                    </svg>
+                                    </p>
+                <div class="subnav collapsable">
+                                        <a href="https://status.loggly.com/" data-linktype="Top Menu" class="" target="_blank" data-linkdetail="System Status" rel="noreferrer, noopener">System Status</a>                                        <a href="https://www.loggly.com/login/?next=/support/new/" data-linktype="Top Menu" class="" target="" data-linkdetail="Support Request">Support Request</a>                                        <a href="https://www.loggly.com/blog/" data-linktype="Top Menu" class="" target="" data-linkdetail="Blog">Blog</a>                                        <a href="https://www.solarwinds.com/covid-19-resources" data-linktype="Top Menu" class="" target="_blank" data-linkdetail="COVID-19 Resource Center" rel="noreferrer, noopener">COVID-19 Resource Center</a>                                    </div>
+            </div>
+                                </div>
+                        <div class="menu-and-panel">
+                        <a href="https://www.loggly.com/login/" data-linktype="Top Menu" class="" target="" data-linkdetail="LOG IN">LOG IN</a>                    </div>
+                        <div class="menu-and-panel">
+            <a href="https://www.loggly.com/demo-request/" class="default" data-linktype="Top Menu" data-linkdetail="REQUEST DEMO">REQUEST DEMO</a>        </div>
+                <div class="menu-and-panel">
+            <a href="https://www.loggly.com/signup/" class="orange" data-linktype="Top Menu" data-linkdetail="FREE TRIAL">FREE TRIAL</a>        </div>
+            </div>
+</nav>
+
+<div id="navOverlay"></div>
+<div class="affix-separator"></div>
+
+
+	
+		<section class="default-detail blog-detail">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<main class="default-detail__main blog-detail__main">
+							<div class="article-detail">
+									<p class="article-detail__breadcrumb">
+		<a href="https://www.loggly.com/blog/">Blog</a>
+		<a href="https://www.loggly.com/blog/topic/how-tos/">How-tos</a>
+	</p>
+<div class="article-detail__header">
+	<h1 class="article-detail__title">
+		DDoS monitoring: how to know you’re under attack	</h1>
+		<p class="article-detail__meta">By <a class="article-detail__author">Jennifer Marsh</a> <span class="article-detail__timestamp">25 Jan 2017</span></p>
+</div>
+								<div class="article-detail__content">
+	
+<p>A while back, we covered how you can check your Windows IIS and Loggly logs to<a href="https://www.loggly.com/blog/how-to-detect-and-analyze-ddos-attacks-using-log-analysis/"> view the source of a DDoS attack</a>, but how do you know when your network is under attack? It is not efficient to have humans monitoring logs every day and every hour, so you must rely on automated resources. Automated DDoS monitoring gives your security team more bandwidth to focus on other important tasks and still get notifications should anomalies happen as a result of a DDoS event.</p>
+
+
+
+<h2 class="wp-block-heading">What Is a DDoS Attack?</h2>
+
+
+
+<p>In short, &nbsp;a DDoS attack is a flood of traffic to your web host or server. With enough traffic, an attacker can eat away at your bandwidth and server resources until one (or both) are so inundated that they can no longer function. The server crashes, or there just isn’t enough bandwidth to allow true customers to access your web service. As you can probably guess, this means a crash in your service and loss in revenue for as long as the attack continues.</p>
+
+
+
+<p>DDoS attacks can be devastating to an online business, which is why understanding how they work and how to mitigate them quickly is important. During the attack, there isn’t one source, so you can’t just filter one IP to stop it. DDoS attackers infect user systems (that can mean computers but also embedded systems or IoT devices) with software that allows them to control them around the globe. The attacker uses a centralized system that then tells these malware-infected machines to send traffic to the site. The number of machines at the attacker’s disposal depends on the number of machines infected, but it can be in the tens of thousands. To make things worse, DDoS malware is typically very sophisticated and employs techniques to overload your server as efficiently as possible, for example by sending incomplete connection requests that cause wait states on your system, during which the attacking system can send new requests.</p>
+
+
+
+<p>You can usually identify how much of an attack you can withstand. If your normal traffic is 100 connections at a time throughout the day and your server runs normally, then 100 machines vying for a connection will probably not affect you. However, with a DDoS attack it will be thousands of connections from numerous different IPs at one time. If your server can’t handle 10,000 connections at a time, then you could be vulnerable to a DDoS attack.</p>
+
+
+
+<p>Without warning, you have hundreds or thousands of machines (servers, desktops, and even mobile devices) sending traffic to your site at once. Within minutes, your site’s performance and resources are severely drained and normal users cannot access your site.</p>
+
+
+
+<figure class="wp-block-image size-full"><a href="https://www.solarwinds.com/hybrid-cloud-observability?CMP=LEC-BAD-LOGBLG-SW_WW_X_CR_X_BA_EN_OBSLAN_X-OBVB-20220425_DDOSMonitoring_X_X_X_X-X"><img decoding="async" width="430" height="70" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1.png" alt="" class="wp-image-80345" srcset="https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1.png 430w, https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1-220x36.png 220w, https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1-300x49.png 300w, https://www.loggly.com/wp-content/uploads/2022/04/2202_SWO_launch_photo1_reenvisionmore_430x70-96ppi-copy-1-100x16.png 100w" sizes="(max-width: 430px) 100vw, 430px"></a></figure>
+
+
+
+<h2 class="wp-block-heading">How Do You Know When a DDoS Attack Is Occurring?</h2>
+
+
+
+<p>The hardest part about a DDoS attack is that there are no warnings. Some large hacking groups will send threats, but for the most part an attacker sends the command to attack your site with no warnings at all.</p>
+
+
+
+<p>Since you don’t normally browse your site, it isn’t until customers complain that you finally realize something is wrong. Initially, you probably don’t think it’s a DDoS attack but instead think your server or hosting is down. You check your server and perform basic tests, but you will only see a high amount of network traffic with resources maxed out. You might check to see if any programs are running in the background, but you won’t find any noticeable problems.</p>
+
+
+
+<p>Between the time it takes for you to realize it’s a DDoS attack and the time it takes to mitigate the damage, several hours can go by. This means several hours of missed service and income, which essentially takes a major cut in your revenue.</p>
+
+
+
+<h2 class="wp-block-heading">DDoS Attack Clues</h2>
+
+
+
+<p>The most effective way to mitigate a DDoS attack is to know when it’s happening immediately when the attack begins. There are several clues that indicate an ongoing DDoS attack is happening:</p>
+
+
+
+<ul><li>An IP address makes x requests over y seconds</li><li>Your server responds with a 503 due to service outages</li><li>The TTL (time to live) on a ping request times out</li><li>If you use the same connection for internal software, employees notice slowness issues</li><li>Log analysis solutions show a huge spike in traffic</li></ul>
+
+
+
+<p>Most of these signs can be used to automate a notification system that sends an email or text to your administrators.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><a href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/DDOSMonitoring0.png"><img decoding="async" fetchpriority="high" width="481" height="397" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/DDOSMonitoring0.png" alt="DDOSMonitoring 0" class="wp-image-18334" srcset="https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring0.png 481w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring0-460x380.png 460w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring0-220x182.png 220w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring0-300x248.png 300w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring0-90x74.png 90w" sizes="(max-width: 481px) 100vw, 481px"></a></figure></div>
+
+
+<p>Loggly can send such alerts based on log events and defined thresholds, and even send these alerts to tools like Slack, Hipchat, or PagerDuty.</p>
+
+
+
+<h3 class="wp-block-heading"><a href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/DDOSMonitoring1.png"><img decoding="async" class="aligncenter wp-image-18335 size-full" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/DDOSMonitoring1.png" alt="DDOSMonitoring 1" width="396" height="385" srcset="https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring1-220x215.png 220w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring1-300x293.png 300w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring1-76x74.png 76w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring1-32x32.png 32w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring1-50x50.png 50w" sizes="(max-width: 396px) 100vw, 396px"></a></h3>
+
+
+
+<h3 class="wp-block-heading">Too Many Requests for One IP</h3>
+
+
+
+<p>You can temporarily set up the router to send traffic to NULL routes from specific IPs. This essentially sends the attacking IP addresses to a void or dead end, so that it cannot affect your servers. This is somewhat difficult, because you can easily block a legitimate IP address as you attempt to stop the attack. Another issue is that the source IP is usually spoofed, so the connection is never completed between your server and the source machine.</p>
+
+
+
+<p>Setting alerts from the firewall or intrusion prevention or detection system can be tricky, because again some legitimate bots will be picked up as an attack. The configuration and settings also depend on the system that you have.</p>
+
+
+
+<p>Overall, you want to set an alert to go out if a range of IP addresses sends too many connection requests over a small window of time. You will likely need to whitelist certain IP addresses, because ones such as Googlebot will crawl your site at a very fast and frequent rate. It will take some time and tweaking before you get this alert to work properly since you will legitimately want some bots and scripts to run that could send a false positive to your alert system.</p>
+
+
+
+<h3 class="wp-block-heading">Server Responds with a 503</h3>
+
+
+
+<p>In Windows, you can schedule alerts when a specific event happens in Event Viewer. You can attach any task to an event including errors, warnings, or any other event that might help you mitigate an issue before it becomes a critical situation.</p>
+
+
+
+<p>To attach a task to a 503 event, you first need to find the event in Event Viewer. Open Event Viewer and right-click on the event.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><a href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/DDOSMonitoring2.png"><img decoding="async" loading="lazy" width="708" height="433" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/DDOSMonitoring2.png" alt="DDOSMonitoring 2" class="wp-image-18336" srcset="https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring2.png 708w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring2-460x281.png 460w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring2-700x428.png 700w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring2-220x135.png 220w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring2-300x183.png 300w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring2-100x61.png 100w" sizes="(max-width: 708px) 100vw, 708px"></a></figure></div>
+
+
+<p>This opens a configuration screen where you can configure the event to send an email to an administrator or to a team of people.</p>
+
+
+
+<p>If you have multiple servers, it’s efficient to set up a similar alert using Loggly:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><a href="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/DDOSMonitoring3.png"><img decoding="async" loading="lazy" width="475" height="400" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/DDOSMonitoring3.png" alt="DDOSMonitoring 3" class="wp-image-18337" srcset="https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring3.png 475w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring3-460x387.png 460w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring3-220x185.png 220w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring3-300x253.png 300w, https://www.loggly.com/wp-content/uploads/2017/01/DDOSMonitoring3-88x74.png 88w" sizes="(max-width: 475px) 100vw, 475px"></a></figure></div>
+
+
+<h3 class="wp-block-heading">TTL Times Out</h3>
+
+
+
+<p>You can manually ping your servers to test the bandwidth and connection, but this doesn’t help when you want to automate an alert before it’s critical. If you’re pinging the server, then you already know there is something wrong.</p>
+
+
+
+<p>To help automate ping alerts, several services on the web offer a way to ping your site from around the world. The service pings your site from various regions around the globe at a frequency that you configure. If you have cloud hosting, you could have an issue in one region but not another, so these pinging services help you identify issues in certain locations.</p>
+
+
+
+<p>Just a few pinging services are listed <a href="https://mashable.com/2010/04/09/free-uptime-monitoring/#a6ip3WKz7kqV" target="_blank" rel="noopener noreferrer">here</a>. With these services, your site is monitored 24/7 for uptime, so your IT team can respond should your server experience issues. Because a DDoS attack eats away at your bandwidth, the ping time will be too long or time out. The service sends an alert to your team, so they can start mitigation techniques and troubleshoot the issue.</p>
+
+
+
+<h2 class="wp-block-heading">Log Management Systems and DDoS Attack Monitoring</h2>
+
+
+
+<p>Solutions such as Loggly display your traffic statistics across your entire stack and help you identify if there are any anomalies 24/7. Using Loggly, you can identify an ongoing attack and send alerts to your administrators. The advantage to using these logs is that you can not only identify traffic spikes, but you can identify the servers affected, the errors returned to your users, and the precise date and time the traffic spikes occurred. Analyzing tools do much more than just tell you there is a problem. They also tell you the servers affected to save you troubleshooting time.</p>
+
+
+
+<p>With log management systems, you have several more advantages than the other solutions. You can set alerts for any type of event, which makes this type of system much more flexible than setting an alert for traffic only.</p>
+
+
+
+<p>You can also make your alerts much more granular. For instance, with an alert based on an IP at your <a href="https://www.n-able.com/features/security">firewall</a>, you will get several false positives until you tweak your alert configurations to only include suspicious IPs. With Loggly, you can set your alerts based on a combination of events and traffic spikes, so that you get only those anomalies that should interrupt IT personnel and have them respond quickly.</p>
+
+
+
+<p><b>A note about alerts</b>: too many of them can have an opposite effect on IT teams. For instance, suppose you have your system set up to send alerts on several anomalies that are usually benign. Your team gets hundreds of alerts a day based on these configurations. When inundated with harmless events, IT folks tend to ignore all of them including important ones. It’s not intentional, but when receiving hundreds of alerts a day, the important ones can get buried and the result is that IT has an oversight during a critical outage.</p>
+
+
+
+<h2 class="wp-block-heading">Arm Yourself Against DDoS</h2>
+
+
+
+<p>DDoS events are difficult but essentially a major security concern for administrators. But with some automation and alerts, you can trigger the right proactive notifications that limit the time it takes to identify and stop a DDoS attack.</p>
+
+
+
+<p>Now that you’ve learned ddos monitoring and how to tell if you are under attack, signup for a FREE no-credit card required Loggly Trial and view app performance, system behavior, and unusual activity across the stack. Monitor your key resources and metrics and eliminate issues before they affect your server and users.<br><span style="color: #ff6600;"><strong>&gt;&gt;&nbsp;&nbsp;</strong></span><a href="https://www.loggly.com/signup/">Signup Now for a Free Loggly Trial</a></p>
+	<h6 style="font-weight:100;margin-top:0px;"><em>The Loggly and SolarWinds trademarks, service marks, and logos are the exclusive property of SolarWinds Worldwide, LLC or its affiliates. All other trademarks are the property of their respective owners.</em>
+</h6></div>
+									<div class="article-detail__bio">
+					<img src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/jennifermarsh-220x220.jpg" alt="Jennifer Marsh" width="80" height="80">
+				<p><strong>Jennifer Marsh</strong> </p>
+	</div>
+							</div>
+						</main>
+						<div class="blog-sidebar">
+							        <div class="sidebar-widget latest-blogposts">
+                            <h3 class="latest-blogposts__title">
+                    Latest Posts                </h3>
+                                        <ul class="latest-blogposts__list">
+                                                                    <li class="latest-blogposts__item">
+                            <div class="article">
+                                <div class="article__content">
+                                    <h4 class="article__title">
+                                        <a href="https://www.loggly.com/blog/five-tips-for-monitoring-your-saas/">
+                                            Five Tips for Monitoring Your Cloud Application                                        </a>
+                                    </h4>
+                                    <p class="article__category">
+                                                                                <a href="https://www.loggly.com/blog/topic/log-management-technology/aws/">
+                                            AWS Logging                                        </a>
+                                                                                <a href="https://www.loggly.com/blog/topic/devops/">
+                                            DevOps                                        </a>
+                                                                            </p>
+                                </div>
+                            </div>
+                        </li>
+                                                                    <li class="latest-blogposts__item">
+                            <div class="article">
+                                <div class="article__content">
+                                    <h4 class="article__title">
+                                        <a href="https://www.loggly.com/blog/aggregating-logs-from-microservices-best-practices/">
+                                            Aggregating Logs From Microservices—Best Practices                                        </a>
+                                    </h4>
+                                    <p class="article__category">
+                                                                                <a href="https://www.loggly.com/blog/topic/how-tos/">
+                                            How-tos                                        </a>
+                                                                                <a href="https://www.loggly.com/blog/topic/observability/">
+                                            Observability                                        </a>
+                                                                            </p>
+                                </div>
+                            </div>
+                        </li>
+                                                                    <li class="latest-blogposts__item">
+                            <div class="article">
+                                <div class="article__content">
+                                    <h4 class="article__title">
+                                        <a href="https://www.loggly.com/blog/effective-logging-in-threaded-or-multiprocessing-python-applications/">
+                                            Effective Logging in Threaded or Multiprocessing Python Applications                                        </a>
+                                    </h4>
+                                    <p class="article__category">
+                                                                                <a href="https://www.loggly.com/blog/topic/development/">
+                                            Development                                        </a>
+                                                                                <a href="https://www.loggly.com/blog/topic/log-management-technology/python/">
+                                            Python                                        </a>
+                                                                            </p>
+                                </div>
+                            </div>
+                        </li>
+                                                                    <li class="latest-blogposts__item">
+                            <div class="article">
+                                <div class="article__content">
+                                    <h4 class="article__title">
+                                        <a href="https://www.loggly.com/blog/effective-logging-in-node-js-microservices/">
+                                            Effective Logging in Node.js Microservices                                        </a>
+                                    </h4>
+                                    <p class="article__category">
+                                                                                <a href="https://www.loggly.com/blog/topic/log-management-technology/node-js/">
+                                            Node.js                                        </a>
+                                                                            </p>
+                                </div>
+                            </div>
+                        </li>
+                                                                    <li class="latest-blogposts__item">
+                            <div class="article">
+                                <div class="article__content">
+                                    <h4 class="article__title">
+                                        <a href="https://www.loggly.com/blog/node-js-libraries-make-sophisticated-logging-simpler/">
+                                            4 Node.js Logging libraries which make sophisticated logging simpler                                        </a>
+                                    </h4>
+                                    <p class="article__category">
+                                                                                <a href="https://www.loggly.com/blog/topic/development/">
+                                            Development                                        </a>
+                                                                                <a href="https://www.loggly.com/blog/topic/how-tos/">
+                                            How-tos                                        </a>
+                                                                                <a href="https://www.loggly.com/blog/topic/log-management-technology/json/">
+                                            JSON                                        </a>
+                                                                                <a href="https://www.loggly.com/blog/topic/log-management-technology/node-js/">
+                                            Node.js                                        </a>
+                                                                            </p>
+                                </div>
+                            </div>
+                        </li>
+                                    </ul>
+                    </div>
+    		<div class="sidebar-widget category-list">
+			<h3 class="category-list__title">Categories</h3>
+							<ul class="category-list__list">
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/dot-net/">
+								.NET							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/angular/">
+								Angular							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/apm-integrated-experience/">
+								APM Integrated Experience							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/solarwinds-cloud/appoptics/">
+								AppOptics							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/aws/">
+								AWS Logging							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/c-sharp/">
+								C/ C++/ C#							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/company/">
+								Company news							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/development/">
+								Development							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/devops/">
+								DevOps							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/digitalocean/">
+								DigitalOcean							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/docker/">
+								Docker							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/elasticsearch/">
+								Elasticsearch							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/events/">
+								Events							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/game-development/">
+								Game development							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/go/">
+								Go							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/how-tos/">
+								How-tos							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/java/">
+								Java							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/javascript/">
+								JavaScript							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/json/">
+								JSON							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/kubernetes/">
+								Kubernetes							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/linux/">
+								Linux							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/meteor/">
+								Meteor							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/nginx/">
+								Nginx							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/node-js/">
+								Node.js							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/observability/">
+								Observability							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/solarwinds-cloud/papertrail/">
+								Papertrail							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/php/">
+								PHP							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/solarwinds-cloud/pingdom/">
+								Pingdom							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/product-news/">
+								Product news							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/python/">
+								Python							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/rails/">
+								Rails							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/rsyslog/">
+								Rsyslog							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/rsyslong/">
+								Rsyslong							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/ruby/">
+								Ruby							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/security/">
+								Security							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/solarwinds-cloud/">
+								SolarWinds Cloud							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/syslog/">
+								Syslog							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/system-administration/">
+								System administration							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/">
+								Technology							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-use-cases/">
+								Use cases							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/log-management-technology/windows/">
+								Windows							</a>
+						</li>
+											<li>
+							<a href="https://www.loggly.com/blog/topic/wordpress/">
+								WordPress							</a>
+						</li>
+									</ul>
+					</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="related-resources">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h4 class="related-resources__title">Related blog posts</h4>
+				<ul class="article-list-related">
+					<div class="rp4wp-related-posts rp4wp-related-post">
+
+		<ul class="rp4wp-posts-list">
+		<li class="rp4wp-col rp4wp-col-first">
+	<div class="rp4wp_component rp4wp_component_image rp4wp_component_2"><a href="https://www.loggly.com/blog/how-to-detect-and-analyze-ddos-attacks-using-log-analysis/"><img width="498" height="196" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/0005_how-to-detect-and-analyze-ddos-attacks-using-log-analysis-498x196.png" class="attachment-498x196 size-498x196 wp-post-image" alt="" decoding="async" loading="lazy"></a></div><div class="rp4wp_component rp4wp_component_taxonomy rp4wp_component_3">	<span>DevOps, System administration</span>
+	</div><div class="rp4wp_component rp4wp_component_title rp4wp_component_4"><a href="https://www.loggly.com/blog/how-to-detect-and-analyze-ddos-attacks-using-log-analysis/">How to Detect and Analyze DDoS Attacks Using Log Analysis</a></div></li><li class="rp4wp-col">
+	<div class="rp4wp_component rp4wp_component_image rp4wp_component_2"><a href="https://www.loggly.com/blog/loggly-3-0-connecting-dots-unified-log-analysis-and-monitoring/"><img width="498" height="196" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/BLOG-1500x700Loggly-3.0-Launch-copy.-498x196.png" class="attachment-498x196 size-498x196 wp-post-image" alt="Loggly 3.0 product" decoding="async" loading="lazy"></a></div><div class="rp4wp_component rp4wp_component_taxonomy rp4wp_component_3">	<span>Development, DevOps, Java, JavaScript, Product news, Python</span>
+	</div><div class="rp4wp_component rp4wp_component_title rp4wp_component_4"><a href="https://www.loggly.com/blog/loggly-3-0-connecting-dots-unified-log-analysis-and-monitoring/">Loggly 3.0: Connecting the dots with unified log analysis and monitoring</a></div></li><li class="rp4wp-col rp4wp-col-last">
+	<div class="rp4wp_component rp4wp_component_image rp4wp_component_2"><a href="https://www.loggly.com/blog/log-monitoring-for-e-commerce-five-key-areas/"><img src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/20141209_SpeedwayMotorsCaseStudy_BlogButton-498x48.png" class="attachment-thumbnail wp-post-image" alt="Log Monitoring for e-Commerce: Five Key Areas"></a></div><div class="rp4wp_component rp4wp_component_taxonomy rp4wp_component_3">	<span>Use cases</span>
+	</div><div class="rp4wp_component rp4wp_component_title rp4wp_component_4"><a href="https://www.loggly.com/blog/log-monitoring-for-e-commerce-five-key-areas/">Log Monitoring for e-Commerce: Five Key Areas</a></div></li>	</ul>
+	</div>				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+	
+
+				<footer class="site-footer">
+			<div class="site-footer__top">
+				
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			
+<nav class="footer-breadcrumbs">
+	<ul>
+					<li>
+										<a href="https://www.loggly.com/">
+							Home						</a>
+							</li>
+					<li>
+										<a href="https://www.loggly.com/blog/">
+							Blog						</a>
+							</li>
+					<li>
+										<a href="https://www.loggly.com/blog/topic/how-tos/">
+							How-tos						</a>
+							</li>
+					<li>
+									DDoS monitoring: how to know you’re under attack							</li>
+			</ul>
+</nav>
+		</div>
+	</div>
+			<div class="row">
+							<div class="col-xs-6 col-md-3">
+					<div class="footer-column" data-mh="mh-footer-column" style="height: 655.844px;">
+																														<h6 class="footer-column__title">
+										Company									</h6>
+																									<nav class="footer-column__nav">
+										<ul>
+																							<li>
+													<a href="https://www.solarwinds.com/company/home">
+														About us													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/about/customers/">
+														Customers													</a>
+												</li>
+																							<li>
+													<a href="https://launch.solarwinds.com/Subscription-Center.html" target="_blank" rel="noreferer,noopener">
+														SolarWinds Subscription Center													</a>
+												</li>
+																							<li>
+													<a href="https://www.solarwinds.com/general-data-protection-regulation-cloud" target="_blank" rel="noreferer,noopener">
+														GDPR resource center													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/about/partners/">
+														Our partners													</a>
+												</li>
+																							<li>
+													<a href="https://solarwinds.jobs/">
+														SolarWinds jobs													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/about/contact/">
+														Contact us													</a>
+												</li>
+																							<li>
+													<a href="https://www.solarwinds.com/covid-19-resources" target="_blank" rel="noreferer,noopener">
+														COVID-19 Resource Center													</a>
+												</li>
+																					</ul>
+									</nav>
+																										</div>
+				</div>
+							<div class="col-xs-6 col-md-3">
+					<div class="footer-column" data-mh="mh-footer-column" style="height: 655.844px;">
+																														<h6 class="footer-column__title">
+										Product									</h6>
+																									<nav class="footer-column__nav">
+										<ul>
+																							<li>
+													<a href="https://www.loggly.com/product/">
+														Overview													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/plans-and-pricing/">
+														Pricing													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/log-monitoring/">
+														Proactive monitoring													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/log-troubleshooting/">
+														Troubleshooting with logs													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/log-analysis/">
+														Data analysis and reporting													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/devops-integration/">
+														DevOps integrations													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/security/">
+														Security													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/enterprise-log-management/">
+														Loggly for Enterprise Scale													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/aws-log-analysis/">
+														Log analysis for AWS													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/customer-support-log-analysis/">
+														Logs in customer support													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/splunk-alternative/">
+														Splunk alternative													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/blog/four-node-js-libraries-make-sophisticated-logging-simpler/">
+														Node.js Logging													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/sumo-logic-alternative/">
+														Sumo Logic alternative													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/elk-stack-alternative/">
+														ELK Elastic Stack alternative													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/lp-azure-and-loggly/">
+														Monitor Your Azure Applications													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/product/devops-monitoring-tools/">
+														SolarWinds DevOps Products													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/solution/">
+														Solutions													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/loggly-use-cases/">
+														Use Cases													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/solution/log-analyzer/">
+														Log Analyzer													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/solution/log-viewer/">
+														Log Viewer													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/solution/iis-log-analyzer/">
+														IIS Log Analyzer													</a>
+												</li>
+																					</ul>
+									</nav>
+																										</div>
+				</div>
+							<div class="col-xs-6 col-md-3">
+					<div class="footer-column" data-mh="mh-footer-column" style="height: 655.844px;">
+																														<h6 class="footer-column__title">
+										Log University									</h6>
+																									<nav class="footer-column__nav">
+										<ul>
+																							<li>
+													<a href="https://www.loggly.com/intro-to-log-management/">
+														Log Management - Introduction													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/resources/types/whitepapers/">
+														White papers &amp; guides													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/resources/types/videos-webinars/">
+														Videos &amp; webinars													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/resources/types/case-studies/">
+														Case studies													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/ultimate-guide/">
+														Ultimate Guide to Logging													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/blog/">
+														Blog													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/ultimate-guide/php-logging-basics/">
+														PHP Log													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/ultimate-guide/java-logging-basics/">
+														Java Log													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/blog/benchmarking-5-popular-net-logging-libraries/">
+														C# Logging framework													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/ultimate-guide/python-logging-basics/">
+														Logging in Python													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/blog/what-is-remote-logging/">
+														Remote Logging													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/docs/cloudwatch-logs/">
+														CloudWatch Logs													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/docs/cloudtrail-log-ingestion/">
+														CloudTrail Logs													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/blog/the-essential-cheat-sheet-for-linux-admins">
+														Linux commands cheat sheet PDF													</a>
+												</li>
+																					</ul>
+									</nav>
+																										</div>
+				</div>
+							<div class="col-xs-6 col-md-3">
+					<div class="footer-column" data-mh="mh-footer-column" style="height: 655.844px;">
+																														<h6 class="footer-column__title">
+										Docs									</h6>
+																									<nav class="footer-column__nav">
+										<ul>
+																							<li>
+													<a href="https://www.loggly.com/docs-index/">
+														Product documentation													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/docs/logging-setup/">
+														Sending your logs to Loggly													</a>
+												</li>
+																							<li>
+													<a href="https://www.loggly.com/docs-index/">
+														Support													</a>
+												</li>
+																							<li>
+													<a href="https://status.loggly.com/">
+														System status													</a>
+												</li>
+																					</ul>
+									</nav>
+																										</div>
+				</div>
+					</div>
+	</div>
+			</div>
+			<div class="site-footer__bottom">
+				
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+			<a class="footer-logo" href="https://www.loggly.com/">
+				<img src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/loggly-logo-white-footer-sm.png" loading="lazy" alt="Loggly">
+			</a>
+			<ul class="footer-social">
+													<li>
+						<a href="https://twitter.com/loggly" aria-label="Twitter" target="_blank" rel="noreferer,noopener">
+							<span>Twitter</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 144 1008 1008"><path d="M504 144q102 0 195.5 40t161 107.5 107.5 161 40 195.5-40 195.5-107.5 161-161 107.5-195.5 40-195.5-40-161-107.5T40 843.5 0 648t40-195.5 107.5-161 161-107.5T504 144zm0 963q93 0 178-36.5t146.5-98 98-146.5T963 648t-36.5-178-98-146.5-146.5-98T504 189t-178 36.5-146.5 98-98 146.5T45 648t36.5 178 98 146.5 146.5 98 178 36.5zm227-647q-11 35-43 54 30-3 57-15-20 30-49 51v13q0 50-19 99t-53 90-89 66.5T415 844q-82 0-152-45 12 2 24 2 69 0 123-43-32 0-57.5-19.5T317 690q10 1 19 1 13 0 26-3-34-7-56.5-34T283 591v-1q21 12 44 12-43-29-43-82 0-27 13-50 37 46 90 73t113 31q-2-12-2-23 0-41 29-70t70-29q17 0 38.5 9.5T669 483q33-6 62-23z"></path></svg>						</a>
+					</li>
+													<li>
+						<a href="https://www.linkedin.com/company/loggly" aria-label="LinkedIn" target="_blank" rel="noreferer,noopener">
+							<span>LinkedIn</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 144 1008 1008"><path d="M504 144q208 0 356 148t148 356-148 356-356 148-356-148T0 648t148-356 356-148zm0 963q93 0 178-36.5t146.5-98 98-146.5T963 648t-36.5-178-98-146.5-146.5-98T504 189t-178 36.5-146.5 98-98 146.5T45 648t36.5 178 98 146.5 146.5 98 178 36.5zm122-547q53 0 86 35.5T745 700v178H642V712q0-70-53-70-37 0-53 38-3 8-3 25v173H430q1-281 0-310h103v44q-1 0-1 1h1v-1q33-52 93-52zM322 418q26 0 41.5 15t15.5 39q0 22-16 37.5T321 525h-1q-25 0-41-15.5T263 472q0-24 16.5-39t42.5-15zm-53 150h104v310H269V568z"></path></svg>						</a>
+					</li>
+							</ul>
+		</div>
+		<div class="col-sm-6">
+							<nav class="footer-nav">
+					<ul>
+													<li>
+								<a href="https://www.solarwinds.com/legal/legal-documents" target="_blank" rel="noreferer,noopener">
+									Legal Documents								</a>
+							</li>
+													<li>
+								<a href="https://www.solarwinds.com/legal/privacy" target="_blank" rel="noreferer,noopener">
+									Privacy policy								</a>
+							</li>
+													<li>
+								<a href="https://www.solarwinds.com/legal/privacy#california-privacy-rights" target="_blank" rel="noreferer,noopener">
+									California Privacy Rights								</a>
+							</li>
+													<li>
+								<a href="https://www.loggly.com/about/terms-of-use/" target="_blank" rel="noreferer,noopener">
+									Terms of use								</a>
+							</li>
+													<li>
+								<a href="https://www.loggly.com/product/security/" target="_blank" rel="noreferer,noopener">
+									Security								</a>
+							</li>
+													<li>
+								<a href="https://www.loggly.com/about/api-license/" target="_blank" rel="noreferer,noopener">
+									API license								</a>
+							</li>
+											</ul>
+				</nav>
+										<p class="footer-copyright">© 2023 SolarWinds Worldwide, LLC. All rights reserved.</p>
+					</div>
+	</div>
+</div>
+			</div>
+		</footer>
+		
+		<script>
+			var $ = jQuery;
+			$(document).ready(function(){
+				$('#pro-volume').change(function(){
+					if($(this).val() == 'pro-contact-sales'){
+						location.href = '/about/contact';
+					}
+				});
+			});
+		</script>
+		<script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/vendors.min.js.download" id="loggly-vendors-js"></script>
+<script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/scripts.min.js.download" id="loggly-scripts-js"></script>
+<script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/signup-form.min.js.download" id="loggly-signup-js"></script><script>_satellite["_runScript1"](function(event, target, Promise) {
+window.demandbaseHasCompleted = false;
+});</script><script>_satellite["_runScript2"](function(event, target, Promise) {
+
+function getCookie(cname) {
+	var name = cname + '=';
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) === ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) === 0) {
+			return decodedValue(c.substring(name.length, c.length));
+		}
+	}
+	return '';
+}
+
+function getQueryParameter(variable) {
+	var query = window.location.search.substring(1);
+	var vars = query.split('&');
+	for (var i = 0; i < vars.length; i++) {
+		var pair = vars[i].split('=');
+		if (pair[0] == variable) { return pair[1]; }
+	}
+	return '';
+}
+
+var irclickid = getQueryParameter('irclickid');
+if (irclickid !== '') {
+	irclickid = irclickid.slice(0, 128);
+	if (getCookie('sw_imp_irclickid') === '') {
+		var d = new Date();
+		var expirationTimeInMinutes = 30;
+		d.setTime(d.getTime() + (expirationTimeInMinutes * 60 * 1000));
+		var expires = d.toUTCString();
+		document.cookie = 'sw_imp_irclickid=' + irclickid + ';expires=' + expires + ';path=/;secure;';
+	}
+}
+});</script>
+		<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','o14sz');
+twq('track','PageView');
+
+//for @loggly
+twq('init','o1c4a');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<!-- LinkedIn Pixel Code -->
+<script type="text/javascript">
+_linkedin_partner_id = "35330";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function()
+
+{var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);}
+)();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=35330&fmt=gif" />
+</noscript>
+<!-- Enf LinkedIn Pixel Code -->
+
+<!-- Bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o=
+{ti:"5976050"}
+;o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function()
+{var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)}
+,i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+<!-- // Bing -->
+
+
+<!-- Pingdom RUM -->
+<script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/pa-5c8764679a3f8300160009e0.js.download" async=""></script>
+<!-- // Pingdom RUM -->
+
+<!-- Criteo Audience Tag -->
+<script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/ld.js.download" async="true">
+</script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /iPad/.test(navigator.userAgent) ? "t" :
+/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m"
+: "d";
+  window.criteo_q.push(
+    { event: "setAccount", account: 62857 },
+    { event: "setSiteType", type: deviceType },
+    { event: "viewHome" }
+  );
+</script> 
+
+	
+
+<script>_satellite["_runScript3"](function(event, target, Promise) {
+window.dataLayer = window.dataLayer || {};
+});</script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/referrer-cookie.js.download"></script><iframe sandbox="allow-scripts allow-same-origin" title="Adobe ID Syncing iFrame" id="destination_publishing_iframe_solarwindsworldwidellc_0" name="destination_publishing_iframe_solarwindsworldwidellc_0_name" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/dest5.html" style="display: none; width: 0px; height: 0px;" class="aamIframeLoaded"></iframe><div id="criteo-tags-div" style="display: none;"><iframe src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/syncframe.html" id="criteo-syncframe-onetag" width="0" height="0" frameborder="0" style="border-width:0px; margin:0px; display:none" title="Criteo GUM iframe"></iframe><script async="true" type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/event"></script></div><iframe style="display:none;" name="cookieframe" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/refinfo.html"></iframe><script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/ld.js.download" async="true">
+</script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+var deviceType = /iPad/.test(navigator.userAgent) ? "t" :
+/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m"
+: "d";
+window.criteo_q.push(
+{ event: "setAccount", account: 62857 },
+{ event: "setSiteType", type: deviceType },
+{ event: "viewHome" }
+);
+</script><script>_satellite["_runScript4"](function(event, target, Promise) {
+// Start MunckinJS
+try {
+(function () {
+    var didInit = false;
+    function initMunchkin() {
+        if (didInit === false) {
+            didInit = true;
+            Munchkin.init('564-VFR-008', {"cookieLifeDays":"365"});
+	    console.info('Munchkin init fired.');
+        }
+    }
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//munchkin.marketo.net/munchkin-beta.js';
+    s.onreadystatechange = function () {
+        if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+        }
+    };
+    s.onload = initMunchkin;
+    document.getElementsByTagName('head')[0].appendChild(s);
+})();
+  }
+catch (e) {
+    if (typeof console != 'undefined' && typeof console.log != 'undefined') {
+        console.log('Launch Error: ' + e);
+    }
+}
+});</script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/up_loader.1.1.0.js.download" type="text/javascript"></script><div id="batBeacon835280407931" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon481095123190" width="0" height="0" alt="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/0" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div>
+        <script type="text/javascript">
+            ttd_dom_ready( function() {
+                if (typeof TTDUniversalPixelApi === 'function') {
+                    var universalPixelApi = new TTDUniversalPixelApi();
+                    universalPixelApi.init("plg6wvi", ["i25zyam"], "https://insight.adsrvr.org/track/up");
+                }
+            });
+        </script>
+<!-- Global site tag (gtag.js) - Google Ads: 831733040 -->
+<script async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/js(3)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-831733040');
+</script>
+ <script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/up_loader.1.1.0.js.download" type="text/javascript"></script>
+        <script type="text/javascript">
+            ttd_dom_ready( function() {
+                if (typeof TTDUniversalPixelApi === 'function') {
+                    var universalPixelApi = new TTDUniversalPixelApi();
+                    universalPixelApi.init("plg6wvi", ["ba1kp8l"], "https://insight.adsrvr.org/track/up");
+                }
+            });
+        </script><script src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/t.js.download"></script>
+<script>
+  TrackJS.install({
+    token: "0c5b97c46b8f4d5e8eda712bf23d518c",
+    application: "loggly"
+  });
+</script><script>_satellite["_runScript5"](function(event, target, Promise) {
+var extractHostname=function(e){return(e.indexOf("://")>-1?e.split("/")[2]:e.split("/")[0]).split(":")[0].split("?")[0].replace("www.","")};if("undefined"!=typeof jQuery){function trackEvents(e,t,a){_satellite.cookie.set("s_data-linktype",e+":"+t+"||"+s.pageName+"||"+document.location.pathname),_satellite.swFireOnThisPage=!0;var i=extractHostname(window.location.href);if(null!=a&&""!==a){var r=extractHostname(a);r!==i&&""!==r||(_satellite.swFireOnThisPage=!1)}if(_satellite.swFireOnThisPage){var n=(_satellite.cookie.get("s_data-linktype")||"").split("||"),o=s.linkTrackVars;s.linkTrackVars="prop8,prop9,prop10,eVar31,eVar32,eVar33",s.tl("-","o","data-linktype",{eVar31:n[1],prop8:"D=v31",eVar32:n[0],prop9:"D=v32",eVar33:n[1]+"|"+n[0],prop10:"D=v33"}),_satellite.cookie.remove("s_data-linktype"),s.linkTrackVars=o}}setTimeout((function(){jQuery(document).on("change","[data-tracking-type]",(function(){try{var e=jQuery(this);trackEvents($(this).children("option:selected").data("linktype").toLowerCase(),$(this).children("option:selected").data("linkdetail").toLowerCase(),e.attr("href"))}catch(e){console.error("linktype select tag analytics failed!")}})),jQuery("[data-linktype]").on("click",(function(){try{var e=jQuery(this);trackEvents(e.attr("data-linktype").toLowerCase(),e.attr("data-linkdetail").toLowerCase(),e.attr("href"))}catch(e){console.error("linktype Links analytics failed!")}})),jQuery(window).on("beforeunload",(function(){_satellite.swFireOnThisPage=!1}))}),1500)}
+});</script><script>
+(function(d,b,a,s,e)
+
+{ var t = b.createElement(a), fs = b.getElementsByTagName(a)[0]; t.async=1; t.id=e; t.src=s; fs.parentNode.insertBefore(t, fs); }
+)
+(window,document,'script','https://tag.demandbase.com/e3XHeVLC.min.js','demandbase_js_lib');
+</script><script type="text/javascript" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/4683.js.download" async="async"></script><iframe style="display:none" name="sendframe" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/saved_resource.html"></iframe><script>_satellite["_runScript6"](function(event, target, Promise) {
+window._6senseEVarsMapped=!0;
+});</script><script>_satellite["_runScript7"](function(event, target, Promise) {
+try{window._6senseEVarsMapped?_satellite.track("track-events"):setTimeout((function(){_satellite.track("track-events"),console.debug("Triggering analytics after 1 second timeout.")}),1e3)}catch(e){console.error("App analytics field tracking failed! Error: "+e)}
+});</script><iframe alt="" aria-hidden="true" width="0" height="0" sandbox="" id="db-sync" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/sync.html" style="display: none; border: 0px;"></iframe><img alt="" aria-hidden="true" width="0" height="0" id="db_lr_pixel_ad" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/464526.gif" style="display: none;"><img height="1" width="1" style="display:none" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/tr"><iframe height="0" width="0" title="Criteo DIS iframe" style="display: none;" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/saved_resource(1).html"></iframe><iframe id="universal_pixel_i25zyam" height="0" width="0" style="display:none;" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/up.html" title="TTD Universal Pixel"></iframe><iframe id="universal_pixel_ba1kp8l" height="0" width="0" style="display:none;" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/up(1).html" title="TTD Universal Pixel"></iframe></body><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color: initial; font: initial; font-palette: initial; font-synthesis: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation-composition: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-depth: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"><div style="all: initial;"><template shadowrootmode="open"></template></div></div><div style="color: initial; font: initial; font-palette: initial; font-synthesis: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation-composition: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-depth: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"></div></div></editor-card><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color: initial; font: initial; font-palette: initial; font-synthesis: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation-composition: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-depth: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"><div style="all: initial;"><template shadowrootmode="open"></template></div></div><div style="color: initial; font: initial; font-palette: initial; font-synthesis: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation-composition: initial; animation: initial; app-region: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-depth: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-gutter: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; white-space: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"></div></div></editor-card><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration><script type="text/javascript" async="" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/f.txt"></script><iframe id="ce_proto_iframe" title="CrazyEgg Tracking iframe" style="display: none;" src="./DDoS monitoring_ how to know you&#39;re under attack _ Loggly_files/saved_resource(2).html"></iframe></html>

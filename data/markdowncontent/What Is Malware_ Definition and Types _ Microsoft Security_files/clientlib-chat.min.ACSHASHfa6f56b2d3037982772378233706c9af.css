@@ -1,0 +1,9 @@
+#chat-now-link:not(.pmg-chat-active),#chat-button:not(.pmg-chat-active),#pmg-chat-now:not(.pmg-chat-active),#chat-now:not(.pmg-chat-active),#mobile-chat-now:not(.pmg-chat-active){display:none !important}
+[data-oc-chat='true'],[data-oc-widget-chat='true'],[data-oc-widget-chat-bot='true']{display:inline-block !important}
+.proactive-chat-hidden{display:none !important}
+.lp-iframe-close{display:none}
+#lp-iframe-container{border:0;bottom:24px;box-shadow:0 5px 15px 0 rgba(0,0,0,0.25);height:500px;left:auto !important;min-width:300px;max-width:350px;padding:0;position:fixed;right:0;top:auto !important;z-index:1031}
+#lp-iframe-container,#lp-iframe-container .lp-iframe-window{border-radius:5px}
+.lp-live-person .c-flyout{font-size:15px;position:absolute;background:#fff;min-width:128px;max-width:296px;padding:12px;z-index:700;display:none}
+.lp-live-person [aria-hidden="false"]{display:block}
+.lp-live-person .lp-iframe-window{border:1px solid transparent;height:500px;width:350px}

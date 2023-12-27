@@ -1,0 +1,10 @@
+#ntas {background-color:#0078ae; font-family: arial, helvetica, sans-serif; margin: 0} 
+#ntas h1 {color: #ffffff; margin: 0px; padding: 5px 0px 0px 0px; text-align: center; font-size: 11px; font-weight: normal;}
+#ntas h2 {margin:0; padding:0}
+#ntas #threat {text-align: center}
+#ntas p {font-size: 10px; margin:0px; padding:0}
+#ntas .footer {text-align:center; font-size: 11px; font-weight:normal; padding-top: 2px; font-style:oblique; margin:0px; color:#ffffff;}
+#ntas li {padding:2px 0}
+#ntas ul {margin:5px 0 10px 5px}
+#ntas a:link, #ntas a:visited, #ntas a:hover, #ntas a:active {color:#ffffff; display:inline-block}
+#ntas a:focus {border: 3px dotted #fff}

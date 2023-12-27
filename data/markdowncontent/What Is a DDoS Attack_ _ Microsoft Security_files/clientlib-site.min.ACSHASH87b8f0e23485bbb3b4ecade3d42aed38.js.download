@@ -1,0 +1,1 @@
+'use strict';$(document).ready(function(){$(".modal-trigger").on("keypress",function(a){a=a.charCode||a.keyCode;32!==a&&13!==a||this.click()})});class LocaleUtil{static getPageLocale(){var a=(document.documentElement.lang||"en-us").toLowerCase();switch(a){case "en":a="en-us";break;case "fr":a="fr-fr";break;case "es":a="es-mx";break;case "ar":a="ar-sa"}return a}};

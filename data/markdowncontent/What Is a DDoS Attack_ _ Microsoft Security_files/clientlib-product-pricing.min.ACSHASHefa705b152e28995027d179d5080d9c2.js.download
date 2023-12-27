@@ -1,0 +1,1048 @@
+/**
+ * Constants for the product pricing configuration options and services.
+ * @class {ProductPricingConstants} - configuration parameters for the product pricing module.
+ */
+class ProductPricingConstants {
+    
+    /**
+     * Default values for the product pricing module.
+     * @readonly
+     */
+    static Defaults = Object.freeze({
+        Locale: "en-us"
+    })
+
+    /**
+     * Request settings for the product pricing module.
+     * @readonly
+     */
+    static Request = Object.freeze({
+        Method: "GET",
+        RelativeUri: "/m365/product/price",
+        Headers: Object.freeze({
+            "Content-Type": "application/json"
+        }),
+        QueryParameters: Object.freeze({
+            "v": "3",
+            "r": "json"
+        })
+    })
+
+    /**
+     * Pricing component template names for the product pricing module.
+     */
+    static Templates = Object.freeze({
+        Sku: "sku"
+    });
+
+    /**
+     * HTML Selectors for the product pricing module.
+     * @readonly
+     */
+    static Selectors = Object.freeze({
+        Dataset: Object.freeze({
+            Component: "[data-ocr-pricing-component]",
+            RenderSection: "[data-ocr-render-section]",
+            ConfigContent: "[data-ocr-pricing]",
+            ConfigContentSection: "[data-orc-pricing-config]",
+            MarketSelector: "[data-mount='market-selector']",
+        }),
+    });
+
+    /**
+     * Enumerables for the product pricing module.
+     * @readonly
+     */
+    static Enumerables = Object.freeze({
+        Response: Object.freeze({
+            Undefined: "Undefined",
+            Success: "Success",
+            NotFound: "NotFound",
+            NoAvailableSku: "NoAvailableSku",
+            DisabledMarket: "DisabledMarket"
+        }),
+    });
+
+    /**
+     * Parameters for the product pricing module.
+     */
+    static Parameters = Object.freeze({
+        MarketSelector: Object.freeze({
+            Query: Object.freeze({
+                Market: "market"
+            })
+        })
+    });
+}
+/**
+ * @class ProductPricingRequest - Helper Class for making product pricing requests.
+ */
+class ProductPricingRequestManager {
+    /**
+     * Gets or sets the current locale for the page.
+     * @type {string}
+     */
+    locale;
+
+    /**
+     * Gets or sets the country for the page.
+     * @type {string}
+     */
+    country;
+
+    /**
+     * Gets or sets the market for the page.
+     * @type {string | null}
+     */
+    #market;
+
+    /**
+     * Gets the current selected market for the page.
+     */
+    get market() {
+        return this.#market;
+    }
+
+    /**
+     * Sets the current selected market for the page.
+     */
+    set market(value) {
+        this.#market = value;
+    }
+
+    
+    /**
+     * Gets or sets the flag to indicate if caching is enabled for product pricing requests.
+     * @type {boolean}
+     */
+    isCachingEnabled;
+
+    /**
+     * Gets or sets the instances of rendered pricing component requests queue for the current page.
+     * @type {ProductPricingRendering[]}
+     */
+    requestQueue;
+
+    /**
+     * Gets or sets the map of pricing component request and response for the current page.
+     * @description
+     * Key - request query string,
+     * Value - product pricing response for the request query
+     * @summary this map is used to cache in-memory the product pricing response for the current page and avoid duplicate requests for the same request query.
+     * @type {Map<string, ProductPricingResponse[]>}
+     */
+    responseMap;
+
+    /**
+     * Gets or sets the instances of XHR requests controller for each in-progress requests.
+     * @type {Array<XMLHttpRequest>}
+     */
+    xhrRequestsController;
+
+    /**
+     * Initializes instance of the product pricing request helper class.
+     * @param {string} locale - The locale 'll-cc' of the page.
+     * @param {string} country - Current country of the page.
+     * @param {string | null} market - Current selected market of the page.
+     */
+    constructor(locale, country, market) {
+        this.locale = locale;
+        this.country = country;
+        this.market = market;
+        this.requestQueue = [];
+        this.responseMap = new Map();
+        this.xhrRequestsController = [];
+        this.isCachingEnabled = true;
+    }
+
+    /**
+     * Clears the render instances queue for the current page.
+     */
+    clearRequestQueue() {
+        this.requestQueue = [];
+    }
+
+    /**
+     * Enqueues the rendering instance the requests queue for the current page.
+     * @param {ProductPricingRendering} renderInstance - The pricing component rendering instance to enqueue.
+     */
+    enqueueRequest(renderInstance) {
+
+        // Set the request query key map for the current instance of the rendering pricing component product price manager class
+        this.setRequestQueueMap(renderInstance);
+
+        // Store the render instance in the queue
+        this.requestQueue.push(renderInstance);
+    }
+
+    /**
+     * Sets the request query key map for the current instance of the render class.
+     * @param {ProductPricingRendering} renderInstance - The  render instance of a pricing component on the page.
+     */
+    setRequestQueueMap(renderInstance) {
+
+        // Create unique key for the request query by combining the locale, product ID, recurrence and payment cadence.
+        const keyParameters = new URLSearchParams();
+        keyParameters.set("q", this.getRequestQueryKey(renderInstance.config.requestQuery));
+
+        // Append llcc to the request query with market as cc if available.
+        if (this.market) {
+            keyParameters.set("llcc", `${this.locale.split("-")[0]}-${this.market}`);
+        } else {
+            keyParameters.set("llcc", this.locale)
+        }
+
+        // Get the unique key for the request query - to be used for caching the product pricing response
+        const requestQueryKey = keyParameters.toString();
+
+        // Group the requests by the request quer and llcc
+        // Set the product pricing request key map for the current request query, llcc and market
+        // Removes duplicate queries for pricing component instances with same request query
+        if (!this.responseMap.has(requestQueryKey)) {
+            this.responseMap.set(requestQueryKey, []);
+        }
+    }
+
+    /**
+     * Gets the request query key for the current request query.
+     * @param {string} encodedQuery - The encoded request query string.
+     * @returns {string} requestQueryKey - The unique key for the request query.
+     */
+    getRequestQueryKey(encodedQuery) { 
+        let encodedQueryArray = encodedQuery.split("_");
+        encodedQueryArray[2] = "skuid";
+        return encodedQueryArray.join("_");
+    }
+
+    /**
+     * Updates the request queue map for the current page.
+     * @param {string} market - The current selected market for the page.
+     */
+    updateRequestQueueMap(market) {
+        if (this.market !== market) {
+            this.market = market;
+        }
+
+        // Set the request queue map for each instance of pricing rendering manager on the page
+        this.requestQueue.forEach((RenderRequest) => {
+            this.setRequestQueueMap(RenderRequest);
+        });
+    }
+
+    /**
+     * Starts processing the pricing component requests from queue for the current page.
+     * @param {(productsResponse: ProductPricingResponse[], relatedRenderedInstances: ProductPricingRendering[]) => void} onFulfilledCallback - The callback function to execute when the fetch request promise is fulfilled.
+     * @param {(error: Error, relatedRenderedInstances: ProductPricingRendering[]) => void} onRejectedCallback - The callback function to execute when the fetch request promise is rejected.
+     * @param {((this: XMLHttpRequest, ev: Event, relatedRenderedInstances: ProductPricingRendering[]) => void) | null} onStatusChangeCallback - Optional - callback function to execute when the ready state changes.
+     */
+    processRequests(onFulfilledCallback, onRejectedCallback, onStatusChangeCallback) {
+ 
+        // Send the product pricing requests for each unique request key i.e., query, llcc and market
+        this.responseMap.forEach((cachedResponse, requestQueryKey) => {
+            
+            // Parse the request query key to get the request query, llcc and market
+            const requestKeyParameters = new URLSearchParams(requestQueryKey);
+            const requestQuery = requestKeyParameters.get("q");
+            const requestMarket = requestKeyParameters.get("llcc");
+            
+            // Check if the current request query is for the current selected market
+            if (this.market) {
+                let currentLlCc = `${this.locale.split("-")[0]}-${this.market}`;
+                if (requestMarket !== currentLlCc) {
+                    return;
+                }
+            }
+
+            // Get render instances with the same request query, i.e., each instance of pricing component on the page with the same PID, payment cadence, recurrence, etc.
+            const renderingManagerInstances = this.requestQueue.filter(renderInstance => {
+                return this.getRequestQueryKey(renderInstance.config.requestQuery) === requestQuery;
+            });
+
+            // If no pricing component instances found for the current request query, return.
+            if (!renderingManagerInstances || !renderingManagerInstances.length) {
+                return;
+            }
+
+            // Build combined encoded query for found pricing components.
+            let combinedRequestQuery = "";
+            let requestQuerySet = new Set();
+            renderingManagerInstances.forEach(renderInstance => {
+                // Only add encoded query if the request query is not already added to the combined query
+                if(!requestQuerySet.has(renderInstance.config.requestQuery)) {
+                    requestQuerySet.add(renderInstance.config.requestQuery);
+                    combinedRequestQuery += `${renderInstance.config.requestQuery},`;
+                }
+            });
+
+            // Check if current request query is already cached
+            if (this.isCachingEnabled && cachedResponse.length) {
+                // Assign the cached product pricing response to each associated rendering manager instance
+                onFulfilledCallback(cachedResponse, renderingManagerInstances);
+            } else {
+                // Send the product pricing request for the current request query
+                this.fetchRequest(requestQueryKey, combinedRequestQuery, renderingManagerInstances, onFulfilledCallback, onRejectedCallback, onStatusChangeCallback);
+            }
+        });
+    }
+
+    /**
+     * Fetches the product pricing request for the current request query.
+     * @param {string} requestQueryKey - The unique key for the request query, llcc and market.
+     * @param {string} skuRequestQuery - The request query string for the current request.
+     * @param {ProductPricingRendering[]} relatedInstances - The associated instances of the SKU rendering manager for the current request query. 
+     * @param {(productsResponse: ProductPricingResponse[], relatedInstances: ProductPricingRendering[]) => void} onFulfilledCallback - The callback function to execute when the fetch request promise is fulfilled.
+     * @param {(error: Error, relatedInstances: ProductPricingRendering[]) => void} onRejectedCallback - The callback function to execute when the fetch request promise is rejected.
+     * @param {((this: XMLHttpRequest, ev: Event, relatedInstances: ProductPricingRendering[]) => void) | null} onStatusChangeCallback - Optional - callback function to execute when the ready state changes.
+     */
+    fetchRequest(requestQueryKey, skuRequestQuery, relatedRenderingManagerInstances, onFulfilledCallback, onRejectedCallback, onStatusChangeCallback) {
+        const productsResponse = this.sendRequest(
+            ProductPricingConstants.Request.Method,
+            skuRequestQuery,
+            null,
+            function (event) {
+                if (onStatusChangeCallback) {
+                    onStatusChangeCallback(this, event, relatedRenderingManagerInstances);
+                }
+            }
+        );
+
+        // Create the product pricing request for the current request query
+        productsResponse.then((productsResponse) => {
+            onFulfilledCallback(productsResponse, relatedRenderingManagerInstances);
+            // Cache the product pricing response for the current request query if caching is enabled
+            if (this.isCachingEnabled) {
+                this.responseMap.set(requestQueryKey, productsResponse);
+            }
+        }).catch((error) => {
+            onRejectedCallback(error, relatedRenderingManagerInstances);
+        });
+    }
+
+    /**
+     * Gets the request URI for the product pricing request.
+     * @param {string} query - The query string for the request.
+     * @returns {string} requestUri - The request URI for the product pricing request.
+     */
+    getRequestUri(query) {
+        
+        // Get catalog product price relative URI
+        const relativeUri = ProductPricingConstants.Request.RelativeUri;
+        // Set query parameters
+        const queryParameters = new URLSearchParams();
+        queryParameters.set("q", query);
+
+        // Append llcc to the request query with market as cc if available.
+        if (this.market) {
+            queryParameters.set("llcc", `${this.locale.split("-")[0]}-${this.market}`);
+        } else {
+            queryParameters.set("llcc", this.locale)
+        }
+
+        // Add default query parameters
+        for (const parameterKey in ProductPricingConstants.Request.QueryParameters) {
+            queryParameters.set(parameterKey, ProductPricingConstants.Request.QueryParameters[parameterKey]);
+        }
+
+        return OneCloudUtil.getMsocapiurl(relativeUri, queryParameters.toString());
+    }
+
+    /**
+     * Aborts any pending or in-progress XHR requests.
+     */
+    abortPendingRequests() {
+        // Abort any pending or in-progress XHR requests
+        this.xhrRequestsController.forEach((xhr) => {
+            xhr.abort();
+        });
+
+        // Clear the XHR requests controller
+        this.xhrRequestsController = [];
+    }
+
+    /**
+     * Sends the product pricing request.
+     * @param {string} method - The HTTP request method type. 
+     * @param {string} query - The query string for the request.
+     * @param {Record<string, string> | null} requestHeaders - Optional - additional request headers to add to the xhr request.
+     * @param {((this: XMLHttpRequest, ev: Event) => void) | null} onReadyStateChange - Optional - callback function to execute when the ready state changes.
+     * @returns {Promise<ProductPricingResponse[]> | Promise<Error>} requestResult - Either the promise resolve or reject for the product pricing request.
+     */
+    sendRequest(method, query, requestHeaders = null, onReadyStateChange = null) {
+        const requestResult = new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            // Set the xhr request controller for the current request query
+            this.xhrRequestsController.push(xhr);
+            const requestUri = this.getRequestUri(query);
+            xhr.onreadystatechange = onReadyStateChange;
+            xhr.open(method, requestUri);
+            ProductPricingRequestManager.addRequestHeaders(xhr, requestHeaders);
+            xhr.onload = function (ev) {
+                if (this.readyState === XMLHttpRequest.DONE) {
+                    if (this.status === 200) {
+                        const parsedResponse = JSON.parse(this.response);
+                        resolve(parsedResponse);
+                    } else {
+                        const errorResponse = ProductPricingRequestManager.createRejectResponse(this, ev);
+
+                        reject(errorResponse);
+                    }
+                }
+            };
+            xhr.onerror = function (ev) {
+                const errorResponse = ProductPricingRequestManager.createRejectResponse(this, ev);
+
+                reject(errorResponse);
+            };
+            xhr.send();
+        });
+
+        return requestResult;
+    }
+
+    /**
+     * Adds request headers to the xhr request.
+     * @param {XMLHttpRequest} xhr - The xhr request instance.
+     * @param {Record<string, string> | null} requestHeaders - Optional - additional request headers to add to the xhr request.
+     */
+    static addRequestHeaders(xhr, requestHeaders = null) {
+        const defaultHeaders = ProductPricingConstants.Request.Headers;
+
+        for (const defaultHeader in defaultHeaders) {
+            xhr.setRequestHeader(defaultHeader, defaultHeaders[defaultHeader]);
+        }
+
+        if (requestHeaders) {
+            for (const additionalHeader in requestHeaders) {
+                xhr.setRequestHeader(additionalHeader, requestHeaders[additionalHeader]);
+            }
+        }
+    }
+
+    /**
+     * Creates the error response for the product pricing request.
+     * @param {XMLHttpRequest} xhr - The instance of current XMLHttpRequest request.
+     * @param {ProgressEvent<EventTarget>} ev - The progress event for the current XMLHttpRequest request.
+     * @returns {Error} errorResponse - The error response for the product pricing request.
+     */
+    static createRejectResponse(xhr, ev) {
+        const errorMessage = xhr.response ? xhr.response
+            : xhr.responseText ? xhr.responseText
+                : xhr.statusText ? xhr.statusText
+                    : "Unknown error";
+        const errorResponse = new Error(errorMessage);
+        errorResponse.name = xhr.status.toString();
+
+        return errorResponse;
+    }
+}
+
+/**
+ * @class ProductPricingManager - Manages the product pricing data and updates the UI
+ */
+class ProductPricingManager {
+    /**
+     * Gets or sets the pricing component elements on the current page.
+     * @type {NodeListOf<HTMLDivElement>}
+     */
+    pricingComponentElements;
+
+    /**
+     * Gets or sets the market selector element on the current page.
+     * @type {HTMLDivElement}
+     */
+    marketSelector;
+
+    /**
+     * Gets or sets the current locale for the page.
+     * @type {string}
+     */
+    locale;
+
+    /**
+     * Gets or sets the country for the page.
+     * @type {string}
+     */
+    country;
+
+    /**
+     * Gets or sets the market for the page.
+     * @type {string | null}
+     */
+    market;
+
+    /**
+     * Gets or sets the market selector config options from data-layer attributes.
+     * @type {MarketSelectorConfig}
+     */
+    marketSelectorOptions;
+
+    /**
+     * Gets or sets the instance of product pricing request manager class.
+     * @type {ProductPricingRequestManager}
+     */
+    productPricingRequestManager;
+
+    /**
+     * Gets or sets the instances of product pricing rendering class for each pricing component on page.
+     * @type {Array<ProductPricingRendering>}
+     */
+    pricingComponentRenderInstances;
+
+    /**
+     * Initializes instance of the product pricing manager and services
+     */
+    constructor() {
+        // Get current selected market from the URL
+        const currentUri = new URL(window.location.href);
+        const documentLang = document.documentElement.lang || ProductPricingConstants.Defaults.Locale;
+        this.locale = documentLang;
+        this.country = documentLang.split("-")[0];
+        this.market = currentUri.searchParams.get(ProductPricingConstants.Parameters.MarketSelector.Query.Market);
+
+        // Get pricing components.
+        this.pricingComponentElements = this.getPricingComponents();
+        this.marketSelector = this.getMarketSelector();
+
+        // if market selector is available on the page, set the market selector config and bind events
+        if (this.marketSelector) {
+            // Set the market selector config options from data-layer attributes
+            this.setMarketSelectorConfig();
+            // Bind the market selector events
+            this.bindEvents();
+        }
+
+        // Initialize instance of product pricing request manager class
+        this.productPricingRequestManager = new ProductPricingRequestManager(documentLang, this.country, this.market);
+
+        // Creates and enqueues requests for all the reimagine pricing component instances on the current page
+        this.createProductPricingRequests();
+    }
+
+    /**
+     * Gets the pricing component elements on the current page.
+     * Finds the pricing component elements by the [data-ocr-pricing-component] attribute selector.
+     * @returns {NodeListOf<HTMLDivElement>} The pricing component elements on the current page.
+     */
+    getPricingComponents() {
+        return document.querySelectorAll(ProductPricingConstants.Selectors.Dataset.Component);
+    }
+
+    /**
+     * Gets the market selector element on the current page.
+     * @returns {HTMLDivElement} marketSelector - The market selector element on the current page.
+     */
+    getMarketSelector() {
+        return document.querySelector(ProductPricingConstants.Selectors.Dataset.MarketSelector);
+    }
+
+    /**
+     * Sets the market selector configuration options from data-layer attributes.
+     */
+    setMarketSelectorConfig() {
+        this.marketSelectorOptions = {
+            refreshMode: this.marketSelector.dataset.refreshMode,
+            isRefreshModeAjax: this.marketSelector.dataset.refreshMode === "ajax"
+        }
+    }
+
+    /**
+     * Binds the market selector events for the product pricing manager.
+     */
+    bindEvents() {
+        if (this.marketSelectorOptions.isRefreshModeAjax && oc.event.marketSelector) {
+            oc.event.marketSelector.onSelect((ev) => this.onMarketSelectorChange(ev));
+        }
+    }
+
+    /**
+     * Handles the market selector change event.
+     * @param {Event} event the on select event of market selector dropdown.
+     */
+    onMarketSelectorChange(event) {
+        if (event?.detail?.value) {
+            this.market = event.detail.value;
+            this.productPricingRequestManager.market = event.detail.value;
+            // Update the product pricing request manager request-response queue map
+            this.productPricingRequestManager.updateRequestQueueMap(event.detail.value);
+            // Cancel all existing pending or in-progress requests
+            this.productPricingRequestManager.abortPendingRequests();
+            // Start processing the requests
+            this.productPricingRequestManager.processRequests(this.handleRequestSuccess, this.handleRequestFailure, this.handleRequestStatusChange);
+        }
+    }
+
+    /**
+     * Creates and enqueues product pricing requests for all the reimagine pricing components on the current page.
+     */
+    createProductPricingRequests() {
+        if (this.pricingComponentElements?.length) {
+    
+            // Create the product pricing requests for each pricing component element
+            for (const pricingComponentElement of this.pricingComponentElements) {
+   
+                // Initialize instance of product price rendering class for the pricing component.
+                // This rendering class is what updates the UI for the pricing component depending on the product pricing response.
+                const productPricingRender = new ProductPricingRendering(pricingComponentElement);
+                const requestQuery = productPricingRender.config.requestQuery;
+                const isProductPriceOverridden = productPricingRender.config.isProductPriceOverridden;
+        
+                // if sku request query is available and product price is not overridden, only then send the product pricing request
+                // otherwise we ignore the current instance of reimagine pricing component
+                if (requestQuery && !isProductPriceOverridden) {
+                    this.productPricingRequestManager.enqueueRequest(productPricingRender);
+                }
+            }
+
+            // Get the instances of product pricing rendering class for each SKU component on page
+            this.pricingComponentRenderInstances = this.productPricingRequestManager.requestQueue;
+        }
+    }
+
+    /**
+     * Handles the product pricing request status change for provided pricing component instances.
+     * @param {XMLHttpRequest} xhr - The XMLHttpRequest object for the product pricing request.
+     * @param {Event} event - The event object for the product pricing request.
+     * @param {ProductPricingRendering[]} renderManagerInstances - Grouped instances of product pricing rendering class associated with same requests.
+     */
+    handleRequestStatusChange(xhr, event, renderManagerInstances) {
+        // TODO: add in-progress status handling - loading animation or spinner
+    }
+
+    /**
+     * Manages the product pricing request success for provided pricing component instances.
+     * @param {ProductPricingResponse[]} productsResponse - The product pricing response for the associated SKU instances.
+     * @param {ProductPricingRendering[]} renderManagerInstances - Grouped instances of product pricing rendering class associated with same requests.
+     */
+    handleRequestSuccess(productsResponse, renderManagerInstances) {
+        // Assign the product pricing response to each pricing component rendering class instance
+        renderManagerInstances.forEach(renderingClassInstance => renderingClassInstance.productPriceResponse = productsResponse);
+        // Handle the product pricing response for each pricing component rendering class instance
+        renderManagerInstances.forEach(renderingClassInstance => renderingClassInstance.handleProductPricingResponse());
+    }
+
+    /**
+     * Handles the product pricing request failure for provided pricing component instances.
+     * @param {Error} error - The error object for the failed product pricing request.
+     * @param {Array<ProductPricingRendering>} renderManagerInstances - Grouped instances of product pricing rendering class associated with same requests.
+     */
+    handleRequestFailure(error, renderManagerInstances) {
+        // Display the product pricing unavailable for each SKU rendering class instance
+        renderManagerInstances.forEach(renderingClassInstance => renderingClassInstance.displayUnavailable());
+    }
+}
+/** Initializes the product pricing manager and services */
+(document).addEventListener("DOMContentLoaded", () => new ProductPricingManager());
+(function (document, $) {
+	"use strict";
+
+	const SUCCESS_RESPONSE_CODE = "Success";
+	const SHARED_DATA_SELECTOR = ".oc-shared-pricing-data";
+	const PURCHASE_MAIN_SELECTOR = "[data-oc-product~='purchase']";
+	const NOT_AVAILABLE_SELECTOR = "[data-oc-product~='not-available'] p"
+	const COMMERCIAL_TAX_DISCLAIMER_SELECTOR = "[data-oc-shared-data='oc-tax-disclaimer'] p";
+	const CONSUMER_TAX_DISCLAIMER_SELECTOR = "[data-oc-shared-data='oc-consumer-tax-disclmr'] p";
+	const DATA_OC_PRODUCT_ATTRIBUTE = "data-oc-product";
+	const OC_COMMERCIAL_TAX_DISCLAIMER_ATTRIBUTE = "oc-tax-disclaimer";
+	const OC_CONSUMER_TAX_DISCLAIMER_ATTRIBUTE = "oc-consumer-tax-disclmr";
+
+	/**
+	 * On page load.
+	 */
+	$(document).on("DOMContentLoaded", () => {
+		replaceSharedData();
+		updateAccessibilityAttributes();
+	});
+
+
+	/**
+	 * On market selector complete.
+	 */
+	$(document).on("onComplete", () => {
+		updateTokenTextMainResponseCode();
+		updateAccessibilityAttributes();
+	});
+
+	/**
+	 * Replaces the shared data elements inner html with the data from the shared data element depending on key.
+	 * @returns {void}
+	 */
+	function replaceSharedData() {
+
+		const PURCHASE_MAIN_ELEMENTS = document.querySelectorAll(PURCHASE_MAIN_SELECTOR);
+
+		if (!PURCHASE_MAIN_ELEMENTS) return;
+
+		PURCHASE_MAIN_ELEMENTS.forEach((elem) => {
+
+			const RESPONSE_CODE = elem.getAttribute(DATA_OC_PRODUCT_ATTRIBUTE).split(" ")[2];
+			const SHARED_DATA_ELEM = document.querySelector(SHARED_DATA_SELECTOR);
+			let commercialTaxDisclaimerPlaceholder = elem.querySelector(COMMERCIAL_TAX_DISCLAIMER_SELECTOR);
+			let consumerTaxDisclaimerPlaceholder = elem.querySelector(CONSUMER_TAX_DISCLAIMER_SELECTOR);
+			let notAvailablePlaceholder = elem.querySelector(NOT_AVAILABLE_SELECTOR);
+
+			if (!SHARED_DATA_ELEM) return;
+
+			if (notAvailablePlaceholder && RESPONSE_CODE) {
+				notAvailablePlaceholder.innerHTML = SHARED_DATA_ELEM.getAttribute(RESPONSE_CODE);
+			}
+
+			if (commercialTaxDisclaimerPlaceholder) {
+				commercialTaxDisclaimerPlaceholder.innerHTML = SHARED_DATA_ELEM.getAttribute(OC_COMMERCIAL_TAX_DISCLAIMER_ATTRIBUTE);
+			}
+
+			if (consumerTaxDisclaimerPlaceholder) {
+				consumerTaxDisclaimerPlaceholder.innerHTML = SHARED_DATA_ELEM.getAttribute(OC_CONSUMER_TAX_DISCLAIMER_ATTRIBUTE);
+			}
+		});
+	}
+
+	/**
+	 * Updates the accessibility attributes for the product pricing hidden and visible elements.
+	 */
+	function updateAccessibilityAttributes() {
+
+		const PURCHASE_MAIN_ELEMENTS = document.querySelectorAll(PURCHASE_MAIN_SELECTOR);
+
+		if (!PURCHASE_MAIN_ELEMENTS) return;
+
+		PURCHASE_MAIN_ELEMENTS.forEach((elem) => {
+
+			const RESPONSE_CODE = elem.getAttribute(DATA_OC_PRODUCT_ATTRIBUTE).split(" ")[2];
+
+			let commercialTaxDisclaimerPlaceholder = elem.querySelector(COMMERCIAL_TAX_DISCLAIMER_SELECTOR);
+			let consumerTaxDisclaimerPlaceholder = elem.querySelector(CONSUMER_TAX_DISCLAIMER_SELECTOR);
+			let notAvailablePlaceholder = elem.querySelector(NOT_AVAILABLE_SELECTOR);
+
+			if (RESPONSE_CODE === SUCCESS_RESPONSE_CODE) {
+
+				if (commercialTaxDisclaimerPlaceholder) {
+					commercialTaxDisclaimerPlaceholder.removeAttribute("aria-hidden");
+				}
+
+				if (consumerTaxDisclaimerPlaceholder) {
+					consumerTaxDisclaimerPlaceholder.removeAttribute("aria-hidden");
+				}
+
+				if (notAvailablePlaceholder) {
+					notAvailablePlaceholder.setAttribute("aria-hidden", "true");
+				}
+
+			} else {
+
+				if (commercialTaxDisclaimerPlaceholder) {
+					commercialTaxDisclaimerPlaceholder.setAttribute("aria-hidden", "true");
+				}
+
+				if (consumerTaxDisclaimerPlaceholder) {
+					consumerTaxDisclaimerPlaceholder.setAttribute("aria-hidden", "true");
+				}
+
+				if (notAvailablePlaceholder) {
+					notAvailablePlaceholder.removeAttribute("aria-hidden");
+				}
+			}
+
+		});
+	}
+
+	/**
+	 * Iterates through all token text elements and updates the main response code to the first non-success response code.
+	 */
+	function updateTokenTextMainResponseCode() {
+		const TOKEN_TEXT_ELEMENTS = document.querySelectorAll("[data-token-text]");
+		TOKEN_TEXT_ELEMENTS.forEach((tokenTextElem) => {
+			const purchaseMainElement = tokenTextElem.querySelector("[data-oc-product*=purchase][data-oc-product*=main]");
+			if (!purchaseMainElement) return;
+
+			const PRICING_TOKEN_ELEMENTS = tokenTextElem.querySelectorAll("[data-oc-product*=purchase]:not([data-oc-product*=main])[data-token=m365ProductPrice]");
+			if (!PRICING_TOKEN_ELEMENTS) return;
+
+			let responseCode = SUCCESS_RESPONSE_CODE;
+			for (const pricingTokenElem of PRICING_TOKEN_ELEMENTS) {
+				let curResponseCode = pricingTokenElem.getAttribute(DATA_OC_PRODUCT_ATTRIBUTE).split(" ")[1];
+				if (curResponseCode !== SUCCESS_RESPONSE_CODE) {
+					responseCode = curResponseCode;
+					break;
+				}
+			}
+
+			let currentMainProductAttribute = purchaseMainElement.getAttribute(DATA_OC_PRODUCT_ATTRIBUTE);
+			let currentMainResponseCode = currentMainProductAttribute.split(" ")[2];
+			purchaseMainElement.setAttribute(DATA_OC_PRODUCT_ATTRIBUTE, currentMainProductAttribute.replace(currentMainResponseCode, responseCode));
+		});
+	}
+
+})(document, $);
+
+//#region Reimagine Product Pricing Rendering class.
+/**
+ * Manages rendering of product pricing component.
+ * @note This class is not related with above script and is managed by product-pricing-manager script.
+ */
+class ProductPricingRendering {
+	/**
+	 * Gets or sets the target pricing component element.
+	 * @type {HTMLDivElement}
+	 */
+	pricingComponentElement;
+
+	/**
+	 * Gets or sets the render section element.
+	 * @type {HTMLDivElement}
+	 */
+	renderSectionElement;
+
+	/**
+	 * Gets or sets the sku config attributes for the current sku request.
+	 * @type {Config}
+	 */
+	config;
+
+	/**
+	 * Gets or sets the product pricing response for the current sku request.
+	 * @type {ProductPricingResponse[]}
+	 */
+	#productPriceResponse;
+
+	/**
+	 * Gets the product pricing response data for the current product pricing config.
+	 * @returns {ProductPricingResponse[]} product pricing response data
+	 */
+	get productPriceResponse() {
+		return this.#productPriceResponse;
+	}
+
+	/**
+	 * Sets the product pricing response data for the current product pricing request.
+	 * @param {ProductPricingResponse[]} value product pricing response data
+	 */
+	set productPriceResponse(value) {
+		this.#productPriceResponse = value;
+	}
+
+	/**
+	 * Initializes new instance of the product pricing rendering handler class.
+	 * @param {HTMLDivElement} pricingComponentElement target SKU component element
+	 */
+	constructor(pricingComponentElement) {
+		if (!pricingComponentElement) {
+			return;
+		}
+
+		// Get pricing component element.
+		this.pricingComponentElement = pricingComponentElement;
+
+		// Get render section element.
+		let selectedElement = this.pricingComponentElement.querySelector(ProductPricingConstants.Selectors.Dataset.RenderSection);
+		this.renderSectionElement = selectedElement ? selectedElement : this.pricingComponentElement;
+
+		// Get pricing component server-side config.
+		this.config = JSON.parse(this.pricingComponentElement.dataset.ocrPricingComponent);
+	}
+
+	/**
+	 * Handles the product pricing request response for the current reiamgine SKU request.
+	 * @param {HTMLDivElement} skuElement - The SKU element on the page. 
+	 * @param {ProductPricingResponse[]} pricingResponse - The pricing data for the sku element.
+	 */
+	handleProductPricingResponse() {
+
+		if (!this.productPriceResponse || !this.productPriceResponse.length) {
+			this.displayUnavailable();
+			return;
+		}
+
+		// Add product price response data to the config and calculate rendering properties.
+		this.normalizeConfig()
+
+		switch (this.config.productPriceResponse.responseCode) {
+			case ProductPricingConstants.Enumerables.Response.Success:
+				this.displayAvailableTemplate();
+				break;
+			case ProductPricingConstants.Enumerables.Response.DisabledMarket:
+				this.displayDisabledMarket();
+				break;
+			default:
+				this.displayUnavailable();
+				break;
+		}
+	}
+
+	/**
+	 * Normalizes the config for the current product pricing rendering instance.
+	 */
+	normalizeConfig() {
+		// Clear previous product price response data.
+		this.config.productPriceResponse = {};
+
+		// If the data connector response is an array of product price objects, find the correct pid + skuid combination.
+		// else, use the response object as is. 
+		if (!Array.isArray(this.#productPriceResponse)) {
+			this.config.productPriceResponse = this.#productPriceResponse;
+		} else {
+			// Find the sku in the response that matches the puid.
+			for (let productPriceResponseObject of this.#productPriceResponse) {
+				if(!productPriceResponseObject.puid) continue;
+				if (productPriceResponseObject.puid === this.config.requestQuery) {
+					this.config.productPriceResponse = productPriceResponseObject;
+					break;
+				}
+			}
+		}
+
+		// Calculate rendering properties if response is success.
+		if (this.config.productPriceResponse.responseCode === ProductPricingConstants.Enumerables.Response.Success) {
+			this.config.isDiscounted = this.config.productPriceResponse.sku.discountPrice > 0;
+			if (this.config.titleOverride) {
+				this.config.renderTitle =  this.config.titleOverride;
+			} else if (this.config.isUsingProductTitle) {
+				this.config.renderTitle =  this.config.productPriceResponse.title;
+			} else {
+				this.config.renderTitle =  this.config.productPriceResponse.sku.title;
+			}        
+		}
+	}
+
+	/**
+	 * Renders the template fragment for the current pricing component instance.
+	 * @param {DocumentFragment} templateFragment template fragment
+	 */
+	renderTemplateFragment(templateFragment) {
+		// Get config content element.
+		const configContentElement = this.pricingComponentElement.querySelector(ProductPricingConstants.Selectors.Dataset.ConfigContentSection);
+
+		// Replace render section element with template fragment.
+		this.renderSectionElement.innerHTML = '';
+		this.renderSectionElement.appendChild(templateFragment);
+
+		// Append config content element to the render section element.
+		this.renderSectionElement.appendChild(configContentElement);
+	}
+
+	/**
+	 * Prepares and displays available template in the current product sku element on the page. 
+	 */
+	displayAvailableTemplate() {
+		let templateFragment = ProductPricingTemplates.getTemplate(
+			this.pricingComponentElement, 
+			this.config);
+		this.renderTemplateFragment(templateFragment);
+	}
+
+	/**
+	 * Hides the pricing section and displays the unavailable section.
+	 * @param {HTMLDivElement} skuElement target pricing component element
+	 */
+	displayUnavailable() {
+		let templateFragment = ProductPricingTemplates.getUnavailableTemplate(this.config, this.pricingComponentElement);
+		this.renderTemplateFragment(templateFragment);
+	}
+
+	/**
+	 * Hides the pricing section and displays the disabled market section.
+	 * @param {HTMLDivElement} skuElement target pricing component element
+	 */
+	displayDisabledMarket() {
+		let templateFragment = ProductPricingTemplates.getDisabledMarketTemplate(this.config, this.pricingComponentElement);
+		this.renderTemplateFragment(templateFragment);
+	}
+}
+//#endregion Reimagine Product Pricing Rendered Instance Manager
+//#region Reimagine Product Pricing Templates Class
+/**
+ * @class ProductPricingTemplates - Helper Class for getting product pricing component templates.
+ */
+class ProductPricingTemplates {
+
+    /**
+     * Gets the template markup for the given template name.
+     * @param {HTMLDivElement} pricingComponentElement pricing component element 
+     * @param {Config} config config object
+     * @returns {DocumentFragment} The template markup for the given template name.
+     */
+    static getTemplate(pricingComponentElement, config) {
+        
+        // Get the template markup from available template method.
+        config.templateName =  config.templateName[0].toUpperCase() +  config.templateName.slice(1);
+        let templateMarkup = window[`get${config.templateName}Markup`](config, pricingComponentElement);
+
+        // Replace placeholders for config content in the template markup and return.
+        return this.replaceConfigContent(templateMarkup, pricingComponentElement);
+    }
+
+    /**
+     * Replaces the config content from the pricing component element in the template markup.
+     * @param {string} templateMarkup template markup.
+     * @param {HTMLDivElement} pricingComponentElement pricing component element.
+     * @returns {DocumentFragment} The template markup for the given template name.
+     */
+    static replaceConfigContent(templateMarkup, pricingComponentElement) {
+        let templateFragment = document.createRange().createContextualFragment(templateMarkup);
+
+        // Get server side rendered config template.
+        const configFragment = pricingComponentElement.querySelector(ProductPricingConstants.Selectors.Dataset.ConfigContentSection);
+
+        // Iterate over config template config content elements.
+        const templateContentElements = templateFragment.querySelectorAll(ProductPricingConstants.Selectors.Dataset.ConfigContent);
+        templateContentElements.forEach((templateContentElement) => {
+            const attributeValue = templateContentElement.dataset.ocrPricing;
+            const configElement = configFragment.content.querySelector(`[data-ocr-pricing="${attributeValue}"]`);
+            
+            // Remove placeholder from template if match does not exist in pricing component.
+            if(!configElement) {
+                templateContentElement.remove();
+                return;
+            }
+
+            // Replace the config content from the pricing component element in the template markup.
+            templateContentElement.innerHTML = configElement.innerHTML;
+        });
+        return templateFragment;
+    }
+
+    /**
+     * Gets unavailable pricing component markup.
+     * @param {object} config config object.
+     * @returns HTML string for unavailable pricing component.
+     */
+    static getUnavailableTemplate(config, pricingComponentElement) {
+        const markup = `
+            <div class="sku">
+                ${config.productPriceResponse.title ? 
+                `<div class="sku__title">
+                    <h3 class="oc-product-title">${config.productPriceResponse.title}</h3>
+                </div>` : ''}
+                <div class="sku__paragraph" data-ocr-pricing="sku-content-paragraph"></div>
+                <div class="sku__unavailable not-found">
+                    <span>${config.unavailableMessage}</span>
+                </div>
+            </div>
+        `;
+        return this.replaceConfigContent(markup, pricingComponentElement);
+    }
+
+    /**
+     * Gets disabled pricing component markup.
+     * @param {object} config config object.
+     * @param {HTMLDivElement} pricingComponentElement pricing component element
+     * @returns HTML string for disabled pricing component.
+     */
+    static getDisabledMarketTemplate(config, pricingComponentElement) {
+        const markup = `
+            <div class="sku">
+                ${config.productPriceResponse.title ? 
+                `<div class="sku__title">
+                    <h3 class="oc-product-title">${config.productPriceResponse.title}</h3>
+                </div>` : ''}
+                <div class="sku__paragraph" data-ocr-pricing="sku-content-paragraph"></div>
+                <div class="sku__unavailable not-found">
+                    <span>${config.disabledMarketMessage}</span>
+                </div>
+            </div>
+        `;
+        return this.replaceConfigContent(markup, pricingComponentElement);
+    }
+
+    /*============================ Component Templates ============================*/
+}
+//#endregion Reimagine Product Pricing Template Class
