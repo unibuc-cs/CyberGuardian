@@ -1,4 +1,6 @@
+import datetime
 from enum import Enum
+from typing import Dict, List, Union
 
 class SecurityOfficerExpertise(Enum):
     BEGINNER = 0
@@ -15,8 +17,8 @@ class Preference_Politely(Enum):
     FORMAL_PRESENTATION = 1
 
 class Preference_Emojis(Enum):
-    USE_EMOJIS = 1
-    NO_EMOJIS = 2
+    USE_EMOJIS = 0
+    NO_EMOJIS = 1
 
 class SecurityOfficer():
     def __init__(self):
@@ -27,6 +29,7 @@ class SecurityOfficer():
         self.name: str = ""
         self.username: str = ""
         self.password: str = ""
+        self.birthday: datetime.datetime = datetime.datetime.now()
 
         self.expertise: SecurityOfficerExpertise = SecurityOfficerExpertise.BEGINNER
         self.preference: Preference_ResponseType = Preference_ResponseType.DETAILED
@@ -49,3 +52,8 @@ class SecurityOfficer():
 
     def isLoggedIn(self) -> bool:
         return self.loggedin
+
+    def login(self, user_settings: Dict):
+        for key, value in user_settings.items():
+            setattr(self, key, value)
+        self.loggedin = True
