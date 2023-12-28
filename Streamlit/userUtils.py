@@ -50,6 +50,9 @@ class SecurityOfficer():
         # If 0 - does not report when seeing strange situation from colleagues, 1 - report everything as expected
         self.correct_teamwork: float = 1.0
 
+    def __repr__(self):
+        "".join({f"{key}:{value}\n" for key,value in self.__dict__.items()})
+
     def isLoggedIn(self) -> bool:
         return self.loggedin
 
