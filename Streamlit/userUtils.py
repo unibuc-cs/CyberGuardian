@@ -51,12 +51,11 @@ class SecurityOfficer():
         self.correct_teamwork: float = 1.0
 
     def __repr__(self):
-        "".join({f"{key}:{value}\n" for key,value in self.__dict__.items()})
+        return "".join({f"{key}:{value}\n" for key,value in self.__dict__.items()})
 
-    def isLoggedIn(self) -> bool:
-        return self.loggedin
-
+    """
     def login(self, user_settings: Dict):
         for key, value in user_settings.items():
             setattr(self, key, value)
         self.loggedin = True
+    """

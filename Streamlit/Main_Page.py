@@ -2,9 +2,12 @@
 import streamlit as st
 import clientserverUtils as csu
 import userUtils
+from databaseUtils import CredentialsDB
+from userUtils import SecurityOfficer
 
-if 'user' not in st.session_state:
-    st.session_state.user : userUtils.SecurityOfficer = userUtils.SecurityOfficer()
+# Init the credentials database
+if 'cdb' not in st.session_state:
+    csu.checkCreateCredentialsDB()
 
 #https://www.youtube.com/watch?v=eCbH2nPL9sU&ab_channel=CodingIsFun
 
@@ -47,8 +50,12 @@ placeholder2 = st.empty()
 placeholder3 = st.empty()
 
 if csu.logged_in():
+    currentUser: SecurityOfficer = csu.getCurrentUser()
+    st.sidebar.writer(f'### Hi, {currentUser.name}')
+    st.sidebar.image(csu.getCachedImgPathForUsername(currentUser.username))
+
     placeholder3.empty()
-    placeholder.write(f'### You are logged in, *{st.session_state.user.name}*! \n\n')
+    placeholder.write(f'### You are logged in, *{currentUser.name}*! \n\n')
     if placeholder2.button("Logout"):
         csu.logout()
         placeholder.empty()
