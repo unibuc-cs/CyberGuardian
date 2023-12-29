@@ -99,7 +99,7 @@ class CredentialsDB:
     def tryLogin(self, userName: str, password: str) -> bool:
         row = self.credentialsDF.loc[self.credentialsDF['username'] == userName].set_index('username').T.to_dict()
         if row is not None and len(row) > 0 and row[userName]['password'] == password:
-            self.currentUser = self.getUserById(row)
+            self.currentUser = self.getUserById(userName)
             return True
 
         self.currentUser = None

@@ -1,22 +1,22 @@
 import datetime
-from enum import Enum
+from enum import IntEnum
 from typing import Dict, List, Union
 
-class SecurityOfficerExpertise(Enum):
+class SecurityOfficerExpertise(IntEnum):
     BEGINNER = 0
     MIDDLE = 1
     ADVANCED = 2
 
-class Preference_ResponseType(Enum):
+class ResonsePreferences(IntEnum):
     DETAILED = 0
     CONCISE = 1
 
 
-class Preference_Politely(Enum):
+class Preference_Politely(IntEnum):
     POLITE_PRESENTATION = 0
     FORMAL_PRESENTATION = 1
 
-class Preference_Emojis(Enum):
+class Preference_Emojis(IntEnum):
     USE_EMOJIS = 0
     NO_EMOJIS = 1
 
@@ -32,7 +32,7 @@ class SecurityOfficer():
         self.birthday: datetime.datetime = datetime.datetime.now()
 
         self.expertise: SecurityOfficerExpertise = SecurityOfficerExpertise.BEGINNER
-        self.preference: Preference_ResponseType = Preference_ResponseType.DETAILED
+        self.preference: ResonsePreferences = ResonsePreferences.DETAILED
         self.politely: Preference_Politely = Preference_Politely.POLITE_PRESENTATION
         self.emojis: Preference_Emojis = Preference_Emojis.USE_EMOJIS
 

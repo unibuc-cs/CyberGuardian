@@ -39,25 +39,19 @@ def getCachedImgPathForUsername(username: str):
     res = f"data/{username}_cachedProfilePic.png"
     return res
 
-def register_credentials(new_username, new_name, new_password, new_email, birthday, picture):
+def register_credentials(newUser: SecurityOfficer):
 
-    bytes_data = picture.getvalue()
+    bytes_data = newUser.picture.getvalue()
     # Check the type of bytes_data:
     # Should output: <class 'bytes'>
     #st.write(type(bytes_data))
 
-    with open(getCachedImgPathForUsername(new_username), "wb") as f:
+    with open(getCachedImgPathForUsername(newUser.username), "wb") as f:
         f.write(bytes_data)
 
-    newUser = SecurityOfficer
-    newUser.username = new_username
-    newUser.name = new_name
-    newUser.password = new_password
-    newUser.birthday = birthday
-    newUser.email = new_email
-    newUser.picture = picture
     g_credentialsDB.insertNewUser(newUser)
-    #g_credentialsDB.save_credentials_dataset()
+    g_credentialsDB.save_credentials_dataset()
 
 def isValidNewUsername(new_username: str) -> bool:
     return not g_credentialsDB.userExists(new_username)
+
