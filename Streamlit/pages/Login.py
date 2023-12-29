@@ -44,8 +44,8 @@ if not csu.logged_in():
     succeed_to_login = False
     with placeholder.form(key="login-form"):
         #login(placeholder)
-        username = st.text_input('Username').lower()
-        password = st.text_input('Password', type='password')
+        username = st.text_input('Username', value="paduraru2009").lower()
+        password = st.text_input('Password', type='password', value="Arbori2009")
 
         if st.form_submit_button('Login'):
             if csu.tryLogin(username, password):
@@ -55,7 +55,7 @@ if not csu.logged_in():
                 st.markdown(f'### Provided credentials are not correct')
 
     if succeed_to_login:
-        st.markdown(f'### You are logged in, {st.session_state.user.name}!')
+        st.markdown(f'### You are logged in!')
 
 else:
-    st.markdown(f'You are logged in, {st.session_state.user.name}!')
+    st.markdown(f'You are logged in!')

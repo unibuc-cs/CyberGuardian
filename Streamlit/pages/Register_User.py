@@ -5,6 +5,7 @@ from validator import validator
 import datetime
 from enum import IntEnum
 from databaseUtils import CredentialsDB
+from typing import Union
 
 class RegistrationState(IntEnum):
     BASIC_REGISTRATION = 0
@@ -23,7 +24,7 @@ def getRegistrationState() -> RegistrationState:
 
     return st.session_state['REG_STATE']
 
-def updateRegistrationState(newRegState: RegistrationState):
+def updateRegistrationState(newRegState: Union[RegistrationState, None]):
     st.session_state['REG_STATE'] = newRegState
 
 def register_user_basic(form_name: str, location: str = 'main') -> bool:
@@ -158,19 +159,23 @@ if csu.logged_in():
     st.write("## Already logged in, logout please to continue!")
 else:
     if getRegistrationState() == RegistrationState.BASIC_REGISTRATION:
-        res = register_user_behavioral("Basic registration")
+        res = register_user_basic("Basic registration")
         if res:
             updateRegistrationState(RegistrationState.BEHAVIORAL_REGISTRATION)
+            st.rerun()
     elif getRegistrationState() == RegistrationState.BEHAVIORAL_REGISTRATION:
         res = register_user_behavioral("Behavioral registration")
         if res:
             updateRegistrationState(RegistrationState.TECHNICAL_REGISTRATION)
+            st.rerun()
     elif getRegistrationState() == RegistrationState.TECHNICAL_REGISTRATION:
         res = register_user_behavioral("Technical registration")
         if res:
             updateRegistrationState(RegistrationState.PREFERENCES_REGISTRATION)
+            st.rerun()
     elif getRegistrationState() == RegistrationState.PREFERENCES_REGISTRATION:
-        res = register_user_basic("Preferences")
+        res = register_user_behavioral("Preferences")
         if res:
-            updateRegistrationState(RegistrationState.TECHNICAL_REGISTRATION)
+            updateRegistrationState(None)
+            st.rerun()
 
