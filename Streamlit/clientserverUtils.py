@@ -17,7 +17,9 @@ def getCurrentUser() -> SecurityOfficer:
     return g_credentialsDB.getCurrentUser()
 
 def logout()-> bool:
-    return st.session_state.cdb.logout()
+    res = st.session_state.cdb.logout()
+    st.rerun()
+    return res
 
 # Returns true if valid credentials are valid and login
 def tryLogin(userName: str, password: str) -> bool:
@@ -27,6 +29,10 @@ def tryLogin(userName: str, password: str) -> bool:
 # Clear and save
 def RegisterError(msg : str):
     st.markdown(f"## <span style='color:red'>{msg}</span>", unsafe_allow_html=True)
+    #st.write("## " + msg)
+
+def ShowTODO(msg : str):
+    st.markdown(f"## <span style='color:green'>{msg}</span>", unsafe_allow_html=True)
     #st.write("## " + msg)
 
 def checkCreateCredentialsDB():
@@ -55,3 +61,12 @@ def register_credentials(newUser: SecurityOfficer):
 def isValidNewUsername(new_username: str) -> bool:
     return not g_credentialsDB.userExists(new_username)
 
+def showLoggedUserSidebar():
+    assert logged_in(), "Not logged in"
+    user: SecurityOfficer = getCurrentUser()
+    user_profile_pic_path = getCachedImgPathForUsername(user.username)
+    st.sidebar.markdown(f"## <span style='color:green'>Hi, {user.name}! Let's work.</span>", unsafe_allow_html=True)
+    st.sidebar.image(user_profile_pic_path)
+
+    if st.sidebar.button("Logout"):
+        logout()

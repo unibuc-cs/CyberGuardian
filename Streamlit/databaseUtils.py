@@ -92,6 +92,9 @@ class CredentialsDB:
     def isLoggedIn(self) -> bool:
         return self.currentUser is not None
 
+    def logout(self):
+        self.currentUser = None
+
     def __repr__(self):
         return str(self.credentialsDF)
 

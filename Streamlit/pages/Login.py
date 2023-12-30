@@ -56,6 +56,9 @@ if not csu.logged_in():
 
     if succeed_to_login:
         st.markdown(f'### You are logged in!')
+        csu.showLoggedUserSidebar()
+        st.rerun()
 
 else:
     st.markdown(f'You are logged in!')
+    csu.showLoggedUserSidebar()

@@ -1,5 +1,6 @@
 import streamlit as st
-from userUtils import SecurityOfficer
+from streamlit_extras.switch_page_button import switch_page
+from userUtils import SecurityOfficer, SecurityOfficerExpertise, ResonsePreferences, Preference_Politely, Preference_Emojis
 import clientserverUtils as csu
 from validator import validator
 import datetime
@@ -113,12 +114,14 @@ def register_user_behavioral(form_name: str, location: str = 'main') -> bool:
 
     register_user_form.subheader(form_name)
 
+    csu.ShowTODO("TODO SSH: Will tune this set of questions")
+
     user = getInProgressRegistrationUser()
 
     # How likely is to attack from inside
     internalDamageChoice_options = [":rainbow[No, ever]", "Just for fun or to test my thing :movie_camera:", "***Maybe***"]
     internalDamageChoice = register_user_form.radio(
-    "Would you ever try to test our production systems reliability from your own perspective without having your"
+    "Would you ever try to test our production systems reliability from your own perspective without having your "
      "lead to know about it ? (Hidden: this is the intentional damage factor thing)",
         options=internalDamageChoice_options, index =0,
     )
@@ -153,8 +156,6 @@ def register_user_behavioral(form_name: str, location: str = 'main') -> bool:
 
     if register_user_form.form_submit_button('Next'):
         succeed = True
-        # TODO: update user in db
-        pass
 
     return succeed
 
@@ -172,19 +173,52 @@ def register_user_technical(form_name: str, location: str = 'main') -> bool:
         register_user_form = st.sidebar.form('Technical evaluation')
 
     register_user_form.subheader(form_name)
-    register_user_form.write("TODO")
+    csu.ShowTODO("TODO FMI: this will be an LLM guided interview with questions based on your uploaded CV,"
+            "previous answers and feedback. A dynamic interview with different threads of discussions. Stay tuned!")
 
     user = getInProgressRegistrationUser()
 
-    """
-    self.expertise: SecurityOfficerExpertise = SecurityOfficerExpertise.BEGINNER
-    self.can_be_tricked_out_factor: float = 0.0
-    """
+
+    # Expertise evaluation
+    experience_options = ["1-3 years", "3-7 years", ">7 years"]
+    experienceChoice = register_user_form.radio("How many years of expertise do you have in security mechanisms?",
+                                                options=experience_options, index=0)
+    experienceChoice = experience_options.index(experienceChoice)
+    user.expertise = SecurityOfficerExpertise.BEGINNER
+    if experienceChoice == 1:
+        user.expertise = SecurityOfficerExpertise.MIDDLE
+    else:
+        user.expertise = SecurityOfficerExpertise.ADVANCED
+
+    fulled_externaldevices_options = ['I do not know', 'No', 'Maybe']
+    fulled_phishing_choice = register_user_form.selectbox("Would you open an external link or program in "
+                                                    "an email from colleagues, friends, family ? "
+                                                    "(Hidden: how easy is to be fulled)",
+                                                    options=fulled_externaldevices_options)
+
+    fulled_phishing_choice = fulled_externaldevices_options.index(fulled_phishing_choice)
+    fulled_phishing_value = 1.0
+    if fulled_phishing_choice == 1:
+        fulled_phishing_value = 0.5
+    elif fulled_phishing_choice == 2:
+        fulled_phishing_value = 1.0
+
+    fulled_externaldevices_options = ['I do not know', 'No', 'Maybe']
+    fulled_externaldevices_choice = register_user_form.selectbox("Would you bring a USB stick to company's provided "
+                                                          "for your personal things or being asked by a colleague?",
+                                                            options=fulled_externaldevices_options)
+
+    fulled_externaldevices_choice = fulled_externaldevices_options.index(fulled_externaldevices_choice)
+    fulled_externaldevices_value = 1.0
+    if fulled_externaldevices_choice == 1:
+        fulled_externaldevices_value = 0.5
+    elif fulled_externaldevices_choice == 2:
+        fulled_externaldevices_value = 1.0
+
+    user.can_be_tricked_out_factor = (fulled_externaldevices_value + fulled_phishing_value) * 0.5
 
     if register_user_form.form_submit_button('Next'):
         succeed = True
-        # TODO: update user in db
-        pass
 
     return succeed
 
@@ -192,6 +226,8 @@ def register_user_preferences(form_name: str, location: str = 'main') -> bool:
     """
     Creates a register new user widget.
     """
+    csu.ShowTODO("TODO SSH: Will tune this set of questions")
+
     succeed = False
 
     if location not in ['main', 'sidebar']:
@@ -202,25 +238,29 @@ def register_user_preferences(form_name: str, location: str = 'main') -> bool:
         register_user_form = st.sidebar.form('User preferences')
 
     register_user_form.subheader(form_name)
-    register_user_form.write("TODO")
-
     user = getInProgressRegistrationUser()
-    """
-    self.preference: ResonsePreferences = ResonsePreferences.DETAILED
-    self.politely: Preference_Politely = Preference_Politely.POLITE_PRESENTATION
-    self.emojis: Preference_Emojis = Preference_Emojis.USE_EMOJIS
-    """
+
+    user.preference = ResonsePreferences.DETAILED \
+        if register_user_form.toggle('Use detailed answers instead of concise', True) is True \
+        else ResonsePreferences.CONCISE
+
+    user.emojis = Preference_Emojis.USE_EMOJIS \
+        if register_user_form.toggle('Use emojis in answers', True) is True \
+        else Preference_Emojis.NO_EMOJIS
+
+    user.politely = Preference_Politely.POLITE_PRESENTATION \
+        if register_user_form.toggle('Prefer chatbot polite presentations', True) is True \
+        else Preference_Politely.FORMAL_PRESENTATION
 
     if register_user_form.form_submit_button('Next'):
         succeed = True
-        # TODO: update user in db
-        pass
 
     return succeed
 
 
 if csu.logged_in():
     st.write("## Already logged in, logout please to continue!")
+    csu.showLoggedUserSidebar()
 else:
     if getRegistrationState() == RegistrationState.BASIC_REGISTRATION:
         res = register_user_basic("Basic registration")
@@ -233,14 +273,15 @@ else:
             updateRegistrationState(RegistrationState.TECHNICAL_REGISTRATION)
             st.rerun()
     elif getRegistrationState() == RegistrationState.TECHNICAL_REGISTRATION:
-        res = register_user_behavioral("Technical registration")
+        res = register_user_technical("Technical registration")
         if res:
             updateRegistrationState(RegistrationState.PREFERENCES_REGISTRATION)
             st.rerun()
     elif getRegistrationState() == RegistrationState.PREFERENCES_REGISTRATION:
-        res = register_user_behavioral("Preferences")
+        res = register_user_preferences("Preferences registration")
         if res:
             updateRegistrationState(None)
             csu.register_credentials(getInProgressRegistrationUser())
+            switch_page("Main Page")
             st.rerun()
 

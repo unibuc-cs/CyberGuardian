@@ -51,16 +51,10 @@ placeholder3 = st.empty()
 
 if csu.logged_in():
     currentUser: SecurityOfficer = csu.getCurrentUser()
-    st.sidebar.writer(f'### Hi, {currentUser.name}')
-    st.sidebar.image(csu.getCachedImgPathForUsername(currentUser.username))
+    csu.showLoggedUserSidebar()
 
     placeholder3.empty()
-    placeholder.write(f'### You are logged in, *{currentUser.name}*! \n\n')
-    if placeholder2.button("Logout"):
-        csu.logout()
-        placeholder.empty()
-        placeholder2.empty()
-        placeholder3.write(f'### Please login !')
+    placeholder.write(f'### You are logged in, *{currentUser.name}*! Better to start focus and work. \n\n')
 else:
     placeholder = st.empty()
     placeholder2 = st.empty()
