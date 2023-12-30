@@ -1,0 +1,950 @@
+[
+  {
+    "url": "https://www.youtube.com/watch?v=o2BPkhdPAg4",
+    "title": "Opening remarks + Theoretical Foundations (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vcyC5iD_s9I",
+    "title": "Invited talk by Iftach Haitner (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=q46BEVEfJPo",
+    "title": "Proof Systems (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ulHpvzRfhG4",
+    "title": "Multi-Party Computation 1 (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=A6hZImt7Cd4",
+    "title": "Multi-Party Computation 2 (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=SY7peb5u47g",
+    "title": "Test of Time Award (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=iCRVm7MSQcc",
+    "title": "Encryption (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=O4T6vMwuLB0",
+    "title": "Memory Checking, PIR, and Secret Sharing (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Ms853nfSAh8",
+    "title": "Anonymity Surveillance and Tampering (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=XYUdvGC2Ze8",
+    "title": "Invited talk by Zvika Brakerski (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xsDfHnEtnio",
+    "title": "Lower Bounds (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dQI_LDb1pes",
+    "title": "IOPs and Succinctness (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=q-ZC2NdrNnc",
+    "title": "Lattices and Codes (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=SxqFkF3jIgg",
+    "title": "Quantum Crypto (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Br1K2H9PM98",
+    "title": "Group-Based Crypto (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dFpY1FKV3pY",
+    "title": "Composability, Consensus, and Byzantine Agreement (TCC 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=7uIabAwB92M",
+    "title": "Opening Remarks + Invited Talk by Peter Schwabe (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=r-7ZzyyR2yY",
+    "title": "Masking Techniques I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=VPP_FS71aO4",
+    "title": "Fault Analysis on Post-Quantum Cryptography I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ymmID7JpTUQ",
+    "title": "Masking Techniques II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8WXZSCfsl1I",
+    "title": "Fault Analysis on Post Quantum Cryptography II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=RD5pGzO71IE",
+    "title": "Efficient Zero-Knowledge (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8km1V-5YUXY",
+    "title": "Side-Channel Attacks on Symmetric Algorithms I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=GIHDkDOqgQs",
+    "title": "(Security of) Efficient Exponentiation (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=_oKfRUb2fN8",
+    "title": "Side-Channel Attacks on Symmetric Algorithms II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=RKd7MLGAAfI",
+    "title": "CHES Test of Time Award Ceremony + Rump Session (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xRPZwwmPmJk",
+    "title": "Homomorphic Encryption (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=jlJ0nlaK-H8",
+    "title": "Side Channel Attacks on Post Quantum Implementations I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=yeuMVi6qRUc",
+    "title": "Symmetric Designs (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=V53gvqiM0mU",
+    "title": "Side-Channel Attacks on Post-Quantum Implementations II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=aCwsvTs_epY",
+    "title": "Hardware Security (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=9sFG5_OURGo",
+    "title": "Machine Learning and Side-Channel Analysis I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=RoUE0uXcdzo",
+    "title": "Hardware Acceleration and Instruction Set Extensions (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=7wvkY_K8q3U",
+    "title": "Machine Learning and Side-Channel Analysis II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=VmBqsU52B-I",
+    "title": "Best Paper (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=sozs34F4oMg",
+    "title": "Post-Quantum Cryptography in Software I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=yBAxNRCmn4w",
+    "title": "Fault Analysis on Symmetric Algorithms I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Y2U0a4hTiNs",
+    "title": "Post-Quantum Cryptography in Software II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=hFxFasJ8yAw",
+    "title": "Fault Analysis on Symmetric Algorithms II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Nhv03rflGg8",
+    "title": "Dealing with Microarchitectural Effects (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5IFhmBsvP4w",
+    "title": "Side-Channel Attacks on Post-Quantum Implementations III (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=9ZSfIS3tqwA",
+    "title": "Security of ECC (Implementations) (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=S7gNcJ3U-sc",
+    "title": "Side-Channel Evaluation and Distinguishers (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=WQpEzlaDdaY",
+    "title": "White-Box Cryptography I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Tb1jqzHxXrM",
+    "title": "Masking Post-Quantum Cryptography I (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dRfcUM2-YUs",
+    "title": "White-Box Cryptography II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=48tD4zm1xn0",
+    "title": "Masking Post-Quantum Cryptography II (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ah19an4t5aU",
+    "title": "Pairings (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=JTWjgfvuy1s",
+    "title": "True Randomness + Closing Remarks (CHES 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=jn28zCdIsq0",
+    "title": "Crypto 2023 opening remarks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=DTzRYTqVxHw",
+    "title": "ORAM 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dHkpWbO2NPc",
+    "title": "Succinctness 1 part I (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=F7j8nudBBYM",
+    "title": "Succinctness 1 part II (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=YTwsTgM1rlE",
+    "title": "Secret Sharing 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=RzkaZCS0DcY",
+    "title": "ORAM 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=MWjSSIyLimg",
+    "title": "Succinctness 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=SIXzwfQi43k",
+    "title": "Secret Sharing 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=0Lt5Hr2FS_I",
+    "title": "Crypto 2023 IACR Distinguished Lecture: Hugo Krawczyk"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=h6hb27qIZh8",
+    "title": "Quantum Cryptography 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Ap-b9CxJ5g4",
+    "title": "Side Channels 1 part I (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=bUNSr2Gr6zE",
+    "title": "Side Channels 1 part II (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=fqgIXHqqw7M",
+    "title": "Functional Encryption 1 & 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=rciD_Fx1dKw",
+    "title": "Quantum Cryptography 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=cuQyZe5THjA",
+    "title": "Side Channels 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=z_ualzoyCWc",
+    "title": "Consensus 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=74j5hLCVDTg",
+    "title": "Random Oracle 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=2__Inqvi5uE",
+    "title": "Secure Messaging 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=g0v7bAr0BMo",
+    "title": "Consensus 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Ev3Hmk5U6P8",
+    "title": "Random Oracle 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=H2Obc7ptONQ",
+    "title": "Secure Messaging 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=KDnFbT6Z3xM",
+    "title": "Crypto 2023 Best Paper Plenary"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=P4cPvi2s-qM",
+    "title": "Symmetric Design (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Jfs9kgNwh7c",
+    "title": "Attacks on Post-Quantum Crypto (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=6BiUKOZZ1v4",
+    "title": "Quantum Security (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=wm2qJyaxyRw",
+    "title": "Anonymous Credentials (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=u8tz_6qASQE",
+    "title": "Cryptanalysis of Digital Signatures (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=gm1F-a3xM8Q",
+    "title": "Symmetric Crypto with Public-Key Applications (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8T6vRVT1B1k",
+    "title": "Crypto 2023 award session"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=kwOk5W6a7Ro",
+    "title": "Crypto 2023 rump session"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=lz2eaFXNPtw",
+    "title": "Sublinear Proofs (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xPQIXXTRGNU",
+    "title": "Threshold Cryptography 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=7zW7MT1P9pU",
+    "title": "Symmetric Cryptanalysis 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=NCpR_spWNqw",
+    "title": "Obfuscation (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=HKakj8msjQc",
+    "title": "Threshold Cryptography 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=SPoGKQKwt6k",
+    "title": "Symmetric Cryptanalysis 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=3o2LU59ZYFI",
+    "title": "Invited Talk by Scott Aaronson (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=AzZ672teyuQ",
+    "title": "Emerging Paradigms 1 & 2 + Post-Quantum Signatures 1 & 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=rDAPlU8zBaM",
+    "title": "MPC -- Emerging Models 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=lXeHwoJJ9UA",
+    "title": "Post-Quantum ZK 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Vo9mZMrIoEw",
+    "title": "MPC -- Emerging Models 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=EuJi3K3QoXU",
+    "title": "Post-Quantum ZK 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=HQwwIdNHW8s",
+    "title": "MPC Round Efficiency 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=j68BdvICDpY",
+    "title": "Lattice-Based PKC 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Q6DDRS6DBtw",
+    "title": "MPC Round Efficiency 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=gaA2ggWC8iQ",
+    "title": "Lattice-Based PKC 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xq2LZCY12Iw",
+    "title": "ZK Based on DL 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Z_xnpv3jBQU",
+    "title": "Quantum Protocols 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=PrUv_cfQ4Xs",
+    "title": "Correlated Pseudorandomness (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=7RO-zjSxv4c",
+    "title": "ZK Based on DL 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=BXLTU0EfmPo",
+    "title": "Quantum Protocols 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=_BdXx-xjKeU",
+    "title": "Isogenies and Applications (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=TKJLxIvu7GA",
+    "title": "Efficient FHE (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=O0R6R1ifLcs",
+    "title": "Foundations (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=qdGRoMP9Omk",
+    "title": "Secure Two Party Computation part I (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ICckwp48fbE",
+    "title": "Secure Two-Party Computation part II (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ihJPQxnPcsw",
+    "title": "Lattice Problems and Their Complexity 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xP5Oe4z2tiU",
+    "title": "Succinctness 3 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=57z0kUcu1sk",
+    "title": "Provably Secure Symmetric Constructions 1 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ZAnPCfP5nYg",
+    "title": "Lattice Problems and Their Complexity 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=3sPYPpvwdio",
+    "title": "Succinctness 4 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ncfEyayk2vs",
+    "title": "Provably Secure Symmetric Constructions 2 (Crypto 2023)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=JxmXGB4R8p8",
+    "title": "PKC 2023 opening remarks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=pBsHduMsnDo",
+    "title": "PKC 2023 session: Post-Quantum Cryptography"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=TIQeeCUYtMg",
+    "title": "PKC 2023 session: Attacks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=0NmvOQldGfc",
+    "title": "PKC 2023 invited talk by Chris Peikert"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=AYreJjVrfgA",
+    "title": "PKC 2023 session: Signatures"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Fyum0OB-uBM",
+    "title": "PKC 2023 session: PKC Test of Time and Best Paper awards"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=FefwhMet8lA",
+    "title": "PKC 2023 session: Isogenies"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=3IfZTUQdXj8",
+    "title": "PKC 2023 session: Crypto for Crypto"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=RjiiGk2zy08",
+    "title": "PKC 2023 session: Pairings"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=PsKGx5snNTM",
+    "title": "PKC 2023 session: Key Exchange and Messaging"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=E2hcUsPgYYQ",
+    "title": "PKC 2023 session: Homomorphic Cryptography and Other Topics"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=shxmirnMvjw",
+    "title": "PKC 2023 session: MPC"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vJzlds2QRRg",
+    "title": "PKC 2023 session: Encryption I"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=aib1Sbw-cH0",
+    "title": "PKC 2023 session: Encryption II"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=VXEztAwm9Eo",
+    "title": "PKC 2023 session: ZK I"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Hgu7eWuuYus",
+    "title": "PKC 2023 session: IO and ZK II"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xyqVkNYyeoM",
+    "title": "PKC 2023 closing remarks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ziXNYIU3ODI",
+    "title": "Eurocrypt 2023 opening remarks and invited talk by Guy Rothblum"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=eV3zcX-Li18",
+    "title": "Eurocrypt 2023 session: Fully Homomorphic Encryption"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=L4MxKfCuUDY",
+    "title": "Eurocrypt 2023 sessions: Lower Bounds and Lower Bounds (cont.)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=DcDFTU29CwU",
+    "title": "Eurocrypt 2023 session: Blockcipher Cryptanalysis"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=fHffRyZC3Jk",
+    "title": "Eurocrypt 2023 session: Fully Homomorphic Encryption (cont.)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=_DajyWvK_qU",
+    "title": "Eurocrypt 2023 session: Blockcipher Cryptanalysis (cont.)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=GL4m7StDsPg",
+    "title": "Eurocrypt 2023 session: Authenticated Key Exchange"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Jw11hbyFTCk",
+    "title": "Eurocrypt 2023 session: Differential Privacy"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=LLOpYvV1Gpc",
+    "title": "Eurocrypt 2023 session: Oblivious Transfer"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5bdZc8OcQuk",
+    "title": "Eurocrypt 2023 session: Real World Crypto"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=d8kvcvndBs8",
+    "title": "Eurocrypt 2023 session: Lattice Cryptanalysis"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dmEkSPT6DT4",
+    "title": "Eurocrypt 2023 session: Oblivious Transfer (cont.)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=AFtj-mE38Ow",
+    "title": "Eurocrypt 2023 session: Garbling Schemes and Oblivious Transfer"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=3ay0dVg2kWY",
+    "title": "Eurocrypt 2023 session: Quantum Cryptography"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=OC-kQHTz9O4",
+    "title": "Eurocrypt 2023 session: Side Channel Attacks and Masking"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8n4xVyD2XIE",
+    "title": "Eurocrypt 2023 session: Non-Interactive MPC"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=M4UKU0rLFSw",
+    "title": "Eurocrypt 2023 session: Messaging and Message Franking"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=tM9tEtksQXc",
+    "title": "Eurocrypt 2023 session: Hash Function Cryptanalysis"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=2ZH4DYio0xw",
+    "title": "Eurocrypt 2023 session: Symmetric Design 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=cx2zAGqsssU",
+    "title": "Eurocrypt 2023 session: Theory of Public-Key Cryptography"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=BMqKqzFgxdc",
+    "title": "Eurocrypt 2023 session: Oblivious Data Access 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=i5eUdzHnKQE",
+    "title": "Eurocrypt 2023 session: Isogenies 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xsmMStLKJw4",
+    "title": "Eurocrypt 2023: Rump session (part 1)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Dk6QThNfAwc",
+    "title": "Eurocrypt 2023: Rump session (part 2)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=OZgwwUXoEz4",
+    "title": "Eurocrypt 2023 invited talk by Vadim Lyubashevsky"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=z6nE4fOWvZA",
+    "title": "Eurocrypt 2023 session: Signature Schemes 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=npgdTgfHbgk",
+    "title": "Eurocrypt 2023 session: Attribute Based Encryption and Friends"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=q7jODTKEBjg",
+    "title": "Eurocrypt 2023 session: (Zero-knowledge) Proofs 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dRjzNK_2xO0",
+    "title": "Eurocrypt 2023 session: Signature Schemes 1 (cont.)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Q6MMljuwyUE",
+    "title": "Eurocrypt 2023 session: Attribute-based Encryption and Friends (cont.)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=48OpM7T7ePQ",
+    "title": "Eurocrypt 2023 session: (Zero-Knowledge) Proofs 1 (cont)."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Aq_btPAt1T4",
+    "title": "Eurocrypt 2023 session: Efficient MPC Constructions"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=-wo-FoLcu4o",
+    "title": "Eurocrypt 2023 session: Traitor Tracing Schemes"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=FTxSze5TfIo",
+    "title": "Eurocrypt 2023 session: Symmetric Design 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=el3Fco0F0Ao",
+    "title": "Eurocrypt 2023 session: Efficient MPC Constructions (cont.)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=8TY-06L9blI",
+    "title": "Eurocrypt 2023 session: Pseudorandom Functions"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=6FH0VGOD5FA",
+    "title": "Eurocrypt 2023 session: Symmetric Design 2 (cont.)"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=F-a_goWnbOE",
+    "title": "Eurocrypt 2023 session: Isogenies 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=zSkwQ5nP8Aw",
+    "title": "Eurocrypt 2023 session: Oblivious Data Access 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=XBscC_hxBm8",
+    "title": "Eurocrypt 2023 session: Symmetric Design 3"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vL48j6HXfIw",
+    "title": "Eurocrypt 2023 session: (Zero-Knowledge) Proofs 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=jTMV4k5UCr0",
+    "title": "Eurocrypt 2023 session: Signature Schemes 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=L01SOhpSvlA",
+    "title": "Eurocrypt 2023 session: Public-Key Cryptanalysis"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=MDwITtnaPkc",
+    "title": "Eurocrypt 2023 session: MPC and Proofs"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=LmM9tllecLg",
+    "title": "Eurocrypt 2023 session: Lattice Constructions"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=jqTZLdUJKaM",
+    "title": "Eurocrypt 2023 session: Non-malleable Commitments and Obfuscation"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=BNQyu8g6Tsg",
+    "title": "Opening remarks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=rf63D1fdOJM",
+    "title": "Session on PQC"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=IAOWRO9Qn10",
+    "title": "Session on PQC Protocols and Agility"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=euf0eWlDltw",
+    "title": "2023 Levchin Prize"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=WEjgFMuwIAc",
+    "title": "Session on Network Security and Key Exchange"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=9uIpmz2GAew",
+    "title": "Session on Building and Breaking Secure Systems"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=c4kZdsoV8ns",
+    "title": "Session on Crypto for people"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=608NQdTn39Q",
+    "title": "Session on Side Channels and Backdoors"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=7mnKEW6MP9g",
+    "title": "Lightning talks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=sthXs4zJ5XU",
+    "title": "Session on Messaging and Encryption"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Q3glyMsaWIE",
+    "title": "Session on FHE and MPC"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=iyEKNKe-jXA",
+    "title": "Updates on Standardization"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=lahO3de3k_0",
+    "title": "Session on Secure Implementations"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=MwTK6ZQhOQg",
+    "title": "Session on Privacy and ZKP"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=-d0Ny7NAG-w",
+    "title": "Session on Threshold Cryptography"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Xh849Ij3lhU",
+    "title": "Session on Advanced Encryption"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=rJ-PFfFvoU0",
+    "title": "RWC 2023 Closing Remarks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=1nBFgs8T4mo",
+    "title": "FSE 2023 Opening Remarks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vGNj_7PZ2NM",
+    "title": "Award paper session Hybrid code lifting"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=4Z4eEwGFtTA",
+    "title": "Award paper session: Mind your path"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5CwHx0CRESQ",
+    "title": "Session on Stream Ciphers and Cryptanalysis 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dBBhpBppVbc",
+    "title": "Session on Security Proofs"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=XIY44ibmhxM",
+    "title": "Session on Non Linear Layers"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Jmz1o-H4gXw",
+    "title": "Session on Stream Ciphers and Cryptanalysis 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=XK0Zz_a_Soo",
+    "title": "Cryptanalysis of Draco"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=WSi9wd4RZRo",
+    "title": "Cryptanalysis of ARX Ciphers: Recent Developments and Open Questions by Siwei Sun"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=FXRqNxml-3E",
+    "title": "Session on Boomerang and Rectangle Attacks 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=7ABCANs2dMM",
+    "title": "Session on Boomerang and Rectangle Attacks 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=NsxdSxDgPaE",
+    "title": "Session on Hash Function Cryptanalysis"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=hGvaY5N84NM",
+    "title": "Session on Differential Trail Search and Bounds 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=jjZKMgYCzHM",
+    "title": "Session on Differential Trail Search and Bounds 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=oDOi_vwPMxk",
+    "title": "Session on Linear Layers"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=v7s5QlSsj4s",
+    "title": "Session on Leakage and Faults"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=16SZg8SnJqk",
+    "title": "FSE 2023 Rump Session"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=hgHJu6Qr0Us",
+    "title": "FSE 2023 Invited talk by Yosuke Todo"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dhLCiznBa-s",
+    "title": "Session on Algebraic and Integral Attacks 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=01KzHObIfuo",
+    "title": "Session on Algebraic and Integral Attacks 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=r-2oxTR-KGc",
+    "title": "Session on Block Cipher Cryptanalysis"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=cBoXDPsYkCM",
+    "title": "Session on Cryptographic Applications"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=FfBeunNI8U0",
+    "title": "Session on MILP and Models"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=PhDaptX5abg",
+    "title": "Session on Authenticated Encryption Cryptanalysis"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=ffBO9felKNA",
+    "title": "Session on New Constructions 1"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Wj-ucLQeqH0",
+    "title": "Session on New Constructions 2"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=CDK5yXurIMI",
+    "title": "FSE 2023 Closing Remarks"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dRRl6vGIIh8",
+    "title": "TCC 2022 opening remarks and session on Post-Quantum Cryptography"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=W5cV4_g_Wu0",
+    "title": "TCC 2022 session on interactive proofs"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vNh1K3UeRi8",
+    "title": "TCC 2022 session on quantum cryptography"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=A_T5XQLu73E",
+    "title": "TCC 2022 session on secret sharing and ORAM"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=QJgMFt3VkfM",
+    "title": "TCC 2022 business meeting"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=wLki7rFZLVw",
+    "title": "TCC 2022 session on ABE and FE"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Fyupfke1ypo",
+    "title": "TCC 2022 session on succinct proofs"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5b-a3x5-RbA",
+    "title": "TCC 2022 session on IBE and FE"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5mhctSi7EWY",
+    "title": "TCC 2022 session on encryption galore"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=zCUEGkJ5mPU",
+    "title": "TCC 2022 test of time award session"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=FjhHwvcF-Wc",
+    "title": "TCC 2022 session on multi party computation I"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=1sdRfT_Q6KU",
+    "title": "TCC 2022 Invited talk by Eran Tromer"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=qXnELNvSDlM",
+    "title": "TCC 2022 session on Protocols Key Agreement and Commitments"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=xY21vYcictg",
+    "title": "TCC 2022 session on Theory I Sampling and Friends"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=SloWZPVc_Gw",
+    "title": "TCC 2022 session on multi party computation II"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=WC0_2IVkS7Y",
+    "title": "TCC 2022 session on Lattices"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=-E8MHlpID8o",
+    "title": "TCC 2022 session on Anonymity Verifiability and Robustness"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=aj8ahLhYkyo",
+    "title": "TCC 2022 session on OT, PIR, and Secret Sharing"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=JUYzY-1mcYM",
+    "title": "TCC 2022 session on Theory II and Closing Remarks"
+  }
+]
