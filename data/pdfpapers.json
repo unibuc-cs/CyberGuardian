@@ -202,8 +202,10 @@
       "Cybersecurity, Cloud Computing"],
     "title": "Improving cloud network security using the Tree-Rule firewall",
     "url": "https://research.utwente.nl/files/6779068/1-s2.0-S0167739X13001386-main"
-=======
-      "Criptography", "Security"],
+    },
+{
+
+      "tags": [ "Criptography", "Security"],
     "title": "A Survey on Post-Quantum Cryptography: State-of-the-Art and Challenges",
     "url": "https://arxiv.org/abs/2312.10430"
   },
@@ -4926,6 +4928,756 @@
     "tags": ["Cryptography", "Security"],
     "title": "Characterizing Browser Fingerprinting and its Mitigations",
     "url": "http://arxiv.org/abs/2311.12197v1"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Users Approach on Providing Feedback for Smart Home Devices",
+    "url": "https://arxiv.org/abs/2312.12466"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Users Approach on Providing Feedback for Smart Home Devices Phase I",
+    "url": "https://arxiv.org/abs/2312.11817"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Sensor Data Simulation for Anomaly Detection of the Elderly Living Alone",
+    "url": "https://arxiv.org/abs/2312.16852"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Multi-channel Sensor Network Construction, Data Fusion and Challenges for Smart Home",
+    "url": "https://arxiv.org/abs/2312.16697"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "An Intelligent Indoor Positioning Algorithm Based on Wi-Fi and Bluetooth Low Energy",
+    "url": "https://arxiv.org/abs/2312.15744"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Construct 3D Hand Skeleton with Commercial WiFi",
+    "url": "https://arxiv.org/abs/2312.15507"
+  },
+  {
+    "tags": ["Smart Home","Cryptography","Security"],
+    "title": "Conceptualising an Anti-Digital Forensics Kill Chain for Smart Homes",
+    "url": "https://arxiv.org/abs/2312.15215"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Vision-Based Automatic Groceries Tracking System -- Smart Homes",
+    "url": "https://arxiv.org/abs/2312.12486"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Conformer-Based Speech Recognition On Extreme Edge-Computing Devices",
+    "url": "https://arxiv.org/abs/2312.10359"
+  },
+  {
+    "tags": ["Smart Home","Cryptography","Security"],
+    "title": "Security aspects in Smart Meters: Analysis and Prevention",
+    "url": "https://arxiv.org/abs/2312.08101"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Multi-Granularity-Aware Aspect Learning Model for Multi-Aspect Dense Retrieval",
+    "url": "https://arxiv.org/abs/2312.02538"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Student Activity Recognition in Classroom Environments using Transfer Learning",
+    "url": "https://arxiv.org/abs/2312.00348"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Environment-independent mmWave Fall Detection with Interacting Multiple Model",
+    "url": "https://arxiv.org/abs/2311.08755"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "FinA: Fairness of Adverse Effects in Decision-Making of Human-Cyber-Physical-System",
+    "url": "https://arxiv.org/abs/2311.03468"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "SAGE: Smart home Agent with Grounded Execution",
+    "url": "https://arxiv.org/abs/2311.00772"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Positional Encoding-based Resident Identification in Multi-resident Smart Homes",
+    "url": "https://arxiv.org/abs/2310.17836"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "BlackJack: Secure machine learning on IoT devices through hardware-based shuffling",
+    "url": "https://arxiv.org/abs/2310.17804"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Reading Between the Heat: Co-Teaching Body Thermal Signatures for Non-intrusive Stress Detection",
+    "url": "https://arxiv.org/abs/2310.09932"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Detecting Abnormal Health Conditions in Smart Home Using a Drone",
+    "url": "https://arxiv.org/abs/2310.05012"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Survey on Conflict Detection in IoT-based Smart Homes",
+    "url": "https://arxiv.org/abs/2310.04447"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Supervising Smart Home Device Interactions: A Profile-Based Firewall Approach",
+    "url": "https://arxiv.org/abs/2310.03510"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Audio Visual Speaker Localization from EgoCentric Views",
+    "url": "https://arxiv.org/abs/2309.16308"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Variational Auto-Encoder Enabled Multi-Band Channel Prediction Scheme for Indoor Localization",
+    "url": "https://arxiv.org/abs/2309.12200"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Test Case Generation and Test Oracle Support for Testing CPSs using Hybrid Models",
+    "url": "https://arxiv.org/abs/2309.07994"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Autonomous and Collaborative Smart Home Security System (ACSHSS)",
+    "url": "https://arxiv.org/abs/2309.02899"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Multimodal Contrastive Learning with Hard Negative Sampling for Human Activity Recognition",
+    "url": "https://arxiv.org/abs/2309.01262"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Beyond Screens: Supporting Co-located Augmented Reality Experiences with Smart Home Devices",
+    "url": "https://arxiv.org/abs/2309.00256"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Smart Home Goal Feature Model -- A guide to support Smart Homes for Ageing in Place",
+    "url": "https://arxiv.org/abs/2311.09248"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Acoustic Cybersecurity: Exploiting Voice-Activated Systems",
+    "url": "https://arxiv.org/abs/2312.00039"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Towards Ubiquitous Intelligent Hand Interaction",
+    "url": "https://arxiv.org/abs/2308.13543"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "VetIoT: On Vetting IoT Defenses Enforcing Policies at Runtime",
+    "url": "https://arxiv.org/abs/2308.12417"
+  },
+  {
+    "tags": ["Smart Home","Criptography","Security"],
+    "title": "Unleashing IoT Security: Assessing the Effectiveness of Best Practices in Protecting Against Threats",
+    "url": "https://arxiv.org/abs/2308.12072"
+  },
+  {
+    "tags": ["Smart Home","Criptography","Security"],
+    "title": "FedEdge AI-TC: A Semi-supervised Traffic Classification Method based on Trusted Federated Deep Learning for Mobile Edge Computing",
+    "url": "https://arxiv.org/abs/2308.06924"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Helion: Enabling Natural Testing of Smart Homes",
+    "url": "https://arxiv.org/abs/2308.06695"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A framework for smart homes for elderly people using Labview",
+    "url": "https://arxiv.org/abs/2308.06281"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "The Effects of Interaction Conflicts, Levels of Automation, and Frequency of Automation on Human Automation Trust and Acceptance",
+    "url": "https://arxiv.org/abs/2307.05512"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Gammatonegram Representation for End-to-End Dysarthric Speech Processing Tasks: Speech Recognition, Speaker Identification, and Intelligibility Assessment",
+    "url": "https://arxiv.org/abs/2307.03296"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Renewable energy management in smart home environment via forecast embedded scheduling based on Recurrent Trend Predictive Neural Network",
+    "url": "https://arxiv.org/abs/2307.01622"
+  },
+  {
+    "tags": ["Smart Home","Criptography","Security"],
+    "title": "Who Let the Smart Toaster Hack the House? An Investigation into the Security Vulnerabilities of Consumer IoT Devices",
+    "url": "https://arxiv.org/abs/2306.09017"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "IoT-AD: A Framework To Detect Anomalies Among Interconnected IoT Devices",
+    "url": "https://arxiv.org/abs/2306.06764"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "From psychological traits to safety warnings: three studies on recommendations in a smart home environment",
+    "url": "https://arxiv.org/abs/2306.05752"
+  },
+  {
+    "tags": ["Smart Home","Criptography","Security"],
+    "title": "Sustainable Adaptive Security",
+    "url": "https://arxiv.org/abs/2306.04481"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Meta-learning based Generalizable Indoor Localization Model using Channel State Information",
+    "url": "https://arxiv.org/abs/2305.13453"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Interpretation of the principles and implementation of FreeRider: A tutorial",
+    "url": "https://arxiv.org/abs/2305.10316"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "rWISDM: Repaired WISDM, a Public Dataset for Human Activity Recognition",
+    "url": "https://arxiv.org/abs/2305.10222"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Sasha: creative goal-oriented reasoning in smart homes with large language models",
+    "url": "https://arxiv.org/abs/2305.09802"
+  },
+  {
+    "tags": ["Smart Home","Criptography","Security"],
+    "title": "SHATTER: Control and Defense-Aware Attack Analytics for Activity-Driven Smart Home Systems",
+    "url": "https://arxiv.org/abs/2305.09669"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Smart Home Energy Management: VAE-GAN synthetic dataset generator and Q-learning",
+    "url": "https://arxiv.org/abs/2305.08885"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Lightweight Delivery Detection on Doorbell Cameras",
+    "url": "https://arxiv.org/abs/2305.07812"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "VEDLIoT -- Next generation accelerated AIoT systems and applications",
+    "url": "https://arxiv.org/abs/2305.05388"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Smart Home Device Detection Algorithm Based on FSA-YOLOv5",
+    "url": "https://arxiv.org/abs/2305.04534"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Embodiment perception of a smart home assistant",
+    "url": "https://arxiv.org/abs/2304.14947"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Safe and Secure Smart Home using Cisco Packet Tracer",
+    "url": "https://arxiv.org/abs/2304.11827"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Smart Home Environment Modelled with a Multi-Agent System",
+    "url": "https://arxiv.org/abs/2304.08494"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "DeePLT: Personalized Lighting Facilitates by Trajectory Prediction of Recognized Residents in the Smart Home",
+    "url": "https://arxiv.org/abs/2304.08027"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Privacy-Enhanced Living: A Local Differential Privacy Approach to Secure Smart Home Data",
+    "url": "https://arxiv.org/abs/2304.07676"
+  },
+  {
+    "tags": ["Smart Home","Security","Criptography"],
+    "title": "A Comprehensive Survey on the Implementations, Attacks, and Countermeasures of the Current NIST Lightweight Cryptography Standard",
+    "url": "https://arxiv.org/abs/2304.06222"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "'Get ready for a party': Exploring smarter smart spaces with help from large language models",
+    "url": "https://arxiv.org/abs/2303.14143"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "adaPARL: Adaptive Privacy-Aware Reinforcement Learning for Sequential-Decision Making Human-in-the-Loop Systems",
+    "url": "https://arxiv.org/abs/2303.04257"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "CADeSH: Collaborative Anomaly Detection for Smart Homes",
+    "url": "https://arxiv.org/abs/2303.01021"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Time Series Anomaly Detection in Smart Homes: A Deep Learning Approach",
+    "url": "https://arxiv.org/abs/2302.14781"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Hello Me, Meet the Real Me: Audio Deepfake Attacks on Voice Assistants",
+    "url": "https://arxiv.org/abs/2302.10328"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "ARGUS: Context-Based Detection of Stealthy IoT Infiltration Attacks",
+    "url": "https://arxiv.org/abs/2302.07589"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Short-Term Aggregated Residential Load Forecasting using BiLSTM and CNN-BiLSTM",
+    "url": "https://arxiv.org/abs/2302.05033"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "RTClean: Context-aware Tabular Data Cleaning using Real-time OFDs",
+    "url": "https://arxiv.org/abs/2302.04726"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Cooperative Task-Oriented Communication for Multi-Modal Data with Transmission Control",
+    "url": "https://arxiv.org/abs/2302.02608"
+  },
+  {
+    "tags": ["Smart Home","Security","Criptography"],
+    "title": "Augmented Reality's Potential for Identifying and Mitigating Home Privacy Leaks",
+    "url": "https://arxiv.org/abs/2301.11998"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Relativistic Digital Twin: Bringing the IoT to the Future",
+    "url": "https://arxiv.org/abs/2301.07390"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Framework of Reconfigurable Transducer Nodes for Smart Home Environments",
+    "url": "https://arxiv.org/abs/2301.03413"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Transfer learning for non-intrusive load monitoring and appliance identification in a smart home",
+    "url": "https://arxiv.org/abs/2301.03018"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Graph Federated Learning for CIoT Devices in Smart Home Applications",
+    "url": "https://arxiv.org/abs/2212.14395"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Digital Twin-based Smart Home: A Proof of Concept Study",
+    "url": "https://arxiv.org/abs/2212.14238"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "IoT Device Identification Based on Network Traffic Characteristics",
+    "url": "https://arxiv.org/abs/2212.08905"
+  },
+  {
+    "tags": ["Smart Home","Criptography","Security"],
+    "title": "Lightweight Blockchain Solutions: Taxonomy, Research Progress, and Comprehensive Review",
+    "url": "https://arxiv.org/abs/2212.06272"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Understanding User Perception and Intention to Use Smart Homes for Energy Efficiency: A Survey",
+    "url": "https://arxiv.org/abs/2212.05019"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Relative Acoustic Features for Distance Estimation in Smart-Homes",
+    "url": "https://arxiv.org/abs/2212.01306"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Design Philosophy for Agents in the Smart Home",
+    "url": "https://arxiv.org/abs/2211.16914"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "SoK: Inference Attacks and Defenses in Human-Centered Wireless Sensing",
+    "url": "https://arxiv.org/abs/2211.12087"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "FedRule: Federated Rule Recommendation System with Graph Neural Networks",
+    "url": "https://arxiv.org/abs/2211.06812"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Efficient and Accurate Quantized Image Super-Resolution on Mobile NPUs, Mobile AI & AIM 2022 challenge: Report",
+    "url": "https://arxiv.org/abs/2211.05910"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Robust Smart Home Face Recognition under Starving Federated Data",
+    "url": "https://arxiv.org/abs/2211.05410"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "XAI-BayesHAR: A novel Framework for Human Activity Recognition with Integrated Uncertainty and Shapely Values",
+    "url": "https://arxiv.org/abs/2211.03451"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Federated Learning based Energy Demand Prediction with Clustered Aggregation",
+    "url": "https://arxiv.org/abs/2210.15850"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Taxonomic Classification of IoT Smart Home Voice Control",
+    "url": "https://arxiv.org/abs/2210.15656"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Dynamic Speech Endpoint Detection with Regression Targets",
+    "url": "https://arxiv.org/abs/2210.14252"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Baby Physical Safety Monitoring in Smart Home Using Action Recognition System",
+    "url": "https://arxiv.org/abs/2210.12527"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Explainable Multi-Agent Recommendation System for Energy-Efficient Decision Support in Smart Homes",
+    "url": "https://arxiv.org/abs/2210.11218"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Unboxing Trustworthiness through Quantum Internet",
+    "url": "https://arxiv.org/abs/2210.10687"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Enabling Heterogeneous Domain Adaptation in Multi-inhabitants Smart Home Activity Learning",
+    "url": "https://arxiv.org/abs/2210.09499"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Tagging Solution to Discover IoT Devices in Apartments",
+    "url": "https://arxiv.org/abs/2210.06676"
+  },
+  {
+    "tags": ["Smart Home","Criptography","Security"],
+    "title": "Threat Repair with Optimization Modulo Theories",
+    "url": "https://arxiv.org/abs/2210.03207"
+  },
+  {
+    "tags": ["Smart Home","Criptography","Security"],
+    "title": "PrivacyCube: A Tangible Device for Improving Privacy Awareness in IoT",
+    "url": "https://arxiv.org/abs/2210.02650"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "EdgeFaaS: A Function-based Framework for Edge Computing",
+    "url": "https://arxiv.org/abs/2210.01410"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "That Depends -- Assessing User Perceptions of Authentication Schemes across Contexts of Use",
+    "url": "https://arxiv.org/abs/2209.13958"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Unified View of IoT And CPS Security and Privacy",
+    "url": "https://arxiv.org/abs/2209.13793"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Fog-Based Security Framework for Large-Scale Industrial Internet of Things Environments",
+    "url": "https://arxiv.org/abs/2209.13323"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Activity report analysis with automatic single or multispan answer extraction",
+    "url": "https://arxiv.org/abs/2209.09316"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "The digital harms of smart home devices: A systematic literature review",
+    "url": "https://arxiv.org/abs/2209.05458"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Why So Toxic? Measuring and Triggering Toxic Behavior in Open-Domain Chatbots",
+    "url": "https://arxiv.org/abs/2209.03463"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "You Are What You Use: Usage-based Profiling in IoT Environments",
+    "url": "https://arxiv.org/abs/2209.02298"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "In Alexa, We Trust. Or Do We? : An analysis of People's Perception of Privacy Policies",
+    "url": "https://arxiv.org/abs/2209.00086"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Software Update Practices on Smart Home IoT Devices",
+    "url": "https://arxiv.org/abs/2208.14367"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "MetaFi: Device-Free Pose Estimation via Commodity WiFi for Metaverse Avatar Simulation",
+    "url": "https://arxiv.org/abs/2208.10414"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Survey of Distributed Ledger Technology for IoT Verticals",
+    "url": "https://arxiv.org/abs/2208.10120"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Survey of User Perspectives on Security and Privacy in a Home Networking Environment",
+    "url": "https://arxiv.org/abs/2208.08193"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Comparison of Forecasting Methods of House Electricity Consumption for Honda Smart Home",
+    "url": "https://arxiv.org/abs/2208.07217"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Accurate Action Recommendation for Smart Home via Two-Level Encoders and Commonsense Knowledge",
+    "url": "https://arxiv.org/abs/2208.06089"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Transparent and Tamper-Proof Event Ordering in the Internet of Things Platforms",
+    "url": "https://arxiv.org/abs/2208.05865"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Multimodal Generation of Novel Action Appearances for Synthetic-to-Real Recognition of Activities of Daily Living",
+    "url": "https://arxiv.org/abs/2208.01910"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Smart speaker design and implementation with biometric authentication and advanced voice interaction capability",
+    "url": "https://arxiv.org/abs/2207.10811"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "IoT Anomaly Detection Methods and Applications: A Survey",
+    "url": "https://arxiv.org/abs/2207.09092"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "PBRE: A Rule Extraction Method from Trained Neural Networks Designed for Smart Home Services",
+    "url": "https://arxiv.org/abs/2207.08814"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "End-to-End Spoken Language Understanding: Performance analyses of a voice command task in a low resource setting",
+    "url": "https://arxiv.org/abs/2207.08179"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Task-aware Similarity Learning for Event-triggered Time Series",
+    "url": "https://arxiv.org/abs/2207.08159"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Collaborative Load Management in Smart Home Area Network",
+    "url": "https://arxiv.org/abs/2207.04733"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "An AIoT-enabled Autonomous Dementia Monitoring System",
+    "url": "https://arxiv.org/abs/2207.00804"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "VEDLIoT: Very Efficient Deep Learning in IoT",
+    "url": "https://arxiv.org/abs/2207.00675"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "When It's Not Worth the Paper It's Written On: A Provocation on the Certification of Skills in the Alexa and Google Assistant Ecosystems",
+    "url": "https://arxiv.org/abs/2206.11035"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Device for measuring the plant physiology and electrophysiology",
+    "url": "https://arxiv.org/abs/2206.10459"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "https://arxiv.org/abs/2206.06518",
+    "url": "https://arxiv.org/abs/2206.06518"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Human Activity Recognition from Knee Angle Using Machine Learning Techniques",
+    "url": "https://arxiv.org/abs/2206.04487"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "'You Just Assume It Is In There, I Guess': UK Families' Application And Knowledge Of Smart Home Cyber Security",
+    "url": "https://arxiv.org/abs/2206.03930"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Adversarial attacks and defenses in Speaker Recognition Systems: A survey",
+    "url": "https://arxiv.org/abs/2205.13685"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Package Theft Detection from Smart Home Security Cameras",
+    "url": "https://arxiv.org/abs/2205.11804"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A Model-Driven-Engineering Approach for Detecting Privilege Escalation in IoT Systems",
+    "url": "https://arxiv.org/abs/2205.11406"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "User Localization using RF Sensing: A Performance comparison between LIS and mmWave Radars",
+    "url": "https://arxiv.org/abs/2205.10321"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Explainable and Optimally Configured Artificial Neural Networks for Attack Detection in Smart Homes",
+    "url": "https://arxiv.org/abs/2205.08043"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Supervised Learning",
+    "url": "https://arxiv.org/abs/2205.01629"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Extricating IoT Devices from Vendor Infrastructure with Karl",
+    "url": "https://arxiv.org/abs/2204.13737"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "An Improved Authentication Scheme for BLE Devices with no I/O Capabilities",
+    "url": "https://arxiv.org/abs/2204.13640"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "A User Study to Evaluate a Web-based Prototype for Smart Home Internet of Things Device Management",
+    "url": "https://arxiv.org/abs/2204.07751"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Peekaboo: A Hub-Based Approach to Enable Transparency in Data Processing within Smart Homes (Extended Technical Report)",
+    "url": "https://arxiv.org/abs/2204.04540"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Fuzzy temporal convolutional neural networks in P300-based Brain-computer interface for smart home interaction",
+    "url": "https://arxiv.org/abs/2204.04338"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "EfficientFi: Towards Large-Scale Lightweight WiFi Sensing via CSI Compression",
+    "url": "https://arxiv.org/abs/2204.04138"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Personal VAD 2.0: Optimizing Personal Voice Activity Detection for On-Device Speech Recognition",
+    "url": "https://arxiv.org/abs/2204.03793"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Enhancing AES Using Chaos and Logistic Map-Based Key Generation Technique for Securing IoT-Based Smart Home",
+    "url": "https://arxiv.org/abs/2203.16124"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Pardon? An Overview of the Current State and Requirements of Voice User Interfaces for Blind and Visually Impaired Users",
+    "url": "https://arxiv.org/abs/2203.05848"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "NURSE: eNd-UseR IoT malware detection tool for Smart homEs",
+    "url": "https://arxiv.org/abs/2203.04776"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Closing the Gap between Single-User and Multi-User VoiceFilter-Lite",
+    "url": "https://arxiv.org/abs/2202.12169"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Device Identification in Blockchain-Based Internet of Things",
+    "url": "https://arxiv.org/abs/2202.09603"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Iota: A Framework for Analyzing System-Level Security of IoTs",
+    "url": "https://arxiv.org/abs/2202.02506"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "VindiCo: Privacy Safeguard Against Adaptation Based Spyware in Human-in-the-Loop IoT",
+    "url": "https://arxiv.org/abs/2202.01348"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Wicked Implications for Human Interaction with IoT Sensor Data",
+    "url": "https://arxiv.org/abs/2201.10470"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Effective Anomaly Detection in Smart Home by Integrating Event Time Intervals",
+    "url": "https://arxiv.org/abs/2201.07954"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Variational Autoencoder Generative Adversarial Network for Synthetic Data Generation in Smart Home",
+    "url": "https://arxiv.org/abs/2201.07387"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Human Activity Recognition (HAR) in Smart Homes",
+    "url": "https://arxiv.org/abs/2112.11232"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "It was hard to find the words: Using an Autoethnographic Diary Study to Understand the Difficulties of Smart Home Cyber Security Practice",
+    "url": "https://arxiv.org/abs/2112.09035"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Towards Personalization of User Preferences in Partially Observable Smart Home Environments",
+    "url": "https://arxiv.org/abs/2112.00971"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "Using Language Model to Bootstrap Human Activity Recognition Ambient Sensors Based in Smart Homes",
+    "url": "https://arxiv.org/abs/2111.12158"
+  },
+  {
+    "tags": ["Smart Home"],
+    "title": "SafeAccess+: An Intelligent System to make Smart Home Safer and Americans with Disability Act Compliant",
+    "url": "https://arxiv.org/abs/2110.09273"
   },
   {
     "folder": "data/other_papers"
