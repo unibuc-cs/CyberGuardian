@@ -8,10 +8,51 @@ import ipaddress
 import random
 from typing import Dict, List, Tuple, Union
 from ipaddress import IPv4Network
+import random
+import sys
+import math
+import pandas as pd
+from enum import IntEnum
+from datetime import datetime
+import string
 
 ################ GENERATOR FUNCTIONS #################
 MAX_IPV4 = ipaddress.IPv4Address._ALL_ONES  # 2 ** 32 - 1
 MAX_IPV6 = ipaddress.IPv6Address._ALL_ONES  # 2 ** 128 - 1
+
+# Timeouts in seconds
+METRICS_UPDATE_TIMEOUT = 200
+METRICS_GET_DATA_TIMEOUT = 150
+
+NHOUSES = 10
+
+# If used, the device hacking will try to crawl the database with random searches using GET
+# Too many will basically block the server eventually
+USE_DEVICE_HACKING = False
+START_TIME_HACKING = (60 * 60 * 10)  # At 10:00 AM
+PERCENT_OF_HACKED_DEVICES = 0.5  # Approximately 20% of devices
+NUM_DEVICES_TO_HACK = int((NHOUSES * 5) * PERCENT_OF_HACKED_DEVICES)
+
+gen_random_word = lambda n: ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(n))
+
+
+class RequestType(IntEnum):
+    REQ_PUT = 1,
+    REQ_GET = 2,
+    REQ_DELETE = 3,
+    REQ_UPDATE = 4
+
+
+DATASET_LOGS = pd.DataFrame({
+    "id": pd.Series(dtype=str),
+    "start_t": pd.Series(dtype=int),
+    "end_t": pd.Series(dtype=int),
+    "ip": pd.Series(dtype='str'),
+    "long": pd.Series(dtype='str'),
+    "lat": pd.Series(dtype='str'),
+    "request_type": pd.Series(dtype=int),
+    "request_params": str,
+    "response": pd.Series(dtype=int)})
 
 
 def random_ipv4():
@@ -44,13 +85,9 @@ def generate_random_ipAddresses(num: int) -> List[str]:
 allDevices = []
 allDevicesByHouse = {}
 
-#################################
 
 
-import random
-import sys
-import math
-
+#############################
 
 class IoTDevice(object):
     def __init__(self, env: simpy.Environment, IP: str, Port: int, ParentHub, id: str, loc_lat, loc_long) -> None:
@@ -65,62 +102,134 @@ class IoTDevice(object):
         self.duration_between_metrics_update = None
         self.last_metrics_update_time = 0
 
-    def start(self):
-        self.action = self.env.process(self.run())
+        self.duration_between_data_retrieve = None
+        self.last_data_retrieve_time = 0
+        self.isHacked = False
 
-    def run(self):
+    def start(self):
+        self.action_get_data = self.env.process(self.run_get_data())
+        self.action_send_update = self.env.process(self.run_send_update())
+
+    def run_get_data(self):
         while True:
-            # First try to log on the action made
+            # Getting data
+            #################################################################################
+            cycle_start_time = self.env.now
+
+            next_data_retrieval = self.last_data_retrieve_time + self.duration_between_data_retrieve
+            if next_data_retrieval > cycle_start_time:
+                yield self.env.timeout(next_data_retrieval - cycle_start_time)
+            cycle_start_time = self.env.now
+            self.last_data_retrieve_time= cycle_start_time
+
+            # print(f"device: {self.id} starting to update metrics at {self.env.now}")
+
+            # print(f"device: {self.id} starting to log at {cycle_start_time}")
+            with self.hub.dataretrieval.request() as request:
+                yield request | self.env.timeout(METRICS_GET_DATA_TIMEOUT)
+
+                res = True
+                if request.triggered:
+                    yield self.env.process(self.hub.get_data(self))
+                else:
+                    res = False
+
+            DATASET_LOGS.loc[len(DATASET_LOGS)] = {
+                "id": self.id,
+                "start_t": cycle_start_time,
+                "end_t": self.env.now,
+                "ip": self.IP,
+                "long": self.loc_long,
+                "lat": self.loc_lat,
+                "request_type": RequestType.REQ_GET,
+                "request_params": f"data_{cycle_start_time / 100.0:.2f}" if not self.isHacked
+                else gen_random_word(random.randint(5, 10)),
+                "response": random.choice([503, 000]) if res is False else 200}
+
+    def run_send_update(self):
+        while True:
+            # Metrics update
+            #################################################################################
             cycle_start_time = self.env.now
 
             next_metrics_update = self.last_metrics_update_time + self.duration_between_metrics_update
             if next_metrics_update > cycle_start_time:
                 yield self.env.timeout(next_metrics_update - cycle_start_time)
             cycle_start_time = self.env.now
+            self.last_metrics_update_time = cycle_start_time
 
-            print(f"device: {self.id} starting to log at {cycle_start_time}")
-            with self.hub.loggers.request() as request:
-                yield request
-                yield self.env.process(self.hub.log_action(self))
+            # print(f"device: {self.id} starting to update metrics at {self.env.now}")
 
-            print(f"device: {self.id} starting to update metrics at {self.env.now}")
-            self.last_metrics_update_time = self.env.now
             # Then try to update the metrics
             with self.hub.metrics.request() as request:
-                yield request
-                yield self.env.process(self.hub.update_metrics_in_database(self))
-            print(f"device: {self.id} ended to update metrics at {self.env.now}")
+                yield request | self.env.timeout(METRICS_UPDATE_TIMEOUT)
+
+                res = True
+                if request.triggered:
+                    yield self.env.process(self.hub.update_metrics_in_database(self))
+                else:
+                    res = False
+            # print(f"device: {self.id} ended to update metrics at {self.env.now}")
+
+            DATASET_LOGS.loc[len(DATASET_LOGS)] = {
+                "id": self.id,
+                "start_t": cycle_start_time,
+                "end_t": self.env.now,
+                "ip": self.IP,
+                "long": self.loc_long,
+                "lat": self.loc_lat,
+                "request_type": RequestType.REQ_PUT,
+                "request_params": f"metric_update{cycle_start_time / 100.0:.2f}",
+                "response": random.choice([503, 000]) if res is False else 200}
+
+    def startHack(self):
+        self.isHacked = True
+
+        # Dummy, reduce the time between data retrievals
+        newTimeBetweenDataRetrieve = self.duration_between_data_retrieve * (1.0 / random.randint(50, 100))
+        self.duration_between_data_retrieve = newTimeBetweenDataRetrieve
+
+
+def data_factor_ifhacked(device: IoTDevice) ->int :
+    return random.randint(10,50) if device.isHacked else 1
+
+def rate_factor_ifhacked(device: IoTDevice) ->int :
+    return random.randint(50,100) if device.isHacked else 1
 
 
 class IoTDeviceSmartTV(IoTDevice):
     def __init__(self, env: simpy.Environment, IP: str, Port: int, ParentHub, id: str, loc_lat, loc_long):
         super().__init__(env, IP, Port, ParentHub, id, loc_lat, loc_long)
-        self.duration_between_metrics_update = 400
+        self.duration_between_metrics_update = 2000
+        self.duration_between_data_retrieve = 2000
 
 
 class IoTDeviceSmartKettle(IoTDevice):
     def __init__(self, env: simpy.Environment, IP: str, Port: int, ParentHub, id: str, loc_lat, loc_long):
         super().__init__(env, IP, Port, ParentHub, id, loc_lat, loc_long)
-        self.duration_between_metrics_update = 500
+        self.duration_between_metrics_update = 6000
+        self.duration_between_data_retrieve =  6000
 
 
 class IoTDeviceSmartBrush(IoTDevice):
     def __init__(self, env: simpy.Environment, IP: str, Port: int, ParentHub, id: str, loc_lat, loc_long):
         super().__init__(env, IP, Port, ParentHub, id, loc_lat, loc_long)
-        self.duration_between_metrics_update = 2000
+        self.duration_between_metrics_update = 8000
+        self.duration_between_data_retrieve = 8000
 
 
 class IoTDeviceSmartFlower(IoTDevice):
     def __init__(self, env: simpy.Environment, IP: str, Port: int, ParentHub, id: str, loc_lat, loc_long):
         super().__init__(env, IP, Port, ParentHub, id, loc_lat, loc_long)
-        self.duration_between_metrics_update = 2000
+        self.duration_between_metrics_update = 4000
+        self.duration_between_data_retrieve = 4000
 
 
 class IoTDeviceSmartWindow(IoTDevice):
     def __init__(self, env: simpy.Environment, IP: str, Port: int, ParentHub, id: str, loc_lat, loc_long):
         super().__init__(env, IP, Port, ParentHub, id, loc_lat, loc_long)
-        self.duration_between_metrics_update = 1000
-
+        self.duration_between_metrics_update = 2000
+        self.duration_between_data_retrieve = 2800
 
 # The IoT hub has 3 types of processes, each with different hardware process:
 # a) a logger
@@ -130,30 +239,36 @@ class IoTHub(object):
     time_between_updaterules = 1000.0  # 3 seconds between updates
 
     # The parameters represent the number of parallel processes that are able to run for different operations
-    def __init__(self, env, num_loggers: int, num_store_metrics: int, num_rules_processors: int):
+    def __init__(self, env, num_loggers: int, num_store_metrics: int, num_rules_processors: int, ip: str, long: str,
+                 lat: str):
         self.env = env
-        self.loggers = simpy.Resource(env, num_loggers)
+        self.dataretrieval = simpy.Resource(env, num_loggers)
         self.metrics = simpy.Resource(env, num_store_metrics)
         self.rules = simpy.Resource(env, num_rules_processors)
 
         self.last_time_rules_checked = 0.0
         self.action = None
+        self.IP = ip
+        self.loc_long = long
+        self.loc_lat = lat
+
+
 
     def start(self):
         self.action = self.env.process(self.run())
 
-    def log_action(self, entity: IoTDevice):
-        print(f"Logging state for entity: {entity.id}")
-        yield self.env.timeout(random.uniform(30, 60))
+    def get_data(self, entity: IoTDevice):
+        # print(f"Logging action for entity: {entity.id}")
+        yield self.env.timeout(random.uniform(30, 60) * data_factor_ifhacked(entity))
 
     def update_metrics_in_database(self, entity: IoTDevice):
-        print(f"Updating metrics for entity: {entity.id}")
-        yield self.env.timeout(random.uniform(30, 120))
+        # print(f"Updating metrics for entity: {entity.id}")
+        yield self.env.timeout(random.uniform(30, 60)* data_factor_ifhacked(entity))
 
     def check_update_rules(self) -> bool:
-        print(f"Hub updating rules starting at {self.env.now}...")
+        # print(f"Hub updating rules starting at {self.env.now}...")
         self.last_time_rules_checked = self.env.now
-        yield self.env.timeout(random.uniform(100, 200))
+        yield self.env.timeout(random.uniform(1000, 2000))
         return True
         # TODO: this should action back on devices !
 
@@ -167,19 +282,49 @@ class IoTHub(object):
             if time_up_to_next_rule_check > 0:
                 yield self.env.timeout(time_up_to_next_rule_check)
 
+            start_t = self.env.now
+
             assert getTimeToNextRuleCheck() <= 0, "it should have slept.."
             with self.rules.request() as request:
                 yield request
                 yield self.env.process(self.check_update_rules())
 
-            print(f"Finished rules check: at {self.env.now}")
+            # print(f"Finished rules check: at {self.env.now}")
+            DATASET_LOGS.loc[len(DATASET_LOGS)] = {
+                "id": "IoTHUB",
+                "start_t": start_t,
+                "end_t": self.env.now,
+                "ip": self.IP,
+                "long": self.loc_long,
+                "lat": self.loc_lat,
+                "request_type": RequestType.REQ_PUT,
+                "request_params": "statusupdatelog",
+                "response": 200}
+
+
+class IoTHacker(object):
+    def __init__(self, env: simpy.Environment, timeToStartHackingAt: int, numDevicesToHack: int) -> None:
+        self.env = env
+        self.timeToStartHackingAt = timeToStartHackingAt
+        self.numDevicesToHack = numDevicesToHack
+
+        self.action = self.env.process(self.run())
+
+    def run(self):
+        # Wait a bit...
+        yield self.env.timeout(self.timeToStartHackingAt)
+
+        # Then start
+        devicesToHack = random.sample(allDevices, k=self.numDevicesToHack)
+        for device in devicesToHack:
+            device.startHack()
 
 
 def generateRandomDeployment(env: simpy.Environment,
                              globalHub: IoTHub,
                              nhouses: int,
-                             center_lat: str,
-                             center_long: str):
+                             center_lat: float,
+                             center_long: float):
     locations = generate_random_LocData(center_lat, center_long, nhouses)
     baseIpAddresses = generate_random_ipAddresses(nhouses)
     fixedPort = 5776
@@ -213,89 +358,43 @@ def generateRandomDeployment(env: simpy.Environment,
             device.start()
 
 
-"""
-def device_send_metrics(env, device: IoTDevice, hub: IoTHub):
-    #
-    arrival_time = env.now
-
-    with hub.loggers.request() as request:
-        yield request
-        yield env.process(hub.log_action(device))
-
-    with hub.metrics.request() as request:
-        yield request
-        yield env.process(hub.update_metrics_in_database(device))
-
-    if random.choice([True, False]):
-        with theater.server.request() as request:
-            yield request
-            yield env.process(theater.sell_food(moviegoer))
-
-    # Moviegoer heads into the theater
-    wait_times.append(env.now - arrival_time)
-
-
-def run_simulation(env, num_cashiers, num_servers, num_ushers):
-    theater = Theater(env, num_cashiers, num_servers, num_ushers)
-
-    for moviegoer in range(3):
-        env.process(go_to_movies(env, moviegoer, theater))
-
-    while True:
-        yield env.timeout(0.20)  # Wait a bit before generating a new person
-
-        moviegoer += 1
-        env.process(go_to_movies(env, moviegoer, theater))
-
-
-def get_average_wait_time(wait_times):
-    average_wait = statistics.mean(wait_times)
-    # Pretty print the results
-    minutes, frac_minutes = divmod(average_wait, 1)
-    seconds = frac_minutes * 60
-    return round(minutes), round(seconds)
-"""
-
-
 def main():
     # Setup
     random.seed(42)
 
-    # Run the simulation
+    # Create environment
     env = simpy.Environment()
-    hub = IoTHub(env, num_loggers=3, num_store_metrics=3, num_rules_processors=2)
+
+    central_lat = 44.42810022576185
+    central_long = 26.10414240626916
+
+    # Create central hub
+    hub = IoTHub(env, num_loggers=15, num_store_metrics=15, num_rules_processors=2,
+                 ip="127.128.23.45", long=str(26.10414240626916), lat=str(44.42810022576185))
     hub.start()
 
-
-    NHOUSES = 1
+    # Create all houses and devices
     generateRandomDeployment(env,
                              hub,
                              nhouses=NHOUSES,
-                             center_lat=44.42810022576185,
-                             center_long=26.10414240626916)
+                             center_lat=central_lat,  # Somewhere Romania
+                             center_long=central_long)
 
-    """ #Test 
-    smart_flower = IoTDeviceSmartFlower(env=env,
-                                        IP="127.0.0.1",
-                                        Port=5774,
-                                        ParentHub=hub,
-                                        id="smart_flower",
-                                        loc_lat="44.42810022576185",
-                                        loc_long="26.10414240626916")
-    """
+    # Create the hacker if needed
+    if USE_DEVICE_HACKING:
+        hacker = IoTHacker(env, timeToStartHackingAt=START_TIME_HACKING, numDevicesToHack=NUM_DEVICES_TO_HACK)
 
-    # env.process(run_simulation(env, num_cashiers, num_servers, num_ushers))
-    env.run(until=2500)
+    # Run the simulation
+    env.run(until=86400)
 
-    # View the results
-    """
-    @mins, secs = get_average_wait_time(wait_times)
-    print(
-        "Running simulation...",
-        f"\nThe average wait time is {mins} minutes and {secs} seconds.",
-    )
-    """
+    # Save the results
+    DATASET_LOGS.to_csv(f'DATASET_LOGS_HACKED_{USE_DEVICE_HACKING}.csv', header=True, index=False)
 
+    DATASET_LOGS_timeout = DATASET_LOGS[DATASET_LOGS['response'] == 0]
+    DATASET_LOGS_normal = DATASET_LOGS[DATASET_LOGS['response'] == 200]
+    DATASET_LOGS_503 = DATASET_LOGS[DATASET_LOGS['response'] == 503]
+
+    print(f"Database stats: 200:{len(DATASET_LOGS_normal)}, 503:{len(DATASET_LOGS_503)}, 000:{len(DATASET_LOGS_timeout)}")
 
 if __name__ == "__main__":
     main()
