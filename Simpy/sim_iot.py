@@ -1,6 +1,7 @@
 # https://realpython.com/simpy-simulating-with-python/
 import time
 
+import pandas
 import simpy
 import random
 import statistics
@@ -238,6 +239,7 @@ class IoTDeviceSmartWindow(IoTDevice):
 class IoTHub(object):
     time_between_updaterules = 1000.0  # 3 seconds between updates
 
+
     # The parameters represent the number of parallel processes that are able to run for different operations
     def __init__(self, env, num_loggers: int, num_store_metrics: int, num_rules_processors: int, ip: str, long: str,
                  lat: str):
@@ -252,6 +254,35 @@ class IoTHub(object):
         self.loc_long = long
         self.loc_lat = lat
 
+        # Occupancy of the hub resources
+        self.resourcesOccupancy = pandas.DataFrame(
+            {'time': pd.Series(dtype=int),
+             'dataretrieval_count': pd.Series(dtype=int),
+             'dataretrieval_waiting': pd.Series(dtype=int),
+             'dataretrieval_occupancy': pd.Series(dtype=float),
+             'datauptader_count': pd.Series(dtype=int),
+             'dataupdater_waiting': pd.Series(dtype=int),
+             'dataupdater_occupancy': pd.Series(dtype=float)
+             })
+
+
+        MONITOR_RATE = 1000
+        self.env.process(self.monitor_resources(MONITOR_RATE))
+
+    def monitor_resources(self, SAMPLING_RATE):
+        while True:
+            item = [self.env.now,
+                    self.dataretrieval.count,
+                    len(self.dataretrieval.queue),
+                    -1,
+                    self.metrics.count,
+                    len(self.metrics.queue),
+                    -1]
+            item[3] = min(1.0, item[2]/item[1]) if item[1] > 0 else 0.0
+            item[6] = min(1.0, item[5]/item[4]) if item[4] > 0 else 0.0
+
+            self.resourcesOccupancy.loc[len(self.resourcesOccupancy)] = item
+            yield self.env.timeout(SAMPLING_RATE)
 
 
     def start(self):
@@ -371,6 +402,7 @@ def main():
     # Create central hub
     hub = IoTHub(env, num_loggers=15, num_store_metrics=15, num_rules_processors=2,
                  ip="127.128.23.45", long=str(26.10414240626916), lat=str(44.42810022576185))
+
     hub.start()
 
     # Create all houses and devices
@@ -385,7 +417,9 @@ def main():
         hacker = IoTHacker(env, timeToStartHackingAt=START_TIME_HACKING, numDevicesToHack=NUM_DEVICES_TO_HACK)
 
     # Run the simulation
-    env.run(until=86400)
+    env.run(until=46400)#86400)
+
+    hub.resourcesOccupancy.to_csv(f'RESOURCES_OCCUPANCY_HACKED_{USE_DEVICE_HACKING}.csv', header=True, index=False)
 
     # Save the results
     DATASET_LOGS.to_csv(f'DATASET_LOGS_HACKED_{USE_DEVICE_HACKING}.csv', header=True, index=False)
@@ -395,6 +429,7 @@ def main():
     DATASET_LOGS_503 = DATASET_LOGS[DATASET_LOGS['response'] == 503]
 
     print(f"Database stats: 200:{len(DATASET_LOGS_normal)}, 503:{len(DATASET_LOGS_503)}, 000:{len(DATASET_LOGS_timeout)}")
+
 
 if __name__ == "__main__":
     main()
