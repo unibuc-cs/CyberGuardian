@@ -5679,6 +5679,758 @@
     "title": "SafeAccess+: An Intelligent System to make Smart Home Safer and Americans with Disability Act Compliant",
     "url": "https://arxiv.org/abs/2110.09273"
   },
+
+  {
+    "tags": ["Blockchain"],
+    "title": "Analysis of Blockchain Integration in the e-Healthcare Ecosystem",
+    "url": "https://arxiv.org/abs/2401.03848"
+  },  
+  {
+    "tags": ["Blockchain"],
+    "title": "Privacy-Preserving in Blockchain-based Federated Learning Systems",
+    "url": "https://arxiv.org/abs/2401.03552"
+  },  
+  {
+    "tags": ["Blockchain"],
+    "title": "Detecting Anomalies in Blockchain Transactions using Machine Learning Classifiers and Explainability Analysis",
+    "url": "https://arxiv.org/abs/2401.03530"
+  }, 
+  {
+    "tags": ["Blockchain"],
+    "title": "PPBFL: A Privacy Protected Blockchain-based Federated Learning Model",
+    "url": "https://arxiv.org/abs/2401.01204"
+  }, 
+  {
+    "tags": ["Blockchain"],
+    "title": "TBDD: A New Trust-based, DRL-driven Framework for Blockchain Sharding in IoT",
+    "url": "https://arxiv.org/abs/2401.00632"
+  }, 
+  {
+    "tags": ["Blockchain"],
+    "title": "Blockchain and Deep Learning-Based IDS for Securing SDN-Enabled Industrial IoT Environments",
+    "url": "https://arxiv.org/abs/2401.00468"
+  },  
+  {
+    "tags": ["Blockchain"],
+    "title": "Addressing Trust Challenges in Blockchain Oracles Using Asymmetric Byzantine Quorums",
+    "url": "https://arxiv.org/abs/2401.00175"
+  },  
+  {
+    "tags": ["Blockchain"],
+    "title": "Blockchain-based Privacy-Preserving Public Key Searchable Encryption with Strong Traceability",
+    "url": "https://arxiv.org/abs/2312.16954"
+  }, 
+  {
+    "tags": ["Blockchain"],
+    "title": "ANKA: A Decentralized Blockchain-based Energy Marketplace for Battery-powered Devices",
+    "url": "https://arxiv.org/abs/2312.16870"
+  }, 
+  {
+    "tags": ["Blockchain"],
+    "title": "Blockchain-Envisioned Post-Quantum Secure Sanitizable Signature for Audit Logs Management",
+    "url": "https://arxiv.org/abs/2312.16322"
+  }, 
+  {
+    "tags": ["Blockchain"],
+    "title": "Cross-border Exchange of CBDCs using Layer-2 Blockchain",
+    "url": "https://arxiv.org/abs/2312.16193"
+  },  
+  {
+    "tags": ["Blockchain"],
+    "title": "Challenges of Blockchain adoption in financial services in China's Greater Bay Area",
+    "url": "https://arxiv.org/abs/2312.15573"
+  },  
+  {
+    "tags": ["Blockchain"],
+    "title": "Blockchain Smart Contract Threat Detection Technology Based on Symbolic Execution",
+    "url": "https://arxiv.org/abs/2312.15392"
+  }, 
+  {
+    "tags": ["Blockchain"],
+    "title": "Dynamic Mining Interval to Improve Blockchain Throughput",
+    "url": "https://arxiv.org/abs/2312.14038"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity in Critical Infrastructures: A Post-Quantum Cryptography Perspective",
+    "url": "https://arxiv.org/abs/2401.03780"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Cybersecurity Risk Analysis Framework for Systems with Artificial Intelligence Component",
+    "url": "https://arxiv.org/abs/2401.01630"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Taxonomy for Cybersecurity Threat Attributes and Countermeasures in Smart Manufacturing Systems",
+    "url": "https://arxiv.org/abs/2401.01374"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Tensor Networks for Explainable Machine Learning in Cybersecurity",
+    "url": "https://arxiv.org/abs/2401.00867"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity in Motion: A Survey of Challenges and Requirements for Future Test Facilities of CAVs",
+    "url": "https://arxiv.org/abs/2312.14687"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Fortify Your Defenses: Strategic Budget Allocation to Enhance Power Grid Cybersecurity",
+    "url": "https://arxiv.org/abs/2312.13476"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Designing Cybersecurity Awareness Solutions for the Young People in Rural Developing Countries: The Need for Diversity and Inclusion",
+    "url": "https://arxiv.org/abs/2312.12073"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity threats in FinTech: A systematic review",
+    "url": "https://arxiv.org/abs/2312.01752"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Acoustic Cybersecurity: Exploiting Voice-Activated Systems",
+    "url": "https://arxiv.org/abs/2312.00039"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Hypergraph Topological Features for Autoencoder-Based Intrusion Detection for Cybersecurity Data",
+    "url": "https://arxiv.org/abs/2312.00023"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Data Driven Approaches to Cybersecurity Governance for Board Decision-Making -- A Systematic Review",
+    "url": "https://arxiv.org/abs/2311.17578"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Understanding the Process of Data Labeling in Cybersecurity",
+    "url": "https://arxiv.org/abs/2311.16388"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "SDN-Based Dynamic Cybersecurity Framework of IEC-61850 Communications in Smart Grid",
+    "url": "https://arxiv.org/abs/2311.12205"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "SPLAIN: Augmenting Cybersecurity Warnings with Reasons and Data",
+    "url": "https://arxiv.org/abs/2311.11215"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Practical Cybersecurity Ethics: Mapping CyBOK to Ethical Concerns",
+    "url": "https://arxiv.org/abs/2311.10165"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Graph models for Cybersecurity -- A Survey",
+    "url": "https://arxiv.org/abs/2311.10050"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "The Cybersecurity Crisis of Artificial Intelligence: Unrestrained Adoption and Natural Language-Based Attacks",
+    "url": "https://arxiv.org/abs/2311.09224"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "With ChatGPT, do we have to rewrite our learning objectives -- CASE study in Cybersecurity",
+    "url": "https://arxiv.org/abs/2311.06261"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "ChatGPT and other Large Language Models for Cybersecurity of Smart Grid Applications",
+    "url": "https://arxiv.org/abs/2311.05462"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Educating for AI Cybersecurity Work and Research: Ethics, Systems Thinking, and Communication Requirements",
+    "url": "https://arxiv.org/abs/2311.04326"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "The New Frontier of Cybersecurity: Emerging Threats and Innovations",
+    "url": "https://arxiv.org/abs/2311.02630"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Review of Digital Twins and their Application in Cybersecurity based on Artificial Intelligence",
+    "url": "https://arxiv.org/abs/2311.01154"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Artificial Intelligence Ethics Education in Cybersecurity: Challenges and Opportunities: a focus group report",
+    "url": "https://arxiv.org/abs/2311.00903"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Intell-dragonfly: A Cybersecurity Attack Surface Generation Engine Based On Artificial Intelligence-generated Content Technology",
+    "url": "https://arxiv.org/abs/2311.00240"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "AI Potentiality and Awareness: A Position Paper from the Perspective of Human-AI Teaming in Cybersecurity",
+    "url": "https://arxiv.org/abs/2310.12162"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "White paper on cybersecurity in the healthcare sector. The HEIR solution",
+    "url": "https://arxiv.org/abs/2310.10139"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity as a Crosscutting Concept Across an Undergrad Computer Science Curriculum: An Experience Report",
+    "url": "https://arxiv.org/abs/2310.07625"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Survey of Data Security: Practices from Cybersecurity and Challenges of Machine Learning",
+    "url": "https://arxiv.org/abs/2310.04513"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "CyMed: A Framework for Testing Cybersecurity of Connected Medical Devices",
+    "url": "https://arxiv.org/abs/2310.03583"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Easier Said Than Done: The Failure of Top-Level Cybersecurity Advice for Consumer IoT Devices",
+    "url": "https://arxiv.org/abs/2310.00942"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Unaware, Unfunded and Uneducated: A Systematic Review of SME Cybersecurity",
+    "url": "https://arxiv.org/abs/2309.17186"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Digital Twins and the Future of their Use Enabling Shift Left and Shift Right Cybersecurity Operations",
+    "url": "https://arxiv.org/abs/2309.13612"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "The Rise and Fall of Cryptocurrencies: Defining the Economic and Social Values of Blockchain Technologies, assessing the Opportunities, and defining the Financial and Cybersecurity Risks of the Metaverse",
+    "url": "https://arxiv.org/abs/2309.12322"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Systemization of Knowledge (SoK)- Cross Impact of Transfer Learning in Cybersecurity: Offensive, Defensive and Threat Intelligence Perspectives",
+    "url": "https://arxiv.org/abs/2309.05889"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Unveiling the Sentinels: Assessing AI Performance in Cybersecurity Peer Review",
+    "url": "https://arxiv.org/abs/2309.05457"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Designing a Security System Administration Course for Cybersecurity with a Companion Project",
+    "url": "https://arxiv.org/abs/2309.01839"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Towards Low-Barrier Cybersecurity Research and Education for Industrial Control Systems",
+    "url": "https://arxiv.org/abs/2308.16769"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Using Large Language Models for Cybersecurity Capture-The-Flag Challenges and Certification Questions",
+    "url": "https://arxiv.org/abs/2308.10443"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "An AI-Driven VM Threat Prediction Model for Multi-Risks Analysis-Based Cloud Cybersecurity",
+    "url": "https://arxiv.org/abs/2308.09578"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "The Future of Cybersecurity in Southeast Asia along the Maritime Silk Road",
+    "url": "https://arxiv.org/abs/2308.06963"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Data-Driven Intelligence can Revolutionize Today's Cybersecurity World: A Position Paper",
+    "url": "https://arxiv.org/abs/2308.05126"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Assessment of POS Owners Awareness of Cybersecurity and Insider Threats in POS Kiosks Related Financial Crimes",
+    "url": "https://arxiv.org/abs/2308.04447"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Knowledge-enhanced Neuro-Symbolic AI for Cybersecurity and Privacy",
+    "url": "https://arxiv.org/abs/2308.02031"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Introducing and Interfacing with Cybersecurity -- A Cards Approach",
+    "url": "https://arxiv.org/abs/2307.16535"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Ensemble Learning based Anomaly Detection for IoT Cybersecurity via Bayesian Hyperparameters Sensitivity Analysis",
+    "url": "https://arxiv.org/abs/2307.10596"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Student Assessment in Cybersecurity Training Automated by Pattern Mining and Clustering",
+    "url": "https://arxiv.org/abs/2307.10260"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Design and Execution Challenges for Cybersecurity Serious Games: An Overview",
+    "url": "https://arxiv.org/abs/2307.09401"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Applications of Educational Data Mining and Learning Analytics on Data From Cybersecurity Training",
+    "url": "https://arxiv.org/abs/2307.08582"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Want to Raise Cybersecurity Awareness? Start with Future IT Professionals",
+    "url": "https://arxiv.org/abs/2307.07608"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Smart Environment for Adaptive Learning of Cybersecurity Skills",
+    "url": "https://arxiv.org/abs/2307.05281"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "From ChatGPT to ThreatGPT: Impact of Generative AI in Cybersecurity and Privacy",
+    "url": "https://arxiv.org/abs/2307.00691"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Towards Grammatical Tagging for the Legal Language of Cybersecurity",
+    "url": "https://arxiv.org/abs/2306.17042"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Improvise, Adapt, Overcome: Dynamic Resiliency Against Unknown Attack Vectors in Microgrid Cybersecurity Games",
+    "url": "https://arxiv.org/abs/2306.15106"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "ChatIDS: Explainable Cybersecurity Using Generative AI",
+    "url": "https://arxiv.org/abs/2306.14504"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Chatbots to ChatGPT in a Cybersecurity Space: Evolution, Vulnerabilities, Attacks, Challenges, and Future Recommendations",
+    "url": "https://arxiv.org/abs/2306.09255"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Space Cybersecurity Norms",
+    "url": "https://arxiv.org/abs/2306.07441"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity Training for Users of Remote Computing",
+    "url": "https://arxiv.org/abs/2306.07192"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Disinformation 2.0 in the Age of AI: A Cybersecurity Perspective",
+    "url": "https://arxiv.org/abs/2306.05569"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Development of a Multi-purpose Fuzzer to Perform Assessment as Input to a Cybersecurity Risk Assessment and Analysis System",
+    "url": "https://arxiv.org/abs/2306.04284"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Learning to Defend by Attacking (and Vice-Versa): Transfer of Learning in Cybersecurity Games",
+    "url": "https://arxiv.org/abs/2306.02165"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Case Study-Based Approach of Quantum Machine Learning in Cybersecurity: Quantum Support Vector Machine for Malware Classification and Protection",
+    "url": "https://arxiv.org/abs/2306.00284"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Adversarial Machine Learning and Cybersecurity: Risks, Challenges, and Legal Implications",
+    "url": "https://arxiv.org/abs/2305.14553"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Four Factor Authentication with emerging cybersecurity for Mobile Transactions",
+    "url": "https://arxiv.org/abs/2305.09740"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Serious Game for Simulating Cyberattacks to Teach Cybersecurity",
+    "url": "https://arxiv.org/abs/2305.03062"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Systematization of Cybersecurity Regulations, Standards and Guidelines for the Healthcare Sector",
+    "url": "https://arxiv.org/abs/2304.14955"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "ThreatCrawl: A BERT-based Focused Crawler for the Cybersecurity Domain",
+    "url": "https://arxiv.org/abs/2304.11960"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Exploring the visualisation of hierarchical cybersecurity data within the Metaverse",
+    "url": "https://arxiv.org/abs/2304.10542"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "SECAdvisor: a Tool for Cybersecurity Planning using Economic Models",
+    "url": "https://arxiv.org/abs/2304.07909"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Few-shot Weakly-supervised Cybersecurity Anomaly Detection",
+    "url": "https://arxiv.org/abs/2304.07470"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Graph Mining for Cybersecurity: A Survey",
+    "url": "https://arxiv.org/abs/2304.00485"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Illuminati: Towards Explaining Graph Neural Networks for Cybersecurity Analysis",
+    "url": "https://arxiv.org/abs/2303.14836"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Novel Approach to the Behavioral Aspects of Cybersecurity",
+    "url": "https://arxiv.org/abs/2303.13621"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Survey on Explainable Artificial Intelligence for Cybersecurity",
+    "url": "https://arxiv.org/abs/2303.12942"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Feature Reduction Method Comparison Towards Explainability and Efficiency in Cybersecurity Intrusion Detection Systems",
+    "url": "https://arxiv.org/abs/2303.12891"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Building a Resilient Cybersecurity Posture: A Framework for Leveraging Prevent, Detect and Respond Functions and Law Enforcement Collaboration",
+    "url": "https://arxiv.org/abs/2303.10874"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Prompt-Based Learning for Thread Structure Prediction in Cybersecurity Forums",
+    "url": "https://arxiv.org/abs/2303.05400"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity of AI medical devices: risks, legislation, and challenges",
+    "url": "https://arxiv.org/abs/2303.03140"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Explainable Artificial Intelligence and Cybersecurity: A Systematic Literature Review",
+    "url": "https://arxiv.org/abs/2303.01259"
+  },   
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Implementing Active Learning in Cybersecurity: Detecting Anomalies in Redacted Emails",
+    "url": "https://arxiv.org/abs/2303.00870"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Bridging the Bubbles: Connecting Academia and Industry in Cybersecurity Research",
+    "url": "https://arxiv.org/abs/2302.13955"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity Challenges of Power Transformers",
+    "url": "https://arxiv.org/abs/2302.13161"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Harnessing the Speed and Accuracy of Machine Learning to Advance Cybersecurity",
+    "url": "https://arxiv.org/abs/2302.12415"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Exploring the Limits of Transfer Learning with Unified Model in the Cybersecurity Domain",
+    "url": "https://arxiv.org/abs/2302.10346"
+  },   
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity of COSPAS-SARSAT and EPIRB: threat and attacker models, exploits, future research",
+    "url": "https://arxiv.org/abs/2302.08361"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Towards a Unified Cybersecurity Testing Lab for Satellite, Aerospace, Avionics, Maritime, Drone (SAAMD) technologies and communications",
+    "url": "https://arxiv.org/abs/2302.08359"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "AI Security Threats against Pervasive Robotic Systems: A Course for Next Generation Cybersecurity Workforce",
+    "url": "https://arxiv.org/abs/2302.07953"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "An Assessment Methodology and Instrument for Cybersecurity: The Ireland Use Case",
+    "url": "https://arxiv.org/abs/2302.05166"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Towards a Contemporary Definition of Cybersecurity",
+    "url": "https://arxiv.org/abs/2302.02274"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Bi-Level Stochastic Game Model for PMU Placement in Power Grid with Cybersecurity Risks",
+    "url": "https://arxiv.org/abs/2301.13712"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity Threat Hunting and Vulnerability Analysis Using a Neo4j Graph Database of Open Source Intelligence",
+    "url": "https://arxiv.org/abs/2301.12013"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Graph-Theoretic Approach for Manufacturing Cybersecurity Risk Modeling and Assessment",
+    "url": "https://arxiv.org/abs/2301.07305"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Review, Meta-Taxonomy, and Use Cases of Cyberattack Taxonomies of Manufacturing Cybersecurity Threat Attributes and Countermeasures",
+    "url": "https://arxiv.org/abs/2301.07303"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "AdvCat: Domain-Agnostic Robustness Assessment for Cybersecurity-Critical Applications with Categorical Inputs",
+    "url": "https://arxiv.org/abs/2212.13989"
+  },   
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Defending against cybersecurity threats to the payments and banking system",
+    "url": "https://arxiv.org/abs/2212.12307"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Role of Cybersecurity and Blockchain in Battlefield of Things",
+    "url": "https://arxiv.org/abs/2212.11562"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Ensemble learning techniques for intrusion detection system in the context of cybersecurity",
+    "url": "https://arxiv.org/abs/2212.10913"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "CySecBERT: A Domain-Adapted Language Model for the Cybersecurity Domain",
+    "url": "https://arxiv.org/abs/2212.02974"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Investigating the Cybersecurity of Smart Grids Based on Cyber-Physical Twin Approach",
+    "url": "https://arxiv.org/abs/2211.10974"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Secure Robotics: A Definition and a Brief Review from a Cybersecurity Control and Implementation Methodology Perspective",
+    "url": "https://arxiv.org/abs/2211.07149"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Building Resilience in Cybersecurity -- An Artificial Lab Approach",
+    "url": "https://arxiv.org/abs/2211.04762"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Building Resilience in Cybersecurity -- An Artificial Lab Approach",
+    "url": "https://arxiv.org/abs/2211.04762"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity in the Smart Grid: Practitioners' Perspective",
+    "url": "https://arxiv.org/abs/2210.13119"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Adopting the Cybersecurity Concepts into Curriculum The Potential Effects on Students Cybersecurity Knowledge",
+    "url": "https://arxiv.org/abs/2209.10407"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Artificial Intelligence for Cybersecurity: Threats, Attacks and Mitigation",
+    "url": "https://arxiv.org/abs/2209.13454"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Identifying Emerging Technologies and Leading Companies using Network Dynamics of Patent Clusters: a Cybersecurity Case Study",
+    "url": "https://arxiv.org/abs/2209.10224"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Framework for Preserving Privacy and Cybersecurity in Brain-Computer Interfacing Applications",
+    "url": "https://arxiv.org/abs/2209.09653"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Hyperloop: A Cybersecurity Perspective",
+    "url": "https://arxiv.org/abs/2209.03095"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Orchestrating Collaborative Cybersecurity: A Secure Framework for Distributed Privacy-Preserving Threat Intelligence Sharing",
+    "url": "https://arxiv.org/abs/2209.02676"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Improving the Cybersecurity of Critical National Infrastructure using Modelling and Simulation",
+    "url": "https://arxiv.org/abs/2208.07965"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cyber Pirates Ahoy! An Analysis of Cybersecurity Challenges in the Shipping Industry",
+    "url": "https://arxiv.org/abs/2208.03607"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Contrasting global approaches for identifying and managing cybersecurity risks in supply chains",
+    "url": "https://arxiv.org/abs/2208.02244"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "The Role of Diversity in Cybersecurity Risk Analysis: An Experimental Plan",
+    "url": "https://arxiv.org/abs/2208.01895"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "'PeriHack': Designing a Serious Game for Cybersecurity Awareness",
+    "url": "https://arxiv.org/abs/2208.00235"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Scalable Cyber-Physical Testbed for Cybersecurity Evaluation of Synchrophasors in Power Systems",
+    "url": "https://arxiv.org/abs/2207.12610"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Economics and Optimal Investment Policies of Attackers and Defenders in Cybersecurity",
+    "url": "https://arxiv.org/abs/2207.09497"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Review of Quantum Cybersecurity: Threats, Risks and Opportunities",
+    "url": "https://arxiv.org/abs/2207.03534"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity Discussions in Stack Overflow: A Developer-Centred Analysis of Engagement and Self-Disclosure Behaviour",
+    "url": "https://arxiv.org/abs/2207.01529"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity Entity Alignment via Masked Graph Attention Networks",
+    "url": "https://arxiv.org/abs/2207.01434"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity: Past, Present and Future",
+    "url": "https://arxiv.org/abs/2207.01227"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "The Dangers of Computational Law and Cybersecurity; Perspectives from Engineering and the AI Act",
+    "url": "https://arxiv.org/abs/2207.00295"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Efficient Collective Action for Tackling Time-Critical Cybersecurity Threats",
+    "url": "https://arxiv.org/abs/2206.15055"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "The Role of Machine Learning in Cybersecurity",
+    "url": "https://arxiv.org/abs/2206.09707"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Cybersecurity Law: Legal Jurisdiction and Authority",
+    "url": "https://arxiv.org/abs/2206.09465"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Capture the Flag for Team Construction in Cybersecurity",
+    "url": "https://arxiv.org/abs/2206.08971"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "XAI for Cybersecurity: State of the Art, Challenges, Open Issues and Future Directions",
+    "url": "https://arxiv.org/abs/2206.03585"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Blockchain for the Cybersecurity of Smart City Applications",
+    "url": "https://arxiv.org/abs/2206.02760"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Deep Reinforcement Learning for Cybersecurity Threat Detection and Protection: A Review",
+    "url": "https://arxiv.org/abs/2206.02733"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "The Opportunity to Regulate Cybersecurity in the EU (and the World): Recommendations for the Cybersecurity Resilience Act",
+    "url": "https://arxiv.org/abs/2205.13196"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Distributed Energy Resources Cybersecurity Outlook: Vulnerabilities, Attacks, Impacts, and Mitigations",
+    "url": "https://arxiv.org/abs/2205.11171"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Heterogeneous Domain Adaptation with Adversarial Neural Representation Learning: Experiments on E-Commerce and Cybersecurity",
+    "url": "https://arxiv.org/abs/2205.07853"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Towards a Cybersecurity Testbed for Agricultural Vehicles and Environments",
+    "url": "https://arxiv.org/abs/2205.05866"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Towards Understanding the Skill Gap in Cybersecurity",
+    "url": "https://arxiv.org/abs/2204.13793"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Sentiment Analysis of Cybersecurity Content on Twitter and Reddit",
+    "url": "https://arxiv.org/abs/2204.12267"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "A Method Based on Deep Learning for the Detection and Characterization of Cybersecurity Incidents in Internet of Things Devices",
+    "url": "https://arxiv.org/abs/2203.00608"
+  }, 
+  {
+    "tags": ["Cybersecurity"],
+    "title": "Process Mining Analysis of Puzzle-Based Cybersecurity Training",
+    "url": "https://arxiv.org/abs/2203.15425"
+  },  
+  {
+    "tags": ["Cybersecurity"],
+    "title": "SecureBERT: A Domain-Specific Language Model for Cybersecurity",
+    "url": "https://arxiv.org/abs/2204.02685"
+  }, 
+
   {
     "folder": "data/other_papers"
   },
