@@ -1,4 +1,3 @@
-# https://realpython.com/simpy-simulating-with-python/
 import time
 
 import pandas
@@ -16,6 +15,7 @@ import pandas as pd
 from enum import IntEnum
 from datetime import datetime
 import string
+import numpy as np
 
 ################ GENERATOR FUNCTIONS #################
 MAX_IPV4 = ipaddress.IPv4Address._ALL_ONES  # 2 ** 32 - 1
@@ -49,8 +49,8 @@ DATASET_LOGS = pd.DataFrame({
     "start_t": pd.Series(dtype=int),
     "end_t": pd.Series(dtype=int),
     "ip": pd.Series(dtype='str'),
-    "long": pd.Series(dtype='str'),
-    "lat": pd.Series(dtype='str'),
+    "lat": pd.Series(dtype=float),
+    "lon": pd.Series(dtype=float),
     "request_type": pd.Series(dtype=int),
     "request_params": str,
     "response": pd.Series(dtype=int)})
@@ -63,19 +63,19 @@ def random_ipv4():
 
 
 class Loc:
-    def __init__(self, long, lat):
+    def __init__(self, lat, long):
         self.long = long
         self.lat = lat
 
 
 def generate_random_LocData(lat, lon, num_rows) -> List[Loc]:
     res = []
-    for _ in range(num_rows):
-        hex1 = '%012x' % random.randrange(16 ** 12)  # 12 char random string
-        flt = float(random.randint(0, 100))
-        dec_lat = random.random() / 100
-        dec_lon = random.random() / 100
-        res.append(Loc(lon + dec_lon, lat + dec_lat))
+    flt = np.random.randn(num_rows, 2)
+    for index in range(num_rows):
+
+        dec_lat = flt[index, 0] / 25
+        dec_lon = flt[index, 1] / 25
+        res.append(Loc(lat + dec_lat, lon + dec_lon))
     return res
 
 
@@ -135,17 +135,19 @@ class IoTDevice(object):
                 else:
                     res = False
 
-            DATASET_LOGS.loc[len(DATASET_LOGS)] = {
-                "id": self.id,
-                "start_t": cycle_start_time,
-                "end_t": self.env.now,
-                "ip": self.IP,
-                "long": self.loc_long,
-                "lat": self.loc_lat,
-                "request_type": RequestType.REQ_GET,
-                "request_params": f"data_{cycle_start_time / 100.0:.2f}" if not self.isHacked
-                else gen_random_word(random.randint(5, 10)),
-                "response": random.choice([503, 000]) if res is False else 200}
+            num_iters = 2 if res is False else 1
+            for _ in range(num_iters):
+                DATASET_LOGS.loc[len(DATASET_LOGS)] = {
+                    "id": self.id,
+                    "start_t": cycle_start_time,
+                    "end_t": self.env.now,
+                    "ip": self.IP,
+                    "lat": float(self.loc_lat),
+                    "lon": float(self.loc_long),
+                    "request_type": RequestType.REQ_GET,
+                    "request_params": f"data_{cycle_start_time / 100.0:.2f}" if not self.isHacked
+                    else gen_random_word(random.randint(5, 10)),
+                    "response": random.choice([503, 000]) if res is False else 200}
 
     def run_send_update(self):
         while True:
@@ -172,16 +174,18 @@ class IoTDevice(object):
                     res = False
             # print(f"device: {self.id} ended to update metrics at {self.env.now}")
 
-            DATASET_LOGS.loc[len(DATASET_LOGS)] = {
-                "id": self.id,
-                "start_t": cycle_start_time,
-                "end_t": self.env.now,
-                "ip": self.IP,
-                "long": self.loc_long,
-                "lat": self.loc_lat,
-                "request_type": RequestType.REQ_PUT,
-                "request_params": f"metric_update{cycle_start_time / 100.0:.2f}",
-                "response": random.choice([503, 000]) if res is False else 200}
+            num_iters = 2 if res is False else 1
+            for _ in range(num_iters):
+                DATASET_LOGS.loc[len(DATASET_LOGS)] = {
+                    "id": self.id,
+                    "start_t": cycle_start_time,
+                    "end_t": self.env.now,
+                    "ip": self.IP,
+                    "lat": float(self.loc_lat),
+                    "lon": float(self.loc_long),
+                    "request_type": RequestType.REQ_PUT,
+                    "request_params": f"metric_update{cycle_start_time / 100.0:.2f}",
+                    "response": random.choice([503, 000]) if res is False else 200}
 
     def startHack(self):
         self.isHacked = True
@@ -326,8 +330,8 @@ class IoTHub(object):
                 "start_t": start_t,
                 "end_t": self.env.now,
                 "ip": self.IP,
-                "long": self.loc_long,
-                "lat": self.loc_lat,
+                "lat": str(self.loc_lat),
+                "lon": str(self.loc_long),
                 "request_type": RequestType.REQ_PUT,
                 "request_params": "statusupdatelog",
                 "response": 200}
@@ -362,7 +366,7 @@ def generateRandomDeployment(env: simpy.Environment,
 
     # Generate each device type for each home
     for houseIndex in range(nhouses):
-        loc = locations[houseIndex].lat
+        lat = locations[houseIndex].lat
         long = locations[houseIndex].long
 
         network = IPv4Network(baseIpAddresses[houseIndex])
@@ -370,13 +374,13 @@ def generateRandomDeployment(env: simpy.Environment,
 
         ips = generate_random_ipAddresses(5)
 
-        tv = IoTDeviceSmartTV(env, ips[0], fixedPort, globalHub, f"{houseIndex}_tv", loc, long)
-        brush = IoTDeviceSmartBrush(env, ips[1], fixedPort, globalHub, f"{houseIndex}_brush", loc, long)
-        window = IoTDeviceSmartWindow(env, ips[2], fixedPort, globalHub, f"{houseIndex}_window", loc,
+        tv = IoTDeviceSmartTV(env, ips[0], fixedPort, globalHub, f"{houseIndex}_tv", lat, long)
+        brush = IoTDeviceSmartBrush(env, ips[1], fixedPort, globalHub, f"{houseIndex}_brush", lat, long)
+        window = IoTDeviceSmartWindow(env, ips[2], fixedPort, globalHub, f"{houseIndex}_window", lat,
                                       long)
-        flower = IoTDeviceSmartFlower(env, ips[3], fixedPort, globalHub, f"{houseIndex}_flower", loc,
+        flower = IoTDeviceSmartFlower(env, ips[3], fixedPort, globalHub, f"{houseIndex}_flower", lat,
                                       long)
-        kettle = IoTDeviceSmartKettle(env, ips[4], fixedPort, globalHub, f"{houseIndex}_kettle", loc,
+        kettle = IoTDeviceSmartKettle(env, ips[4], fixedPort, globalHub, f"{houseIndex}_kettle", lat,
                                       long)
 
         devicesOnThisHouse = [tv, brush, window, flower, kettle]
