@@ -25,14 +25,16 @@ MAX_IPV6 = ipaddress.IPv6Address._ALL_ONES  # 2 ** 128 - 1
 METRICS_UPDATE_TIMEOUT = 200
 METRICS_GET_DATA_TIMEOUT = 150
 
-NHOUSES = 10
+NHOUSES = 30
 
 # If used, the device hacking will try to crawl the database with random searches using GET
 # Too many will basically block the server eventually
-USE_DEVICE_HACKING = False
+USE_DEVICE_HACKING = True
 START_TIME_HACKING = (60 * 60 * 10)  # At 10:00 AM
-PERCENT_OF_HACKED_DEVICES = 0.5  # Approximately 20% of devices
-NUM_DEVICES_TO_HACK = int((NHOUSES * 5) * PERCENT_OF_HACKED_DEVICES)
+PERCENT_OF_HACKED_DEVICES = 0.5  # Approximately 50% of devices
+PERCENT_OF_HACKED_HOUSES = 0.3 # 30%
+NUM_DEVICES_TO_HACK_PER_HOUSE = int(5 * PERCENT_OF_HACKED_DEVICES) # 5 is here because we have 5 IoT apps
+NUM_HOUSES_TO_HACK = int(NHOUSES * 0.5)
 
 gen_random_word = lambda n: ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(n))
 
@@ -73,8 +75,8 @@ def generate_random_LocData(lat, lon, num_rows) -> List[Loc]:
     flt = np.random.randn(num_rows, 2)
     for index in range(num_rows):
 
-        dec_lat = flt[index, 0] / 25
-        dec_lon = flt[index, 1] / 25
+        dec_lat = flt[index, 0] / 10
+        dec_lon = flt[index, 1] / 10
         res.append(Loc(lat + dec_lat, lon + dec_lon))
     return res
 
@@ -174,7 +176,7 @@ class IoTDevice(object):
                     res = False
             # print(f"device: {self.id} ended to update metrics at {self.env.now}")
 
-            num_iters = 2 if res is False else 1
+            num_iters = 1 if res is False else 1
             for _ in range(num_iters):
                 DATASET_LOGS.loc[len(DATASET_LOGS)] = {
                     "id": self.id,
@@ -338,10 +340,10 @@ class IoTHub(object):
 
 
 class IoTHacker(object):
-    def __init__(self, env: simpy.Environment, timeToStartHackingAt: int, numDevicesToHack: int) -> None:
+    def __init__(self, env: simpy.Environment, timeToStartHackingAt: int, numHousesToHack: int) -> None:
         self.env = env
         self.timeToStartHackingAt = timeToStartHackingAt
-        self.numDevicesToHack = numDevicesToHack
+        self.numHousesToHack = numHousesToHack
 
         self.action = self.env.process(self.run())
 
@@ -350,9 +352,17 @@ class IoTHacker(object):
         yield self.env.timeout(self.timeToStartHackingAt)
 
         # Then start
-        devicesToHack = random.sample(allDevices, k=self.numDevicesToHack)
-        for device in devicesToHack:
-            device.startHack()
+        allHouseKeys = allDevicesByHouse.keys()
+        housesToHack = random.sample(sorted(allHouseKeys), k=self.numHousesToHack)
+
+        for houseKey in housesToHack:
+            allDevicesByHackedHouse = allDevicesByHouse[houseKey]
+
+            numDevicesToHackOnThisHouse = random.randint(1, len(allDevicesByHackedHouse))
+            random.sample(sorted(allDevicesByHouse), k=numDevicesToHackOnThisHouse)
+
+            for device in allDevicesByHackedHouse:
+                device.startHack()
 
 
 def generateRandomDeployment(env: simpy.Environment,
@@ -396,6 +406,7 @@ def generateRandomDeployment(env: simpy.Environment,
 def main():
     # Setup
     random.seed(42)
+    np.random.seed(42)
 
     # Create environment
     env = simpy.Environment()
@@ -404,7 +415,7 @@ def main():
     central_long = 26.10414240626916
 
     # Create central hub
-    hub = IoTHub(env, num_loggers=15, num_store_metrics=15, num_rules_processors=2,
+    hub = IoTHub(env, num_loggers=33, num_store_metrics=33, num_rules_processors=2,
                  ip="127.128.23.45", long=str(26.10414240626916), lat=str(44.42810022576185))
 
     hub.start()
@@ -418,10 +429,10 @@ def main():
 
     # Create the hacker if needed
     if USE_DEVICE_HACKING:
-        hacker = IoTHacker(env, timeToStartHackingAt=START_TIME_HACKING, numDevicesToHack=NUM_DEVICES_TO_HACK)
+        hacker = IoTHacker(env, timeToStartHackingAt=START_TIME_HACKING, numHousesToHack=NUM_HOUSES_TO_HACK)
 
     # Run the simulation
-    env.run(until=46400)#86400)
+    env.run(until=86400)
 
     hub.resourcesOccupancy.to_csv(f'RESOURCES_OCCUPANCY_HACKED_{USE_DEVICE_HACKING}.csv', header=True, index=False)
 
