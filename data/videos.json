@@ -315,5 +315,606 @@
   {
     "id": "D0vR6YNRCww",
     "title": "How to defend against denial-of-service attacks with Azure DDoS Protection | Azure Friday"
-  }
+  },
+
+  {
+    "id": "Y6Ue5hQ9meM",
+    "title": "Local Technologies for the Smart Home (Google I/O'19)"
+  },
+  {
+    "id": "yuXK_Jyosus",
+    "title": "Secure Protocols - SY0-601 CompTIA Security+ : 3.1"
+  },
+  {
+    "id": "E5bSumTAHZE",
+    "title": "Network Protocols - ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DNS, DHCP - Networking Fundamentals - L6"
+  },
+  {
+    "id": "zd0U1zNBYNk",
+    "title": "Network Security Model"
+  },
+  {
+    "id": "CsektxtqA8c",
+    "title": "TCP/IP Protocol Explained | What Is TCP/IP Address? | TCP/IP Configuration Tutorial | Simplilearn"
+  },
+  {
+    "id": "AQDCe585Lnc",
+    "title": "Asymmetric Encryption - Simply explained"
+  },
+  {
+    "id": "yubzJw0uiE4",
+    "title": "Blockchain In 7 Minutes | What Is Blockchain"
+  },
+  {
+    "id": "ZE2HxTmxfrI",
+    "title": "Smart contracts - Simply Explained"
+  },
+  {
+    "id": "GqWc-6ibbio",
+    "title": "Blockchain - The Engine of the Next Financial Revolution | Mauro Casellini | TEDxVaduz"
+  },
+  {
+    "id": "ueH44YiKHaQ",
+    "title": "Tech@Stern | Cryptocurrencies and BlockChain Research"
+  },
+  {
+    "id": "Ud3r6GV8_Jw",
+    "title": "Stanford Webinar - Cryptocurrencies and Blockchains: The Science Behind the Technology, Dan Boneh"
+  },
+  {
+    "id": "w7HDA8gUbpQ",
+    "title": "Blockchain Basics & Consensus"
+  },
+  {
+    "id": "zGDTt9Q3vyM",
+    "title": "Blockchain Basics & Transactions, UTXO and Script Code"
+  },
+  {
+    "id": "JPkgJwJHYSc",
+    "title": "Smart Contracts and DApps"
+  },
+  {
+    "id": "_eGNSuTBc60",
+    "title": "Blockchain Economics"
+  },
+  {
+    "id": "F4VvoVu0wiw",
+    "title": "The Blockchain and The New Architecture of Trust | Kevin Werbach | Talks at Google"
+  },
+  {
+    "id": "DsSzQfejwMk",
+    "title": "Trade Finance & Supply Chain"
+  },
+  {
+    "id": "LCeK_4o-NCc",
+    "title": "IOHK | Ouroboros Genesis: A Provably Secure Proof-of-Stake Blockchain Protocol"
+  },
+  {
+    "id": "1uwfzoAlkAM",
+    "title": "Justin Shi: Blockchain, Cryptocurrency și călcâiul lui Ahile în dezvoltarea software"
+  },
+  {
+    "id": "J9nv0Ol-R5Q",
+    "title": "Computer Security 161 Cryptocurrency Lecture"
+  },
+  {
+    "id": "GEdlNYOuswo",
+    "title": "Conversations | What Does Blockchain Mean for Ownership and Copyright?"
+  },
+  {
+    "id": "HXjToUWO568",
+    "title": "Blockchain for Data Analytics I (Blockchain for Big Data)"
+  },
+  {
+    "id": "yNv4cWZDnkU",
+    "title": "Complex Networks and Systems Research"
+  },
+  {
+    "id": "a-73fiVh1U8",
+    "title": "Research talk: Cloud networking for a post-Moore's Law era"
+  },
+  {
+    "id": "5N7QS5vP68o",
+    "title": "2017 Google Networking Research Summit Keynote Talks"
+  },
+  {
+    "id": "tMXQnpfRsnw",
+    "title": "Networking for Early Researchers"
+  },
+  {
+    "id": "VNp35Uw_bSM",
+    "title": "Cybersecurity Threat Hunting Explained"
+  },
+  {
+    "id": "4QzBdeUQ0Dc",
+    "title": "AI in Cybersecurity"
+  },
+  {
+    "id": "qNmeWrueKqg",
+    "title": "Cybersecurity and Space: Protecting Communications, Research and Beyond"
+  },
+  {
+    "id": "YFRK_sImKkQ",
+    "title": "Cybersecurity Awareness Training FY 22-23"
+  },
+  {
+    "id": "wmvYudieXFA",
+    "title": "Researching Cybersecurity Vulnerabilities | CyberAware Podcast Episode 6"
+  },
+  {
+    "id": "qvsokFROA2c",
+    "title": "Cybersecurity for Higher Education: A Data Breach Case Study"
+  },
+  {
+    "id": "ExULG36K_2E",
+    "title": "Evolution of Cybersecurity, Heather Hinton"
+  },
+  {
+    "id": "h0SXO5KUZIo",
+    "title": "Cybersecurity and Cyberwar: What Everyone Needs to Know | Peter Warren Singer | Talks at Google"
+  },
+  {
+    "id": "OdKd5KrkjJA",
+    "title": "From Artificial Intelligence to Cybersecurity and Cognitive Security "
+  },
+  {
+    "id": "ffnPecZWf1U",
+    "title": "Cybersecurity Officers Workshop | Cybersecurity in the Research Infrastructure Guide (RIG)"
+  },
+  {
+    "id": "Uh8MrRVkK5U",
+    "title": "From cybersecurity to cyber resilience: Towards a new CEO playbook"
+  },
+  {
+    "id": "SeUuPTBSSx8",
+    "title": "CSAW'21 Keynote | Cybersecurity: Keeping the Lights On, Dr. Martin Otto, Siemens Technology"
+  },
+  {
+    "id": "Rgl7C0P6NsE",
+    "title": "Cybersecurity Assets, Network Threats & Vulnerabilities | Google Cybersecurity Certificate"
+  },
+  {
+    "id": "MsGl6lX-YaI",
+    "title": "Cybersecurity IDR: Incident Detection & Response | Google Cybersecurity Certificate"
+  },
+  {
+    "id": "gRYoptCMOsg",
+    "title": "MSc Cybersecurity information webinar"
+  },
+  {
+    "id": "CTarM8ji8N0",
+    "title": "Science Unwrapped: Smart Cookies: AI and Machine Learning in Cybersecurity"
+  },
+  {
+    "id": "GqmQg-cszw4",
+    "title": "Introduction, Threat Models"
+  },
+  {
+    "id": "HNSRG6-xbYI",
+    "title": "Detecting and Defending against Cyber Threats - Module 1"
+  },
+  {
+    "id": "7fqqTzzM7Io",
+    "title": "Detecting and Defending against Cyber Threats - Module 2"
+  },
+  {
+    "id": "Fc27xaZKY3o",
+    "title": "Detecting and Defending against Cyber Threats - Module 3"
+  },
+  {
+    "id": "7oJlt4iRv0s",
+    "title": "Detecting and Defending against Cyber Threats - Module 4"
+  },
+  {
+    "id": "iedVFVTL9fA",
+    "title": "Avoiding hardware-based cybersecurity threats | Cyber Work Podcast"
+  },
+  {
+    "id": "34BtwcL7Mkg",
+    "title": "How To Manage Security Risks & Threats | Google Cybersecurity Certificate"
+  },
+  {
+    "id": "PtUYzYTxq-k",
+    "title": "Cloud security threat briefing with Mandiant"
+  },
+  {
+    "id": "gqtXp2b36yQ",
+    "title": "Identify and take action on critical insider threats"
+  },
+  {
+    "id": "OrIJMR4B_Gg",
+    "title": "Threat Intelligence: Applying Actionable Information to Current Threats"
+  },
+  {
+    "id": "cw5JkBJj6gE",
+    "title": "Threat Hunting — Demystified"
+  },
+  {
+    "id": "u4p-_p6DFC0",
+    "title": "Detecting Threats in Logs at Cloud Scale (Cloud Next '19)"
+  },
+  {
+    "id": "9IBgPOe8zrc",
+    "title": "Cloud Threat Modeling - from Architecture Design to Application Development"
+  },
+  {
+    "id": "q_nF5PSvFFM",
+    "title": "Stay ahead of API security threats with machine learning (ML) detection"
+  },
+  {
+    "id": "OpPqauWaoCw",
+    "title": "Cybersecurity and Healthcare Trends, Challenges, and Evolving Threats"
+  },
+  {
+    "id": "RLt05JaOnHc",
+    "title": "Use Threat Intelligence to Detect Malicious Activity in Azure Sentinel"
+  },
+  {
+    "id": "2tiZ89N4izc",
+    "title": "Internet Security Threats"
+  },
+  {
+    "id": "qeykhkcteOI",
+    "title": "Mitigating Cyber Threats - Reducing exposure and vulnerability"
+  },
+  {
+    "id": "0UvVOMZqpEA",
+    "title": "Blockchain Basics & Cryptography"
+  },
+  {
+    "id": "9TNI2wHmaeI",
+    "title": "Cryptography: Encryption"
+  },
+  {
+    "id": "KqqOXndnvic",
+    "title": "Cryptography: Hash Functions"
+  },
+  {
+    "id": "hhTc1tUgQRo",
+    "title": "Cryptography 101"
+  },
+  {
+    "id": "w704skq5q_8",
+    "title": "2011 Killian Lecture: Ronald L. Rivest, 'The Growth of Cryptography'"
+  },
+  {
+    "id": "sNPvO07l504",
+    "title": "1. Applied Cryptography and Trust: Cryptography Fundamentals (CSN11131)"
+  },
+  {
+    "id": "kdCI5UiVl04",
+    "title": "2. Applied Cryptography and Trust: Symmetric Key (CSN11131)"
+  },
+  {
+    "id": "RCArDEBXvW0",
+    "title": "3. Applied Cryptography and Trust: Hashing Methods (CSN11131)"
+  },
+  {
+    "id": "qoRCL3qDnXE",
+    "title": "4: Applied Cryptography and Trust: Public Key Encryption (CSN11131)"
+  },
+  {
+    "id": "CnYE43ZYCoE",
+    "title": "5. Applied Cryptography and Trust: Key Exchange"
+  },
+  {
+    "id": "AVp_QNfK38A",
+    "title": "6. Applied Cryptography and Trust: Digital Certificates and Signatures"
+  },
+  {
+    "id": "7cbITvLUp7o",
+    "title": "PNW PLSE Workshop: Featured Talk: Continuously Integrated Verified Cryptography"
+  },
+  {
+    "id": "djqxfq6PE0M",
+    "title": "ryptography for the Post-Quantum World with Dr. Brian LaMacchia"
+  },
+  {
+    "id": "PVHDIiqvBaU",
+    "title": "Fiat Cryptography: Automatic Correct-by-Construction Generation of Low-Level Cryptographic Code"
+  },
+  {
+    "id": "eHkmO7bFaSc",
+    "title": "Post-quantum cryptography from supersingular isogeny problems?"
+  },
+  {
+    "id": "7YTbf1KkvJs",
+    "title": "Quantum Algorithms for Number Theory and their Relevance to Cryptography"
+  },
+  {
+    "id": "OoiifCVvETE",
+    "title": "Internet Cryptography for the Quantum World"
+  },
+  {
+    "id": "DmemT_OPn2Q",
+    "title": "Lattice-Based Cryptography"
+  },
+  {
+    "id": "RPTDmUEzr4w",
+    "title": "Elliptic Nets with Applications to Cryptography"
+  },
+  {
+    "id": "Z8nyV15v2Ak",
+    "title": "Cryptography: From Theory to Practice"
+  },
+  {
+    "id": "DNWLb8bSoiQ",
+    "title": "ASM View of Abstract Cryptography"
+  },
+  {
+    "id": "xYgDHw8Pxnw",
+    "title": "Cryptography Resilient to Physical Attacks"
+  },
+  {
+    "id": "yK5fYfn6HJg",
+    "title": "Elliptic Curves, Cryptography and Computation"
+  },
+  {
+    "id": "cILgsAWC6b4",
+    "title": "Virtual Machine Reset Vulnerabilities; Subspace LWE; Cryptography Against Continuous Memory Attacks"
+  },
+  {
+    "id": "c6RKETvuZKU",
+    "title": "Predicate Encryption; Structured Encryption and Controlled Disclosure; Cloud Cryptography"
+  },
+  {
+    "id": "rQnaH4_3xG0",
+    "title": "Improving the Interface between Systems and Cryptography"
+  },
+  {
+    "id": "oRn-5giAQnk",
+    "title": "Side Channels and Clouds: New Challenges in Cryptography"
+  },
+  {
+    "id": "h4MLCFwfdzo",
+    "title": "Cryptography with Weak, Noisy, Leaky and Tempered Keys"
+  },
+  {
+    "id": "6gn8AfeRvA8",
+    "title": "Lattice-Based Cryptography"
+  },
+  {
+    "id": "pENf_Tuvn3s",
+    "title": "A Survey on Ring-LWE Cryptography"
+  },
+  {
+    "id": "38iKYPjdUY0",
+    "title": "Who is Afraid of Vectors Optimizing Cryptography Using SSE, AVX, NEON, and Co."
+  },
+  {
+    "id": "GZbPFQG9f1w",
+    "title": "Efficient Cryptography for the Next Generation Secure Cloud"
+  },
+  {
+    "id": "joBoeHAnuu4",
+    "title": "Cryptography Primer Session 6: Tools and Applications"
+  },
+  {
+    "id": "EJ7F7pvr0dg",
+    "title": "Cryptography Primer Session 5 Attacks, Vulnerabilities, & Practical Considerations"
+  },
+  {
+    "id": "GTWKm-iq-D8",
+    "title": "Advances in Quantum Algorithms & Devices: Position-based cryptography"
+  },
+  {
+    "id": "K-tXhUyEu9s",
+    "title": "Charles River Crypto Day - The Power of Negations in Cryptography"
+  },
+  {
+    "id": "sz9KLfxpUB0",
+    "title": "Cryptography Primer  What Can Go Wrong"
+  },
+  {
+    "id": "IhGTxb0Jglw",
+    "title": "Cryptography Primer Session 2  Symmetric Primitives"
+  },
+  {
+    "id": "n_jhsaSiny8",
+    "title": "Cryptography Primer Session 3  Integral Asymmetric Functions"
+  },
+  {
+    "id": "6wu-mf2aARE",
+    "title": "Cryptography Primer Session 4 Primes, Elliptic Curves, & Lattices"
+  },
+  {
+    "id": "BCU1cRlreuY",
+    "title": "Smart Home Technologies Webinar"
+  },
+  {
+    "id": "D_nT7NYycy8",
+    "title": "The Future of Smart Home Technology"
+  },
+  {
+    "id": "BP956bscQXc",
+    "title": "Smart Home Technology for People with Disability Webinar"
+  },
+  {
+    "id": "GxDZ7LnjcL4",
+    "title": "Human-Centered Security and Privacy for Smart Homes"
+  },
+  {
+    "id": "9lvCBuE5Zko",
+    "title": "Debopriyo Roy - Learning about smart home technology in a CALL classroom - JALTCALL2020"
+  },
+  {
+    "id": "ljy84h_Wbes",
+    "title": "Home Energy Management: Opening the Door to Deliver on the Smart Home Promise"
+  },
+  {
+    "id": "iKBR18gxOKI",
+    "title": "Hacking a smart home with Garry Kasparov, Avast Security Ambassador"
+  },
+  {
+    "id": "UwMQsUDQWvA",
+    "title": "Smart Tech for In-Home Care"
+  },
+  {
+    "id": "gZKbInkSCLs",
+    "title": "Smart Home Latest Technologies"
+  },
+  {
+    "id": "JZiX3ou2-wo",
+    "title": "SMART CITIES AND SMART HOMES- I"
+  },
+  {
+    "id": "G2CQhJfr6ts",
+    "title": "1st IoT Seminar: IoT for Smart Home Like a PC Market in the 80"
+  },
+  {
+    "id": "jBmT6j-7PkM",
+    "title": "Mainstream Smart Home Technologies for People with Physical Disabilities"
+  },
+  {
+    "id": "6jTBd_uJu48",
+    "title": "Smart Home Technologies - TechStreet Houston 2013"
+  },
+  {
+    "id": "fmRJCQn6vbg",
+    "title": "Richard Harper - Are We Made Smart by Smart Homes?"
+  },
+  {
+    "id": "LbuYOKWmRuY",
+    "title": "Ethics and Smart Home Technology Provision"
+  },
+  {
+    "id": "dgacIL0EkAA",
+    "title": "Are we getting the best out of Smart Home Technologies? The role of usability."
+  },
+  {
+    "id": "5xlFIz5hYpI",
+    "title": "Uncertainties in Spectrum Interference Predictions & Spectrum Sharing Smart Contracts: Mark Lofquist"
+  },
+  {
+    "id": "fGp07lMOJvI",
+    "title": "ODR FOR SMART CONTRACTS"
+  },
+  {
+    "id": "pf-mKQDgEJ4",
+    "title": "Assessing Smart Contracts Security Technical Debts"
+  },
+  {
+    "id": "7Ow8uN1TmxA",
+    "title": "Chainlink 2.0 Whitepaper | Research Panel"
+  },
+  {
+    "id": "OX-muZpAJOc",
+    "title": "AST: SuMo: A Mutation Strategy for Solidity Smart Contracts"
+  },
+  {
+    "id": "He2qa0IJcp4",
+    "title": "Blockchain Innovators - Conor Svensson and Dr. Naseem Naqvi"
+  },
+  {
+    "id": "r4KjHEgg9Wg",
+    "title": "Control Hijacking Attacks"
+  },
+  {
+    "id": "BZTWXl9QNK8",
+    "title": "Network Security"
+  },
+  {
+    "id": "QOtA76ga_fY",
+    "title": "Network Protocols"
+  },
+  {
+    "id": "q1OF_0ICt9A",
+    "title": "SSL and HTTPS"
+  },
+  {
+    "id": "XsgVqrcP32U",
+    "title": "Lec-92: What is IPSec Protocol | IPsec Introduction | Computer Networks"
+  },
+  {
+    "id": "W8IfrXeKKzc",
+    "title": "EDEXCEL GCSE (1CP2) Common protocols"
+  },
+  {
+    "id": "6BkvCHquCgQ",
+    "title": "Using Secure Protocols - CompTIA Network+ N10-006 - 3.3"
+  },
+  {
+    "id": "WZaIfyvERcA",
+    "title": "WiFi (Wireless) Password Security - WEP, WPA, WPA2, WPA3, WPS Explained"
+  },
+  {
+    "id": "uB8CvDC8ZvQ",
+    "title": "Wireless Authentication Protocols - SY0-601 CompTIA Security+ : 3.4"
+  },
+  {
+    "id": "Nj_VF6tuBpw",
+    "title": "Secure Networking - SY0-601 CompTIA Security+ : 3.3"
+  },
+  {
+    "id": "VEEPJjg2pkI",
+    "title": "Hitting the Nail on the Head: Interdisciplinary Research in Computer Networking"
+  },
+  {
+    "id": "xzGeiguILy8",
+    "title": "What is Networking, Types of Networking, IP Address, Ports - Complete Concept | Ethical Hacking 2023"
+  },
+  {
+    "id": "2heaJjRTljQ",
+    "title": "Research in Focus: Reliable Networking in the Cloud"
+  },
+  {
+    "id": "E7JLGUBSgdM",
+    "title": "Understanding Blockchain Adoption | Economics of Web3 | Chainlink Research Reports"
+  },
+  {
+    "id": "BjZObg_A3Jg",
+    "title": "Blockchain for Science and Research"
+  },
+  {
+    "id": "5f-ZorG5mHA",
+    "title": "Blockchain from the Perspective of Distributed Systems - IOTA Research Symposium 2021"
+  },
+  {
+    "id": "ZGN0GXKpOec",
+    "title": "Blockchain in Renewable Energy Financing | Chainlink Research Reports"
+  },
+  {
+    "id": "mH-KOYCB3PA",
+    "title": "Swiss Symposium Blockchain Research (Part 1)"
+  },
+  {
+    "id": "JDz1Z_8idAo",
+    "title": "Swiss Symposium Blockchain Research (Part 2)"
+  },
+  {
+    "id": "lKTWTmRPLOA",
+    "title": "Peer Review in Blockchain Research"
+  },
+  {
+    "id": "B5IifOkA4-w",
+    "title": "Event Threat Assessments: G20 Case Study for Improved Security - SANS CTI Summit 2018"
+  },
+  {
+    "id": "xggdyl3Sep0",
+    "title": "The State of Cyber Threats | CogX 2019"
+  },
+  {
+    "id": "o_RdWYHgW0c",
+    "title": "Hacked Threats, Trends and the Power of Connected Data"
+  },
+  {
+    "id": "bAf8CEXWH-U",
+    "title": "Cyber Security in Space: Designing Space Systems for Mission Surety"
+  },
+  {
+    "id": "9IBgPOe8zrc",
+    "title": "Cloud Threat Modeling - from Architecture Design to Application Development"
+  },
+  {
+    "id": "vA2w48Bfa4I",
+    "title": "PhD Dissertation Defense Aniruddha Saha (BACKDOOR ATTACKS IN COMPUTER VISION)"
+  },
+  {
+    "id": "Ym1KUZgRyOc",
+    "title": "Cryptographic Program Obfuscation: Current Capabilities and Challenges"
+  },
+  {
+    "id": "7cbITvLUp7o",
+    "title": "PNW PLSE Workshop: Featured Talk: Continuously Integrated Verified Cryptography"
+  } 
 ]
