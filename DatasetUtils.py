@@ -1,4 +1,5 @@
-"""Drops a collection from the document storage."""
+"The file used to create datasets from videos, markdowns and PDFs"
+
 import os
 
 import etl.pdfs
