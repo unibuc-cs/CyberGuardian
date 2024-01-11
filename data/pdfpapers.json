@@ -4930,6 +4930,256 @@
     "url": "http://arxiv.org/abs/2311.12197v1"
   },
   {
+    "tags": ["Networking"],
+    "title": "A Novel OMNeT++-based Simulation Tool for Vehicular Cloud Computing in ETSI MEC-compliant 5G Environments",
+    "url": "https://arxiv.org/abs/2401.04626"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Novel Framework of K-repetition Grant-free Access via Diversity Slotted Aloha (DSA)",
+    "url": "https://arxiv.org/abs/2401.04539"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "eSIM Technology in IoT Architecture",
+    "url": "https://arxiv.org/abs/2401.04302"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Virtual Multi-Topology Routing for QoS Constraints",
+    "url": "https://arxiv.org/abs/2401.04226"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Modeling AoII in Push- and Pull-Based Sampling of Continuous Time Markov Chains",
+    "url": "https://arxiv.org/abs/2401.04098"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "ORANUS: Latency-tailored Orchestration via Stochastic Network Calculus in 6G O-RAN",
+    "url": "https://arxiv.org/abs/2401.03812"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Exploiting Storage for Computing: Computation Reuse in Collaborative Edge Computing",
+    "url": "https://arxiv.org/abs/2401.03620"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Towards a Unified Method for Network Dynamic via Adversarial Weighted Link Prediction",
+    "url": "https://arxiv.org/abs/2401.03444"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Deciphering the Enigma of Satellite Computing with COTS Devices: Measurement and Analysis",
+    "url": "https://arxiv.org/abs/2401.03435"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Optimisation and Performance Computation of a Phase Frequency Detector Module for IoT Devices",
+    "url": "https://arxiv.org/abs/2401.03389"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "CAVIAR: Co-simulation of 6G Communications, 3D Scenarios and AI for Digital Twins",
+    "url": "https://arxiv.org/abs/2401.03310"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Credence: Augmenting Datacenter Switch Buffer Sharing with ML Predictions",
+    "url": "https://arxiv.org/abs/2401.02801"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "LMaaS: Exploring Pricing Strategy of Large Model as a Service for Communication",
+    "url": "https://arxiv.org/abs/2401.02675"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "GainNet: Coordinates the Odd Couple of Generative AI and 6G Networks",
+    "url": "https://arxiv.org/abs/2401.02662"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "5G Positioning Advancements with AI/ML",
+    "url": "https://arxiv.org/abs/2401.02427"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "UAV Trajectory Planning for AoI-Minimal Data Collection in UAV-Aided IoT Networks by Transformer",
+    "url": "https://arxiv.org/abs/2401.02425"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Optimizing Information Freshness in Uplink Multiuser MIMO Networks with Partial Observations",
+    "url": "https://arxiv.org/abs/2401.02218"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Outage Analysis for Active Reconfigurable Intelligent Surface-Enhanced Wireless Powered Communication Networks",
+    "url": "https://arxiv.org/abs/2401.02083"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "An Edge-Cloud Collaboration Framework for Generative AI Service Provision with Synergetic Big Cloud Model and Small Edge Models",
+    "url": "https://arxiv.org/abs/2401.01666"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Near Real-Time Data-Driven Control of Virtual Reality Traffic in Open Radio Access Network",
+    "url": "https://arxiv.org/abs/2401.01652"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Efficient UAVs Deployment and Resource Allocation in UAV-Relay Assisted Public Safety Networks for Video Transmission",
+    "url": "https://arxiv.org/abs/2401.01636"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Adversarial Machine Learning-Enabled Anonymization of OpenWiFi Data",
+    "url": "https://arxiv.org/abs/2401.01542"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Cost Minimization in Multi-cloud Systems with Runtime Microservice Re-orchestration",
+    "url": "https://arxiv.org/abs/2401.01408"
+  },
+  {
+    "tags": ["Networking", "Cryptography", "Security"],
+    "title": "Edge AI Empowered Physical Layer Security for 6G NTN: Potential Threats and Future Opportunities",
+    "url": "https://arxiv.org/abs/2401.01005"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Unsupervised Graph-based Learning Method for Sub-band Allocation in 6G Subnetworks",
+    "url": "https://arxiv.org/abs/2401.00950"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Coordinated Deep Neural Networks: A Versatile Edge Offloading Algorithm",
+    "url": "https://arxiv.org/abs/2401.00631"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Deeper and Wider Networks for Performance Metrics Prediction in Communication Networks",
+    "url": "https://arxiv.org/abs/2401.00429"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "On the Burstiness of Distributed Machine Learning Traffic",
+    "url": "https://arxiv.org/abs/2401.00329"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Novel Reinforcement Learning Routing Algorithm for Congestion Control in Complex Networks",
+    "url": "https://arxiv.org/abs/2401.00297"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Quick Primer on Machine Learning in Wireless Communications",
+    "url": "https://arxiv.org/abs/2312.17713"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Going Green in RAN Slicing",
+    "url": "https://arxiv.org/abs/2312.17179"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "High Throughput Inter-Layer Connecting Strategy for Multi-Layer Ultra-Dense Satellite Networks",
+    "url": "https://arxiv.org/abs/2312.16971"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Efficient Interference Graph Estimation via Concurrent Flooding",
+    "url": "https://arxiv.org/abs/2312.16807"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Age of Information in Gossip Networks: A Friendly Introduction and Literature Survey",
+    "url": "https://arxiv.org/abs/2312.16163"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Investigating Inter-Satellite Link Spanning Patterns on Networking Performance in Mega-constellations",
+    "url": "https://arxiv.org/abs/2312.15873"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "An Intelligent Indoor Positioning Algorithm Based on Wi-Fi and Bluetooth Low Energy",
+    "url": "https://arxiv.org/abs/2312.15744"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "SIRD: A Sender-Informed, Receiver-Driven Datacenter Transport Protocol",
+    "url": "https://arxiv.org/abs/2312.15403"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Ultra Reliable Low Latency Routing in LEO Satellite Constellations: A Stochastic Geometry Approach",
+    "url": "https://arxiv.org/abs/2312.15281"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Roaming Performance Analysis and Comparison between Wi-Fi and Private Cellular Network",
+    "url": "https://arxiv.org/abs/2312.15108"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Radio-Enabled Low Power IoT Devices for TinyML Applications",
+    "url": "https://arxiv.org/abs/2312.14947"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Data-Driven Digital Twin Network Architecture in the Industrial Internet of Things (IIoT) Applications",
+    "url": "https://arxiv.org/abs/2312.14930"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Capitalizing on Next-Generation Optical Communication Systems with Proactive Multi-Period Network Planning",
+    "url": "https://arxiv.org/abs/2312.14676"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "DENIS-SDN: Software-Defined Network Slicing Solution for Dense and Ultra-Dense IoT Networks",
+    "url": "https://arxiv.org/abs/2312.13662"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Hierarchical Optimization of Metaheuristic Algorithms and Federated Learning for Enhanced Capacity Management and Load Balancing in HetNets",
+    "url": "https://arxiv.org/abs/2312.13592"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Gecko: Automated Feature Degradation for Cloud Resilience",
+    "url": "https://arxiv.org/abs/2312.12809"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "LoLa: Low-Latency Realtime Video Conferencing over Multiple Cellular Carriers",
+    "url": "https://arxiv.org/abs/2312.12642"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "400Gbps benchmark of XRootD HTTP-TPC",
+    "url": "https://arxiv.org/abs/2312.12589"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Traffic Load Prediction and Power Consumption Reduction for Multi-band Networks",
+    "url": "https://arxiv.org/abs/2312.11958"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Meili: Enabling SmartNIC as a Service in the Cloud",
+    "url": "https://arxiv.org/abs/2312.11871"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Improvement of inter-protocol fairness for BBR congestion control using machine learning",
+    "url": "https://arxiv.org/abs/2312.11790"
+  },
+  {
     "tags": ["Smart Home"],
     "title": "Users Approach on Providing Feedback for Smart Home Devices",
     "url": "https://arxiv.org/abs/2312.12466"
