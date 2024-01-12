@@ -11,6 +11,7 @@ from etl import markdown, pdfs, shared, videos
 
 import docstore
 import vecstore
+import langchain
 from utils import pretty_log
 
 pp = pprint.PrettyPrinter(indent=2)
@@ -34,48 +35,52 @@ import time
 class QuestionAndAnsweringCustomLlama2():
 
     class SECURITY_PROMPT_TYPE(Enum):
-        PROMPT_TYPE_DEFAULT,
-        PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
-        PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES,
+        PROMPT_TYPE_DEFAULT=0,
+        PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES=1,
+        PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES=2,
 
     class QUESTION_REWRITING_TYPE(Enum):
-        QUESTION_REWRITING_DEFAULT,
+        QUESTION_REWRITING_DEFAULT=0,
 
     class LLAMA2_VERSION_TYPE(Enum):
-        LLAMA2_7B_chat,
-        LLAMA2_13B_chat,
-        LLAMA2_70B_chat
+        LLAMA2_7B_chat=0,
+        LLAMA2_13B_chat=1,
+        LLAMA2_70B_chat=2,
 
     def __init__(self, QuestionRewritingPrompt: QUESTION_REWRITING_TYPE,
                  QuestionAnsweringPrompt: SECURITY_PROMPT_TYPE,
                  ModelType: LLAMA2_VERSION_TYPE,
-                 debug: bool)
+                 debug: bool):
+
         self.tokenizer = None
         self.model = None
         self.embedding_engine = None
         self.base_llm = None
         self.llm = None
-        self.llm_conversational_chain = None
+        self.llm_conversational_chain = None # The full conversational chain
+        self.llama_doc_chain = None # The question answering on a given context (rag) chain
+        self.llama_question_generator_chain = None # The history+newquestion => standalone question generation chain
+        self.vector_index = None # The index vector store for RAG
 
         self.debug = debug
 
         # See the initializePromptTemplates function and enum above
-        self.templateprompt_for_question_answering: str = None
-        self.templateprompt_for_standalone_question_generation: str = None
+        self.templateprompt_for_question_answering: str = ""
+        self.templateprompt_for_standalone_question_generation: str = ""
 
         self.QuestionRewritingPromptType = QuestionRewritingPrompt
         self.QuestionAnsweringPromptType = QuestionAnsweringPrompt
 
         self.modelName = None
-        if ModelType is LLAMA2_VERSION_TYPE.LLAMA2_7B_chat:
+        if ModelType is self.LLAMA2_VERSION_TYPE.LLAMA2_7B_chat:
             self.modelName = "meta-llama/Llama-2-7b-chat-hf"
-        elif ModelType is LLAMA2_VERSION_TYPE.LLAMA2_70B_chat:
+        elif ModelType is self.LLAMA2_VERSION_TYPE.LLAMA2_70B_chat:
             self.modelName = "meta-llama/Llama-2-70b-chat-hf"
-        if ModelType is LLAMA2_VERSION_TYPE.LLAMA2_13B_chat:
+        if ModelType is self.LLAMA2_VERSION_TYPE.LLAMA2_13B_chat:
             self.modelName = "meta-llama/Llama-2-13b-chat-hf"
 
 
-        self.initializeEverything()
+        self.initilizeEverything()
 
     def initilizeEverything(self):
         self.initializePromptTemplates()
@@ -83,6 +88,7 @@ class QuestionAndAnsweringCustomLlama2():
         self.initializeQuestionAndAnswering_withRAG_andMemory()
 
         langchain.debug = self.debug
+
     def initializePromptTemplates(self):
         B_INST, E_INST = "[INST]", "[/INST]"
         B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
@@ -94,7 +100,7 @@ class QuestionAndAnsweringCustomLlama2():
 
         DEFAULT_QUESTION_PROMPT = "Question: {question}"
 
-        # Function to format a systemn prompt + user prompt (instruction) to LLama 2 format
+        # Function to format a system prompt + user prompt (instruction) to LLama 2 format
         def get_prompt(instruction = DEFAULT_QUESTION_PROMPT , new_system_prompt=DEFAULT_SYSTEM_PROMPT):
             SYSTEM_PROMPT = B_SYS + new_system_prompt + E_SYS
             prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
@@ -135,23 +141,23 @@ class QuestionAndAnsweringCustomLlama2():
                         Standalone question: [/INST]"""
 
 
-        if self.QuestionAnsweringPromptType == SECURITY_PROMPT_TYPE.PROMPT_TYPE_DEFAULT:
+        if self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_DEFAULT:
             self.templateprompt_for_question_answering = get_prompt(instruction=DEFAULT_QUESTION_PROMPT,
                                                                     new_system_prompt=DEFAULT_SYSTEM_PROMPT)
-        elif self.QuestionAnsweringPromptType == SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES:
+        elif self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES:
             self.templateprompt_for_question_answering = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources,
                                                                     new_system_prompt=template_securityOfficer_system_prompt)
-        elif self.QuestionAnsweringPromptType == SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES:
+        elif self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES:
             self.templateprompt_for_question_answering = get_prompt(
                 instruction=template_securityOfficer_instruction_rag_withsources,
                 new_system_prompt=template_securityOfficer_system_prompt)
         else:
-            assert false, f"Unknown type {self.QuestionAnsweringPromptType}"
+            assert False, f"Unknown type {self.QuestionAnsweringPromptType}"
 
-        if self.QUESTION_REWRITING_TYPE == QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT:
+        if self.QuestionRewritingPromptType == QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT:
             self.templateprompt_for_standalone_question_generation = llama_condense_template
         else:
-            assert false, f"Unknown type {self.QuestionAnsweringPromptType}"
+            assert False, f"Unknown type {self.QuestionAnsweringPromptType}"
 
 
     def initializeLLMTokenizerandEmbedder(self):
@@ -195,16 +201,16 @@ class QuestionAndAnsweringCustomLlama2():
 
     def initializeQuestionAndAnswering_withRAG_andMemory(self):
         # Create the question generator chain which takes history + new question and transform to a new standalone question
-        llama_condense_prompt = PromptTemplate(template=llama_condense_template,
+        llama_condense_prompt = PromptTemplate(template=self.templateprompt_for_standalone_question_generation,
                                                input_variables=["chat_history", "question"])
-        llama_question_generator_chain = LLMChain(llm=self.llm,
-                                                  prompt=self.templateprompt_for_standalone_question_generation,
+        self.llama_question_generator_chain = LLMChain(llm=self.llm,
+                                                  prompt=llama_condense_prompt,
                                                   verbose=False)
 
 
         # Create the response chain based on a question and context (i.e., rag in our case)
         llama_docs_prompt = PromptTemplate(template=self.templateprompt_for_question_answering, input_variables=["context", "question"])
-        llama_doc_chain = load_qa_with_sources_chain(self.llm, chain_type="stuff", prompt=llama_docs_prompt,
+        self.llama_doc_chain = load_qa_with_sources_chain(self.llm, chain_type="stuff", prompt=llama_docs_prompt,
                                                      document_variable_name="context", verbose=False)
 
 
@@ -213,15 +219,15 @@ class QuestionAndAnsweringCustomLlama2():
 
         ########### Connecting to the vector storage and load it #############
         #pretty_log("connecting to vector storage")
-        vector_index = vecstore.connect_to_vector_index(vecstore.INDEX_NAME, self.embedding_engine)
+        self.vector_index = vecstore.connect_to_vector_index(vecstore.INDEX_NAME, self.embedding_engine)
         #pretty_log("connected to vector storage")
-        pretty_log(f"found {vector_index.index.ntotal} vectors to search over in the database")
+        pretty_log(f"found {self.vector_index.index.ntotal} vectors to search over in the database")
 
         # Create the final retrieval chain which
         self.llm_conversational_chain = ConversationalRetrievalChain(
-            retriever=vector_index.as_retriever(search_kwargs={'k': 6}),
-            question_generator=llama_question_generator_chain,
-            combine_docs_chain=llama_doc_chain,
+            retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
+            question_generator=self.llama_question_generator_chain,
+            combine_docs_chain=self.llama_doc_chain,
             memory=memory
         )
 
@@ -229,44 +235,39 @@ class QuestionAndAnsweringCustomLlama2():
     def ask_question(self, question: str):
         self.llm_conversational_chain({"question": question})
 
-    llama_v2_chain = ConversationalRetrievalChain(
-        retriever=vector_index.as_retriever(search_kwargs={'k': 6}),
-        question_generator=llama_question_generator_chain,
-        combine_docs_chain=llama_doc_chain,
-        memory=memory
-    )
-
-    # VERY USEFULL FOR checking the sources and context
+    # VERY USEFULLY FOR checking the sources and context
     ######################################################
-    def test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain: bool):
-        def sim_que(query: str, run_llm_chain: bool):
-            pretty_log("selecting sources by similarity to query")
-            sources_and_scores = vector_index.similarity_search_with_score(query, k=3)
+    def simulate_raq_question(self, query: str, run_llm_chain: bool):
+        pretty_log("selecting sources by similarity to query")
+        sources_and_scores = self.vector_index.similarity_search_with_score(query, k=3)
 
-            sources, scores = zip(*sources_and_scores)
-            print(sources_and_scores)
+        sources, scores = zip(*sources_and_scores)
+        print(sources_and_scores)
 
-            if run_llm_chain:
-                result = llama_doc_chain(
-                    {"input_documents": sources, "question": query}, return_only_outputs=True
-                )
+        # Ask only the question on docs provided as context to see how it works without any additional context
+        if run_llm_chain:
+            result = self.llama_doc_chain(
+                {"input_documents": sources, "question": query}, return_only_outputs=True
+            )
 
-                answer = result["output_text"]
-                print(answer)
+            answer = result["output_text"]
+            print(answer)
+
+    def test_vectorDatasets_similarityScores_and_responses_no_memory(self, run_llm_chain: bool):
 
         query1 = "What models use human instructions?"
-        sim_que(query1, run_llm_chain=False)
+        self.simulate_raq_question(query1, run_llm_chain=False)
 
         query2 = "Are there any model trained on medical knowledge?"
-        sim_que(query2, run_llm_chain=False)
+        self.simulate_raq_question(query2, run_llm_chain=False)
 
     ######################################################
 
 def __main__():
 
-    securityChatbot = QuestionAndAnsweringCustomLlama2(QuestionRewritingPrompt=QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
-                                     QuestionAnsweringPrompt=SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
-                                     ModelType=LLAMA2_VERSION_TYPE.LLAMA2_7B_chat,
+    securityChatbot = QuestionAndAnsweringCustomLlama2(QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
+                                     QuestionAnsweringPrompt=QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
+                                     ModelType=QuestionAndAnsweringCustomLlama2.LLAMA2_VERSION_TYPE.LLAMA2_7B_chat,
                                     debug=True)
 
     securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
