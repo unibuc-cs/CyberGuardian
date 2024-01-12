@@ -6679,7 +6679,507 @@
     "tags": ["Cybersecurity"],
     "title": "SecureBERT: A Domain-Specific Language Model for Cybersecurity",
     "url": "https://arxiv.org/abs/2204.02685"
-  }, 
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A review of Energy Efficient Routing Protocols in Underwater Internet of Things",
+    "url": "https://arxiv.org/abs/2312.11725"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Distributed Asynchronous Service Provisioning in the Edge-Cloud Multi-tier Network",
+    "url": "https://arxiv.org/abs/2312.11187"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Passive Sensing and Localization in an Aircraft Cabin Using a Wireless Communication Network",
+    "url": "https://arxiv.org/abs/2312.11160"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Scaling Laws of Network Traffic Load: A Theoretical Explanation of Metcalfe's Law",
+    "url": "https://arxiv.org/abs/2312.11110"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Age-Threshold Slotted ALOHA for Optimizing Information Freshness in Mobile Networks",
+    "url": "https://arxiv.org/abs/2312.10888"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Value of Information and Timing-aware Scheduling for Federated Learning",
+    "url": "https://arxiv.org/abs/2312.10512"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "End-to-End Asynchronous Traffic Scheduling in Converged 5G and Time-Sensitive Networks",
+    "url": "https://arxiv.org/abs/2312.10356"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Implementing A Middleware API for Facilitating Heterogeneous IoT Device Communication Protocols and Data Retrieval",
+    "url": "https://arxiv.org/abs/2312.10294"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Energy Sustainability in Dense Radio Access Networks via High Altitude Platform Stations",
+    "url": "https://arxiv.org/abs/2312.10027"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Timing-As-A-Service (TAAS): On the role of mobile service providers in the context of integrated Industrial Internet of Things (IIoT)",
+    "url": "https://arxiv.org/abs/2312.09711"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Emergence of Nestedness in the Public Internet Peering Ecosystem",
+    "url": "https://arxiv.org/abs/2312.09544"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Networking for the Metaverse: The Standardization Landscape",
+    "url": "https://arxiv.org/abs/2312.09295"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Convergence of Manufacturing and Networking in Future Factories",
+    "url": "https://arxiv.org/abs/2312.08708"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Towards SSH3: how HTTP/3 improves secure shells",
+    "url": "https://arxiv.org/abs/2312.08396"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "JMAC Protocol: A Cross-Layer Multi-Hop Protocol for LoRa",
+    "url": "https://arxiv.org/abs/2312.08387"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Green Operations of SWIPT Networks: The Role of End-User Devices",
+    "url": "https://arxiv.org/abs/2312.08232"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Random relay selection based heuristic optimization model for the scheduling and effective resource allocation in the cognitive radio network",
+    "url": "https://arxiv.org/abs/2312.08127"
+  },
+  {
+    "tags": ["Networking", "Cryptography", "Security"],
+    "title": "Zero-Knowledge Proof of Traffic: A Deterministic and Privacy-Preserving Cross Verification Mechanism for Cooperative Perception Data",
+    "url": "https://arxiv.org/abs/2312.07948"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Linear Combination of Exponential Moving Averages for Wireless Channel Prediction",
+    "url": "https://arxiv.org/abs/2312.07945"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Delay analysis of the IEEE 802.11bd EDCA with repetitions",
+    "url": "https://arxiv.org/abs/2312.07383"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Intelligible Protocol Learning for Resource Allocation in 6G O-RAN Slicing",
+    "url": "https://arxiv.org/abs/2312.07362"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Lightweight Implementation of Per-packet Service Protection in eBPF/XDP",
+    "url": "https://arxiv.org/abs/2312.07152"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Oracle-based Protocol Testing with Eywa",
+    "url": "https://arxiv.org/abs/2312.06875"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Topiary: Fast, Scalable Publish/Subscribe for Peer-to-Peer (D)Apps",
+    "url": "https://arxiv.org/abs/2312.06800"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Ambient IoT: A missing link in 3GPP IoT Devices Landscape",
+    "url": "https://arxiv.org/abs/2312.06569"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "On the Ground and in the Sky: A Tutorial on Radio Localization in Ground-Air-Space Networks",
+    "url": "https://arxiv.org/abs/2312.05704"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Generative AI for Physical Layer Communications: A Survey",
+    "url": "https://arxiv.org/abs/2312.05594"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "ScalO-RAN: Energy-aware Network Intelligence Scaling in Open RAN",
+    "url": "https://arxiv.org/abs/2312.05096"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Physical-Layer Semantic-Aware Network for Zero-Shot Wireless Sensing",
+    "url": "https://arxiv.org/abs/2312.05043"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "SYSFLOW: Efficient Execution Platform for IoT Devices",
+    "url": "https://arxiv.org/abs/2312.04871"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A First Look at 5G Core Deployments on Public Cloud: Performance Evaluation of Control and User Planes",
+    "url": "https://arxiv.org/abs/2312.04833"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Taming Subnet-Drift in D2D-Enabled Fog Learning: A Hierarchical Gradient Tracking Approach",
+    "url": "https://arxiv.org/abs/2312.04728"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "MIST: An Efficient Approach for Software-Defined Multicast in Wireless Mesh Networks",
+    "url": "https://arxiv.org/abs/2312.04418"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Energy-Efficient Internet of Things Monitoring with Content-Based Wake-Up Radio",
+    "url": "https://arxiv.org/abs/2312.04294"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Zero-Touch Networks: Towards Next-Generation Network Automation",
+    "url": "https://arxiv.org/abs/2312.04159"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Queueing Delay Minimization in Overloaded Networks via Rate Control",
+    "url": "https://arxiv.org/abs/2312.04054"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Towards Time Sensitive Networking on Smart Cities: Techniques, Challenges, and Solutions",
+    "url": "https://arxiv.org/abs/2312.03635"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A path forward: Improving Internet routing security by enabling zones of trust",
+    "url": "https://arxiv.org/abs/2312.03305"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Overview of RIS-Enabled Secure Transmission in 6G Wireless Networks",
+    "url": "https://arxiv.org/abs/2312.02728"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Terrain-Based UAV Deployment: Providing Coverage for Outdoor Users",
+    "url": "https://arxiv.org/abs/2312.02468"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "An In-Depth Survey on Virtualization Technologies in 6G Integrated Terrestrial and Non-Terrestrial Networks",
+    "url": "https://arxiv.org/abs/2312.01895"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "TCP Slice: A semi-distributed TCP algorithm for Delay-constrained Applications",
+    "url": "https://arxiv.org/abs/2312.01869"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Terrain-based Coverage Manifold Estimation: Machine Learning, Stochastic Geometry, or Simulation?",
+    "url": "https://arxiv.org/abs/2312.01826"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Joint Beam Scheduling and Power Optimization for Beam Hopping LEO Satellite Systems",
+    "url": "https://arxiv.org/abs/2312.01292"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Comprehensive Survey of Wireless Time-Sensitive Networking (TSN): Architecture, Technologies, Applications, and Open Issues",
+    "url": "https://arxiv.org/abs/2312.01204"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Joint User Association and Resource Allocation for Multi-Cell Networks with Adaptive Semantic Communication",
+    "url": "https://arxiv.org/abs/2312.01049"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Comprehensive Real-World Evaluation of 5G Improvements over 4G in Low- and Mid-Bands",
+    "url": "https://arxiv.org/abs/2312.00957"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Preprocess your Paths -- Speeding up Linear Programming-based Optimization for Segment Routing Traffic Engineering",
+    "url": "https://arxiv.org/abs/2312.00518"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Slotted Aloha for Optical Wireless Communications in Internet of Underwater Things",
+    "url": "https://arxiv.org/abs/2312.00491"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "IEEE 802.11be Network Throughput Optimization with Multi-Link Operation and AP Coordination",
+    "url": "https://arxiv.org/abs/2312.00345"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "UAV-Aided Lifelong Learning for AoI and Energy Optimization in Non-Stationary IoT Networks",
+    "url": "https://arxiv.org/abs/2312.00334"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Review of the In-Network Computing and Its Role in the Edge-Cloud Continuum",
+    "url": "https://arxiv.org/abs/2312.00303"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Using LoRa communication for Urban VANETs: Feasibility and Challenges",
+    "url": "https://arxiv.org/abs/2311.18070"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Simple and General Operational Framework to Deploy Optimal Routes with Source Routing",
+    "url": "https://arxiv.org/abs/2311.17769"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Optimization in Mobile Augmented Reality Systems for the Metaverse over Wireless Communications",
+    "url": "https://arxiv.org/abs/2311.17630"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Large Language Models for Networking: Applications, Enabling Techniques, and Challenges",
+    "url": "https://arxiv.org/abs/2311.17474"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Data-driven Bandwidth Adaptation for Radio Access Network Slices",
+    "url": "https://arxiv.org/abs/2311.17347"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Test for IP-ECN Propagation by a Remote Tunnel Endpoint",
+    "url": "https://arxiv.org/abs/2311.16825"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Unravelling DNS Performance: A Historical Examination of F-ROOT in Southeast Asia",
+    "url": "https://arxiv.org/abs/2311.16545"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "WirePlanner: Fast, Secure and Cost-Efficient Route Configuration for SD-WAN",
+    "url": "https://arxiv.org/abs/2311.15099"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Active Queue Management with Data-Driven Delay Violation Probability Predictors",
+    "url": "https://arxiv.org/abs/2311.14982"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Routing and Spectrum Allocation in Broadband Degenerate EPR-Pair Distribution",
+    "url": "https://arxiv.org/abs/2311.14613"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "On the Analysis of AoI-Reliability Tradeoff in Heterogeneous IIoT Networks",
+    "url": "https://arxiv.org/abs/2311.13336"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Timely and Efficient Information Delivery in Real-Time Industrial IoT Networks",
+    "url": "https://arxiv.org/abs/2311.13329"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Ten issues of NetGPT",
+    "url": "https://arxiv.org/abs/2311.13106"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Learn to Augment Network Simulators Towards Digital Network Twins",
+    "url": "https://arxiv.org/abs/2311.12745"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Enabling Mobility-Oriented JCAS in 6G Networks: An Architecture Proposal",
+    "url": "https://arxiv.org/abs/2311.11623"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Abnormal traffic detection system in SDN based on deep learning hybrid models",
+    "url": "https://arxiv.org/abs/2311.11550"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Toward A Generic Vehicular Cloud Network Architecture: A Case of Virtual Vehicle As A Service",
+    "url": "https://arxiv.org/abs/2311.11147"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Goal-Oriented Communications for Remote Inference under Two-Way Delay with Memory",
+    "url": "https://arxiv.org/abs/2311.11143"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Carbon Dioxide Emission Minimized Virtual Machine (VM) Placement in Cloud-Fog Network Architecture",
+    "url": "https://arxiv.org/abs/2311.09468"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "PDU-set Scheduling Algorithm for XR Traffic in Multi-Service 5G-Advanced Networks",
+    "url": "https://arxiv.org/abs/2311.08969"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "X-GRL: An Empirical Assessment of Explainable GNN-DRL in B5G/6G Networks",
+    "url": "https://arxiv.org/abs/2311.08798"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Cross Device Federated Intrusion Detector for Early Stage Botnet Propagation in IoT",
+    "url": "https://arxiv.org/abs/2311.08621"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Prediction of inter packet arrival times for enhanced NR-V2X sidelink scheduling",
+    "url": "https://arxiv.org/abs/2311.08227"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Cost-Efficient Computation Offloading and Service Chain Caching in LEO Satellite Networks",
+    "url": "https://arxiv.org/abs/2311.07872"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Bringing Reconfigurability to the Network Stack",
+    "url": "https://arxiv.org/abs/2311.07753"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "P4-PSFP: P4-Based Per-Stream Filtering and Policing for Time-Sensitive Networking",
+    "url": "https://arxiv.org/abs/2311.07385"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Throughput Maximization in Multi-Band Optical Networks with Column Generation",
+    "url": "https://arxiv.org/abs/2311.07335"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "When Distributed Consensus Meets Wireless Connected Autonomous Systems: A Review and A DAG-based Approach",
+    "url": "https://arxiv.org/abs/2311.07329"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Network Resource Management For Cyber-Physical Production Systems Based On Quality of Experience",
+    "url": "https://arxiv.org/abs/2311.06008"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Joint SDN Synchronization and Controller Placement in Wireless Networks using Deep Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2311.05582"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Measuring the Prevalence of WiFi Bottlenecks in Home Access Networks",
+    "url": "https://arxiv.org/abs/2311.05499"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Digital Twin-based 3D Map Management for Edge-assisted Device Pose Tracking in Mobile AR",
+    "url": "https://arxiv.org/abs/2311.04997"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Mass Adoption of NATs: Survey and experiments on carrier-grade NATs",
+    "url": "https://arxiv.org/abs/2311.04658"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "AIRIC: Orchestration of Virtualized Radio Access Networks with Noisy Neighbours",
+    "url": "https://arxiv.org/abs/2311.04649"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A First Look At NAT64 Deployment In-The-Wild",
+    "url": "https://arxiv.org/abs/2311.04181"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "On Deep Reinforcement Learning for Traffic Steering Intelligent ORAN",
+    "url": "https://arxiv.org/abs/2311.03853"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Difference Based Content Networking",
+    "url": "https://arxiv.org/abs/2311.03831"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "5G-CT: Automated Deployment and Over-the-Air Testing of End-to-End Open Radio Access Networks",
+    "url": "https://arxiv.org/abs/2311.03206"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Compact Data Structures for Network Telemetry",
+    "url": "https://arxiv.org/abs/2311.02636"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Brief Survey of Open Radio Access Network (O-RAN) Security",
+    "url": "https://arxiv.org/abs/2311.02311"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Lightweight Routing Layer Using a Reliable Link-Layer Protocol",
+    "url": "https://arxiv.org/abs/2311.00911"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Centralized Management of a Wifi Mesh for Autonomous Farms",
+    "url": "https://arxiv.org/abs/2311.00887"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "LoRa Multi-Hop Networks for Monitoring Underground Mining Environments",
+    "url": "https://arxiv.org/abs/2310.20515"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "AdapINT: A Flexible and Adaptive In-Band Network Telemetry System Based on Deep Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2310.19331"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Unveiling the Evolution of Mobile Networks: From 1G to 7G",
+    "url": "https://arxiv.org/abs/2310.19195"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Digital Twin-Driven Network Architecture for Video Streaming",
+    "url": "https://arxiv.org/abs/2310.19079"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Confucius Queue Management: Be Fair But Not Too Fast",
+    "url": "https://arxiv.org/abs/2310.18030"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Distributed Consensus in Content Centric Networking",
+    "url": "https://arxiv.org/abs/2310.17532"
+  },
 
   {
     "folder": "data/other_papers"
