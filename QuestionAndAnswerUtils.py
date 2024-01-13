@@ -19,7 +19,7 @@ pp = pprint.PrettyPrinter(indent=2)
 import torch
 import transformers
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from transformers import pipeline, TextStreamer
+from transformers import pipeline, TextStreamer, TextIteratorStreamer
 import json
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
@@ -29,6 +29,10 @@ from langchain.chains.conversational_retrieval.prompts import CONDENSE_QUESTION_
 from langchain.chains.qa_with_sources.loading import load_qa_with_sources_chain
 from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
 from enum import Enum
+
+STREAM_TO_STDOUT=False
+if STREAM_TO_STDOUT is False:
+    from threading import Thread
 
 import time
 
@@ -107,13 +111,13 @@ class QuestionAndAnsweringCustomLlama2():
             return prompt_template
 
 
+
         template_securityOfficer_system_prompt = """\
                 ""Consider that I'm a beginner in networking and security things. \n
                 Give me a concise answer with with a single step at a time. \n
                 Limit your response to maximum 2000 words.
                 Do not provide any additional text or presentation. Only steps and actions.
                 If possible use concrete names of software or tools that could help on each step."""
-
 
         template_securityOfficer_instruction_rag_nosources = """\
                 Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
@@ -177,7 +181,9 @@ class QuestionAndAnsweringCustomLlama2():
                                                      )
 
         # Create a streamer and a text generation pipeline
-        streamer = TextStreamer(self.tokenizer, skip_prompt=True)
+        global STREAM_TO_STDOUT
+        self.streamer = TextStreamer(self.tokenizer, skip_prompt=True) if STREAM_TO_STDOUT \
+            else TextIteratorStreamer(self.tokenizer, skip_prompt=True)
 
         pipe = pipeline("text-generation",
                         model=self.model,
@@ -191,7 +197,7 @@ class QuestionAndAnsweringCustomLlama2():
                         num_return_sequences=1,
                         eos_token_id=self.tokenizer.eos_token_id,
                         pad_token_id=self.tokenizer.eos_token_id,
-                        streamer=streamer,
+                        streamer=self.streamer,
                         )
 
         # Create the llm here
@@ -233,6 +239,7 @@ class QuestionAndAnsweringCustomLlama2():
 
 
     def ask_question(self, question: str):
+        print("RUNNING ASK_QUESTION")
         self.llm_conversational_chain({"question": question})
 
     # VERY USEFULLY FOR checking the sources and context
@@ -268,14 +275,23 @@ def __main__():
     securityChatbot = QuestionAndAnsweringCustomLlama2(QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
                                      QuestionAnsweringPrompt=QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
                                      ModelType=QuestionAndAnsweringCustomLlama2.LLAMA2_VERSION_TYPE.LLAMA2_7B_chat,
-                                    debug=True)
+                                    debug=False)
 
+    thread = Thread(target=securityChatbot.ask_question, args=("What models use human instructions",))
+    thread.start()
+
+    generated_text = ""
+    for new_text in securityChatbot.streamer:
+        generated_text += new_text
+        print(new_text)
+    print(f"Full generated text {generated_text}")
+
+    return
     securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
 
     securityChatbot.ask_question("What models use human instructions?")
     securityChatbot.ask_question("Which are the advantage of each of these models?")
     securityChatbot.ask_question("What are the downsides of your last model suggested above ?")
-
 
 if __name__ == "__main__":
     __main__()
