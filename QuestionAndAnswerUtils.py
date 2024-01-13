@@ -20,6 +20,7 @@ import torch
 import transformers
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers import pipeline, TextStreamer, TextIteratorStreamer
+from transformers.generation.streamers import BaseStreamer
 import json
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
@@ -29,10 +30,7 @@ from langchain.chains.conversational_retrieval.prompts import CONDENSE_QUESTION_
 from langchain.chains.qa_with_sources.loading import load_qa_with_sources_chain
 from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
 from enum import Enum
-
-STREAM_TO_STDOUT=False
-if STREAM_TO_STDOUT is False:
-    from threading import Thread
+from typing import Union, List, Dict
 
 import time
 
@@ -54,7 +52,8 @@ class QuestionAndAnsweringCustomLlama2():
     def __init__(self, QuestionRewritingPrompt: QUESTION_REWRITING_TYPE,
                  QuestionAnsweringPrompt: SECURITY_PROMPT_TYPE,
                  ModelType: LLAMA2_VERSION_TYPE,
-                 debug: bool):
+                 debug: bool,
+                 streamingOnAnotherThread: bool):
 
         self.tokenizer = None
         self.model = None
@@ -65,6 +64,7 @@ class QuestionAndAnsweringCustomLlama2():
         self.llama_doc_chain = None # The question answering on a given context (rag) chain
         self.llama_question_generator_chain = None # The history+newquestion => standalone question generation chain
         self.vector_index = None # The index vector store for RAG
+        self.streamingOnAnotherThread = streamingOnAnotherThread
 
         self.debug = debug
 
@@ -181,8 +181,7 @@ class QuestionAndAnsweringCustomLlama2():
                                                      )
 
         # Create a streamer and a text generation pipeline
-        global STREAM_TO_STDOUT
-        self.streamer = TextStreamer(self.tokenizer, skip_prompt=True) if STREAM_TO_STDOUT \
+        self.streamer = TextStreamer(self.tokenizer, skip_prompt=True) if self.streamingOnAnotherThread is False \
             else TextIteratorStreamer(self.tokenizer, skip_prompt=True)
 
         pipe = pipeline("text-generation",
@@ -238,9 +237,30 @@ class QuestionAndAnsweringCustomLlama2():
         )
 
 
-    def ask_question(self, question: str):
-        print("RUNNING ASK_QUESTION")
-        self.llm_conversational_chain({"question": question})
+    def ask_question(self, question: str) -> Union[BaseStreamer, None]:
+        if self.streamingOnAnotherThread:
+            from threading import Thread
+
+            self.temp_modelevaluate_thread = Thread(target=self.llm_conversational_chain, args=({"question": question},))
+            self.temp_modelevaluate_thread.start()
+
+            return self.streamer
+        else:
+            return self.llm_conversational_chain({"question": question})
+
+    def ask_question_and_streamtoconsole(self, question: str)->str:
+        if self.streamingOnAnotherThread:
+            streamer: BaseStreamer = self.ask_question(question)
+
+            generated_text = ""
+            for new_text in streamer:
+                generated_text += new_text
+                print(new_text, end='')
+            # print(f"Full generated text {generated_text}")
+            return generated_text
+        else:
+            return self.temp_modelevaluate_thread.join()
+
 
     # VERY USEFULLY FOR checking the sources and context
     ######################################################
@@ -270,28 +290,20 @@ class QuestionAndAnsweringCustomLlama2():
 
     ######################################################
 
+
+
 def __main__():
 
     securityChatbot = QuestionAndAnsweringCustomLlama2(QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
                                      QuestionAnsweringPrompt=QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
                                      ModelType=QuestionAndAnsweringCustomLlama2.LLAMA2_VERSION_TYPE.LLAMA2_7B_chat,
-                                    debug=False)
+                                    debug=False, streamingOnAnotherThread=True)
 
-    thread = Thread(target=securityChatbot.ask_question, args=("What models use human instructions",))
-    thread.start()
-
-    generated_text = ""
-    for new_text in securityChatbot.streamer:
-        generated_text += new_text
-        print(new_text)
-    print(f"Full generated text {generated_text}")
-
-    return
     securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
 
-    securityChatbot.ask_question("What models use human instructions?")
-    securityChatbot.ask_question("Which are the advantage of each of these models?")
-    securityChatbot.ask_question("What are the downsides of your last model suggested above ?")
+    securityChatbot.ask_question_and_streamtoconsole("What models use human instructions?")
+    securityChatbot.ask_question_and_streamtoconsole("Which are the advantage of each of these models?")
+    securityChatbot.ask_question_and_streamtoconsole("What are the downsides of your last model suggested above ?")
 
 if __name__ == "__main__":
     __main__()
