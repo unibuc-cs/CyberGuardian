@@ -317,24 +317,15 @@ class QuestionAndAnsweringCustomLlama2():
             # Then respond to the new question
             need_to_ignore_standalone_question_chain = self.hasHistoryMessages()
 
-            for new_text in streamer:
-                if not need_to_ignore_standalone_question_chain:
-                    generated_text += new_text
-                    print(new_text, end='')
-                else:
-                    # This ends after the first response which is the standalone question
-                    if QuestionAndAnsweringCustomLlama2.LLAMA2_DEFAULT_END_LLM_RESPONSE in new_text:
-                        need_to_ignore_standalone_question_chain=False
-
-            if self.hasHistoryMessages():
+            if need_to_ignore_standalone_question_chain:
                 for new_text in streamer:
-                    if not need_to_ignore_standalone_question_chain:
-                        generated_text += new_text
-                        print(new_text, end='')
-                    else:
-                        # This ends after the first response which is the standalone question
-                        if QuestionAndAnsweringCustomLlama2.LLAMA2_DEFAULT_END_LLM_RESPONSE in new_text:
-                            need_to_ignore_standalone_question_chain=False
+                    generated_text += new_text
+                    # print(new_text, end='')
+                print("\n")
+
+            for new_text in streamer:
+                generated_text += new_text
+                print(new_text, end='')
 
             # print(f"Full generated text {generated_text}")
 
