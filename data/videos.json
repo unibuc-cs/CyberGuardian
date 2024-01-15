@@ -16364,5 +16364,765 @@
     {
         "id": "zysKxkXkFZc",
         "title": "Common Cyber Security Threats"
+    },
+    {
+        "id": "n2D1o-aM-2s",
+        "title": "Free CCNA | Network Fundamentals - Day 1 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "l_OPR2yh2co",
+        "title": "Free CCNA | OSI Model - TCP-IP Model - Day 2 | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "TMjo-Iphjyo",
+        "title": "Free CCNA | IP Address V4 - Day 3 (AM) | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "Ct4PU6CyvTQ",
+        "title": "Free CCNA | Subnetting : Day 3 (PM) | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "-e3e9w1GmBw",
+        "title": "Free CCNA | Supernetting - Day 03 (LN) | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "dd_fKRA7lBA",
+        "title": "200-301 CCNA v3.0 | Day 4: Inter-Networking Devices | Free Cisco CCNA, NetworKing"
+    },
+    {
+        "id": "wG5Q3luPAtI",
+        "title": "200-301 CCNA v3.0 | Day 5: Connecting to Cisco Devices | Free Cisco CCNA, NetworKing"
+    },
+    {
+        "id": "GXUwwg5Pl-k",
+        "title": "200-301 CCNA v3.0 | Day 6: Filling The Gaps | Free Cisco CCNA, NetworKing"
+    },
+    {
+        "id": "v3IDxvEouFI",
+        "title": "200-301 CCNA v3.0 | Day 8: Welcome to Switching | Free Cisco CCNA, NetworKing"
+    },
+    {
+        "id": "F2KBA9iOiFg",
+        "title": "200-301 CCNA v3.0 | Day 9: Real World Switching | Free Cisco CCNA"
+    },
+    {
+        "id": "u4ua58qgJCc",
+        "title": "200-301 CCNA v3.0 | Day 10: Port Modes and Functions | Free Cisco CCNA"
+    },
+    {
+        "id": "WRUjib1hJCY",
+        "title": "200-301 CCNA v3.0 | Day 11: VLAN Foundation | Free Cisco CCNA"
+    },
+    {
+        "id": "VqAernKC1BY",
+        "title": "200-301 CCNA v3.0 | Day 12: VLAN Advanced | Free Cisco CCNA"
+    },
+    {
+        "id": "BtKpVcn_8ec",
+        "title": "200-301 CCNA v3.0 | Day 13: VLAN Configurations | Free Cisco CCNA"
+    },
+    {
+        "id": "8Ai0Bi71PsE",
+        "title": "200-301 CCNA v3.0 | Day 14: VTP, Pruning & Native VLAN | Free Cisco CCNA"
+    },
+    {
+        "id": "ZnRI3GXeYO8",
+        "title": "200-301 CCNA v3.0 | Day 15: Switchport Security | Free Cisco CCNA"
+    },
+    {
+        "id": "mJgPcB7ndbk",
+        "title": "200-301 CCNA v3.0 | Day 18: Routing Basics | Free CCNA, NetworKing"
+    },
+    {
+        "id": "WbWZ-CvDsdc",
+        "title": "200-301 CCNA v3.0 | Day 19: Introduction to the Router | Free Cisco CCNA"
+    },
+    {
+        "id": "I39vbF65jOk",
+        "title": "200-301 CCNA v3.0 | Day 20: Static Routing | Free Cisco CCNA"
+    },
+    {
+        "id": "oB4vgGkDW4g",
+        "title": "200-301 CCNA v3.0 | Day 21: RIP Routing (Route Information Protocol) | Free Cisco CCNA"
+    },
+    {
+        "id": "e4eMXjCxg0A",
+        "title": "200-301 CCNA v3.0 | Day 22: RIP - Advanced | Free CCNA, NetworKing"
+    },
+    {
+        "id": "2_sw10F72WY",
+        "title": "200-301 CCNA v3.0 | Day 23: Routing Advanced | Free CCNA, NetworKing"
+    },
+    {
+        "id": "DtjbdL6yDPw",
+        "title": "200-301 CCNA v3.0 | Day 24: IP Address V6 | Free CCNA, NetworKing"
+    },
+    {
+        "id": "b_XvSkxm2-Y",
+        "title": "200-301 CCNA v3.0 | Day 25: IPv6 Advanced | Free CCNA, NetworKing"
+    },
+    {
+        "id": "7vp45X8eXV0",
+        "title": "200-301 CCNA v3.0 | Day 26: DNS & DHCP | Free CCNA"
+    },
+    {
+        "id": "r3jbAKNcLyg",
+        "title": "200-301 CCNA v3.0 | Day 27: ACL Introduction | Free CCNA"
+    },
+    {
+        "id": "6Rtxun6dl-0",
+        "title": "Free CCNA | Extended Access Control List - Day 28 | 200-301"
+    },
+    {
+        "id": "l5wuJFoeVDQ",
+        "title": "Free CCNA | NAT & PAT - Day 29 | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "YHa-dXBfUrE",
+        "title": "Free CCNA | CDP, Syslog & NTP - Day 31 | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "Kk61XLgPeGg",
+        "title": "200-301 CCNA v3.0 | Day 34: VLAN Revisited | Cisco Training 2020"
+    },
+    {
+        "id": "HVNMIZr797U",
+        "title": "200-301 CCNA v3.0 | Day 35: Dynamic Trunking Protocol | Cisco Training 2020"
+    },
+    {
+        "id": "K-z4HPhKiTc",
+        "title": "200-301 CCNA v3.0 | Day 36: Spanning Tree Protocol (STP) | Free CCNA"
+    },
+    {
+        "id": "LRGmg5omwW0",
+        "title": "Free CCNA | PortFast & BPDUGuard - Day 37 | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "mkLnjNFBjRs",
+        "title": "Free CCNA | Layer 2 EtherChannel - Day 38 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "oC-OVLCQrkI",
+        "title": "Free CCNA | Switch Stacking vs Chassis - Day 39 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "DEGjn1DLTkY",
+        "title": "Free CCNA | 802.1x and AAA - Day 40 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "ggwdarNLVbk",
+        "title": "Free CCNA | DHCP Snooping & Native VLAN - Day 41 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "Z7WM7wFTWrs",
+        "title": "Free CCNA | Inter-VLAN Routing & SVI - Day 42 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "Sg2_Zq4Ngck",
+        "title": "Free CCNA | Distance Vector vs Link State - Day 43 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "BDSrDuTRo0Y",
+        "title": "Free CCNA | OSPF Introduction - Day 44 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "MbqAAC969F8",
+        "title": "Free CCNA | OSPF Configuration - Day 45 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "rXriMUn30vA",
+        "title": "Free CCNA | OSPF Verification - Day 46 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "NcgyEplA85I",
+        "title": "Free CCNA | OSPF Troubleshooting - Day 47 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "HE03E-FzXuo",
+        "title": "Free CCNA | Multiarea OSPF - Day 48 | CCNA 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "b1aHb7VtMvs",
+        "title": "Free CCNA | EIGRP Introduction - Day 49 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "20zDt0mq0sA",
+        "title": "Free CCNA | EIGRP Configuration - Day 50 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "4_JPstsP5vs",
+        "title": "Free CCNA | EIGRP Troubleshooting - Day 51 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "8O-hj5inghI",
+        "title": "Free CCNA | Leased Line Basics - Day 52 | CCNA 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "PzKSmRZovbM",
+        "title": "Free CCNA | Network Components - Day 53 | CCNA 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "reeVV6ro3sY",
+        "title": "Free CCNA | Network Architecture - Day 54 | CCNA 200-301 | Cisco"
+    },
+    {
+        "id": "4OMgjFVZzS0",
+        "title": "Free CCNA | Wireless - Day 56 | CCNA 200-301 | Cisco"
+    },
+    {
+        "id": "SIEVvk3NVuk",
+        "title": "12. Network Security"
+    },
+    {
+        "id": "chkFBigodIw",
+        "title": "8. Web Security Model"
+    },
+    {
+        "id": "EBQIGy1ROLY",
+        "title": "9. Securing Web Applications"
+    },
+    {
+        "id": "3n4o1BiHT30",
+        "title": "17. User Authentication"
+    },
+    {
+        "id": "S2iBR2ZlZf0",
+        "title": "14. SSL and HTTPS"
+    },
+    {
+        "id": "6bwzNg5qQ0o",
+        "title": "2. Control Hijacking Attacks"
+    },
+    {
+        "id": "drQyrzRoRiA",
+        "title": "3. Buffer Overflow Exploits and Defenses"
+    },
+    {
+        "id": "6SIJmoE9L9g",
+        "title": "4. Privilege Separation"
+    },
+    {
+        "id": "8VqTSY-11F4",
+        "title": "6. Capabilities"
+    },
+    {
+        "id": "VEV74hwASeU",
+        "title": "7. Sandboxing Native Code"
+    },
+    {
+        "id": "yRVZPvHYHzw",
+        "title": "10. Symbolic Execution"
+    },
+    {
+        "id": "-QBip3WrauA",
+        "title": "11. Ur/Web"
+    },
+    {
+        "id": "PuVMkSEcPiI",
+        "title": "16. Side-Channel Attacks"
+    },
+    {
+        "id": "uqKIHQHmkCI",
+        "title": "18. Private Browsing"
+    },
+    {
+        "id": "wgzKPRJsInk",
+        "title": "19. Anonymous Communication"
+    },
+    {
+        "id": "SCLGM5KDKo0",
+        "title": "20. Mobile Phone Security"
+    },
+    {
+        "id": "Xv7R6EG0Q84",
+        "title": "21. Data Tracking"
+    },
+    {
+        "id": "hc4aKFqmZkc",
+        "title": "23. Security Economics"
+    },
+    {
+        "id": "rYodcvhh7b8",
+        "title": "Packet Traveling - How Packets Move Through a Network"
+    },
+    {
+        "id": "QPi5Nvxaosw",
+        "title": "Address Resolution Protocol (ARP) in less than 5 minutes"
+    },
+    {
+        "id": "BWZ-MHIhqjM",
+        "title": "What is Subnetting? - Subnetting Mastery - Part 1 of 7"
+    },
+    {
+        "id": "ljS07YTEJ2I",
+        "title": "Drawing the Cheat Sheet - Subnetting Mastery - Part 2 of 7"
+    },
+    {
+        "id": "5-wlfAdcmFQ",
+        "title": "How to solve ANY Subnetting Problems in 60 seconds or less - Subnetting Mastery - Part 3 of 7"
+    },
+    {
+        "id": "SM0kdVfhxZ0",
+        "title": "Practice Examples - Subnetting Mastery - Part 4 of 7"
+    },
+    {
+        "id": "Pj_ubhpi0WQ",
+        "title": "Time-Saving Tricks for Subnetting - Subnetting Mastery - Part 5 of 7"
+    },
+    {
+        "id": "p-6BVEbb9q0",
+        "title": "Subnetting in the /17 - /24 range - Subnetting Mastery - Part 6 of 7"
+    },
+    {
+        "id": "OQ-r_IfeB8c",
+        "title": "Subnetting in the /1 - /16 range - Subnetting Mastery - Part 7 of 7"
+    },
+    {
+        "id": "Fmq1E1Qr2W4",
+        "title": "Native VLAN - the DEFINITIVE illustration"
+    },
+    {
+        "id": "F05sDLXOFh8",
+        "title": "Fixed-Length Subnet Mask (FLSM) - Subnetting Mastery - FLSM and VLSM Appendix Part 1 of 2"
+    },
+    {
+        "id": "amKyfbg5G2Q",
+        "title": "Variable-Length Subnet Mask (VLSM) - Subnetting Mastery - FLSM and VLSM Appendix Part 2 of 2"
+    },
+    {
+        "id": "MmwF1oHOvmg",
+        "title": "What are VLANs? -- the simplest explanation"
+    },
+    {
+        "id": "PDcwijVC4XE",
+        "title": "Route Precedence -- How does a Router choose a path when multiple paths exist?"
+    },
+    {
+        "id": "okhoOUy9Mwk",
+        "title": "Route Precedence -- Answer to Bonus Questions"
+    },
+    {
+        "id": "BMzM1baFJ_4",
+        "title": "Inside Local, Inside Global, Outside Local, Outside Global -- NAT on Cisco IOS Routers"
+    },
+    {
+        "id": "fInsfeuNSFM",
+        "title": "Static NAT -- Configuration and Verification -- NAT on Cisco IOS Routers (FREE Course Preview)"
+    },
+    {
+        "id": "RrJXLdv1i74",
+        "title": "Binary - The SIMPLEST explanation of Counting and Converting Binary numbers"
+    },
+    {
+        "id": "_PuyU1PJDo0",
+        "title": "Wildcard Masks -- What are they? How do you convert them? What are they used for?"
+    },
+    {
+        "id": "57ZcCuJ90qQ",
+        "title": "Discontiguous Wildcard Masks"
+    },
+    {
+        "id": "0gGhuYOh-54",
+        "title": "What Are Access Lists? -- Access Control Lists (ACLs) -- Part 1 of 8"
+    },
+    {
+        "id": "wuiWX1yTd98",
+        "title": "Numbered ACL Syntax -- Access Control Lists (ACLs) -- Part 2 of 8"
+    },
+    {
+        "id": "3iu7NSqBTDg",
+        "title": "Numbered ACL Configuration Demonstration -- Access Control Lists (ACLs) -- Part 3 of 8"
+    },
+    {
+        "id": "7JdsrLW5Tvw",
+        "title": "Named ACL Syntax -- Access Control Lists (ACLs) -- Part 4 of 8"
+    },
+    {
+        "id": "GG8E5FIx9s4",
+        "title": "Named ACL Configuration Demonstration -- Access Control Lists (ACLs) -- Part 5 of 8"
+    },
+    {
+        "id": "DR5ph1jY0Lk",
+        "title": "IPv6 ACLs - Syntax and Demonstration -- Access Control Lists (ACLs) -- Part 6 of 8"
+    },
+    {
+        "id": "rqX8JaN02cg",
+        "title": "Applying ACLs to Interfaces (IPv4 and IPv6) -- Access Control Lists (ACLs) -- Part 7 of 8"
+    },
+    {
+        "id": "FV8pQfbMODs",
+        "title": "ACL Placement: Closer to the Source or Destination? -- Access Control Lists (ACLs) -- Part 8 of 8"
+    },
+    {
+        "id": "ny6MsSLb8_o",
+        "title": "Local Broadcast and Directed Broadcasts - Demo and Packet Captures"
+    },
+    {
+        "id": "ZNXDbzaAM-I",
+        "title": "Local Broadcast and Directed Broadcasts - Description and Demonstration"
+    },
+    {
+        "id": "gYN2qN11-wE",
+        "title": "Everything Hosts do to speak on the Internet - Part 1 - Networking Fundamentals - Lesson 3"
+    },
+    {
+        "id": "G7GyWjJtjNs",
+        "title": "Everything Switches do - Part 2 - Networking Fundamentals - Lesson 4"
+    },
+    {
+        "id": "Q4MArJTbUwk",
+        "title": "Supernetting, IP Aggregation, and IP Summarization -- Subnetting Mastery"
+    },
+    {
+        "id": "Ep-x_6kggKA",
+        "title": "Everything Routers do - Part 2 - How Routers forward Packets - Networking Fundamentals - Lesson 5"
+    },
+    {
+        "id": "HMoFvRK4HUo",
+        "title": "What is SSL & TLS ? What is HTTPS ? What is an SSL VPN? - Practical TLS"
+    },
+    {
+        "id": "WfR3ZAP96mQ",
+        "title": "How do SSL & TLS protect your Data? - Confidentiality, Integrity, Authentication - Practical TLS"
+    },
+    {
+        "id": "C7Y4UEBJ0Og",
+        "title": "Key Players of SSL & TLS: Client, Server, Certificate Authority (CA) - Practical TLS"
+    },
+    {
+        "id": "26lZ-akbfrQ",
+        "title": "Anti-Replay and Non-Repudiation - Practical TLS"
+    },
+    {
+        "id": "_KgZNF8nQvE",
+        "title": "TLS / SSL Versions - Part 1 - Practical TLS"
+    },
+    {
+        "id": "fk0-UqwVNqY",
+        "title": "TLS / SSL Versions - Part 2 - Practical TLS"
+    },
+    {
+        "id": "zmxLg4jV0ts",
+        "title": "Router Hierarchies and Route Summarization - Networking Fundamentals - Lesson 5 - Part 3"
+    },
+    {
+        "id": "E5bSumTAHZE",
+        "title": "Network Protocols - ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DNS, DHCP - Networking Fundamentals - L6"
+    },
+    {
+        "id": "YJGGYKAV4pA",
+        "title": "How Data moves through the Internet - Networking Fundamentals"
+    },
+    {
+        "id": "HHQ2QP_upGM",
+        "title": "Hashing, Hashing Algorithms, and Collisions - Cryptography - Practical TLS"
+    },
+    {
+        "id": "doN3lzzNEIM",
+        "title": "Data Integrity - How Hashing is used to ensure data isn't modified - HMAC - Cryptography"
+    },
+    {
+        "id": "aCDgFH1i2B0",
+        "title": "How SSL & TLS use Cryptographic tools to secure your data - Practical TLS"
+    },
+    {
+        "id": "Jefr7wFLu3M",
+        "title": "Public Key Infrastructure - What is a PKI? - Cryptography - Practical TLS"
+    },
+    {
+        "id": "iS1nK4G6EtA",
+        "title": "Digital Signature Algorithm (DSA) - Cryptography - Practical TLS"
+    },
+    {
+        "id": "LJDsdSh1CYM",
+        "title": "TLS / SSL - The complete sequence - Practical TLS"
+    },
+    {
+        "id": "BgtORKB0lls",
+        "title": "How does NAT conserve IP Address Space? (and why!) - Network Address Translation"
+    },
+    {
+        "id": "KA56kj23RPU",
+        "title": "NAT vs PAT, Static vs Dynamic -- demystified! -- Network Address Translation"
+    },
+    {
+        "id": "fm_NLOCi1Ns",
+        "title": "Static NAT - Network Address Translation"
+    },
+    {
+        "id": "Q2XEoBEKrso",
+        "title": "Static PAT - Network Address Translation"
+    },
+    {
+        "id": "2t8-WRZWCq8",
+        "title": "Dynamic PAT - Network Address Translation"
+    },
+    {
+        "id": "vP-1a-fhDKA",
+        "title": "Policy NAT - Network Address Translation"
+    },
+    {
+        "id": "QFg-WhN715I",
+        "title": "Twice NAT - Network Address Translation"
+    },
+    {
+        "id": "Ij4hagieFjc",
+        "title": "OpenSSL - Encrypting and Decrypting Private Key Files"
+    },
+    {
+        "id": "KjNYEzEBRD8",
+        "title": "EGP / IGP :: Distance Vector / Link State :: Dynamic Routing Protocols :: OSPF EIGRP BGP RIP IS-IS"
+    },
+    {
+        "id": "_ThYOX1wX_4",
+        "title": "OSPF Framework & OSPF Packets: LSDB, LSA, Hello, DBD, LSR, LSU, LSAck"
+    },
+    {
+        "id": "CM9BlFHB3q4",
+        "title": "OSPF Areas and OSPF Types of Routers - Practical OSPF - Lesson 2"
+    },
+    {
+        "id": "wITAeO8i9U4",
+        "title": "OSPF Hello Packets :: Area Types (Stub/NSSA) :: BDR/DR :: Practical OSPF"
+    },
+    {
+        "id": "X0OBAPc3dpM",
+        "title": "OSPF Neighbor Adjacency States: DOWN ATTEMPT INIT 2-WAY EXSTART EXCHANGE LOADING FULL"
+    },
+    {
+        "id": "LPCLj2FhWxs",
+        "title": "OSPF Network Types - FINALLY, an explanation that makes sense - Practical OSPF"
+    },
+    {
+        "id": "78x7_7og9XA",
+        "title": "OSPF Area Types - Stub, NSSA, Totally Stub, Totally NSSA - Practical OSPF"
+    },
+    {
+        "id": "ZkL10eoG1PY",
+        "title": "TLS Handshake - EVERYTHING that happens when you visit an HTTPS website"
+    },
+    {
+        "id": "6EIdx1j6FMw",
+        "title": "Can I rebuild an OSPF topology using ONLY the LSDB?"
+    },
+    {
+        "id": "jE_FcgpQ7Co",
+        "title": "TCP vs UDP - Explaining Facts and Debunking Myths - TCP Masterclass"
+    },
+    {
+        "id": "JFch3ctY6nE",
+        "title": "TCP - 12 simple ideas to explain the Transmission Control Protocol"
+    },
+    {
+        "id": "LaDRWycC7Iw",
+        "title": "UDP doesn't suck! It's the BEST L4 protocol for THESE types of applications..."
+    },
+    {
+        "id": "0ylxXrN1yHs",
+        "title": "TLS 1.3 - What Changes? What stays the same?"
+    },
+    {
+        "id": "JA0vaIb4158",
+        "title": "TLS 1.3 Handshake - many CHANGES from prior versions!"
+    },
+    {
+        "id": "ArXMa111x7A",
+        "title": "HTTP vs HTML: Unveiling Network Protocols using Telnet"
+    },
+    {
+        "id": "2iFFRqzX3yE",
+        "title": "OSI Model Layer 5, 6, and 7 -- Session, Presentation, & Application Layers -- what they actually do"
+    },
+    {
+        "id": "Ud8UeNgdaz4",
+        "title": "Cabling Devices | Network Fundamentals Part 2"
+    },
+    {
+        "id": "D0IT6ZKY3tg",
+        "title": "How VRFs Work (VRF Lite) | VRFs Part 1"
+    },
+    {
+        "id": "7RtoNTK-mgE",
+        "title": "Dynamic Routing with VRFs | BGP, OSPF, and EIGRP | VRFs Part 2"
+    },
+    {
+        "id": "dW8JjcINgDg",
+        "title": "Route Target Import and Export | Extending VRF's Across the Core | VRFs Part 3"
+    },
+    {
+        "id": "GeIfsVPs4o0",
+        "title": "Leak Routes Between VRF's"
+    },
+    {
+        "id": "y9PG-_ZNbWg",
+        "title": "How the OSI Model Works | Network Fundamentals Part 3"
+    },
+    {
+        "id": "ytAqv7qHGyU",
+        "title": "How GRE Tunnels Work | VPN Tunnels Part 1"
+    },
+    {
+        "id": "4IRefeZ3vyY",
+        "title": "GRE Encryption with IPSec | VPN Tunnels Part 2"
+    },
+    {
+        "id": "v8aYhOxZuNg",
+        "title": "How IP Addresses Work | Network Fundamentals Part 4"
+    },
+    {
+        "id": "Tnjdk08z3HM",
+        "title": "IP Addressing in Depth | Network Fundamentals Part 5"
+    },
+    {
+        "id": "J-w_n9LCRj8",
+        "title": "DMVPN Explained | DMVPN Tunnels Part 1"
+    },
+    {
+        "id": "HFRU01uS9nA",
+        "title": "TCP/IP Model (Internet Protocol Suite) | Network Fundamentals Part 6"
+    },
+    {
+        "id": "fQC4v07gs5k",
+        "title": "Establishing Connections With TCP's Three Way Handshake | Network Fundamentals Part 8"
+    },
+    {
+        "id": "NaEHwrRHfqk",
+        "title": "How TCP Handles Errors And Uses Windows | Network Fundamentals Part 9"
+    },
+    {
+        "id": "ZS80DM_-f5Y",
+        "title": "Private VLANs"
+    },
+    {
+        "id": "wjWjGnkb3Cw",
+        "title": "How Switching Works | Network Fundamentals Part 11"
+    },
+    {
+        "id": "59aYt_kMviE",
+        "title": "Adding vPC to VXLAN | Network Direction"
+    },
+    {
+        "id": "GrhHMai2d2Y",
+        "title": "How VLANs Work | Network Fundamentals Part 12"
+    },
+    {
+        "id": "FxlqSfORZm4",
+        "title": "Understanding Access Control Lists | Network Fundamentals Part 14"
+    },
+    {
+        "id": "98CAjGW0lzk",
+        "title": "What ARP does | Network Fundamentals Part 15"
+    },
+    {
+        "id": "zPFgFvDHbA4",
+        "title": "What DHCP is all About | Network Fundamentals Part 16"
+    },
+    {
+        "id": "ES7w0fKtblE",
+        "title": "Getting Started with Domain Name System (DNS) | Network Fundamentals Part 17"
+    },
+    {
+        "id": "cupc6Helc6Y",
+        "title": "Static route configuration | Network Fundamentals Part 18"
+    },
+    {
+        "id": "q7SMM57Dz4I",
+        "title": "Routing Protocols and Traffic Forwarding | Network Fundamentals Part 19"
+    },
+    {
+        "id": "OXX6LGJA3Zs",
+        "title": "The Rules of Networking (RFC 1925)"
+    },
+    {
+        "id": "n0UqAXu_GAI",
+        "title": "How to Use NAT | Network Fundamentals (Part 21)"
+    },
+    {
+        "id": "EkVd4k0R4Tw",
+        "title": "Introduction to the QUIC Protocol"
+    },
+    {
+        "id": "RmeiKfdRqhY",
+        "title": "Packet Capture | Palo Alto Firewall Training"
+    },
+    {
+        "id": "h42qLaQM0_s",
+        "title": "Introduction To Networking - Different Types Of Networks | Networking Fundamentals Part 2 (revised)"
+    },
+    {
+        "id": "w_GHZKFOMKc",
+        "title": "What Is A Network? | Introduction To Networking"
+    },
+    {
+        "id": "M6VD8yCdADE",
+        "title": "How Computers Talk To One Another | Introduction To Networking"
+    },
+    {
+        "id": "GS38h3q_xic",
+        "title": "How Devices Are Connected Together | Introduction To Networking"
+    },
+    {
+        "id": "6sEwrKoCico",
+        "title": "What is UDP Lite?"
+    },
+    {
+        "id": "kZOgV0lvja0",
+        "title": "Sending Logs to a Syslog Server | Network Fundamentals Part 23"
+    },
+    {
+        "id": "vWZefoGNk5g",
+        "title": "How SNMP Works | Network Fundamentals Part 24"
+    },
+    {
+        "id": "ISNTZgiywO8",
+        "title": "Introduction to Spanning-Tree | Network Fundamentals Part 25"
+    },
+    {
+        "id": "5xMcvfn61-E",
+        "title": "How Spanning-Tree Works | Network Fundamentals Part 26"
+    },
+    {
+        "id": "FsGUi5pXpLk",
+        "title": "DNS Explained | Domain Name System | Cisco CCNA 200-301"
+    },
+    {
+        "id": "L9aZpg0ip70",
+        "title": "FTP Explained | File Transfer Protocol | Cisco CCNA 200-301"
+    },
+    {
+        "id": "oCtkwEjhyD4",
+        "title": "NTP Explained | Network Time Protocol | Cisco CCNA 200-301"
+    },
+    {
+        "id": "Lq7j-QipNrI",
+        "title": "SNMP Explained | Simple Network Management Protocol | Cisco CCNA 200-301"
+    },
+    {
+        "id": "N7dM_kD28dM",
+        "title": "MAC Addresses Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "j6-kadxwIFQ",
+        "title": "EtherChannel Explained | Concept & Configuration"
+    },
+    {
+        "id": "n3en4EcHms0",
+        "title": "PortFast + BPDU Guard | STP Optional Features"
+    },
+    {
+        "id": "S43CFcpOZSI",
+        "title": "DHCP Explained | Step by Step"
+    },
+    {
+        "id": "LANW3m7UgWs",
+        "title": "OSI Model Explained | Real World Example"
+    },
+    {
+        "id": "eMamgWllRFY",
+        "title": "Network Devices Explained | Hub, Bridge, Router, Switch"
+    },
+    {
+        "id": "Nlyx5lFQR34",
+        "title": "VLAN Trunking Protocol (VTP) Explained | Version 1 & 2"
     }
   ]
