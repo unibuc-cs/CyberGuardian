@@ -13,8 +13,9 @@ import docstore
 import vecstore
 import langchain
 from utils import pretty_log
-
+from ast import literal_eval
 pp = pprint.PrettyPrinter(indent=2)
+import importlib
 
 import torch
 import transformers
@@ -29,8 +30,10 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains.conversational_retrieval.prompts import CONDENSE_QUESTION_PROMPT
 from langchain.chains.qa_with_sources.loading import load_qa_with_sources_chain
 from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
+from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from enum import Enum
 from typing import Union, List, Dict
+from DynabicPrompts import *
 
 import time
 
@@ -48,6 +51,14 @@ class QuestionAndAnsweringCustomLlama2():
         LLAMA2_7B_chat=0,
         LLAMA2_13B_chat=1,
         LLAMA2_70B_chat=2,
+
+    class TOOL_TYPE(Enum):
+        TOOL_NONE = 0,
+        TOOL_RESOURCE_UTILIZATION=1,
+        TOOL_DEVICES_LOGS_BY_IP=2,
+        TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP=3,
+        TOOL_MAP_OF_REQUESTS_COMPARE=4,
+
 
     LLAMA2_DEFAULT_END_LLM_RESPONSE ="</s>"
 
@@ -105,66 +116,6 @@ class QuestionAndAnsweringCustomLlama2():
         langchain.debug = self.debug
 
     def initializePromptTemplates(self):
-        B_INST, E_INST = "[INST]", "[/INST]"
-        B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
-
-        FUNC_CALL_SYSTEM_PROMPT = """\
-        Please do exactly as I ask you.
-        """
-
-        DEFAULT_SYSTEM_PROMPT = """\
-        You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
-        If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
-        """
-
-        DEFAULT_QUESTION_PROMPT = "Question: {question}"
-
-        # Function to format a system prompt + user prompt (instruction) to LLama 2 format
-        def get_prompt(instruction = DEFAULT_QUESTION_PROMPT , new_system_prompt=DEFAULT_SYSTEM_PROMPT):
-            SYSTEM_PROMPT = B_SYS + new_system_prompt + E_SYS
-            prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
-            return prompt_template
-
-
-
-        template_securityOfficer_system_prompt = """\
-        ""Consider that I'm a beginner in networking and security things. \n
-        Give me a concise answer with with a single step at a time. \n
-        Limit your response to maximum 2000 words.
-        Do not provide any additional text or presentation. Only steps and actions.
-        If possible use concrete names of software or tools that could help on each step."""
-
-        template_securityOfficer_instruction_rag_nosources_default = """\
-        Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
-        {context}
-        Question: {question}"""
-
-        template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization = """\
-        Respond exactly with the following: FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot/good_RESOURCES_OCCUPANCY_HACKED_True.csv'
-        Nothig else, no other words. Ignore context and question.
-        {context}
-        Question: {question}"""
-
-
-        template_securityOfficer_instruction_rag_withsources_default = """
-        Given the following extracted parts of a long document and a question, create a final answer with "SOURCES" that represent exactly the Source name and link given.
-        If you don't know the answer, just say that you don't know. Don't try to make up an answer.
-        ALWAYS return a "SOURCES" part in your answer.
-
-        QUESTION: {question}
-
-        {summaries}
-
-        FINAL ANSWER:"""
-
-        llama_condense_template = """
-        [INST]Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question, in its original language.
-        Chat History:
-        {chat_history}
-        Follow Up Input: {question}
-        Standalone question: [/INST]"""
-
-
         if self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_DEFAULT:
             self.templateprompt_for_question_answering_default = get_prompt(instruction=DEFAULT_QUESTION_PROMPT,
                                                                             new_system_prompt=DEFAULT_SYSTEM_PROMPT)
@@ -181,6 +132,15 @@ class QuestionAndAnsweringCustomLlama2():
         ######## FUNCTION CALLS and CUSTOM PROMPTS other than default
         self.templateprompt_for_question_answering_funccall_resourceUtilization = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization,
                                                                                              new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+        self.templateprompt_for_question_answering_funccall_devicesByIPLogs = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs,
+                                                                                             new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+
+
+        self.templateprompt_for_question_answering_funccall_topDemandingIPS = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS,
+                                                                                         new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+
+        self.templateprompt_for_question_answering_funccall_comparisonMapRequests = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests,
+                                                                                         new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
 
         ################# CUSTOM PROMPTS END
 
@@ -189,6 +149,68 @@ class QuestionAndAnsweringCustomLlama2():
         else:
             assert False, f"Unknown type {self.QuestionAnsweringPromptType}"
 
+    def solveFunctionCalls(self, full_response: str) -> bool:
+        full_response = full_response.removesuffix(
+            QuestionAndAnsweringCustomLlama2.LLAMA2_DEFAULT_END_LLM_RESPONSE)  # Removing the last </s> ending character specific to llama endint of a response
+        full_response.strip()
+        if (full_response[0] == '\"' and full_response[-1] == '\"') \
+                or (full_response[0] == "\'" and full_response[-1] == "\'"):
+            full_response = full_response[1:-1]
+
+        if 'FUNC_CALL' not in full_response:
+            return False
+
+        # Identify which function call it is being asked
+        # TODO: allow user to inject his own tools
+        # TODO: make exception and fail method
+        # Parse the parameters in function call
+        words_in_func_call = list(full_response.split())
+        words_in_func_call = [w.strip() for w in words_in_func_call]
+
+        # Remove potential " in beginning and end
+        if (words_in_func_call[0][0] == '"' and words_in_func_call[-1][-1] == '"') or \
+                (words_in_func_call[0][0] == "'" and words_in_func_call[-1][-1] == "'"):
+            words_in_func_call[0] = words_in_func_call[0][1:]
+            words_in_func_call[-1] = words_in_func_call[-1][:-1]
+
+        indexOfFunccall = words_in_func_call.index("FUNC_CALL")
+        words_in_func_call = words_in_func_call[indexOfFunccall:]
+
+        assert words_in_func_call[0] == 'FUNC_CALL', "First argument should be FUNC_CALL token"
+        assert words_in_func_call[2] == 'Params', "Third argument needs to be Params token"
+        # assert "</s>" in words_in_func_call[-1]
+        # words_in_func_call[-1] = words_in_func_call[-1].replace("</s>", "")
+
+        # Remove double quotes stuff
+        words_in_func_call = [w if w[0] not in ["'", '"'] else w[1:len(w) - 1] for w in words_in_func_call]
+
+        # Second expected as module.func
+        mod_name, func_name = words_in_func_call[1].rsplit('.', 1)
+        func_params = words_in_func_call[3:]
+
+        if func_params[0][0] =='[':
+            assert func_params[-1][-1]==']', "Unclosed parameters list"
+            func_params[0] = func_params[0][1:]
+            func_params[-1] = func_params[-1][:-1]
+
+            for idx, paramStr in enumerate(func_params):
+                if paramStr[-1] == ',':
+                    func_params[idx] = func_params[idx][:-1]
+                if paramStr[0] == ',':
+                    func_params[idx] = func_params[idx[1:]]
+
+        # import the module where function is
+        try:
+            print(f"Trying to call function {mod_name}.{func_name}, params: {func_params}")
+            mod = importlib.import_module(mod_name)
+        except ModuleNotFoundError:
+            return
+
+        # Get the function
+        func = getattr(mod, func_name)
+
+        # Call it
+        result = func(*func_params)
 
     def initializeLLMTokenizerandEmbedder(self):
         # Get the embeddings, tokenizer and model
@@ -243,9 +265,28 @@ class QuestionAndAnsweringCustomLlama2():
         self.llama_doc_chain = load_qa_with_sources_chain(self.llm, chain_type="stuff", prompt=llama_docs_prompt_default,
                                                      document_variable_name="context", verbose=False)
 
+
+        ##################### FUNCTION DOC_CHAIN STUFF ####################
         llama_docs_prompt_funccall_resourceUtilization = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_resourceUtilization, input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_resourceUtilization = load_qa_with_sources_chain(self.llm, chain_type="stuff", prompt=llama_docs_prompt_funccall_resourceUtilization,
-                                                    document_variable_name="context", verbose=False)
+        self.llama_doc_chain_funccalls_resourceUtilization = load_qa_with_sources_chain(self.llm, chain_type="stuff",
+                                                                                        prompt=llama_docs_prompt_funccall_resourceUtilization,
+                                                                                        document_variable_name="context", verbose=False)
+
+        llama_docs_prompt_funccall_devicesByIPLogs = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_devicesByIPLogs, input_variables=["context", "question"])
+        self.llama_doc_chain_funccalls_devicesByIPLogs = load_qa_with_sources_chain(self.llm, chain_type="stuff",
+                                                                                        prompt=llama_docs_prompt_funccall_devicesByIPLogs,
+                                                                                        document_variable_name="context", verbose=False)
+
+        llama_docs_prompt_funccall_topDemandingIPS = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_topDemandingIPS, input_variables=["context", "question", "param1", "param2"])
+        self.llama_doc_chain_funccalls_topDemandingIPS = load_qa_with_sources_chain(self.llm, chain_type="stuff",
+                                                                                        prompt=llama_docs_prompt_funccall_topDemandingIPS,
+                                                                                        document_variable_name="context", verbose=False)
+
+        llama_docs_prompt_funccall_comparisonMapRequests = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_comparisonMapRequests, input_variables=["context", "question"])
+        self.llama_doc_chain_funccalls_comparisonMapRequests = load_qa_with_sources_chain(self.llm, chain_type="stuff",
+                                                                                        prompt=llama_docs_prompt_funccall_comparisonMapRequests,
+                                                                                        document_variable_name="context", verbose=False)
+        #################### END FUNCTION DOC_CHAIN STUFF ###################
 
 
         # Initialize the memory(i.e., the chat history)
@@ -266,7 +307,7 @@ class QuestionAndAnsweringCustomLlama2():
             memory=self.memory, verbose=False)
 
 
-        # Create the final retrieval chain with func call specifics
+        ##################### FUNCTION CONV CHAIN STUFF ####################
         self.llm_conversational_chain_funccalls_resourceUtilization = ConversationalRetrievalChain(
             retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
             question_generator=self.llama_question_generator_chain,
@@ -275,47 +316,120 @@ class QuestionAndAnsweringCustomLlama2():
             memory=self.memory
         )
 
-    def getConversationChainByQuestion(self, question: str):
-        res = self.llm_conversational_chain_default
 
+        self.llm_conversational_chain_funccalls_devicesByIPLogs = ConversationalRetrievalChain(
+            retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
+            question_generator=self.llama_question_generator_chain,
+            combine_docs_chain=self.llama_doc_chain_funccalls_devicesByIPLogs,
+            return_generated_question=False,
+            memory=self.memory
+        )
+
+        """
+        self.llm_conversational_chain_funccalls_topDemandingIPS = ConversationalRetrievalChain(
+            retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
+            question_generator=self.llama_question_generator_chain,
+            combine_docs_chain=self.llama_doc_chain_funccalls_topDemandingIPS,
+            return_generated_question=False,
+            memory=self.memory
+        )
+        """
+
+        self.llm_conversational_chain_funccalls_comparisonMapRequests = ConversationalRetrievalChain(
+            retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
+            question_generator=self.llama_question_generator_chain,
+            combine_docs_chain=self.llama_doc_chain_funccalls_comparisonMapRequests,
+            return_generated_question=False,
+            memory=self.memory
+        )
+        #################### END FUNCTION DOC_CHAIN STUFF ###################
+
+    # Computes the similarity of request to one of the tools
+    # Extract parameters through classic NLP techniques at the moment...well, for the demo just basic stuff..
+    # TODO: The similarity operation is currently very simple token based, need to FIX it after demo
+    def similarityToTool(self, question: str):
+        # Split in lowercase tokens, remove punctuation
+        question_lower_words = question.lower().split()
+        for index, word in enumerate(question_lower_words):
+            if word[-1] in [',','!','?','.']:
+                question_lower_words[index] = question_lower_words[index][:-1]
+        question_small_words = set(question_lower_words)
+
+        params = []
+        toolType: QuestionAndAnsweringCustomLlama2.TOOL_TYPE = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_NONE
+
+        if set(["resource", "utilization"]).issubset(question_small_words):
+            toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION
+        elif set("devices grouped by ip".split()).issubset(question_small_words):
+            toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP
+        elif set("requests from the top ips".split()).issubset(question_small_words):
+            params = [int(x) for x in question_lower_words if x.isdigit()]
+            toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP
+        elif set("world map requests comparing".split()).issubset(question_small_words):
+            toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE
+
+        return toolType, params
+
+    def getConversationChainByQuestion(self, question: str):
+        conv_chain_res = self.llm_conversational_chain_default
+        params_res = []
         # This should use classic NLP techniques to compare similarity between question and a pair of functionalities,
         # Such that we use some smaller and more focused prompts and chains for cases.
         # This is mainly needed since we use a small model as foundation, a 7B, which can't hold too much context
         # and adapt to ALL use cases, functions etc. So this is like a task decomposition technique used in SE
 
-        # TODO: The similarity operation is currently very simple token based, need to FIX it after demo
-        question_small_words = set(question.lower().split())
-        if 'resource' in question_small_words and 'utilization' in question_small_words:
-            res = self.llm_conversational_chain_funccalls_resourceUtilization
+        toolTypeSimilarity, params = self.similarityToTool(question)
+        if toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION:
+            conv_chain_res = self.llama_doc_chain_funccalls_resourceUtilization #self.llm_conversational_chain_funccalls_resourceUtilization
+        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP:
+            conv_chain_res = self.llama_doc_chain_funccalls_devicesByIPLogs  #self.llm_conversational_chain_funccalls_devicesByIPLogs
+        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP:
+            conv_chain_res = self.llama_doc_chain_funccalls_topDemandingIPS #self.llm_conversational_chain_funccalls_topDemandingIPS
+        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE:
+            conv_chain_res = self.llama_doc_chain_funccalls_comparisonMapRequests #self.llm_conversational_chain_funccalls_comparisonMapRequests
 
-        return res
+        refactored_question = question # For now, let it as original
+        params_res = params
+        return conv_chain_res, refactored_question, params
 
     # Check if the (shared) memory of all chains has messages in it
     def hasHistoryMessages(self) -> bool:
         return len(self.memory.chat_memory.messages) > 0
 
-    def ask_question(self, question: str) -> Union[BaseStreamer, None]:
-        conversationChainToUse = self.getConversationChainByQuestion(question)
+    def ask_question(self, question_original: str) -> Union[BaseStreamer, None]:
+        chainToUse, question, params = self.getConversationChainByQuestion(question_original)
+
+        isfullConversationalType = True
 
         if self.streamingOnAnotherThread:
             from threading import Thread
 
-            self.temp_modelevaluate_thread = Thread(target=conversationChainToUse, args=({"question": question},))
+            if isinstance(chainToUse, ConversationalRetrievalChain):
+                self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"question": question}))
+            elif isinstance(chainToUse, StuffDocumentsChain):
+                self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents":[],
+                                                                                              "question":question,
+                                                                                              "params": params},))
+                isfullConversationalType = False
             self.temp_modelevaluate_thread.start()
 
-            return self.streamer
+            return self.streamer, isfullConversationalType
         else:
-            return conversationChainToUse({"question": question})
+            return chainToUse({"question": question}) #, "params": params},)
 
     def ask_question_and_streamtoconsole(self, question: str)->str:
         if self.streamingOnAnotherThread:
-            streamer: BaseStreamer = self.ask_question(question)
-
-            generated_text = ""
-
             # This is needed since when it has some memory and prev chat history it will FIRST output the standalone question
             # Then respond to the new question
             need_to_ignore_standalone_question_chain = self.hasHistoryMessages()
+
+            streamer, isfullConversationalType  = self.ask_question(question)
+            if not isfullConversationalType:
+                need_to_ignore_standalone_question_chain = False
+
+            generated_text = ""
+
+
 
             if need_to_ignore_standalone_question_chain:
                 for new_text in streamer:
@@ -326,6 +440,7 @@ class QuestionAndAnsweringCustomLlama2():
             for new_text in streamer:
                 generated_text += new_text
                 print(new_text, end='')
+            print("\n")
 
             # print(f"Full generated text {generated_text}")
 
@@ -364,7 +479,6 @@ class QuestionAndAnsweringCustomLlama2():
     ######################################################
 
 
-
 def __main__():
 
     securityChatbot = QuestionAndAnsweringCustomLlama2(QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
@@ -374,10 +488,25 @@ def __main__():
 
     #securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
 
+
     securityChatbot.ask_question_and_streamtoconsole("Ok. I'm on it, can you show me a resource utilization graph comparison between a normal session and current situation")
 
-    securityChatbot.ask_question_and_streamtoconsole(
-        "What is a DDoS attack?")
+    #print("#############################################\n"*3)
+
+    securityChatbot.ask_question_and_streamtoconsole("Show me the logs of the devices grouped by IP which have more than 25% requests over the median of a normal session per. Sort them by count")
+
+    #print("#############################################\n"*3)
+
+    fullGenText = securityChatbot.ask_question_and_streamtoconsole("Can you show a sample of GET requests from the top 3 demanding IPs, including their start time, end time? Only show the last 10 logs.")
+
+    fullGenText =  securityChatbot.ask_question_and_streamtoconsole("Give me a world map of requests by comparing the current data and a known snapshot with bars")
+    securityChatbot.solveFunctionCalls(fullGenText)
+
+
+    #query = "Show me the logs of the devices grouped by IP which have more than 25% requests over the median of a normal session per. Sort them by count"
+    #securityChatbot.llama_doc_chain_funccalls_devicesByIPLogs({"input_documents": [], "question": query}, return_only_outputs=True)
+
+    #securityChatbot.ask_question_and_streamtoconsole("What is a DDoS attack?")
 
     #securityChatbot.ask_question_and_streamtoconsole("Ok. I'm on it, can you show me a resource utilization graph comparison between a normal session and current situation")
     #securityChatbot.ask_question_and_streamtoconsole(
