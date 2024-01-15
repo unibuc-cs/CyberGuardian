@@ -17124,5 +17124,45 @@
     {
         "id": "Nlyx5lFQR34",
         "title": "VLAN Trunking Protocol (VTP) Explained | Version 1 & 2"
+    },
+    {
+        "id": "qij5qpHcbBk",
+        "title": "NAT Explained | Overload, Dynamic & Static"
+    },
+    {
+        "id": "japdEY1UKe4",
+        "title": "Spanning Tree Protocol Explained | Step by Step"
+    },
+    {
+        "id": "kfvJ8QVJscc",
+        "title": "OSPF Explained | Step by Step"
+    },
+    {
+        "id": "PIMnj2oqYIo",
+        "title": "OSPF Multi Area Explained"
+    },
+    {
+        "id": "QyymlFWDEgM",
+        "title": "EIGRP Explained | Step by Step"
+    },
+    {
+        "id": "OTwp3xtd4dg",
+        "title": "TCP/IP Model Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "cA9ZJdqzOoU",
+        "title": "TCP vs UDP Comparison | Cisco CCNA 200-301"
+    },
+    {
+        "id": "RDotMcs0Erg",
+        "title": "Port Numbers Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "LIzTo6e4FgY",
+        "title": "IP Addresses Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "irhS0ASkvy8",
+        "title": "IPv6 Addresses Explained | Cisco CCNA 200-301"
     }
   ]
