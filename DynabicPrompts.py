@@ -19,11 +19,13 @@ def get_prompt(instruction=DEFAULT_QUESTION_PROMPT, new_system_prompt=DEFAULT_SY
 
 
 template_securityOfficer_system_prompt = """\
-""Consider that I'm a beginner in networking and security things. \n
+Consider that I'm a beginner in networking and security things. \n
 Give me a concise answer with with a single step at a time. \n
 Limit your response to maximum 2000 words.
 Do not provide any additional text or presentation. Only steps and actions.
-If possible use concrete names of software or tools that could help on each step."""
+If possible use concrete names of software or tools that could help on each step.
+Use emoticons in your responses.
+"""
 
 template_securityOfficer_instruction_rag_nosources_default = """\
 Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
@@ -31,7 +33,8 @@ Use the following pieces of context to answer the question. If no context provid
 Question: {question}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization = """\
-        Write only the following string between quotes, no other words, ignore the question and context: "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
+        Write only the following string and no other words, do not start your response with Sure. 
+        "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
         {context}
         Question: {question}"""
 
@@ -50,6 +53,18 @@ template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapReques
         "I will invoke FUNC_CALL dynabicagenttools.shopComparativeColumnsDatasets Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot/DATASET_LOGS_HACKED_True.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot/DATASET_LOGS_HACKED_False.csv'"
         {context}"""
 
+template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert="""\
+        Write only the following string and no other words, do not start your response with Sure. Do not write like I provided you the code.
+        '''
+        df1 = pd.read_csv("../data/SmartHome_DDoSSnapshot/FIREWALL_PROCESSES.csv")
+        
+        new_row = ('IP': {param_ip}, 'NAME': {param_name}, 'DATE': datetime.now(), 'BLOCKED':1)
+        
+        df1=pd.concat([df1, pd.DataFrame([new_row])], ignore_index=True)
+        
+        df1.to_csv("../data/SmartHome_DDoSSnapshot/FIREWALL_PROCESSES.csv")
+        '''
+        {context}"""
 
 template_securityOfficer_instruction_rag_withsources_default = """
 Given the following extracted parts of a long document and a question, create a final answer with "SOURCES" that represent exactly the Source name and link given.

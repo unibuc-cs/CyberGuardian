@@ -58,6 +58,8 @@ class QuestionAndAnsweringCustomLlama2():
         TOOL_DEVICES_LOGS_BY_IP=2,
         TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP=3,
         TOOL_MAP_OF_REQUESTS_COMPARE=4,
+        GENERIC_QUESTION_NO_HISTORY=5,
+        PANDAS_PYTHON_CODE=6,
 
 
     LLAMA2_DEFAULT_END_LLM_RESPONSE ="</s>"
@@ -142,6 +144,10 @@ class QuestionAndAnsweringCustomLlama2():
         self.templateprompt_for_question_answering_funccall_comparisonMapRequests = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests,
                                                                                          new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
 
+        self.templateprompt_for_question_answering_funccall_firewallInsert = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert,
+                                                                                         new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+
+
         ################# CUSTOM PROMPTS END
 
         if self.QuestionRewritingPromptType == QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT:
@@ -152,7 +158,7 @@ class QuestionAndAnsweringCustomLlama2():
     def solveFunctionCalls(self, full_response: str) -> bool:
         full_response = full_response.removesuffix(
             QuestionAndAnsweringCustomLlama2.LLAMA2_DEFAULT_END_LLM_RESPONSE)  # Removing the last </s> ending character specific to llama endint of a response
-        full_response.strip()
+        full_response = full_response.strip()
         if (full_response[0] == '\"' and full_response[-1] == '\"') \
                 or (full_response[0] == "\'" and full_response[-1] == "\'"):
             full_response = full_response[1:-1]
@@ -237,9 +243,9 @@ class QuestionAndAnsweringCustomLlama2():
                         torch_dtype=torch.bfloat16,
                         device_map="auto",
                         max_new_tokens=4096,
-                        do_sample=True,
-                        temperature=0.1,
-                        top_p=0.95,
+                        do_sample=False, #True,
+                        # temperature=0.1,
+                        # top_p=0.95,
                         num_return_sequences=1,
                         eos_token_id=self.tokenizer.eos_token_id,
                         pad_token_id=self.tokenizer.eos_token_id,
@@ -285,6 +291,13 @@ class QuestionAndAnsweringCustomLlama2():
         llama_docs_prompt_funccall_comparisonMapRequests = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_comparisonMapRequests, input_variables=["context", "question"])
         self.llama_doc_chain_funccalls_comparisonMapRequests = load_qa_with_sources_chain(self.llm, chain_type="stuff",
                                                                                         prompt=llama_docs_prompt_funccall_comparisonMapRequests,
+                                                                                        document_variable_name="context", verbose=False)
+
+
+        llama_docs_prompt_funccall_firewallInsert = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_firewallInsert,
+                                                                   input_variables=["context", "question"])
+        self.llama_doc_chain_funccalls_firewallInsert = load_qa_with_sources_chain(self.llm, chain_type="stuff",
+                                                                                        prompt=llama_docs_prompt_funccall_firewallInsert,
                                                                                         document_variable_name="context", verbose=False)
         #################### END FUNCTION DOC_CHAIN STUFF ###################
 
@@ -367,6 +380,10 @@ class QuestionAndAnsweringCustomLlama2():
             toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP
         elif set("world map requests comparing".split()).issubset(question_small_words):
             toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE
+        elif set("ips locations random queries".split()).issubset(question_small_words): # A set of generic questio nthat hsould not depend on history of the conversation!
+            toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY
+        elif set("python code firewalls ip".split()).issubset(question_small_words): # Demo for code
+            toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.PANDAS_PYTHON_CODE
 
         return toolType, params
 
@@ -387,6 +404,10 @@ class QuestionAndAnsweringCustomLlama2():
             conv_chain_res = self.llama_doc_chain_funccalls_topDemandingIPS #self.llm_conversational_chain_funccalls_topDemandingIPS
         elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE:
             conv_chain_res = self.llama_doc_chain_funccalls_comparisonMapRequests #self.llm_conversational_chain_funccalls_comparisonMapRequests
+        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY:
+            conv_chain_res = self.llama_doc_chain
+        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.PANDAS_PYTHON_CODE:
+            conv_chain_res = self.llama_doc_chain_funccalls_firewallInsert
 
         refactored_question = question # For now, let it as original
         params_res = params
@@ -407,9 +428,16 @@ class QuestionAndAnsweringCustomLlama2():
             if isinstance(chainToUse, ConversationalRetrievalChain):
                 self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"question": question}))
             elif isinstance(chainToUse, StuffDocumentsChain):
-                self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents":[],
-                                                                                              "question":question,
-                                                                                              "params": params},))
+                if chainToUse != self.llama_doc_chain_funccalls_firewallInsert:
+                    self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents":[],
+                                                                                                  "question":question,
+                                                                                                  "params": params},))
+                else:
+                    self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents":[],
+                                                                                                  "question":question,
+                                                                                                  "param_ip": "10.20.30.40",
+                                                                                                  "param_name": 'IoTDevice'},))
+
                 isfullConversationalType = False
             self.temp_modelevaluate_thread.start()
 
@@ -488,7 +516,18 @@ def __main__():
 
     #securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
 
+    """
+    securityChatbot.llama_doc_chain_funccalls_firewallInsert({'input_documents': [],
+                                                              'question':"Generate me a python code to insert in a pandas dataframe named Firewalls a new IP",
+                                                              'param_ip':"10.20.30.40",
+                                                                'param_name':"IoTHub"})
+    """
 
+    securityChatbot.ask_question_and_streamtoconsole("Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice")
+
+    #securityChatbot.ask_question_and_streamtoconsole("What kind of cybersecurity attack could it be if there are many IPs from different locations sending GET commands in a short time with random queries ?")
+
+    return
     securityChatbot.ask_question_and_streamtoconsole("Ok. I'm on it, can you show me a resource utilization graph comparison between a normal session and current situation")
 
     #print("#############################################\n"*3)
