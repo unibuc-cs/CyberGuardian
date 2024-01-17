@@ -15,6 +15,9 @@ def main(json_path, collection=None, db=None):
     with open(json_path) as f:
         markdown_corpus = json.load(f)
 
+        if len(markdown_corpus) == 0:
+            return
+
     for contentName, content in markdown_corpus.items():
         assert isinstance(content, list)
 
