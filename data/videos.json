@@ -1,5 +1,608 @@
 [
   {
+    "id":"E5bSumTAHZE",
+    "title":"Network Protocols - ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DNS, DHCP - Networking Fundamentals - L6"
+  },
+  {
+    "id":"0TLDTodL7Lc",
+    "title":"Transport Layer Security (TLS) - Computerphile"
+  },
+  {
+    "id":"8lQWmHDeD5c",
+    "title":"The Ports and Protocols You Need to Know for the Security+ SY0-601 Exam"
+  },
+  {
+    "id":"n7kYogsTkVo",
+    "title":"The Top 15 Network Protocols and Ports Explained // FTP, SSH, DNS, DHCP, HTTP, SMTP, TCP/IP"
+  },
+  {
+    "id":"wHXKo9So5y8",
+    "title":"Free CCNA | Wireless Security | Day 57 | CCNA 200-301 Complete Course"
+  },
+  {
+    "id":"rA0p0ouD3aE",
+    "title":"Lec-57: What is Routing Protocols | Various types of Routing Protocols"
+  },
+  {
+    "id":"BZTWXl9QNK8",
+    "title":"12. Network Security"
+  },
+  {
+    "id":"fUCBrd4zLeU",
+    "title":"L18: Transport Layer and Security Protocols | Issues in Designing Transport Layer Protocol"
+  },
+  {
+    "id":"AOf62WyxuQI",
+    "title":"CITS3004 - 7.1. Security Protocols"
+  },
+  {
+    "id":"qC3pO61MPeg",
+    "title":"ipsec vs ssl security protocols comparison"
+  },
+  {
+    "id":"AIjiGj0ae2c",
+    "title":"Wireless Security Protocols Explained (WEP, WPA, WPA2, WPA3) | CompTIA Security+ (SY0-601)"
+  },
+  {
+    "id":"cn8Zxh9bPio",
+    "title":"ARP Explained - Address Resolution Protocol"
+  },
+  {
+    "id":"Cx7foWGm5fo",
+    "title":"How Address Resolution Protocol (ARP) Works"
+  },
+  {
+    "id":"PJo5yOtu7o8",
+    "title":"What is SMTP - Simple Mail Transfer Protocol"
+  },
+  {
+    "id":"nyH0nYhMW9M",
+    "title":"What is DNS (Domain Name System)?"
+  },
+  {
+    "id":"L9aZpg0ip70",
+    "title":"FTP Explained | File Transfer Protocol | Cisco CCNA 200-301"
+  },
+  {
+    "id":"50hcfsoBf4Q",
+    "title":"Free CCNA | FTP & TFTP | Day 43 | CCNA 200-301 Complete Course"
+  },
+  {
+    "id":"VhQ0A2_C084",
+    "title":"FTP (File Transfer Protocol), SFTP, TFTP Explained. | Tech"
+  },
+  {
+    "id":"eWdPWSBKxso",
+    "title":"http vs https | How SSL (TLS) encryption works in networking ? (2023)"
+  },
+  {
+    "id":"e6-TaH5bkjo",
+    "title":"DHCP Explained - Dynamic Host Configuration Protocol"
+  },
+  {
+    "id":"THxIyHz191A",
+    "title":"How TLS Works?"
+  },
+  {
+    "id":"tKqSSOEjbgs",
+    "title":"SSL Handshake Explained | What Is SSL/TLS Handshake? | SSL/TLS Handshake Protocol | Simplilearn"
+  },
+  {
+    "id":"ko_kqJL2I6Q",
+    "title":"What is Home Automation? How a Smart Home Works"
+  },
+  {
+    "id":"Zm9AGaEBZAU",
+    "title":"Smart Home For Beginners - Technologies"
+  },
+  {
+    "id":"2VpDJbHrAg4",
+    "title":"What’s the future of smart home tech?"
+  },
+  {
+    "id":"cb7-Nzy93m0",
+    "title":"I Tried Building the PERFECT Smart Home: What I Learned (Mistakes Included)"
+  },
+  {
+    "id":"Du7J00KU980",
+    "title":"The PROBLEM with Smart Home Tech"
+  },
+  {
+    "id":"RY2Guf8Tb4c",
+    "title":"Smart Home Technology 101: Networks and Voice Assistants | The Home Depot Canada"
+  },
+  {
+    "id":"jyMC_HAIzpg",
+    "title":"How to Build a Smart Home 101"
+  },
+  {
+    "id":"gu0dCnnq9kM",
+    "title":"Your Smart Home is Changing: Matter in 2023"
+  },
+  {
+    "id":"pZsroRmbpYQ",
+    "title":"How Smart Home Technology Helps Protect Your Home"
+  },
+  {
+    "id":"8ajNau1TCSo",
+    "title":"What can Smart Home Technologies do for you?"
+  },
+  {
+    "id":"7xauYnN3ig0",
+    "title":"Assessing risks of ‘smart home’ technology"
+  },
+  {
+    "id":"2Xh0Orw923s",
+    "title":"10 Underrated Smart Home Gadgets That Changed My Life!"
+  },
+  {
+    "id":"eIGjF2T2MJo",
+    "title":"Smart Home Technology For Elderly Care | Products and Usage"
+  },
+  {
+    "id":"qLhlL_LPqec",
+    "title":"Smart Home, Safe Home: Safely Aging at Home | Ryan Herd | TEDxHiltonHead"
+  },
+  {
+    "id":"gpB4600keWA",
+    "title":"Smart Home with Google Assistant & Alexa using NodeMCU ESP8266 (Manual + Voice) | IoT Projects 2021"
+  },
+  {
+    "id":"0JC4tNe0OS4",
+    "title":"Smart Home Protocols: Thread Explained!"
+  },
+  {
+    "id":"HowBqOfwqXo",
+    "title":"Smart Home Technology | Pros and Cons"
+  },
+  {
+    "id":"UmpDXc3cXbU",
+    "title":"Smart Home Protocols: ZigBee Explained!"
+  },
+  {
+    "id":"TTpkECCNAPg",
+    "title":"How to start a SMART HOME in 2022"
+  },
+  {
+    "id":"gF5646C4IOE",
+    "title":"10 VERY Practical Home Automation Ideas for 2023!"
+  },
+  {
+    "id":"5CvrGPmeTxE",
+    "title":"7 Common Smart Home FAILS and How To Avoid Them"
+  },
+  {
+    "id":"Wslq1gMKf50",
+    "title":"Internet security: Threats to your online experience"
+  },
+  {
+    "id":"GIKD7XPX1g8",
+    "title":"How to Protect Yourself From Online Threats"
+  },
+  {
+    "id":"Dk-ZqQ-bfy4",
+    "title":"8 Most Common Cybersecurity Threats | Types of Cyber Attacks | Cybersecurity for Beginners | Edureka"
+  },
+  {
+    "id":"8zSoyAmHHc4",
+    "title":"Threats Vulnerabilities and Exploits"
+  },
+  {
+    "id":"VNp35Uw_bSM",
+    "title":"Cybersecurity Threat Hunting Explained"
+  },
+  {
+    "id":"n8mbzU0X2nQ",
+    "title":"Malware: Difference Between Computer Viruses, Worms and Trojans"
+  },
+  {
+    "id":"PsT2joRNvpI",
+    "title":"IBM Security X-Force Threat Intelligence Index Trends 2023"
+  },
+  {
+    "id":"lWxWyCPrxiw",
+    "title":"Ransomware, Threat Hunting and Threat Intelligence"
+  },
+  {
+    "id":"OxKtdqsRhYI",
+    "title":"Online Threats"
+  },
+  {
+    "id":"W46HD9XkLLE",
+    "title":"Computer Security Threats || Virus, Worms, Adware, Spyware, Hacker || How Threats are Spread"
+  },
+  {
+    "id":"wKFOXuWoqmM",
+    "title":"Top 5 Cyber Attacks | Types Of Cyber Security Threats | CyberSecurity For Beginners | Intellipaat"
+  },
+  {
+    "id":"bKAqXN8AI1U",
+    "title":"The Most Dangerous Cyber Threats in 2023"
+  },
+  {
+    "id":"MeQjjMSPsF0",
+    "title":"Episode Three: Common online threats"
+  },
+  {
+    "id":"x5bj20t6dTs",
+    "title":"The Most Dangerous Cyber Threats in 2022"
+  },
+  {
+    "id":"ZqT4KDb0-IM",
+    "title":"Cyber threats"
+  },
+  {
+    "id":"nkwDSFEM25g",
+    "title":"Cyber Threats and Why Cyber Attacks Happen"
+  },
+  {
+    "id":"Ym00-RJnFsk",
+    "title":"8 Basic Cyber Attacks … and How to Avoid Them"
+  },
+  {
+    "id":"U_7CGl6VWaQ",
+    "title":"How Cyberwarfare Actually Works"
+  },
+  {
+    "id":"v2eUabNGpoE",
+    "title":"Top cybersecurity threats of 2022 | cybernews.com"
+  },
+  {
+    "id":"zyXux_n0nrU",
+    "title":"Cyber-soldiers protecting US from online threats"
+  },
+  {
+    "id":"Wjm2-Xd5WjE",
+    "title":"Tips key in uncovering online threats"
+  },
+  {
+    "id":"awhqnSskWjU",
+    "title":"Cybersecurity Threats | Types of Cybersecurity Threats | Invensis Learning"
+  },
+  {
+    "id":"NuyzuNBFWxQ",
+    "title":"7 Cryptography Concepts EVERY Developer Should Know"
+  },
+  {
+    "id":"uNzaMrcuTM0",
+    "title":"The Mathematics of Cryptography"
+  },
+  {
+    "id":"C7vmouDOJYM",
+    "title":"Cryptography Full Course | Cryptography And Network Security | Cryptography | Simplilearn"
+  },
+  {
+    "id":"A6HNd1EGfIc",
+    "title":"Cryptography Concepts - SY0-601 CompTIA Security+ : 2.8"
+  },
+  {
+    "id":"6uRI4o5EUkI",
+    "title":"Symmetric and Asymmetric Cryptography - SY0-601 CompTIA Security+ : 2.8"
+  },
+  {
+    "id":"bO4lEQfPn60",
+    "title":"RSA and DSA Encryption Algorithms Explained | Cryptography & Network Security Tutorial | Simplilearn"
+  },
+  {
+    "id":"9X1rSWLFhLY",
+    "title":"What is Cryptography | why cryptography? Introduction to Cryptography"
+  },
+  {
+    "id":"m9DA0k0Ctz8",
+    "title":"Cryptography Limitations - SY0-601 CompTIA Security+ : 2.8"
+  },
+  {
+    "id":"JoeiLuFNBc4",
+    "title":"Introduction to Cryptography and Network Security"
+  },
+  {
+    "id":"JtbKh_12ctg",
+    "title":"Caesar Cipher (Part 1)"
+  },
+  {
+    "id":"5jpgMXt1Z9Y",
+    "title":"What is Cryptography? | Introduction to Cryptography | Cryptography for Beginners | Edureka"
+  },
+  {
+    "id":"-EQ8UomTrAQ",
+    "title":"Hill Cipher (Encryption)"
+  },
+  {
+    "id":"JK3ur6W4rvw",
+    "title":"Hill Cipher (Decryption)"
+  },
+  {
+    "id":"Ic4BzVggNY8",
+    "title":"Polyalphabetic Cipher (Vigenère Cipher)"
+  },
+  {
+    "id":"Qojvtgf7SQw",
+    "title":"Polyalphabetic Cipher (Vernam Cipher)"
+  },
+  {
+    "id":"rjWx39mB4Sc",
+    "title":"What Is Cryptography? | Introduction To Cryptography | Cryptography Tutorial | Simplilearn"
+  },
+  {
+    "id":"Xb4_VT4y9kQ",
+    "title":"Cryptography – Key Terms"
+  },
+  {
+    "id":"Kejs-saINOo",
+    "title":"Cryptanalysis"
+  },
+  {
+    "id":"9TNI2wHmaeI",
+    "title":"22. Cryptography: Encryption"
+  },
+  {
+    "id":"GSIDS_lvRv4",
+    "title":"Public Key Cryptography - Computerphile"
+  },
+  {
+    "id":"AQDCe585Lnc",
+    "title":"Asymmetric Encryption - Simply explained"
+  },
+  {
+    "id":"nRou-J4YN4Y",
+    "title":"Symmetric vs Asymmetric Encryption – What is the Difference?"
+  },
+  {
+    "id":"_IOZ8_cPgu8",
+    "title":"Networking basics (2023) | What is a switch, router, gateway, subnet, gateway, firewall & DMZ"
+  },
+  {
+    "id":"3QhU9jd03a0",
+    "title":"Computer Networks: Crash Course Computer Science #28"
+  },
+  {
+    "id":"WexBQ1XgaDw",
+    "title":"What is Networking (Computer Networking)?"
+  },
+  {
+    "id":"tSodBEAJz9Y",
+    "title":"Computer Networking Explained | Cisco CCNA 200-301"
+  },
+  {
+    "id":"eMamgWllRFY",
+    "title":"Network Devices Explained | Hub, Bridge, Router, Switch"
+  },
+  {
+    "id":"rurs7cdT5cc",
+    "title":"Basic Networking Commands (Part 1)"
+  },
+  {
+    "id":"xmpYfyNmWbw",
+    "title":"CompTIA Network+ Full Course FREE [23+ Hours]"
+  },
+  {
+    "id":"wze2gtz6MdY",
+    "title":"Computer Network | Complete Chapter | CBSE Class 12"
+  },
+  {
+    "id":"qiQR5rTSshw",
+    "title":"Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep]"
+  },
+  {
+    "id":"6G14NrjekLQ",
+    "title":"Computer Networking (Deepdive)"
+  },
+  {
+    "id":"oHQvWa6J8dU",
+    "title":"Basics of Networking for Beginners | Getting Started With Networking | Computer Networks|Simplilearn"
+  },
+  {
+    "id":"cNwEVYkx2Kk",
+    "title":"Introduction to Networking | Network Fundamentals Part 1"
+  },
+  {
+    "id":"PhjHXeMNpp8",
+    "title":"Computer Networking Tutorial - Bits and Bytes of the Networking [12 HOURS]"
+  },
+  {
+    "id":"IPvYjXCsTg8",
+    "title":"Computer Networking Full Course - OSI Model Deep Dive with Real Life Examples"
+  },
+  {
+    "id":"0PbTi_Prpgs",
+    "title":"Computer Networking Complete Course - Basic to Advanced"
+  },
+  {
+    "id":"gGy27UJ8RBo",
+    "title":"Networking Lecture 04 - DNS: Domain Name Service"
+  },
+  {
+    "id":"nm31LTDSYXc",
+    "title":"Networking Lecture 05 - Reliable Transport"
+  },
+  {
+    "id":"OOkcaOgue7E",
+    "title":"Networking Lecture 07 - TCP Congestion Control"
+  },
+  {
+    "id":"eFZ17yw_FWE",
+    "title":"Networking Lecture 16 - Authentication"
+  },
+  { 
+    "id":"9v4_1pUJVGc",
+    "title":"Networking Lecture 17 - Mobility"
+  },
+  {
+    "id":"jq_LZ1RFPfU",
+    "title":"Cybersecurity Architecture: Five Principles to Follow (and One to Avoid)"
+  },
+  {
+    "id":"EqNe55IzjAw",
+    "title":"Cybersecurity Architecture: Fundamentals of Confidentiality, Integrity, and Availability"
+  },
+  {
+    "id":"E9pHJRRfAhw",
+    "title":"Cybersecurity Architecture: Roles and Tools"
+  },
+  {
+    "id":"5uNifnVlBy4",
+    "title":"Cybersecurity Architecture: Who Are You? Identity and Access Management"
+  },
+  {
+    "id":"Njqid_JpqTs",
+    "title":"Cybersecurity Architecture: Endpoints Are the IT Front Door - Guard Them"
+  },
+  {
+    "id":"U_P23SqJaDc",
+    "title":"Cyber Security Full Course for Beginner"
+  },
+  {
+    "id":"EKdZutMkmTE",
+    "title":"🔥 Complete Cyber Security Course For 2023 | Cyber Security Full Course for Beginners | Simplilearn"
+  }, 
+  {
+    "id":"sesacY7Xz3c",
+    "title":"Cybersecurity Architecture: Networks"
+  },
+  {
+    "id":"njPY7pQTRWg",
+    "title":"Basics Of Cybersecurity For Beginners | Cybersecurity Fundamentals | Cybersecurity | Simplilearn"
+  },
+  {
+    "id":"uAHFNuDlcRw",
+    "title":"Cybersecurity Trends for 2023"
+  },
+  {
+    "id":"hXSFdwIOfnE",
+    "title":"Cyber Security Full Course 2023 | Cyber Security Course Training For Beginners 2023 | Simplilearn"
+  },
+  {
+    "id":"ixpdwLKgZ7A",
+    "title":"How I Would Learn Cyber Security (If I Could Start Over)"
+  },
+  {
+    "id":"ObeUOeh1eck",
+    "title":"Cybersecurity Modernization"
+  },
+  {
+    "id":"Jk79QJCxPkM",
+    "title":"Cybersecurity Architecture: Response"
+  },
+  {
+    "id":"VEu326IZpsc",
+    "title":"Cybersecurity Architecture: Detection"
+  },
+  {
+    "id":"_DVVNOGYtmU",
+    "title":"Cybersecurity for Beginners | Google Cybersecurity Certificate"
+  },
+  {
+    "id":"xzDKM7eEweI",
+    "title":"Get Started in Cybersecurity: Beginner Tips, Certifications and Career Paths"
+  },
+  {
+    "id":"ooJSgsB5fIE",
+    "title":"What is Cyber Security? | Introduction to Cyber Security | Cyber Security Training | Edureka"
+  },
+  {
+    "id":"zBFB34YGK1U",
+    "title":"Introduction to Computer Security - Information Security Lesson #1 of 12"
+  },
+  {
+    "id":"pZIlaWhfhpQ",
+    "title":"Identification and Authentication - Information Security Lesson #2 of 12"
+  },
+  {
+    "id":"AeFyCGpclwY",
+    "title":"Software Program Security - Information Security Lesson #3 of 12"
+  }, 
+  {
+    "id":"wn-uVP8HncA",
+    "title":"Malicious Code (Malware) - Information Security Lesson #4 of 12"
+  },
+  {
+    "id":"QJn28fFKUR0",
+    "title":"Blockchain Technology Simply Explained"
+  },
+  {
+    "id":"EH6vE97qIP4",
+    "title":"1. Introduction for 15.S12 Blockchain and Money, Fall 2018"
+  },
+  {
+    "id":"qcuc3rgwZAE",
+    "title":"The Blockchain & Bitcoin - Computerphile"
+  },
+  {
+    "id":"SyVMma1IkXM",
+    "title":"Blockchain Full Course - 4 Hours | Blockchain Tutorial |Blockchain Technology Explained |Simplilearn"
+  },
+  {
+    "id":"hYip_Vuv8J0",
+    "title":"Blockchain Expert Explains One Concept in 5 Levels of Difficulty | WIRED"
+  },
+  {
+    "id":"QphJEO9ZX6s",
+    "title":"Blockchain Explained"
+  },
+  {
+    "id":"gyMwXuJrbJQ",
+    "title":"Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript – 32-Hour Course"
+  },
+  {
+    "id":"YJyXfjbBmc8",
+    "title":"All about Blockchain | Simply Explained"
+  },
+  {
+    "id":"0UvVOMZqpEA",
+    "title":"3. Blockchain Basics & Cryptography"
+  },
+  {
+    "id":"w7HDA8gUbpQ",
+    "title":"4. Blockchain Basics & Consensus"
+  },
+  {
+    "id":"zGDTt9Q3vyM",
+    "title":"5. Blockchain Basics & Transactions, UTXO and Script Code"
+  },
+  {
+    "id":"_160oMzblY8",
+    "title":"Blockchain 101 - A Visual Demo"
+  },
+  {
+    "id":"0uv1WaLIhBA",
+    "title":"Blockchain Technology - SY0-601 CompTIA Security+ : 2.8"
+  },
+  {
+    "id":"QpXXGo235fQ",
+    "title":"Blockchain Applications | Top 5 Decentralized Applications | Blockchain | Edureka Rewind"
+  },
+  {
+    "id":"k53LUZxUF50",
+    "title":"Blockchain: Massively Simplified | Richie Etwaru | TEDxMorristown"
+  },
+  {
+    "id":"ZVxRyfmL1g8",
+    "title":"Blockchain and Crypto: Past, Present, and Future | Douglas Pepe | TEDxRanneySchool"
+  },
+  {
+    "id":"m0BpeUpgBu4",
+    "title":"Modular vs Monolithic Blockchains - Explained"
+  },
+  {
+    "id":"ZFbmmWV4kjQ",
+    "title":"Alpha Leak | The Bull Case for Modular Blockchains"
+  },
+  {
+    "id":"rdstZa79Dp4",
+    "title":"Types Of Blockchain Explained | Blockchain Tutorial For Beginners | Simplilearn"
+  },
+  {
+    "id":"qniz6h2fYuc",
+    "title":"What is Blockchain Layer 0, 1, 2, 3 Explained | Layers of Blockchain Architecture"
+  },
+  {
+    "id":"u2avJ_ctsKM",
+    "title":"Blockchain Layers Explained: Best Blockchain Layers 1, 2, 3, and 0 Explainer video | Jude"
+  }
+]
+=======
+[
+  {
     "id": "Zo5M1lrMU1I",
     "title" : "Yale Engineering Dean's Invited Speaker Series featuring Royal Hansen, VP, Cybersecurity, Google"
   },
