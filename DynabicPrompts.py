@@ -53,15 +53,15 @@ template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapReques
         "I will invoke FUNC_CALL dynabicagenttools.shopComparativeColumnsDatasets Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot/DATASET_LOGS_HACKED_True.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot/DATASET_LOGS_HACKED_False.csv'"
         {context}"""
 
-template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert="""\
+template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert = """\
         Write only the following string and no other words, do not start your response with Sure. Do not write like I provided you the code.
         '''
         df1 = pd.read_csv("../data/SmartHome_DDoSSnapshot/FIREWALL_PROCESSES.csv")
-        
+
         new_row = ('IP': {param_ip}, 'NAME': {param_name}, 'DATE': datetime.now(), 'BLOCKED':1)
-        
+
         df1=pd.concat([df1, pd.DataFrame([new_row])], ignore_index=True)
-        
+
         df1.to_csv("../data/SmartHome_DDoSSnapshot/FIREWALL_PROCESSES.csv")
         '''
         {context}"""
