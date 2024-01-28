@@ -598,10 +598,7 @@
   {
     "id":"u2avJ_ctsKM",
     "title":"Blockchain Layers Explained: Best Blockchain Layers 1, 2, 3, and 0 Explainer video | Jude"
-  }
-]
-=======
-[
+  },
   {
     "id": "Zo5M1lrMU1I",
     "title" : "Yale Engineering Dean's Invited Speaker Series featuring Royal Hansen, VP, Cybersecurity, Google"
@@ -610,7 +607,6 @@
     "id": "bDAY-oUP0DQ",
     "title": "IBM - Denial of Service Attacks Explained"
   },
-
   {
     "id": "YfzAySXZBls",
     "title": "2023 Cybersecurity Highlights – TECH Talk Year in Review"
@@ -17767,5 +17763,125 @@
     {
         "id": "irhS0ASkvy8",
         "title": "IPv6 Addresses Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "QoVkbueINS8",
+        "title": "Network Security #1: Threats"
+    },
+    {
+        "id": "KO9PPmCxEKQ",
+        "title": "Network Security #2: Identifying Vulnerabilities & Security Measures"
+    },
+    {
+        "id": "S9iaUndb53g",
+        "title": "Network Security #3: More Security Measures"
+    },
+    {
+        "id": "WjXhnt6T-GU",
+        "title": "Network Security: Threats - GCSE Computer Science"
+    },
+    {
+        "id": "2VaPTIuRs4k",
+        "title": "Common Types Of Network Security Vulnerabilities In 2023 | PurpleSec"
+    },
+    {
+        "id": "jlvvek8n5g8",
+        "title": "36. OCR GCSE (J277) 1.4 Threats to networks"
+    },
+    {
+        "id": "9Zx6eNc2j9s",
+        "title": "1.4.1 Threats to Servers SQL Injection and DoS Attacks. GCSE Computer Science (OCR)"
+    },
+    {
+        "id": "ywSArNmSHhQ",
+        "title": "Cyber Threats To Systems Security"
+    },
+    {
+        "id": "tNKmOh9sMhc",
+        "title": "Computer Science Lesson 62: Physical threats to computers"
+    },
+    {
+        "id": "mJVAofe5m7s",
+        "title": "Cyber Security #1: Threats"
+    },
+    {
+        "id": "uyfFoC3wVzY",
+        "title": "Assets and Threats"
+    },
+    {
+        "id": "2PhNSdmwlZw",
+        "title": "GCSE Computer Science: Cyber security threats"
+    },
+    {
+        "id": "4RnND-1dB4Y",
+        "title": "Top Cybersecurity Threats | Types of Cyberattacks | Cybersecurity Course for Beginners | Simplilearn"
+    },
+    {
+        "id": "iy-5bb3S-iA",
+        "title": "Computer security threats explained"
+    },
+    {
+        "id": "COi178UNckM",
+        "title": "Four Types of Threats in Information Security"
+    },
+    {
+        "id": "rPdM92dhYm4",
+        "title": "What Are Insider Threats? – Proofpoint Education Series"
+    },
+    {
+        "id": "Boe7HKW8ffQ",
+        "title": "Threats and Vulnerabilities - Computer Networks"
+    },
+    {
+        "id": "rHxTs-ttp_c",
+        "title": "Computer Science Lesson 28A: Threats to Data in a Computer"
+    },
+    {
+        "id": "BTHbcoLvOa8",
+        "title": "IGCSE Computer Science C5 - Internet, Cybersecurity Threats and Solutions [2023-2025]"
+    },
+    {
+        "id": "esNXUNG4U1k",
+        "title": "Security threat | Computer Security | Web Technology | Lec - 51 | Bhanu Priya"
+    },
+    {
+        "id": "JbEPJv7Ybcs",
+        "title": "What You Should Learn Before \"Cybersecurity\" - 2023"
+    },
+    {
+        "id": "-UrdExQW0cs",
+        "title": "How Quantum Computers Break The Internet... Starting Now"
+    },
+    {
+        "id": "RRst_l9NYkg",
+        "title": "Threats and Vulnerabilities - Information Security"
+    },
+    {
+        "id": "iY7rGZrLKBw",
+        "title": "Security Threats, virus, worms, Trojan horse. Cyber security lecture series part -10"
+    },
+    {
+        "id": "rYcrBcSeAHw",
+        "title": "Security Threats, Computer Science Lecture | Sabaq.pk"
+    },
+    {
+        "id": "YqDoq54kljA",
+        "title": "Threat Hunting Explained"
+    },
+    {
+        "id": "WdmsWYF6Hq8",
+        "title": "BehindTheHunt | Episode 1: What Is Threat Hunting?"
+    },
+    {
+        "id": "NdwTeSi70SU",
+        "title": "How To Threat hunt Like A Pro: The Easy Way"
+    },
+    {
+        "id": "gt_qBvccvqE",
+        "title": "Threat Intelligence Made Easy - SOC Experts"
+    },
+    {
+        "id": "qV7xs5-7eAk",
+        "title": "Cybersecurity Threat Intelligence Analyst - Threat Intelligence Analyst Salary and Skills You Need"
     }
-  ]
+]
