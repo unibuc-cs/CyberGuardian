@@ -77,6 +77,8 @@ def extract_pdf(paper_data):
     if "folder" in paper_data:
         loader = PyPDFDirectoryLoader(paper_data["folder"])
         #docs = loader.load_and_split()
+    elif "singlepdf" in paper_data:
+        loader = PyPDFLoader(paper_data['singlepdf'])
     else:
         pdf_url = paper_data.get("pdf_url")
         if pdf_url is None:
@@ -137,6 +139,8 @@ def extract_pdf(paper_data):
 
     return documents
 
+def concatenate_content_multiple_pages(documents, ignore_endmatter=True):
+    return "".join(doc['text'] for doc in documents if doc['metadata'].get("is_endmatter", False) is False)
 
 #@stub.function()
 def fetch_papers(collection_name="all-content"):
