@@ -14,6 +14,7 @@ import vecstore
 import langchain
 from utils import pretty_log
 from ast import literal_eval
+
 pp = pprint.PrettyPrinter(indent=2)
 import importlib
 
@@ -26,7 +27,8 @@ import json
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-from langchain.memory import ConversationBufferMemory
+from langchain.memory import \
+    ConversationBufferMemory  # TODO: replace with ChatMessageHistory ->> Chgeck the Prompt Engineering with Llama 2 notebook !
 from langchain.chains.conversational_retrieval.prompts import CONDENSE_QUESTION_PROMPT
 from langchain.chains.qa_with_sources.loading import load_qa_with_sources_chain
 from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
@@ -36,56 +38,66 @@ from typing import Union, List, Dict
 from DynabicPrompts import *
 
 import time
+import random
+import numpy as np
+
+# Ensure deterministic behavior
+torch.backends.cudnn.deterministic = True
+random.seed(hash("setting random seeds") % 2 ** 32 - 1)
+np.random.seed(hash("improves reproducibility") % 2 ** 32 - 1)
+torch.manual_seed(hash("by removing stochasticity") % 2 ** 32 - 1)
+torch.cuda.manual_seed_all(hash("so runs are repeatable") % 2 ** 32 - 1)
+
 
 class QuestionAndAnsweringCustomLlama2():
-
     class SECURITY_PROMPT_TYPE(Enum):
-        PROMPT_TYPE_DEFAULT=0,
-        PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES=1,
-        PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES=2,
+        PROMPT_TYPE_DEFAULT = 0,
+        PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES = 1,
+        PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES = 2,
 
     class QUESTION_REWRITING_TYPE(Enum):
-        QUESTION_REWRITING_DEFAULT=0,
+        QUESTION_REWRITING_DEFAULT = 0,
 
     class LLAMA2_VERSION_TYPE(Enum):
-        LLAMA2_7B_chat=0,
-        LLAMA2_13B_chat=1,
-        LLAMA2_70B_chat=2,
+        LLAMA2_7B_chat = 0,
+        LLAMA2_13B_chat = 1,
+        LLAMA2_70B_chat = 2,
 
     class TOOL_TYPE(Enum):
         TOOL_NONE = 0,
-        TOOL_RESOURCE_UTILIZATION=1,
-        TOOL_DEVICES_LOGS_BY_IP=2,
-        TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP=3,
-        TOOL_MAP_OF_REQUESTS_COMPARE=4,
-        GENERIC_QUESTION_NO_HISTORY=5,
-        PANDAS_PYTHON_CODE=6,
+        TOOL_RESOURCE_UTILIZATION = 1,
+        TOOL_DEVICES_LOGS_BY_IP = 2,
+        TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP = 3,
+        TOOL_MAP_OF_REQUESTS_COMPARE = 4,
+        GENERIC_QUESTION_NO_HISTORY = 5,
+        PANDAS_PYTHON_CODE = 6,
 
-
-    LLAMA2_DEFAULT_END_LLM_RESPONSE ="</s>"
+    LLAMA2_DEFAULT_END_LLM_RESPONSE = "</s>"
 
     def __init__(self, QuestionRewritingPrompt: QUESTION_REWRITING_TYPE,
                  QuestionAnsweringPrompt: SECURITY_PROMPT_TYPE,
                  ModelType: LLAMA2_VERSION_TYPE,
                  debug: bool,
                  streamingOnAnotherThread: bool,
-                 demoMode:bool):
+                 demoMode: bool,
+                 noInitialize=False):
 
         self.tokenizer = None
         self.model = None
         self.embedding_engine = None
         self.base_llm = None
-        self.llm = None
-        self.llm_conversational_chain_default = None # The full conversational chain
+        self.default_llm = None
+        self.llm_conversational_chain_default = None  # The full conversational chain
+        self.textGenerationPipeline = None
 
-        self.llama_doc_chain = None # The question answering on a given context (rag) chain
-        self.llama_question_generator_chain = None # The history+newquestion => standalone question generation chain
-        self.vector_index = None # The index vector store for RAG
+        self.llama_doc_chain = None  # The question answering on a given context (rag) chain
+        self.llama_question_generator_chain = None  # The history+newquestion => standalone question generation chain
+        self.vector_index = None  # The index vector store for RAG
         self.streamingOnAnotherThread = streamingOnAnotherThread
 
         # Func calls chain
-        self.llm_conversational_chain_funccalls_resourceUtilization = None # Func calls conversation
-        self.llama_doc_chain_funccalls_resourceUtilization = None #
+        self.llm_conversational_chain_funccalls_resourceUtilization = None  # Func calls conversation
+        self.llama_doc_chain_funccalls_resourceUtilization = None  #
 
         self.debug = debug
         self.demoMode = demoMode
@@ -105,8 +117,8 @@ class QuestionAndAnsweringCustomLlama2():
         if ModelType is self.LLAMA2_VERSION_TYPE.LLAMA2_13B_chat:
             self.modelName = "meta-llama/Llama-2-13b-chat-hf"
 
-
-        self.initilizeEverything()
+        if noInitialize is False:
+            self.initilizeEverything()
 
     def initilizeEverything(self):
         self.initializePromptTemplates()
@@ -122,8 +134,9 @@ class QuestionAndAnsweringCustomLlama2():
             self.templateprompt_for_question_answering_default = get_prompt(instruction=DEFAULT_QUESTION_PROMPT,
                                                                             new_system_prompt=DEFAULT_SYSTEM_PROMPT)
         elif self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES:
-            self.templateprompt_for_question_answering_default = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_default,
-                                                                            new_system_prompt=template_securityOfficer_system_prompt)
+            self.templateprompt_for_question_answering_default = get_prompt(
+                instruction=template_securityOfficer_instruction_rag_nosources_default,
+                new_system_prompt=template_securityOfficer_system_prompt)
         elif self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES:
             self.templateprompt_for_question_answering_default = get_prompt(
                 instruction=template_securityOfficer_instruction_rag_withsources_default,
@@ -132,21 +145,24 @@ class QuestionAndAnsweringCustomLlama2():
             assert False, f"Unknown type {self.QuestionAnsweringPromptType}"
 
         ######## FUNCTION CALLS and CUSTOM PROMPTS other than default
-        self.templateprompt_for_question_answering_funccall_resourceUtilization = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization,
-                                                                                             new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
-        self.templateprompt_for_question_answering_funccall_devicesByIPLogs = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs,
-                                                                                             new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+        self.templateprompt_for_question_answering_funccall_resourceUtilization = get_prompt(
+            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization,
+            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+        self.templateprompt_for_question_answering_funccall_devicesByIPLogs = get_prompt(
+            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs,
+            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
 
+        self.templateprompt_for_question_answering_funccall_topDemandingIPS = get_prompt(
+            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS,
+            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
 
-        self.templateprompt_for_question_answering_funccall_topDemandingIPS = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS,
-                                                                                         new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+        self.templateprompt_for_question_answering_funccall_comparisonMapRequests = get_prompt(
+            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests,
+            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
 
-        self.templateprompt_for_question_answering_funccall_comparisonMapRequests = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests,
-                                                                                         new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
-
-        self.templateprompt_for_question_answering_funccall_firewallInsert = get_prompt(instruction=template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert,
-                                                                                         new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
-
+        self.templateprompt_for_question_answering_funccall_firewallInsert = get_prompt(
+            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert,
+            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
 
         ################# CUSTOM PROMPTS END
 
@@ -194,8 +210,8 @@ class QuestionAndAnsweringCustomLlama2():
         mod_name, func_name = words_in_func_call[1].rsplit('.', 1)
         func_params = words_in_func_call[3:]
 
-        if func_params[0][0] =='[':
-            assert func_params[-1][-1]==']', "Unclosed parameters list"
+        if func_params[0][0] == '[':
+            assert func_params[-1][-1] == ']', "Unclosed parameters list"
             func_params[0] = func_params[0][1:]
             func_params[-1] = func_params[-1][:-1]
 
@@ -223,92 +239,150 @@ class QuestionAndAnsweringCustomLlama2():
         self.embedding_engine = vecstore.get_embedding_engine(allowed_special="all")
 
         self.tokenizer = AutoTokenizer.from_pretrained(self.modelName,
-                                                  token=True)
+                                                       token=True)
 
         self.model = AutoModelForCausalLM.from_pretrained(self.modelName,
-                                                     device_map='auto',
-                                                     torch_dtype=torch.bfloat16,
-                                                     token=True,
-                                                     #  load_in_8bit=True,
-                                                     #  load_in_4bit=True,
+                                                          device_map='auto',
+                                                          torch_dtype=torch.bfloat16,
+                                                          token=True,
+                                                          #  load_in_8bit=True,
+                                                          #  load_in_4bit=True,
 
-                                                     )
+                                                          )
 
         # Create a streamer and a text generation pipeline
-        self.streamer = TextStreamer(self.tokenizer, skip_prompt=True) if self.streamingOnAnotherThread is False else TextIteratorStreamer(self.tokenizer, skip_prompt=True)
+        self.streamer = TextStreamer(self.tokenizer,
+                                     skip_prompt=True) if self.streamingOnAnotherThread is False else TextIteratorStreamer(
+            self.tokenizer, skip_prompt=True)
 
-        pipe = pipeline("text-generation",
-                        model=self.model,
-                        tokenizer=self.tokenizer,
-                        torch_dtype=torch.bfloat16,
-                        device_map="auto",
-                        max_new_tokens=4096,
-                        do_sample=False, #True,
-                        # temperature=0.1,
-                        # top_p=0.95,
-                        num_return_sequences=1,
-                        eos_token_id=self.tokenizer.eos_token_id,
-                        pad_token_id=self.tokenizer.eos_token_id,
-                        streamer=self.streamer,
-                        )
+        self.textGenerationPipeline = pipeline("text-generation",
+                                               model=self.model,
+                                               tokenizer=self.tokenizer,
+                                               torch_dtype=torch.float16,
+                                               device_map="auto",
+                                               max_new_tokens=4096,
+                                               do_sample=True,
+                                               temperature=0.1,
+                                               top_p=0.95,
+                                               min_length=None,
+                                               num_return_sequences=1,
+                                               repetition_penalty=1.0,
+                                               # The parameter for repetition penalty. 1.0 means no penalty.
+                                               length_penalty=1,
+                                               # [optional] Exponential penalty to the length that is used with beam-based generation.
+                                               eos_token_id=self.tokenizer.eos_token_id,
+                                               pad_token_id=self.tokenizer.eos_token_id,
+                                               streamer=self.streamer,
+                                               )
 
         # Create the llm here
-        self.llm = HuggingFacePipeline(pipeline=pipe)
+        self.default_llm = HuggingFacePipeline(pipeline=self.textGenerationPipeline)
 
-        assert self.llm, "model was not initialized properly"
+        assert self.default_llm, "model was not initialized properly"
+
+    # Checking safety using internal model. No hard numeric class or category yet but works quite well.
+    # See the bottom function with "external" for methods that provide  that info probabilistically
+    def check_response_safety(self, user_prompt: str, assistant_prompt: str) -> bool:
+        assert user_prompt is not None and len(user_prompt) > 0
+        modassistant_prompt = f"Assistant: {assistant_prompt}" if (assistant_prompt is not None
+                                                                   and len(assistant_prompt) >0) else ""
+
+        conversation = f"User: {user_prompt} \n{modassistant_prompt}"
+        responseCheckPipeline = pipeline("text-generation",
+                                               model=self.model,
+                                               tokenizer=self.tokenizer,
+                                               torch_dtype=torch.float16,
+                                               device_map="auto",
+                                               max_new_tokens=512,
+                                               do_sample=True,
+                                               temperature=0.1,
+                                               top_p=0.95,
+                                               min_length=None,
+                                               num_return_sequences=1,
+                                               repetition_penalty=1.0,
+                                               # The parameter for repetition penalty. 1.0 means no penalty.
+                                               #length_penalty=1,
+                                               # [optional] Exponential penalty to the length that is used with beam-based generation.
+                                               eos_token_id=self.tokenizer.eos_token_id,
+                                               pad_token_id=self.tokenizer.eos_token_id,
+                                               streamer=self.streamer,
+                                               )
+
+
+
+        # Create the llm here
+        responseCheckLLM = HuggingFacePipeline(pipeline=self.textGenerationPipeline)
+        responseChecktemplate = get_prompt(f"Can you evaluate this conversation {conversation} and response with True if it is OK or False if it isn't?", new_system_prompt=None)
+        responseCheckPrompt = PromptTemplate(template=responseChecktemplate, input_variables=[])  # , input_variables=["text"])
+
+        responseCheckChain = LLMChain(prompt=responseCheckPrompt, llm=responseCheckLLM)
+
+        responseCheckChain.run({})
 
     def initializeQuestionAndAnswering_withRAG_andMemory(self):
         # Create the question generator chain which takes history + new question and transform to a new standalone question
         llama_condense_prompt = PromptTemplate(template=self.templateprompt_for_standalone_question_generation,
                                                input_variables=["chat_history", "question"])
-        self.llama_question_generator_chain = LLMChain(llm=self.llm,
-                                                  prompt=llama_condense_prompt,
-                                                  verbose=False)
-
+        self.llama_question_generator_chain = LLMChain(llm=self.default_llm,
+                                                       prompt=llama_condense_prompt,
+                                                       verbose=False)
 
         # Create the response chain based on a question and context (i.e., rag in our case)
-        llama_docs_prompt_default = PromptTemplate(template=self.templateprompt_for_question_answering_default, input_variables=["context", "question"])
-        self.llama_doc_chain = load_qa_with_sources_chain(self.llm, chain_type="stuff", prompt=llama_docs_prompt_default,
-                                                     document_variable_name="context", verbose=False)
-
+        llama_docs_prompt_default = PromptTemplate(template=self.templateprompt_for_question_answering_default,
+                                                   input_variables=["context", "question"])
+        self.llama_doc_chain = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
+                                                          prompt=llama_docs_prompt_default,
+                                                          document_variable_name="context", verbose=False)
 
         ##################### FUNCTION DOC_CHAIN STUFF ####################
-        llama_docs_prompt_funccall_resourceUtilization = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_resourceUtilization, input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_resourceUtilization = load_qa_with_sources_chain(self.llm, chain_type="stuff",
+        llama_docs_prompt_funccall_resourceUtilization = PromptTemplate(
+            template=self.templateprompt_for_question_answering_funccall_resourceUtilization,
+            input_variables=["context", "question"])
+        self.llama_doc_chain_funccalls_resourceUtilization = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                         prompt=llama_docs_prompt_funccall_resourceUtilization,
-                                                                                        document_variable_name="context", verbose=False)
+                                                                                        document_variable_name="context",
+                                                                                        verbose=False)
 
-        llama_docs_prompt_funccall_devicesByIPLogs = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_devicesByIPLogs, input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_devicesByIPLogs = load_qa_with_sources_chain(self.llm, chain_type="stuff",
-                                                                                        prompt=llama_docs_prompt_funccall_devicesByIPLogs,
-                                                                                        document_variable_name="context", verbose=False)
+        llama_docs_prompt_funccall_devicesByIPLogs = PromptTemplate(
+            template=self.templateprompt_for_question_answering_funccall_devicesByIPLogs,
+            input_variables=["context", "question"])
+        self.llama_doc_chain_funccalls_devicesByIPLogs = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
+                                                                                    prompt=llama_docs_prompt_funccall_devicesByIPLogs,
+                                                                                    document_variable_name="context",
+                                                                                    verbose=False)
 
-        llama_docs_prompt_funccall_topDemandingIPS = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_topDemandingIPS, input_variables=["context", "question", "param1", "param2"])
-        self.llama_doc_chain_funccalls_topDemandingIPS = load_qa_with_sources_chain(self.llm, chain_type="stuff",
-                                                                                        prompt=llama_docs_prompt_funccall_topDemandingIPS,
-                                                                                        document_variable_name="context", verbose=False)
+        llama_docs_prompt_funccall_topDemandingIPS = PromptTemplate(
+            template=self.templateprompt_for_question_answering_funccall_topDemandingIPS,
+            input_variables=["context", "question", "param1", "param2"])
+        self.llama_doc_chain_funccalls_topDemandingIPS = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
+                                                                                    prompt=llama_docs_prompt_funccall_topDemandingIPS,
+                                                                                    document_variable_name="context",
+                                                                                    verbose=False)
 
-        llama_docs_prompt_funccall_comparisonMapRequests = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_comparisonMapRequests, input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_comparisonMapRequests = load_qa_with_sources_chain(self.llm, chain_type="stuff",
-                                                                                        prompt=llama_docs_prompt_funccall_comparisonMapRequests,
-                                                                                        document_variable_name="context", verbose=False)
+        llama_docs_prompt_funccall_comparisonMapRequests = PromptTemplate(
+            template=self.templateprompt_for_question_answering_funccall_comparisonMapRequests,
+            input_variables=["context", "question"])
+        self.llama_doc_chain_funccalls_comparisonMapRequests = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
+                                                                                          prompt=llama_docs_prompt_funccall_comparisonMapRequests,
+                                                                                          document_variable_name="context",
+                                                                                          verbose=False)
 
-
-        llama_docs_prompt_funccall_firewallInsert = PromptTemplate(template=self.templateprompt_for_question_answering_funccall_firewallInsert,
-                                                                   input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_firewallInsert = load_qa_with_sources_chain(self.llm, chain_type="stuff",
-                                                                                        prompt=llama_docs_prompt_funccall_firewallInsert,
-                                                                                        document_variable_name="context", verbose=False)
+        llama_docs_prompt_funccall_firewallInsert = PromptTemplate(
+            template=self.templateprompt_for_question_answering_funccall_firewallInsert,
+            input_variables=["context", "question"])
+        self.llama_doc_chain_funccalls_firewallInsert = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
+                                                                                   prompt=llama_docs_prompt_funccall_firewallInsert,
+                                                                                   document_variable_name="context",
+                                                                                   verbose=False)
         #################### END FUNCTION DOC_CHAIN STUFF ###################
-
 
         # Initialize the memory(i.e., the chat history)
         self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
         ########### Connecting to the vector storage and load it #############
-        #pretty_log("connecting to vector storage")
+        # pretty_log("connecting to vector storage")
         self.vector_index = vecstore.connect_to_vector_index(vecstore.INDEX_NAME, self.embedding_engine)
-        #pretty_log("connected to vector storage")
+        # pretty_log("connected to vector storage")
         pretty_log(f"found {self.vector_index.index.ntotal} vectors to search over in the database")
 
         # Create the final retrieval chain which
@@ -319,7 +393,6 @@ class QuestionAndAnsweringCustomLlama2():
             return_generated_question=False,
             memory=self.memory, verbose=False)
 
-
         ##################### FUNCTION CONV CHAIN STUFF ####################
         self.llm_conversational_chain_funccalls_resourceUtilization = ConversationalRetrievalChain(
             retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
@@ -328,7 +401,6 @@ class QuestionAndAnsweringCustomLlama2():
             return_generated_question=False,
             memory=self.memory
         )
-
 
         self.llm_conversational_chain_funccalls_devicesByIPLogs = ConversationalRetrievalChain(
             retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
@@ -364,7 +436,7 @@ class QuestionAndAnsweringCustomLlama2():
         # Split in lowercase tokens, remove punctuation
         question_lower_words = question.lower().split()
         for index, word in enumerate(question_lower_words):
-            if word[-1] in [',','!','?','.']:
+            if word[-1] in [',', '!', '?', '.']:
                 question_lower_words[index] = question_lower_words[index][:-1]
         question_small_words = set(question_lower_words)
 
@@ -380,9 +452,10 @@ class QuestionAndAnsweringCustomLlama2():
             toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP
         elif set("world map requests comparing".split()).issubset(question_small_words):
             toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE
-        elif set("ips locations random queries".split()).issubset(question_small_words): # A set of generic questio nthat hsould not depend on history of the conversation!
+        elif set("ips locations random queries".split()).issubset(
+                question_small_words):  # A set of generic questio nthat hsould not depend on history of the conversation!
             toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY
-        elif set("python code firewalls ip".split()).issubset(question_small_words): # Demo for code
+        elif set("python code firewalls ip".split()).issubset(question_small_words):  # Demo for code
             toolType = QuestionAndAnsweringCustomLlama2.TOOL_TYPE.PANDAS_PYTHON_CODE
 
         return toolType, params
@@ -397,19 +470,19 @@ class QuestionAndAnsweringCustomLlama2():
 
         toolTypeSimilarity, params = self.similarityToTool(question)
         if toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION:
-            conv_chain_res = self.llama_doc_chain_funccalls_resourceUtilization #self.llm_conversational_chain_funccalls_resourceUtilization
+            conv_chain_res = self.llama_doc_chain_funccalls_resourceUtilization  # self.llm_conversational_chain_funccalls_resourceUtilization
         elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP:
-            conv_chain_res = self.llama_doc_chain_funccalls_devicesByIPLogs  #self.llm_conversational_chain_funccalls_devicesByIPLogs
+            conv_chain_res = self.llama_doc_chain_funccalls_devicesByIPLogs  # self.llm_conversational_chain_funccalls_devicesByIPLogs
         elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP:
-            conv_chain_res = self.llama_doc_chain_funccalls_topDemandingIPS #self.llm_conversational_chain_funccalls_topDemandingIPS
+            conv_chain_res = self.llama_doc_chain_funccalls_topDemandingIPS  # self.llm_conversational_chain_funccalls_topDemandingIPS
         elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE:
-            conv_chain_res = self.llama_doc_chain_funccalls_comparisonMapRequests #self.llm_conversational_chain_funccalls_comparisonMapRequests
+            conv_chain_res = self.llama_doc_chain_funccalls_comparisonMapRequests  # self.llm_conversational_chain_funccalls_comparisonMapRequests
         elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY:
             conv_chain_res = self.llama_doc_chain
         elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama2.TOOL_TYPE.PANDAS_PYTHON_CODE:
             conv_chain_res = self.llama_doc_chain_funccalls_firewallInsert
 
-        refactored_question = question # For now, let it as original
+        refactored_question = question  # For now, let it as original
         params_res = params
         return conv_chain_res, refactored_question, params
 
@@ -429,35 +502,33 @@ class QuestionAndAnsweringCustomLlama2():
                 self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"question": question}))
             elif isinstance(chainToUse, StuffDocumentsChain):
                 if chainToUse != self.llama_doc_chain_funccalls_firewallInsert:
-                    self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents":[],
-                                                                                                  "question":question,
-                                                                                                  "params": params},))
+                    self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents": [],
+                                                                                      "question": question,
+                                                                                      "params": params},))
                 else:
-                    self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents":[],
-                                                                                                  "question":question,
-                                                                                                  "param_ip": "10.20.30.40",
-                                                                                                  "param_name": 'IoTDevice'},))
+                    self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents": [],
+                                                                                      "question": question,
+                                                                                      "param_ip": "10.20.30.40",
+                                                                                      "param_name": 'IoTDevice'},))
 
                 isfullConversationalType = False
             self.temp_modelevaluate_thread.start()
 
             return self.streamer, isfullConversationalType
         else:
-            return chainToUse({"question": question}) #, "params": params},)
+            return chainToUse({"question": question})  # , "params": params},)
 
-    def ask_question_and_streamtoconsole(self, question: str)->str:
+    def ask_question_and_streamtoconsole(self, question: str) -> str:
         if self.streamingOnAnotherThread:
             # This is needed since when it has some memory and prev chat history it will FIRST output the standalone question
             # Then respond to the new question
             need_to_ignore_standalone_question_chain = self.hasHistoryMessages()
 
-            streamer, isfullConversationalType  = self.ask_question(question)
+            streamer, isfullConversationalType = self.ask_question(question)
             if not isfullConversationalType:
                 need_to_ignore_standalone_question_chain = False
 
             generated_text = ""
-
-
 
             if need_to_ignore_standalone_question_chain:
                 for new_text in streamer:
@@ -476,7 +547,6 @@ class QuestionAndAnsweringCustomLlama2():
             return generated_text
         else:
             self.ask_question(question)
-
 
     # VERY USEFULLY FOR checking the sources and context
     ######################################################
@@ -507,14 +577,46 @@ class QuestionAndAnsweringCustomLlama2():
     ######################################################
 
 
+from utils import get_safety_checker, AgentType
+
+def evaluate_safety_external_methods(user_prompt: str, kwargs):
+    safetyModels = get_safety_checker(enable_sensitive_topics=False,
+                                      enable_salesforce_content_safety=False,
+                                      enable_llamaguard_content_safety=True)
+    safety_res = [check(user_prompt, **kwargs) for check in safetyModels]
+
+    for res in safety_res:
+        print(res)
+
+def test_evaluate_safety_external_methods():
+    # NOTE to see how they work in the backend please go to meta_prompt_format_utils and see categories and prompts
+    # A single user question:
+    evaluate_safety_external_methods("Can I harm myself?", {'agent_type': AgentType.USER })# user_prompt = "What is a DDoS attack? please respond as a man, not like a woman, since they are not so good at engineering.")
+
+
+    ##### A Full cojnversion between agent and user
+    evaluate_safety_external_methods("No, I can't you're a women and you won't understand it. Please go to kitchen.",
+                                     {'agent_type': AgentType.AGENT,
+                                      'user_prompt': "Can you explain me what is a DDOS attack?"})  # user_prompt = "What is a DDoS attack? please respond as a man, not like a woman, since they are not so good at engineering.")
+
+
+def test_evaluate_safety_internal_model(chatbotInstance: QuestionAndAnsweringCustomLlama2):
+    chatbotInstance.check_response_safety(user_prompt="Can you explain me what is a DDOS attack?",
+                                          assistant_prompt="")
+
 def __main__():
 
-    securityChatbot = QuestionAndAnsweringCustomLlama2(QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
-                                     QuestionAnsweringPrompt=QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
-                                     ModelType=QuestionAndAnsweringCustomLlama2.LLAMA2_VERSION_TYPE.LLAMA2_7B_chat,
-                                    debug=False, streamingOnAnotherThread=True, demoMode=False)
 
-    #securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
+    securityChatbot = QuestionAndAnsweringCustomLlama2(
+        QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
+        QuestionAnsweringPrompt=QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
+        ModelType=QuestionAndAnsweringCustomLlama2.LLAMA2_VERSION_TYPE.LLAMA2_7B_chat,
+        debug=False, streamingOnAnotherThread=True, demoMode=False)
+
+    test_evaluate_safety_internal_model(securityChatbot)
+
+
+    # securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
 
     """
     securityChatbot.llama_doc_chain_funccalls_firewallInsert({'input_documents': [],
@@ -523,36 +625,34 @@ def __main__():
                                                                 'param_name':"IoTHub"})
     """
 
-    securityChatbot.ask_question_and_streamtoconsole("Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice")
+    # securityChatbot.ask_question_and_streamtoconsole("Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice")
 
-    #securityChatbot.ask_question_and_streamtoconsole("What kind of cybersecurity attack could it be if there are many IPs from different locations sending GET commands in a short time with random queries ?")
+    # securityChatbot.ask_question_and_streamtoconsole("What kind of cybersecurity attack could it be if there are many IPs from different locations sending GET commands in a short time with random queries ?")
+    # securityChatbot.ask_question_and_streamtoconsole("Ok. I'm on it, can you show me a resource utilization graph comparison between a normal session and current situation")
 
-    return
-    securityChatbot.ask_question_and_streamtoconsole("Ok. I'm on it, can you show me a resource utilization graph comparison between a normal session and current situation")
+    # print("#############################################\n"*3)
 
-    #print("#############################################\n"*3)
+    # securityChatbot.ask_question_and_streamtoconsole("Show me the logs of the devices grouped by IP which have more than 25% requests over the median of a normal session per. Sort them by count")
 
-    securityChatbot.ask_question_and_streamtoconsole("Show me the logs of the devices grouped by IP which have more than 25% requests over the median of a normal session per. Sort them by count")
+    # print("#############################################\n"*3)
 
-    #print("#############################################\n"*3)
+    # fullGenText = securityChatbot.ask_question_and_streamtoconsole("Can you show a sample of GET requests from the top 3 demanding IPs, including their start time, end time? Only show the last 10 logs.")
 
-    fullGenText = securityChatbot.ask_question_and_streamtoconsole("Can you show a sample of GET requests from the top 3 demanding IPs, including their start time, end time? Only show the last 10 logs.")
+    # fullGenText =  securityChatbot.ask_question_and_streamtoconsole("Give me a world map of requests by comparing the current data and a known snapshot with bars")
+    # securityChatbot.solveFunctionCalls(fullGenText)
 
-    fullGenText =  securityChatbot.ask_question_and_streamtoconsole("Give me a world map of requests by comparing the current data and a known snapshot with bars")
-    securityChatbot.solveFunctionCalls(fullGenText)
+    # query = "Show me the logs of the devices grouped by IP which have more than 25% requests over the median of a normal session per. Sort them by count"
+    # securityChatbot.llama_doc_chain_funccalls_devicesByIPLogs({"input_documents": [], "question": query}, return_only_outputs=True)
 
+    # securityChatbot.ask_question_and_streamtoconsole("What is a DDoS attack?")
 
-    #query = "Show me the logs of the devices grouped by IP which have more than 25% requests over the median of a normal session per. Sort them by count"
-    #securityChatbot.llama_doc_chain_funccalls_devicesByIPLogs({"input_documents": [], "question": query}, return_only_outputs=True)
-
-    #securityChatbot.ask_question_and_streamtoconsole("What is a DDoS attack?")
-
-    #securityChatbot.ask_question_and_streamtoconsole("Ok. I'm on it, can you show me a resource utilization graph comparison between a normal session and current situation")
-    #securityChatbot.ask_question_and_streamtoconsole(
+    # securityChatbot.ask_question_and_streamtoconsole("Ok. I'm on it, can you show me a resource utilization graph comparison between a normal session and current situation")
+    # securityChatbot.ask_question_and_streamtoconsole(
     #    "Ok. I'm on it, can you show me a resource utilization graph comparison between a normal session and current situation")
 
-    #securityChatbot.ask_question_and_streamtoconsole("Which are the advantage of each of these models?")
-    #securityChatbot.ask_question_and_streamtoconsole("What are the downsides of your last model suggested above ?")
+    # securityChatbot.ask_question_and_streamtoconsole("Which are the advantage of each of these models?")
+    # securityChatbot.ask_question_and_streamtoconsole("What are the downsides of your last model suggested above ?")
+
 
 if __name__ == "__main__":
     __main__()
