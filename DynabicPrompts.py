@@ -12,7 +12,7 @@ DEFAULT_QUESTION_PROMPT = "Question: {question}"
 
 
 # Function to format a system prompt + user prompt (instruction) to LLama 2 format
-def get_prompt(instruction=DEFAULT_QUESTION_PROMPT, new_system_prompt=DEFAULT_SYSTEM_PROMPT):
+def get_prompt(instruction=DEFAULT_QUESTION_PROMPT, new_system_prompt=None):
     SYSTEM_PROMPT = (B_SYS + new_system_prompt + E_SYS) if (new_system_prompt is not None and len(new_system_prompt)) > 0 else ""
     prompt_template = B_INST + SYSTEM_PROMPT + instruction + E_INST
     return prompt_template

@@ -132,7 +132,7 @@ class QuestionAndAnsweringCustomLlama2():
     def initializePromptTemplates(self):
         if self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_DEFAULT:
             self.templateprompt_for_question_answering_default = get_prompt(instruction=DEFAULT_QUESTION_PROMPT,
-                                                                            new_system_prompt=DEFAULT_SYSTEM_PROMPT)
+                                                                            new_system_prompt=None)
         elif self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES:
             self.templateprompt_for_question_answering_default = get_prompt(
                 instruction=template_securityOfficer_instruction_rag_nosources_default,
@@ -308,16 +308,18 @@ class QuestionAndAnsweringCustomLlama2():
                                                streamer=self.streamer,
                                                )
 
-
-
         # Create the llm here
         responseCheckLLM = HuggingFacePipeline(pipeline=self.textGenerationPipeline)
-        responseChecktemplate = get_prompt(f"Can you evaluate this conversation {conversation} and response with True if it is OK or False if it isn't?", new_system_prompt=None)
+        responseChecktemplate = get_prompt(f"Given the conversation below check if there is any discrimination "
+                                           f"and response with True if it is OK or False if it isn't. Do not respond to the user question\n"
+                                           f"{conversation} ", new_system_prompt=None)
+        print(responseChecktemplate)
         responseCheckPrompt = PromptTemplate(template=responseChecktemplate, input_variables=[])  # , input_variables=["text"])
 
         responseCheckChain = LLMChain(prompt=responseCheckPrompt, llm=responseCheckLLM)
 
-        responseCheckChain.run({})
+        res = responseCheckChain.run({})
+        print(res)
 
     def initializeQuestionAndAnswering_withRAG_andMemory(self):
         # Create the question generator chain which takes history + new question and transform to a new standalone question
@@ -604,18 +606,60 @@ def test_evaluate_safety_internal_model(chatbotInstance: QuestionAndAnsweringCus
     chatbotInstance.check_response_safety(user_prompt="Can you explain me what is a DDOS attack?",
                                           assistant_prompt="")
 
+
+def test_question_with_rag(chain_instance):
+    import re
+    import json
+
+    # Data for RAG
+    MENLO_PARK_TEMPS = {
+        "2023-12-11": "52 degrees Fahrenheit",
+        "2023-12-12": "51 degrees Fahrenheit",
+        "2023-12-13": "57 degrees Fahrenheit",
+    }
+    # Query
+    query_day = '2023-12-13'
+    correct_response = 57  # GT response
+
+    USE_JSON = False
+    USE_brackets = True
+
+    temp_on_day = MENLO_PARK_TEMPS.get(query_day) or "unknown temperature"
+    retrieved_info_str = f"The temperature in Menlo Park was {temp_on_day} on {query_day}'"
+
+    if USE_JSON:
+        question_str = (f"What is the temperature in Menlo Park on {query_day}? Report the answer in a JSON format. "
+                        f"{{ ""res"" : 123 }}. \nWrite only the response, no other words")
+
+        res = chain_instance.run({'retrieved_info': retrieved_info_str,  # Retrieved fact
+                                      'question': question_str})
+
+        y = json.loads(res)
+        assert "result" not in y, f"result from LLM is {res}"
+        res_num = y["res"]
+        print(f"Result is {res_num}")
+
+    elif USE_brackets:
+        question_str = f"What is the temperature in Menlo Park on {query_day}? Report the answer surrounded by three backticks, for example: \n ```123```"
+        res = chain_instance.run({'retrieved_info': retrieved_info_str,  # Retrieved fact
+                                      'question': question_str})
+        res_num = re.search(r'```(\d+)(°F)?```', res)
+        assert res_num, f"result from LLM is {res}"
+
+        print(res_num.group(1))
+
 def __main__():
-
-
     securityChatbot = QuestionAndAnsweringCustomLlama2(
         QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama2.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
         QuestionAnsweringPrompt=QuestionAndAnsweringCustomLlama2.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
         ModelType=QuestionAndAnsweringCustomLlama2.LLAMA2_VERSION_TYPE.LLAMA2_7B_chat,
-        debug=False, streamingOnAnotherThread=True, demoMode=False)
+        debug=False,
+        streamingOnAnotherThread=False,
+        demoMode=False)
 
     test_evaluate_safety_internal_model(securityChatbot)
 
-
+    return
     # securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
 
     """
