@@ -598,10 +598,7 @@
   {
     "id":"u2avJ_ctsKM",
     "title":"Blockchain Layers Explained: Best Blockchain Layers 1, 2, 3, and 0 Explainer video | Jude"
-  }
-]
-=======
-[
+  },
   {
     "id": "Zo5M1lrMU1I",
     "title" : "Yale Engineering Dean's Invited Speaker Series featuring Royal Hansen, VP, Cybersecurity, Google"
@@ -17767,5 +17764,657 @@
     {
         "id": "irhS0ASkvy8",
         "title": "IPv6 Addresses Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "j9QmMEWmcfo",
+        "title": "SSL, TLS, HTTPS Explained"
+    },
+    {
+        "id": "EnY6fSng3Ew",
+        "title": "HTTPS, SSL, TLS & Certificate Authority Explained"
+    },
+    {
+        "id": "67Kfsmy_frM",
+        "title": "SSL/TLS Explained in 7 Minutes"
+    },
+    {
+        "id": "T4Df5_cojAs",
+        "title": "How does HTTPS work? What's a CA? What's a self-signed Certificate?"
+    },
+    {
+        "id": "x_I6Qc35PuQ",
+        "title": "Certificates and Certificate Authority Explained"
+    },
+    {
+        "id": "R-JUOpCgTZc",
+        "title": "VPN (Virtual Private Network) Explained"
+    },
+    {
+        "id": "kDEX1HXybrU",
+        "title": "What is a Firewall?"
+    },
+    {
+        "id": "5cPIukqXe5w",
+        "title": "What is a Proxy Server?"
+    },
+    {
+        "id": "bdNS0K4Bt8U",
+        "title": "Layer 2 vs Layer 3 Switches"
+    },
+    {
+        "id": "jC6MJTh9fRE",
+        "title": "VLAN Explained"
+    },
+    {
+        "id": "NyZWSvSj8ek",
+        "title": "LAN, WAN, SUBNET - EXPLAINED"
+    },
+    {
+        "id": "4_zSIXb7tLQ",
+        "title": "Network Types: LAN, WAN, PAN, CAN, MAN, SAN, WLAN"
+    },
+    {
+        "id": "C2FrTZxi_NI",
+        "title": "Collision vs Broadcast Domains"
+    },
+    {
+        "id": "g2fT-g9PX9o",
+        "title": "Network Ports Explained"
+    },
+    {
+        "id": "s_Ntt6eTn94",
+        "title": "Subnet Mask - Explained"
+    },
+    {
+        "id": "TIiQiw7fpsU",
+        "title": "MAC Address Explained"
+    },
+    {
+        "id": "7zWVxrjjIpE",
+        "title": "Securing Your IoT Devices"
+    },
+    {
+        "id": "iV8FYhYrUxI",
+        "title": "Why Secure DNS is Important"
+    },
+    {
+        "id": "NDcEOW8r0xc",
+        "title": "15 Types Of Cyber Attacks To Look Out For"
+    },
+    {
+        "id": "ilhGh9CEIwM",
+        "title": "DDoS Attack Explained"
+    },
+    {
+        "id": "z7IlkVv8rQs",
+        "title": "what is Botnet | what the botnet can do | CyberSafeGuard"
+    },
+    {
+        "id": "lpa8uy4DyMo",
+        "title": "Cyber Security Full course - 11 Hours | Cyber Security Training For Beginners | Edureka"
+    },
+    {
+        "id": "s22eJ1eVLTU",
+        "title": "What are Digital Signatures? - Computerphile"
+    },
+    {
+        "id": "kAaIYRJoJkc",
+        "title": "Certificates from Scratch - X.509 Certificates explained"
+    },
+    {
+        "id": "LJPXz8eA3b8",
+        "title": "IPv6 with OpenWrt"
+    },
+    {
+        "id": "H-J_Dpd2Nc4",
+        "title": "IPv6 Addresses Explained"
+    },
+    {
+        "id": "uwoD5YsGACg",
+        "title": "TCP vs UDP Comparison"
+    },
+    {
+        "id": "IIicPE38O-s",
+        "title": "PING Command - Troubleshooting Networks"
+    },
+    {
+        "id": "up3bcBLZS74",
+        "title": "Traceroute (tracert) Explained - Network Troubleshooting"
+    },
+    {
+        "id": "zbqrNg4C98U",
+        "title": "Network Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, & Wireless Mesh Topology)"
+    },
+    {
+        "id": "ktxC3vDukbc",
+        "title": "What is a Hotspot?"
+    },
+    {
+        "id": "HnUDtycXSNE",
+        "title": "DNS Records Explained"
+    },
+    {
+        "id": "po8ZFG0Xc4Q",
+        "title": "Public vs Private IP Address"
+    },
+    {
+        "id": "2G1ueMDgwxw",
+        "title": "Port Forwarding Explained"
+    },
+    {
+        "id": "XaOcjHrdMFE",
+        "title": "Mesh Wifi Explained - Which is the best? - Google Wifi"
+    },
+    {
+        "id": "R1qJ87Fo5_k",
+        "title": "What is a Guest Network?"
+    },
+    {
+        "id": "_a6us8kaq0g",
+        "title": "Cloud Computing Explained"
+    },
+    {
+        "id": "tZop-zjYkrU",
+        "title": "Telnet vs SSH Explained"
+    },
+    {
+        "id": "vrh0epPAC5w",
+        "title": "CompTIA Network+ Certification Video Course"
+    },
+    {
+        "id": "kKxSiJPQ2kg",
+        "title": "FTP - File Transfer Protocol Animated"
+    },
+    {
+        "id": "fzcIryNRjRA",
+        "title": "DHCP Explained with Animation"
+    },
+    {
+        "id": "6_giEv20En0",
+        "title": "Subnets vs VLANs"
+    },
+    {
+        "id": "tOj8MSEIbfA",
+        "title": "FTP (File Transfer Protocol), SFTP, TFTP Explained."
+    },
+    {
+        "id": "0tEjUR6tjBU",
+        "title": "APIPA Explained - Automatic Private IP Addressing"
+    },
+    {
+        "id": "ThdO9beHhpA",
+        "title": "IP Address - IPv4 vs IPv6 Tutorial"
+    },
+    {
+        "id": "1z0ULvg_pW8",
+        "title": "Hub, Switch, & Router Explained - What's the difference?"
+    },
+    {
+        "id": "FTUV0t6JaDA",
+        "title": "NAT Explained - Network Address Translation"
+    },
+    {
+        "id": "2eLe7uz-7CM",
+        "title": "CompTIA A+ Certification Video Course"
+    },
+    {
+        "id": "RXXRguaHZs0",
+        "title": "Proxy vs Reverse Proxy Explained"
+    },
+    {
+        "id": "_TixdHlCMu4",
+        "title": "1 - Cryptography Basics"
+    },
+    {
+        "id": "AYdikYrLKRc",
+        "title": "2 - Cryptography Basics - Digital Signature"
+    },
+    {
+        "id": "c-O-uMxTaEw",
+        "title": "3 - Cryptography Basics - Digital Certificate"
+    },
+    {
+        "id": "1jY0hDMB7To",
+        "title": "4 - Cryptography Basics - Managing Digital Certificates"
+    },
+    {
+        "id": "k3uFPGieZS8",
+        "title": "5 - Cryptography Basics - Types of Digital Certificates"
+    },
+    {
+        "id": "wpQxB2Py-ho",
+        "title": "6 - Cryptography Basics - Public Key Infrastructure"
+    },
+    {
+        "id": "d1KXDGgwIpA",
+        "title": "7 - Cryptography Basics - Diffie-Hellman Key Exchange"
+    },
+    {
+        "id": "sjC5DS4jf_k",
+        "title": "8 - Cryptography Basics - SSL TLS Protocol Explained"
+    },
+    {
+        "id": "0Sffl7YO0aY",
+        "title": "9 - Cryptography Basics - SSH Protocol Explained"
+    },
+    {
+        "id": "AtuAdk4MwWw",
+        "title": "SSH Tunneling Explained"
+    },
+    {
+        "id": "Atbl7D_yPug",
+        "title": "What is SSH (Secure Shell)?"
+    },
+    {
+        "id": "hwQbPgvEQyw",
+        "title": "How End-to-End encryption Works?"
+    },
+    {
+        "id": "TImdsUglGv4",
+        "title": "How Encryption Works - and How It Can Be Bypassed"
+    },
+    {
+        "id": "93E_GzvpMA0",
+        "title": "What is Blockchain"
+    },
+    {
+        "id": "JR4_RBb8A9Q",
+        "title": "What are Digital Signatures and How Do They Work?"
+    },
+    {
+        "id": "aUdKd0IFl34",
+        "title": "Base64 Encoding"
+    },
+    {
+        "id": "0ctat6RBrFo",
+        "title": "Tech Talk: What is Public Key Infrastructure (PKI)?"
+    },
+    {
+        "id": "L1GkEnftoRQ",
+        "title": "PKI Bootcamp - Basics of Certificate Issuance"
+    },
+    {
+        "id": "XBkzBrXlle0",
+        "title": "Phishing Explained In 6 Minutes | What Is A Phishing Attack? | Phishing Attack | Simplilearn"
+    },
+    {
+        "id": "-KL9APUjj3E",
+        "title": "Ransomware In 6 Minutes | What Is Ransomware And How It Works? | Ransomware Explained | Simplilearn"
+    },
+    {
+        "id": "gWGhUdHItto",
+        "title": "What is Phishing"
+    },
+    {
+        "id": "stMj5jlu1-4",
+        "title": "What is a Man-in-the-Middle Attack?"
+    },
+    {
+        "id": "A7nih6SANYs",
+        "title": "ARP Poisoning | Man-in-the-Middle Attack"
+    },
+    {
+        "id": "-enHfpHMBo4",
+        "title": "Man in the Middle Attacks & Superfish - Computerphile"
+    },
+    {
+        "id": "-ZfbifHwEVE",
+        "title": "Password Attacks - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "yDeDGCh_PDs",
+        "title": "Segmentation and Access Control - CompTIA Security+ SY0-701 - 2.5"
+    },
+    {
+        "id": "AhaZtj5P2a8",
+        "title": "Authentication, Authorization, and Accounting - CompTIA Security+ SY0-701 - 1.2"
+    },
+    {
+        "id": "ecCuyq-Wprc",
+        "title": "subnetting is simple"
+    },
+    {
+        "id": "J_bf_KE5llQ",
+        "title": "2.4 GHz vs 5 GHz WiFi: What is the difference?"
+    },
+    {
+        "id": "ZPXVSJnDA_A",
+        "title": "How RSA Encryption Works"
+    },
+    {
+        "id": "JD72Ry60eP4",
+        "title": "Prime Numbers & RSA Encryption Algorithm - Computerphile"
+    },
+    {
+        "id": "-ShwJqAalOk",
+        "title": "Breaking RSA - Computerphile"
+    },
+    {
+        "id": "O4xNJsjtN6E",
+        "title": "AES Explained (Advanced Encryption Standard) - Computerphile"
+    },
+    {
+        "id": "A8poO23ujxA",
+        "title": "How AES Encryption Works"
+    },
+    {
+        "id": "S918rR4VdqQ",
+        "title": "DES - Data Encryption Standard | Data Encryption Standard In Cryptography |DES Algorithm|Simplilearn"
+    },
+    {
+        "id": "FGhj3CGxl8I",
+        "title": "Feistel Cipher - Computerphile"
+    },
+    {
+        "id": "b4b8ktEV4Bg",
+        "title": "Hashing Algorithms and Security - Computerphile"
+    },
+    {
+        "id": "UswqcbncliE",
+        "title": "What are Cryptographic Hash Functions?"
+    },
+    {
+        "id": "TzdgwHX2xTs",
+        "title": "Smart contracts for beginners, explained (in 6 minutes) | Cryptopedia"
+    },
+    {
+        "id": "coQ5dg8wM2o",
+        "title": "Build Your First Blockchain App Using Ethereum Smart Contracts and Solidity"
+    },
+    {
+        "id": "0y6FtKsg6J4",
+        "title": "What is OSI Model | Real World Examples"
+    },
+    {
+        "id": "xHAMEF7-inQ",
+        "title": "Public Key Infrastructure - CompTIA Security+ Sy0-701 - 1.4"
+    },
+    {
+        "id": "jpsc4c7lntw",
+        "title": "Encrypting Data - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "U6BWn81P5Ec",
+        "title": "Key Exchange - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "u61J0xR_XPU",
+        "title": "Encryption Technologies - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "EcGmQjl6XEo",
+        "title": "Hashing and Digital Signatures - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "-wqU_2ToP1M",
+        "title": "Blockchain Technology - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "cLa94BZH_9s",
+        "title": "Certificates - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "6xUH0t6ugIM",
+        "title": "Threat Actors - CompTIA Security+ SY0-701 - 2.1"
+    },
+    {
+        "id": "9SD6DRCKZFU",
+        "title": "Phishing - CompTIA Security+ SY0-701 - 2.2"
+    },
+    {
+        "id": "kBcTczu8FsM",
+        "title": "Memory Injections - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "0-qeeI5jTqU",
+        "title": "Buffer Overflows - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "narir8qpGq8",
+        "title": "Operating System Vulnerabilities - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "qFUOLkEk8AQ",
+        "title": "SQL Injection - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "PKgw0CLZIhE",
+        "title": "Cross-site Scripting - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "V2DCYO-sWRQ",
+        "title": "Cloud-specific Vulnerabilities - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "Su8ANmAoerU",
+        "title": "Viruses and Worms - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "-VmI3xFJw78",
+        "title": "Spyware and Bloatware - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "nu27ovJ5rqw",
+        "title": "Other Malware Types - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "BoxeL5ybOXI",
+        "title": "DNS Attacks - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "yRSqIGjeb7s",
+        "title": "Application Attacks - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "7aJaEQy6Yoc",
+        "title": "Cryptographic Attacks - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "x72hG9GvkaQ",
+        "title": "Indicators of Compromise - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "8qpQ8Q6xxiU",
+        "title": "Cloud Infrastructures - CompTIA Security+ SY0-701 - 3.1"
+    },
+    {
+        "id": "jd001Hj7XWM",
+        "title": "Network Infrastructure Concepts - CompTIA Security+ SY0-701 - 3.1"
+    },
+    {
+        "id": "QhLQ6J4satw",
+        "title": "Port Security - CompTIA Security+ SY0-701 - 3.2"
+    },
+    {
+        "id": "mq1HRM-zGtQ",
+        "title": "Firewall Types - CompTIA Security+ SY0-701 - 3.2"
+    },
+    {
+        "id": "uU3e_ntg-3g",
+        "title": "Secure Communication - CompTIA Security+ SY0-701 - 3.2"
+    },
+    {
+        "id": "leX_Qa7wqB4",
+        "title": "Protecting Data - CompTIA Security+ SY0-701 - 3.3"
+    },
+    {
+        "id": "iAR6SgvtezY",
+        "title": "Securing Wireless and Mobile - CompTIA Security+ SY0-701 - 4.1"
+    },
+    {
+        "id": "86fruE9jkKk",
+        "title": "Threat Intelligence - CompTIA Security+ SY0-701 - 4.3"
+    },
+    {
+        "id": "-LevHAzXgFs",
+        "title": "Penetration Testing - CompTIA Security+ SY0-701 - 4.3"
+    },
+    {
+        "id": "eyVy1gKCuAU",
+        "title": "Analyzing Vulnerabilities - CompTIA Security+ SY0-701 - 4.3"
+    },
+    {
+        "id": "np2WI_rM-Ok",
+        "title": "Security Monitoring - CompTIA Security+ SY0-701 - 4.4"
+    },
+    {
+        "id": "VgNyh4HEqSU",
+        "title": "Firewalls - CompTIA Security+ SY0-701 - 4.5"
+    },
+    {
+        "id": "9NAKCyOtFH0",
+        "title": "Secure Protocols - CompTIA Security+ SY0-701 - 4.5"
+    },
+    {
+        "id": "83pCkSSj1IQ",
+        "title": "Endpoint Security - CompTIA Security+ SY0-701 - 4.5"
+    },
+    {
+        "id": "ZoOyyqhptik",
+        "title": "Identity and Access Management - CompTIA Security+ SY0-701 - 4.6"
+    },
+    {
+        "id": "5kY9kvzeWjA",
+        "title": "Security Policies - CompTIA Security+ SY0-701 - 5.1"
+    },
+    {
+        "id": "jBvdRpXaomk",
+        "title": "Security Standards - CompTIA Security+ SY0-701 - 5.1"
+    },
+    {
+        "id": "vJINnOZyQNg",
+        "title": "Security Procedures - CompTIA Security+ SY0-701 - 5.1"
+    },
+    {
+        "id": "4tGFraaP48Q",
+        "title": "Security Considerations - CompTIA Security+ SY0-701 - 5.1"
+    },
+    {
+        "id": "WGXrbAh0LUI",
+        "title": "Privacy - CompTIA Security+ SY0-701 - 5.4"
+    },
+    {
+        "id": "wEMzVfwBiWY",
+        "title": "Penetration Tests - CompTIA Security+ SY0-701 - 5.5"
+    },
+    {
+        "id": "W_Npxwk4fbI",
+        "title": "Security Awareness - CompTIA Security+ SY0-701 - 5.6"
+    },
+    {
+        "id": "7IS7gigunyI",
+        "title": "The OSI Model - Explained by Example"
+    },
+    {
+        "id": "qqRYkcta6IE",
+        "title": "TCP vs UDP Crash Course"
+    },
+    {
+        "id": "RG97rvw1eUo",
+        "title": "Network Address Translation - NAT Explained"
+    },
+    {
+        "id": "6Tf80mbhyAQ",
+        "title": "How much bandwidth do you really need? (Web browsing, streaming and gaming)"
+    },
+    {
+        "id": "92b-jjBURkw",
+        "title": "Public IP vs. Private IP and Port Forwarding (Explained by Example)"
+    },
+    {
+        "id": "S8J2fkN2FeI",
+        "title": "Load Balancer vs Reverse Proxy (Explained by Example)"
+    },
+    {
+        "id": "Zgy1miPsTNs",
+        "title": "Fail-over and High-Availability (Explained by Example)"
+    },
+    {
+        "id": "t0zlO5-NWFU",
+        "title": "Server Name Indication (SNI) (Explained by Example)"
+    },
+    {
+        "id": "ECukPUUK_74",
+        "title": "How public WIFI can be sniffed?"
+    },
+    {
+        "id": "bXQ0HvsWI60",
+        "title": "What is a Virtual IP Address? How does it help with High-Availability"
+    },
+    {
+        "id": "d-Bfi5qywFo",
+        "title": "Active-Active vs Active-Passive Cluster to Achieve High Availability in Scaling Systems"
+    },
+    {
+        "id": "JIA4ca0afnY",
+        "title": "Technical Discussion on VPNs - How VPNs Work, their benefits, and What happens when VPNs are Hacked"
+    },
+    {
+        "id": "r9kbjAN2788",
+        "title": "Slow Start vs Congestion Avoidance in TCP"
+    },
+    {
+        "id": "FYcO4ZshG8Q",
+        "title": "How DNS and DHCP Servers Communicate (With wireshark)"
+    },
+    {
+        "id": "NAdJojxENEU",
+        "title": "iptables Demystified - Port Redirection and Forwarding HTTP Traffic to another machine (part 1)"
+    },
+    {
+        "id": "-CraNvj48J0",
+        "title": "iptables Demystified - Load Balancing without a Load Balancer (no software installation) (part 2)"
+    },
+    {
+        "id": "CPOpPTpMSiE",
+        "title": "Multicast DNS Explained"
+    },
+    {
+        "id": "sWeVOXpTOhk",
+        "title": "Encryption and Security Agencies - Computerphile"
+    },
+    {
+        "id": "mGRClHHgNdk",
+        "title": "How Application Layer Services Work"
+    },
+    {
+        "id": "t1MvzaScl9k",
+        "title": "How to Verify DNS and HTTP"
+    },
+    {
+        "id": "_b4dXKB8Pt8",
+        "title": "The Data Link Layer, MAC Addressing, and the Ethernet Frame"
+    },
+    {
+        "id": "gZZ_qF1UmzI",
+        "title": "Session Layer In OSI Model | OSI Model | Session Layer | Computer Network Tutorial | Simplilearn"
+    },
+    {
+        "id": "hUqj-BOx1Nw",
+        "title": "IT Security Tutorial - Comparing attack methods by OSI layer"
+    },
+    {
+        "id": "704dudhA7UI",
+        "title": "Digital Signatures"
+    },
+    {
+        "id": "BkKFJ1yZRgI",
+        "title": "Digital Signatures - Data authenticity and integrity protection"
+    },
+    {
+        "id": "WAZxo2ObFIw",
+        "title": "Networking Fundamentals: OSI 7 - Layer 3 - the network layer - Part 1"
+    },
+    {
+        "id": "2MpRlYIYxz4",
+        "title": "Networking Fundamentals: OSI 7 - Layer 3 - the network layer - Part 2"
+    },
+    {
+        "id": "W-0ynJOsXvo",
+        "title": "Networking Fundamentals: OSI 7 - Layer 3 - the network layer - Part 3"
+    },
+    {
+        "id": "15amNny_kKI",
+        "title": "IP Sec VPN Fundamentals"
     }
   ]
