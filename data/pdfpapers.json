@@ -7180,6 +7180,507 @@
     "title": "Distributed Consensus in Content Centric Networking",
     "url": "https://arxiv.org/abs/2310.17532"
   },
+  {
+    "tags": ["Threats"],
+    "title": "SunBlock: Cloudless Protection for IoT Systems",
+    "url": "https://arxiv.org/abs/2401.14332"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Modular Approach to Automatic Cyber Threat Attribution using Opinion Pools",
+    "url": "https://arxiv.org/abs/2401.14090"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Cyber-Twin: Digital Twin-boosted Autonomous Attack Detection for Vehicular Ad-Hoc Networks",
+    "url": "https://arxiv.org/abs/2401.14005"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Embedding Attack Project (Work Report)",
+    "url": "https://arxiv.org/abs/2401.13854"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "WPDA: Frequency-based Backdoor Attack with Wavelet Packet Decomposition",
+    "url": "https://arxiv.org/abs/2401.13578"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Privacy-Preserving Face Recognition in Hybrid Frequency-Color Domain",
+    "url": "https://arxiv.org/abs/2401.13386"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Boosting the Transferability of Adversarial Examples via Local Mixup and Adaptive Step Size",
+    "url": "https://arxiv.org/abs/2401.13205"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Securing Recommender System via Cooperative Training",
+    "url": "https://arxiv.org/abs/2401.12700"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Security Risk Assessment Method for Distributed Ledger Technology (DLT) based Applications: Three Industry Case Studies",
+    "url": "https://arxiv.org/abs/2401.12358"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "The Ethics of Interaction: Mitigating Security Threats in LLMs",
+    "url": "https://arxiv.org/abs/2401.12273"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Machine learning-based network intrusion detection for big and imbalanced data using oversampling, stacking feature embedding and feature extraction",
+    "url": "https://arxiv.org/abs/2401.12262"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Analyzing the Quality Attributes of AI Vision Models in Open Repositories Under Adversarial Attacks",
+    "url": "https://arxiv.org/abs/2401.12261"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Is Your Kettle Smarter Than a Hacker? A Scalable Tool for Assessing Replay Attack Vulnerabilities on Consumer IoT Devices",
+    "url": "https://arxiv.org/abs/2401.12184"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "NEUROSEC: FPGA-Based Neuromorphic Audio Security",
+    "url": "https://arxiv.org/abs/2401.12055"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Unraveling Attacks in Machine Learning-based IoT Ecosystems: A Survey and the Open Libraries Behind Them",
+    "url": "https://arxiv.org/abs/2401.11723"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "TetraLoss: Improving the Robustness of Face Recognition against Morphing Attacks",
+    "url": "https://arxiv.org/abs/2401.11598"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Navigating Cybersecurity Training: A Comprehensive Review",
+    "url": "https://arxiv.org/abs/2401.11326"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Optimal Control of Malware Propagation in IoT Networks",
+    "url": "https://arxiv.org/abs/2401.11076"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Deep Learning-based Embedded Intrusion Detection System for Automotive CAN",
+    "url": "https://arxiv.org/abs/2401.10674"
+  },
+  {
+    "tags": ["Threats", "Cybersecurity"],
+    "title": "Multi-Agent Reinforcement Learning for Maritime Operational Technology Cyber Security",
+    "url": "https://arxiv.org/abs/2401.10149"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Hijacking Attacks against Neural Networks by Analyzing Training Data",
+    "url": "https://arxiv.org/abs/2401.09740"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "AntiPhishStack: LSTM-based Stacked Generalization Model for Optimized Phishing URL Detection",
+    "url": "https://arxiv.org/abs/2401.08947"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "SecPLF: Secure Protocols for Loanable Funds against Oracle Manipulation Attacks",
+    "url": "https://arxiv.org/abs/2401.08520"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Machine Learning-Based Malicious Vehicle Detection for Security Threats and Attacks in Vehicle Ad-hoc Network (VANET) Communications",
+    "url": "https://arxiv.org/abs/2401.08135"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "ADMIn: Attacks on Dataset, Model and Input. A Threat Model for AI Based Software",
+    "url": "https://arxiv.org/abs/2401.07960"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Signed-Prompt: A New Approach to Prevent Prompt Injection Attacks Against LLM-Integrated Applications",
+    "url": "https://arxiv.org/abs/2401.07612"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Privacy-Preserving Intrusion Detection in Software-defined VANET using Federated Learning with BERT",
+    "url": "https://arxiv.org/abs/2401.07343"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Universal Vulnerabilities in Large Language Models: In-context Learning Backdoor Attacks",
+    "url": "https://arxiv.org/abs/2401.05949"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "SENet: Visual Detection of Online Social Engineering Attack Campaigns",
+    "url": "https://arxiv.org/abs/2401.05569"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "MicroFuzz: An Efficient Fuzzing Framework for Microservices",
+    "url": "https://arxiv.org/abs/2401.05529"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "FBSDetector: Fake Base Station and Multi Step Attack Detection in Cellular Networks using Machine Learning",
+    "url": "https://arxiv.org/abs/2401.04958"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Evaluating the Security and Privacy Risk Postures of Virtual Assistants",
+    "url": "https://arxiv.org/abs/2312.14633"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Manipulating Trajectory Prediction with Backdoors",
+    "url": "https://arxiv.org/abs/2312.13863"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "An Approach to Abstract Multi-stage Cyberattack Data Generation for ML-Based IDS in Smart Grids",
+    "url": "https://arxiv.org/abs/2312.13737"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Investigation of Multi-stage Attack and Defense Simulation for Data Synthesis",
+    "url": "https://arxiv.org/abs/2312.13697"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Hierarchical Security Events Correlation Model for Real-time Cyber Threat Detection and Response",
+    "url": "https://arxiv.org/abs/2312.01219"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Applying Large Language Models to Power Systems: Potential Security Threats",
+    "url": "https://arxiv.org/abs/2311.13361"
+  },
+  {
+    "tags": ["Threats", "Cybersecurity"],
+    "title": "Identity Prove Limited Information Governance Policy against cyber security persistent threats",
+    "url": "https://arxiv.org/abs/2310.10654"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A New Security Threat in MCUs -- SoC-wide timing side channels and how to find them",
+    "url": "https://arxiv.org/abs/2309.12925"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Privacy and Security in Ubiquitous Integrated Sensing and Communication: Threats, Challenges and Future Directions",
+    "url": "https://arxiv.org/abs/2308.00253"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Survey of Software-Defined Smart Grid Networks: Security Threats and Defense Techniques",
+    "url": "https://arxiv.org/abs/2306.14697"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Survey of Security in UAVs and FANETs: Issues, Threats, Analysis of Attacks, and Solutions",
+    "url": "https://arxiv.org/abs/2306.14281"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "SoK: Decoding the Super App Enigma: The Security Mechanisms, Threats, and Trade-offs in OS-alike Apps",
+    "url": "https://arxiv.org/abs/2306.07495"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Spear or Shield: Leveraging Generative AI to Tackle Security Threats of Intelligent Network Services",
+    "url": "https://arxiv.org/abs/2306.02384"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Securing Distributed SGD against Gradient Leakage Threats",
+    "url": "https://arxiv.org/abs/2305.06473"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Cyber Security in Smart Manufacturing (Threats, Landscapes Challenges)",
+    "url": "https://arxiv.org/abs/2304.10180"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Advanced Security Threat Modelling for Blockchain-Based FinTech Applications",
+    "url": "https://arxiv.org/abs/2304.06725"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Life cycle models and security threats to a microcircuit during its development and operation",
+    "url": "https://arxiv.org/abs/2301.12740"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "BLE Protocol in IoT Devices and Smart Wearable Devices: Security and Privacy Threats",
+    "url": "https://arxiv.org/abs/2301.03852"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "An SLR on Edge Computing Security and possible threat protection",
+    "url": "https://arxiv.org/abs/2212.04563"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Artificial Dust Based Attack Modelling: A Threat to the Security of Next Generation WCN",
+    "url": "https://arxiv.org/abs/2207.06683"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Cyber Security Threat Awareness Framework for High School Students in Qatar",
+    "url": "https://arxiv.org/abs/2207.00820"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Zero Day Threat Detection Using Graph and Flow Based Security Telemetry",
+    "url": "https://arxiv.org/abs/2205.02298"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Security Aspects of Quantum Machine Learning: Opportunities, Threats and Defenses",
+    "url": "https://arxiv.org/abs/2204.03625"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Machine Learning-Enabled IoT Security: Open Issues and Challenges Under Advanced Persistent Threats",
+    "url": "https://arxiv.org/abs/2204.03433"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "The Art of Manipulation: Threat of Multi-Step Manipulative Attacks in Security Games",
+    "url": "https://arxiv.org/abs/2202.13424"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Don't be a Victim During a Pandemic! Analysing Security and Privacy Threats in Twitter During COVID-19",
+    "url": "https://arxiv.org/abs/2202.10543"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "STRIDE-based Cyber Security Threat Modeling for IoT-enabled Precision Agriculture Systems",
+    "url": "https://arxiv.org/abs/2201.09493"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Security for Machine Learning-based Software Systems: a survey of threats, practices and challenges",
+    "url": "https://arxiv.org/abs/2201.04736"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Satellite-Based Communications Security: A Survey of Threats, Solutions, and Research Challenges",
+    "url": "https://arxiv.org/abs/2112.11324"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Security Threats and Cellular Network Procedures for Unmanned Aircraft Systems",
+    "url": "https://arxiv.org/abs/2111.13172"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Threat Modeling and Security Analysis of Containers: A Survey",
+    "url": "https://arxiv.org/abs/2111.11475"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Emerging AI Security Threats for Autonomous Cars -- Case Studies",
+    "url": "https://arxiv.org/abs/2109.04865"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Journalistic Voting System's Effects on Election Security Threats and Gerrymandering",
+    "url": "https://arxiv.org/abs/2110.04642"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Towards Secure Wireless Mesh Networks for UAV Swarm Connectivity: Current Threats, Research, and Opportunities",
+    "url": "https://arxiv.org/abs/2108.13154"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Multi-Stage Threat Modelling and Security Monitoring in 5GCN",
+    "url": "https://arxiv.org/abs/2108.11207"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "An Empirical Assessment of Endpoint Security Systems Against Advanced Persistent Threats Attack Vectors",
+    "url": "https://arxiv.org/abs/2108.10422"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Generating Cyber Threat Intelligence to Discover Potential Security Threats Using Classification and Topic Modeling",
+    "url": "https://arxiv.org/abs/2108.06862"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Investigating Threats Posed by SMS Origin Spoofing to IoT Devices",
+    "url": "https://arxiv.org/abs/2310.11052"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Named Entity Recognition for Monitoring Plant Health Threats in Tweets: a ChouBERT Approach",
+    "url": "https://arxiv.org/abs/2310.12522"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "MAGIC: Detecting Advanced Persistent Threats via Masked Graph Representation Learning",
+    "url": "https://arxiv.org/abs/2310.09831"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Invisible Threats: Backdoor Attack in OCR Systems",
+    "url": "https://arxiv.org/abs/2310.08259"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Monsters in the Dark: Sanitizing Hidden Threats with Diffusion Models",
+    "url": "https://arxiv.org/abs/2310.06951"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "LLMs Killed the Script Kiddie: How Agents Supported by Large Language Models Change the Landscape of Network Threat Testing",
+    "url": "https://arxiv.org/abs/2310.06936"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Decoding the Threat Landscape : ChatGPT, FraudGPT, and WormGPT in Social Engineering Attacks",
+    "url": "https://arxiv.org/abs/2310.05595"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Threat Trekker: An Approach to Cyber Threat Hunting",
+    "url": "https://arxiv.org/abs/2310.04197"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Threat Modelling in Internet of Things (IoT) Environment Using Dynamic Attack Graphs",
+    "url": "https://arxiv.org/abs/2310.01689"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "AIR: Threats of Adversarial Attacks on Deep Learning-Based Information Recovery",
+    "url": "https://arxiv.org/abs/2309.16706"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Study on Tiny YOLO for Resource Constrained Xray Threat Detection",
+    "url": "https://arxiv.org/abs/2309.15601"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Fed-LSAE: Thwarting Poisoning Attacks against Federated Cyber Threat Detection System via Autoencoder-based Latent Space Inspection",
+    "url": "https://arxiv.org/abs/2309.11053"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "XFedHunter: An Explainable Federated Learning Framework for Advanced Persistent Threat Detection in SDN",
+    "url": "https://arxiv.org/abs/2309.08485"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Automated CVE Analysis for Threat Prioritization and Impact Prediction",
+    "url": "https://arxiv.org/abs/2309.03040"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Optimal Repair Strategy Against Advanced Persistent Threats Under Time-Varying Networks",
+    "url": "https://arxiv.org/abs/2309.00251"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Use of LLMs for Illicit Purposes: Threats, Prevention Measures, and Vulnerabilities",
+    "url": "https://arxiv.org/abs/2308.12833"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Up-to-date Threat Modelling for Soft Privacy on Smart Cars",
+    "url": "https://arxiv.org/abs/2308.11273"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "The Looming Threat of Fake and LLM-generated LinkedIn Profiles: Challenges and Opportunities for Detection and Prevention",
+    "url": "https://arxiv.org/abs/2307.11864"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Mitigating Communications Threats in Decentralized Federated Learning through Moving Target Defense",
+    "url": "https://arxiv.org/abs/2307.11730"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Machine Learning based Empirical Evaluation of Cyber Threat Actors High Level Attack Patterns over Low level Attack Patterns in Attributing Attacks",
+    "url": "https://arxiv.org/abs/2307.10252"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Understanding Cyber Threats Against the Universities, Colleges, and Schools",
+    "url": "https://arxiv.org/abs/2307.07755"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Are Large Language Models a Threat to Digital Public Goods? Evidence from Activity on Stack Overflow",
+    "url": "https://arxiv.org/abs/2307.07367"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Revolutionizing Cyber Threat Detection with Large Language Models",
+    "url": "https://arxiv.org/abs/2306.14263"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "ICAR, a categorical framework to connect vulnerability, threat and asset managements",
+    "url": "https://arxiv.org/abs/2306.12240"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "The Manipulation Problem: Conversational AI as a Threat to Epistemic Agency",
+    "url": "https://arxiv.org/abs/2306.11748"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Survey on Cross-Architectural IoT Malware Threat Hunting",
+    "url": "https://arxiv.org/abs/2306.07989"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Few-shot Multi-domain Knowledge Rearming for Context-aware Defence against Advanced Persistent Threats",
+    "url": "https://arxiv.org/abs/2306.07685"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Threat Model for Soft Privacy on Smart Cars",
+    "url": "https://arxiv.org/abs/2306.04222"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Discussion Paper: The Threat of Real Time Deepfakes",
+    "url": "https://arxiv.org/abs/2306.02487"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "An Insider Threat Mitigation Framework Using Attribute Based Access Control",
+    "url": "https://arxiv.org/abs/2305.19477"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "IoT Threat Detection Testbed Using Generative Adversarial Networks",
+    "url": "https://arxiv.org/abs/2305.15191"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Taxonomy of AISecOps Threat Modeling for Cloud Based Medical Chatbots",
+    "url": "https://arxiv.org/abs/2305.11189"
+  },
+
 
   {
     "folder": "data/other_papers"
