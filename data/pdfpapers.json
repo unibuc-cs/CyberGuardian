@@ -8298,77 +8298,85 @@
     "url": "https://arxiv.org/abs/2402.09795"
   }, {
 
-       //DELETE THIS
     "tags": [
     "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
+    "title": "Enhancing SCADA Security: Developing a Host-Based Intrusion Detection System to Safeguard Against Cyberattacks",
+    "url": "https://arxiv.org/abs/2402.14599"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "{A New Hope}: Contextual Privacy Policies for Mobile Applications and An Approach Toward Automated Generation",
+    "url": "https://arxiv.org/abs/2402.14544"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "Closed-Form Bounds for DP-SGD against Record-level Inference",
+    "url": "https://arxiv.org/abs/2402.14397"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "Exploring Emerging Trends in 5G Malicious Traffic Analysis and Incremental Learning Intrusion Detection Strategies",
+    "url": "https://arxiv.org/abs/2402.14353"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "Homomorphic Encryption Based on Post-Quantum Cryptography",
+    "url": "https://arxiv.org/abs/2402.14193"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "QuantTM: Business-Centric Threat Quantification for Risk Management and Cyber Resilience",
+    "url": "https://arxiv.org/abs/2402.14140"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "Fake Resume Attacks: Data Poisoning on Online Job Platforms",
+    "url": "https://arxiv.org/abs/2402.14124"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "Pseudorandom unitaries with non-adaptive security",
+    "url": "https://arxiv.org/abs/2402.14803"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "Federated Complex Qeury Answering",
+    "url": "https://arxiv.org/abs/2402.14609"
+  }, {
+    "tags": [
+    "Cryptography and Security "],
+    "title": "Federated Learning on Transcriptomic Data: Model Quality and Performance Trade-Offs",
     "url": "https://arxiv.org/abs/2402.10138"
   }, {
     "tags": [
     "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
+    "title": "ModSRAM: Algorithm-Hardware Co-Design for Large Number Modular Multiplication in SRAM",
+    "url": "https://arxiv.org/abs/2402.14152"
+  },   {
     "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
+    "Cryptography and Security"],
+    "title": "To Make a Robot Secure: An Experimental Analysis of Cyber Security Threats Against Teleoperated Surgical Robots",
+    "url": "https://arxiv.org/abs/1504.04339"
+  },
+  
+  {
     "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
+    "Cryptography and Security"],
+    "title": "Privacy in the Internet of Things: Threats and Challenges",
+    "url": "https://arxiv.org/abs/1505.07683"
+  },{
     "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
+          "Computers and Society"],
+        "title": "The Opportunity to Regulate Cybersecurity in the EU (and the World): Recommendations for the Cybersecurity Resilience Act",
+        "url": "https://arxiv.org/abs/2205.13196"
+  },
+  
+  {
     "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
-    "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
-    "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
-    "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
-    "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
-    "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
-    "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
-    "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
-    "tags": [
-    "Cryptography and Security "],
-    "title": "ransaction Capacity, Security and Latency in Blockchains ",
-    "url": "https://arxiv.org/abs/2402.10138"
-  }, {
+          "Cryptography and Security"],
+        "title": "XAI for Cybersecurity: State of the Art, Challenges, Open Issues and Future Directions",
+        "url": "https://arxiv.org/abs/2206.03585"
+  },{
     "tags": [
     "Cryptography and Security "],
     "title": "ransaction Capacity, Security and Latency in Blockchains ",
