@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
-    <option name="sdkName" value="/usr/bin/python3.10" />
+    <option name="sdkName" value="/home/ciprian/anaconda3 (2)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11" project-jdk-type="Python SDK" />
-  <component name="PyCharmDSProjectLayout">
-    <option name="id" value="JupyterRightHiddenStructureLayout" />
-  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="/home/ciprian/anaconda3 (2)" project-jdk-type="Python SDK" />
 </project>

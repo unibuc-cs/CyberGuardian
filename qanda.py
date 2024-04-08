@@ -4,7 +4,7 @@ from pathlib import Path
 import pprint
 import pdb
 from typing import Any
-from etl import markdown, pdfs, shared, videos
+from etlUtils import etl_markdown, etl_pdfs, etl_shared, etl_videos
 import textwrap
 import docstore
 import time

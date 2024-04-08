@@ -2,7 +2,7 @@ import torch
 import transformers
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-from etl.pdfs import extract_pdf, concatenate_content_multiple_pages
+from etlUtils.etl_pdfs import extract_pdf, concatenate_content_multiple_pages
 
 
 documents = extract_pdf({'singlepdf': "data/special_smart_home/IoT_Dataset___Functional_Testing_Framework.pdf"})

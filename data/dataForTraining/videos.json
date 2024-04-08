@@ -1,5 +1,601 @@
 [
   {
+    "id":"E5bSumTAHZE",
+    "title":"Network Protocols - ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DNS, DHCP - Networking Fundamentals - L6"
+  },
+  {
+    "id":"0TLDTodL7Lc",
+    "title":"Transport Layer Security (TLS) - Computerphile"
+  },
+  {
+    "id":"8lQWmHDeD5c",
+    "title":"The Ports and Protocols You Need to Know for the Security+ SY0-601 Exam"
+  },
+  {
+    "id":"n7kYogsTkVo",
+    "title":"The Top 15 Network Protocols and Ports Explained // FTP, SSH, DNS, DHCP, HTTP, SMTP, TCP/IP"
+  },
+  {
+    "id":"wHXKo9So5y8",
+    "title":"Free CCNA | Wireless Security | Day 57 | CCNA 200-301 Complete Course"
+  },
+  {
+    "id":"rA0p0ouD3aE",
+    "title":"Lec-57: What is Routing Protocols | Various types of Routing Protocols"
+  },
+  {
+    "id":"BZTWXl9QNK8",
+    "title":"12. Network Security"
+  },
+  {
+    "id":"AOf62WyxuQI",
+    "title":"CITS3004 - 7.1. Security Protocols"
+  },
+  {
+    "id":"qC3pO61MPeg",
+    "title":"ipsec vs ssl security protocols comparison"
+  },
+  {
+    "id":"AIjiGj0ae2c",
+    "title":"Wireless Security Protocols Explained (WEP, WPA, WPA2, WPA3) | CompTIA Security+ (SY0-601)"
+  },
+  {
+    "id":"cn8Zxh9bPio",
+    "title":"ARP Explained - Address Resolution Protocol"
+  },
+  {
+    "id":"Cx7foWGm5fo",
+    "title":"How Address Resolution Protocol (ARP) Works"
+  },
+  {
+    "id":"PJo5yOtu7o8",
+    "title":"What is SMTP - Simple Mail Transfer Protocol"
+  },
+  {
+    "id":"nyH0nYhMW9M",
+    "title":"What is DNS (Domain Name System)?"
+  },
+  {
+    "id":"L9aZpg0ip70",
+    "title":"FTP Explained | File Transfer Protocol | Cisco CCNA 200-301"
+  },
+  {
+    "id":"50hcfsoBf4Q",
+    "title":"Free CCNA | FTP & TFTP | Day 43 | CCNA 200-301 Complete Course"
+  },
+  {
+    "id":"VhQ0A2_C084",
+    "title":"FTP (File Transfer Protocol), SFTP, TFTP Explained. | Tech"
+  },
+  {
+    "id":"eWdPWSBKxso",
+    "title":"http vs https | How SSL (TLS) encryption works in networking ? (2023)"
+  },
+  {
+    "id":"e6-TaH5bkjo",
+    "title":"DHCP Explained - Dynamic Host Configuration Protocol"
+  },
+  {
+    "id":"THxIyHz191A",
+    "title":"How TLS Works?"
+  },
+  {
+    "id":"tKqSSOEjbgs",
+    "title":"SSL Handshake Explained | What Is SSL/TLS Handshake? | SSL/TLS Handshake Protocol | Simplilearn"
+  },
+  {
+    "id":"ko_kqJL2I6Q",
+    "title":"What is Home Automation? How a Smart Home Works"
+  },
+  {
+    "id":"Zm9AGaEBZAU",
+    "title":"Smart Home For Beginners - Technologies"
+  },
+  {
+    "id":"2VpDJbHrAg4",
+    "title":"What’s the future of smart home tech?"
+  },
+  {
+    "id":"cb7-Nzy93m0",
+    "title":"I Tried Building the PERFECT Smart Home: What I Learned (Mistakes Included)"
+  },
+  {
+    "id":"Du7J00KU980",
+    "title":"The PROBLEM with Smart Home Tech"
+  },
+  {
+    "id":"RY2Guf8Tb4c",
+    "title":"Smart Home Technology 101: Networks and Voice Assistants | The Home Depot Canada"
+  },
+  {
+    "id":"jyMC_HAIzpg",
+    "title":"How to Build a Smart Home 101"
+  },
+  {
+    "id":"gu0dCnnq9kM",
+    "title":"Your Smart Home is Changing: Matter in 2023"
+  },
+  {
+    "id":"pZsroRmbpYQ",
+    "title":"How Smart Home Technology Helps Protect Your Home"
+  },
+  {
+    "id":"8ajNau1TCSo",
+    "title":"What can Smart Home Technologies do for you?"
+  },
+  {
+    "id":"7xauYnN3ig0",
+    "title":"Assessing risks of ‘smart home’ technology"
+  },
+  {
+    "id":"2Xh0Orw923s",
+    "title":"10 Underrated Smart Home Gadgets That Changed My Life!"
+  },
+  {
+    "id":"eIGjF2T2MJo",
+    "title":"Smart Home Technology For Elderly Care | Products and Usage"
+  },
+  {
+    "id":"qLhlL_LPqec",
+    "title":"Smart Home, Safe Home: Safely Aging at Home | Ryan Herd | TEDxHiltonHead"
+  },
+  {
+    "id":"gpB4600keWA",
+    "title":"Smart Home with Google Assistant & Alexa using NodeMCU ESP8266 (Manual + Voice) | IoT Projects 2021"
+  },
+  {
+    "id":"0JC4tNe0OS4",
+    "title":"Smart Home Protocols: Thread Explained!"
+  },
+  {
+    "id":"HowBqOfwqXo",
+    "title":"Smart Home Technology | Pros and Cons"
+  },
+  {
+    "id":"UmpDXc3cXbU",
+    "title":"Smart Home Protocols: ZigBee Explained!"
+  },
+  {
+    "id":"TTpkECCNAPg",
+    "title":"How to start a SMART HOME in 2022"
+  },
+  {
+    "id":"gF5646C4IOE",
+    "title":"10 VERY Practical Home Automation Ideas for 2023!"
+  },
+  {
+    "id":"5CvrGPmeTxE",
+    "title":"7 Common Smart Home FAILS and How To Avoid Them"
+  },
+  {
+    "id":"Wslq1gMKf50",
+    "title":"Internet security: Threats to your online experience"
+  },
+  {
+    "id":"GIKD7XPX1g8",
+    "title":"How to Protect Yourself From Online Threats"
+  },
+  {
+    "id":"Dk-ZqQ-bfy4",
+    "title":"8 Most Common Cybersecurity Threats | Types of Cyber Attacks | Cybersecurity for Beginners | Edureka"
+  },
+  {
+    "id":"8zSoyAmHHc4",
+    "title":"Threats Vulnerabilities and Exploits"
+  },
+  {
+    "id":"VNp35Uw_bSM",
+    "title":"Cybersecurity Threat Hunting Explained"
+  },
+  {
+    "id":"n8mbzU0X2nQ",
+    "title":"Malware: Difference Between Computer Viruses, Worms and Trojans"
+  },
+  {
+    "id":"PsT2joRNvpI",
+    "title":"IBM Security X-Force Threat Intelligence Index Trends 2023"
+  },
+  {
+    "id":"lWxWyCPrxiw",
+    "title":"Ransomware, Threat Hunting and Threat Intelligence"
+  },
+  {
+    "id":"OxKtdqsRhYI",
+    "title":"Online Threats"
+  },
+  {
+    "id":"W46HD9XkLLE",
+    "title":"Computer Security Threats || Virus, Worms, Adware, Spyware, Hacker || How Threats are Spread"
+  },
+  {
+    "id":"wKFOXuWoqmM",
+    "title":"Top 5 Cyber Attacks | Types Of Cyber Security Threats | CyberSecurity For Beginners | Intellipaat"
+  },
+  {
+    "id":"bKAqXN8AI1U",
+    "title":"The Most Dangerous Cyber Threats in 2023"
+  },
+  {
+    "id":"MeQjjMSPsF0",
+    "title":"Episode Three: Common online threats"
+  },
+  {
+    "id":"x5bj20t6dTs",
+    "title":"The Most Dangerous Cyber Threats in 2022"
+  },
+  {
+    "id":"ZqT4KDb0-IM",
+    "title":"Cyber threats"
+  },
+  {
+    "id":"nkwDSFEM25g",
+    "title":"Cyber Threats and Why Cyber Attacks Happen"
+  },
+  {
+    "id":"Ym00-RJnFsk",
+    "title":"8 Basic Cyber Attacks … and How to Avoid Them"
+  },
+  {
+    "id":"U_7CGl6VWaQ",
+    "title":"How Cyberwarfare Actually Works"
+  },
+  {
+    "id":"v2eUabNGpoE",
+    "title":"Top cybersecurity threats of 2022 | cybernews.com"
+  },
+  {
+    "id":"zyXux_n0nrU",
+    "title":"Cyber-soldiers protecting US from online threats"
+  },
+  {
+    "id":"Wjm2-Xd5WjE",
+    "title":"Tips key in uncovering online threats"
+  },
+  {
+    "id":"awhqnSskWjU",
+    "title":"Cybersecurity Threats | Types of Cybersecurity Threats | Invensis Learning"
+  },
+  {
+    "id":"NuyzuNBFWxQ",
+    "title":"7 Cryptography Concepts EVERY Developer Should Know"
+  },
+  {
+    "id":"uNzaMrcuTM0",
+    "title":"The Mathematics of Cryptography"
+  },
+  {
+    "id":"C7vmouDOJYM",
+    "title":"Cryptography Full Course | Cryptography And Network Security | Cryptography | Simplilearn"
+  },
+  {
+    "id":"A6HNd1EGfIc",
+    "title":"Cryptography Concepts - SY0-601 CompTIA Security+ : 2.8"
+  },
+  {
+    "id":"6uRI4o5EUkI",
+    "title":"Symmetric and Asymmetric Cryptography - SY0-601 CompTIA Security+ : 2.8"
+  },
+  {
+    "id":"bO4lEQfPn60",
+    "title":"RSA and DSA Encryption Algorithms Explained | Cryptography & Network Security Tutorial | Simplilearn"
+  },
+  {
+    "id":"9X1rSWLFhLY",
+    "title":"What is Cryptography | why cryptography? Introduction to Cryptography"
+  },
+  {
+    "id":"m9DA0k0Ctz8",
+    "title":"Cryptography Limitations - SY0-601 CompTIA Security+ : 2.8"
+  },
+  {
+    "id":"JoeiLuFNBc4",
+    "title":"Introduction to Cryptography and Network Security"
+  },
+  {
+    "id":"JtbKh_12ctg",
+    "title":"Caesar Cipher (Part 1)"
+  },
+  {
+    "id":"5jpgMXt1Z9Y",
+    "title":"What is Cryptography? | Introduction to Cryptography | Cryptography for Beginners | Edureka"
+  },
+  {
+    "id":"-EQ8UomTrAQ",
+    "title":"Hill Cipher (Encryption)"
+  },
+  {
+    "id":"JK3ur6W4rvw",
+    "title":"Hill Cipher (Decryption)"
+  },
+  {
+    "id":"Ic4BzVggNY8",
+    "title":"Polyalphabetic Cipher (Vigenère Cipher)"
+  },
+  {
+    "id":"Qojvtgf7SQw",
+    "title":"Polyalphabetic Cipher (Vernam Cipher)"
+  },
+  {
+    "id":"rjWx39mB4Sc",
+    "title":"What Is Cryptography? | Introduction To Cryptography | Cryptography Tutorial | Simplilearn"
+  },
+  {
+    "id":"Xb4_VT4y9kQ",
+    "title":"Cryptography – Key Terms"
+  },
+  {
+    "id":"Kejs-saINOo",
+    "title":"Cryptanalysis"
+  },
+  {
+    "id":"9TNI2wHmaeI",
+    "title":"22. Cryptography: Encryption"
+  },
+  {
+    "id":"GSIDS_lvRv4",
+    "title":"Public Key Cryptography - Computerphile"
+  },
+  {
+    "id":"AQDCe585Lnc",
+    "title":"Asymmetric Encryption - Simply explained"
+  },
+  {
+    "id":"nRou-J4YN4Y",
+    "title":"Symmetric vs Asymmetric Encryption – What is the Difference?"
+  },
+  {
+    "id":"_IOZ8_cPgu8",
+    "title":"Networking basics (2023) | What is a switch, router, gateway, subnet, gateway, firewall & DMZ"
+  },
+  {
+    "id":"3QhU9jd03a0",
+    "title":"Computer Networks: Crash Course Computer Science #28"
+  },
+  {
+    "id":"WexBQ1XgaDw",
+    "title":"What is Networking (Computer Networking)?"
+  },
+  {
+    "id":"tSodBEAJz9Y",
+    "title":"Computer Networking Explained | Cisco CCNA 200-301"
+  },
+  {
+    "id":"eMamgWllRFY",
+    "title":"Network Devices Explained | Hub, Bridge, Router, Switch"
+  },
+  {
+    "id":"rurs7cdT5cc",
+    "title":"Basic Networking Commands (Part 1)"
+  },
+  {
+    "id":"xmpYfyNmWbw",
+    "title":"CompTIA Network+ Full Course FREE [23+ Hours]"
+  },
+  {
+    "id":"wze2gtz6MdY",
+    "title":"Computer Network | Complete Chapter | CBSE Class 12"
+  },
+  {
+    "id":"qiQR5rTSshw",
+    "title":"Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep]"
+  },
+  {
+    "id":"6G14NrjekLQ",
+    "title":"Computer Networking (Deepdive)"
+  },
+  {
+    "id":"oHQvWa6J8dU",
+    "title":"Basics of Networking for Beginners | Getting Started With Networking | Computer Networks|Simplilearn"
+  },
+  {
+    "id":"cNwEVYkx2Kk",
+    "title":"Introduction to Networking | Network Fundamentals Part 1"
+  },
+  {
+    "id":"PhjHXeMNpp8",
+    "title":"Computer Networking Tutorial - Bits and Bytes of the Networking [12 HOURS]"
+  },
+  {
+    "id":"IPvYjXCsTg8",
+    "title":"Computer Networking Full Course - OSI Model Deep Dive with Real Life Examples"
+  },
+  {
+    "id":"0PbTi_Prpgs",
+    "title":"Computer Networking Complete Course - Basic to Advanced"
+  },
+  {
+    "id":"gGy27UJ8RBo",
+    "title":"Networking Lecture 04 - DNS: Domain Name Service"
+  },
+  {
+    "id":"nm31LTDSYXc",
+    "title":"Networking Lecture 05 - Reliable Transport"
+  },
+  {
+    "id":"OOkcaOgue7E",
+    "title":"Networking Lecture 07 - TCP Congestion Control"
+  },
+  {
+    "id":"eFZ17yw_FWE",
+    "title":"Networking Lecture 16 - Authentication"
+  },
+  { 
+    "id":"9v4_1pUJVGc",
+    "title":"Networking Lecture 17 - Mobility"
+  },
+  {
+    "id":"jq_LZ1RFPfU",
+    "title":"Cybersecurity Architecture: Five Principles to Follow (and One to Avoid)"
+  },
+  {
+    "id":"EqNe55IzjAw",
+    "title":"Cybersecurity Architecture: Fundamentals of Confidentiality, Integrity, and Availability"
+  },
+  {
+    "id":"E9pHJRRfAhw",
+    "title":"Cybersecurity Architecture: Roles and Tools"
+  },
+  {
+    "id":"5uNifnVlBy4",
+    "title":"Cybersecurity Architecture: Who Are You? Identity and Access Management"
+  },
+  {
+    "id":"Njqid_JpqTs",
+    "title":"Cybersecurity Architecture: Endpoints Are the IT Front Door - Guard Them"
+  },
+  {
+    "id":"U_P23SqJaDc",
+    "title":"Cyber Security Full Course for Beginner"
+  },
+  {
+    "id":"EKdZutMkmTE",
+    "title":"🔥 Complete Cyber Security Course For 2023 | Cyber Security Full Course for Beginners | Simplilearn"
+  }, 
+  {
+    "id":"sesacY7Xz3c",
+    "title":"Cybersecurity Architecture: Networks"
+  },
+  {
+    "id":"njPY7pQTRWg",
+    "title":"Basics Of Cybersecurity For Beginners | Cybersecurity Fundamentals | Cybersecurity | Simplilearn"
+  },
+  {
+    "id":"uAHFNuDlcRw",
+    "title":"Cybersecurity Trends for 2023"
+  },
+  {
+    "id":"hXSFdwIOfnE",
+    "title":"Cyber Security Full Course 2023 | Cyber Security Course Training For Beginners 2023 | Simplilearn"
+  },
+  {
+    "id":"ixpdwLKgZ7A",
+    "title":"How I Would Learn Cyber Security (If I Could Start Over)"
+  },
+  {
+    "id":"ObeUOeh1eck",
+    "title":"Cybersecurity Modernization"
+  },
+  {
+    "id":"Jk79QJCxPkM",
+    "title":"Cybersecurity Architecture: Response"
+  },
+  {
+    "id":"VEu326IZpsc",
+    "title":"Cybersecurity Architecture: Detection"
+  },
+  {
+    "id":"_DVVNOGYtmU",
+    "title":"Cybersecurity for Beginners | Google Cybersecurity Certificate"
+  },
+  {
+    "id":"xzDKM7eEweI",
+    "title":"Get Started in Cybersecurity: Beginner Tips, Certifications and Career Paths"
+  },
+  {
+    "id":"ooJSgsB5fIE",
+    "title":"What is Cyber Security? | Introduction to Cyber Security | Cyber Security Training | Edureka"
+  },
+  {
+    "id":"zBFB34YGK1U",
+    "title":"Introduction to Computer Security - Information Security Lesson #1 of 12"
+  },
+  {
+    "id":"pZIlaWhfhpQ",
+    "title":"Identification and Authentication - Information Security Lesson #2 of 12"
+  },
+  {
+    "id":"AeFyCGpclwY",
+    "title":"Software Program Security - Information Security Lesson #3 of 12"
+  }, 
+  {
+    "id":"wn-uVP8HncA",
+    "title":"Malicious Code (Malware) - Information Security Lesson #4 of 12"
+  },
+  {
+    "id":"QJn28fFKUR0",
+    "title":"Blockchain Technology Simply Explained"
+  },
+  {
+    "id":"EH6vE97qIP4",
+    "title":"1. Introduction for 15.S12 Blockchain and Money, Fall 2018"
+  },
+  {
+    "id":"qcuc3rgwZAE",
+    "title":"The Blockchain & Bitcoin - Computerphile"
+  },
+  {
+    "id":"SyVMma1IkXM",
+    "title":"Blockchain Full Course - 4 Hours | Blockchain Tutorial |Blockchain Technology Explained |Simplilearn"
+  },
+  {
+    "id":"hYip_Vuv8J0",
+    "title":"Blockchain Expert Explains One Concept in 5 Levels of Difficulty | WIRED"
+  },
+  {
+    "id":"QphJEO9ZX6s",
+    "title":"Blockchain Explained"
+  },
+  {
+    "id":"gyMwXuJrbJQ",
+    "title":"Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript – 32-Hour Course"
+  },
+  {
+    "id":"YJyXfjbBmc8",
+    "title":"All about Blockchain | Simply Explained"
+  },
+  {
+    "id":"0UvVOMZqpEA",
+    "title":"3. Blockchain Basics & Cryptography"
+  },
+  {
+    "id":"w7HDA8gUbpQ",
+    "title":"4. Blockchain Basics & Consensus"
+  },
+  {
+    "id":"zGDTt9Q3vyM",
+    "title":"5. Blockchain Basics & Transactions, UTXO and Script Code"
+  },
+  {
+    "id":"_160oMzblY8",
+    "title":"Blockchain 101 - A Visual Demo"
+  },
+  {
+    "id":"0uv1WaLIhBA",
+    "title":"Blockchain Technology - SY0-601 CompTIA Security+ : 2.8"
+  },
+  {
+    "id":"QpXXGo235fQ",
+    "title":"Blockchain Applications | Top 5 Decentralized Applications | Blockchain | Edureka Rewind"
+  },
+  {
+    "id":"k53LUZxUF50",
+    "title":"Blockchain: Massively Simplified | Richie Etwaru | TEDxMorristown"
+  },
+  {
+    "id":"ZVxRyfmL1g8",
+    "title":"Blockchain and Crypto: Past, Present, and Future | Douglas Pepe | TEDxRanneySchool"
+  },
+  {
+    "id":"m0BpeUpgBu4",
+    "title":"Modular vs Monolithic Blockchains - Explained"
+  },
+  {
+    "id":"ZFbmmWV4kjQ",
+    "title":"Alpha Leak | The Bull Case for Modular Blockchains"
+  },
+  {
+    "id":"rdstZa79Dp4",
+    "title":"Types Of Blockchain Explained | Blockchain Tutorial For Beginners | Simplilearn"
+  },
+  {
+    "id":"qniz6h2fYuc",
+    "title":"What is Blockchain Layer 0, 1, 2, 3 Explained | Layers of Blockchain Architecture"
+  },
+  {
+    "id":"u2avJ_ctsKM",
+    "title":"Blockchain Layers Explained: Best Blockchain Layers 1, 2, 3, and 0 Explainer video | Jude"
+  },
+  {
     "id": "Zo5M1lrMU1I",
     "title" : "Yale Engineering Dean's Invited Speaker Series featuring Royal Hansen, VP, Cybersecurity, Google"
   },
@@ -18364,6 +18960,1904 @@
     {
         "id": "6gyf_FSx5O4",
         "title": "Cryptography Part 6 - Cryptanalytic Attacks"
+    },
+    
+    {
+        "id": "n2D1o-aM-2s",
+        "title": "Free CCNA | Network Fundamentals - Day 1 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "l_OPR2yh2co",
+        "title": "Free CCNA | OSI Model - TCP-IP Model - Day 2 | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "TMjo-Iphjyo",
+        "title": "Free CCNA | IP Address V4 - Day 3 (AM) | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "Ct4PU6CyvTQ",
+        "title": "Free CCNA | Subnetting : Day 3 (PM) | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "-e3e9w1GmBw",
+        "title": "Free CCNA | Supernetting - Day 03 (LN) | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "dd_fKRA7lBA",
+        "title": "200-301 CCNA v3.0 | Day 4: Inter-Networking Devices | Free Cisco CCNA, NetworKing"
+    },
+    {
+        "id": "wG5Q3luPAtI",
+        "title": "200-301 CCNA v3.0 | Day 5: Connecting to Cisco Devices | Free Cisco CCNA, NetworKing"
+    },
+    {
+        "id": "GXUwwg5Pl-k",
+        "title": "200-301 CCNA v3.0 | Day 6: Filling The Gaps | Free Cisco CCNA, NetworKing"
+    },
+    {
+        "id": "v3IDxvEouFI",
+        "title": "200-301 CCNA v3.0 | Day 8: Welcome to Switching | Free Cisco CCNA, NetworKing"
+    },
+    {
+        "id": "F2KBA9iOiFg",
+        "title": "200-301 CCNA v3.0 | Day 9: Real World Switching | Free Cisco CCNA"
+    },
+    {
+        "id": "u4ua58qgJCc",
+        "title": "200-301 CCNA v3.0 | Day 10: Port Modes and Functions | Free Cisco CCNA"
+    },
+    {
+        "id": "WRUjib1hJCY",
+        "title": "200-301 CCNA v3.0 | Day 11: VLAN Foundation | Free Cisco CCNA"
+    },
+    {
+        "id": "VqAernKC1BY",
+        "title": "200-301 CCNA v3.0 | Day 12: VLAN Advanced | Free Cisco CCNA"
+    },
+    {
+        "id": "BtKpVcn_8ec",
+        "title": "200-301 CCNA v3.0 | Day 13: VLAN Configurations | Free Cisco CCNA"
+    },
+    {
+        "id": "8Ai0Bi71PsE",
+        "title": "200-301 CCNA v3.0 | Day 14: VTP, Pruning & Native VLAN | Free Cisco CCNA"
+    },
+    {
+        "id": "ZnRI3GXeYO8",
+        "title": "200-301 CCNA v3.0 | Day 15: Switchport Security | Free Cisco CCNA"
+    },
+    {
+        "id": "mJgPcB7ndbk",
+        "title": "200-301 CCNA v3.0 | Day 18: Routing Basics | Free CCNA, NetworKing"
+    },
+    {
+        "id": "WbWZ-CvDsdc",
+        "title": "200-301 CCNA v3.0 | Day 19: Introduction to the Router | Free Cisco CCNA"
+    },
+    {
+        "id": "I39vbF65jOk",
+        "title": "200-301 CCNA v3.0 | Day 20: Static Routing | Free Cisco CCNA"
+    },
+    {
+        "id": "oB4vgGkDW4g",
+        "title": "200-301 CCNA v3.0 | Day 21: RIP Routing (Route Information Protocol) | Free Cisco CCNA"
+    },
+    {
+        "id": "e4eMXjCxg0A",
+        "title": "200-301 CCNA v3.0 | Day 22: RIP - Advanced | Free CCNA, NetworKing"
+    },
+    {
+        "id": "2_sw10F72WY",
+        "title": "200-301 CCNA v3.0 | Day 23: Routing Advanced | Free CCNA, NetworKing"
+    },
+    {
+        "id": "DtjbdL6yDPw",
+        "title": "200-301 CCNA v3.0 | Day 24: IP Address V6 | Free CCNA, NetworKing"
+    },
+    {
+        "id": "b_XvSkxm2-Y",
+        "title": "200-301 CCNA v3.0 | Day 25: IPv6 Advanced | Free CCNA, NetworKing"
+    },
+    {
+        "id": "7vp45X8eXV0",
+        "title": "200-301 CCNA v3.0 | Day 26: DNS & DHCP | Free CCNA"
+    },
+    {
+        "id": "r3jbAKNcLyg",
+        "title": "200-301 CCNA v3.0 | Day 27: ACL Introduction | Free CCNA"
+    },
+    {
+        "id": "6Rtxun6dl-0",
+        "title": "Free CCNA | Extended Access Control List - Day 28 | 200-301"
+    },
+    {
+        "id": "l5wuJFoeVDQ",
+        "title": "Free CCNA | NAT & PAT - Day 29 | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "YHa-dXBfUrE",
+        "title": "Free CCNA | CDP, Syslog & NTP - Day 31 | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "Kk61XLgPeGg",
+        "title": "200-301 CCNA v3.0 | Day 34: VLAN Revisited | Cisco Training 2020"
+    },
+    {
+        "id": "HVNMIZr797U",
+        "title": "200-301 CCNA v3.0 | Day 35: Dynamic Trunking Protocol | Cisco Training 2020"
+    },
+    {
+        "id": "K-z4HPhKiTc",
+        "title": "200-301 CCNA v3.0 | Day 36: Spanning Tree Protocol (STP) | Free CCNA"
+    },
+    {
+        "id": "LRGmg5omwW0",
+        "title": "Free CCNA | PortFast & BPDUGuard - Day 37 | 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "mkLnjNFBjRs",
+        "title": "Free CCNA | Layer 2 EtherChannel - Day 38 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "oC-OVLCQrkI",
+        "title": "Free CCNA | Switch Stacking vs Chassis - Day 39 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "DEGjn1DLTkY",
+        "title": "Free CCNA | 802.1x and AAA - Day 40 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "ggwdarNLVbk",
+        "title": "Free CCNA | DHCP Snooping & Native VLAN - Day 41 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "Z7WM7wFTWrs",
+        "title": "Free CCNA | Inter-VLAN Routing & SVI - Day 42 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "Sg2_Zq4Ngck",
+        "title": "Free CCNA | Distance Vector vs Link State - Day 43 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "BDSrDuTRo0Y",
+        "title": "Free CCNA | OSPF Introduction - Day 44 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "MbqAAC969F8",
+        "title": "Free CCNA | OSPF Configuration - Day 45 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "rXriMUn30vA",
+        "title": "Free CCNA | OSPF Verification - Day 46 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "NcgyEplA85I",
+        "title": "Free CCNA | OSPF Troubleshooting - Day 47 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "HE03E-FzXuo",
+        "title": "Free CCNA | Multiarea OSPF - Day 48 | CCNA 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "b1aHb7VtMvs",
+        "title": "Free CCNA | EIGRP Introduction - Day 49 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "20zDt0mq0sA",
+        "title": "Free CCNA | EIGRP Configuration - Day 50 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "4_JPstsP5vs",
+        "title": "Free CCNA | EIGRP Troubleshooting - Day 51 | 200-301 | Cisco Training"
+    },
+    {
+        "id": "8O-hj5inghI",
+        "title": "Free CCNA | Leased Line Basics - Day 52 | CCNA 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "PzKSmRZovbM",
+        "title": "Free CCNA | Network Components - Day 53 | CCNA 200-301 | Cisco Training 2020"
+    },
+    {
+        "id": "reeVV6ro3sY",
+        "title": "Free CCNA | Network Architecture - Day 54 | CCNA 200-301 | Cisco"
+    },
+    {
+        "id": "4OMgjFVZzS0",
+        "title": "Free CCNA | Wireless - Day 56 | CCNA 200-301 | Cisco"
+    },
+    {
+        "id": "SIEVvk3NVuk",
+        "title": "12. Network Security"
+    },
+    {
+        "id": "chkFBigodIw",
+        "title": "8. Web Security Model"
+    },
+    {
+        "id": "EBQIGy1ROLY",
+        "title": "9. Securing Web Applications"
+    },
+    {
+        "id": "3n4o1BiHT30",
+        "title": "17. User Authentication"
+    },
+    {
+        "id": "S2iBR2ZlZf0",
+        "title": "14. SSL and HTTPS"
+    },
+    {
+        "id": "6bwzNg5qQ0o",
+        "title": "2. Control Hijacking Attacks"
+    },
+    {
+        "id": "drQyrzRoRiA",
+        "title": "3. Buffer Overflow Exploits and Defenses"
+    },
+    {
+        "id": "6SIJmoE9L9g",
+        "title": "4. Privilege Separation"
+    },
+    {
+        "id": "8VqTSY-11F4",
+        "title": "6. Capabilities"
+    },
+    {
+        "id": "VEV74hwASeU",
+        "title": "7. Sandboxing Native Code"
+    },
+    {
+        "id": "yRVZPvHYHzw",
+        "title": "10. Symbolic Execution"
+    },
+    {
+        "id": "-QBip3WrauA",
+        "title": "11. Ur/Web"
+    },
+    {
+        "id": "PuVMkSEcPiI",
+        "title": "16. Side-Channel Attacks"
+    },
+    {
+        "id": "uqKIHQHmkCI",
+        "title": "18. Private Browsing"
+    },
+    {
+        "id": "wgzKPRJsInk",
+        "title": "19. Anonymous Communication"
+    },
+    {
+        "id": "SCLGM5KDKo0",
+        "title": "20. Mobile Phone Security"
+    },
+    {
+        "id": "Xv7R6EG0Q84",
+        "title": "21. Data Tracking"
+    },
+    {
+        "id": "hc4aKFqmZkc",
+        "title": "23. Security Economics"
+    },
+    {
+        "id": "rYodcvhh7b8",
+        "title": "Packet Traveling - How Packets Move Through a Network"
+    },
+    {
+        "id": "QPi5Nvxaosw",
+        "title": "Address Resolution Protocol (ARP) in less than 5 minutes"
+    },
+    {
+        "id": "BWZ-MHIhqjM",
+        "title": "What is Subnetting? - Subnetting Mastery - Part 1 of 7"
+    },
+    {
+        "id": "ljS07YTEJ2I",
+        "title": "Drawing the Cheat Sheet - Subnetting Mastery - Part 2 of 7"
+    },
+    {
+        "id": "5-wlfAdcmFQ",
+        "title": "How to solve ANY Subnetting Problems in 60 seconds or less - Subnetting Mastery - Part 3 of 7"
+    },
+    {
+        "id": "SM0kdVfhxZ0",
+        "title": "Practice Examples - Subnetting Mastery - Part 4 of 7"
+    },
+    {
+        "id": "Pj_ubhpi0WQ",
+        "title": "Time-Saving Tricks for Subnetting - Subnetting Mastery - Part 5 of 7"
+    },
+    {
+        "id": "p-6BVEbb9q0",
+        "title": "Subnetting in the /17 - /24 range - Subnetting Mastery - Part 6 of 7"
+    },
+    {
+        "id": "OQ-r_IfeB8c",
+        "title": "Subnetting in the /1 - /16 range - Subnetting Mastery - Part 7 of 7"
+    },
+    {
+        "id": "Fmq1E1Qr2W4",
+        "title": "Native VLAN - the DEFINITIVE illustration"
+    },
+    {
+        "id": "F05sDLXOFh8",
+        "title": "Fixed-Length Subnet Mask (FLSM) - Subnetting Mastery - FLSM and VLSM Appendix Part 1 of 2"
+    },
+    {
+        "id": "amKyfbg5G2Q",
+        "title": "Variable-Length Subnet Mask (VLSM) - Subnetting Mastery - FLSM and VLSM Appendix Part 2 of 2"
+    },
+    {
+        "id": "MmwF1oHOvmg",
+        "title": "What are VLANs? -- the simplest explanation"
+    },
+    {
+        "id": "PDcwijVC4XE",
+        "title": "Route Precedence -- How does a Router choose a path when multiple paths exist?"
+    },
+    {
+        "id": "okhoOUy9Mwk",
+        "title": "Route Precedence -- Answer to Bonus Questions"
+    },
+    {
+        "id": "BMzM1baFJ_4",
+        "title": "Inside Local, Inside Global, Outside Local, Outside Global -- NAT on Cisco IOS Routers"
+    },
+    {
+        "id": "fInsfeuNSFM",
+        "title": "Static NAT -- Configuration and Verification -- NAT on Cisco IOS Routers (FREE Course Preview)"
+    },
+    {
+        "id": "RrJXLdv1i74",
+        "title": "Binary - The SIMPLEST explanation of Counting and Converting Binary numbers"
+    },
+    {
+        "id": "_PuyU1PJDo0",
+        "title": "Wildcard Masks -- What are they? How do you convert them? What are they used for?"
+    },
+    {
+        "id": "57ZcCuJ90qQ",
+        "title": "Discontiguous Wildcard Masks"
+    },
+    {
+        "id": "0gGhuYOh-54",
+        "title": "What Are Access Lists? -- Access Control Lists (ACLs) -- Part 1 of 8"
+    },
+    {
+        "id": "wuiWX1yTd98",
+        "title": "Numbered ACL Syntax -- Access Control Lists (ACLs) -- Part 2 of 8"
+    },
+    {
+        "id": "3iu7NSqBTDg",
+        "title": "Numbered ACL Configuration Demonstration -- Access Control Lists (ACLs) -- Part 3 of 8"
+    },
+    {
+        "id": "7JdsrLW5Tvw",
+        "title": "Named ACL Syntax -- Access Control Lists (ACLs) -- Part 4 of 8"
+    },
+    {
+        "id": "GG8E5FIx9s4",
+        "title": "Named ACL Configuration Demonstration -- Access Control Lists (ACLs) -- Part 5 of 8"
+    },
+    {
+        "id": "DR5ph1jY0Lk",
+        "title": "IPv6 ACLs - Syntax and Demonstration -- Access Control Lists (ACLs) -- Part 6 of 8"
+    },
+    {
+        "id": "rqX8JaN02cg",
+        "title": "Applying ACLs to Interfaces (IPv4 and IPv6) -- Access Control Lists (ACLs) -- Part 7 of 8"
+    },
+    {
+        "id": "FV8pQfbMODs",
+        "title": "ACL Placement: Closer to the Source or Destination? -- Access Control Lists (ACLs) -- Part 8 of 8"
+    },
+    {
+        "id": "ny6MsSLb8_o",
+        "title": "Local Broadcast and Directed Broadcasts - Demo and Packet Captures"
+    },
+    {
+        "id": "ZNXDbzaAM-I",
+        "title": "Local Broadcast and Directed Broadcasts - Description and Demonstration"
+    },
+    {
+        "id": "gYN2qN11-wE",
+        "title": "Everything Hosts do to speak on the Internet - Part 1 - Networking Fundamentals - Lesson 3"
+    },
+    {
+        "id": "G7GyWjJtjNs",
+        "title": "Everything Switches do - Part 2 - Networking Fundamentals - Lesson 4"
+    },
+    {
+        "id": "Q4MArJTbUwk",
+        "title": "Supernetting, IP Aggregation, and IP Summarization -- Subnetting Mastery"
+    },
+    {
+        "id": "Ep-x_6kggKA",
+        "title": "Everything Routers do - Part 2 - How Routers forward Packets - Networking Fundamentals - Lesson 5"
+    },
+    {
+        "id": "HMoFvRK4HUo",
+        "title": "What is SSL & TLS ? What is HTTPS ? What is an SSL VPN? - Practical TLS"
+    },
+    {
+        "id": "WfR3ZAP96mQ",
+        "title": "How do SSL & TLS protect your Data? - Confidentiality, Integrity, Authentication - Practical TLS"
+    },
+    {
+        "id": "C7Y4UEBJ0Og",
+        "title": "Key Players of SSL & TLS: Client, Server, Certificate Authority (CA) - Practical TLS"
+    },
+    {
+        "id": "26lZ-akbfrQ",
+        "title": "Anti-Replay and Non-Repudiation - Practical TLS"
+    },
+    {
+        "id": "_KgZNF8nQvE",
+        "title": "TLS / SSL Versions - Part 1 - Practical TLS"
+    },
+    {
+        "id": "fk0-UqwVNqY",
+        "title": "TLS / SSL Versions - Part 2 - Practical TLS"
+    },
+    {
+        "id": "zmxLg4jV0ts",
+        "title": "Router Hierarchies and Route Summarization - Networking Fundamentals - Lesson 5 - Part 3"
+    },
+    {
+        "id": "E5bSumTAHZE",
+        "title": "Network Protocols - ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DNS, DHCP - Networking Fundamentals - L6"
+    },
+    {
+        "id": "YJGGYKAV4pA",
+        "title": "How Data moves through the Internet - Networking Fundamentals"
+    },
+    {
+        "id": "HHQ2QP_upGM",
+        "title": "Hashing, Hashing Algorithms, and Collisions - Cryptography - Practical TLS"
+    },
+    {
+        "id": "doN3lzzNEIM",
+        "title": "Data Integrity - How Hashing is used to ensure data isn't modified - HMAC - Cryptography"
+    },
+    {
+        "id": "aCDgFH1i2B0",
+        "title": "How SSL & TLS use Cryptographic tools to secure your data - Practical TLS"
+    },
+    {
+        "id": "Jefr7wFLu3M",
+        "title": "Public Key Infrastructure - What is a PKI? - Cryptography - Practical TLS"
+    },
+    {
+        "id": "iS1nK4G6EtA",
+        "title": "Digital Signature Algorithm (DSA) - Cryptography - Practical TLS"
+    },
+    {
+        "id": "LJDsdSh1CYM",
+        "title": "TLS / SSL - The complete sequence - Practical TLS"
+    },
+    {
+        "id": "BgtORKB0lls",
+        "title": "How does NAT conserve IP Address Space? (and why!) - Network Address Translation"
+    },
+    {
+        "id": "KA56kj23RPU",
+        "title": "NAT vs PAT, Static vs Dynamic -- demystified! -- Network Address Translation"
+    },
+    {
+        "id": "fm_NLOCi1Ns",
+        "title": "Static NAT - Network Address Translation"
+    },
+    {
+        "id": "Q2XEoBEKrso",
+        "title": "Static PAT - Network Address Translation"
+    },
+    {
+        "id": "2t8-WRZWCq8",
+        "title": "Dynamic PAT - Network Address Translation"
+    },
+    {
+        "id": "vP-1a-fhDKA",
+        "title": "Policy NAT - Network Address Translation"
+    },
+    {
+        "id": "QFg-WhN715I",
+        "title": "Twice NAT - Network Address Translation"
+    },
+    {
+        "id": "Ij4hagieFjc",
+        "title": "OpenSSL - Encrypting and Decrypting Private Key Files"
+    },
+    {
+        "id": "KjNYEzEBRD8",
+        "title": "EGP / IGP :: Distance Vector / Link State :: Dynamic Routing Protocols :: OSPF EIGRP BGP RIP IS-IS"
+    },
+    {
+        "id": "_ThYOX1wX_4",
+        "title": "OSPF Framework & OSPF Packets: LSDB, LSA, Hello, DBD, LSR, LSU, LSAck"
+    },
+    {
+        "id": "CM9BlFHB3q4",
+        "title": "OSPF Areas and OSPF Types of Routers - Practical OSPF - Lesson 2"
+    },
+    {
+        "id": "wITAeO8i9U4",
+        "title": "OSPF Hello Packets :: Area Types (Stub/NSSA) :: BDR/DR :: Practical OSPF"
+    },
+    {
+        "id": "X0OBAPc3dpM",
+        "title": "OSPF Neighbor Adjacency States: DOWN ATTEMPT INIT 2-WAY EXSTART EXCHANGE LOADING FULL"
+    },
+    {
+        "id": "LPCLj2FhWxs",
+        "title": "OSPF Network Types - FINALLY, an explanation that makes sense - Practical OSPF"
+    },
+    {
+        "id": "78x7_7og9XA",
+        "title": "OSPF Area Types - Stub, NSSA, Totally Stub, Totally NSSA - Practical OSPF"
+    },
+    {
+        "id": "ZkL10eoG1PY",
+        "title": "TLS Handshake - EVERYTHING that happens when you visit an HTTPS website"
+    },
+    {
+        "id": "6EIdx1j6FMw",
+        "title": "Can I rebuild an OSPF topology using ONLY the LSDB?"
+    },
+    {
+        "id": "jE_FcgpQ7Co",
+        "title": "TCP vs UDP - Explaining Facts and Debunking Myths - TCP Masterclass"
+    },
+    {
+        "id": "JFch3ctY6nE",
+        "title": "TCP - 12 simple ideas to explain the Transmission Control Protocol"
+    },
+    {
+        "id": "LaDRWycC7Iw",
+        "title": "UDP doesn't suck! It's the BEST L4 protocol for THESE types of applications..."
+    },
+    {
+        "id": "0ylxXrN1yHs",
+        "title": "TLS 1.3 - What Changes? What stays the same?"
+    },
+    {
+        "id": "JA0vaIb4158",
+        "title": "TLS 1.3 Handshake - many CHANGES from prior versions!"
+    },
+    {
+        "id": "ArXMa111x7A",
+        "title": "HTTP vs HTML: Unveiling Network Protocols using Telnet"
+    },
+    {
+        "id": "2iFFRqzX3yE",
+        "title": "OSI Model Layer 5, 6, and 7 -- Session, Presentation, & Application Layers -- what they actually do"
+    },
+    {
+        "id": "Ud8UeNgdaz4",
+        "title": "Cabling Devices | Network Fundamentals Part 2"
+    },
+    {
+        "id": "D0IT6ZKY3tg",
+        "title": "How VRFs Work (VRF Lite) | VRFs Part 1"
+    },
+    {
+        "id": "7RtoNTK-mgE",
+        "title": "Dynamic Routing with VRFs | BGP, OSPF, and EIGRP | VRFs Part 2"
+    },
+    {
+        "id": "dW8JjcINgDg",
+        "title": "Route Target Import and Export | Extending VRF's Across the Core | VRFs Part 3"
+    },
+    {
+        "id": "GeIfsVPs4o0",
+        "title": "Leak Routes Between VRF's"
+    },
+    {
+        "id": "y9PG-_ZNbWg",
+        "title": "How the OSI Model Works | Network Fundamentals Part 3"
+    },
+    {
+        "id": "ytAqv7qHGyU",
+        "title": "How GRE Tunnels Work | VPN Tunnels Part 1"
+    },
+    {
+        "id": "4IRefeZ3vyY",
+        "title": "GRE Encryption with IPSec | VPN Tunnels Part 2"
+    },
+    {
+        "id": "v8aYhOxZuNg",
+        "title": "How IP Addresses Work | Network Fundamentals Part 4"
+    },
+    {
+        "id": "Tnjdk08z3HM",
+        "title": "IP Addressing in Depth | Network Fundamentals Part 5"
+    },
+    {
+        "id": "J-w_n9LCRj8",
+        "title": "DMVPN Explained | DMVPN Tunnels Part 1"
+    },
+    {
+        "id": "HFRU01uS9nA",
+        "title": "TCP/IP Model (Internet Protocol Suite) | Network Fundamentals Part 6"
+    },
+    {
+        "id": "fQC4v07gs5k",
+        "title": "Establishing Connections With TCP's Three Way Handshake | Network Fundamentals Part 8"
+    },
+    {
+        "id": "NaEHwrRHfqk",
+        "title": "How TCP Handles Errors And Uses Windows | Network Fundamentals Part 9"
+    },
+    {
+        "id": "ZS80DM_-f5Y",
+        "title": "Private VLANs"
+    },
+    {
+        "id": "wjWjGnkb3Cw",
+        "title": "How Switching Works | Network Fundamentals Part 11"
+    },
+    {
+        "id": "59aYt_kMviE",
+        "title": "Adding vPC to VXLAN | Network Direction"
+    },
+    {
+        "id": "GrhHMai2d2Y",
+        "title": "How VLANs Work | Network Fundamentals Part 12"
+    },
+    {
+        "id": "FxlqSfORZm4",
+        "title": "Understanding Access Control Lists | Network Fundamentals Part 14"
+    },
+    {
+        "id": "98CAjGW0lzk",
+        "title": "What ARP does | Network Fundamentals Part 15"
+    },
+    {
+        "id": "zPFgFvDHbA4",
+        "title": "What DHCP is all About | Network Fundamentals Part 16"
+    },
+    {
+        "id": "ES7w0fKtblE",
+        "title": "Getting Started with Domain Name System (DNS) | Network Fundamentals Part 17"
+    },
+    {
+        "id": "cupc6Helc6Y",
+        "title": "Static route configuration | Network Fundamentals Part 18"
+    },
+    {
+        "id": "q7SMM57Dz4I",
+        "title": "Routing Protocols and Traffic Forwarding | Network Fundamentals Part 19"
+    },
+    {
+        "id": "OXX6LGJA3Zs",
+        "title": "The Rules of Networking (RFC 1925)"
+    },
+    {
+        "id": "n0UqAXu_GAI",
+        "title": "How to Use NAT | Network Fundamentals (Part 21)"
+    },
+    {
+        "id": "EkVd4k0R4Tw",
+        "title": "Introduction to the QUIC Protocol"
+    },
+    {
+        "id": "RmeiKfdRqhY",
+        "title": "Packet Capture | Palo Alto Firewall Training"
+    },
+    {
+        "id": "h42qLaQM0_s",
+        "title": "Introduction To Networking - Different Types Of Networks | Networking Fundamentals Part 2 (revised)"
+    },
+    {
+        "id": "w_GHZKFOMKc",
+        "title": "What Is A Network? | Introduction To Networking"
+    },
+    {
+        "id": "M6VD8yCdADE",
+        "title": "How Computers Talk To One Another | Introduction To Networking"
+    },
+    {
+        "id": "GS38h3q_xic",
+        "title": "How Devices Are Connected Together | Introduction To Networking"
+    },
+    {
+        "id": "6sEwrKoCico",
+        "title": "What is UDP Lite?"
+    },
+    {
+        "id": "kZOgV0lvja0",
+        "title": "Sending Logs to a Syslog Server | Network Fundamentals Part 23"
+    },
+    {
+        "id": "vWZefoGNk5g",
+        "title": "How SNMP Works | Network Fundamentals Part 24"
+    },
+    {
+        "id": "ISNTZgiywO8",
+        "title": "Introduction to Spanning-Tree | Network Fundamentals Part 25"
+    },
+    {
+        "id": "5xMcvfn61-E",
+        "title": "How Spanning-Tree Works | Network Fundamentals Part 26"
+    },
+    {
+        "id": "FsGUi5pXpLk",
+        "title": "DNS Explained | Domain Name System | Cisco CCNA 200-301"
+    },
+    {
+        "id": "L9aZpg0ip70",
+        "title": "FTP Explained | File Transfer Protocol | Cisco CCNA 200-301"
+    },
+    {
+        "id": "oCtkwEjhyD4",
+        "title": "NTP Explained | Network Time Protocol | Cisco CCNA 200-301"
+    },
+    {
+        "id": "Lq7j-QipNrI",
+        "title": "SNMP Explained | Simple Network Management Protocol | Cisco CCNA 200-301"
+    },
+    {
+        "id": "N7dM_kD28dM",
+        "title": "MAC Addresses Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "j6-kadxwIFQ",
+        "title": "EtherChannel Explained | Concept & Configuration"
+    },
+    {
+        "id": "n3en4EcHms0",
+        "title": "PortFast + BPDU Guard | STP Optional Features"
+    },
+    {
+        "id": "S43CFcpOZSI",
+        "title": "DHCP Explained | Step by Step"
+    },
+    {
+        "id": "LANW3m7UgWs",
+        "title": "OSI Model Explained | Real World Example"
+    },
+    {
+        "id": "eMamgWllRFY",
+        "title": "Network Devices Explained | Hub, Bridge, Router, Switch"
+    },
+    {
+        "id": "Nlyx5lFQR34",
+        "title": "VLAN Trunking Protocol (VTP) Explained | Version 1 & 2"
+    },
+    {
+        "id": "qij5qpHcbBk",
+        "title": "NAT Explained | Overload, Dynamic & Static"
+    },
+    {
+        "id": "japdEY1UKe4",
+        "title": "Spanning Tree Protocol Explained | Step by Step"
+    },
+    {
+        "id": "kfvJ8QVJscc",
+        "title": "OSPF Explained | Step by Step"
+    },
+    {
+        "id": "PIMnj2oqYIo",
+        "title": "OSPF Multi Area Explained"
+    },
+    {
+        "id": "QyymlFWDEgM",
+        "title": "EIGRP Explained | Step by Step"
+    },
+    {
+        "id": "OTwp3xtd4dg",
+        "title": "TCP/IP Model Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "cA9ZJdqzOoU",
+        "title": "TCP vs UDP Comparison | Cisco CCNA 200-301"
+    },
+    {
+        "id": "RDotMcs0Erg",
+        "title": "Port Numbers Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "LIzTo6e4FgY",
+        "title": "IP Addresses Explained | Cisco CCNA 200-301"
+    },
+    {
+        "id": "irhS0ASkvy8",
+        "title": "IPv6 Addresses Explained | Cisco CCNA 200-301"
+    },
+    {
+
+        "id": "j9QmMEWmcfo",
+        "title": "SSL, TLS, HTTPS Explained"
+    },
+    {
+        "id": "EnY6fSng3Ew",
+        "title": "HTTPS, SSL, TLS & Certificate Authority Explained"
+    },
+    {
+        "id": "67Kfsmy_frM",
+        "title": "SSL/TLS Explained in 7 Minutes"
+    },
+    {
+        "id": "T4Df5_cojAs",
+        "title": "How does HTTPS work? What's a CA? What's a self-signed Certificate?"
+    },
+    {
+        "id": "x_I6Qc35PuQ",
+        "title": "Certificates and Certificate Authority Explained"
+    },
+    {
+        "id": "R-JUOpCgTZc",
+        "title": "VPN (Virtual Private Network) Explained"
+    },
+    {
+        "id": "kDEX1HXybrU",
+        "title": "What is a Firewall?"
+    },
+    {
+        "id": "5cPIukqXe5w",
+        "title": "What is a Proxy Server?"
+    },
+    {
+        "id": "bdNS0K4Bt8U",
+        "title": "Layer 2 vs Layer 3 Switches"
+    },
+    {
+        "id": "jC6MJTh9fRE",
+        "title": "VLAN Explained"
+    },
+    {
+        "id": "NyZWSvSj8ek",
+        "title": "LAN, WAN, SUBNET - EXPLAINED"
+    },
+    {
+        "id": "4_zSIXb7tLQ",
+        "title": "Network Types: LAN, WAN, PAN, CAN, MAN, SAN, WLAN"
+    },
+    {
+        "id": "C2FrTZxi_NI",
+        "title": "Collision vs Broadcast Domains"
+    },
+    {
+        "id": "g2fT-g9PX9o",
+        "title": "Network Ports Explained"
+    },
+    {
+        "id": "s_Ntt6eTn94",
+        "title": "Subnet Mask - Explained"
+    },
+    {
+        "id": "TIiQiw7fpsU",
+        "title": "MAC Address Explained"
+    },
+    {
+        "id": "7zWVxrjjIpE",
+        "title": "Securing Your IoT Devices"
+    },
+    {
+        "id": "iV8FYhYrUxI",
+        "title": "Why Secure DNS is Important"
+    },
+    {
+        "id": "NDcEOW8r0xc",
+        "title": "15 Types Of Cyber Attacks To Look Out For"
+    },
+    {
+        "id": "ilhGh9CEIwM",
+        "title": "DDoS Attack Explained"
+    },
+    {
+        "id": "z7IlkVv8rQs",
+        "title": "what is Botnet | what the botnet can do | CyberSafeGuard"
+    },
+    {
+        "id": "lpa8uy4DyMo",
+        "title": "Cyber Security Full course - 11 Hours | Cyber Security Training For Beginners | Edureka"
+    },
+    {
+        "id": "s22eJ1eVLTU",
+        "title": "What are Digital Signatures? - Computerphile"
+    },
+    {
+        "id": "kAaIYRJoJkc",
+        "title": "Certificates from Scratch - X.509 Certificates explained"
+    },
+    {
+        "id": "LJPXz8eA3b8",
+        "title": "IPv6 with OpenWrt"
+    },
+    {
+        "id": "H-J_Dpd2Nc4",
+        "title": "IPv6 Addresses Explained"
+    },
+    {
+        "id": "uwoD5YsGACg",
+        "title": "TCP vs UDP Comparison"
+    },
+    {
+        "id": "IIicPE38O-s",
+        "title": "PING Command - Troubleshooting Networks"
+    },
+    {
+        "id": "up3bcBLZS74",
+        "title": "Traceroute (tracert) Explained - Network Troubleshooting"
+    },
+    {
+        "id": "zbqrNg4C98U",
+        "title": "Network Topologies (Star, Bus, Ring, Mesh, Ad hoc, Infrastructure, & Wireless Mesh Topology)"
+    },
+    {
+        "id": "ktxC3vDukbc",
+        "title": "What is a Hotspot?"
+    },
+    {
+        "id": "HnUDtycXSNE",
+        "title": "DNS Records Explained"
+    },
+    {
+        "id": "po8ZFG0Xc4Q",
+        "title": "Public vs Private IP Address"
+    },
+    {
+        "id": "2G1ueMDgwxw",
+        "title": "Port Forwarding Explained"
+    },
+    {
+        "id": "XaOcjHrdMFE",
+        "title": "Mesh Wifi Explained - Which is the best? - Google Wifi"
+    },
+    {
+        "id": "R1qJ87Fo5_k",
+        "title": "What is a Guest Network?"
+    },
+    {
+        "id": "_a6us8kaq0g",
+        "title": "Cloud Computing Explained"
+    },
+    {
+        "id": "tZop-zjYkrU",
+        "title": "Telnet vs SSH Explained"
+    },
+    {
+        "id": "vrh0epPAC5w",
+        "title": "CompTIA Network+ Certification Video Course"
+    },
+    {
+        "id": "kKxSiJPQ2kg",
+        "title": "FTP - File Transfer Protocol Animated"
+    },
+    {
+        "id": "fzcIryNRjRA",
+        "title": "DHCP Explained with Animation"
+    },
+    {
+        "id": "6_giEv20En0",
+        "title": "Subnets vs VLANs"
+    },
+    {
+        "id": "tOj8MSEIbfA",
+        "title": "FTP (File Transfer Protocol), SFTP, TFTP Explained."
+    },
+    {
+        "id": "0tEjUR6tjBU",
+        "title": "APIPA Explained - Automatic Private IP Addressing"
+    },
+    {
+        "id": "ThdO9beHhpA",
+        "title": "IP Address - IPv4 vs IPv6 Tutorial"
+    },
+    {
+        "id": "1z0ULvg_pW8",
+        "title": "Hub, Switch, & Router Explained - What's the difference?"
+    },
+    {
+        "id": "FTUV0t6JaDA",
+        "title": "NAT Explained - Network Address Translation"
+    },
+    {
+        "id": "2eLe7uz-7CM",
+        "title": "CompTIA A+ Certification Video Course"
+    },
+    {
+        "id": "RXXRguaHZs0",
+        "title": "Proxy vs Reverse Proxy Explained"
+    },
+    {
+        "id": "_TixdHlCMu4",
+        "title": "1 - Cryptography Basics"
+    },
+    {
+        "id": "AYdikYrLKRc",
+        "title": "2 - Cryptography Basics - Digital Signature"
+    },
+    {
+        "id": "c-O-uMxTaEw",
+        "title": "3 - Cryptography Basics - Digital Certificate"
+    },
+    {
+        "id": "1jY0hDMB7To",
+        "title": "4 - Cryptography Basics - Managing Digital Certificates"
+    },
+    {
+        "id": "k3uFPGieZS8",
+        "title": "5 - Cryptography Basics - Types of Digital Certificates"
+    },
+    {
+        "id": "wpQxB2Py-ho",
+        "title": "6 - Cryptography Basics - Public Key Infrastructure"
+    },
+    {
+        "id": "d1KXDGgwIpA",
+        "title": "7 - Cryptography Basics - Diffie-Hellman Key Exchange"
+    },
+    {
+        "id": "sjC5DS4jf_k",
+        "title": "8 - Cryptography Basics - SSL TLS Protocol Explained"
+    },
+    {
+        "id": "0Sffl7YO0aY",
+        "title": "9 - Cryptography Basics - SSH Protocol Explained"
+    },
+    {
+        "id": "AtuAdk4MwWw",
+        "title": "SSH Tunneling Explained"
+    },
+    {
+        "id": "Atbl7D_yPug",
+        "title": "What is SSH (Secure Shell)?"
+    },
+    {
+        "id": "hwQbPgvEQyw",
+        "title": "How End-to-End encryption Works?"
+    },
+    {
+        "id": "TImdsUglGv4",
+        "title": "How Encryption Works - and How It Can Be Bypassed"
+    },
+    {
+        "id": "93E_GzvpMA0",
+        "title": "What is Blockchain"
+    },
+    {
+        "id": "JR4_RBb8A9Q",
+        "title": "What are Digital Signatures and How Do They Work?"
+    },
+    {
+        "id": "aUdKd0IFl34",
+        "title": "Base64 Encoding"
+    },
+    {
+        "id": "0ctat6RBrFo",
+        "title": "Tech Talk: What is Public Key Infrastructure (PKI)?"
+    },
+    {
+        "id": "L1GkEnftoRQ",
+        "title": "PKI Bootcamp - Basics of Certificate Issuance"
+    },
+    {
+        "id": "XBkzBrXlle0",
+        "title": "Phishing Explained In 6 Minutes | What Is A Phishing Attack? | Phishing Attack | Simplilearn"
+    },
+    {
+        "id": "-KL9APUjj3E",
+        "title": "Ransomware In 6 Minutes | What Is Ransomware And How It Works? | Ransomware Explained | Simplilearn"
+    },
+    {
+        "id": "gWGhUdHItto",
+        "title": "What is Phishing"
+    },
+    {
+        "id": "stMj5jlu1-4",
+        "title": "What is a Man-in-the-Middle Attack?"
+    },
+    {
+        "id": "A7nih6SANYs",
+        "title": "ARP Poisoning | Man-in-the-Middle Attack"
+    },
+    {
+        "id": "-enHfpHMBo4",
+        "title": "Man in the Middle Attacks & Superfish - Computerphile"
+    },
+    {
+        "id": "-ZfbifHwEVE",
+        "title": "Password Attacks - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "yDeDGCh_PDs",
+        "title": "Segmentation and Access Control - CompTIA Security+ SY0-701 - 2.5"
+    },
+    {
+        "id": "AhaZtj5P2a8",
+        "title": "Authentication, Authorization, and Accounting - CompTIA Security+ SY0-701 - 1.2"
+    },
+    {
+        "id": "ecCuyq-Wprc",
+        "title": "subnetting is simple"
+    },
+    {
+        "id": "J_bf_KE5llQ",
+        "title": "2.4 GHz vs 5 GHz WiFi: What is the difference?"
+    },
+    {
+        "id": "ZPXVSJnDA_A",
+        "title": "How RSA Encryption Works"
+    },
+    {
+        "id": "JD72Ry60eP4",
+        "title": "Prime Numbers & RSA Encryption Algorithm - Computerphile"
+    },
+    {
+        "id": "-ShwJqAalOk",
+        "title": "Breaking RSA - Computerphile"
+    },
+    {
+        "id": "O4xNJsjtN6E",
+        "title": "AES Explained (Advanced Encryption Standard) - Computerphile"
+    },
+    {
+        "id": "A8poO23ujxA",
+        "title": "How AES Encryption Works"
+    },
+    {
+        "id": "S918rR4VdqQ",
+        "title": "DES - Data Encryption Standard | Data Encryption Standard In Cryptography |DES Algorithm|Simplilearn"
+    },
+    {
+        "id": "FGhj3CGxl8I",
+        "title": "Feistel Cipher - Computerphile"
+    },
+    {
+        "id": "b4b8ktEV4Bg",
+        "title": "Hashing Algorithms and Security - Computerphile"
+    },
+    {
+        "id": "UswqcbncliE",
+        "title": "What are Cryptographic Hash Functions?"
+    },
+    {
+        "id": "TzdgwHX2xTs",
+        "title": "Smart contracts for beginners, explained (in 6 minutes) | Cryptopedia"
+    },
+    {
+        "id": "coQ5dg8wM2o",
+        "title": "Build Your First Blockchain App Using Ethereum Smart Contracts and Solidity"
+    },
+    {
+        "id": "0y6FtKsg6J4",
+        "title": "What is OSI Model | Real World Examples"
+    },
+    {
+        "id": "xHAMEF7-inQ",
+        "title": "Public Key Infrastructure - CompTIA Security+ Sy0-701 - 1.4"
+    },
+    {
+        "id": "jpsc4c7lntw",
+        "title": "Encrypting Data - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "U6BWn81P5Ec",
+        "title": "Key Exchange - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "u61J0xR_XPU",
+        "title": "Encryption Technologies - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "EcGmQjl6XEo",
+        "title": "Hashing and Digital Signatures - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "-wqU_2ToP1M",
+        "title": "Blockchain Technology - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "cLa94BZH_9s",
+        "title": "Certificates - CompTIA Security+ SY0-701 - 1.4"
+    },
+    {
+        "id": "6xUH0t6ugIM",
+        "title": "Threat Actors - CompTIA Security+ SY0-701 - 2.1"
+    },
+    {
+        "id": "9SD6DRCKZFU",
+        "title": "Phishing - CompTIA Security+ SY0-701 - 2.2"
+    },
+    {
+        "id": "kBcTczu8FsM",
+        "title": "Memory Injections - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "0-qeeI5jTqU",
+        "title": "Buffer Overflows - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "narir8qpGq8",
+        "title": "Operating System Vulnerabilities - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "qFUOLkEk8AQ",
+        "title": "SQL Injection - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "PKgw0CLZIhE",
+        "title": "Cross-site Scripting - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "V2DCYO-sWRQ",
+        "title": "Cloud-specific Vulnerabilities - CompTIA Security+ SY0-701 - 2.3"
+    },
+    {
+        "id": "Su8ANmAoerU",
+        "title": "Viruses and Worms - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "-VmI3xFJw78",
+        "title": "Spyware and Bloatware - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "nu27ovJ5rqw",
+        "title": "Other Malware Types - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "BoxeL5ybOXI",
+        "title": "DNS Attacks - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "yRSqIGjeb7s",
+        "title": "Application Attacks - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "7aJaEQy6Yoc",
+        "title": "Cryptographic Attacks - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "x72hG9GvkaQ",
+        "title": "Indicators of Compromise - CompTIA Security+ SY0-701 - 2.4"
+    },
+    {
+        "id": "8qpQ8Q6xxiU",
+        "title": "Cloud Infrastructures - CompTIA Security+ SY0-701 - 3.1"
+    },
+    {
+        "id": "jd001Hj7XWM",
+        "title": "Network Infrastructure Concepts - CompTIA Security+ SY0-701 - 3.1"
+    },
+    {
+        "id": "QhLQ6J4satw",
+        "title": "Port Security - CompTIA Security+ SY0-701 - 3.2"
+    },
+    {
+        "id": "mq1HRM-zGtQ",
+        "title": "Firewall Types - CompTIA Security+ SY0-701 - 3.2"
+    },
+    {
+        "id": "uU3e_ntg-3g",
+        "title": "Secure Communication - CompTIA Security+ SY0-701 - 3.2"
+    },
+    {
+        "id": "leX_Qa7wqB4",
+        "title": "Protecting Data - CompTIA Security+ SY0-701 - 3.3"
+    },
+    {
+        "id": "iAR6SgvtezY",
+        "title": "Securing Wireless and Mobile - CompTIA Security+ SY0-701 - 4.1"
+    },
+    {
+        "id": "86fruE9jkKk",
+        "title": "Threat Intelligence - CompTIA Security+ SY0-701 - 4.3"
+    },
+    {
+        "id": "-LevHAzXgFs",
+        "title": "Penetration Testing - CompTIA Security+ SY0-701 - 4.3"
+    },
+    {
+        "id": "eyVy1gKCuAU",
+        "title": "Analyzing Vulnerabilities - CompTIA Security+ SY0-701 - 4.3"
+    },
+    {
+        "id": "np2WI_rM-Ok",
+        "title": "Security Monitoring - CompTIA Security+ SY0-701 - 4.4"
+    },
+    {
+        "id": "VgNyh4HEqSU",
+        "title": "Firewalls - CompTIA Security+ SY0-701 - 4.5"
+    },
+    {
+        "id": "9NAKCyOtFH0",
+        "title": "Secure Protocols - CompTIA Security+ SY0-701 - 4.5"
+    },
+    {
+        "id": "83pCkSSj1IQ",
+        "title": "Endpoint Security - CompTIA Security+ SY0-701 - 4.5"
+    },
+    {
+        "id": "ZoOyyqhptik",
+        "title": "Identity and Access Management - CompTIA Security+ SY0-701 - 4.6"
+    },
+    {
+        "id": "5kY9kvzeWjA",
+        "title": "Security Policies - CompTIA Security+ SY0-701 - 5.1"
+    },
+    {
+        "id": "jBvdRpXaomk",
+        "title": "Security Standards - CompTIA Security+ SY0-701 - 5.1"
+    },
+    {
+        "id": "vJINnOZyQNg",
+        "title": "Security Procedures - CompTIA Security+ SY0-701 - 5.1"
+    },
+    {
+        "id": "4tGFraaP48Q",
+        "title": "Security Considerations - CompTIA Security+ SY0-701 - 5.1"
+    },
+    {
+        "id": "WGXrbAh0LUI",
+        "title": "Privacy - CompTIA Security+ SY0-701 - 5.4"
+    },
+    {
+        "id": "wEMzVfwBiWY",
+        "title": "Penetration Tests - CompTIA Security+ SY0-701 - 5.5"
+    },
+    {
+        "id": "W_Npxwk4fbI",
+        "title": "Security Awareness - CompTIA Security+ SY0-701 - 5.6"
+    },
+    {
+        "id": "7IS7gigunyI",
+        "title": "The OSI Model - Explained by Example"
+    },
+    {
+        "id": "qqRYkcta6IE",
+        "title": "TCP vs UDP Crash Course"
+    },
+    {
+        "id": "RG97rvw1eUo",
+        "title": "Network Address Translation - NAT Explained"
+    },
+    {
+        "id": "6Tf80mbhyAQ",
+        "title": "How much bandwidth do you really need? (Web browsing, streaming and gaming)"
+    },
+    {
+        "id": "92b-jjBURkw",
+        "title": "Public IP vs. Private IP and Port Forwarding (Explained by Example)"
+    },
+    {
+        "id": "S8J2fkN2FeI",
+        "title": "Load Balancer vs Reverse Proxy (Explained by Example)"
+    },
+    {
+        "id": "Zgy1miPsTNs",
+        "title": "Fail-over and High-Availability (Explained by Example)"
+    },
+    {
+        "id": "t0zlO5-NWFU",
+        "title": "Server Name Indication (SNI) (Explained by Example)"
+    },
+    {
+        "id": "ECukPUUK_74",
+        "title": "How public WIFI can be sniffed?"
+    },
+    {
+        "id": "bXQ0HvsWI60",
+        "title": "What is a Virtual IP Address? How does it help with High-Availability"
+    },
+    {
+        "id": "d-Bfi5qywFo",
+        "title": "Active-Active vs Active-Passive Cluster to Achieve High Availability in Scaling Systems"
+    },
+    {
+        "id": "JIA4ca0afnY",
+        "title": "Technical Discussion on VPNs - How VPNs Work, their benefits, and What happens when VPNs are Hacked"
+    },
+    {
+        "id": "r9kbjAN2788",
+        "title": "Slow Start vs Congestion Avoidance in TCP"
+    },
+    {
+        "id": "FYcO4ZshG8Q",
+        "title": "How DNS and DHCP Servers Communicate (With wireshark)"
+    },
+    {
+        "id": "NAdJojxENEU",
+        "title": "iptables Demystified - Port Redirection and Forwarding HTTP Traffic to another machine (part 1)"
+    },
+    {
+        "id": "-CraNvj48J0",
+        "title": "iptables Demystified - Load Balancing without a Load Balancer (no software installation) (part 2)"
+    },
+    {
+        "id": "CPOpPTpMSiE",
+        "title": "Multicast DNS Explained"
+    },
+    {
+        "id": "sWeVOXpTOhk",
+        "title": "Encryption and Security Agencies - Computerphile"
+    },
+    {
+        "id": "mGRClHHgNdk",
+        "title": "How Application Layer Services Work"
+    },
+    {
+        "id": "t1MvzaScl9k",
+        "title": "How to Verify DNS and HTTP"
+    },
+    {
+        "id": "_b4dXKB8Pt8",
+        "title": "The Data Link Layer, MAC Addressing, and the Ethernet Frame"
+    },
+    {
+        "id": "gZZ_qF1UmzI",
+        "title": "Session Layer In OSI Model | OSI Model | Session Layer | Computer Network Tutorial | Simplilearn"
+    },
+    {
+        "id": "hUqj-BOx1Nw",
+        "title": "IT Security Tutorial - Comparing attack methods by OSI layer"
+    },
+    {
+        "id": "704dudhA7UI",
+        "title": "Digital Signatures"
+    },
+    {
+        "id": "BkKFJ1yZRgI",
+        "title": "Digital Signatures - Data authenticity and integrity protection"
+    },
+    {
+        "id": "WAZxo2ObFIw",
+        "title": "Networking Fundamentals: OSI 7 - Layer 3 - the network layer - Part 1"
+    },
+    {
+        "id": "2MpRlYIYxz4",
+        "title": "Networking Fundamentals: OSI 7 - Layer 3 - the network layer - Part 2"
+    },
+    {
+        "id": "W-0ynJOsXvo",
+        "title": "Networking Fundamentals: OSI 7 - Layer 3 - the network layer - Part 3"
+    },
+    {
+        "id": "15amNny_kKI",
+        "title": "IP Sec VPN Fundamentals"
+    },
+   {
+         "id":"Yr0xPVFcf-U",
+        "title":"What is cyber security?"
+    },
+    
+    {
+        "id":"EKdZutMkmTE",
+        "title":"Complete Cyber Security Course For 2023 | Cyber Security Full Course for Beginners"
+    },
+    
+    {
+        "id":"6TE0LovKQa4",
+        "title":"Cybersecurity Trends"
+    },
+    
+    {
+        "id":"4CuXNs6SboU",
+        "title":"Careers in Cybersecurity"
+    },
+    
+    {
+        "id":"VEu326IZpsc",
+        "title":"Cybersecurity Architecture: Detection"
+    },
+    
+    {
+        "id":"nthEXs12nFE",
+        "title":"Cybersecurity Architecture: Application Security"
+    },
+    
+    {
+        "id":"PrbJErd0cK4&list=PLC9e2JOuGxiYR9qiHVf92drgVOCztaX8f&index=3",
+        "title":"Cybersecurity and Privacy in Education - Are You aware of the risks?"
+    },
+    
+    {
+        "id":"4QzBdeUQ0Dc",
+        "title":"AI in Cybersecurity"
+    },
+    
+    {
+        "id":"34BtwcL7Mkg",
+        "title":"How To Manage Security Risks & Threats | Google Cybersecurity Certificate"
+    },
+    
+    {
+        "id":"Njqid_JpqTs",
+        "title":"Cybersecurity Architecture: Endpoints Are the IT Front Door - Guard Them"
+    },
+    
+    {
+        "id":" 6PrC4z4tPB0",
+        "title":" ChatGPT For Cybersecurity"
+    },
+    
+    {
+        "id":"4pe1fn3Gus0",
+        "title":"Fundamentals of Python for Cybersecurity | Google Cybersecurity Certificate"
+    },
+    
+    {
+        "id":"PuOrQdsj2k0",
+        "title":"Generative AI in Cybersecurity: Rise of the Machines?"
+    },
+    
+    {
+        "id":"JIJslcA8Q5g",
+        "title":"Why Cybersecurity is Important! | Romeo Farinacci | TEDxGrandCanyonUniversity"
+    },
+    
+    {
+        "id":"EqNe55IzjAw",
+        "title":"Cybersecurity Architecture: Fundamentals of Confidentiality, Integrity, and Availability"
+    },
+    
+    {
+        "id":"rheYU5Q3-Uk",
+        "title":"Blockchain explained: The technology that’s transforming the world of finance"
+    },
+    
+    {
+        "id":"SSo_EIwHSd4",
+        "title":"How does a blockchain work - Simply Explained"
+    },
+    
+    {
+        "id":"RT7x0lQvSLk",
+        "title":"Blockchain Technology | What Is Blockchain Technology? | Blockchain Explained | Simplilearn"
+    },
+    
+    {
+        "id":"0eQ67K1xZ1g&list=PLRSQi-TLPZtlbw9z1WIU_boT7o3PNAnQB&index=33",
+        "title":"Lecture 33 Enterprise Blockchains"
+    },
+    
+    {
+        "id":" 9QmipnimwVE",
+        "title":"What is blockchain? Explained in a minute"
+    },
+    
+    {
+        "id":"WzxbwEQRJPo",
+        "title":"Blockchain: Trustworthy or a Scam?"
+    },
+    
+    {
+        "id":"QphJEO9ZX6s",
+        "title":"Blockchain Explained"
+    },
+    
+    {
+        "id":"AWj7bFlMRn0&list=PLSYCfvJZ2bQoTTJbhgNk0KfJa8otwUR79&index=10",
+        "title":"A Wolfram Language Platform for Smart Contracts and Connecting Blockchains"
+    },
+    
+    {
+        "id":"1Mxd7Pc-_Nk",
+        "title":"Blockchain Developer Tutorial for Beginners 2022 | Blockchain For Beginners | Simplilearn"
+    },
+    
+    {
+        "id":"3A33ue7v9bc",
+        "title":"Blockchains, Cryptocurrencies, and NFTs"
+    },
+    
+    {
+        "id":" EH6vE97qIP4&list=PLUl4u3cNGP63UUkfL0onkxF6MYgVa04Fn",
+        "title":" Introduction for 15.S12 Blockchain and Money, Fall 2018"
+    },
+    
+    {
+        "id":"VKSEMp92u8c",
+        "title":"Internet Computer Blockchain $ICP"
+    },
+    
+    {
+        "id":"ojk6nZIJx5o",
+        "title":"Blockchain and its Applications"
+    },
+    
+    {
+        "id":"Gmy7z6MTFOo",
+        "title":"What do we call financial services implemented on blockchain?"
+    },
+    
+    {
+        "id":"Wr-5Mf4r1Sg",
+        "title":"AI, Blockchain and the SDGs: The Future Vision | AIBC Europe Conference 2023"
+    },
+    {
+        "id": "QoVkbueINS8",
+        "title": "Network Security #1: Threats"
+    },
+    {
+        "id": "KO9PPmCxEKQ",
+        "title": "Network Security #2: Identifying Vulnerabilities & Security Measures"
+    },
+    {
+        "id": "S9iaUndb53g",
+        "title": "Network Security #3: More Security Measures"
+    },
+
+    {
+        "id": "WjXhnt6T-GU",
+        "title": "Network Security: Threats - GCSE Computer Science"
+    },
+
+    
+    {
+        "id": "QoVkbueINS8",
+        "title": "Network Security #1: Threats"
+    },
+    
+    {
+        "id": "2VaPTIuRs4k",
+        "title": "Common Types Of Network Security Vulnerabilities In 2023 | PurpleSec"
+    },
+
+    {
+        "id": "jlvvek8n5g8",
+        "title": "36. OCR GCSE (J277) 1.4 Threats to networks"
+    },
+    
+    {
+        "id": "ywSArNmSHhQ",
+        "title": "Cyber Threats To Systems Security"
+    },
+    
+    {
+        "id": "wKFOXuWoqmM",
+        "title": "Top 5 Cyber Attacks | Types Of Cyber Security Threats | CyberSecurity For Beginners | Intellipaat"
+    },
+    
+    {
+        "id": "VNp35Uw_bSM",
+        "title": "Cybersecurity Threat Hunting Explained"
+    },
+    
+    {
+        "id": "9Zx6eNc2j9s",
+        "title": "1.4.1 Threats to Servers SQL Injection and DoS Attacks. GCSE Computer Science (OCR)"
+    },
+    {
+        "id": "bPVaOlJ6ln0",
+        "title": "Cybersecurity: Crash Course Computer Science #31"
+    },
+    {
+        "id": "ywSArNmSHhQ",
+        "title": "Cyber Threats To Systems Security"
+    },
+    {
+        "id": "tNKmOh9sMhc",
+        "title": "Computer Science Lesson 62: Physical threats to computers"
+    },
+    
+    {
+        "id": "GqmQg-cszw4",
+        "title": "1. Introduction, Threat Models"
+    },
+    
+    {
+        "id": "4RnND-1dB4Y",
+        "title": "Top Cybersecurity Threats | Types of Cyberattacks | Cybersecurity Course for Beginners | Simplilearn"
+    },
+
+    {
+        "id": "mJVAofe5m7s",
+        "title": "Cyber Security #1: Threats"
+    },
+    {
+        "id": "uyfFoC3wVzY",
+        "title": "Assets and Threats"
+    },
+
+    {
+        "id": "2PhNSdmwlZw",
+        "title": "GCSE Computer Science: Cyber security threats"
+    },
+    
+    {
+        "id": "W46HD9XkLLE",
+        "title": "Computer Security Threats || Virus, Worms, Adware, Spyware, Hacker || How Threats are Spread"
+    },
+    
+    {
+        "id": "BTHbcoLvOa8",
+        "title": "IGCSE Computer Science C5 - Internet, Cybersecurity Threats and Solutions [2023-2025]"
+    },
+    
+    {
+        "id": "_qDdP6fGptk",
+        "title": "Cyber Threats and Cyber Security"
+    },
+    
+    {
+        "id": "l27QDW-i3DY",
+        "title": "63. CAMBRIDGE IGCSE (0478-0984) 5.3 Cybersecurity threats - Forms of attack"
+    },
+    
+    {
+        "id": "awhqnSskWjU",
+        "title": "Cybersecurity Threats | Types of Cybersecurity Threats | Invensis Learning"
+    },
+  
+    {
+        "id": "4RnND-1dB4Y",
+        "title": "Top Cybersecurity Threats | Types of Cyberattacks | Cybersecurity Course for Beginners | Simplilearn"
+    },
+    {
+        "id": "iy-5bb3S-iA",
+        "title": "Computer security threats explained"
+    },
+    {
+        "id": "COi178UNckM",
+        "title": "Four Types of Threats in Information Security"
+    },
+
+    {
+        "id": "rPdM92dhYm4",
+        "title": "What Are Insider Threats? – Proofpoint Education Series"
+    },
+
+    {
+        "id": "tSodBEAJz9Y",
+        "title": "Computer Networking Explained | Cisco CCNA 200-301"
+    },
+    
+    {
+        "id": "3QhU9jd03a0",
+        "title": "Computer Networks: Crash Course Computer Science #28"
+    },
+    
+    {
+        "id": "cNwEVYkx2Kk",
+        "title": "Introduction to Networking | Network Fundamentals Part 1"
+    },
+    
+    {
+        "id": "WexBQ1XgaDw",
+        "title": "What is Networking (Computer Networking)?"
+    },
+    
+    {
+        "id": "cD5DX8lvk9Q",
+        "title": "Demystifying Computer Networks: LAN, WAN, Routers, Switches, and Modems Explained! Begrepen.be"
+    },
+    
+    {
+        "id": "lYvijnPI1Rg",
+        "title": "Networking For Cybersecurity | What you NEED to know"
+    },
+    
+    {
+        "id": "sesacY7Xz3c",
+        "title": "Cybersecurity Architecture: Networks"
+    },
+    
+    {
+        "id": "XgOF6GhiMuM",
+        "title": "Required Cybersecurity Skill: Understanding Basic Networking Concepts"
+    },
+    
+    {
+        "id": "NIRXtMg-0z8",
+        "title": "Internet Networks & Network Security | Google Cybersecurity Certificate"
+    },
+    
+    
+    {
+        "id": "qiQR5rTSshw",
+        "title": "Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep]"
+    },
+    
+    {
+        "id": "zIWGjkr0ENE",
+        "title": "Network Security Engineer Full Course 2023 | Learn Networking In 4 Hours | Simplilearn"
+    },
+    
+    {
+        "id": "ccnlAVDXd7k",
+        "title": "Retro Tech: Smart Homes"
+    },
+    
+    {
+        "id": "76DlT_2YM4k",
+        "title": "What Is A Matter Smart Home (Simply Explained)"
+    },
+    
+    {
+        "id": "-SHjXavvAZQ",
+        "title": "7 Best Home Automation Systems 2024"
+    },
+    
+    {
+        "id": "pZsroRmbpYQ",
+        "title": "How Smart Home Technology Helps Protect Your Home"
+    },
+    
+    {
+        "id": "c5MF3MnMmJw",
+        "title": "Smart Home Automations 101 - The Ultimate Guide to Build Better Automations"
+    },
+    
+    {
+        "id": "ZkuKvYQQjlg",
+        "title": "Ultimate Smart Assistant Showdown 2024! Alexa vs Siri vs Google"
+    },
+    
+    {
+        "id": "U5gqOwQROTg",
+        "title": "Are Smart Locks Safe? A Lock Expert Explains | WSJ"
+    },
+    
+    {
+        "id": "gpB4600keWA",
+        "title": "Smart Home with Google Assistant & Alexa using NodeMCU ESP8266 (Manual + Voice) | IoT Projects 2021"
+    },
+    
+    {
+        "id": "Du7J00KU980",
+        "title": "The PROBLEM with Smart Home Tech"
+    },
+    
+    {
+        "id": "CbRku8Gu6A0",
+        "title": "Smart Home Security Gadgets: Innovative Tech Ideas for a Safe Home"
+    },
+
+    {
+        "id": "Boe7HKW8ffQ",
+        "title": "Threats and Vulnerabilities - Computer Networks"
+    },
+    {
+        "id": "rHxTs-ttp_c",
+        "title": "Computer Science Lesson 28A: Threats to Data in a Computer"
+    },
+    {
+        "id": "BTHbcoLvOa8",
+        "title": "IGCSE Computer Science C5 - Internet, Cybersecurity Threats and Solutions [2023-2025]"
+    },
+    {
+        "id": "esNXUNG4U1k",
+        "title": "Security threat | Computer Security | Web Technology | Lec - 51 | Bhanu Priya"
+    },
+    {
+        "id": "JbEPJv7Ybcs",
+        "title": "What You Should Learn Before \"Cybersecurity\" - 2023"
+    },
+    {
+        "id": "-UrdExQW0cs",
+        "title": "How Quantum Computers Break The Internet... Starting Now"
+    },
+    {
+        "id": "RRst_l9NYkg",
+        "title": "Threats and Vulnerabilities - Information Security"
+    },
+    {
+        "id": "iY7rGZrLKBw",
+        "title": "Security Threats, virus, worms, Trojan horse. Cyber security lecture series part -10"
+    },
+    {
+        "id": "rYcrBcSeAHw",
+        "title": "Security Threats, Computer Science Lecture | Sabaq.pk"
+    },
+    {
+        "id": "YqDoq54kljA",
+        "title": "Threat Hunting Explained"
+    },
+    {
+        "id": "WdmsWYF6Hq8",
+        "title": "BehindTheHunt | Episode 1: What Is Threat Hunting?"
+    },
+    {
+        "id": "NdwTeSi70SU",
+        "title": "How To Threat hunt Like A Pro: The Easy Way"
+    },
+    {
+        "id": "gt_qBvccvqE",
+        "title": "Threat Intelligence Made Easy - SOC Experts"
+    },
+    {
+        "id": "qV7xs5-7eAk",
+        "title": "Cybersecurity Threat Intelligence Analyst - Threat Intelligence Analyst Salary and Skills You Need"
     },
     {
         "id": "2ZYa4QI3vek",

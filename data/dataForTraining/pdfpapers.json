@@ -7047,9 +7047,514 @@
     "url": "https://arxiv.org/abs/2204.02685"
   },
   {
-    "tags": [ "Threats" ],
-    "title": "Ransomware Detection and Classification using Machine Learning",
-    "url": "https://arxiv.org/pdf/2311.16143.pdf"
+    "tags": ["Networking"],
+    "title": "A review of Energy Efficient Routing Protocols in Underwater Internet of Things",
+    "url": "https://arxiv.org/abs/2312.11725"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Distributed Asynchronous Service Provisioning in the Edge-Cloud Multi-tier Network",
+    "url": "https://arxiv.org/abs/2312.11187"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Passive Sensing and Localization in an Aircraft Cabin Using a Wireless Communication Network",
+    "url": "https://arxiv.org/abs/2312.11160"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Scaling Laws of Network Traffic Load: A Theoretical Explanation of Metcalfe's Law",
+    "url": "https://arxiv.org/abs/2312.11110"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Age-Threshold Slotted ALOHA for Optimizing Information Freshness in Mobile Networks",
+    "url": "https://arxiv.org/abs/2312.10888"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Value of Information and Timing-aware Scheduling for Federated Learning",
+    "url": "https://arxiv.org/abs/2312.10512"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "End-to-End Asynchronous Traffic Scheduling in Converged 5G and Time-Sensitive Networks",
+    "url": "https://arxiv.org/abs/2312.10356"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Implementing A Middleware API for Facilitating Heterogeneous IoT Device Communication Protocols and Data Retrieval",
+    "url": "https://arxiv.org/abs/2312.10294"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Energy Sustainability in Dense Radio Access Networks via High Altitude Platform Stations",
+    "url": "https://arxiv.org/abs/2312.10027"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Timing-As-A-Service (TAAS): On the role of mobile service providers in the context of integrated Industrial Internet of Things (IIoT)",
+    "url": "https://arxiv.org/abs/2312.09711"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Emergence of Nestedness in the Public Internet Peering Ecosystem",
+    "url": "https://arxiv.org/abs/2312.09544"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Networking for the Metaverse: The Standardization Landscape",
+    "url": "https://arxiv.org/abs/2312.09295"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Convergence of Manufacturing and Networking in Future Factories",
+    "url": "https://arxiv.org/abs/2312.08708"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Towards SSH3: how HTTP/3 improves secure shells",
+    "url": "https://arxiv.org/abs/2312.08396"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "JMAC Protocol: A Cross-Layer Multi-Hop Protocol for LoRa",
+    "url": "https://arxiv.org/abs/2312.08387"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Green Operations of SWIPT Networks: The Role of End-User Devices",
+    "url": "https://arxiv.org/abs/2312.08232"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Random relay selection based heuristic optimization model for the scheduling and effective resource allocation in the cognitive radio network",
+    "url": "https://arxiv.org/abs/2312.08127"
+  },
+  {
+    "tags": ["Networking", "Cryptography", "Security"],
+    "title": "Zero-Knowledge Proof of Traffic: A Deterministic and Privacy-Preserving Cross Verification Mechanism for Cooperative Perception Data",
+    "url": "https://arxiv.org/abs/2312.07948"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Linear Combination of Exponential Moving Averages for Wireless Channel Prediction",
+    "url": "https://arxiv.org/abs/2312.07945"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Delay analysis of the IEEE 802.11bd EDCA with repetitions",
+    "url": "https://arxiv.org/abs/2312.07383"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Intelligible Protocol Learning for Resource Allocation in 6G O-RAN Slicing",
+    "url": "https://arxiv.org/abs/2312.07362"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Lightweight Implementation of Per-packet Service Protection in eBPF/XDP",
+    "url": "https://arxiv.org/abs/2312.07152"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Oracle-based Protocol Testing with Eywa",
+    "url": "https://arxiv.org/abs/2312.06875"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Topiary: Fast, Scalable Publish/Subscribe for Peer-to-Peer (D)Apps",
+    "url": "https://arxiv.org/abs/2312.06800"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Ambient IoT: A missing link in 3GPP IoT Devices Landscape",
+    "url": "https://arxiv.org/abs/2312.06569"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "On the Ground and in the Sky: A Tutorial on Radio Localization in Ground-Air-Space Networks",
+    "url": "https://arxiv.org/abs/2312.05704"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Generative AI for Physical Layer Communications: A Survey",
+    "url": "https://arxiv.org/abs/2312.05594"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "ScalO-RAN: Energy-aware Network Intelligence Scaling in Open RAN",
+    "url": "https://arxiv.org/abs/2312.05096"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Physical-Layer Semantic-Aware Network for Zero-Shot Wireless Sensing",
+    "url": "https://arxiv.org/abs/2312.05043"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "SYSFLOW: Efficient Execution Platform for IoT Devices",
+    "url": "https://arxiv.org/abs/2312.04871"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A First Look at 5G Core Deployments on Public Cloud: Performance Evaluation of Control and User Planes",
+    "url": "https://arxiv.org/abs/2312.04833"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Taming Subnet-Drift in D2D-Enabled Fog Learning: A Hierarchical Gradient Tracking Approach",
+    "url": "https://arxiv.org/abs/2312.04728"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "MIST: An Efficient Approach for Software-Defined Multicast in Wireless Mesh Networks",
+    "url": "https://arxiv.org/abs/2312.04418"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Energy-Efficient Internet of Things Monitoring with Content-Based Wake-Up Radio",
+    "url": "https://arxiv.org/abs/2312.04294"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Zero-Touch Networks: Towards Next-Generation Network Automation",
+    "url": "https://arxiv.org/abs/2312.04159"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Queueing Delay Minimization in Overloaded Networks via Rate Control",
+    "url": "https://arxiv.org/abs/2312.04054"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Towards Time Sensitive Networking on Smart Cities: Techniques, Challenges, and Solutions",
+    "url": "https://arxiv.org/abs/2312.03635"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A path forward: Improving Internet routing security by enabling zones of trust",
+    "url": "https://arxiv.org/abs/2312.03305"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Overview of RIS-Enabled Secure Transmission in 6G Wireless Networks",
+    "url": "https://arxiv.org/abs/2312.02728"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Terrain-Based UAV Deployment: Providing Coverage for Outdoor Users",
+    "url": "https://arxiv.org/abs/2312.02468"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "An In-Depth Survey on Virtualization Technologies in 6G Integrated Terrestrial and Non-Terrestrial Networks",
+    "url": "https://arxiv.org/abs/2312.01895"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "TCP Slice: A semi-distributed TCP algorithm for Delay-constrained Applications",
+    "url": "https://arxiv.org/abs/2312.01869"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Terrain-based Coverage Manifold Estimation: Machine Learning, Stochastic Geometry, or Simulation?",
+    "url": "https://arxiv.org/abs/2312.01826"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Joint Beam Scheduling and Power Optimization for Beam Hopping LEO Satellite Systems",
+    "url": "https://arxiv.org/abs/2312.01292"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Comprehensive Survey of Wireless Time-Sensitive Networking (TSN): Architecture, Technologies, Applications, and Open Issues",
+    "url": "https://arxiv.org/abs/2312.01204"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Joint User Association and Resource Allocation for Multi-Cell Networks with Adaptive Semantic Communication",
+    "url": "https://arxiv.org/abs/2312.01049"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Comprehensive Real-World Evaluation of 5G Improvements over 4G in Low- and Mid-Bands",
+    "url": "https://arxiv.org/abs/2312.00957"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Preprocess your Paths -- Speeding up Linear Programming-based Optimization for Segment Routing Traffic Engineering",
+    "url": "https://arxiv.org/abs/2312.00518"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Slotted Aloha for Optical Wireless Communications in Internet of Underwater Things",
+    "url": "https://arxiv.org/abs/2312.00491"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "IEEE 802.11be Network Throughput Optimization with Multi-Link Operation and AP Coordination",
+    "url": "https://arxiv.org/abs/2312.00345"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "UAV-Aided Lifelong Learning for AoI and Energy Optimization in Non-Stationary IoT Networks",
+    "url": "https://arxiv.org/abs/2312.00334"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Review of the In-Network Computing and Its Role in the Edge-Cloud Continuum",
+    "url": "https://arxiv.org/abs/2312.00303"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Using LoRa communication for Urban VANETs: Feasibility and Challenges",
+    "url": "https://arxiv.org/abs/2311.18070"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Simple and General Operational Framework to Deploy Optimal Routes with Source Routing",
+    "url": "https://arxiv.org/abs/2311.17769"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Optimization in Mobile Augmented Reality Systems for the Metaverse over Wireless Communications",
+    "url": "https://arxiv.org/abs/2311.17630"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Large Language Models for Networking: Applications, Enabling Techniques, and Challenges",
+    "url": "https://arxiv.org/abs/2311.17474"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Data-driven Bandwidth Adaptation for Radio Access Network Slices",
+    "url": "https://arxiv.org/abs/2311.17347"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Test for IP-ECN Propagation by a Remote Tunnel Endpoint",
+    "url": "https://arxiv.org/abs/2311.16825"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Unravelling DNS Performance: A Historical Examination of F-ROOT in Southeast Asia",
+    "url": "https://arxiv.org/abs/2311.16545"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "WirePlanner: Fast, Secure and Cost-Efficient Route Configuration for SD-WAN",
+    "url": "https://arxiv.org/abs/2311.15099"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Active Queue Management with Data-Driven Delay Violation Probability Predictors",
+    "url": "https://arxiv.org/abs/2311.14982"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Routing and Spectrum Allocation in Broadband Degenerate EPR-Pair Distribution",
+    "url": "https://arxiv.org/abs/2311.14613"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "On the Analysis of AoI-Reliability Tradeoff in Heterogeneous IIoT Networks",
+    "url": "https://arxiv.org/abs/2311.13336"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Timely and Efficient Information Delivery in Real-Time Industrial IoT Networks",
+    "url": "https://arxiv.org/abs/2311.13329"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Ten issues of NetGPT",
+    "url": "https://arxiv.org/abs/2311.13106"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Learn to Augment Network Simulators Towards Digital Network Twins",
+    "url": "https://arxiv.org/abs/2311.12745"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Enabling Mobility-Oriented JCAS in 6G Networks: An Architecture Proposal",
+    "url": "https://arxiv.org/abs/2311.11623"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Abnormal traffic detection system in SDN based on deep learning hybrid models",
+    "url": "https://arxiv.org/abs/2311.11550"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Toward A Generic Vehicular Cloud Network Architecture: A Case of Virtual Vehicle As A Service",
+    "url": "https://arxiv.org/abs/2311.11147"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Goal-Oriented Communications for Remote Inference under Two-Way Delay with Memory",
+    "url": "https://arxiv.org/abs/2311.11143"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Carbon Dioxide Emission Minimized Virtual Machine (VM) Placement in Cloud-Fog Network Architecture",
+    "url": "https://arxiv.org/abs/2311.09468"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "PDU-set Scheduling Algorithm for XR Traffic in Multi-Service 5G-Advanced Networks",
+    "url": "https://arxiv.org/abs/2311.08969"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "X-GRL: An Empirical Assessment of Explainable GNN-DRL in B5G/6G Networks",
+    "url": "https://arxiv.org/abs/2311.08798"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Cross Device Federated Intrusion Detector for Early Stage Botnet Propagation in IoT",
+    "url": "https://arxiv.org/abs/2311.08621"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Prediction of inter packet arrival times for enhanced NR-V2X sidelink scheduling",
+    "url": "https://arxiv.org/abs/2311.08227"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Cost-Efficient Computation Offloading and Service Chain Caching in LEO Satellite Networks",
+    "url": "https://arxiv.org/abs/2311.07872"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Bringing Reconfigurability to the Network Stack",
+    "url": "https://arxiv.org/abs/2311.07753"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "P4-PSFP: P4-Based Per-Stream Filtering and Policing for Time-Sensitive Networking",
+    "url": "https://arxiv.org/abs/2311.07385"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Throughput Maximization in Multi-Band Optical Networks with Column Generation",
+    "url": "https://arxiv.org/abs/2311.07335"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "When Distributed Consensus Meets Wireless Connected Autonomous Systems: A Review and A DAG-based Approach",
+    "url": "https://arxiv.org/abs/2311.07329"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Network Resource Management For Cyber-Physical Production Systems Based On Quality of Experience",
+    "url": "https://arxiv.org/abs/2311.06008"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Joint SDN Synchronization and Controller Placement in Wireless Networks using Deep Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2311.05582"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Measuring the Prevalence of WiFi Bottlenecks in Home Access Networks",
+    "url": "https://arxiv.org/abs/2311.05499"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Digital Twin-based 3D Map Management for Edge-assisted Device Pose Tracking in Mobile AR",
+    "url": "https://arxiv.org/abs/2311.04997"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Mass Adoption of NATs: Survey and experiments on carrier-grade NATs",
+    "url": "https://arxiv.org/abs/2311.04658"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "AIRIC: Orchestration of Virtualized Radio Access Networks with Noisy Neighbours",
+    "url": "https://arxiv.org/abs/2311.04649"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A First Look At NAT64 Deployment In-The-Wild",
+    "url": "https://arxiv.org/abs/2311.04181"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "On Deep Reinforcement Learning for Traffic Steering Intelligent ORAN",
+    "url": "https://arxiv.org/abs/2311.03853"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Difference Based Content Networking",
+    "url": "https://arxiv.org/abs/2311.03831"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "5G-CT: Automated Deployment and Over-the-Air Testing of End-to-End Open Radio Access Networks",
+    "url": "https://arxiv.org/abs/2311.03206"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Compact Data Structures for Network Telemetry",
+    "url": "https://arxiv.org/abs/2311.02636"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Brief Survey of Open Radio Access Network (O-RAN) Security",
+    "url": "https://arxiv.org/abs/2311.02311"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "A Lightweight Routing Layer Using a Reliable Link-Layer Protocol",
+    "url": "https://arxiv.org/abs/2311.00911"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Centralized Management of a Wifi Mesh for Autonomous Farms",
+    "url": "https://arxiv.org/abs/2311.00887"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "LoRa Multi-Hop Networks for Monitoring Underground Mining Environments",
+    "url": "https://arxiv.org/abs/2310.20515"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "AdapINT: A Flexible and Adaptive In-Band Network Telemetry System Based on Deep Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2310.19331"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Unveiling the Evolution of Mobile Networks: From 1G to 7G",
+    "url": "https://arxiv.org/abs/2310.19195"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Digital Twin-Driven Network Architecture for Video Streaming",
+    "url": "https://arxiv.org/abs/2310.19079"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Confucius Queue Management: Be Fair But Not Too Fast",
+    "url": "https://arxiv.org/abs/2310.18030"
+  },
+  {
+    "tags": ["Networking"],
+    "title": "Distributed Consensus in Content Centric Networking",
+    "url": "https://arxiv.org/abs/2310.17532"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "SunBlock: Cloudless Protection for IoT Systems",
+    "url": "https://arxiv.org/abs/2401.14332"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Modular Approach to Automatic Cyber Threat Attribution using Opinion Pools",
+    "url": "https://arxiv.org/abs/2401.14090"
   },
   {
     "tags": [ "Threats" ],
@@ -7553,8 +8058,1069 @@
   },
 
   {
+    "tags": ["Threats"],
+    "title": "Cyber-Twin: Digital Twin-boosted Autonomous Attack Detection for Vehicular Ad-Hoc Networks",
+    "url": "https://arxiv.org/abs/2401.14005"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Embedding Attack Project (Work Report)",
+    "url": "https://arxiv.org/abs/2401.13854"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "WPDA: Frequency-based Backdoor Attack with Wavelet Packet Decomposition",
+    "url": "https://arxiv.org/abs/2401.13578"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Privacy-Preserving Face Recognition in Hybrid Frequency-Color Domain",
+    "url": "https://arxiv.org/abs/2401.13386"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Boosting the Transferability of Adversarial Examples via Local Mixup and Adaptive Step Size",
+    "url": "https://arxiv.org/abs/2401.13205"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Securing Recommender System via Cooperative Training",
+    "url": "https://arxiv.org/abs/2401.12700"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Security Risk Assessment Method for Distributed Ledger Technology (DLT) based Applications: Three Industry Case Studies",
+    "url": "https://arxiv.org/abs/2401.12358"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "The Ethics of Interaction: Mitigating Security Threats in LLMs",
+    "url": "https://arxiv.org/abs/2401.12273"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Machine learning-based network intrusion detection for big and imbalanced data using oversampling, stacking feature embedding and feature extraction",
+    "url": "https://arxiv.org/abs/2401.12262"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Analyzing the Quality Attributes of AI Vision Models in Open Repositories Under Adversarial Attacks",
+    "url": "https://arxiv.org/abs/2401.12261"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Is Your Kettle Smarter Than a Hacker? A Scalable Tool for Assessing Replay Attack Vulnerabilities on Consumer IoT Devices",
+    "url": "https://arxiv.org/abs/2401.12184"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "NEUROSEC: FPGA-Based Neuromorphic Audio Security",
+    "url": "https://arxiv.org/abs/2401.12055"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Unraveling Attacks in Machine Learning-based IoT Ecosystems: A Survey and the Open Libraries Behind Them",
+    "url": "https://arxiv.org/abs/2401.11723"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "TetraLoss: Improving the Robustness of Face Recognition against Morphing Attacks",
+    "url": "https://arxiv.org/abs/2401.11598"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Navigating Cybersecurity Training: A Comprehensive Review",
+    "url": "https://arxiv.org/abs/2401.11326"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Optimal Control of Malware Propagation in IoT Networks",
+    "url": "https://arxiv.org/abs/2401.11076"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Deep Learning-based Embedded Intrusion Detection System for Automotive CAN",
+    "url": "https://arxiv.org/abs/2401.10674"
+  },
+  {
+    "tags": ["Threats", "Cybersecurity"],
+    "title": "Multi-Agent Reinforcement Learning for Maritime Operational Technology Cyber Security",
+    "url": "https://arxiv.org/abs/2401.10149"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Hijacking Attacks against Neural Networks by Analyzing Training Data",
+    "url": "https://arxiv.org/abs/2401.09740"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "AntiPhishStack: LSTM-based Stacked Generalization Model for Optimized Phishing URL Detection",
+    "url": "https://arxiv.org/abs/2401.08947"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "SecPLF: Secure Protocols for Loanable Funds against Oracle Manipulation Attacks",
+    "url": "https://arxiv.org/abs/2401.08520"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Machine Learning-Based Malicious Vehicle Detection for Security Threats and Attacks in Vehicle Ad-hoc Network (VANET) Communications",
+    "url": "https://arxiv.org/abs/2401.08135"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "ADMIn: Attacks on Dataset, Model and Input. A Threat Model for AI Based Software",
+    "url": "https://arxiv.org/abs/2401.07960"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Signed-Prompt: A New Approach to Prevent Prompt Injection Attacks Against LLM-Integrated Applications",
+    "url": "https://arxiv.org/abs/2401.07612"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Privacy-Preserving Intrusion Detection in Software-defined VANET using Federated Learning with BERT",
+    "url": "https://arxiv.org/abs/2401.07343"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Universal Vulnerabilities in Large Language Models: In-context Learning Backdoor Attacks",
+    "url": "https://arxiv.org/abs/2401.05949"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "SENet: Visual Detection of Online Social Engineering Attack Campaigns",
+    "url": "https://arxiv.org/abs/2401.05569"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "MicroFuzz: An Efficient Fuzzing Framework for Microservices",
+    "url": "https://arxiv.org/abs/2401.05529"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "FBSDetector: Fake Base Station and Multi Step Attack Detection in Cellular Networks using Machine Learning",
+    "url": "https://arxiv.org/abs/2401.04958"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Evaluating the Security and Privacy Risk Postures of Virtual Assistants",
+    "url": "https://arxiv.org/abs/2312.14633"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Manipulating Trajectory Prediction with Backdoors",
+    "url": "https://arxiv.org/abs/2312.13863"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "An Approach to Abstract Multi-stage Cyberattack Data Generation for ML-Based IDS in Smart Grids",
+    "url": "https://arxiv.org/abs/2312.13737"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Investigation of Multi-stage Attack and Defense Simulation for Data Synthesis",
+    "url": "https://arxiv.org/abs/2312.13697"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Hierarchical Security Events Correlation Model for Real-time Cyber Threat Detection and Response",
+    "url": "https://arxiv.org/abs/2312.01219"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Applying Large Language Models to Power Systems: Potential Security Threats",
+    "url": "https://arxiv.org/abs/2311.13361"
+  },
+  {
+    "tags": ["Threats", "Cybersecurity"],
+    "title": "Identity Prove Limited Information Governance Policy against cyber security persistent threats",
+    "url": "https://arxiv.org/abs/2310.10654"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A New Security Threat in MCUs -- SoC-wide timing side channels and how to find them",
+    "url": "https://arxiv.org/abs/2309.12925"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Privacy and Security in Ubiquitous Integrated Sensing and Communication: Threats, Challenges and Future Directions",
+    "url": "https://arxiv.org/abs/2308.00253"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Survey of Software-Defined Smart Grid Networks: Security Threats and Defense Techniques",
+    "url": "https://arxiv.org/abs/2306.14697"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Survey of Security in UAVs and FANETs: Issues, Threats, Analysis of Attacks, and Solutions",
+    "url": "https://arxiv.org/abs/2306.14281"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "SoK: Decoding the Super App Enigma: The Security Mechanisms, Threats, and Trade-offs in OS-alike Apps",
+    "url": "https://arxiv.org/abs/2306.07495"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Spear or Shield: Leveraging Generative AI to Tackle Security Threats of Intelligent Network Services",
+    "url": "https://arxiv.org/abs/2306.02384"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Securing Distributed SGD against Gradient Leakage Threats",
+    "url": "https://arxiv.org/abs/2305.06473"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Cyber Security in Smart Manufacturing (Threats, Landscapes Challenges)",
+    "url": "https://arxiv.org/abs/2304.10180"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Advanced Security Threat Modelling for Blockchain-Based FinTech Applications",
+    "url": "https://arxiv.org/abs/2304.06725"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Life cycle models and security threats to a microcircuit during its development and operation",
+    "url": "https://arxiv.org/abs/2301.12740"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "BLE Protocol in IoT Devices and Smart Wearable Devices: Security and Privacy Threats",
+    "url": "https://arxiv.org/abs/2301.03852"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "An SLR on Edge Computing Security and possible threat protection",
+    "url": "https://arxiv.org/abs/2212.04563"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Artificial Dust Based Attack Modelling: A Threat to the Security of Next Generation WCN",
+    "url": "https://arxiv.org/abs/2207.06683"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Cyber Security Threat Awareness Framework for High School Students in Qatar",
+    "url": "https://arxiv.org/abs/2207.00820"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Zero Day Threat Detection Using Graph and Flow Based Security Telemetry",
+    "url": "https://arxiv.org/abs/2205.02298"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Security Aspects of Quantum Machine Learning: Opportunities, Threats and Defenses",
+    "url": "https://arxiv.org/abs/2204.03625"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Machine Learning-Enabled IoT Security: Open Issues and Challenges Under Advanced Persistent Threats",
+    "url": "https://arxiv.org/abs/2204.03433"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "The Art of Manipulation: Threat of Multi-Step Manipulative Attacks in Security Games",
+    "url": "https://arxiv.org/abs/2202.13424"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Don't be a Victim During a Pandemic! Analysing Security and Privacy Threats in Twitter During COVID-19",
+    "url": "https://arxiv.org/abs/2202.10543"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "STRIDE-based Cyber Security Threat Modeling for IoT-enabled Precision Agriculture Systems",
+    "url": "https://arxiv.org/abs/2201.09493"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Security for Machine Learning-based Software Systems: a survey of threats, practices and challenges",
+    "url": "https://arxiv.org/abs/2201.04736"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Satellite-Based Communications Security: A Survey of Threats, Solutions, and Research Challenges",
+    "url": "https://arxiv.org/abs/2112.11324"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Security Threats and Cellular Network Procedures for Unmanned Aircraft Systems",
+    "url": "https://arxiv.org/abs/2111.13172"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Threat Modeling and Security Analysis of Containers: A Survey",
+    "url": "https://arxiv.org/abs/2111.11475"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Emerging AI Security Threats for Autonomous Cars -- Case Studies",
+    "url": "https://arxiv.org/abs/2109.04865"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Journalistic Voting System's Effects on Election Security Threats and Gerrymandering",
+    "url": "https://arxiv.org/abs/2110.04642"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Towards Secure Wireless Mesh Networks for UAV Swarm Connectivity: Current Threats, Research, and Opportunities",
+    "url": "https://arxiv.org/abs/2108.13154"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Multi-Stage Threat Modelling and Security Monitoring in 5GCN",
+    "url": "https://arxiv.org/abs/2108.11207"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "An Empirical Assessment of Endpoint Security Systems Against Advanced Persistent Threats Attack Vectors",
+    "url": "https://arxiv.org/abs/2108.10422"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Generating Cyber Threat Intelligence to Discover Potential Security Threats Using Classification and Topic Modeling",
+    "url": "https://arxiv.org/abs/2108.06862"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Investigating Threats Posed by SMS Origin Spoofing to IoT Devices",
+    "url": "https://arxiv.org/abs/2310.11052"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Named Entity Recognition for Monitoring Plant Health Threats in Tweets: a ChouBERT Approach",
+    "url": "https://arxiv.org/abs/2310.12522"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "MAGIC: Detecting Advanced Persistent Threats via Masked Graph Representation Learning",
+    "url": "https://arxiv.org/abs/2310.09831"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Invisible Threats: Backdoor Attack in OCR Systems",
+    "url": "https://arxiv.org/abs/2310.08259"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Monsters in the Dark: Sanitizing Hidden Threats with Diffusion Models",
+    "url": "https://arxiv.org/abs/2310.06951"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "LLMs Killed the Script Kiddie: How Agents Supported by Large Language Models Change the Landscape of Network Threat Testing",
+    "url": "https://arxiv.org/abs/2310.06936"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Decoding the Threat Landscape : ChatGPT, FraudGPT, and WormGPT in Social Engineering Attacks",
+    "url": "https://arxiv.org/abs/2310.05595"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Threat Trekker: An Approach to Cyber Threat Hunting",
+    "url": "https://arxiv.org/abs/2310.04197"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Threat Modelling in Internet of Things (IoT) Environment Using Dynamic Attack Graphs",
+    "url": "https://arxiv.org/abs/2310.01689"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "AIR: Threats of Adversarial Attacks on Deep Learning-Based Information Recovery",
+    "url": "https://arxiv.org/abs/2309.16706"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Study on Tiny YOLO for Resource Constrained Xray Threat Detection",
+    "url": "https://arxiv.org/abs/2309.15601"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Fed-LSAE: Thwarting Poisoning Attacks against Federated Cyber Threat Detection System via Autoencoder-based Latent Space Inspection",
+    "url": "https://arxiv.org/abs/2309.11053"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "XFedHunter: An Explainable Federated Learning Framework for Advanced Persistent Threat Detection in SDN",
+    "url": "https://arxiv.org/abs/2309.08485"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Automated CVE Analysis for Threat Prioritization and Impact Prediction",
+    "url": "https://arxiv.org/abs/2309.03040"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Optimal Repair Strategy Against Advanced Persistent Threats Under Time-Varying Networks",
+    "url": "https://arxiv.org/abs/2309.00251"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Use of LLMs for Illicit Purposes: Threats, Prevention Measures, and Vulnerabilities",
+    "url": "https://arxiv.org/abs/2308.12833"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Up-to-date Threat Modelling for Soft Privacy on Smart Cars",
+    "url": "https://arxiv.org/abs/2308.11273"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "The Looming Threat of Fake and LLM-generated LinkedIn Profiles: Challenges and Opportunities for Detection and Prevention",
+    "url": "https://arxiv.org/abs/2307.11864"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Mitigating Communications Threats in Decentralized Federated Learning through Moving Target Defense",
+    "url": "https://arxiv.org/abs/2307.11730"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Machine Learning based Empirical Evaluation of Cyber Threat Actors High Level Attack Patterns over Low level Attack Patterns in Attributing Attacks",
+    "url": "https://arxiv.org/abs/2307.10252"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Understanding Cyber Threats Against the Universities, Colleges, and Schools",
+    "url": "https://arxiv.org/abs/2307.07755"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Are Large Language Models a Threat to Digital Public Goods? Evidence from Activity on Stack Overflow",
+    "url": "https://arxiv.org/abs/2307.07367"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Revolutionizing Cyber Threat Detection with Large Language Models",
+    "url": "https://arxiv.org/abs/2306.14263"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "ICAR, a categorical framework to connect vulnerability, threat and asset managements",
+    "url": "https://arxiv.org/abs/2306.12240"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "The Manipulation Problem: Conversational AI as a Threat to Epistemic Agency",
+    "url": "https://arxiv.org/abs/2306.11748"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Survey on Cross-Architectural IoT Malware Threat Hunting",
+    "url": "https://arxiv.org/abs/2306.07989"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Few-shot Multi-domain Knowledge Rearming for Context-aware Defence against Advanced Persistent Threats",
+    "url": "https://arxiv.org/abs/2306.07685"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "A Threat Model for Soft Privacy on Smart Cars",
+    "url": "https://arxiv.org/abs/2306.04222"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Discussion Paper: The Threat of Real Time Deepfakes",
+    "url": "https://arxiv.org/abs/2306.02487"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "An Insider Threat Mitigation Framework Using Attribute Based Access Control",
+    "url": "https://arxiv.org/abs/2305.19477"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "IoT Threat Detection Testbed Using Generative Adversarial Networks",
+    "url": "https://arxiv.org/abs/2305.15191"
+  },
+  {
+    "tags": ["Threats"],
+    "title": "Taxonomy of AISecOps Threat Modeling for Cloud Based Medical Chatbots",
+    "url": "https://arxiv.org/abs/2305.11189"
+  },
+
+
+  {
     "folder": "data/other_papers"
   },
+    {
+    "folder": "data/special_smart_home"
+  },
+
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Cybersecurity: Past, Present and Future",
+        "url": "https://arxiv.org/abs/2207.01227"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "The Role of Machine Learning in Cybersecurity",
+        "url": "https://arxiv.org/abs/2206.09707"
+  },
+  
+  {
+    "tags": [
+          "Computers and Society"],
+        "title": "Towards a Contemporary Definition of Cybersecurity",
+        "url": "https://arxiv.org/abs/2302.02274"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Cybersecurity threats in FinTech: A systematic review",
+        "url": "https://arxiv.org/abs/2312.01752"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Intell-dragonfly: A Cybersecurity Attack Surface Generation Engine Based On Artificial Intelligence-generated Content Technology",
+        "url": "https://arxiv.org/abs/2311.00240"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security "],
+        "title": "Artificial Intelligence for Cybersecurity: Threats, Attacks and Mitigation",
+        "url": " https://arxiv.org/abs/2209.13454"
+  },
+  
+  {
+    "tags": [
+          "Artificial Intelligence "],
+        "title": "Using Large Language Models for Cybersecurity Capture-The-Flag Challenges and Certification Questions",
+        "url": "https://arxiv.org/abs/2308.10443"
+  },
+  
+  {
+    "tags": [
+          "Human-Computer Interaction "],
+        "title": "A Novel Approach to the Behavioral Aspects of Cybersecurity",
+        "url": "https://arxiv.org/abs/2303.13621"
+  },
+  
+  {
+    "tags": [
+          "Robotics"],
+        "title": "ExploitFlow, cyber security exploitation routes for Game Theory and AI research in robotics",
+        "url": "https://arxiv.org/abs/2308.02152"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Defending against cybersecurity threats to the payments and banking system",
+        "url": "https://arxiv.org/abs/2212.12307"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Cybersecurity of AI medical devices: risks, legislation, and challenges",
+        "url": "https://arxiv.org/abs/2303.03140"
+  },
+  
+  {
+    "tags": [
+          "Human-Computer Interaction"],
+        "title": "The efficacy potential of cyber security advice as presented in news articles",
+        "url": "https://arxiv.org/abs/2304.05309"
+  },
+  
+  {
+    "tags": [
+          "Computers and Society"],
+        "title": "The Opportunity to Regulate Cybersecurity in the EU (and the World): Recommendations for the Cybersecurity Resilience Act",
+        "url": "https://arxiv.org/abs/2205.13196"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "XAI for Cybersecurity: State of the Art, Challenges, Open Issues and Future Directions",
+        "url": "https://arxiv.org/abs/2206.03585"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Research Communities in cyber security: A Comprehensive Literature Review",
+        "url": "https://arxiv.org/abs/2104.13196"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Security and Privacy on Blockchain",
+        "url": "https://arxiv.org/abs/1903.07602 "
+  },
+  
+  {
+    "tags": [
+          "Distributed, Parallel, and Cluster Computing"],
+        "title": "Distributed, Parallel, and Cluster Computing",
+        "url": "https://arxiv.org/abs/2005.14282"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Consensus in the Age of Blockchains",
+        "url": "https://arxiv.org/abs/1711.03936 "
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Quantum-resistance in blockchain networks",
+        "url": "https://arxiv.org/abs/2106.06640"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Efficient Public Blockchain Client for Lightweight Users",
+        "url": "https://arxiv.org/abs/1811.04900"
+  },
+  
+  {
+    "tags": [
+          "Databases"],
+        "title": "Database Perspectives on Blockchains",
+        "url": "https://arxiv.org/abs/1803.06015"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Security and Privacy for Healthcare Blockchains",
+        "url": "https://arxiv.org/abs/2106.06136"
+  },
+  
+  {
+    "tags": [
+          "Programming Languages"],
+        "title": "Simplicity: A New Language for Blockchains",
+        "url": "https://arxiv.org/abs/1711.03028"
+  },
+  
+  {
+    "tags": [
+          "General Finance"],
+        "title": "The Blockchain: A Gentle Four Page Introduction",
+        "url": "https://arxiv.org/abs/1612.06244"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Blockchain Intelligence: When Blockchain Meets Artificial Intelligence",
+        "url": "https://arxiv.org/abs/1912.06485"
+  },
+  
+  {
+    "tags": [
+          "Computers and Society"],
+        "title": "Blockchain and its Potential in Education",
+        "url": "https://arxiv.org/abs/1903.09300"
+  },
+  
+  {
+    "tags": [
+          "Distributed, Parallel, and Cluster Computing"],
+        "title": "Enabling Enterprise Blockchain Interoperability with Trusted Data Transfer (industry track)",
+        "url": "https://arxiv.org/abs/1911.01064"
+  },
+  
+  {
+    "tags": [
+          "Cryptography and Security"],
+        "title": "Blockchain: Emerging Applications and Use Cases",
+        "url": "https://arxiv.org/abs/1904.12247"
+  },
+  
+  {
+    "tags": [
+          "Artificial Intelligence"],
+        "title": "An Overview of Blockchain Integration with Robotics and Artificial Intelligence",
+        "url": "https://arxiv.org/abs/1810.00329"
+  },
+  
+  {
+    "tags": [
+          "Computers and Society"],
+        "title": "Blockchain: A Graph Primer",
+        "url": "https://arxiv.org/abs/1708.08749"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Threats, Vulnerabilities, and Controls of Machine Learning Based Systems: A Survey and Taxonomy",
+    "url": "https://arxiv.org/abs/2301.07474"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Artificial Intelligence for Cybersecurity: Threats, Attacks and Mitigation",
+    "url": "https://arxiv.org/abs/2209.13454"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Unraveling Attacks in Machine Learning-based IoT Ecosystems: A Survey and the Open Libraries Behind Them",
+    "url": "https://arxiv.org/abs/2401.11723v1"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey",
+    "url": "https://arxiv.org/abs/1801.00553"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "The Ethics of Interaction: Mitigating Security Threats in LLMs",
+    "url": "https://arxiv.org/abs/2401.12273"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Security Threats and Research Challenges of IoT-A Review",
+    "url": "https://arxiv.org/abs/2101.03022v1"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey",
+    "url": "https://arxiv.org/pdf/1801.00553.pdf"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "A Review of Quantum Cybersecurity: Threats, Risks and Opportunities",
+    "url": "https://arxiv.org/abs/2207.03534"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Privacy Threats in Stable Diffusion Models",
+    "url": "https://arxiv.org/abs/2311.09355"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Emerging Threats in Deep Learning-Based Autonomous Driving: A Comprehensive Survey",
+    "url": "https://arxiv.org/abs/2210.11237"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "threaTrace: Detecting and Tracing Host-based Threats in Node Level Through Provenance Graph Learning",
+    "url": "https://arxiv.org/abs/2111.04333"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Decoding the Threat Landscape : ChatGPT, FraudGPT, and WormGPT in Social Engineering Attacks",
+    "url": "https://arxiv.org/abs/2310.05595"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Systematic Mapping Study On Security Threats in Cloud Computing",
+    "url": "https://arxiv.org/abs/1303.6782"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "A System for Efficiently Hunting for Cyber Threats in Computer Systems Using Threat Intelligence",
+    "url": "https://arxiv.org/abs/2101.06761v2"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Evidence Profiles for Validity Threats in Program Comprehension Experiments",
+    "url": "https://arxiv.org/abs/2301.10563"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "I Know What You Imported Last Summer: A study of security threats in thePython ecosystem",
+    "url": "https://arxiv.org/abs/2102.06301"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Markov Game Modeling of Moving Target Defense for Strategic Detection of Threats in Cloud Networks",
+    "url": "https://arxiv.org/abs/1812.09660"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Small World with High Risks: A Study of Security Threats in the npm Ecosystem",
+    "url": "https://arxiv.org/abs/1902.09217"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Threat Detection In Self-Driving Vehicles Using Computer Vision",
+    "url": "https://arxiv.org/abs/2209.02438"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Generative AI for Cyber Threat-Hunting in 6G-enabled IoT Networks",
+    "url": "https://arxiv.org/abs/2303.11751"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "A Review of Adversarial Attacks in Computer Vision",
+    "url": "https://arxiv.org/abs/2308.07673"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "MAGIC: Detecting Advanced Persistent Threats via Masked Graph Representation Learning",
+    "url": "https://arxiv.org/abs/2310.09831"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "To Make a Robot Secure: An Experimental Analysis of Cyber Security Threats Against Teleoperated Surgical Robots",
+    "url": "https://arxiv.org/abs/1504.04339"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Privacy in the Internet of Things: Threats and Challenges",
+    "url": "https://arxiv.org/abs/1505.07683"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Adversarial Attacks and Defenses in Large Language Models: Old and New Threats",
+    "url": "https://arxiv.org/abs/2310.19737"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Generating Cyber Threat Intelligence to Discover Potential Security Threats Using Classification and Topic Modeling",
+    "url": "https://arxiv.org/abs/2108.06862v1"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Early Warnings of Cyber Threats in Online Discussions",
+    "url": "https://arxiv.org/abs/1801.09781"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Cybersecurity Threats in Connected and Automated Vehicles based Federated Learning Systems",
+    "url": "https://arxiv.org/abs/2102.13256"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "The Threat of Offensive AI to Organizations",
+    "url": "https://arxiv.org/abs/2106.15764"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Cyber threats in social networking websites",
+    "url": "https://arxiv.org/abs/1202.2420"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Cybersecurity threats in FinTech: A systematic review",
+    "url": "https://arxiv.org/abs/2312.01752"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "ChatGPT: Applications, Opportunities, and Threats",
+    "url": "https://arxiv.org/abs/2304.09103v1"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Use of LLMs for Illicit Purposes: Threats, Prevention Measures, and Vulnerabilities",
+    "url": "https://arxiv.org/abs/2308.12833"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Cross-App Interference Threats in Smart Homes: Categorization, Detection and Handling",
+    "url": "https://arxiv.org/abs/1808.02125v3"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "IoTScanner: Detecting and Classifying Privacy Threats in IoT Neighborhoods",
+    "url": "https://arxiv.org/abs/1701.05007"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Thinking beyond chatbots' threat to education: Visualizations to elucidate the writing and coding process",
+    "url": "https://arxiv.org/abs/2304.14342"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "The New Frontier of Cybersecurity: Emerging Threats and Innovations",
+    "url": "https://arxiv.org/abs/2311.02630"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Gradient Masking and the Underestimated Robustness Threats of Differential Privacy in Deep Learning",
+    "url": "https://arxiv.org/abs/2105.07985"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Review on the Security Threats of Internet of Things",
+    "url": "https://arxiv.org/abs/2101.05614"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "PDF-Malware: An Overview on Threats, Detection and Evasion Attacks",
+    "url": "https://arxiv.org/abs/2107.12873"
+  },
+  
+  {
+    "tags": [
+    "Distributed, Parallel, and Cluster Computing"],
+    "title": "A Digital Twin-based Smart Home: A Proof of Concept Study",
+    "url": "https://arxiv.org/abs/2212.14238"
+  },
+  
+  {
+    "tags": [
+    "Human-Computer Interaction"],
+    "title": "Smart Home Goal Feature Model -- A guide to support Smart Homes for Ageing in Place",
+    "url": "https://arxiv.org/abs/2311.09248"
+  },
+  
+  {
+    "tags": [
+    "Distributed, Parallel, and Cluster Computing"],
+    "title": "The digital harms of smart home devices: A systematic literature review",
+    "url": "https://arxiv.org/ftp/arxiv/papers/2209/2209.05458.pdf"
+  },
+  
+  {
+    "tags": [
+    "Distributed, Parallel, and Cluster Computing"],
+    "title": "SMART HOME ENVIRONMENT MODELLED WITH A MULTI-AGENT SYSTEM",
+    "url": "https://arxiv.org/ftp/arxiv/papers/2304/2304.08494.pdf"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "A Smart Home System based on Internet of Things",
+    "url": "https://arxiv.org/abs/2009.05328"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "Safe and Secure Smart Home",
+    "url": "https://arxiv.org/ftp/arxiv/papers/2304/2304.11827.pdf"
+  },
+  
+  {
+    "tags": [
+    "Cryptography and Security"],
+    "title": "IoT Inspector: Crowdsourcing Labeled Network Traffic from Smart Home Devices at Scale",
+    "url": "https://arxiv.org/abs/1909.09848"
+  },
+  
+  {
+    "tags": [
+    "Artificial Intelligence"],
+    "title": "Towards Personalization of User Preferences in Partially Observable Smart Home Environments",
+    "url": "https://arxiv.org/abs/2112.00971"
+  },	
+  
+  {
+    "tags": [
+    "Human-Computer Interaction"],
+    "title": "Framework for an Intelligent Affect Aware Smart Home Environment for Elderly People",
+    "url": "https://arxiv.org/abs/2106.15599"
+  },
+  
+  {
+    "tags": [
+    "Human-Computer Interaction"],
+    "title": "Users Approach on Providing Feedback for Smart Home Devices Phase I",
+    "url": "https://arxiv.org/abs/2312.11817"
+  },
+
+
+  {
+    "folder": "data/other_papers"
+  },
+  
   {
     "folder": "data/special_smart_home"
   }
