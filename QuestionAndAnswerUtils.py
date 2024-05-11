@@ -544,6 +544,19 @@ class QuestionAndAnsweringCustomLlama3():
     def hasHistoryMessages(self) -> bool:
         return len(self.memory.chat_memory.messages) > 0
 
+    # Remove all special tokenizer's inputs
+    def getlastanswerclean_llama3(self, inp: str) -> str:
+        assistant_resp_header = "assistant<|end_header_id|>"
+        pos = inp.rfind(assistant_resp_header)
+        if pos == -1:
+            return inp
+
+        inp = inp[pos + len(assistant_resp_header):]
+
+        for spec_token in self.tokenizer.all_special_tokens:
+            inp = inp.replace(spec_token, '')
+        return inp
+
     def ask_question(self, question_original: str) -> Union[BaseStreamer, None]:
         chainToUse, question, params = self.getConversationChainByQuestion(question_original)
 
@@ -582,7 +595,8 @@ class QuestionAndAnsweringCustomLlama3():
                     chainToUse.invoke({"input": question,
                                        "question": question,
                                        "chat_history" : chat_history_tuples})
-            return res
+            answer = self.getlastanswerclean_llama3(res['answer'])
+            return answer
 
     def ask_question_and_streamtoconsole(self, question: str) -> str:
         if self.streamingOnAnotherThread:
