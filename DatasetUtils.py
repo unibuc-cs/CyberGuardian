@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 import pprint
 import pdb
-
+from tqdm import tqdm
 from etlUtils import etl_markdown, etl_pdfs, etl_shared, etl_videos
 
 import docstore
@@ -19,8 +19,19 @@ from utils import pretty_log
 
 pp = pprint.PrettyPrinter(indent=2)
 
+import logging
+# Create and configure logger
+logging.basicConfig(filename="newfile.log",
+                    format='%(asctime)s %(message)s',
+                    filemode='w')
 
-def prep_documents_for_vector_storage(documents):
+# Creating an object
+logger = logging.getLogger("main")
+
+# Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
+
+def prep_documents_for_vector_storage(documents, num_documents):
     """Prepare documents from document store for embedding and vector storage.
 
     Documents are split into chunks so that they can be used with sourced Q&A.
@@ -34,20 +45,27 @@ def prep_documents_for_vector_storage(documents):
         chunk_size=500, chunk_overlap=100, allowed_special="all"
     )
     ids, texts, metadatas = [], [], []
-    for document in documents:
+    counter = 0
+    for document in documents: #enumerate(tqdm(documents, total=num_documents, desc="Preparing documents for storage",leave=True, position=0)):
+        if counter % 100 == 0:
+            pretty_log(f"Processed {counter}/{num_documents}")
+
         text, metadata = document["text"], document["metadata"]
         doc_texts = text_splitter.split_text(text)
         doc_metadatas = [metadata] * len(doc_texts)
         ids += [metadata.get("sha256")] * len(doc_texts)
         texts += doc_texts
         metadatas += doc_metadatas
+        counter += 1
 
     return ids, texts, metadatas
 
 
 
-# TODO: use 8 CPUs here use parallelism !!!
-def create_vector_index(collection: str = None, db: str = None):
+def create_vector_index(vectorIndexPath:str,
+                        vectorIndexName: str,
+                        collection: str = None,
+                        db: str = None):
     """Creates a vector index for a collection in the document database."""
     import docstore
 
@@ -56,25 +74,33 @@ def create_vector_index(collection: str = None, db: str = None):
     pretty_log(f"connected to database {db.name}")
 
     collection = docstore.get_collection(collection, db)
-    pretty_log(f"collecting documents from {collection.name}")
+    num_documents = collection.count_documents({})
+    pretty_log(f"collecting documents from {collection.name}. There are {num_documents} documents")
     docs = docstore.get_documents(collection, db)
 
     pretty_log("splitting into bite-size chunks")
-    ids, texts, metadatas = prep_documents_for_vector_storage(docs)
+    ids, texts, metadatas = prep_documents_for_vector_storage(docs, num_documents)
 
-    pretty_log(f"sending to vector index {vecstore.INDEX_NAME}")
+    pretty_log(f"sending to vector index {vectorIndexName}")
     embedding_engine = vecstore.get_embedding_engine(disallowed_special=())
-    vector_index = vecstore.create_vector_index(
-        vecstore.INDEX_NAME, embedding_engine, texts, metadatas
-    )
-    vector_index.save_local(folder_path=vecstore.VECTOR_DIR, index_name=vecstore.INDEX_NAME)
-    pretty_log(f"vector index {vecstore.INDEX_NAME} created")
+    vector_index = vecstore.create_vector_index(vectorIndexPath=vectorIndexPath,
+                                                index_name=vectorIndexName,
+                                                embedding_engine=embedding_engine,
+                                                documents=texts,
+                                                metadatas=metadatas)
 
-def solve_vector_storage():
-    VECTOR_DIR = vecstore.VECTOR_DIR
-    vector_storage = "vector-vol"
+    vector_index.save_local(folder_path=vectorIndexPath, index_name=vectorIndexName)
+    pretty_log(f"vector index {vectorIndexName} created at path {vectorIndexPath}")
 
-    create_vector_index(os.environ["MONGODB_COLLECTION"], os.environ["MONGODB_DATABASE"])
+def solve_vector_storage(maindb: bool):
+    vectorPath = vecstore.VECTOR_DIR_MAIN if maindb is True else vecstore.VECTOR_DIR_RAG
+    vector_storage_name = vecstore.INDEX_NAME_MAIN if maindb else vecstore.INDEX_NAME_RAG
+    collectionToUse = os.environ["MONGODB_COLLECTION_MAIN"] if maindb else os.environ["MONGODB_COLLECTION_RAG"]
+
+    create_vector_index(vectorIndexPath=vectorPath,
+                        vectorIndexName=vector_storage_name,
+                        collection=collectionToUse,
+                        db=os.environ["MONGODB_DATABASE"])
 
 
 def drop_collection():
@@ -85,7 +111,8 @@ def create_knowledge_database(drop: bool = False,
                                 etl_pdfs: bool = False,
                                 etl_markdown: bool = False,
                                 etl_videos: bool = False,
-                                dovectorstorage: bool = True,
+                                dovectorstorage_main: bool = False,
+                                dovectorstorage_rag: bool = False,
                               demoMode: bool = False):
     if drop:
         drop_collection()
@@ -100,8 +127,11 @@ def create_knowledge_database(drop: bool = False,
         etlUtils.etl_videos.main(Path("data") / ("dataForTraining") / "videos.json", demoMode=demoMode)
 
 
-    if dovectorstorage:
-        solve_vector_storage()
+    if dovectorstorage_main:
+        solve_vector_storage(maindb=True)
+
+    if dovectorstorage_rag:
+        solve_vector_storage(maindb=False) # RAG content custom for a particular project example
 
 def __main__():
     parser = argparse.ArgumentParser(description="Dataset building and cleaning utils")
@@ -109,7 +139,8 @@ def __main__():
     parser.add_argument("--etl_pdfs", type=int, default=False)
     parser.add_argument("--etl_markdown", type=int, default=False)
     parser.add_argument("--etl_videos", type=int, default=False)
-    parser.add_argument("--dovectorstorage", type=int, default=False)
+    parser.add_argument("--dovectorstorage_main", type=int, default=False) # CREATES WHOLE DB , the MAIN one
+    parser.add_argument("--dovectorstorage_rag", type=int, default=False) # CREATES just the RAG db
     parser.add_argument("--demoMode", type=int, default=False)
 
     args = parser.parse_args()
@@ -118,7 +149,8 @@ def __main__():
                               etl_pdfs=bool(int(args.etl_pdfs)),
                               etl_markdown=bool(int(args.etl_markdown)),
                               etl_videos=bool(int(args.etl_videos)),
-                            dovectorstorage=bool(int(args.dovectorstorage)),
+                            dovectorstorage_main=bool(int(args.dovectorstorage_main)),
+                              dovectorstorage_rag=bool(int(args.dovectorstorage_rag)),
                               demoMode=bool(int(args.demoMode)))
 
 if __name__ == "__main__":

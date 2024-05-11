@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="DatasetUtils" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <configuration default="false" name="main_qa" type="PythonConfigurationType" factoryName="Python">
     <module name="dynabicChatbot" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
@@ -9,20 +9,13 @@
     </envs>
     <option name="SDK_HOME" value="" />
     <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
-    <option name="WORKING_DIRECTORY" value="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <option name="WORKING_DIRECTORY" value="" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-    <PathMappingSettings>
-      <option name="pathMappings">
-        <list>
-          <mapping local-root="$PROJECT_DIR$/.." remote-root="/home/ciprian" />
-        </list>
-      </option>
-    </PathMappingSettings>
-    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DatasetUtils.py" />
-    <option name="PARAMETERS" value="--drop_existing 0 --etl_pdfs 0 --etl_markdown 0 --etl_videos 0 --dovectorstorage_main 0 --dovectorstorage_rag 1 --demoMode 0" />
+    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QuestionAndAnswerUtils.py" />
+    <option name="PARAMETERS" value="" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="false" />

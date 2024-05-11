@@ -1,3 +1,5 @@
+import logging
+
 import etlUtils.etl_shared
 from tqdm.auto import tqdm
 import os
@@ -20,6 +22,10 @@ temp_translated_videos = {}
 thread_local = threading.local()
 
 SubsExtractResults = namedtuple('SubsExtractResults', ['data', 'failed_videos', 'translated_videos'])
+
+
+loggermain = logging.getLogger("main")
+
 
 def add_video_to_local_db(documents_json):
     import json
@@ -90,10 +96,17 @@ def clean_videos():
         db_videos_clean_file.writelines(db_videos_clean_data)
 
 
+all_subtitles = []
+
 #@stub.local_entrypoint()
 def main(json_path="data/videos.json", collection=None, db=None, demoMode=False):
+    global all_subtitles
     global temp_failed_videos
     temp_failed_videos = {}
+
+    f = open(os.environ["VIDEOS_LOCAL_JSON_DB"], 'r+')
+    f.truncate(0)
+    f.close()
 
     global temp_translated_videos
     temp_translated_videos = {}
@@ -109,12 +122,43 @@ def main(json_path="data/videos.json", collection=None, db=None, demoMode=False)
     # all_papers_texts = map(extract_pdf, paper_data)
     all_subtitles = []
 
+    USE_PARALLEL = etlUtils.etl_shared.PARALLEL_USE
+
     def add_subtitle(myvideo_subs):
+        global all_subtitles
         if myvideo_subs is None or len(myvideo_subs) == 0:
             return
         all_subtitles.append(myvideo_subs)
 
-    if etlUtils.etl_shared.PARALLEL_USE:
+    # Write currently collected subtitles to the datastore
+    def write_chunks_to_database(ending_index: int, chunk_index: int):
+        global all_subtitles
+        if len(all_subtitles) > 0:
+            loggermain.debug(f"### Adding subtitles to database ending index: {ending_index} and chunk index: {chunk_index}")
+        else:
+            loggermain.debug(f"### NO subtitles to database ending index: {ending_index} and chunk index: {chunk_index}")
+        documents = etlUtils.etl_shared.unchunk(all_subtitles)
+
+        num_chunks = 10
+        chunked_documents = etlUtils.etl_shared.chunk_into(documents, num_chunks)
+        res = []
+        jsonlines = []
+        for myvideodoc in tqdm(chunked_documents, total=(num_chunks),
+                               desc="Sending chuncks of videos to mongdb and local json"):
+            r = etlUtils.etl_shared.add_to_mongo_db(myvideodoc)
+            res.append(r)
+
+            res_json = add_video_to_local_db(myvideodoc)
+            jsonlines.append(res_json)
+
+        jsonlines = etlUtils.etl_shared.unchunk(jsonlines)
+
+        with open(os.environ["VIDEOS_LOCAL_JSON_DB"], 'a') as the_file:
+            the_file.writelines(jsonlines)
+
+        all_subtitles = []
+
+    if USE_PARALLEL:
         from multiprocessing import Pool, TimeoutError
 
         n_processes = etlUtils.etl_shared.PARALLEL_NUM_PROCESSES
@@ -134,8 +178,13 @@ def main(json_path="data/videos.json", collection=None, db=None, demoMode=False)
 
 
     else:
+        # Continuous writing in small chuncks
         #START_DEBUG_INDEX = 5750
-        for videoidx, myvideo in enumerate(tqdm(video_infos, total=len(video_infos), desc="Sequential extract subtitles", leave=True, position=0)):
+        num_videos = len(video_infos)
+        num_chunks = 500
+        chunk_counter = 0
+        chunk_size = num_videos // num_chunks
+        for videoidx, myvideo in enumerate(tqdm(video_infos, total=num_videos, desc="Sequential extract subtitles", leave=True, position=0)):
             #if videoidx < START_DEBUG_INDEX:
             #    continue
 
@@ -144,6 +193,10 @@ def main(json_path="data/videos.json", collection=None, db=None, demoMode=False)
             if results is None or results == []:
                 continue
             add_subtitle(results.data)
+
+            if videoidx > 0 and videoidx % chunk_size == 0 or videoidx == num_videos - 1:
+                write_chunks_to_database(ending_index=videoidx, chunk_index=chunk_counter)
+                chunk_counter +=1
 
 
     # Export a json with all failed ids and reasons
@@ -156,25 +209,6 @@ def main(json_path="data/videos.json", collection=None, db=None, demoMode=False)
         for transKey, transDetails in temp_translated_videos.items():
             jsonlinetoWrite = json.dumps({"id": transKey, "reason": transDetails})
             the_translated_file.write(jsonlinetoWrite + "\n")
-
-
-    documents = etlUtils.etl_shared.unchunk(all_subtitles)
-
-    num_chunks = 10
-    chunked_documents = etlUtils.etl_shared.chunk_into(documents, num_chunks)
-    res = []
-    jsonlines = []
-    for myvideodoc in tqdm(chunked_documents, total=(num_chunks), desc="Sending chuncks of videos to mongdb and local json"):
-        r = etlUtils.etl_shared.add_to_mongo_db(myvideodoc)
-        res.append(r)
-
-        res_json = add_video_to_local_db(myvideodoc)
-        jsonlines.append(res_json)
-
-    jsonlines = etlUtils.etl_shared.unchunk(jsonlines)
-
-    with open(os.environ["VIDEOS_LOCAL_JSON_DB"], 'w') as the_file:
-        the_file.writelines(jsonlines)
 
     clean_videos()
 
@@ -248,7 +282,7 @@ def get_chapters(video_id):
 
     try:
         fullUrl = base_url + request_path + f"?part={params['part']}&id={params['id']}"
-        response = requests.get(fullUrl, timeout=10) #requests.get(base_url + request_path, params=params)
+        response = requests.get(fullUrl, timeout=25) #requests.get(base_url + request_path, params=params)
         response.raise_for_status()
     except Exception as e:
         print(e)

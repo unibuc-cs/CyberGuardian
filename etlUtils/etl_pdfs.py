@@ -1,7 +1,7 @@
 
 import etlUtils.etl_shared
 import json
-from tqdm import tqdm
+from tqdm import tqdm, trange
 import os
 
 def add_pdf_to_local_db(documents_json):
@@ -54,18 +54,27 @@ def transform_papers_to_json(papers_path, demoMode=False):
         for paper_text in results:
             all_papers_texts.append(paper_text)
     else:
+        DEBUG_ID = None #1450
+        papers_count = len(paper_data)
+        for paper_idx in trange(papers_count, desc ="Serial getting papers URLs", total=papers_count, position=0, leave=True):
+            if DEBUG_ID is not None and paper_idx < DEBUG_ID:
+                continue
 
-        for pdf_i in tqdm(paper_data, "Serial getting papers URLs", total=len(paper_data)):
+            pdf_i = paper_data[paper_idx]
             get_pdf_url(pdf_i)
 
         # turn the PDFs into JSON documents
-        for paper in tqdm(paper_data, desc="Serial extraction of papers content: "):
+        for paper_idx in trange(papers_count, desc="Serial extraction of papers content: ", position=0, leave=True):
+            if DEBUG_ID is not None and paper_idx < DEBUG_ID:
+                continue
+
+            paper = paper_data[paper_idx]
             paper_text = extract_pdf(paper)
             if paper_text is None or len(paper_text) == 0:
                 continue
             all_papers_texts.append(paper_text)
 
-
+        #print(f"####### THIS IS THE LIST OF INVALID PAPERS\n\n {all_papers_texts}")
     documents = etlUtils.etl_shared.unchunk(all_papers_texts)
 
     # Test out debug
@@ -102,48 +111,64 @@ def transform_papers_to_json(papers_path, demoMode=False):
     pp.pprint(result)
     """
 
+all_invalid_urls = {}
 
 # Extracts the text from a PDF and adds metadata.
 def extract_pdf(paper_data):
     import logging
+    loggermain = logging.getLogger("main")
     import arxiv
     from langchain_community.document_loaders import PyPDFLoader, PyPDFDirectoryLoader
 
 
-    #### DEBUG ONLY !!!
+    #### DEBUG ONLY FOR a specific problematic paper id!!!
+    """
     print(paper_data["url"])
     if 'url' in paper_data and ("2311.16062v1" not in paper_data['url']):
         return []
-
+    """
 
     pdf_url = None
     if "folder" in paper_data:
+        loggermain.debug("Getting URL: {}".format("folder"))
+
         loader = PyPDFDirectoryLoader(paper_data["folder"])
         #docs = loader.load_and_split()
     elif "singlepdf" in paper_data:
+        loggermain.debug("Getting  {}".format("singlepdf"))
+
         loader = PyPDFLoader(paper_data['singlepdf'])
     else:
         pdf_url = paper_data.get("pdf_url")
+        loggermain.debug("Getting  {}".format(pdf_url))
+
         if pdf_url is None:
             return []
 
-        logger = logging.getLogger("pypdf")
-        logger.setLevel(logging.ERROR)
+        loggerpypdf = logging.getLogger("pypdf")
+        loggerpypdf.setLevel(logging.ERROR)
 
         try:
+            loggermain.debug("Getting to  PyPDFLoader {}".format(pdf_url))
+
             loader = PyPDFLoader(pdf_url)
         except Exception as e:
-            print(e)
-            return e
+            print(f"Url: {pdf_url}. Except: {e}")
+            return []
 
     try:
+        loggermain.debug("Loading and splitting {}".format(pdf_url))
         documents = loader.load_and_split()
     except Exception as e:
-        print(e)
+        print(f"Url: {pdf_url}. Except: {e}")
         return []
 
+    # Iterating over pages of the document and keeping only good content, not unicode
+    loggermain.debug("Iterating over pages and docs from this. num {}".format(len(documents)))
     documents = [document.dict() for document in documents]
     invalid_toomuch_unicode_documents = []
+
+    loggermain.debug("Converting and checking invalid urls..")
     for document in documents:  # rename page_content to text, handle non-unicode data
         document["text"] = (
             document["page_content"].encode("utf-8", errors="replace").decode()
@@ -152,9 +177,11 @@ def extract_pdf(paper_data):
         ascii_count_on_page = len(str_to_ascii)
         unicode_count_on_page = len(document["text"])
         ration_ascii_over_unicode = float(ascii_count_on_page / unicode_count_on_page)
-        if ration_ascii_over_unicode < 0.80:
-            print(f"INVALID ASCII COUNT ON PAGE: ration:{ration_ascii_over_unicode}. ascii:{ascii_count_on_page}. Source: {document['metadata']['source']}")
+        if False and ration_ascii_over_unicode < 0.95:
+            #print(f"INVALID ASCII COUNT ON PAGE: ration:{ration_ascii_over_unicode}. ascii:{ascii_count_on_page}. Source: {document['metadata']['source']}")
             invalid_toomuch_unicode_documents.append(document)
+            all_invalid_urls.add(pdf_url)
+            loggermain.debug("Detected invalid page url {}".format(pdf_url))
         document.pop("page_content")
 
     for document in invalid_toomuch_unicode_documents:
@@ -162,7 +189,12 @@ def extract_pdf(paper_data):
 
     if pdf_url is not None:
         if "arxiv" in pdf_url:
+            loggermain.debug("extract_arxiv_id..")
             arxiv_id = extract_arxiv_id_from_url(pdf_url)
+            if arxiv_id is None:
+                return []
+
+            loggermain.debug("search_query..")
             # create an arXiV database client with a 5 second delay between requests
             client = arxiv.Client(page_size=1, delay_seconds=5, num_retries=5)
             # describe a search of arXiV's database
@@ -171,10 +203,10 @@ def extract_pdf(paper_data):
                 # execute the search with the client and get the first result
                 result = next(client.results(search_query))
             except ConnectionResetError as e:
-                print("Triggered request limit on arxiv.org, retrying", e)
+                print(f"Url: {pdf_url}. Triggered request limit on arxiv.org, retrying", {e})
                 return []
             except Exception as e:
-                print(e)
+                print(f"Url: {pdf_url}. Except: {e}")
                 return []
 
             metadata = {
@@ -187,6 +219,7 @@ def extract_pdf(paper_data):
     else:
         metadata = {"title": "notknown"}
 
+    loggermain.debug("annotate_endmatter...")
     documents = annotate_endmatter(documents)
 
     for document in documents:
@@ -199,6 +232,7 @@ def extract_pdf(paper_data):
         if title:
             document["metadata"]["full-title"] = f"{title} - p{page}"
 
+    loggermain.debug("add_metadata...")
     documents = etlUtils.etl_shared.add_metadata(documents)
 
     return documents

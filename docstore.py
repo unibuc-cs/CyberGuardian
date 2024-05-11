@@ -31,7 +31,7 @@ def query_one(query, projection=None, collection=None, db=None):
     import docstore
 
     db = db or os.environ["MONGODB_DATABASE"]
-    collection = collection or os.environ["MONGODB_COLLECTION"]
+    collection = collection or os.environ["MONGODB_COLLECTION_MAIN"]
 
     collection = docstore.get_collection(collection, db)
 
@@ -45,11 +45,11 @@ def get_collection(collection=None, db=None, client=None):
     if projsecrets.cached_collection is not None:
         return projsecrets.cached_collection
 
-    db = db or os.environ["MONGODB_DATABASE"]
+    db = db if db is not None else os.environ["MONGODB_DATABASE"]
     db = get_database(db, client)
 
 
-    collection = collection or os.environ["MONGODB_COLLECTION"]
+    collection = collection or os.environ["MONGODB_COLLECTION_MAIN"]
 
     if isinstance(collection, pymongo.collection.Collection):
         return collection
@@ -70,7 +70,7 @@ def get_database(db=None, client=None):
 
     client = client or connect()
 
-    db = db or os.environ["MONGODB_COLLECTION"]
+    db = db or os.environ["MONGODB_COLLECTION_MAIN"]
     if isinstance(db, pymongo.database.Database):
         return db
     else:
@@ -104,3 +104,22 @@ def connect(user=None, password=None, uri=None):
         projsecrets.cached_client = client # CACHE FIX
 
     return client
+
+def main():
+    connect()
+    query = '{"type":"Document"}'
+    docs = get_documents(query)
+
+    collection = get_collection()
+    query2 = '"filter": {"type":"Document"}'
+    res = collection.find({"type":"Document"})
+    res2 = collection.find({"type": {"not": {"in": ["Document"]}}})
+    #collection.count_documents(filter=query)
+
+    for doc in res:
+        b = 3
+        print(doc)
+    a = 3
+
+if __name__ == "__main__":
+    main()

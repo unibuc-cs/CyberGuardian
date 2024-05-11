@@ -7733,11 +7733,6 @@
   },
   {
     "tags": [ "Threats" ],
-    "title": "Scam Pandemic: How Attackers Exploit Public Fear through Phishing",
-    "url": "https://arxiv.org/pdf/2103.12843.pdf"
-  },
-  {
-    "tags": [ "Threats" ],
     "title": "CATBERT: CONTEXT-AWARE TINY BERT FOR DETECTING SOCIAL ENGINEERING EMAILS",
     "url": "https://arxiv.org/pdf/2010.03484.pdf"
   },
