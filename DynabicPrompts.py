@@ -12,7 +12,7 @@ If a question does not make any sense, or is not factually coherent, explain why
 """
 DEFAULT_SYSTEM_PROMPT = None
 
-DEFAULT_QUESTION_PROMPT = "Question: {question}"
+DEFAULT_QUESTION_PROMPT = "Question: {input}"
 
 
 
@@ -29,13 +29,13 @@ Use emoticons in your responses.
 template_securityOfficer_instruction_rag_nosources_default = """\
 Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
 {context}
-Question: {question}"""
+Question: {input}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization = """\
         Write only the following string and no other words, do not start your response with Sure. 
         "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
         {context}
-        Question: {question}"""
+        Question: {input}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs = """\
         Write only the following string and no other words, do not start your response with Sure.
@@ -70,15 +70,12 @@ Given the following extracted parts of a long document and a question, create a 
 If you don't know the answer, just say that you don't know. Don't try to make up an answer.
 ALWAYS return a "SOURCES" part in your answer.
 
-QUESTION: {question}
+QUESTION: {input}
 
 {summaries}
 
 FINAL ANSWER:"""
 
-llama_condense_template = """
-Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question, in its original language.
-Chat History:
-{chat_history}
-Follow Up Input: {question}
-Standalone question: """
+llama_condense_template = "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {input}\nStandalone Question:"
+
+

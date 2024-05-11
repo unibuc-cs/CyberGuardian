@@ -25,7 +25,7 @@ from transformers.generation.streamers import BaseStreamer
 import json
 from langchain.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain.chains import LLMChain, create_history_aware_retriever
 from langchain.memory import \
     ConversationBufferMemory  # TODO: replace with ChatMessageHistory ->> Chgeck the Prompt Engineering with Llama 2 notebook !
 from langchain.chains.conversational_retrieval.prompts import CONDENSE_QUESTION_PROMPT
@@ -358,15 +358,17 @@ class QuestionAndAnsweringCustomLlama3():
 
     def initializeQuestionAndAnswering_withRAG_andMemory(self):
         # Create the question generator chain which takes history + new question and transform to a new standalone question
-        llama_condense_prompt = PromptTemplate(template=self.templateprompt_for_standalone_question_generation,
-                                               input_variables=["chat_history", "question"])
+        self.llama_condense_prompt = PromptTemplate(template=self.templateprompt_for_standalone_question_generation,
+                                               input_variables=["chat_history", "input"])
+
+        ## TODO : maybe deprecate since not used like this ?
         self.llama_question_generator_chain = LLMChain(llm=self.default_llm,
-                                                       prompt=llama_condense_prompt,
+                                                       prompt=self.llama_condense_prompt,
                                                        verbose=self.debug)
 
         # Create the response chain based on a question and context (i.e., rag in our case)
         llama_docs_prompt_default = PromptTemplate(template=self.templateprompt_for_question_answering_default,
-                                                   input_variables=["context", "question"])
+                                                   input_variables=["context", "input"])
         self.llama_doc_chain = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                           prompt=llama_docs_prompt_default,
                                                           document_variable_name="context", verbose=self.debug)
@@ -374,7 +376,7 @@ class QuestionAndAnsweringCustomLlama3():
         ##################### FUNCTION DOC_CHAIN STUFF ####################
         llama_docs_prompt_funccall_resourceUtilization = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_resourceUtilization,
-            input_variables=["context", "question"])
+            input_variables=["context", "input"])
         self.llama_doc_chain_funccalls_resourceUtilization = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                         prompt=llama_docs_prompt_funccall_resourceUtilization,
                                                                                         document_variable_name="context",
@@ -382,7 +384,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         llama_docs_prompt_funccall_devicesByIPLogs = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_devicesByIPLogs,
-            input_variables=["context", "question"])
+            input_variables=["context", "input"])
         self.llama_doc_chain_funccalls_devicesByIPLogs = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                     prompt=llama_docs_prompt_funccall_devicesByIPLogs,
                                                                                     document_variable_name="context",
@@ -390,7 +392,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         llama_docs_prompt_funccall_topDemandingIPS = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_topDemandingIPS,
-            input_variables=["context", "question", "param1", "param2"])
+            input_variables=["context", "input", "param1", "param2"])
         self.llama_doc_chain_funccalls_topDemandingIPS = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                     prompt=llama_docs_prompt_funccall_topDemandingIPS,
                                                                                     document_variable_name="context",
@@ -398,7 +400,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         llama_docs_prompt_funccall_comparisonMapRequests = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_comparisonMapRequests,
-            input_variables=["context", "question"])
+            input_variables=["context", "input"])
         self.llama_doc_chain_funccalls_comparisonMapRequests = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                           prompt=llama_docs_prompt_funccall_comparisonMapRequests,
                                                                                           document_variable_name="context",
@@ -406,7 +408,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         llama_docs_prompt_funccall_firewallInsert = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_firewallInsert,
-            input_variables=["context", "question"])
+            input_variables=["context", "input"])
         self.llama_doc_chain_funccalls_firewallInsert = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                    prompt=llama_docs_prompt_funccall_firewallInsert,
                                                                                    document_variable_name="context",
@@ -436,7 +438,14 @@ class QuestionAndAnsweringCustomLlama3():
             question_generator=self.llama_question_generator_chain,
             combine_docs_chain=self.llama_doc_chain,
             return_generated_question=False,
-            memory=self.memory, verbose=self.debug)
+            verbose=self.debug)
+
+        """ConversationalRetrievalChain(
+            retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
+            question_generator=self.llama_question_generator_chain,
+            combine_docs_chain=self.llama_doc_chain,
+            return_generated_question=False,
+            memory=self.memory, verbose=self.debug)"""
 
         ##################### FUNCTION CONV CHAIN STUFF ####################
         self.llm_conversational_chain_funccalls_resourceUtilization = ConversationalRetrievalChain(
@@ -544,15 +553,15 @@ class QuestionAndAnsweringCustomLlama3():
             from threading import Thread
 
             if isinstance(chainToUse, ConversationalRetrievalChain):
-                self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"question": question}))
+                self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input": question}))
             elif isinstance(chainToUse, StuffDocumentsChain):
                 if chainToUse != self.llama_doc_chain_funccalls_firewallInsert:
                     self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents": [],
-                                                                                      "question": question,
+                                                                                      "input": question,
                                                                                       "params": params},))
                 else:
                     self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents": [],
-                                                                                      "question": question,
+                                                                                      "input": question,
                                                                                       "param_ip": "10.20.30.40",
                                                                                       "param_name": 'IoTDevice'},))
 
@@ -561,7 +570,19 @@ class QuestionAndAnsweringCustomLlama3():
 
             return self.streamer, isfullConversationalType
         else:
-            return chainToUse({"question": question})  # , "params": params},)
+            # TODO: FIX THE MEGA HACK BECAUSE OF LANGCHAIN API
+            # Convert chat history to list of tuples https://github.com/langchain-ai/langchain/discussions/6648
+            chat_history = []
+            chat_history_tuples = []
+            for message in chat_history:
+                chat_history_tuples.append((message[0], message[1]))
+
+
+            res = chainToUse({"input": question}) if chainToUse != self.llm_conversational_chain_default else   \
+                    chainToUse.invoke({"input": question,
+                                       "question": question,
+                                       "chat_history" : chat_history_tuples})
+            return res
 
     def ask_question_and_streamtoconsole(self, question: str) -> str:
         if self.streamingOnAnotherThread:
@@ -605,7 +626,7 @@ class QuestionAndAnsweringCustomLlama3():
         # Ask only the question on docs provided as context to see how it works without any additional context
         if run_llm_chain:
             result = self.llama_doc_chain(
-                {"input_documents": sources, "question": query}, return_only_outputs=True
+                {"input_documents": sources, "input": query}, return_only_outputs=True
             )
 
             answer = result["output_text"]
@@ -738,7 +759,7 @@ def __main__():
     # securityChatbot.solveFunctionCalls(fullGenText)
 
     # query = "Show me the logs of the devices grouped by IP which have more than 25% requests over the median of a normal session per. Sort them by count"
-    # securityChatbot.llama_doc_chain_funccalls_devicesByIPLogs({"input_documents": [], "question": query}, return_only_outputs=True)
+    # securityChatbot.llama_doc_chain_funccalls_devicesByIPLogs({"input_documents": [], "input": query}, return_only_outputs=True)
 
     # securityChatbot.ask_question_and_streamtoconsole("What is a DDoS attack?")
 

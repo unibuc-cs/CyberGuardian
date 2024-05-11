@@ -5,45 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="LLama 3 and new stuff">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/FinetuningModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_qa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FinetuningModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vectors_rag/knowledgerag.faiss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vectors_rag/knowledgerag.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/DatasetUtils.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/DatasetUtils.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatasetUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/DatasetUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DynabicPrompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/DynabicPrompts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuestionAndAnswerUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SmartHome_DDoSSnapshot/DATASET_LOGS_HACKED_False.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SmartHome_DDoSSnapshot/DATASET_LOGS_HACKED_True.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SmartHome_DDoSSnapshot/FIREWALL_PROCESSES.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SmartHome_DDoSSnapshot/FIRMWARE_HACKED_PROCESSES.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIRMWARE_HACKED_PROCESSES.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SmartHome_DDoSSnapshot/FIRMWARE_STOCK_PROCESSES.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIRMWARE_STOCK_PROCESSES.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SmartHome_DDoSSnapshot/good_RESOURCES_OCCUPANCY_HACKED_False.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SmartHome_DDoSSnapshot/good_RESOURCES_OCCUPANCY_HACKED_True.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_pdfs.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForTraining/db_pdfs.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_videos.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForTraining/db_videos.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_videos_clean.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForTraining/db_videos_clean.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_videos_failed.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForTraining/db_videos_failed.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_videos_translated.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForTraining/db_videos_translated.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/pdfpapers.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForTraining/pdfpapers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/special_smart_home/An_experiment_to_build_an_open_source_application_for_the_Internet_of_Things_as_part_of_a_software_engineering_course_.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/An_experiment_to_build_an_open_source_application_for_the_Internet_of_Things_as_part_of_a_software_engineering_course_.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/special_smart_home/IoT_Dataset___Functional_Testing_Framework.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataForRAG/IoT_Dataset___Functional_Testing_Framework.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/docstore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etlUtils/etl_pdfs.py" beforeDir="false" afterPath="$PROJECT_DIR$/etlUtils/etl_pdfs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/etlUtils/etl_videos.py" beforeDir="false" afterPath="$PROJECT_DIR$/etlUtils/etl_videos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/Text rewriting tool.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/Text rewriting tool.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/ciptest_qanda_good.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/ciptest_qanda_good.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/ciptest_qanda_good_backup.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/ciptest_qanda_good_backup.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/test_bad.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projsecrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/projsecrets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qanda.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vecstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/vecstore.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vectors/knowledgedb.faiss" beforeDir="false" afterPath="$PROJECT_DIR$/vectors/knowledgedb.faiss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vectors/knowledgedb.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/vectors/knowledgedb.pkl" afterDir="false" />
     </list>
@@ -110,28 +75,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.CleanDataset.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.DatasetUtils.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FinetuningModel.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.docstoreplay.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_qa.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/QuestionAndAnswerUtils.py&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.CleanDataset.executor": "Debug",
+    "Python.DatasetUtils.executor": "Run",
+    "Python.FinetuningModel.executor": "Debug",
+    "Python.docstoreplay.executor": "Run",
+    "Python.main_qa.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/QuestionAndAnswerUtils.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\data\dataForRAG" />
@@ -141,10 +106,10 @@
   </component>
   <component name="RunManager" selected="Python.main_qa">
     <list>
-      <item itemvalue="Python.FinetuningModel" />
-      <item itemvalue="Python.main_qa" />
-      <item itemvalue="Python.docstoreplay" />
       <item itemvalue="Python.DatasetUtils" />
+      <item itemvalue="Python.FinetuningModel" />
+      <item itemvalue="Python.docstoreplay" />
+      <item itemvalue="Python.main_qa" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -187,6 +152,7 @@
       <workItem from="1715243602620" duration="1949000" />
       <workItem from="1715247821039" duration="13829000" />
       <workItem from="1715272732231" duration="29596000" />
+      <workItem from="1715399319352" duration="6253000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -300,62 +266,52 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_videos.py</url>
-          <line>356</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/etlUtils/etl_videos.py</url>
-          <line>67</line>
+          <line>73</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_videos.py</url>
-          <line>202</line>
+          <line>236</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_videos.py</url>
-          <line>174</line>
+          <line>212</line>
           <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_videos.py</url>
-          <line>168</line>
+          <line>211</line>
           <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_pdfs.py</url>
-          <line>155</line>
+          <line>180</line>
           <option name="timeStamp" value="155" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_pdfs.py</url>
-          <line>162</line>
+          <line>189</line>
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_pdfs.py</url>
-          <line>118</line>
+          <line>130</line>
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/docstore.py</url>
-          <line>118</line>
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_videos.py</url>
-          <line>106</line>
+          <line>119</line>
           <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_videos.py</url>
-          <line>141</line>
+          <line>190</line>
           <option name="timeStamp" value="177" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/etlUtils/etl_videos.py</url>
-          <line>136</line>
+          <line>181</line>
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -370,17 +326,12 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DatasetUtils.py</url>
-          <line>57</line>
+          <line>75</line>
           <option name="timeStamp" value="187" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/vecstore.py</url>
-          <line>44</line>
-          <option name="timeStamp" value="196" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/QuestionAndAnswerUtils.py</url>
-          <line>423</line>
+          <line>425</line>
           <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -388,25 +339,95 @@
           <line>1092</line>
           <option name="timeStamp" value="201" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/vecstore.py</url>
-          <line>40</line>
+          <line>58</line>
           <option name="timeStamp" value="213" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain_core/prompts/base.py</url>
           <line>289</line>
           <option name="timeStamp" value="215" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/QuestionAndAnswerUtils.py</url>
-          <line>416</line>
-          <option name="timeStamp" value="216" />
+          <line>588</line>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/QuestionAndAnswerUtils.py</url>
+          <line>547</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/QuestionAndAnswerUtils.py</url>
+          <line>517</line>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="228" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/history_aware_retriever.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/QuestionAndAnswerUtils.py</url>
+          <line>360</line>
+          <option name="timeStamp" value="234" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/QuestionAndAnswerUtils.py</url>
+          <line>189</line>
+          <option name="timeStamp" value="235" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/QuestionAndAnswerUtils.py</url>
-          <line>569</line>
-          <option name="timeStamp" value="221" />
+          <line>435</line>
+          <option name="timeStamp" value="238" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/base.py</url>
+          <line>278</line>
+          <option name="timeStamp" value="239" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/chains/router/llm_router.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="240" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/chains/sequential.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="241" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/base.py</url>
+          <line>252</line>
+          <option name="timeStamp" value="242" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -420,12 +441,14 @@
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="llama_question_generator_chain" />
+        <watch expression="llama_condense_template" />
+        <watch expression="self.templateprompt_for_standalone_question_generation" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dynabicChatbot$CleanDataset.coverage" NAME="CleanDataset Coverage Results" MODIFIED="1712135395376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1715360156282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1715406332280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$docstoreplay.coverage" NAME="docstoreplay Coverage Results" MODIFIED="1715263362848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$DatasetUtils.coverage" NAME="DatasetUtils Coverage Results" MODIFIED="1715358261949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$FinetuningModel.coverage" NAME="FinetuningModel Coverage Results" MODIFIED="1715339562971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
