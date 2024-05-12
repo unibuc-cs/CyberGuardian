@@ -12,3 +12,10 @@
 ``` 
         self.vector_index = vecstore.connect_to_vector_index
 ```
+
+- FIX the python code added to history and not working properly afterwards! History is messing with LLM after sending a python code . Start from this:
+```
+    securityChatbot.ask_question(
+        "Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice", add_to_history=False)
+```
+

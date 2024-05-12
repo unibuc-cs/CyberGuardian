@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import pprint
 import pdb
-from typing import Any
+from typing import Any, Tuple
 
 from etlUtils import etl_markdown, etl_pdfs, etl_shared, etl_videos
 
@@ -16,6 +16,7 @@ from utils import pretty_log
 from ast import literal_eval
 
 pp = pprint.PrettyPrinter(indent=2)
+
 import importlib
 
 import torch
@@ -48,6 +49,8 @@ torch.manual_seed(hash("by removing stochasticity") % 2 ** 32 - 1)
 torch.cuda.manual_seed_all(hash("so runs are repeatable") % 2 ** 32 - 1)
 
 
+# Note that this is specific to llama3 only because uses at some point some of its special tokens and versions
+# Similar versions are doable for other LLMs as well.
 class QuestionAndAnsweringCustomLlama3():
     class SECURITY_PROMPT_TYPE(Enum):
         PROMPT_TYPE_DEFAULT = 0,
@@ -70,7 +73,19 @@ class QuestionAndAnsweringCustomLlama3():
         GENERIC_QUESTION_NO_HISTORY = 5,
         PANDAS_PYTHON_CODE = 6,
 
-    LLAMA3_DEFAULT_END_LLM_RESPONSE = "</s>"
+    generation_params_sample = {
+        "do_sample": True,
+        "temperature": 0.1,
+        "top_p": 0.95,
+    }
+
+    generation_params_greedy = {
+        "do_sample": False,
+        "temperature": 1.0,
+        "top_p": 1.0,
+    }
+
+    LLAMA3_DEFAULT_END_LLM_RESPONSE = "<|eot_id|>"
 
     def __init__(self, QuestionRewritingPrompt: QUESTION_REWRITING_TYPE,
                  QuestionAnsweringPrompt: SECURITY_PROMPT_TYPE,
@@ -78,7 +93,8 @@ class QuestionAndAnsweringCustomLlama3():
                  debug: bool,
                  streamingOnAnotherThread: bool,
                  demoMode: bool,
-                 noInitialize=False):
+                 noInitialize=False,
+                 generation_params=generation_params_greedy):
 
         self.tokenizer = None
         self.model = None
@@ -87,6 +103,7 @@ class QuestionAndAnsweringCustomLlama3():
         self.default_llm = None
         self.llm_conversational_chain_default = None  # The full conversational chain
         self.textGenerationPipeline = None
+        self.chat_history_tuples = [] # Empty history
 
         self.llama_doc_chain = None  # The question answering on a given context (rag) chain
         self.llama_question_generator_chain = None  # The history+newquestion => standalone question generation chain
@@ -114,7 +131,7 @@ class QuestionAndAnsweringCustomLlama3():
             self.modelName = "meta-llama/Meta-Llama-3-70B-Instruct"
 
         if noInitialize is False:
-            self.initilizeEverything()
+            self.initilizeEverything(generation_params=generation_params)
 
     # Function to format a system prompt + user prompt (instruction) in LLM used template
     def get_prompt(self, instruction=DEFAULT_QUESTION_PROMPT, new_system_prompt=None):
@@ -137,9 +154,9 @@ class QuestionAndAnsweringCustomLlama3():
 
         return prompt
 
-    def initilizeEverything(self):
+    def initilizeEverything(self, generation_params):
         # Init the models
-        self.initializeLLMTokenizerandEmbedder()
+        self.initializeLLMTokenizerandEmbedder(generation_params=generation_params)
 
         # All tempaltes
         self.initializePromptTemplates()
@@ -255,7 +272,7 @@ class QuestionAndAnsweringCustomLlama3():
         # Call it
         result = func(*func_params)
 
-    def initializeLLMTokenizerandEmbedder(self):
+    def initializeLLMTokenizerandEmbedder(self, generation_params: dict[Any, Any]) -> None:
         # Get the embeddings, tokenizer and model
         self.embedding_engine = vecstore.get_embedding_engine(allowed_special="all")
 
@@ -273,22 +290,22 @@ class QuestionAndAnsweringCustomLlama3():
                                                           #torch_dtype=torch.bfloat16,
                                                           quantization_config=bnb_config,
                                                           )
-
+        # Configure as needed the llama 3 hf model
         terminators = [
             self.tokenizer.eos_token_id,
             self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
         ]
 
         self.model.config.pad_token_id = self.tokenizer.pad_token_id
+        #self.model.eos_token_id = terminators
 
         print(f"Pad Token id: {self.tokenizer.pad_token_id} and Pad Token: {self.tokenizer.pad_token}")
         print(f"EOS Token id: {self.tokenizer.eos_token_id} and EOS Token: {self.tokenizer.eos_token}")
 
 
         # Create a streamer and a text generation pipeline
-        self.streamer = TextStreamer(self.tokenizer,
-                                     skip_prompt=True) if self.streamingOnAnotherThread is False else TextIteratorStreamer(
-            self.tokenizer, skip_prompt=True)
+        self.streamer = TextStreamer(self.tokenizer, skip_prompt=True) if self.streamingOnAnotherThread is False \
+                                    else TextIteratorStreamer(self.tokenizer, skip_prompt=True)
 
         self.textGenerationPipeline = pipeline("text-generation",
                                                model=self.model,
@@ -296,18 +313,17 @@ class QuestionAndAnsweringCustomLlama3():
                                                torch_dtype=torch.float16,
                                                device_map="auto",
                                                max_new_tokens=4096,
-                                               do_sample=True,
-                                               temperature=0.1,
-                                               top_p=0.95,
                                                min_length=None,
                                                num_return_sequences=1,
                                                repetition_penalty=1.0,
                                                # The parameter for repetition penalty. 1.0 means no penalty.
                                                length_penalty=1,
-                                               # [optional] Exponential penalty to the length that is used with beam-based generation.
-                                               eos_token_id=self.tokenizer.eos_token_id,
+                                               # [optional] Exponential penalty to the length that
+                                                               # is used with beam-based generation.
+                                               eos_token_id=terminators, #self.tokenizer.eos_token_id,
                                                pad_token_id=self.tokenizer.eos_token_id,
                                                streamer=self.streamer,
+                                               **generation_params,
                                                )
 
         # Create the llm here
@@ -359,7 +375,7 @@ class QuestionAndAnsweringCustomLlama3():
     def initializeQuestionAndAnswering_withRAG_andMemory(self):
         # Create the question generator chain which takes history + new question and transform to a new standalone question
         self.llama_condense_prompt = PromptTemplate(template=self.templateprompt_for_standalone_question_generation,
-                                               input_variables=["chat_history", "input"])
+                                               input_variables=["chat_history", "question"])
 
         ## TODO : maybe deprecate since not used like this ?
         self.llama_question_generator_chain = LLMChain(llm=self.default_llm,
@@ -368,7 +384,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         # Create the response chain based on a question and context (i.e., rag in our case)
         llama_docs_prompt_default = PromptTemplate(template=self.templateprompt_for_question_answering_default,
-                                                   input_variables=["context", "input"])
+                                                   input_variables=["context", "question"])
         self.llama_doc_chain = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                           prompt=llama_docs_prompt_default,
                                                           document_variable_name="context", verbose=self.debug)
@@ -376,7 +392,7 @@ class QuestionAndAnsweringCustomLlama3():
         ##################### FUNCTION DOC_CHAIN STUFF ####################
         llama_docs_prompt_funccall_resourceUtilization = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_resourceUtilization,
-            input_variables=["context", "input"])
+            input_variables=["context", "question"])
         self.llama_doc_chain_funccalls_resourceUtilization = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                         prompt=llama_docs_prompt_funccall_resourceUtilization,
                                                                                         document_variable_name="context",
@@ -384,7 +400,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         llama_docs_prompt_funccall_devicesByIPLogs = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_devicesByIPLogs,
-            input_variables=["context", "input"])
+            input_variables=["context", "question"])
         self.llama_doc_chain_funccalls_devicesByIPLogs = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                     prompt=llama_docs_prompt_funccall_devicesByIPLogs,
                                                                                     document_variable_name="context",
@@ -392,7 +408,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         llama_docs_prompt_funccall_topDemandingIPS = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_topDemandingIPS,
-            input_variables=["context", "input", "param1", "param2"])
+            input_variables=["context", "question", "param1", "param2"])
         self.llama_doc_chain_funccalls_topDemandingIPS = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                     prompt=llama_docs_prompt_funccall_topDemandingIPS,
                                                                                     document_variable_name="context",
@@ -400,7 +416,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         llama_docs_prompt_funccall_comparisonMapRequests = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_comparisonMapRequests,
-            input_variables=["context", "input"])
+            input_variables=["context", "question"])
         self.llama_doc_chain_funccalls_comparisonMapRequests = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                           prompt=llama_docs_prompt_funccall_comparisonMapRequests,
                                                                                           document_variable_name="context",
@@ -408,7 +424,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         llama_docs_prompt_funccall_firewallInsert = PromptTemplate(
             template=self.templateprompt_for_question_answering_funccall_firewallInsert,
-            input_variables=["context", "input"])
+            input_variables=["context", "question"])
         self.llama_doc_chain_funccalls_firewallInsert = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                                                    prompt=llama_docs_prompt_funccall_firewallInsert,
                                                                                    document_variable_name="context",
@@ -433,12 +449,13 @@ class QuestionAndAnsweringCustomLlama3():
         pretty_log(f"found {self.vector_index.index.ntotal} vectors to search over in the database")
 
         # Create the final retrieval chain which
-        self.llm_conversational_chain_default = ConversationalRetrievalChain(
+        self.llm_conversational_chain_default = (
+            ConversationalRetrievalChain(
             retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
             question_generator=self.llama_question_generator_chain,
             combine_docs_chain=self.llama_doc_chain,
             return_generated_question=False,
-            verbose=self.debug)
+            verbose=self.debug))
 
         """ConversationalRetrievalChain(
             retriever=self.vector_index.as_retriever(search_kwargs={'k': 3}),
@@ -542,7 +559,7 @@ class QuestionAndAnsweringCustomLlama3():
 
     # Check if the (shared) memory of all chains has messages in it
     def hasHistoryMessages(self) -> bool:
-        return len(self.memory.chat_memory.messages) > 0
+        return len(self.memory.chat_memory.messages) > 0 or len(self.chat_history_tuples) > 0
 
     # Remove all special tokenizer's inputs
     def getlastanswerclean_llama3(self, inp: str) -> str:
@@ -557,54 +574,46 @@ class QuestionAndAnsweringCustomLlama3():
             inp = inp.replace(spec_token, '')
         return inp
 
-    def ask_question(self, question_original: str) -> Union[BaseStreamer, None]:
+    def __ask_question(self, question_original: str, add_to_history: bool = True) -> Union[BaseStreamer, Union[Tuple[str, bool], None]]:
         chainToUse, question, params = self.getConversationChainByQuestion(question_original)
 
-        isfullConversationalType = True
+        isfullConversationalType: bool = True
+        args={"question": question} # Default
+
+        # TODO: fix this. Some hacked params because LLM is incapable at this moment to extract correctly
+        # some of the parameters from the model. It can be finetuned to do so, proved on other examples,
+        # but not possible to finish the right time for this deadline on this particular use case..
+        if isinstance(chainToUse, StuffDocumentsChain):
+            if chainToUse != self.llama_doc_chain_funccalls_firewallInsert:
+                args = {"input_documents": [], "question": question, "params": params}
+            else:
+                args = {"input_documents": [], "question": question, "param_ip": "10.20.30.40", "param_name": 'IoTDevice'}
+
+            isfullConversationalType = False
+
+        # Add the chat_history always
+        args.update({"chat_history": self.chat_history_tuples})
 
         if self.streamingOnAnotherThread:
             from threading import Thread
-
-            if isinstance(chainToUse, ConversationalRetrievalChain):
-                self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input": question}))
-            elif isinstance(chainToUse, StuffDocumentsChain):
-                if chainToUse != self.llama_doc_chain_funccalls_firewallInsert:
-                    self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents": [],
-                                                                                      "input": question,
-                                                                                      "params": params},))
-                else:
-                    self.temp_modelevaluate_thread = Thread(target=chainToUse, args=({"input_documents": [],
-                                                                                      "input": question,
-                                                                                      "param_ip": "10.20.30.40",
-                                                                                      "param_name": 'IoTDevice'},))
-
-                isfullConversationalType = False
+            self.temp_modelevaluate_thread = Thread(target=chainToUse.invoke, args=(args,))
             self.temp_modelevaluate_thread.start()
-
             return self.streamer, isfullConversationalType
         else:
-            # TODO: FIX THE MEGA HACK BECAUSE OF LANGCHAIN API
-            # Convert chat history to list of tuples https://github.com/langchain-ai/langchain/discussions/6648
-            chat_history = []
-            chat_history_tuples = []
-            for message in chat_history:
-                chat_history_tuples.append((message[0], message[1]))
+            res = chainToUse.invoke(args)
+            answer = res['output_text'] if 'output_text' in res else (res['answer'] if 'answer' in res else None)
+            return answer, isfullConversationalType
 
-
-            res = chainToUse({"input": question}) if chainToUse != self.llm_conversational_chain_default else   \
-                    chainToUse.invoke({"input": question,
-                                       "question": question,
-                                       "chat_history" : chat_history_tuples})
-            answer = self.getlastanswerclean_llama3(res['answer'])
-            return answer
-
-    def ask_question_and_streamtoconsole(self, question: str) -> str:
+    # Can write to an external streamer object on another thread or directly to console if streamingOnAnotherThread
+    # is False
+    def ask_question(self, question: str, add_to_history: bool = True) -> str:
+        res_answer = None
         if self.streamingOnAnotherThread:
             # This is needed since when it has some memory and prev chat history it will FIRST output the standalone question
             # Then respond to the new question
             need_to_ignore_standalone_question_chain = self.hasHistoryMessages()
 
-            streamer, isfullConversationalType = self.ask_question(question)
+            streamer, isfullConversationalType = self.__ask_question(question)
             if not isfullConversationalType:
                 need_to_ignore_standalone_question_chain = False
 
@@ -624,9 +633,22 @@ class QuestionAndAnsweringCustomLlama3():
             # print(f"Full generated text {generated_text}")
 
             self.temp_modelevaluate_thread.join()
-            return generated_text
+            res_answer = generated_text
         else:
-            self.ask_question(question)
+            res_answer, isfullConversationalType = self.__ask_question(question)
+
+        assert res_answer, "So there is no final answer?!"
+
+        # Clean a bit to ensure no special tokens and stuff
+        res_answer = self.getlastanswerclean_llama3(res_answer)
+
+        # Add conv to history if requested
+        if add_to_history:
+            self.chat_history_tuples.append((question, res_answer))
+
+        # Return the final answer even if already streamed
+        return res_answer, isfullConversationalType
+
 
     # VERY USEFULLY FOR checking the sources and context
     ######################################################
@@ -640,7 +662,7 @@ class QuestionAndAnsweringCustomLlama3():
         # Ask only the question on docs provided as context to see how it works without any additional context
         if run_llm_chain:
             result = self.llama_doc_chain(
-                {"input_documents": sources, "input": query}, return_only_outputs=True
+                {"input_documents": sources, "question": query}, return_only_outputs=True
             )
 
             answer = result["output_text"]
@@ -731,18 +753,26 @@ def __main__():
         QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama3.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
         QuestionAnsweringPrompt=QuestionAndAnsweringCustomLlama3.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
         ModelType=QuestionAndAnsweringCustomLlama3.LLAMA3_VERSION_TYPE.LLAMA3_8B,
-        debug=True,
-        streamingOnAnotherThread=False,
-        demoMode=True)
+        debug=False,
+        streamingOnAnotherThread=True,
+        demoMode=True,
+        noInitialize=False,
+        generation_params=QuestionAndAnsweringCustomLlama3.generation_params_greedy)
 
-    securityChatbot.ask_question_and_streamtoconsole("What is a DDoS attack?")
+    securityChatbot.ask_question(
+        "Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice", add_to_history=False)
 
-    securityChatbot.ask_question_and_streamtoconsole("How to avoid one?")
+    securityChatbot.ask_question("What is a DDoS attack?")
 
+    securityChatbot.ask_question("How to avoid one?")
+
+
+    """
     securityChatbot.llama_doc_chain_funccalls_firewallInsert({'input_documents': [],
                                                               'question':"Generate me a python code to insert in a pandas dataframe named Firewalls a new IP",
                                                               'param_ip':"10.20.30.40",
                                                                 'param_name':"IoTHub"})
+    """
 
     #test_evaluate_safety_internal_model(securityChatbot)
 

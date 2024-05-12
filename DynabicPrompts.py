@@ -1,18 +1,6 @@
-## REMOVE !!!
-"""
-B_INST, E_INST = "[INST]", "[/INST]"
-B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
-"""
 FUNC_CALL_SYSTEM_PROMPT = None # ""
-
-
-DEFAULT_SYSTEM_PROMPT = """\
-You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
-If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
-"""
 DEFAULT_SYSTEM_PROMPT = None
-
-DEFAULT_QUESTION_PROMPT = "Question: {input}"
+DEFAULT_QUESTION_PROMPT = "Question: {question}"
 
 
 
@@ -29,17 +17,17 @@ Use emoticons in your responses.
 template_securityOfficer_instruction_rag_nosources_default = """\
 Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
 {context}
-Question: {input}"""
+Question: {question}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization = """\
         Write only the following string and no other words, do not start your response with Sure. 
-        "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
+        "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../dynabicChatbot/data/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../dynabicChatbot/data/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
         {context}
-        Question: {input}"""
+        Question: {question}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs = """\
         Write only the following string and no other words, do not start your response with Sure.
-        "Ok, I will show you the pandas dataset according to your request. I will invoke FUNC_CALL dynabicagenttools.show_outlier_ips_usage Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv'"
+        "Ok, I will show you the pandas dataset according to your request. I will invoke FUNC_CALL dynabicagenttools.show_outlier_ips_usage Params '../dynabicChatbot/data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' '../dynabicChatbot/data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv'"
         {context}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS = """\
@@ -49,19 +37,19 @@ template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS = "
 
 template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests="""\
         Write only the following string and no other words, do not start your response with Sure.
-        "I will invoke FUNC_CALL dynabicagenttools.shopComparativeColumnsDatasets Params '../dynabicChatbot/data/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' '../dynabicChatbot/data/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv'"
+        "I will invoke FUNC_CALL dynabicagenttools.shopComparativeColumnsDatasets Params '../dynabicChatbot/data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' '../dynabicChatbot/data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv'"
         {context}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert = """\
         Write only the following string and no other words, do not start your response with Sure. Do not write like I provided you the code.
         '''
-        df1 = pd.read_csv("../data/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
+        df1 = pd.read_csv("../data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
 
         new_row = ('IP': {param_ip}, 'NAME': {param_name}, 'DATE': datetime.now(), 'BLOCKED':1)
 
         df1=pd.concat([df1, pd.DataFrame([new_row])], ignore_index=True)
 
-        df1.to_csv("../data/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
+        df1.to_csv("../data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
         '''
         {context}"""
 
@@ -70,12 +58,12 @@ Given the following extracted parts of a long document and a question, create a 
 If you don't know the answer, just say that you don't know. Don't try to make up an answer.
 ALWAYS return a "SOURCES" part in your answer.
 
-QUESTION: {input}
+QUESTION: {question}
 
 {summaries}
 
 FINAL ANSWER:"""
 
-llama_condense_template = "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {input}\nStandalone Question:"
+llama_condense_template = "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:"
 
 
