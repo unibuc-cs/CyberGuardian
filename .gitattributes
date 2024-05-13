@@ -1,1 +1,7 @@
 *.jsonl filter=lfs diff=lfs merge=lfs -text
+vectors/knowledgedb.faiss filter=lfs diff=lfs merge=lfs -text
+vectors/knowledgedb.pkl filter=lfs diff=lfs merge=lfs -text
+*.faiss filter=lfs diff=lfs merge=lfs -text
+*.fkl filter=lfs diff=lfs merge=lfs -text
+RAGSupport/vectors/knowledgedb.faiss filter=lfs diff=lfs merge=lfs -text
+RAGSupport/vectors/knowledgedb.pkl filter=lfs diff=lfs merge=lfs -text

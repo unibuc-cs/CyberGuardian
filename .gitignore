@@ -2,3 +2,5 @@ __pycache__/*.*
 etl/__pycache__/*.*
 *Zone.Identifier
 vectors/*.*
+ __pycache__/*.*
+*/ __pycache__/*.*

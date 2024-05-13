@@ -7,7 +7,7 @@ from typing import Any, Tuple
 from Data.etlUtils import vecstore
 
 import langchain
-from SyntheticGeneratorsAndExperiments.utils import pretty_log
+from Data.utils import pretty_log
 
 pp = pprint.PrettyPrinter(indent=2)
 
@@ -669,7 +669,7 @@ class QuestionAndAnsweringCustomLlama3():
     ######################################################
 
 
-from SyntheticGeneratorsAndExperiments.utils import get_safety_checker, AgentType
+from Data.utils import get_safety_checker, AgentType
 
 def evaluate_safety_external_methods(user_prompt: str, kwargs):
     safetyModels = get_safety_checker(enable_sensitive_topics=False,

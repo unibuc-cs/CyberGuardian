@@ -115,7 +115,7 @@ class IoTDevice(object):
 
     def run_get_data(self):
         while True:
-            # Getting data
+            # Getting Data
             #################################################################################
             cycle_start_time = self.env.now
 
@@ -192,7 +192,7 @@ class IoTDevice(object):
     def startHack(self):
         self.isHacked = True
 
-        # Dummy, reduce the time between data retrievals
+        # Dummy, reduce the time between Data retrievals
         newTimeBetweenDataRetrieve = self.duration_between_data_retrieve * (1.0 / random.randint(50, 100))
         self.duration_between_data_retrieve = newTimeBetweenDataRetrieve
 

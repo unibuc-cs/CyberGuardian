@@ -6,6 +6,4 @@ os.environ["MONGODB_USER"] = "paduraru2009"
 os.environ["MONGODB_DATABASE"] = "dynabicChatbot"
 os.environ["MONGODB_CLIENT"] = ""
 
-cached_client = None
-cached_database = None
-cached_collection = None
+

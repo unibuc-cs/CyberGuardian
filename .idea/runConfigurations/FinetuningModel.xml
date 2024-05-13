@@ -21,7 +21,7 @@
         </list>
       </option>
     </PathMappingSettings>
-    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FinetuningModel.py" />
+    <option name="SCRIPT_NAME" value="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\CyberGuardianLLM\FinetuningModel.py" />
     <option name="PARAMETERS" value="--drop_existing 0 --etl_pdfs 0 --etl_markdown 0 --etl_videos 1 --dovectorstorage 0 --demoMode 0" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
