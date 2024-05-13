@@ -1,0 +1,6 @@
+[submodule "UI"]
+	path = UI
+	url = https://github.com/unibuc-cs/CyberGuardian_UI.git
+[submodule "Data2"]
+	path = Data2
+	url = https://huggingface.co/datasets/unibuc-cs/CyberGuardianDataset/
