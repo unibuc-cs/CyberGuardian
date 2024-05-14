@@ -21,13 +21,13 @@ Question: {question}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization = """\
         Write only the following string and no other words, do not start your response with Sure. 
-        "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../dynabicChatbot/Data/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../dynabicChatbot/Data/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
+        "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
         {context}
         Question: {question}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs = """\
         Write only the following string and no other words, do not start your response with Sure.
-        "Ok, I will show you the pandas dataset according to your request. I will invoke FUNC_CALL dynabicagenttools.show_outlier_ips_usage Params '../dynabicChatbot/Data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' '../dynabicChatbot/Data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv'"
+        "Ok, I will show you the pandas dataset according to your request. I will invoke FUNC_CALL dynabicagenttools.show_outlier_ips_usage Params '../RAGSupport/dataForRAG//SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' '../RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv'"
         {context}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS = """\
@@ -37,19 +37,19 @@ template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS = "
 
 template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests="""\
         Write only the following string and no other words, do not start your response with Sure.
-        "I will invoke FUNC_CALL dynabicagenttools.shopComparativeColumnsDatasets Params '../dynabicChatbot/Data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' '../dynabicChatbot/Data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv'"
+        "I will invoke FUNC_CALL dynabicagenttools.shopComparativeColumnsDatasets Params '../RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' '../RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv'"
         {context}"""
 
 template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert = """\
         Write only the following string and no other words, do not start your response with Sure. Do not write like I provided you the code.
         '''
-        df1 = pd.read_csv("../Data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
+        df1 = pd.read_csv("../RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
 
         new_row = ('IP': {param_ip}, 'NAME': {param_name}, 'DATE': datetime.now(), 'BLOCKED':1)
 
         df1=pd.concat([df1, pd.DataFrame([new_row])], ignore_index=True)
 
-        df1.to_csv("../Data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
+        df1.to_csv("../RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
         '''
         {context}"""
 

@@ -5,39 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="Significant fixes">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/An_experiment_to_build_an_open_source_application_for_the_Internet_of_Things_as_part_of_a_software_engineering_course_.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/IoT_Dataset___Functional_Testing_Framework.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/FIRMWARE_HACKED_PROCESSES.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/FIRMWARE_STOCK_PROCESSES.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/vectors/knowledgedb.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/vectors_rag/knowledgerag.faiss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/DatasetUtils.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/DatasetUtils.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FinetuningModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FinetuningModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/etlUtils/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_qa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_qa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.virtual_documents/experiments/GPT2_eval.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain_SmarthHomeBranch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DatasetUtils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DynabicPrompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/DynabicPrompts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinetuningModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/FinetuningModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RESOURCES_OCCUPANCY_HACKED_False.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RESOURCES_OCCUPANCY_HACKED_True.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simpy/play.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Simpy/play.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Simpy/sim_iot.py" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Simpy/sim_iot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Streamlit/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/dataSettings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/dataSettings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLM/DynabicPrompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/DynabicPrompts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/clientserverUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/clientserverUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/alin_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/alin_cachedProfilePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/bla_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/bla_cachedProfilePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/cached_credentials.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/cached_credentials.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/characters/None.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/None.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/characters/boy.gif" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/boy.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/characters/dog.gif" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/dog.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/characters/dog_dance_dribbble.gif" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/dog_dance_dribbble.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/characters/man.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/man.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/characters/woman.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/woman.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_34_12.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_34_12.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_35_59.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_35_59.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_36_52.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_36_52.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_43_47.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_43_47.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_44_34.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_44_34.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_46_47.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_46_47.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_12_18_57_55.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_12_18_57_55.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_14_15_54_50.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_14_15_54_50.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_16_09_08_56.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_16_09_08_56.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru20099_2024_01_12_19_45_24.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru20099_2024_01_12_19_45_24.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_21_09.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_21_09.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_23_34.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_23_34.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_35_33.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_35_33.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_44_18.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_44_18.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_45_56.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_45_56.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_47_05.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_47_05.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_16_16_55_20.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_16_16_55_20.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_16_16_59_07.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_16_16_59_07.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/paduraru2009111_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru2009111_cachedProfilePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/paduraru20099_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru20099_cachedProfilePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/paduraru2009_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru2009_cachedProfilePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/paduraru2009aa_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru2009aa_cachedProfilePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/paduraru2009dsaf_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru2009dsaf_cachedProfilePic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/saved_conversations/paduraru2009_2024_01_04_19_46_51.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/saved_conversations/paduraru2009_2024_01_04_19_46_51.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/data/saved_conversations/paduraru2009_2024_01_16_14_54_46.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/saved_conversations/paduraru2009_2024_01_16_14_54_46.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/databaseUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/databaseUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/dynabicagenttools.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/dynabicagenttools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/main.py" afterDir="false" />
@@ -49,104 +59,6 @@
       <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/TestSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/TestSim.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/Testgif.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/Testgif.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cached_credentials.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/An_experiment_to_build_an_open_source_application_for_the_Internet_of_Things_as_part_of_a_software_engineering_course_.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/IoT_Dataset___Functional_Testing_Framework.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIRMWARE_HACKED_PROCESSES.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/FIRMWARE_STOCK_PROCESSES.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForRAG/SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_pdfs.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_videos.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_videos_clean.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_videos_failed.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/db_videos_translated.jsonl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/DDoS attack_ Meaning, types, and protection _ NordVPN.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/DDoS monitoring_ how to know you're under attack _ Loggly.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/Future Of Home Security_ AI Programming _ BlueLabel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/How To Identify a DDoS Attack On Your Server &amp; Stop It.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/How to Build a Smart Home System_ Guide for Developing a Home Automation App — Mobindustry.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/How to Stop and Prevent DDoS Attack - DNSstuff.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/How to check if my system is under DDoS attack_ - Knowledgebase - AccuWebHosting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/Smart Home Security_ Ultimate guide to keeping your home safe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/Understanding Denial-of-Service Attacks _ CISA.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/What Is Malware_ Definition and Types _ Microsoft Security.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/What Is a DDoS Attack_ _ Microsoft Security.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/markdowncontent/preventDDoS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/1-s2.0-S0167404819302172-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/1-s2.0-S1367578821000808-main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/149-158.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/2011_Willems_ICITST.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/3617504.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/9N41-IJESET2023IIRA47-v11-i2-pp71-781.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/An_experiment_to_build_an_open_source_application_for_the_Internet_of_Things_as_part_of_a_software_engineering_course_.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/Analytical_Review_of_Cybersecurity_for_Embedded_Systems.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/IET Cyber-Phy Sys Theory   Ap - 2016 - Qi - Cybersecurity for distributed energy resources and smart inverters.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/ISTAfrica_Paper_ref_102_10161.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/IoT_Dataset___Functional_Testing_Framework.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/IoT_Network_Anomaly_Detection_in_Smart_Homes_Using_Machine_Learning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/K_Kolbasova_B_Zhurakovskyi_V_Poltorak_V_Nakonechnyi_R_ Kyrychok_CPITS-II-2023_3050.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/Softw Pract Exp - 2021 - Xie - Cybersecurity protection on in‐vehicle networks for distributed automotive cyber‐physical.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/document.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/icsoft22.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/r4lee-v7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/other_papers/symmetry-15-01978-v2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/pdfpapers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/special_smart_home/An_experiment_to_build_an_open_source_application_for_the_Internet_of_Things_as_part_of_a_software_engineering_course_.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/special_smart_home/IoT_Dataset___Functional_Testing_Framework.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/videos.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataForTraining/webcontent.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docstore.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/etlUtils/.ipynb_checkpoints/pdfs-checkpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/etlUtils/.ipynb_checkpoints/shared-checkpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/etlUtils/etl_markdown.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/etlUtils/etl_pdfs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/etlUtils/etl_shared.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/etlUtils/etl_videos.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/.ipynb_checkpoints/GPT2_eval-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/.ipynb_checkpoints/GPT2_eval-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/GPT2_eval.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/GPT2_eval.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/Play with REACT and tools including custom.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play with REACT and tools including custom.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/Play_chatbot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play_chatbot.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/Play_datasets.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play_datasets.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/ciptest_qanda_good.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/ciptest_qanda_good.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meta_prompt_format_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/newfile.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/lfs-auto-track" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/lfs-auto-track.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/lfs-auto-track.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lfs-auto-track/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lfs-auto-track/bin/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lfs-auto-track/lib/cli.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lfs-auto-track/lib/cli.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lfs-auto-track/lib/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lfs-auto-track/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lfs-auto-track/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/Mime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/cli.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/lite.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/types/other.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mime/types/standard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projsecrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/projsecrets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vecstore.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectors/knowledgedb.faiss" beforeDir="false" afterPath="$PROJECT_DIR$/RAGSupport/vectors/knowledgedb.faiss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectors/knowledgedb.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectors_rag/knowledgerag.faiss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectors_rag/knowledgerag.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RAGSupport/vectors_rag/knowledgerag.pkl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +87,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/UI" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -216,6 +128,7 @@
     "Python.CleanDataset.executor": "Debug",
     "Python.DatasetUtils.executor": "Run",
     "Python.FinetuningModel.executor": "Debug",
+    "Python.UITest.executor": "Run",
     "Python.docstoreplay.executor": "Run",
     "Python.main_qa.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -223,7 +136,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/Data/projsecrets.py",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -235,20 +148,48 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI\localdata\credentials" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\RAGSupport" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data2\sources" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.DatasetUtils">
+  <component name="RunManager" selected="Python.UITest">
+    <configuration name="UITest" type="PythonConfigurationType" factoryName="Python">
+      <module name="dynabicChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
+      <option name="WORKING_DIRECTORY" value="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="streamlit" />
+      <option name="PARAMETERS" value="run Main_Page.py" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.DatasetUtils" />
       <item itemvalue="Python.FinetuningModel" />
       <item itemvalue="Python.docstoreplay" />
       <item itemvalue="Python.main_qa" />
+      <item itemvalue="Python.UITest" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -295,7 +236,7 @@
       <workItem from="1715509157903" duration="1198000" />
       <workItem from="1715510393872" duration="7544000" />
       <workItem from="1715521248387" duration="2941000" />
-      <workItem from="1715579033047" duration="11762000" />
+      <workItem from="1715579033047" duration="31747000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -611,14 +552,9 @@
           <option name="timeStamp" value="271" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>292</line>
-          <option name="timeStamp" value="272" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>202</line>
-          <option name="timeStamp" value="274" />
+          <url>file://$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="280" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -640,8 +576,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dynabicChatbot$CleanDataset.coverage" NAME="CleanDataset Coverage Results" MODIFIED="1712135395376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1715516935783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1715602170467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$docstoreplay.coverage" NAME="docstoreplay Coverage Results" MODIFIED="1715263362848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest.coverage" NAME="UITest Coverage Results" MODIFIED="1715677862751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$DatasetUtils.coverage" NAME="DatasetUtils Coverage Results" MODIFIED="1715358261949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$FinetuningModel.coverage" NAME="FinetuningModel Coverage Results" MODIFIED="1715339562971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
   </component>

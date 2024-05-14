@@ -2,6 +2,7 @@
 import os
 from pathlib import Path
 
+from Data import dataSettings
 from Data.utils import pretty_log
 
 INDEX_NAME_MAIN = "knowledgedb"

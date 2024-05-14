@@ -9,8 +9,8 @@ os.environ["VIDEOS_LOCAL_JSON_DB_FAILED"] = os.path.join("Data", "dataForTrainin
 os.environ["VIDEOS_LOCAL_JSON_DB_TRANSLATED"] = os.path.join("Data", "dataForTraining", "db_videos_translated.jsonl")
 os.environ["MONGODB_COLLECTION_MAIN"] = "knowledgedb"
 os.environ["MONGODB_COLLECTION_RAG"] = "knowledgerag"
-os.environ["VECTOR_DIR_MAIN"] = "./Data/RAGSupport/vectors"
-os.environ["VECTOR_DIR_RAG"] = "./Data/RAGSupport/vectors_rag"
+os.environ["VECTOR_DIR_MAIN"] = "./RAGSupport/vectors"
+os.environ["VECTOR_DIR_RAG"] = "./RAGSupport/vectors_rag"
 
 
 # WHICH DB to use for RAG ? IF both are false, it will use ONLY the Data for rag

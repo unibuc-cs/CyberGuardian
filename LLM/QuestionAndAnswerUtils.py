@@ -26,7 +26,7 @@ from langchain.chains.conversational_retrieval.base import ConversationalRetriev
 from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from enum import Enum
 from typing import Union
-from DynabicPrompts import *
+from LLM.DynabicPrompts import *
 
 import random
 import numpy as np
@@ -428,6 +428,7 @@ class QuestionAndAnsweringCustomLlama3():
         # pretty_log("connecting to vector storage")
         shouldUseMain = (os.environ["USE_MAIN_KNOWLEDGE_FOR_RAG"] == "True" or
                          os.environ["USE_ALL_KNOWLEDGE_FOR_RAG"] == "True")
+
 
         self.vector_index = vecstore.connect_to_vector_index(index_path= vecstore.VECTOR_DIR_MAIN if shouldUseMain
                                                                 else vecstore.VECTOR_DIR_RAG,
