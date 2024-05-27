@@ -5,60 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="Significant fixes">
-      <change afterPath="$PROJECT_DIR$/Data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/etlUtils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_qa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_qa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/test_copilot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dynabicChatbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dynabicChatbot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FinetuningModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FinetuningModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dataSettings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/dataSettings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/DynabicPrompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/DynabicPrompts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/clientserverUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/clientserverUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/alin_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/alin_cachedProfilePic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/bla_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/bla_cachedProfilePic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/cached_credentials.csv" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/cached_credentials.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/characters/None.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/None.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/characters/boy.gif" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/boy.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/characters/dog.gif" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/dog.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/characters/dog_dance_dribbble.gif" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/dog_dance_dribbble.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/characters/man.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/man.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/characters/woman.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/characters/woman.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_34_12.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_34_12.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_35_59.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_35_59.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_36_52.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_36_52.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_43_47.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_43_47.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_44_34.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_44_34.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_04_18_46_47.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_04_18_46_47.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_12_18_57_55.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_12_18_57_55.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_14_15_54_50.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_14_15_54_50.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/defaultUserName_2024_01_16_09_08_56.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_16_09_08_56.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru20099_2024_01_12_19_45_24.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru20099_2024_01_12_19_45_24.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_21_09.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_21_09.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_23_34.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_23_34.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_35_33.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_35_33.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_44_18.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_44_18.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_45_56.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_45_56.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_04_19_47_05.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_04_19_47_05.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_16_16_55_20.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_16_16_55_20.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/feedback_collected/paduraru2009_2024_01_16_16_59_07.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/paduraru2009_2024_01_16_16_59_07.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/paduraru2009111_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru2009111_cachedProfilePic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/paduraru20099_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru20099_cachedProfilePic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/paduraru2009_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru2009_cachedProfilePic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/paduraru2009aa_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru2009aa_cachedProfilePic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/paduraru2009dsaf_cachedProfilePic.png" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/credentials/paduraru2009dsaf_cachedProfilePic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/saved_conversations/paduraru2009_2024_01_04_19_46_51.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/saved_conversations/paduraru2009_2024_01_04_19_46_51.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/data/saved_conversations/paduraru2009_2024_01_16_14_54_46.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/saved_conversations/paduraru2009_2024_01_16_14_54_46.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/databaseUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/databaseUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/dynabicagenttools.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/dynabicagenttools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/pages/Register_User.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pages/Register_User.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/pages/Work_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pages/Work_area.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/userUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/userUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/MapSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/MapSim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/TestSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/TestSim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/Testgif.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/Testgif.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/test.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +41,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/UI" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -106,7 +60,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/tokenizers/__init__.pyi" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/tokenizers/__init__.pyi" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -131,6 +85,9 @@
     "Python.UITest.executor": "Run",
     "Python.docstoreplay.executor": "Run",
     "Python.main_qa.executor": "Run",
+    "Python.test_copilot.executor": "Debug",
+    "Python.tests (1).executor": "Debug",
+    "Python.tests_accelerate.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -142,11 +99,44 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
     "two.files.diff.last.used.file": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/Data/projsecrets.py",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
+    <layout>
+      <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
+      <window_info id="Merge Requests" show_stripe_button="false" />
+      <window_info id="Commit_Guest" show_stripe_button="false" />
+      <window_info id="Pull Requests" show_stripe_button="false" />
+      <window_info id="Learn" show_stripe_button="false" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17864116" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
+      <window_info active="true" anchor="bottom" id="Debug" order="6" visible="true" weight="0.23510408" />
+      <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
+      <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
+      <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="SciView" show_stripe_button="false" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info anchor="right" id="Plots" order="5" weight="0.1" />
+    </layout>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
@@ -159,7 +149,7 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data2\sources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.UITest">
+  <component name="RunManager" selected="Python.tests_debug">
     <configuration name="UITest" type="PythonConfigurationType" factoryName="Python">
       <module name="dynabicChatbot" />
       <option name="ENV_FILES" value="" />
@@ -169,7 +159,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
       <option name="WORKING_DIRECTORY" value="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -184,19 +173,98 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_copilot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dynabicChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/test_copilot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests_accelerate" type="PythonConfigurationType" factoryName="Python">
+      <module name="dynabicChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="launch $PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py --model_name_or_path &quot;openai-community/gpt2&quot; --dataset_name &quot;wikitext&quot; --dataset_config_name &quot;wikitext-2-raw-v1&quot; --per_device_train_batch_size 8 --per_device_eval_batch_size 8 --output_dir &quot;/tmp/test-clm-notrainer&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests_debug" type="PythonConfigurationType" factoryName="Python">
+      <module name="dynabicChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py" />
+      <option name="PARAMETERS" value="--model_name_or_path &quot;openai-community/gpt2&quot; --dataset_name &quot;wikitext&quot; --dataset_config_name &quot;wikitext-2-raw-v1&quot; --per_device_train_batch_size 8 --per_device_eval_batch_size 8 --output_dir &quot;/tmp/test-clm-notrainer&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.DatasetUtils" />
-      <item itemvalue="Python.FinetuningModel" />
-      <item itemvalue="Python.docstoreplay" />
-      <item itemvalue="Python.main_qa" />
       <item itemvalue="Python.UITest" />
+      <item itemvalue="Python.tests_debug" />
+      <item itemvalue="Python.tests_accelerate" />
+      <item itemvalue="Python.FinetuningModel" />
+      <item itemvalue="Python.main_qa" />
+      <item itemvalue="Python.docstoreplay" />
+      <item itemvalue="Python.DatasetUtils" />
+      <item itemvalue="Python.test_copilot" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_copilot" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.200" />
-        <option value="bundled-python-sdk-86178adc3299-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.200" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -236,7 +304,13 @@
       <workItem from="1715509157903" duration="1198000" />
       <workItem from="1715510393872" duration="7544000" />
       <workItem from="1715521248387" duration="2941000" />
-      <workItem from="1715579033047" duration="31747000" />
+      <workItem from="1715579033047" duration="33435000" />
+      <workItem from="1716636789920" duration="3210000" />
+      <workItem from="1716810494332" duration="34000" />
+      <workItem from="1716810707545" duration="500000" />
+      <workItem from="1716811371922" duration="310000" />
+      <workItem from="1716811690275" duration="196000" />
+      <workItem from="1716811901481" duration="5669000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -278,7 +352,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715517971640</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Significant fixes">
+      <option name="closed" value="true" />
+      <created>1715679200939</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715679200940</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Significant fixes">
+      <option name="closed" value="true" />
+      <created>1715679227961</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715679227961</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,41 +438,41 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_api.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_api.py</url>
           <line>147</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
           <line>110</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
           <line>116</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
           <line>104</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/__init__.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/__init__.py</url>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
           <line>8</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
           <line>20</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
           <line>24</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
@@ -452,7 +542,7 @@
           <option name="timeStamp" value="187" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain_community/vectorstores/faiss.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain_community/vectorstores/faiss.py</url>
           <line>1092</line>
           <option name="timeStamp" value="201" />
         </line-breakpoint>
@@ -462,57 +552,57 @@
           <option name="timeStamp" value="213" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain_core/prompts/base.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain_core/prompts/base.py</url>
           <line>289</line>
           <option name="timeStamp" value="215" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
           <line>49</line>
           <option name="timeStamp" value="226" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
           <line>39</line>
           <option name="timeStamp" value="227" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
           <line>43</line>
           <option name="timeStamp" value="228" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
           <line>53</line>
           <option name="timeStamp" value="229" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
           <line>110</line>
           <option name="timeStamp" value="230" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/history_aware_retriever.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/history_aware_retriever.py</url>
           <line>51</line>
           <option name="timeStamp" value="233" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/base.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/base.py</url>
           <line>278</line>
           <option name="timeStamp" value="239" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/chains/router/llm_router.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/chains/router/llm_router.py</url>
           <line>44</line>
           <option name="timeStamp" value="240" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/chains/sequential.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/chains/sequential.py</url>
           <line>46</line>
           <option name="timeStamp" value="241" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/base.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/base.py</url>
           <line>252</line>
           <option name="timeStamp" value="242" />
         </line-breakpoint>
@@ -522,17 +612,17 @@
           <option name="timeStamp" value="264" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
           <line>982</line>
           <option name="timeStamp" value="265" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
           <line>1045</line>
           <option name="timeStamp" value="266" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
           <line>980</line>
           <option name="timeStamp" value="267" />
         </line-breakpoint>
@@ -556,6 +646,26 @@
           <line>91</line>
           <option name="timeStamp" value="280" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py</url>
+          <line>240</line>
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/trl/trainer/sft_trainer.py</url>
+          <line>212</line>
+          <option name="timeStamp" value="283" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py</url>
+          <line>647</line>
+          <option name="timeStamp" value="284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -575,11 +685,14 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dynabicChatbot$tests_accelerate.coverage" NAME="tests_accelerate Coverage Results" MODIFIED="1716815325014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CleanDataset.coverage" NAME="CleanDataset Coverage Results" MODIFIED="1712135395376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1715602170467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$docstoreplay.coverage" NAME="docstoreplay Coverage Results" MODIFIED="1715263362848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$UITest.coverage" NAME="UITest Coverage Results" MODIFIED="1715677862751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$DatasetUtils.coverage" NAME="DatasetUtils Coverage Results" MODIFIED="1715358261949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$FinetuningModel.coverage" NAME="FinetuningModel Coverage Results" MODIFIED="1715339562971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$test_copilot.coverage" NAME="test_copilot Coverage Results" MODIFIED="1716812432596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$tests__1_.coverage" NAME="tests (1) Coverage Results" MODIFIED="1716815144684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
