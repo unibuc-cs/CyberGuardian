@@ -4,3 +4,6 @@ etl/__pycache__/*.*
 vectors/*.*
  __pycache__/*.*
 */ __pycache__/*.*
+/LLM/rawtrainedmodel/
+**/__pycache__/
+**/__pycache__/*.*

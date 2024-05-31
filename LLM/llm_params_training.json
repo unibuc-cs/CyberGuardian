@@ -1,0 +1,14 @@
+{
+  "model_name_or_path": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "per_device_train_batch_size": 1,
+    "per_device_eval_batch_size": 1,
+    "use_4bit_double_quant": false,
+    "use_8bit_quant": false,
+    "output_dir": "./LLM/rawtrainedmodel",
+    "with_tracking": true,
+    "report_to": "tensorboard",
+    "checkpointing_steps": "50percent",
+    "max_train_steps": 100,
+    "max_eval_steps": 1,
+    "resume_from_checkpoint": "last"
+}

@@ -12,6 +12,9 @@ os.environ["MONGODB_COLLECTION_RAG"] = "knowledgerag"
 os.environ["VECTOR_DIR_MAIN"] = "./RAGSupport/vectors"
 os.environ["VECTOR_DIR_RAG"] = "./RAGSupport/vectors_rag"
 
+os.environ["LLM_PARAMS_PATH_INFERENCE"] = os.path.join("LLM", "llm_params_inference.json")
+os.environ["LLM_PARAMS_PATH_TRAINING"] = os.path.join("LLM", "llm_params_training.json")
+
 
 # WHICH DB to use for RAG ? IF both are false, it will use ONLY the Data for rag
 os.environ["USE_MAIN_KNOWLEDGE_FOR_RAG"] = "False"

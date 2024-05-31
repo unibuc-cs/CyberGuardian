@@ -5,14 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="Significant fixes">
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/test_copilot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dynabicChatbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dynabicChatbot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Training.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LLM/CyberGuardinaLLM_args.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LLM/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LLM/llm_params_inference.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LLM/llm_params_training.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FinetuningModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/FinetuningModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/dataSettings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/dataSettings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLM/FinetuningModel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play with REACT and tools including custom.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play with REACT and tools including custom.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play_chatbot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play_chatbot.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/ciptest_qanda_good.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/ciptest_qanda_good.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/test_copilot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI" beforeDir="false" afterPath="$PROJECT_DIR$/UI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/clientserverUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/clientserverUtils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +55,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -77,33 +91,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.CleanDataset.executor": "Debug",
-    "Python.DatasetUtils.executor": "Run",
-    "Python.FinetuningModel.executor": "Debug",
-    "Python.UITest.executor": "Run",
-    "Python.docstoreplay.executor": "Run",
-    "Python.main_qa.executor": "Run",
-    "Python.test_copilot.executor": "Debug",
-    "Python.tests (1).executor": "Debug",
-    "Python.tests_accelerate.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
-    "two.files.diff.last.used.file": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/Data/projsecrets.py",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.CleanDataset.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.CyberGuardianLLM_InferenceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.CyberGuardianLLM_Training_accelerate.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.CyberGuardianLLM_Training_debug (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.CyberGuardianLLM_Training_debug.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.DatasetUtils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FinetuningModel.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.UITest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.asccelerate_tests_gpt2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.docstoreplay.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_qa.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.test_copilot.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.tests (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Python.tests_accelerate.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.tests_debug.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/Data/projsecrets.py&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
@@ -139,17 +159,90 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\LLM" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\LLM" />
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\SyntheticGeneratorsAndExperiments" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI\localdata\credentials" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\RAGSupport" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data2\sources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tests_debug">
+  <component name="RunManager" selected="Python.main_qa">
+    <configuration name="CyberGuardianLLM_InferenceTest" type="PythonConfigurationType" factoryName="Python">
+      <module name="dynabicChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
+      <option name="WORKING_DIRECTORY" value="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CyberGuardianLLM_Training_accelerate" type="PythonConfigurationType" factoryName="Python">
+      <module name="dynabicChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="launch $PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py --model_name_or_path &quot;openai-community/gpt2&quot; --dataset_name &quot;wikitext&quot; --dataset_config_name &quot;wikitext-2-raw-v1&quot; --per_device_train_batch_size 8 --per_device_eval_batch_size 8 --output_dir &quot;/tmp/test-clm-notrainer&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CyberGuardianLLM_Training_debug" type="PythonConfigurationType" factoryName="Python">
+      <module name="dynabicChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
+      <option name="WORKING_DIRECTORY" value="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LLM/CyberGuardianLLM_Training.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="UITest" type="PythonConfigurationType" factoryName="Python">
       <module name="dynabicChatbot" />
       <option name="ENV_FILES" value="" />
@@ -196,58 +289,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tests_accelerate" type="PythonConfigurationType" factoryName="Python">
-      <module name="dynabicChatbot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="launch $PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py --model_name_or_path &quot;openai-community/gpt2&quot; --dataset_name &quot;wikitext&quot; --dataset_config_name &quot;wikitext-2-raw-v1&quot; --per_device_train_batch_size 8 --per_device_eval_batch_size 8 --output_dir &quot;/tmp/test-clm-notrainer&quot;" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests_debug" type="PythonConfigurationType" factoryName="Python">
-      <module name="dynabicChatbot" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py" />
-      <option name="PARAMETERS" value="--model_name_or_path &quot;openai-community/gpt2&quot; --dataset_name &quot;wikitext&quot; --dataset_config_name &quot;wikitext-2-raw-v1&quot; --per_device_train_batch_size 8 --per_device_eval_batch_size 8 --output_dir &quot;/tmp/test-clm-notrainer&quot;" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.UITest" />
-      <item itemvalue="Python.tests_debug" />
-      <item itemvalue="Python.tests_accelerate" />
+      <item itemvalue="Python.CyberGuardianLLM_Training_debug" />
+      <item itemvalue="Python.CyberGuardianLLM_InferenceTest" />
+      <item itemvalue="Python.CyberGuardianLLM_Training_accelerate" />
       <item itemvalue="Python.FinetuningModel" />
       <item itemvalue="Python.main_qa" />
       <item itemvalue="Python.docstoreplay" />
@@ -310,7 +356,10 @@
       <workItem from="1716810707545" duration="500000" />
       <workItem from="1716811371922" duration="310000" />
       <workItem from="1716811690275" duration="196000" />
-      <workItem from="1716811901481" duration="5669000" />
+      <workItem from="1716811901481" duration="49779000" />
+      <workItem from="1717044762531" duration="622000" />
+      <workItem from="1717046794074" duration="25692000" />
+      <workItem from="1717130773946" duration="18789000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -368,7 +417,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715679227961</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Significant fixes">
+      <option name="closed" value="true" />
+      <created>1716818525605</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716818525605</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,16 +584,6 @@
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/FinetuningModel.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="180" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/FinetuningModel.py</url>
-          <line>102</line>
-          <option name="timeStamp" value="183" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Data/etlUtils/DatasetUtils.py</url>
           <line>70</line>
           <option name="timeStamp" value="187" />
@@ -608,63 +655,88 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>588</line>
+          <line>597</line>
           <option name="timeStamp" value="264" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
           <line>982</line>
           <option name="timeStamp" value="265" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
           <line>1045</line>
           <option name="timeStamp" value="266" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
           <line>980</line>
           <option name="timeStamp" value="267" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>611</line>
+          <line>620</line>
           <option name="timeStamp" value="269" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>624</line>
+          <line>633</line>
           <option name="timeStamp" value="270" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>605</line>
+          <line>614</line>
           <option name="timeStamp" value="271" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py</url>
           <line>91</line>
           <option name="timeStamp" value="280" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py</url>
-          <line>240</line>
-          <option name="timeStamp" value="282" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/trl/trainer/sft_trainer.py</url>
           <line>212</line>
           <option name="timeStamp" value="283" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py</url>
-          <line>647</line>
-          <option name="timeStamp" value="284" />
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM_Training.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-862429092/-1298038738/transformers/models/auto/tokenization_auto.py</url>
+          <line>894</line>
+          <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LLM/CyberGuardinaLLM_args.py</url>
+          <line>209</line>
+          <option name="timeStamp" value="291" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/tests.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="285" />
+          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM.py</url>
+          <line>636</line>
+          <option name="timeStamp" value="332" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM.py</url>
+          <line>616</line>
+          <option name="timeStamp" value="333" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
+          <line>328</line>
+          <option name="timeStamp" value="352" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM_Training.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="356" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="358" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -685,14 +757,18 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717149510442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug__1_.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717070715688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$asccelerate_tests_gpt2.coverage" NAME="asccelerate_tests_gpt2 Coverage Results" MODIFIED="1716976279653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1717150123566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$DatasetUtils.coverage" NAME="DatasetUtils Coverage Results" MODIFIED="1715358261949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug.coverage" NAME="CyberGuardianLLM_Training_debug Coverage Results" MODIFIED="1717149819547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$tests__1_.coverage" NAME="CyberGuardianLLM_Training_debug Coverage Results" MODIFIED="1717001669349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$tests_accelerate.coverage" NAME="tests_accelerate Coverage Results" MODIFIED="1716815325014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CleanDataset.coverage" NAME="CleanDataset Coverage Results" MODIFIED="1712135395376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1715602170467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$docstoreplay.coverage" NAME="docstoreplay Coverage Results" MODIFIED="1715263362848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$UITest.coverage" NAME="UITest Coverage Results" MODIFIED="1715677862751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$DatasetUtils.coverage" NAME="DatasetUtils Coverage Results" MODIFIED="1715358261949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$FinetuningModel.coverage" NAME="FinetuningModel Coverage Results" MODIFIED="1715339562971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$FinetuningModel.coverage" NAME="FinetuningModel Coverage Results" MODIFIED="1716992434839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$test_copilot.coverage" NAME="test_copilot Coverage Results" MODIFIED="1716812432596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$tests__1_.coverage" NAME="tests (1) Coverage Results" MODIFIED="1716815144684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

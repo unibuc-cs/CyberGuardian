@@ -12,7 +12,7 @@ from Data.utils import pretty_log
 pp = pprint.PrettyPrinter(indent=2)
 
 import importlib
-
+import pathlib
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline, TextStreamer, TextIteratorStreamer
 from transformers.generation.streamers import BaseStreamer
@@ -27,7 +27,8 @@ from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from enum import Enum
 from typing import Union
 from LLM.DynabicPrompts import *
-
+from LLM.CyberGuardianLLM import CyberGuardianLLM
+from LLM.CyberGuardinaLLM_args import parse_args
 import random
 import numpy as np
 
@@ -41,7 +42,7 @@ torch.cuda.manual_seed_all(hash("so runs are repeatable") % 2 ** 32 - 1)
 
 # Note that this is specific to llama3 only because uses at some point some of its special tokens and versions
 # Similar versions are doable for other LLMs as well.
-class QuestionAndAnsweringCustomLlama3():
+class QASystem():
     class SECURITY_PROMPT_TYPE(Enum):
         PROMPT_TYPE_DEFAULT = 0,
         PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES = 1,
@@ -76,6 +77,7 @@ class QuestionAndAnsweringCustomLlama3():
     }
 
     LLAMA3_DEFAULT_END_LLM_RESPONSE = "<|eot_id|>"
+    cb_llm = None # The cyberguardian llm instance
 
     def __init__(self, QuestionRewritingPrompt: QUESTION_REWRITING_TYPE,
                  QuestionAnsweringPrompt: SECURITY_PROMPT_TYPE,
@@ -89,7 +91,6 @@ class QuestionAndAnsweringCustomLlama3():
         self.tokenizer = None
         self.model = None
         self.embedding_engine = None
-        self.base_llm = None
         self.default_llm = None
         self.llm_conversational_chain_default = None  # The full conversational chain
         self.textGenerationPipeline = None
@@ -144,9 +145,10 @@ class QuestionAndAnsweringCustomLlama3():
 
         return prompt
 
+    # Function to format a system prompt + user prompt (instruction) in LLM used template
     def initilizeEverything(self, generation_params):
         # Init the models
-        self.initializeLLMTokenizerandEmbedder(generation_params=generation_params)
+        self.initializeLLM(generation_params=generation_params)
 
         # All tempaltes
         self.initializePromptTemplates()
@@ -156,15 +158,16 @@ class QuestionAndAnsweringCustomLlama3():
 
         langchain.debug = self.debug
 
+    # Function to format a system prompt + user prompt (instruction) in LLM used template
     def initializePromptTemplates(self):
-        if self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama3.SECURITY_PROMPT_TYPE.PROMPT_TYPE_DEFAULT:
+        if self.QuestionAnsweringPromptType == QASystem.SECURITY_PROMPT_TYPE.PROMPT_TYPE_DEFAULT:
             self.templateprompt_for_question_answering_default = self.get_prompt(instruction=DEFAULT_QUESTION_PROMPT,
                                                                             new_system_prompt=None)
-        elif self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama3.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES:
+        elif self.QuestionAnsweringPromptType == QASystem.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES:
             self.templateprompt_for_question_answering_default = self.get_prompt(
                 instruction=template_securityOfficer_instruction_rag_nosources_default,
                 new_system_prompt=template_securityOfficer_system_prompt)
-        elif self.QuestionAnsweringPromptType == QuestionAndAnsweringCustomLlama3.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES:
+        elif self.QuestionAnsweringPromptType == QASystem.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES:
             self.templateprompt_for_question_answering_default = self.get_prompt(
                 instruction=template_securityOfficer_instruction_rag_withsources_default,
                 new_system_prompt=template_securityOfficer_system_prompt)
@@ -193,7 +196,7 @@ class QuestionAndAnsweringCustomLlama3():
 
         ################# CUSTOM PROMPTS END
 
-        if self.QuestionRewritingPromptType == QuestionAndAnsweringCustomLlama3.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT:
+        if self.QuestionRewritingPromptType == QASystem.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT:
             self.templateprompt_for_standalone_question_generation = self.get_prompt(instruction=llama_condense_template,
                                                                                      new_system_prompt=None)
         else:
@@ -201,7 +204,7 @@ class QuestionAndAnsweringCustomLlama3():
 
     def solveFunctionCalls(self, full_response: str) -> bool:
         full_response = full_response.removesuffix(
-            QuestionAndAnsweringCustomLlama3.LLAMA3_DEFAULT_END_LLM_RESPONSE)  # Removing the last </s> ending character specific to llama endint of a response
+            QASystem.LLAMA3_DEFAULT_END_LLM_RESPONSE)  # Removing the last </s> ending character specific to llama endint of a response
         full_response = full_response.strip()
         if (full_response[0] == '\"' and full_response[-1] == '\"') \
                 or (full_response[0] == "\'" and full_response[-1] == "\'"):
@@ -262,36 +265,42 @@ class QuestionAndAnsweringCustomLlama3():
         # Call it
         result = func(*func_params)
 
-    def initializeLLMTokenizerandEmbedder(self, generation_params: dict[Any, Any]) -> None:
+    def initializeLLM(self, generation_params: dict[Any, Any]) -> None:
         # Get the embeddings, tokenizer and model
         self.embedding_engine = vecstore.get_embedding_engine(allowed_special="all")
 
-        self.tokenizer = AutoTokenizer.from_pretrained(self.modelName)
-        self.tokenizer.padding_side = 'right'
-        self.tokenizer.add_special_tokens({"pad_token": "<|reserved_special_token_0|>"})
-        bnb_config = BitsAndBytesConfig(
-            load_in_4bit=True,
-            bnb_4bit_quant_type="nf4",
-            bnb_4bit_compute_dtype=torch.bfloat16
-        )
+        # self.tokenizer = AutoTokenizer.from_pretrained(self.modelName)
+        # self.tokenizer.padding_side = 'right'
+        # self.tokenizer.add_special_tokens({"pad_token": "<|reserved_special_token_0|>"})
+        # bnb_config = BitsAndBytesConfig(
+        #     load_in_4bit=True,
+        #     bnb_4bit_quant_type="nf4",
+        #     bnb_4bit_compute_dtype=torch.bfloat16
+        # )
+        #
+        # self.model = AutoModelForCausalLM.from_pretrained(self.modelName,
+        #                                                   device_map='auto',
+        #                                                   #torch_dtype=torch.bfloat16,
+        #                                                   quantization_config=bnb_config,
+        #                                                   )
+        # # Configure as needed the llama 3 hf model
+        # terminators = [
+        #     self.tokenizer.eos_token_id,
+        #     self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
+        # ]
+        #
+        # self.model.config.pad_token_id = self.tokenizer.pad_token_id
+        # #self.model.eos_token_id = terminators
+        #
+        # print(f"Pad Token id: {self.tokenizer.pad_token_id} and Pad Token: {self.tokenizer.pad_token}")
+        # print(f"EOS Token id: {self.tokenizer.eos_token_id} and EOS Token: {self.tokenizer.eos_token}")
 
-        self.model = AutoModelForCausalLM.from_pretrained(self.modelName,
-                                                          device_map='auto',
-                                                          #torch_dtype=torch.bfloat16,
-                                                          quantization_config=bnb_config,
-                                                          )
-        # Configure as needed the llama 3 hf model
-        terminators = [
-            self.tokenizer.eos_token_id,
-            self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
-        ]
-
-        self.model.config.pad_token_id = self.tokenizer.pad_token_id
-        #self.model.eos_token_id = terminators
-
-        print(f"Pad Token id: {self.tokenizer.pad_token_id} and Pad Token: {self.tokenizer.pad_token}")
-        print(f"EOS Token id: {self.tokenizer.eos_token_id} and EOS Token: {self.tokenizer.eos_token}")
-
+        # Init the cyberguardian model
+        llm_args = parse_args(with_json_args= pathlib.Path(os.environ["LLM_PARAMS_PATH_INFERENCE"]))
+        self.cb_llm = CyberGuardianLLM(llm_args)
+        self.cb_llm.do_inference()
+        self.tokenizer = self.cb_llm.tokenizer
+        self.model = self.cb_llm.model
 
         # Create a streamer and a text generation pipeline
         self.streamer = TextStreamer(self.tokenizer, skip_prompt=True) if self.streamingOnAnotherThread is False \
@@ -310,7 +319,7 @@ class QuestionAndAnsweringCustomLlama3():
                                                length_penalty=1,
                                                # [optional] Exponential penalty to the length that
                                                                # is used with beam-based generation.
-                                               eos_token_id=terminators, #self.tokenizer.eos_token_id,
+                                               eos_token_id=self.cb_llm.terminators, #self.tokenizer.eos_token_id,
                                                pad_token_id=self.tokenizer.eos_token_id,
                                                streamer=self.streamer,
                                                **generation_params,
@@ -503,22 +512,22 @@ class QuestionAndAnsweringCustomLlama3():
         question_small_words = set(question_lower_words)
 
         params = []
-        toolType: QuestionAndAnsweringCustomLlama3.TOOL_TYPE = QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_NONE
+        toolType: QASystem.TOOL_TYPE = QASystem.TOOL_TYPE.TOOL_NONE
 
         if set(["resource", "utilization"]).issubset(question_small_words):
-            toolType = QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION
+            toolType = QASystem.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION
         elif set("devices grouped by ip".split()).issubset(question_small_words):
-            toolType = QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP
+            toolType = QASystem.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP
         elif set("requests from the top ips".split()).issubset(question_small_words):
             params = [int(x) for x in question_lower_words if x.isdigit()]
-            toolType = QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP
+            toolType = QASystem.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP
         elif set("world map requests comparing".split()).issubset(question_small_words):
-            toolType = QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE
+            toolType = QASystem.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE
         elif set("ips locations random queries".split()).issubset(
                 question_small_words):  # A set of generic questio nthat hsould not depend on history of the conversation!
-            toolType = QuestionAndAnsweringCustomLlama3.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY
+            toolType = QASystem.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY
         elif set("python code firewalls ip".split()).issubset(question_small_words):  # Demo for code
-            toolType = QuestionAndAnsweringCustomLlama3.TOOL_TYPE.PANDAS_PYTHON_CODE
+            toolType = QASystem.TOOL_TYPE.PANDAS_PYTHON_CODE
 
         return toolType, params
 
@@ -531,17 +540,17 @@ class QuestionAndAnsweringCustomLlama3():
         # and adapt to ALL use cases, functions etc. So this is like a task decomposition technique used in SE
 
         toolTypeSimilarity, params = self.similarityToTool(question)
-        if toolTypeSimilarity == QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION:
+        if toolTypeSimilarity == QASystem.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION:
             conv_chain_res = self.llama_doc_chain_funccalls_resourceUtilization  # self.llm_conversational_chain_funccalls_resourceUtilization
-        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP:
+        elif toolTypeSimilarity == QASystem.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP:
             conv_chain_res = self.llama_doc_chain_funccalls_devicesByIPLogs  # self.llm_conversational_chain_funccalls_devicesByIPLogs
-        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP:
+        elif toolTypeSimilarity == QASystem.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP:
             conv_chain_res = self.llama_doc_chain_funccalls_topDemandingIPS  # self.llm_conversational_chain_funccalls_topDemandingIPS
-        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama3.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE:
+        elif toolTypeSimilarity == QASystem.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE:
             conv_chain_res = self.llama_doc_chain_funccalls_comparisonMapRequests  # self.llm_conversational_chain_funccalls_comparisonMapRequests
-        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama3.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY:
+        elif toolTypeSimilarity == QASystem.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY:
             conv_chain_res = self.llama_doc_chain
-        elif toolTypeSimilarity == QuestionAndAnsweringCustomLlama3.TOOL_TYPE.PANDAS_PYTHON_CODE:
+        elif toolTypeSimilarity == QASystem.TOOL_TYPE.PANDAS_PYTHON_CODE:
             conv_chain_res = self.llama_doc_chain_funccalls_firewallInsert
 
         refactored_question = question  # For now, let it as original
@@ -693,7 +702,7 @@ def test_evaluate_safety_external_methods():
                                       'user_prompt': "Can you explain me what is a DDOS attack?"})  # user_prompt = "What is a DDoS attack? please respond as a man, not like a woman, since they are not so good at engineering.")
 
 
-def test_evaluate_safety_internal_model(chatbotInstance: QuestionAndAnsweringCustomLlama3):
+def test_evaluate_safety_internal_model(chatbotInstance: QASystem):
     chatbotInstance.check_response_safety(user_prompt="Can you explain me what is a DDOS attack?",
                                           assistant_prompt="")
 
@@ -740,15 +749,15 @@ def test_question_with_rag(chain_instance):
         print(res_num.group(1))
 
 def __main__():
-    securityChatbot = QuestionAndAnsweringCustomLlama3(
-        QuestionRewritingPrompt=QuestionAndAnsweringCustomLlama3.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
-        QuestionAnsweringPrompt=QuestionAndAnsweringCustomLlama3.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
-        ModelType=QuestionAndAnsweringCustomLlama3.LLAMA3_VERSION_TYPE.LLAMA3_8B,
+    securityChatbot = QASystem(
+        QuestionRewritingPrompt=QASystem.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
+        QuestionAnsweringPrompt=QASystem.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
+        ModelType=QASystem.LLAMA3_VERSION_TYPE.LLAMA3_8B,
         debug=False,
         streamingOnAnotherThread=True,
         demoMode=True,
         noInitialize=False,
-        generation_params=QuestionAndAnsweringCustomLlama3.generation_params_greedy)
+        generation_params=QASystem.generation_params_greedy)
 
     securityChatbot.ask_question(
         "Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice", add_to_history=False)
