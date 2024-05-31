@@ -1,6 +1,8 @@
 # DynabicChatbot
 
-## TODO:
+## TODO: 
+ - Write a proper documentat!
+ - Difference in responses between EXPERT and begginer expertise + how risks from user evaluation are taken into consideration by the LLM  etc.
  - Sync https://huggingface.co/datasets/unibuc-cs/CyberGuardianDataset as a submodule , cleanup things here and use that subfolder!
  - Clarify the FinetuningModel.py and if LoRA weights can be uploaded on hugging face.
  - Change the names.
