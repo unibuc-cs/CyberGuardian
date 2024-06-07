@@ -1,7 +1,7 @@
 """Utilities for creating and using vector indexes."""
 import os
 from pathlib import Path
-
+from langchain_community.vectorstores import FAISS
 from Data import dataSettings
 from Data.utils import pretty_log
 
@@ -13,7 +13,7 @@ VECTOR_DIR_RAG= Path(os.environ["VECTOR_DIR_RAG"])
 
 def connect_to_vector_index(index_path, index_name, embedding_engine):
     """Adds the texts and metadatas to the vector index."""
-    from langchain_community.vectorstores import FAISS
+
 
     vector_index = FAISS.load_local(index_path, embedding_engine, index_name,
                                     allow_dangerous_deserialization= True)
@@ -23,7 +23,7 @@ def connect_to_vector_index(index_path, index_name, embedding_engine):
 
 def get_embedding_engine(**kwargs):
     """Retrieves the embedding engine."""
-    from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
+    from langchain_huggingface import HuggingFaceEmbeddings
     embed_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
     return embed_model
 
@@ -31,8 +31,6 @@ def get_embedding_engine(**kwargs):
 
 def create_vector_index(vectorIndexPath, index_name, embedding_engine, documents, metadatas):
     """Creates a vector index that offers similarity search."""
-    from langchain_community.vectorstores import FAISS
-
     files = vectorIndexPath.glob(f"{index_name}.*")
     if files:
         for file in files:

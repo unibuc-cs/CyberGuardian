@@ -8,7 +8,7 @@
     "with_tracking": true,
     "report_to": "tensorboard",
     "checkpointing_steps": "50percent",
-    "max_train_steps": 100,
-    "max_eval_steps": 1,
+    "num_train_epochs": 3,
+    "max_eval_steps": 10,
     "resume_from_checkpoint": "last"
 }

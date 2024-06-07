@@ -340,8 +340,8 @@ class CyberGuardianLLM:
     def prepare_training(self):
         # Add the Lora adapter to the model
         peft_config = peft_config = LoraConfig(
-            r=16,
-            lora_alpha=32,
+            r=8,
+            lora_alpha=16,
             lora_dropout=0.05,
             bias="none",
             task_type="CAUSAL_LM",

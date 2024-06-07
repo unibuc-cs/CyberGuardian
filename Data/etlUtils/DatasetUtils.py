@@ -12,6 +12,7 @@ from Data.etlUtils import etl_videos
 import docstore
 from Data.etlUtils import vecstore
 from Data.utils import pretty_log
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 pp = pprint.PrettyPrinter(indent=2)
 
@@ -35,7 +36,6 @@ def prep_documents_for_vector_storage(documents, num_documents):
     Arguments:
         documents: A list of LangChain.Documents with text, metadata, and a hash ID.
     """
-    from langchain.text_splitter import RecursiveCharacterTextSplitter
 
     text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
         chunk_size=500, chunk_overlap=100, allowed_special="all"

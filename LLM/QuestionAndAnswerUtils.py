@@ -5,9 +5,12 @@ import pprint
 from typing import Any, Tuple
 
 from Data.etlUtils import vecstore
+from langchain_community.vectorstores import FAISS
 
 import langchain
 from Data.utils import pretty_log
+from langchain_huggingface import HuggingFacePipeline
+from langchain_core.prompts import PromptTemplate
 
 pp = pprint.PrettyPrinter(indent=2)
 
@@ -16,8 +19,6 @@ import pathlib
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline, TextStreamer, TextIteratorStreamer
 from transformers.generation.streamers import BaseStreamer
-from langchain.llms.huggingface_pipeline import HuggingFacePipeline
-from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.memory import \
     ConversationBufferMemory  # TODO: replace with ChatMessageHistory ->> Chgeck the Prompt Engineering with Llama 2 notebook !
