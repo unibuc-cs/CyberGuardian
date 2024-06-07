@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="Significant fixes">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/CyberGuardianLLM_InferenceTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/CyberGuardianLLM_Training_debug.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/UITest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/UITest_EA_PC.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_qa_EA_PC.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dynabicChatbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dynabicChatbot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/DatasetUtils.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/DatasetUtils.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/FinetuningModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay_EA_PC.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/docstoreplay.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_qa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_qa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_2024_13_36_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_05_2024_13_36__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="Upgraded to new langchain API, new FAISS indexes and scripts">
+      <change afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM_PushToHub.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/etlUtils/DatasetUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/etlUtils/DatasetUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/llm_params_training.json" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/llm_params_training.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/ciptest_qanda_good.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/ciptest_qanda_good.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projsecrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/projsecrets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +50,12 @@
   &quot;prStates&quot;: []
 }</component>
   <component name="GitLabMergeRequestsSettings">{}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/unibuc-cs/DynabicChatbot.git&quot;,
-    &quot;accountId&quot;: &quot;7aef0f43-25bc-455a-a1da-e602a264a564&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/unibuc-cs/CyberGuardian.git",
+    "accountId": "19706484-ee77-49cf-9727-d361dcb69408"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/tokenizers/__init__.pyi" root0="SKIP_INSPECTION" />
   </component>
@@ -109,13 +89,14 @@
     "Python.CyberGuardianLLM_Training_debug (1).executor": "Run",
     "Python.CyberGuardianLLM_Training_debug.executor": "Run",
     "Python.DatasetUtils.executor": "Run",
+    "Python.DatasetUtils_EA_PC.executor": "Run",
     "Python.FinetuningModel.executor": "Debug",
     "Python.UITest.executor": "Run",
     "Python.asccelerate_tests_gpt2.executor": "Run",
     "Python.docstoreplay.executor": "Run",
     "Python.docstoreplay_EA_PC.executor": "Debug",
     "Python.main_qa.executor": "Debug",
-    "Python.main_qa_EA_PC.executor": "Debug",
+    "Python.main_qa_EA_PC.executor": "Run",
     "Python.test_copilot.executor": "Debug",
     "Python.tests (1).executor": "Debug",
     "Python.tests_accelerate.executor": "Debug",
@@ -125,7 +106,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/miruna/CyberGuardian",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/miruna/CyberGuardian/LLM/CyberGuardianLLM_PushToHub.py",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -171,6 +152,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian\LLM" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\LLM" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
@@ -182,7 +164,30 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.DatasetUtils_EA_PC">
+  <component name="RunManager" selected="Python.CyberGuardianLLM_PushToHub_EA_PC">
+    <configuration name="CyberGuardianLLM_PushToHub_EA_PC" type="PythonConfigurationType" factoryName="Python">
+      <module name="dynabicChatbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LLM/CyberGuardianLLM_PushToHub.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="CyberGuardianLLM_Training_accelerate" type="PythonConfigurationType" factoryName="Python">
       <module name="dynabicChatbot" />
       <option name="ENV_FILES" value="" />
@@ -242,6 +247,7 @@
       <item itemvalue="Python.UITest_EA_PC" />
       <item itemvalue="Python.CyberGuardianLLM_Training_debug" />
       <item itemvalue="Python.CyberGuardianLLM_InferenceTest" />
+      <item itemvalue="Python.CyberGuardianLLM_PushToHub_EA_PC" />
       <item itemvalue="Python.CyberGuardianLLM_Training_accelerate" />
       <item itemvalue="Python.main_qa" />
       <item itemvalue="Python.main_qa_EA_PC" />
@@ -308,7 +314,7 @@
       <workItem from="1717689923947" duration="7028000" />
       <workItem from="1717743206024" duration="4844000" />
       <workItem from="1717759427332" duration="1210000" />
-      <workItem from="1717760670842" duration="1656000" />
+      <workItem from="1717760670842" duration="3895000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -374,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716818525605</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Upgraded to new langchain API, new FAISS indexes and scripts">
+      <option name="closed" value="true" />
+      <created>1717763177693</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717763177693</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +453,8 @@
     <MESSAGE value="LLama 3 and new stuff" />
     <MESSAGE value="fix" />
     <MESSAGE value="Significant fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Significant fixes" />
+    <MESSAGE value="Upgraded to new langchain API, new FAISS indexes and scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgraded to new langchain API, new FAISS indexes and scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -688,6 +703,16 @@
           <line>133</line>
           <option name="timeStamp" value="382" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM.py</url>
+          <line>176</line>
+          <option name="timeStamp" value="383" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM.py</url>
+          <line>616</line>
+          <option name="timeStamp" value="385" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -713,13 +738,14 @@
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717149510442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$tests__1_.coverage" NAME="CyberGuardianLLM_Training_debug Coverage Results" MODIFIED="1717001669349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$DatasetUtils.coverage" NAME="DatasetUtils Coverage Results" MODIFIED="1715358261949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <SUITE FILE_PATH="coverage/CyberGuardian$DatasetUtils_EA_PC.coverage" NAME="DatasetUtils_EA_PC Coverage Results" MODIFIED="1717762639406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug.coverage" NAME="CyberGuardianLLM_Training_debug Coverage Results" MODIFIED="1717149819547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$UITest.coverage" NAME="UITest Coverage Results" MODIFIED="1715677862751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug__1_.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717070715688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$FinetuningModel.coverage" NAME="FinetuningModel Coverage Results" MODIFIED="1716992434839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/CyberGuardian$CyberGuardianLLM_Training_debug.coverage" NAME="CyberGuardianLLM_Training_debug Coverage Results" MODIFIED="1717692281735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/CyberGuardian$main_qa_EA_PC.coverage" NAME="main_qa_EA_PC Coverage Results" MODIFIED="1717760806052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
-    <SUITE FILE_PATH="coverage/CyberGuardian$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717743681704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
+    <SUITE FILE_PATH="coverage/CyberGuardian$main_qa_EA_PC.coverage" NAME="main_qa_EA_PC Coverage Results" MODIFIED="1717762670801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
+    <SUITE FILE_PATH="coverage/CyberGuardian$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717764522142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
     <SUITE FILE_PATH="coverage/CyberGuardian$docstoreplay_EA_PC.coverage" NAME="docstoreplay_EA_PC Coverage Results" MODIFIED="1717762368111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$asccelerate_tests_gpt2.coverage" NAME="asccelerate_tests_gpt2 Coverage Results" MODIFIED="1716976279653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CleanDataset.coverage" NAME="CleanDataset Coverage Results" MODIFIED="1712135395376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

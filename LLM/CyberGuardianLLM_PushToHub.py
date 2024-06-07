@@ -12,15 +12,7 @@ def main():
     # Load default arguments
     args = parse_args(with_json_args=pathlib.Path(os.environ["LLM_PARAMS_PATH_INFERENCE"]))
     cg = CyberGuardianLLM(args)
-    cg.do_inference(push_to_hub=False)
-
-    messages = [
-        {"role": "system", "content": "You are an expert in cybersecurity"},
-        {"role": "user", "content": "What is cybersecurity?"},
-    ]
-
-    cg.test_model(messages)
-
+    cg.do_inference(push_to_hub=True)
 
 if __name__ == "__main__":
     main()

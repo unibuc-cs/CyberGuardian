@@ -69,9 +69,9 @@ class CyberGuardianLLM:
         self._do_training()
 
     # Do inference on the model
-    def do_inference(self):
+    def do_inference(self, push_to_hub=False):
         self.load_model_and_tokenizer()
-        self.prepare_inference()
+        self.prepare_inference(push_to_hub)
 
     def prepare_accelerator(self):
         # Initialize the accelerator. We will let the accelerator handle device placement for us in this example.
@@ -608,11 +608,14 @@ class CyberGuardianLLM:
                 with open(os.path.join(self.args.output_dir, "all_results.json"), "w") as f:
                     json.dump({"perplexity": perplexity}, f)
 
-    def prepare_inference(self):
+    def prepare_inference(self, push_to_hub=False):
         assert self.args.pretrained_peft_adapter_dir is not None, "You must provide a pretrained (PEFT) model path for inference"
 
         # Merge adapter with base model
         self.model.load_adapter(self.args.pretrained_peft_adapter_dir)
+
+        if push_to_hub:
+            self.model.push_to_hub("unibuc-cs/CyberGuardian")
 
     def test_model(self, messages: list):
         prompt = self.tokenizer.apply_chat_template(
