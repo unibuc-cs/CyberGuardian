@@ -29,7 +29,7 @@ NHOUSES = 30
 
 # If used, the device hacking will try to crawl the database with random searches using GET
 # Too many will basically block the server eventually
-USE_DEVICE_HACKING = True
+USE_DEVICE_HACKING = False
 START_TIME_HACKING = (60 * 60 * 10)  # At 10:00 AM
 PERCENT_OF_HACKED_DEVICES = 0.5  # Approximately 50% of devices
 PERCENT_OF_HACKED_HOUSES = 0.3 # 30%
@@ -369,10 +369,21 @@ def generateRandomDeployment(env: simpy.Environment,
                              globalHub: IoTHub,
                              nhouses: int,
                              center_lat: float,
-                             center_long: float):
+                             center_long: float,
+                             devices_suffixes: List[str]) -> None:
     locations = generate_random_LocData(center_lat, center_long, nhouses)
     baseIpAddresses = generate_random_ipAddresses(nhouses)
     fixedPort = 5776
+
+    # Iteration through devices names
+    it_device_suffix = 0
+    def get_device_suffix() -> str:
+        nonlocal it_device_suffix
+        res = devices_suffixes[it_device_suffix]
+        it_device_suffix += 1
+        if it_device_suffix >= len(devices_suffixes):
+            it_device_suffix = 0
+        return res
 
     # Generate each device type for each home
     for houseIndex in range(nhouses):
@@ -384,13 +395,13 @@ def generateRandomDeployment(env: simpy.Environment,
 
         ips = generate_random_ipAddresses(5)
 
-        tv = IoTDeviceSmartTV(env, ips[0], fixedPort, globalHub, f"{houseIndex}_tv", lat, long)
-        brush = IoTDeviceSmartBrush(env, ips[1], fixedPort, globalHub, f"{houseIndex}_brush", lat, long)
-        window = IoTDeviceSmartWindow(env, ips[2], fixedPort, globalHub, f"{houseIndex}_window", lat,
+        tv = IoTDeviceSmartTV(env, ips[0], fixedPort, globalHub, f"{houseIndex}_{get_device_suffix()}", lat, long)
+        brush = IoTDeviceSmartBrush(env, ips[1], fixedPort, globalHub, f"{houseIndex}_{get_device_suffix()}", lat, long)
+        window = IoTDeviceSmartWindow(env, ips[2], fixedPort, globalHub, f"{houseIndex}_{get_device_suffix()}", lat,
                                       long)
-        flower = IoTDeviceSmartFlower(env, ips[3], fixedPort, globalHub, f"{houseIndex}_flower", lat,
+        flower = IoTDeviceSmartFlower(env, ips[3], fixedPort, globalHub, f"{houseIndex}_{get_device_suffix()}", lat,
                                       long)
-        kettle = IoTDeviceSmartKettle(env, ips[4], fixedPort, globalHub, f"{houseIndex}_kettle", lat,
+        kettle = IoTDeviceSmartKettle(env, ips[4], fixedPort, globalHub, f"{houseIndex}_{get_device_suffix()}", lat,
                                       long)
 
         devicesOnThisHouse = [tv, brush, window, flower, kettle]
@@ -411,12 +422,12 @@ def main():
     # Create environment
     env = simpy.Environment()
 
-    central_lat = 44.42810022576185
-    central_long = 26.10414240626916
+    central_lat = 38.73793967977336
+    central_long = -9.153712098505773
 
     # Create central hub
     hub = IoTHub(env, num_loggers=33, num_store_metrics=33, num_rules_processors=2,
-                 ip="127.128.23.45", long=str(26.10414240626916), lat=str(44.42810022576185))
+                 ip="127.128.23.45", long=str(central_long), lat=str(central_lat))
 
     hub.start()
 
@@ -424,8 +435,10 @@ def main():
     generateRandomDeployment(env,
                              hub,
                              nhouses=NHOUSES,
-                             center_lat=central_lat,  # Somewhere Romania
-                             center_long=central_long)
+                             center_lat=central_lat,  # Central Lisbon
+                             center_long=central_long,
+                             #devices_suffixes=["_tv", "_brush", "_window", "_flower", "_kettle"])
+                             devices_suffixes=["_INFOSRV", "_PACS", "_DOMAIN", "_XRAY", "_DICOM"])
 
     # Create the hacker if needed
     if USE_DEVICE_HACKING:

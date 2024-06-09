@@ -3,6 +3,7 @@
 
 
 import argparse
+import os.path
 from pathlib import Path
 import json
 
@@ -209,7 +210,9 @@ def parse_args(with_json_args: Path = None):
     args = parser.parse_args()
 
 
-    #cwd = os.getcwd()
+    cwd = os.getcwd()
+    if not os.path.exists(with_json_args):
+        with_json_args = Path(f"../{with_json_args}")
     with open(with_json_args, 'rt') as f:
         args.__dict__.update(json.load(f))
 

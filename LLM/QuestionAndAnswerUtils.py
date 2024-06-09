@@ -517,12 +517,13 @@ class QASystem():
 
         if set(["resource", "utilization"]).issubset(question_small_words):
             toolType = QASystem.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION
-        elif set("devices grouped by ip".split()).issubset(question_small_words):
+        elif set("devices grouped by ip".split()).issubset(question_small_words) or \
+                set("services grouped by ip".split()).issubset(question_small_words):
             toolType = QASystem.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP
         elif set("requests from the top ips".split()).issubset(question_small_words):
             params = [int(x) for x in question_lower_words if x.isdigit()]
             toolType = QASystem.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP
-        elif set("world map requests comparing".split()).issubset(question_small_words):
+        elif set("map requests comparing".split()).issubset(question_small_words):
             toolType = QASystem.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE
         elif set("ips locations random queries".split()).issubset(
                 question_small_words):  # A set of generic questio nthat hsould not depend on history of the conversation!
@@ -760,12 +761,34 @@ def __main__():
         noInitialize=False,
         generation_params=QASystem.generation_params_greedy)
 
-    securityChatbot.ask_question(
-        "Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice", add_to_history=False)
 
-    securityChatbot.ask_question("What is a DDoS attack?")
+    # securityChatbot.ask_question("What are the IPs of the servers hosting the DICOM "
+    #                                                  "and X-Ray records? Can you show me a graph "
+    #                                                  "of their resource utilization over the last 24 hours?")
 
-    securityChatbot.ask_question("How to avoid one?")
+    # securityChatbot.ask_question("Can you show the logs of internal servers handling these services "
+    #                                                  "grouped by IP which have more than 35% requests over "
+    #                                                  "the median of a normal session per. Sort them by count")
+    #
+    securityChatbot.ask_question("Can you show a sample of GET requests from the top 4 demanding IPs, "
+                                                     "including their start time, end time? Only show the last 10 logs.")
+
+    # securityChatbot.ask_question("Give me a map of requests by comparing the current "
+    #                                                  "requests numbers "
+    #                                                  "and a known snapshot using bars and colors")
+    #
+    securityChatbot.ask_question("Can it be an attack if several servers receive too many queries from different IPs at random locations in a very short time window?")
+    #
+    # securityChatbot.ask_question("Generate me a python code to insert in a pandas dataframe named "
+    #                                                  "Firewalls a new IP 10.20.30.40 as blocked "
+    #                                                  "under the name of IoTDevice")
+
+    #securityChatbot.ask_question(
+    #    "Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice", add_to_history=False)
+
+    #securityChatbot.ask_question("What is a DDoS attack?")
+
+    #securityChatbot.ask_question("How to avoid one?")
 
 
     """
@@ -777,7 +800,7 @@ def __main__():
 
     #test_evaluate_safety_internal_model(securityChatbot)
 
-    return
+    #return
     # securityChatbot.test_vectorDatasets_similarityScores_and_responses_no_memory(run_llm_chain=False)
 
     """
