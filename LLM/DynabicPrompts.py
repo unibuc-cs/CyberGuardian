@@ -109,10 +109,8 @@ def set_templates():
 
         template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization = """\
                 Write only the following string and no other words, do not start your response with Sure. 
-                "The DICOM and X-Ray are handled by the PACS Server at 192.168.61.0:24
-                I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
-                {context}
-                Question: {question}"""
+                The DICOM and X-Ray are handled by the PACS Server at 192.168.61.0 port 24, I will show you two histograms of usage by invoking the following code\n\n FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params '../RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' '../RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv'"
+                {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs = """\
                 Write only the following string and no other words, do not start your response with Sure.

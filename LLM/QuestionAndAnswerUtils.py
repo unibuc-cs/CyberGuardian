@@ -589,7 +589,7 @@ class QASystem():
             if chainToUse != self.llama_doc_chain_funccalls_firewallInsert:
                 args = {"input_documents": [], "question": question, "params": params}
             else:
-                args = {"input_documents": [], "question": question, "param_ip": "10.20.30.40", "param_name": 'IoTDevice'}
+                args = {"input_documents": [], "question": question, "param_ip": "183.233.154.202", "param_name": 'ServiceName',}
 
             isfullConversationalType = False
 
@@ -628,12 +628,23 @@ class QASystem():
                 print("\n")
 
             for new_text in streamer:
+                # Skip the eos token
+                if new_text == self.tokenizer.eos_token:
+                    continue
+                if new_text.endswith(self.tokenizer.eos_token):
+                    new_text = new_text[:-len(self.tokenizer.eos_token)]
+
+                # Remove double quotes
+                new_text = new_text.strip('\"')
+
+                # Append the new text
                 generated_text += new_text
                 print(new_text, end='')
             print("\n")
 
             # print(f"Full generated text {generated_text}")
 
+            # Wait for the thread to finish
             self.temp_modelevaluate_thread.join()
             res_answer = generated_text
         else:
@@ -755,30 +766,28 @@ def __main__():
         QuestionRewritingPrompt=QASystem.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT,
         QuestionAnsweringPrompt=QASystem.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES,
         ModelType=QASystem.LLAMA3_VERSION_TYPE.LLAMA3_8B,
-        debug=False,
-        streamingOnAnotherThread=True,
+        debug=True,
+        streamingOnAnotherThread=False,
         demoMode=True,
         noInitialize=False,
         generation_params=QASystem.generation_params_greedy)
 
 
-    # securityChatbot.ask_question("What are the IPs of the servers hosting the DICOM "
-    #                                                  "and X-Ray records? Can you show me a graph "
-    #                                                  "of their resource utilization over the last 24 hours?")
+    securityChatbot.ask_question("What are the IPs of the servers hosting the DICOM and X-Ray records? Can you show me a graph of their resource utilization over the last 24 hours?")
 
     # securityChatbot.ask_question("Can you show the logs of internal servers handling these services "
     #                                                  "grouped by IP which have more than 35% requests over "
     #                                                  "the median of a normal session per. Sort them by count")
     #
-    securityChatbot.ask_question("Can you show a sample of GET requests from the top 4 demanding IPs, "
-                                                     "including their start time, end time? Only show the last 10 logs.")
+    # securityChatbot.ask_question("Can you show a sample of GET requests from the top 4 demanding IPs, "
+    #                                                  "including their start time, end time? Only show the last 10 logs.")
 
     # securityChatbot.ask_question("Give me a map of requests by comparing the current "
     #                                                  "requests numbers "
     #                                                  "and a known snapshot using bars and colors")
     #
-    securityChatbot.ask_question("Can it be an attack if several servers receive too many queries from different IPs at random locations in a very short time window?")
-    #
+    # securityChatbot.ask_question("Can it be an attack if several servers receive too many queries from different IPs at random locations in a very short time window?")
+    # #
     # securityChatbot.ask_question("Generate me a python code to insert in a pandas dataframe named "
     #                                                  "Firewalls a new IP 10.20.30.40 as blocked "
     #                                                  "under the name of IoTDevice")
