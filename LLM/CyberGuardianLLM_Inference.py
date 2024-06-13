@@ -4,13 +4,15 @@ import argparse
 import json
 import pathlib
 
+import Data.dataSettings as dataSettings
+from projsecrets import project_path
+
 from CyberGuardinaLLM_args import parse_args
 from CyberGuardianLLM import CyberGuardianLLM
-import Data.dataSettings as dataSettings
 
 def main():
     # Load default arguments
-    args = parse_args(with_json_args=pathlib.Path(os.environ["LLM_PARAMS_PATH_INFERENCE"]))
+    args = parse_args(with_json_args=path_to_inference_params )
     cg = CyberGuardianLLM(args)
     cg.do_inference(push_to_hub=False)
 
@@ -24,3 +26,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

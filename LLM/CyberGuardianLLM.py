@@ -35,7 +35,7 @@ from transformers import (
     BitsAndBytesConfig,
 )
 
-logger = get_logger(__name__)
+logger = logging.getLogger("CYBERGUARDIAN_LOGGER") #get_logger(__name__) # The corret way would be to use the get_logger function from accelerate.logging, but it is not available in this environment
 
 MODEL_CONFIG_CLASSES = list(MODEL_MAPPING.keys())
 MODEL_TYPES = tuple(conf.model_type for conf in MODEL_CONFIG_CLASSES)
@@ -57,6 +57,9 @@ class CyberGuardianLLM:
     total_batch_size: int = None
     checkpointing_steps: int = None
     terminators: list = None
+    torch_dtype = None
+    attn_implementation = None
+
 
     def __init__(self, args: argparse.Namespace):
         self.args = args
@@ -149,11 +152,11 @@ class CyberGuardianLLM:
         ]
 
         if torch.cuda.get_device_capability()[0] >= 8:
-            attn_implementation = "flash_attention_2"
-            torch_dtype = torch.bfloat16
+            self.attn_implementation = "flash_attention_2"
+            self.torch_dtype = torch.bfloat16
         else:
-            attn_implementation = "eager"
-            torch_dtype = torch.float16
+            self.attn_implementation = "eager"
+            self.torch_dtype = torch.float16
 
         # TODO: add to args
         if self.args.model_name_or_path:
@@ -164,14 +167,14 @@ class CyberGuardianLLM:
                 bnb_config = BitsAndBytesConfig(
                     load_in_4bit=True,
                     bnb_4bit_quant_type="nf4",
-                    bnb_4bit_compute_dtype=torch_dtype,
+                    bnb_4bit_compute_dtype=self.torch_dtype,
                     bnb_4bit_use_double_quant=False if self.args.use_4bit_double_quant is None
                     else self.args.use_4bit_double_quant
                 )
             elif self.args.use_8bit_quant:
                 bnb_config = BitsAndBytesConfig(
                     load_in_8bit=True,
-                    bnb_8bit_compute_dtype=torch_dtype,
+                    bnb_8bit_compute_dtype=self.torch_dtype,
                 )
 
             self.model = AutoModelForCausalLM.from_pretrained(
@@ -181,9 +184,9 @@ class CyberGuardianLLM:
                 config=self.config,
                 device_map="auto",
                 #low_cpu_mem_usage=self.args.low_cpu_mem_usage,
-                torch_dtype=torch_dtype,
+                torch_dtype=self.torch_dtype,
                 trust_remote_code=self.args.trust_remote_code,
-                attn_implementation=attn_implementation
+                attn_implementation=self.attn_implementation
             )
         else:
             logger.info("Training new model from scratch")
@@ -624,7 +627,7 @@ class CyberGuardianLLM:
             add_generation_prompt=True
         )
 
-        device = "cuda:0"
+        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
         inputs = self.tokenizer(prompt, return_tensors="pt").to(device)
         self.tokenizer.chat_template = self.tokenizer.default_chat_template

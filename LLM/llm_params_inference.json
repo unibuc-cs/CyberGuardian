@@ -1,4 +1,15 @@
 {
   "model_name_or_path": "meta-llama/Meta-Llama-3-8B-Instruct",
-  "pretrained_peft_adapter_dir": "./LLM/rawtrainedmodel"
+  "pretrained_peft_adapter_dir": "LLM/rawtrainedmodel",
+  "generation_params": {
+    "device_map": "auto",
+    "max_new_tokens": 4096,
+    "num_return_sequences": 1,
+    "repetition_penalty": 1.0,
+    "length_penalty": 1,
+    "min_length": null,
+    "do_sample": true,
+    "temperature": 1.0,
+    "top_p": 1.0
+  }
 }

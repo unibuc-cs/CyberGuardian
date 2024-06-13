@@ -6,7 +6,7 @@ import argparse
 import os.path
 from pathlib import Path
 import json
-
+import sys
 import transformers
 from transformers import (
     CONFIG_MAPPING,
@@ -22,9 +22,18 @@ import logging
 from accelerate.logging import get_logger
 logger = get_logger(__name__)
 
+# Starting from UI folder?
+if not os.path.exists("./UI"):
+    sys.path.append("../")
+
+import projsecrets
+from projsecrets import project_path
+
 MODEL_CONFIG_CLASSES = list(MODEL_MAPPING.keys())
 MODEL_TYPES = tuple(conf.model_type for conf in MODEL_CONFIG_CLASSES)
 
+import Data.dataSettings as dataSettings
+Path(os.path.join(project_path, os.environ["LLM_PARAMS_PATH_INFERENCE"]))
 
 def parse_args(with_json_args: Path = None):
     parser = argparse.ArgumentParser(description="Finetune the dynabicChatbot model on a text dataset")
@@ -209,13 +218,10 @@ def parse_args(with_json_args: Path = None):
     )
     args = parser.parse_args()
 
-
-    cwd = os.getcwd()
-    if not os.path.exists(with_json_args):
-        with_json_args = Path(f"../{with_json_args}")
+    # Load the json args from the external file if provided
+    assert os.path.exists(with_json_args), f"Path given does not exist: {with_json_args}"
     with open(with_json_args, 'rt') as f:
         args.__dict__.update(json.load(f))
-
 
     return args
 
