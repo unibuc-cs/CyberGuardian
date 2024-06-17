@@ -29,7 +29,7 @@ from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain_core.documents.base import Document
 from langchain_core.vectorstores import VectorStoreRetriever
 from langchain_core.callbacks.manager import CallbackManagerForRetrieverRun
-
+from DynabicPrompts import TOKEN_DO_NOT_SHOW
 
 from enum import Enum
 from typing import Union, List, Any, Set, Tuple, Dict
@@ -53,7 +53,7 @@ torch.cuda.manual_seed_all(hash("so runs are repeatable") % 2 ** 32 - 1)
 
 ## THIS IS TEMPORARY FOR THE DEMO. TODO: remove it before submit and refactor!
 import projsecrets
-from projsecrets import project_path
+from projsecrets import project_path, HOOK_FUNC_NAME_TOKEN, TOKEN_CODE_EXEC_CONFIRM
 
 
 # Note that this is specific to llama3 only because uses at some point some of its special tokens and versions
@@ -90,7 +90,16 @@ class QASystem():
         def _get_relevant_documents(
                 self, query: str, *, run_manager: CallbackManagerForRetrieverRun
         ) -> List[Document]:
-            return self.original_retriever._get_relevant_documents(query, run_manager=run_manager)
+            docs = self.original_retriever._get_relevant_documents(query, run_manager=run_manager)
+
+
+            # Custom doc: the history !
+            history_doc = Document(page_content="The top demanding IPs are: 18.146.47.131, 130.112.80.168, 183.233.154.202, 117.119.80.169",
+                                    metadata={"source": "chat_history"})
+
+            docs.insert(0, history_doc)
+
+            return docs
 
         async def _aget_relevant_documents(self, query: str) -> List[Document]:
             return await self.original_retriever._aget_relevant_documents(query)
@@ -220,7 +229,12 @@ class QASystem():
         else:
             assert False, f"Unknown type {self.QuestionAnsweringPromptType}"
 
-    def solveFunctionCalls(self, full_response: str, do_history_update: bool = False) -> bool:
+    # Function that solves a function call and returns the answer and the source code to be executed/proposed by the
+    # assistant
+    # The full_response is the response from the assistant
+    # The do_history_update is a flag to update the history with the answer
+    # Returns the answer and the source code to be executed/proposed by the assistant
+    def solveFunctionCalls(self, full_response: str, do_history_update: bool = False) -> Tuple[Union[str, None], Union[str, None], Union[str, None], Union[bool, None]]:
         full_response = full_response.removesuffix(
             QASystem.LLAMA3_DEFAULT_END_LLM_RESPONSE)  # Removing the last </s> ending character specific to llama endint of a response
         full_response = full_response.strip()
@@ -229,7 +243,7 @@ class QASystem():
             full_response = full_response[1:-1]
 
         if 'FUNC_CALL' not in full_response:
-            return None
+            return None, None, None, None
 
         # Identify which function call it is being asked
         # TODO: allow user to inject his own tools
@@ -266,44 +280,53 @@ class QASystem():
             closing_bracket_idx = -1
             for idx, paramStr in enumerate(func_params[::-1]):
                 if paramStr[-1] == ']':
+                    # Do not break, continue until the closest to position of Params token
                     closing_bracket_idx = len(func_params) - idx - 1
-                    assert closing_bracket_idx >=0, "Closing bracket index is negative"
-                    break
 
-            assert closing_bracket_idx != -1, "Unclosed parameters list"
+            if closing_bracket_idx < 0:
+                print(f"Closing bracket index is negative or not found in FUNC_CALL parameters list {func_params}")
+            assert closing_bracket_idx >=0, "Closing bracket index is negative or not found"
 
             # Eliminate the brackets
             func_params[0] = func_params[0][1:]
             func_params[closing_bracket_idx] = func_params[closing_bracket_idx][:-1]
             func_params = func_params[:closing_bracket_idx + 1]
 
-            # Remove the last comma if it exists in each parameter
+            # Post-process the following things
             for idx, paramStr in enumerate(func_params):
+                # Remove the last comma if it exists in each parameter
                 if paramStr[-1] == ',':
-                    func_params[idx] = func_params[idx][:-1]
+                    paramStr = paramStr[:-1]
                 if paramStr[0] == ',':
-                    func_params[idx] = func_params[idx[1:]]
+                    paramStr = paramStr[1:]
+
+                # Remove the double quota
+                if paramStr[0] == '"' and paramStr[-1] == '"':
+                    paramStr = paramStr[1:-1]
+                if paramStr[0] == "'" and paramStr[-1] == "'":
+                    paramStr = paramStr[1:-1]
+
+                func_params[idx] = paramStr
 
         # import the module where function is
         try:
             if self.debug:
-                logger("Trying to call function {mod_name}.{func_name}, params: {func_params}")
+                logger.info("Trying to call function {mod_name}.{func_name}, params: {func_params}")
 
             mod = importlib.import_module(mod_name)
         except ModuleNotFoundError:
-            return
+            return (None, None)
 
         # Get the hook function call associated with the module and call it to solve the request
-        hook_func_name = "hook_call"
-        hook_func = getattr(mod, hook_func_name)
+        hook_func = getattr(mod, HOOK_FUNC_NAME_TOKEN)
 
         # Call it
-        result = hook_func(func_name, func_params)
+        result_answer, result_source_code_tool, result_source_code_ui, tool_code_needs_confirm = hook_func(func_name, func_params)
 
-        if result is not None and do_history_update:
-            self.history_update(None, result)
+        if result_answer is not None and do_history_update:
+            self.history_update(None, result_answer)
 
-        return result
+        return result_answer, result_source_code_tool, result_source_code_ui, tool_code_needs_confirm
 
     def initializeLLM(self) -> None:
         # Get the embeddings, tokenizer and model
@@ -319,7 +342,7 @@ class QASystem():
 
         # Create a streamer and a text generation pipeline
         self.streamer = TextStreamer(self.tokenizer, skip_prompt=True) if self.streamingOnAnotherThread is False \
-                                    else TextIteratorStreamer(self.tokenizer, skip_prompt=True)
+                                    else TextIteratorStreamer(self.tokenizer, skip_prompt=True, skip_special_tokens=True)
 
         self.textGenerationPipeline = pipeline("text-generation",
                                                model=self.model,
@@ -369,7 +392,7 @@ class QASystem():
                                            f"and response with True if it is OK or False if it isn't. Do not respond to the user question\n"
                                            f"{conversation} ", new_system_prompt=None)
 
-        logging.info(responseChecktemplate)
+        logger.info(responseChecktemplate)
         responseCheckPrompt = PromptTemplate(template=responseChecktemplate, input_variables=[])  # , input_variables=["text"])
 
         responseCheckChain = LLMChain(prompt=responseCheckPrompt, llm=responseCheckLLM)
@@ -552,8 +575,22 @@ class QASystem():
 
             # Params: Search for IP addresses and excepting keyword.
             params = [x for x in question_lower_words if validate_ip(x)]
-            is_excepting = False if "except" not in question_small_words else True
+
+            is_excepting = any(["except" in word for word in question_small_words])
             params.insert(0, is_excepting)
+
+            # If excepting key is found, look at history to find previous returned IPs:
+            if is_excepting:
+                list_of_IPS_in_history = []
+                for chat_tuple in reversed(self.chat_history_tuples):
+                    response = chat_tuple[1].replace(',', ' ')
+                    response = response.split()
+
+                    for idx, word in enumerate(response):
+                        if validate_ip(word):
+                            list_of_IPS_in_history.append(word)
+
+                params.extend(list_of_IPS_in_history)
 
             # Either is allowed or not. For now we consider as not. TODO: fix in the feature
             allowed = False
@@ -603,6 +640,8 @@ class QASystem():
 
         for spec_token in self.tokenizer.all_special_tokens:
             inp = inp.replace(spec_token, '')
+
+        inp = inp.strip()
         return inp
 
     # Ask a question and get the answer
@@ -619,11 +658,7 @@ class QASystem():
         # some of the parameters from the model. It can be finetuned to do so, proved on other examples,
         # but not possible to finish the right time for this deadline on this particular use case..
         if isinstance(chainToUse, StuffDocumentsChain):
-            if True: #chainToUse != self.llama_doc_chain_funccalls_firewallInsert:
-                args = {"input_documents": [], "question": question, "params": params}
-            #else:
-            #    args = {"input_documents": [], "question": question, "param_ip": "183.233.154.202", "param_name": 'ServiceName',}
-
+            args = {"input_documents": [], "question": question, "params": params}
             isfullConversationalType = False
 
         # Add the chat_history if requested
@@ -642,13 +677,14 @@ class QASystem():
             answer = res['output_text'] if 'output_text' in res else (res['answer'] if 'answer' in res else None)
             return answer, isfullConversationalType
 
+
     # Can write to an external streamer object on another thread or directly to console if streamingOnAnotherThread
     # is False
     # Returns the final answer and a boolean if it is a full conversational type or not
     #  add_to_history: if the question and answer should be added to the history
     #  use_history: if the history should be used to respond to the current question
     def ask_question(self, question: str, add_to_history: bool, use_history: bool) \
-            -> Tuple[Union[str, None, BaseStreamer], bool]:
+            -> Tuple[Union[str, None, BaseStreamer], bool, Union[str, None], Union[str, None], Union[bool, None]]:
         res_answer = None
         if self.streamingOnAnotherThread:
             # This is needed since when it has some memory and prev chat history it will FIRST output the standalone question
@@ -681,7 +717,9 @@ class QASystem():
 
                 # Append the new text
                 generated_text += new_text
-                logger.info(new_text, end='')
+
+                if self.debug:
+                    logger.info(new_text, end='')
 
             if self.debug:
                 logger.info("\n")
@@ -689,7 +727,7 @@ class QASystem():
 
             # Wait for the thread to finish
             self.temp_modelevaluate_thread.join()
-            res_answer = response_streamer
+            res_answer = generated_text
         else:
             res_answer, isfullConversationalType = self.__ask_question(question,
                                                                        add_to_history=add_to_history,
@@ -697,19 +735,30 @@ class QASystem():
 
         assert res_answer, "So there is no final answer?!"
 
+        logger.info(f"Fully generated text {res_answer}")
+
+        # Identify the part that should be output to the user and the part that should be executed behind the scenes
+        to_behind_answer = res_answer
+        to_user_answer = res_answer
+        if TOKEN_DO_NOT_SHOW in res_answer:
+            to_user_answer, to_behind_answer = res_answer.split(TOKEN_DO_NOT_SHOW) # Split on the token
+        res_answer = to_user_answer
+
+        # Now we have the generated text, we can check if there are any function calls
+        res_tool_answer, res_tool_code, res_ui_code, tool_code_needs_confirm = self.solveFunctionCalls(to_behind_answer, do_history_update=add_to_history)
+
+        # Concat on the final answer the tool answer
+        res_answer = f"{res_answer}\n\n {res_tool_answer}" if res_tool_answer is not None else res_answer
+
         # Clean a bit to ensure no special tokens and stuff
         res_answer = self.getlastanswerclean_llama3(res_answer)
-
-        logger.info(f"Full generated text {res_answer}")
-        # Now we have the generated text, we can check if there are any function calls
-        self.solveFunctionCalls(res_answer, do_history_update=add_to_history)
 
         # Add conv to history if requested
         if add_to_history:
             self.history_add(question, res_answer)
 
         # Return the final answer even if already streamed
-        return res_answer, isfullConversationalType
+        return res_answer, isfullConversationalType, res_tool_code, res_ui_code, tool_code_needs_confirm
 
 
     def history_add(self, question: str, answer: str):
@@ -829,11 +878,12 @@ def __main__():
         demoMode=True,
         noInitialize=False)
 
-    res_answer, _ = securityChatbot.ask_question("Generate me a python code to restrict in the firewall database "
-                                 "the following IPs: 123.123.321.32, 123.32.321.321", add_to_history=True,
+    res_answer, _, source_code_tool, source_code_ui = securityChatbot.ask_question("Generate me a python code to restrict in the firewall database "
+                                 "the following IPs: 123.123.321.32, 123.32.321.321",
+                                add_to_history=True,
                                  use_history=True)
 
-    print(res_answer)
+    print(f"Debug: assistant Answer: {res_answer} \nProposed Code tool: {source_code_tool}\n Proposed code UI: {source_code_ui}")
 
     # securityChatbot.ask_question("What are the IPs of the servers hosting the DICOM and X-Ray records? Can you show me a graph of their resource utilization over the last 24 hours?")
 

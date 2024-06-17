@@ -8,8 +8,8 @@
     "repetition_penalty": 1.0,
     "length_penalty": 1,
     "min_length": null,
-    "do_sample": true,
-    "temperature": 1.0,
+    "do_sample": false,
+    "temperature": 0.0,
     "top_p": 1.0
   }
 }

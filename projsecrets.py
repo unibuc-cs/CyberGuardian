@@ -9,7 +9,8 @@ import sys
 sys.path.append(os.path.join(project_path, project_path_UI_folder))
 sys.path.append(os.path.join(project_path, project_path_LLM_folder))
 
-
+TOKEN_CODE_EXEC_CONFIRM = 'exec_code_confirm'
+HOOK_FUNC_NAME_TOKEN = "hook_call"
 
 assert project_path is not None, ("The project path is not set in the environment variables. Define it with "
                                   "CYBERGUARDIAN_PATH name and the path to the project as value "

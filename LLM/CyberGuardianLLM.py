@@ -35,7 +35,11 @@ from transformers import (
     BitsAndBytesConfig,
 )
 
-logger = logging.getLogger("CYBERGUARDIAN_LOGGER") #get_logger(__name__) # The corret way would be to use the get_logger function from accelerate.logging, but it is not available in this environment
+import projsecrets
+
+# The correct way would be to use the get_logger function from accelerate.logging,
+# but it is not available in this environment
+logger = logging.getLogger("CYBERGUARDIAN_LOGGER") #get_logger(__name__)
 
 MODEL_CONFIG_CLASSES = list(MODEL_MAPPING.keys())
 MODEL_TYPES = tuple(conf.model_type for conf in MODEL_CONFIG_CLASSES)
@@ -613,6 +617,10 @@ class CyberGuardianLLM:
 
     def prepare_inference(self, push_to_hub=False):
         assert self.args.pretrained_peft_adapter_dir is not None, "You must provide a pretrained (PEFT) model path for inference"
+
+        cwd = os.getcwd()
+        if cwd != projsecrets.project_path:
+            os.chdir(projsecrets.project_path)
 
         # Merge adapter with base model
         self.model.load_adapter(self.args.pretrained_peft_adapter_dir)

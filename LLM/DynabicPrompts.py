@@ -19,6 +19,8 @@ template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert = No
 template_securityOfficer_instruction_rag_withsources_default = None
 llama_condense_template = None
 
+TOKEN_DO_NOT_SHOW = "TOKEN_DO_NOT_SHOW"
+
 # Set the templates based on the use case
 def set_templates():
     global template_securityOfficer_system_prompt
@@ -59,12 +61,12 @@ def set_templates():
 
         template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS = """\
                 Write only the following string and no other words, do not start your response with Sure.
-                "Ok, I will show you the logs dataset by invoking FUNC_CALL dynabicagenttools.showLastNGetQueriesFromTopM_demandingIPs Params {params} "
+                "Ok, I will show you the logs dataset by invoking dynabicagenttools.showLastNGetQueriesFromTopM_demandingIPs. TOKEN_DO_NOT_SHOW FUNC_CALL dynabicagenttools.showLastNGetQueriesFromTopM_demandingIPs Params {params}"
                 {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests="""\
                 Write only the following string and no other words, do not start your response with Sure.
-                "I will invoke FUNC_CALL dynabicagenttools.showComparativeColumnsDatasets Params 'RAGSupport/dataForRAG/SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' 'SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' "
+                "I will invoke dynabicagenttools.showComparativeColumnsDatasets. TOKEN_DO_NOT_SHOW FUNC_CALL dynabicagenttools.showComparativeColumnsDatasets Params 'SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' 'SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' "
                 {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert = """\
@@ -109,7 +111,7 @@ def set_templates():
 
         template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization = """\
                 Write only the following string and no other words, do not start your response with Sure. 
-                The DICOM and X-Ray are handled by the PACS Server at 192.168.61.0 port 24, I will show you two histograms of usage by invoking the following code\n\n FUNC_CALL dynabicagenttools.showResourceUtilizationComparison_v2 Params 'Hospital_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' 'RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv' "
+                The DICOM and X-Ray are handled by the PACS Server at 192.168.61.0 port 24, I will show you two histograms of usage by invoking dynabicagenttools.showResourceUtilizationComparison_v2. TOKEN_DO_NOT_SHOW FUNC_CALL dynabicagenttools.showResourceUtilizationComparison_v2 Params 'Hospital_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' 'Hospital_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv' "
                 {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs = """\
@@ -119,17 +121,17 @@ def set_templates():
 
         template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS = """\
                 Write only the following string and no other words, do not start your response with Sure.
-                "Ok, I will show you the logs dataset by invoking FUNC_CALL dynabicagenttools.showLastNGetQueriesFromTopM_demandingIPs Params {params} "
+                "Ok, I will show you the logs dataset by invoking dynabicagenttools.showLastNGetQueriesFromTopM_demandingIPs. TOKEN_DO_NOT_SHOW FUNC_CALL dynabicagenttools.showLastNGetQueriesFromTopM_demandingIPs Params {params} "
                 {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests = """\
                 Write only the following string and no other words, do not start your response with Sure.
-                "I will invoke FUNC_CALL dynabicagenttools.showComparativeColumnsDatasets Params 'Hospital_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' 'Hospital_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' "
+                "I will invoke dynabicagenttools.showComparativeColumnsDatasets TOKEN_DO_NOT_SHOW FUNC_CALL dynabicagenttools.showComparativeColumnsDatasets Params 'Hospital_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' 'Hospital_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' "
                 {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert = """\
                 Write only the following string and no other words, do not start your response with sure.
-                "Ok, I will invoke first FUNC_CALL dynabicagenttools.firewallUpdate Params {params} to analyze the request first".
+                "Ok, I will call dynabicagenttools.firewallUpdate to analyze the request first. TOKEN_DO_NOT_SHOW: FUNC_CALL dynabicagenttools.firewallUpdate Params {params}".
                 {context}"""
 
         template_securityOfficer_instruction_rag_withsources_default = """

@@ -3,27 +3,22 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BookmarksViewState">
+    <option name="proportionPopup" value="0.503125" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="New demo Hospital work in progress - part 2">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/VisualizationSample_testSim.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/FIREWALL_PROCESSES_bk.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/UITest_EA_PC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/UITest_EA_PC.xml" afterDir="false" />
+    <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="Significant architectural optimizations, paths, etc">
+      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/column_layer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/temp/temp_avg_last24h.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/dataSettings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/dataSettings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/CyberGuardinaLLM_args.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardinaLLM_args.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LLM/DynabicPrompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/DynabicPrompts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LLM/llm_params_inference.json" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/llm_params_inference.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/llm_params_training.json" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/llm_params_training.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI" beforeDir="false" afterPath="$PROJECT_DIR$/UI" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/.env" beforeDir="false" afterPath="$PROJECT_DIR$/UI/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/clientserverUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/clientserverUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/dynabicagenttools.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/dynabicagenttools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_16_09_08_56.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/feedback_collected/defaultUserName_2024_01_16_09_08_56.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/localdata/saved_conversations/paduraru2009_2024_01_16_14_54_46.json" beforeDir="false" afterPath="$PROJECT_DIR$/UI/localdata/saved_conversations/paduraru2009_2024_01_16_14_54_46.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/pages/Work_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pages/Work_area.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/TestSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/TestSim.py" afterDir="false" />
@@ -83,7 +78,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -109,7 +104,7 @@
     "Python.DatasetUtils_EA_PC.executor": "Run",
     "Python.FinetuningModel.executor": "Debug",
     "Python.UITest.executor": "Debug",
-    "Python.UITest_NO_LOGIN.executor": "Debug",
+    "Python.UITest_NO_LOGIN.executor": "Run",
     "Python.VisualizationSample_testSim.executor": "Debug",
     "Python.asccelerate_tests_gpt2.executor": "Run",
     "Python.docstoreplay.executor": "Run",
@@ -184,7 +179,7 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main_qa">
+  <component name="RunManager" selected="Python.UITest_NO_LOGIN">
     <configuration name="CyberGuardianLLM_PushToHub_EA_PC" type="PythonConfigurationType" factoryName="Python">
       <module name="dynabicChatbot" />
       <option name="ENV_FILES" value="" />
@@ -338,7 +333,9 @@
       <workItem from="1717760670842" duration="3895000" />
       <workItem from="1717932239749" duration="6287000" />
       <workItem from="1717939228327" duration="47655000" />
-      <workItem from="1718104877158" duration="64754000" />
+      <workItem from="1718104877158" duration="121812000" />
+      <workItem from="1718519216888" duration="22353000" />
+      <workItem from="1718545642478" duration="6445000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -420,7 +417,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717947593149</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Significant architectural optimizations, paths, etc">
+      <option name="closed" value="true" />
+      <created>1718294252036</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718294252036</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,376 +493,85 @@
     <MESSAGE value="Upgraded to new langchain API, new FAISS indexes and scripts" />
     <MESSAGE value="New demo Hospital work in progress" />
     <MESSAGE value="New demo Hospital work in progress - part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="New demo Hospital work in progress - part 2" />
+    <MESSAGE value="Significant architectural optimizations, paths, etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Significant architectural optimizations, paths, etc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_api.py</url>
-          <line>147</line>
-          <option name="timeStamp" value="50" />
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1308716906/-1298038738/streamlit/runtime/caching/cached_message_replay.py</url>
+          <line>313</line>
+          <option name="timeStamp" value="670" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
-          <line>110</line>
-          <option name="timeStamp" value="55" />
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-862429092/-1298038738/streamlit/runtime/caching/cached_message_replay.py</url>
+          <line>313</line>
+          <option name="timeStamp" value="672" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
-          <line>116</line>
-          <option name="timeStamp" value="56" />
+          <url>file://$PROJECT_DIR$/UI/databaseUtils.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="675" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
-          <line>104</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/__init__.py</url>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2023.3/remote_sources/-1777440594/-1298038738/youtube_transcript_api/_errors.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_videos.py</url>
-          <line>73</line>
-          <option name="timeStamp" value="107" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_videos.py</url>
-          <line>236</line>
-          <option name="timeStamp" value="108" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_videos.py</url>
-          <line>212</line>
-          <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_videos.py</url>
-          <line>211</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_pdfs.py</url>
-          <line>180</line>
-          <option name="timeStamp" value="155" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_pdfs.py</url>
-          <line>189</line>
-          <option name="timeStamp" value="156" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_pdfs.py</url>
-          <line>130</line>
-          <option name="timeStamp" value="164" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_videos.py</url>
-          <line>119</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_videos.py</url>
-          <line>190</line>
-          <option name="timeStamp" value="177" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/etl_videos.py</url>
-          <line>181</line>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/DatasetUtils.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="187" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain_community/vectorstores/faiss.py</url>
-          <line>1092</line>
-          <option name="timeStamp" value="201" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/vecstore.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="213" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain_core/prompts/base.py</url>
-          <line>289</line>
-          <option name="timeStamp" value="215" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="226" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="227" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="228" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="229" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/memory/buffer.py</url>
-          <line>110</line>
-          <option name="timeStamp" value="230" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/history_aware_retriever.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="233" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/base.py</url>
-          <line>278</line>
-          <option name="timeStamp" value="239" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/chains/router/llm_router.py</url>
-          <line>44</line>
-          <option name="timeStamp" value="240" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/langchain/chains/sequential.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="241" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/langchain/chains/base.py</url>
-          <line>252</line>
-          <option name="timeStamp" value="242" />
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1308716906/-1298038738/pydeck/bindings/deck.py</url>
+          <line>213</line>
+          <option name="timeStamp" value="676" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>635</line>
-          <option name="timeStamp" value="264" />
+          <line>245</line>
+          <option name="timeStamp" value="686" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
-          <line>982</line>
-          <option name="timeStamp" value="265" />
+          <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
+          <line>438</line>
+          <option name="timeStamp" value="692" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
-          <line>1045</line>
-          <option name="timeStamp" value="266" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/987262154/threading.py</url>
-          <line>980</line>
-          <option name="timeStamp" value="267" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>664</line>
-          <option name="timeStamp" value="269" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>688</line>
-          <option name="timeStamp" value="270" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>656</line>
-          <option name="timeStamp" value="271" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py</url>
-          <line>91</line>
-          <option name="timeStamp" value="280" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-643487973/-1298038738/trl/trainer/sft_trainer.py</url>
-          <line>212</line>
-          <option name="timeStamp" value="283" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM_Training.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="285" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-862429092/-1298038738/transformers/models/auto/tokenization_auto.py</url>
-          <line>894</line>
-          <option name="timeStamp" value="288" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/CyberGuardinaLLM_args.py</url>
-          <line>219</line>
-          <option name="timeStamp" value="291" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/vecstore.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="379" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/DatasetUtils.py</url>
-          <line>113</line>
-          <option name="timeStamp" value="381" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Data/etlUtils/DatasetUtils.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="382" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-862429092/-1298038738/pydantic/v1/main.py</url>
-          <line>340</line>
-          <option name="timeStamp" value="394" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <condition expression="tool_code_needs_confirm is True" language="Python" />
           <url>file://$PROJECT_DIR$/UI/pages/Work_area.py</url>
-          <line>338</line>
-          <option name="timeStamp" value="418" />
+          <line>558</line>
+          <option name="timeStamp" value="693" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>837</line>
-          <option name="timeStamp" value="431" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UI/pages/Work_area.py</url>
-          <line>421</line>
-          <option name="timeStamp" value="479" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1308716906/-1298038738/langchain/chains/conversational_retrieval/base.py</url>
-          <line>316</line>
-          <option name="timeStamp" value="486" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1308716906/-1298038738/langchain_core/vectorstores.py</url>
-          <line>694</line>
-          <option name="timeStamp" value="487" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1308716906/-1298038738/langchain/chains/conversational_retrieval/base.py</url>
-          <line>329</line>
-          <option name="timeStamp" value="488" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1308716906/-1298038738/langchain_core/vectorstores.py</url>
-          <line>656</line>
-          <option name="timeStamp" value="498" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>310</line>
-          <option name="timeStamp" value="505" />
+          <line>326</line>
+          <option name="timeStamp" value="699" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>336</line>
-          <option name="timeStamp" value="506" />
+          <line>348</line>
+          <option name="timeStamp" value="700" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <condition expression="closing_bracket_idx &lt; 0" language="Python" />
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="512" />
+          <line>287</line>
+          <option name="timeStamp" value="709" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>95</line>
-          <option name="timeStamp" value="513" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>622</line>
-          <option name="timeStamp" value="529" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>297</line>
-          <option name="timeStamp" value="538" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>291</line>
-          <option name="timeStamp" value="541" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>289</line>
-          <option name="timeStamp" value="543" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>300</line>
-          <option name="timeStamp" value="548" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="551" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="552" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="553" />
+          <line>22</line>
+          <option name="timeStamp" value="711" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>312</line>
-          <option name="timeStamp" value="556" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>344</line>
-          <option name="timeStamp" value="559" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/CyberGuardinaLLM_args.py</url>
-          <line>221</line>
-          <option name="timeStamp" value="561" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/CyberGuardianLLM.py</url>
-          <line>37</line>
-          <option name="timeStamp" value="563" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>702</line>
-          <option name="timeStamp" value="564" />
+          <line>286</line>
+          <option name="timeStamp" value="720" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
+        <breakpoint enabled="true" type="django-exception">
+          <properties exception="VariableDoesNotExist" />
+        </breakpoint>
+        <breakpoint enabled="true" type="jinja2-exception">
+          <properties exception="TemplateError" />
+        </breakpoint>
+        <breakpoint enabled="true" type="javascript-exception" />
+        <breakpoint enabled="true" type="jupyter-exception">
+          <properties exception="BaseException" />
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
@@ -871,15 +585,17 @@
         <watch expression="row[0]" language="Python" />
         <watch expression="words_in_func_call[5]" language="Python" />
         <watch expression="words_in_func_call[10][0]=='&quot;'" language="Python" />
+        <watch expression="words_in_func_call[5]" language="Python" />
+        <watch expression="row[0]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest_NO_LOGIN.coverage" NAME="UITest_NO_LOGIN Coverage Results" MODIFIED="1718125171722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest_NO_LOGIN.coverage" NAME="UITest_NO_LOGIN Coverage Results" MODIFIED="1718546667410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717149510442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug__1_.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717070715688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$asccelerate_tests_gpt2.coverage" NAME="asccelerate_tests_gpt2 Coverage Results" MODIFIED="1716976279653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1718294089601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1718367796005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CyberGuardian$DatasetUtils_EA_PC.coverage" NAME="DatasetUtils_EA_PC Coverage Results" MODIFIED="1717762639406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
     <SUITE FILE_PATH="coverage/CyberGuardian$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717764522142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug.coverage" NAME="CyberGuardianLLM_Training_debug Coverage Results" MODIFIED="1717149819547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
@@ -890,7 +606,7 @@
     <SUITE FILE_PATH="coverage/dynabicChatbot$CleanDataset.coverage" NAME="CleanDataset Coverage Results" MODIFIED="1712135395376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/CyberGuardian$docstoreplay_EA_PC.coverage" NAME="docstoreplay_EA_PC Coverage Results" MODIFIED="1717762368111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$docstoreplay.coverage" NAME="docstoreplay Coverage Results" MODIFIED="1715263362848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest.coverage" NAME="UITest Coverage Results" MODIFIED="1717935116310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest.coverage" NAME="UITest Coverage Results" MODIFIED="1718370277463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
     <SUITE FILE_PATH="coverage/CyberGuardian$CyberGuardianLLM_Training_debug.coverage" NAME="CyberGuardianLLM_Training_debug Coverage Results" MODIFIED="1717692281735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$FinetuningModel.coverage" NAME="FinetuningModel Coverage Results" MODIFIED="1716992434839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/CyberGuardian$main_qa_EA_PC.coverage" NAME="main_qa_EA_PC Coverage Results" MODIFIED="1717762670801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\miruna\CyberGuardian" />
