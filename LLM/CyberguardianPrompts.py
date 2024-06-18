@@ -7,7 +7,8 @@ DEFAULT_QUESTION_PROMPT = "Question: {question}"
 
 from enum import Enum
 from UI.demoSupport import UseCase, USE_CASE
-
+from userUtils import (SecurityOfficerExpertise, getUserExpertiseStr,
+                       Response_Preferences, Preference_Politely, Preference_Emojis, SecurityOfficer)
 
 template_securityOfficer_system_prompt = None
 template_securityOfficer_instruction_rag_nosources_default = None
@@ -22,7 +23,7 @@ llama_condense_template = None
 TOKEN_DO_NOT_SHOW = "TOKEN_DO_NOT_SHOW"
 
 # Set the templates based on the use case
-def set_templates():
+def init_templates(userProfile: SecurityOfficer):
     global template_securityOfficer_system_prompt
     global template_securityOfficer_instruction_rag_nosources_default
     global template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization
@@ -33,16 +34,50 @@ def set_templates():
     global template_securityOfficer_instruction_rag_withsources_default
     global llama_condense_template
 
-    if USE_CASE == UseCase.Default or USE_CASE == UseCase.SmartHome:
-        template_securityOfficer_system_prompt = """\
-        Consider that I'm a beginner in networking and security things. \n
-        Give me a concise answer with a single step at a time.  If there is only one step, do not write Step 1.\n
-        Limit your response to maximum 2000 words.
-        Do not provide any additional text or presentation. 
-        If possible use concrete names of software or tools that could help.
-        Use emoticons in your responses.
+
+
+    ###### The officer system prompt is defined by considering the user's expertise and preferences #####
+    assert userProfile is not None, "User profile is not defined"
+
+    str_prompt_SecurityOfficerExpertise = None
+    if userProfile.expertise == SecurityOfficerExpertise.BEGINNER:
+        str_prompt_SecurityOfficerExpertise = "Consider that I'm a beginner in networking and security things."
+    elif userProfile.expertise == SecurityOfficerExpertise.MIDDLE:
+        str_prompt_SecurityOfficerExpertise = "Consider that I'm an intermediate in networking and security things. Explain the steps in detail, but keep it simple."
+    elif userProfile.expertise == SecurityOfficerExpertise.ADVANCED:
+        str_prompt_SecurityOfficerExpertise = "Consider that I'm an advanced in networking and security things. Explain in very short details, keep it simple and to the point."
+    else:
+        assert False, "Unexpected user expertise"
+
+    str_prompt_Response_Preferences = None
+    if userProfile.preference == Response_Preferences.DETAILED:
+        str_prompt_Response_Preferences = """Prefer long and detailed explanations. 
+        If possible use concrete names of software or tools that could help."""
+    elif userProfile.preference == Response_Preferences.CONCISE:
+        str_prompt_Response_Preferences = "Give me a concise answer, step by step within 2000 words with a single step at a time.  If there is only one step, do not write Step 1."
+
+
+    str_prompt_Preference_Emojis = None
+    if userProfile.emojis == Preference_Emojis.USE_EMOJIS:
+        str_prompt_Preference_Emojis = "Use emoticons in your response."
+    elif userProfile.emojis == Preference_Emojis.NO_EMOJIS:
+        str_prompt_Preference_Emojis = "Do not use emoticons in your response."
+
+    str_prompt_Preference_Politely = None
+    if userProfile.politely == Preference_Politely.POLITE_PRESENTATION:
+        str_prompt_Preference_Politely = "Be polite and professional."
+    elif userProfile.politely == Preference_Politely.FRIENDLY_PRESENTATION:
+        str_prompt_Preference_Politely = "Have a friendly tone and be patient."
+
+    template_securityOfficer_system_prompt = f"""\
+        {str_prompt_SecurityOfficerExpertise}
+        {str_prompt_Response_Preferences}
+        {str_prompt_Preference_Emojis}
+        {str_prompt_Preference_Politely}
         """
 
+
+    if USE_CASE == UseCase.Default or USE_CASE == UseCase.SmartHome:
         template_securityOfficer_instruction_rag_nosources_default = """\
         Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
         {context}
@@ -95,14 +130,7 @@ def set_templates():
 
         llama_condense_template = "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:"
     elif USE_CASE == UseCase.Hospital:
-        template_securityOfficer_system_prompt = """\
-        Consider that I'm a beginner in networking and security things. \n
-        Give me a concise answer with a single step at a time.  If there is only one step, do not write Step 1.\n
-        Limit your response to maximum 2000 words.
-        Do not provide any additional text or presentation. 
-        If possible use concrete names of software or tools that could help.
-        Use emoticons in your responses.
-        """
+       
 
         template_securityOfficer_instruction_rag_nosources_default = """\
         Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
@@ -148,6 +176,3 @@ def set_templates():
         llama_condense_template = "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:"
     else:
         assert False, "Unknown use case"
-
-# Set the system prompts based on the use case
-set_templates()

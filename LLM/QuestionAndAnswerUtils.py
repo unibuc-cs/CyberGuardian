@@ -11,14 +11,15 @@ import langchain
 from Data.utils import pretty_log
 from langchain_huggingface import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
+from userUtils import SecurityOfficer
 
 pp = pprint.PrettyPrinter(indent=2)
-
 
 import importlib
 import pathlib
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline, TextStreamer, TextIteratorStreamer
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline, TextStreamer, \
+    TextIteratorStreamer
 from transformers.generation.streamers import BaseStreamer
 from langchain.chains import LLMChain
 from langchain.memory import \
@@ -29,11 +30,11 @@ from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 from langchain_core.documents.base import Document
 from langchain_core.vectorstores import VectorStoreRetriever
 from langchain_core.callbacks.manager import CallbackManagerForRetrieverRun
-from DynabicPrompts import TOKEN_DO_NOT_SHOW
+
+import CyberguardianPrompts as cybprompts
 
 from enum import Enum
 from typing import Union, List, Any, Set, Tuple, Dict
-from LLM.DynabicPrompts import *
 from LLM.CyberGuardianLLM import CyberGuardianLLM
 from LLM.CyberGuardinaLLM_args import parse_args
 import random
@@ -49,7 +50,6 @@ random.seed(hash("setting random seeds") % 2 ** 32 - 1)
 np.random.seed(hash("improves reproducibility") % 2 ** 32 - 1)
 torch.manual_seed(hash("by removing stochasticity") % 2 ** 32 - 1)
 torch.cuda.manual_seed_all(hash("so runs are repeatable") % 2 ** 32 - 1)
-
 
 ## THIS IS TEMPORARY FOR THE DEMO. TODO: remove it before submit and refactor!
 import projsecrets
@@ -92,10 +92,10 @@ class QASystem():
         ) -> List[Document]:
             docs = self.original_retriever._get_relevant_documents(query, run_manager=run_manager)
 
-
             # Custom doc: the history !
-            history_doc = Document(page_content="The top demanding IPs are: 18.146.47.131, 130.112.80.168, 183.233.154.202, 117.119.80.169",
-                                    metadata={"source": "chat_history"})
+            history_doc = Document(
+                page_content="The top demanding IPs are: 18.146.47.131, 130.112.80.168, 183.233.154.202, 117.119.80.169",
+                metadata={"source": "chat_history"})
 
             docs.insert(0, history_doc)
 
@@ -105,7 +105,7 @@ class QASystem():
             return await self.original_retriever._aget_relevant_documents(query)
 
     LLAMA3_DEFAULT_END_LLM_RESPONSE = "<|eot_id|>"
-    cb_llm = None # The cyberguardian llm instance
+    cb_llm = None  # The cyberguardian llm instance
 
     def __init__(self, QuestionRewritingPrompt: QUESTION_REWRITING_TYPE,
                  QuestionAnsweringPrompt: SECURITY_PROMPT_TYPE,
@@ -113,15 +113,31 @@ class QASystem():
                  debug: bool,
                  streamingOnAnotherThread: bool,
                  demoMode: bool,
-                 noInitialize=False):
+                 noInitialize=False,
+                 userProfile=SecurityOfficer()):
 
+        self.llm_conversational_chain_func_calls_comparisonMapRequests = None
+        self.llm_conversational_chain_func_calls_devicesByIPLogs = None
+        self.llama_condense_prompt = None
+        self.llama_doc_chain_func_calls_devicesByIPLogs = None
+        self.llama_doc_chain_funccalls_topDemandingIPS = None
+        self.llama_doc_chain_func_calls_firewall_update = None
+        self.llama_doc_chain_func_calls_comparisonMapRequests = None
+        self.generation_params = None
+        self.formatted_prompt_for_question_answering_func_call_comparisonMapRequests = None
+        self.formatted_prompt_for_question_answering_func_call_firewallUpdate = None
+        self.formatted_prompt_for_question_answering_func_call_topDemandingIPS = None
+        self.formatted_prompt_for_question_answering_func_call_devicesByIPLogs = None
+        self.formatted_prompt_for_question_answering_func_call_resourceUtilization = None
+        self.streamer = None
+        self.userProfile: SecurityOfficer = userProfile
         self.tokenizer = None
         self.model = None
         self.embedding_engine = None
         self.default_llm = None
         self.llm_conversational_chain_default = None  # The full conversational chain
         self.textGenerationPipeline = None
-        self.chat_history_tuples = [] # Empty history
+        self.chat_history_tuples = []  # Empty history
 
         self.llama_doc_chain = None  # The question answering on a given context (rag) chain
         self.llama_question_generator_chain = None  # The history+newquestion => standalone question generation chain
@@ -129,15 +145,15 @@ class QASystem():
         self.streamingOnAnotherThread = streamingOnAnotherThread
 
         # Func calls chain
-        self.llm_conversational_chain_funccalls_resourceUtilization = None  # Func calls conversation
-        self.llama_doc_chain_funccalls_resourceUtilization = None  #
+        self.llm_conversational_chain_func_calls_resourceUtilization = None  # Func calls conversation
+        self.llama_doc_chain_func_calls_resourceUtilization = None  #
 
         self.debug = debug
         self.demoMode = demoMode
 
         # See the initializePromptTemplates function and enum above
-        self.templateprompt_for_question_answering_default: str = ""
-        self.templateprompt_for_standalone_question_generation: str = ""
+        self.formatted_prompt_for_question_answering_default: str = ""
+        self.formatted_prompt_for_standalone_question_generation: str = ""
 
         self.QuestionRewritingPromptType = QuestionRewritingPrompt
         self.QuestionAnsweringPromptType = QuestionAnsweringPrompt
@@ -152,8 +168,7 @@ class QASystem():
             self.initilizeEverything()
 
     # Function to format a system prompt + user prompt (instruction) in LLM used template
-    def get_prompt(self, instruction=DEFAULT_QUESTION_PROMPT, new_system_prompt=None):
-
+    def get_prompt(self, instruction=cybprompts.DEFAULT_QUESTION_PROMPT, new_system_prompt=None):
         if new_system_prompt is None:
             messages = [
                 {"role": "user", "content": instruction},
@@ -177,8 +192,8 @@ class QASystem():
         # Init the models
         self.initializeLLM()
 
-        # All tempaltes
-        self.initializePromptTemplates()
+        # All templates
+        self.initialize_prompt_templates()
 
         # TODO: implement more
         self.initializeQuestionAndAnswering_withRAG_andMemory()
@@ -186,46 +201,51 @@ class QASystem():
         langchain.debug = self.debug
 
     # Function to format a system prompt + user prompt (instruction) in LLM used template
-    def initializePromptTemplates(self):
+    def initialize_prompt_templates(self):
+
+        cybprompts.init_templates(self.userProfile)
+
         if self.QuestionAnsweringPromptType == QASystem.SECURITY_PROMPT_TYPE.PROMPT_TYPE_DEFAULT:
-            self.templateprompt_for_question_answering_default = self.get_prompt(instruction=DEFAULT_QUESTION_PROMPT,
-                                                                            new_system_prompt=None)
+            self.formatted_prompt_for_question_answering_default = self.get_prompt(
+                instruction=cybprompts.DEFAULT_QUESTION_PROMPT,
+                new_system_prompt=None)
         elif self.QuestionAnsweringPromptType == QASystem.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_NOSOURCES:
-            self.templateprompt_for_question_answering_default = self.get_prompt(
-                instruction=template_securityOfficer_instruction_rag_nosources_default,
-                new_system_prompt=template_securityOfficer_system_prompt)
+            self.formatted_prompt_for_question_answering_default = self.get_prompt(
+                instruction=cybprompts.template_securityOfficer_instruction_rag_nosources_default,
+                new_system_prompt=cybprompts.template_securityOfficer_system_prompt)
         elif self.QuestionAnsweringPromptType == QASystem.SECURITY_PROMPT_TYPE.PROMPT_TYPE_SECURITY_OFFICER_WITH_RAG_MEMORY_WITHSOURCES:
-            self.templateprompt_for_question_answering_default = self.get_prompt(
-                instruction=template_securityOfficer_instruction_rag_withsources_default,
-                new_system_prompt=template_securityOfficer_system_prompt)
+            self.formatted_prompt_for_question_answering_default = self.get_prompt(
+                instruction=cybprompts.template_securityOfficer_instruction_rag_withsources_default,
+                new_system_prompt=cybprompts.template_securityOfficer_system_prompt)
         else:
             assert False, f"Unknown type {self.QuestionAnsweringPromptType}"
 
         ######## FUNCTION CALLS and CUSTOM PROMPTS other than default
-        self.templateprompt_for_question_answering_funccall_resourceUtilization = self.get_prompt(
-            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization,
-            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
-        self.templateprompt_for_question_answering_funccall_devicesByIPLogs = self.get_prompt(
-            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs,
-            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+        self.formatted_prompt_for_question_answering_func_call_resourceUtilization = self.get_prompt(
+            instruction=cybprompts.template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization,
+            new_system_prompt=cybprompts.FUNC_CALL_SYSTEM_PROMPT)
+        self.formatted_prompt_for_question_answering_func_call_devicesByIPLogs = self.get_prompt(
+            instruction=cybprompts.template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs,
+            new_system_prompt=cybprompts.FUNC_CALL_SYSTEM_PROMPT)
 
-        self.templateprompt_for_question_answering_funccall_topDemandingIPS = self.get_prompt(
-            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS,
-            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+        self.formatted_prompt_for_question_answering_func_call_topDemandingIPS = self.get_prompt(
+            instruction=cybprompts.template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS,
+            new_system_prompt=cybprompts.FUNC_CALL_SYSTEM_PROMPT)
 
-        self.templateprompt_for_question_answering_funccall_comparisonMapRequests = self.get_prompt(
-            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests,
-            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+        self.formatted_prompt_for_question_answering_func_call_comparisonMapRequests = self.get_prompt(
+            instruction=cybprompts.template_securityOfficer_instruction_rag_nosources_funccalls_comparisonMapRequests,
+            new_system_prompt=cybprompts.FUNC_CALL_SYSTEM_PROMPT)
 
-        self.templateprompt_for_question_answering_funccall_firewallUpdate = self.get_prompt(
-            instruction=template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert,
-            new_system_prompt=FUNC_CALL_SYSTEM_PROMPT)
+        self.formatted_prompt_for_question_answering_func_call_firewallUpdate = self.get_prompt(
+            instruction=cybprompts.template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert,
+            new_system_prompt=cybprompts.FUNC_CALL_SYSTEM_PROMPT)
 
         ################# CUSTOM PROMPTS END
 
         if self.QuestionRewritingPromptType == QASystem.QUESTION_REWRITING_TYPE.QUESTION_REWRITING_DEFAULT:
-            self.templateprompt_for_standalone_question_generation = self.get_prompt(instruction=llama_condense_template,
-                                                                                     new_system_prompt=None)
+            self.formatted_prompt_for_standalone_question_generation = self.get_prompt(
+                instruction=cybprompts.llama_condense_template,
+                new_system_prompt=None)
         else:
             assert False, f"Unknown type {self.QuestionAnsweringPromptType}"
 
@@ -233,10 +253,15 @@ class QASystem():
     # assistant
     # The full_response is the response from the assistant
     # The do_history_update is a flag to update the history with the answer
-    # Returns the answer and the source code to be executed/proposed by the assistant
-    def solveFunctionCalls(self, full_response: str, do_history_update: bool = False) -> Tuple[Union[str, None], Union[str, None], Union[str, None], Union[bool, None]]:
+    # Returns: result_answer - what to show to the user
+    #  result_source_code_tool - some source code suggested by the tool
+    #  result_source_code_ui - source code for UI
+    #  tool_code_needs_confirm - true if confirmation needed to execute tool from the user side
+    def solveFunctionCalls(self, full_response: str, do_history_update: bool = False) -> Tuple[
+        Union[str, None], Union[str, None], Union[str, None], Union[bool, None]]:
+        # Removing the last </s> ending character specific to llama ending of a response
         full_response = full_response.removesuffix(
-            QASystem.LLAMA3_DEFAULT_END_LLM_RESPONSE)  # Removing the last </s> ending character specific to llama endint of a response
+            QASystem.LLAMA3_DEFAULT_END_LLM_RESPONSE)
         full_response = full_response.strip()
         if (full_response[0] == '\"' and full_response[-1] == '\"') \
                 or (full_response[0] == "\'" and full_response[-1] == "\'"):
@@ -258,8 +283,8 @@ class QASystem():
             words_in_func_call[0] = words_in_func_call[0][1:]
             words_in_func_call[-1] = words_in_func_call[-1][:-1]
 
-        indexOfFunccall = words_in_func_call.index("FUNC_CALL")
-        words_in_func_call = words_in_func_call[indexOfFunccall:]
+        index_of_funccall = words_in_func_call.index("FUNC_CALL")
+        words_in_func_call = words_in_func_call[index_of_funccall:]
 
         assert words_in_func_call[0] == 'FUNC_CALL', "First argument should be FUNC_CALL tozken"
         assert words_in_func_call[2] == 'Params', "Third argument needs to be Params token"
@@ -268,7 +293,8 @@ class QASystem():
 
         # Remove double quotes stuff
         quota_looking_for = ["'", '"']
-        words_in_func_call = [w[1:-1] if (w[0] in quota_looking_for and w[-1] in quota_looking_for) else w for w in words_in_func_call]
+        words_in_func_call = [w[1:-1] if (w[0] in quota_looking_for and w[-1] in quota_looking_for) else w for w in
+                              words_in_func_call]
 
         # Second expected as module.func
         mod_name, func_name = words_in_func_call[1].rsplit('.', 1)
@@ -285,7 +311,7 @@ class QASystem():
 
             if closing_bracket_idx < 0:
                 print(f"Closing bracket index is negative or not found in FUNC_CALL parameters list {func_params}")
-            assert closing_bracket_idx >=0, "Closing bracket index is negative or not found"
+            assert closing_bracket_idx >= 0, "Closing bracket index is negative or not found"
 
             # Eliminate the brackets
             func_params[0] = func_params[0][1:]
@@ -315,13 +341,14 @@ class QASystem():
 
             mod = importlib.import_module(mod_name)
         except ModuleNotFoundError:
-            return (None, None)
+            return None, None, None, None
 
         # Get the hook function call associated with the module and call it to solve the request
         hook_func = getattr(mod, HOOK_FUNC_NAME_TOKEN)
 
         # Call it
-        result_answer, result_source_code_tool, result_source_code_ui, tool_code_needs_confirm = hook_func(func_name, func_params)
+        result_answer, result_source_code_tool, result_source_code_ui, tool_code_needs_confirm = hook_func(func_name,
+                                                                                                           func_params)
 
         if result_answer is not None and do_history_update:
             self.history_update(None, result_answer)
@@ -332,8 +359,8 @@ class QASystem():
         # Get the embeddings, tokenizer and model
         self.embedding_engine = vecstore.get_embedding_engine(allowed_special="all")
 
-        # Init the cyberguardian model
-        llm_args = parse_args(with_json_args= pathlib.Path(os.environ["LLM_PARAMS_PATH_INFERENCE"]))
+        # Init the cyber guardian model
+        llm_args = parse_args(with_json_args=pathlib.Path(os.environ["LLM_PARAMS_PATH_INFERENCE"]))
         self.cb_llm = CyberGuardianLLM(llm_args)
         self.generation_params = llm_args.generation_params
         self.cb_llm.do_inference()
@@ -342,12 +369,12 @@ class QASystem():
 
         # Create a streamer and a text generation pipeline
         self.streamer = TextStreamer(self.tokenizer, skip_prompt=True) if self.streamingOnAnotherThread is False \
-                                    else TextIteratorStreamer(self.tokenizer, skip_prompt=True, skip_special_tokens=True)
+            else TextIteratorStreamer(self.tokenizer, skip_prompt=True, skip_special_tokens=True)
 
         self.textGenerationPipeline = pipeline("text-generation",
                                                model=self.model,
                                                tokenizer=self.tokenizer,
-                                               eos_token_id=self.cb_llm.terminators, #self.tokenizer.eos_token_id,
+                                               eos_token_id=self.cb_llm.terminators,  #self.tokenizer.eos_token_id,
                                                pad_token_id=self.tokenizer.eos_token_id,
                                                streamer=self.streamer,
                                                **self.generation_params,
@@ -362,38 +389,39 @@ class QASystem():
     # See the bottom function with "external" for methods that provide  that info probabilistically
     def check_response_safety(self, user_prompt: str, assistant_prompt: str) -> bool:
         assert user_prompt is not None and len(user_prompt) > 0
-        modassistant_prompt = f"Assistant: {assistant_prompt}" if (assistant_prompt is not None
-                                                                   and len(assistant_prompt) >0) else ""
+        assistant_prompt = f"Assistant: {assistant_prompt}" if (assistant_prompt is not None
+                                                                   and len(assistant_prompt) > 0) else ""
 
-        conversation = f"User: {user_prompt} \n{modassistant_prompt}"
+        conversation = f"User: {user_prompt} \n{assistant_prompt}"
         responseCheckPipeline = pipeline("text-generation",
-                                               model=self.model,
-                                               tokenizer=self.tokenizer,
-                                               torch_dtype=torch.float16,
-                                               device_map="auto",
-                                               max_new_tokens=512,
-                                               do_sample=True,
-                                               temperature=0.1,
-                                               top_p=0.95,
-                                               min_length=None,
-                                               num_return_sequences=1,
-                                               repetition_penalty=1.0,
-                                               # The parameter for repetition penalty. 1.0 means no penalty.
-                                               #length_penalty=1,
-                                               # [optional] Exponential penalty to the length that is used with beam-based generation.
-                                               eos_token_id=self.tokenizer.eos_token_id,
-                                               pad_token_id=self.tokenizer.eos_token_id,
-                                               streamer=self.streamer,
-                                               )
+                                         model=self.model,
+                                         tokenizer=self.tokenizer,
+                                         torch_dtype=torch.float16,
+                                         device_map="auto",
+                                         max_new_tokens=512,
+                                         do_sample=True,
+                                         temperature=0.1,
+                                         top_p=0.95,
+                                         min_length=None,
+                                         num_return_sequences=1,
+                                         repetition_penalty=1.0,
+                                         # The parameter for repetition penalty. 1.0 means no penalty.
+                                         #length_penalty=1,
+                                         # [optional] Exponential penalty to the length that is used with beam-based generation.
+                                         eos_token_id=self.tokenizer.eos_token_id,
+                                         pad_token_id=self.tokenizer.eos_token_id,
+                                         streamer=self.streamer,
+                                         )
 
         # Create the llm here
         responseCheckLLM = HuggingFacePipeline(pipeline=self.textGenerationPipeline)
-        responseChecktemplate = get_prompt(f"Given the conversation below check if there is any discrimination "
+        responseChecktemplate = self.get_prompt(f"Given the conversation below check if there is any discrimination "
                                            f"and response with True if it is OK or False if it isn't. Do not respond to the user question\n"
                                            f"{conversation} ", new_system_prompt=None)
 
         logger.info(responseChecktemplate)
-        responseCheckPrompt = PromptTemplate(template=responseChecktemplate, input_variables=[])  # , input_variables=["text"])
+        responseCheckPrompt = PromptTemplate(template=responseChecktemplate,
+                                             input_variables=[])  # , input_variables=["text"])
 
         responseCheckChain = LLMChain(prompt=responseCheckPrompt, llm=responseCheckLLM)
 
@@ -402,8 +430,8 @@ class QASystem():
 
     def initializeQuestionAndAnswering_withRAG_andMemory(self):
         # Create the question generator chain which takes history + new question and transform to a new standalone question
-        self.llama_condense_prompt = PromptTemplate(template=self.templateprompt_for_standalone_question_generation,
-                                               input_variables=["chat_history", "question"])
+        self.llama_condense_prompt = PromptTemplate(template=self.formatted_prompt_for_standalone_question_generation,
+                                                    input_variables=["chat_history", "question"])
 
         ## TODO : maybe deprecate since not used like this ?
         self.llama_question_generator_chain = LLMChain(llm=self.default_llm,
@@ -411,52 +439,56 @@ class QASystem():
                                                        verbose=self.debug)
 
         # Create the response chain based on a question and context (i.e., rag in our case)
-        llama_docs_prompt_default = PromptTemplate(template=self.templateprompt_for_question_answering_default,
+        llama_docs_prompt_default = PromptTemplate(template=self.formatted_prompt_for_question_answering_default,
                                                    input_variables=["context", "question"])
         self.llama_doc_chain = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
                                                           prompt=llama_docs_prompt_default,
                                                           document_variable_name="context", verbose=self.debug)
 
         ##################### FUNCTION DOC_CHAIN STUFF ####################
-        llama_docs_prompt_funccall_resourceUtilization = PromptTemplate(
-            template=self.templateprompt_for_question_answering_funccall_resourceUtilization,
+        llama_docs_prompt_func_call_resourceUtilization = PromptTemplate(
+            template=self.formatted_prompt_for_question_answering_func_call_resourceUtilization,
             input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_resourceUtilization = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
-                                                                                        prompt=llama_docs_prompt_funccall_resourceUtilization,
-                                                                                        document_variable_name="context",
-                                                                                        verbose=self.debug)
+        self.llama_doc_chain_func_calls_resourceUtilization = load_qa_with_sources_chain(self.default_llm,
+                                                                                         chain_type="stuff",
+                                                                                         prompt=llama_docs_prompt_func_call_resourceUtilization,
+                                                                                         document_variable_name="context",
+                                                                                         verbose=self.debug)
 
-        llama_docs_prompt_funccall_devicesByIPLogs = PromptTemplate(
-            template=self.templateprompt_for_question_answering_funccall_devicesByIPLogs,
+        llama_docs_prompt_func_call_devicesByIPLogs = PromptTemplate(
+            template=self.formatted_prompt_for_question_answering_func_call_devicesByIPLogs,
             input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_devicesByIPLogs = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
-                                                                                    prompt=llama_docs_prompt_funccall_devicesByIPLogs,
-                                                                                    document_variable_name="context",
-                                                                                    verbose=self.debug)
+        self.llama_doc_chain_func_calls_devicesByIPLogs = load_qa_with_sources_chain(self.default_llm,
+                                                                                     chain_type="stuff",
+                                                                                     prompt=llama_docs_prompt_func_call_devicesByIPLogs,
+                                                                                     document_variable_name="context",
+                                                                                     verbose=self.debug)
 
         llama_docs_prompt_funccall_topDemandingIPS = PromptTemplate(
-            template=self.templateprompt_for_question_answering_funccall_topDemandingIPS,
+            template=self.formatted_prompt_for_question_answering_func_call_topDemandingIPS,
             input_variables=["context", "question", "param1", "param2"])
-        self.llama_doc_chain_funccalls_topDemandingIPS = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
+        self.llama_doc_chain_funccalls_topDemandingIPS = load_qa_with_sources_chain(self.default_llm,
+                                                                                    chain_type="stuff",
                                                                                     prompt=llama_docs_prompt_funccall_topDemandingIPS,
                                                                                     document_variable_name="context",
                                                                                     verbose=self.debug)
 
         llama_docs_prompt_funccall_comparisonMapRequests = PromptTemplate(
-            template=self.templateprompt_for_question_answering_funccall_comparisonMapRequests,
+            template=self.formatted_prompt_for_question_answering_func_call_comparisonMapRequests,
             input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_comparisonMapRequests = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
-                                                                                          prompt=llama_docs_prompt_funccall_comparisonMapRequests,
-                                                                                          document_variable_name="context",
-                                                                                          verbose=self.debug)
+        self.llama_doc_chain_func_calls_comparisonMapRequests = load_qa_with_sources_chain(self.default_llm,
+                                                                                           chain_type="stuff",
+                                                                                           prompt=llama_docs_prompt_funccall_comparisonMapRequests,
+                                                                                           document_variable_name="context",
+                                                                                           verbose=self.debug)
 
         llama_docs_prompt_funccall_firewallUpdate = PromptTemplate(
-            template=self.templateprompt_for_question_answering_funccall_firewallUpdate,
+            template=self.formatted_prompt_for_question_answering_func_call_firewallUpdate,
             input_variables=["context", "question"])
-        self.llama_doc_chain_funccalls_firewalUpdate = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
-                                                                                  prompt=llama_docs_prompt_funccall_firewallUpdate,
-                                                                                  document_variable_name="context",
-                                                                                  verbose=self.debug)
+        self.llama_doc_chain_func_calls_firewall_update = load_qa_with_sources_chain(self.default_llm, chain_type="stuff",
+                                                                                     prompt=llama_docs_prompt_funccall_firewallUpdate,
+                                                                                     document_variable_name="context",
+                                                                                     verbose=self.debug)
         #################### END FUNCTION DOC_CHAIN STUFF ###################
 
         # Initialize the memory(i.e., the chat history)
@@ -468,11 +500,10 @@ class QASystem():
         shouldUseMain = (os.environ["USE_MAIN_KNOWLEDGE_FOR_RAG"] == "True" or
                          os.environ["USE_ALL_KNOWLEDGE_FOR_RAG"] == "True")
 
-
-        self.vectorstore = vecstore.connect_to_vector_index(index_path= vecstore.VECTOR_DIR_MAIN if shouldUseMain
-                                                                else vecstore.VECTOR_DIR_RAG,
+        self.vectorstore = vecstore.connect_to_vector_index(index_path=vecstore.VECTOR_DIR_MAIN if shouldUseMain
+        else vecstore.VECTOR_DIR_RAG,
                                                             index_name=vecstore.INDEX_NAME_MAIN if shouldUseMain
-                                                                else vecstore.INDEX_NAME_RAG,
+                                                            else vecstore.INDEX_NAME_RAG,
                                                             embedding_engine=self.embedding_engine)
 
         # pretty_log("connected to vector storage")
@@ -485,33 +516,33 @@ class QASystem():
         # Create the final retriever chain which combines the retriever, question generator and the document chain
         self.llm_conversational_chain_default = (
             ConversationalRetrievalChain(
-            retriever=self.custom_retriever,
-            question_generator=self.llama_question_generator_chain,
-            combine_docs_chain=self.llama_doc_chain,
-            return_generated_question=False,
-            verbose=self.debug))
+                retriever=self.custom_retriever,
+                question_generator=self.llama_question_generator_chain,
+                combine_docs_chain=self.llama_doc_chain,
+                return_generated_question=False,
+                verbose=self.debug))
 
         ##################### FUNCTION CONV CHAIN STUFF ####################
-        self.llm_conversational_chain_funccalls_resourceUtilization = ConversationalRetrievalChain(
+        self.llm_conversational_chain_func_calls_resourceUtilization = ConversationalRetrievalChain(
             retriever=self.vectorstore.as_retriever(search_kwargs={'k': 3}),
             question_generator=self.llama_question_generator_chain,
-            combine_docs_chain=self.llama_doc_chain_funccalls_resourceUtilization,
+            combine_docs_chain=self.llama_doc_chain_func_calls_resourceUtilization,
             return_generated_question=False,
             #memory=self.memory
         )
 
-        self.llm_conversational_chain_funccalls_devicesByIPLogs = ConversationalRetrievalChain(
+        self.llm_conversational_chain_func_calls_devicesByIPLogs = ConversationalRetrievalChain(
             retriever=self.vectorstore.as_retriever(search_kwargs={'k': 3}),
             question_generator=self.llama_question_generator_chain,
-            combine_docs_chain=self.llama_doc_chain_funccalls_devicesByIPLogs,
+            combine_docs_chain=self.llama_doc_chain_func_calls_devicesByIPLogs,
             return_generated_question=False,
             memory=self.memory
         )
 
-        self.llm_conversational_chain_funccalls_comparisonMapRequests = ConversationalRetrievalChain(
+        self.llm_conversational_chain_func_calls_comparisonMapRequests = ConversationalRetrievalChain(
             retriever=self.vectorstore.as_retriever(search_kwargs={'k': 3}),
             question_generator=self.llama_question_generator_chain,
-            combine_docs_chain=self.llama_doc_chain_funccalls_comparisonMapRequests,
+            combine_docs_chain=self.llama_doc_chain_func_calls_comparisonMapRequests,
             return_generated_question=False,
             memory=self.memory
         )
@@ -522,7 +553,7 @@ class QASystem():
     # Computes the similarity of request to one of the tools
     # Extract parameters through classic NLP techniques at the moment...well, for the demo just basic stuff..
     # TODO: The similarity operation is currently very simple token based, need to FIX it after demo
-    def similarityToTool(self, question: str):
+    def similarity_to_tool(self, question: str):
         # Split in lowercase tokens, remove punctuation and spaces at the end of the words
         question_lower_words = re.split(r'[,\s,:?!]', question.lower())
         for index, word in enumerate(question_lower_words):
@@ -541,14 +572,14 @@ class QASystem():
         def list_of_words_contains_words(list_of_words, words):
             return any([word in string for word in words for string in list_of_words])
 
-        def isFirewallRequest() -> bool:
+        def is_firewall_request() -> bool:
             if "firewall" not in question_small_words:
                 return False
             if not list_of_words_contains_words(question_small_words,
                                                 ["update", "insert", "delete", "remove", "add", "restrict", "deny"]):
                 return False
 
-            if not list_of_words_contains_words (question_small_words, ["ip", "ips"]):
+            if not list_of_words_contains_words(question_small_words, ["ip", "ips"]):
                 return False
 
             return True
@@ -556,7 +587,7 @@ class QASystem():
         params = []
         toolType: QASystem.TOOL_TYPE = QASystem.TOOL_TYPE.TOOL_NONE
 
-        if set(["resource", "utilization"]).issubset(question_small_words):
+        if {"resource", "utilization"}.issubset(question_small_words):
             toolType = QASystem.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION
         elif set("devices grouped by ip".split()).issubset(question_small_words) or \
                 set("services grouped by ip".split()).issubset(question_small_words):
@@ -567,10 +598,11 @@ class QASystem():
             toolType = QASystem.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP
         elif set("map requests comparing".split()).issubset(question_small_words):
             toolType = QASystem.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE
+            # A set of generic question that should not depend on history of the conversation!
         elif set("ips locations random queries".split()).issubset(
-                question_small_words):  # A set of generic question that should not depend on history of the conversation!
+                question_small_words):
             toolType = QASystem.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY
-        elif isFirewallRequest():  # Demo for code
+        elif is_firewall_request():  # Demo for code
             toolType = QASystem.TOOL_TYPE.PANDAS_FIREWALL_UPDATE
 
             # Params: Search for IP addresses and excepting keyword.
@@ -596,7 +628,6 @@ class QASystem():
             allowed = False
             params.insert(0, allowed)
 
-
         return toolType, params
 
     def getConversationChainByQuestion(self, question: str):
@@ -607,19 +638,19 @@ class QASystem():
         # This is mainly needed since we use a small model as foundation, a 7B, which can't hold too much context
         # and adapt to ALL use cases, functions etc. So this is like a task decomposition technique used in SE
 
-        toolTypeSimilarity, params = self.similarityToTool(question)
+        toolTypeSimilarity, params = self.similarity_to_tool(question)
         if toolTypeSimilarity == QASystem.TOOL_TYPE.TOOL_RESOURCE_UTILIZATION:
-            conv_chain_res = self.llama_doc_chain_funccalls_resourceUtilization  # self.llm_conversational_chain_funccalls_resourceUtilization
+            conv_chain_res = self.llama_doc_chain_func_calls_resourceUtilization
         elif toolTypeSimilarity == QASystem.TOOL_TYPE.TOOL_DEVICES_LOGS_BY_IP:
-            conv_chain_res = self.llama_doc_chain_funccalls_devicesByIPLogs  # self.llm_conversational_chain_funccalls_devicesByIPLogs
+            conv_chain_res = self.llama_doc_chain_func_calls_devicesByIPLogs
         elif toolTypeSimilarity == QASystem.TOOL_TYPE.TOOL_DEVICES_TOP_DEMANDING_REQUESTS_BY_IP:
-            conv_chain_res = self.llama_doc_chain_funccalls_topDemandingIPS  # self.llm_conversational_chain_funccalls_topDemandingIPS
+            conv_chain_res = self.llama_doc_chain_funccalls_topDemandingIPS
         elif toolTypeSimilarity == QASystem.TOOL_TYPE.TOOL_MAP_OF_REQUESTS_COMPARE:
-            conv_chain_res = self.llama_doc_chain_funccalls_comparisonMapRequests  # self.llm_conversational_chain_funccalls_comparisonMapRequests
+            conv_chain_res = self.llama_doc_chain_func_calls_comparisonMapRequests
         elif toolTypeSimilarity == QASystem.TOOL_TYPE.GENERIC_QUESTION_NO_HISTORY:
             conv_chain_res = self.llama_doc_chain
         elif toolTypeSimilarity == QASystem.TOOL_TYPE.PANDAS_FIREWALL_UPDATE:
-            conv_chain_res = self.llama_doc_chain_funccalls_firewalUpdate
+            conv_chain_res = self.llama_doc_chain_func_calls_firewall_update
 
         refactored_question = question  # For now, let it as original
         params_res = params
@@ -652,7 +683,7 @@ class QASystem():
         chainToUse, question, params = self.getConversationChainByQuestion(question_original)
 
         isfullConversationalType: bool = True
-        args = {"question": question} # Default
+        args = {"question": question}  # Default
 
         # TODO: fix this. Some hacked params because LLM is incapable at this moment to extract correctly
         # some of the parameters from the model. It can be finetuned to do so, proved on other examples,
@@ -677,7 +708,6 @@ class QASystem():
             answer = res['output_text'] if 'output_text' in res else (res['answer'] if 'answer' in res else None)
             return answer, isfullConversationalType
 
-
     # Can write to an external streamer object on another thread or directly to console if streamingOnAnotherThread
     # is False
     # Returns the final answer and a boolean if it is a full conversational type or not
@@ -692,8 +722,8 @@ class QASystem():
             need_to_ignore_standalone_question_chain = self.hasHistoryMessages()
 
             response_streamer, isfullConversationalType = self.__ask_question(question,
-                                                                     add_to_history=add_to_history,
-                                                                     use_history=use_history)
+                                                                              add_to_history=add_to_history,
+                                                                              use_history=use_history)
             if not isfullConversationalType:
                 need_to_ignore_standalone_question_chain = False
 
@@ -724,7 +754,6 @@ class QASystem():
             if self.debug:
                 logger.info("\n")
 
-
             # Wait for the thread to finish
             self.temp_modelevaluate_thread.join()
             res_answer = generated_text
@@ -740,12 +769,13 @@ class QASystem():
         # Identify the part that should be output to the user and the part that should be executed behind the scenes
         to_behind_answer = res_answer
         to_user_answer = res_answer
-        if TOKEN_DO_NOT_SHOW in res_answer:
-            to_user_answer, to_behind_answer = res_answer.split(TOKEN_DO_NOT_SHOW) # Split on the token
+        if cybprompts.TOKEN_DO_NOT_SHOW in res_answer:
+            to_user_answer, to_behind_answer = res_answer.split(cybprompts.TOKEN_DO_NOT_SHOW)  # Split on the token
         res_answer = to_user_answer
 
         # Now we have the generated text, we can check if there are any function calls
-        res_tool_answer, res_tool_code, res_ui_code, tool_code_needs_confirm = self.solveFunctionCalls(to_behind_answer, do_history_update=add_to_history)
+        res_tool_answer, res_tool_code, res_ui_code, tool_code_needs_confirm = self.solveFunctionCalls(to_behind_answer,
+                                                                                                       do_history_update=add_to_history)
 
         # Concat on the final answer the tool answer
         res_answer = f"{res_answer}\n\n {res_tool_answer}" if res_tool_answer is not None else res_answer
@@ -760,7 +790,6 @@ class QASystem():
         # Return the final answer even if already streamed
         return res_answer, isfullConversationalType, res_tool_code, res_ui_code, tool_code_needs_confirm
 
-
     def history_add(self, question: str, answer: str):
         self.chat_history_tuples.append((question, answer))
 
@@ -768,7 +797,6 @@ class QASystem():
         # TODO: maybe consider previous answer too
         if len(self.chat_history_tuples) > 0:
             self.chat_history_tuples[-1] = (self.chat_history_tuples[-1][0], new_answer)
-
 
     # VERY USEFULLY FOR checking the sources and context
     ######################################################
@@ -801,6 +829,7 @@ class QASystem():
 
 from Data.utils import get_safety_checker, AgentType
 
+
 def evaluate_safety_external_methods(user_prompt: str, kwargs):
     safetyModels = get_safety_checker(enable_sensitive_topics=False,
                                       enable_salesforce_content_safety=False,
@@ -810,11 +839,12 @@ def evaluate_safety_external_methods(user_prompt: str, kwargs):
     for res in safety_res:
         logger.info(res)
 
+
 def test_evaluate_safety_external_methods():
     # NOTE to see how they work in the backend please go to meta_prompt_format_utils and see categories and prompts
     # A single user question:
-    evaluate_safety_external_methods("Can I harm myself?", {'agent_type': AgentType.USER })# user_prompt = "What is a DDoS attack? please respond as a man, not like a woman, since they are not so good at engineering.")
-
+    evaluate_safety_external_methods("Can I harm myself?", {
+        'agent_type': AgentType.USER})  # user_prompt = "What is a DDoS attack? please respond as a man, not like a woman, since they are not so good at engineering.")
 
     ##### A Full cojnversion between agent and user
     evaluate_safety_external_methods("No, I can't you're a women and you won't understand it. Please go to kitchen.",
@@ -852,7 +882,7 @@ def test_question_with_rag(chain_instance):
                         f"{{ ""res"" : 123 }}. \nWrite only the response, no other words")
 
         res = chain_instance.run({'retrieved_info': retrieved_info_str,  # Retrieved fact
-                                      'question': question_str})
+                                  'question': question_str})
 
         y = json.loads(res)
         assert "result" not in y, f"result from LLM is {res}"
@@ -862,11 +892,12 @@ def test_question_with_rag(chain_instance):
     elif USE_brackets:
         question_str = f"What is the temperature in Menlo Park on {query_day}? Report the answer surrounded by three backticks, for example: \n ```123```"
         res = chain_instance.run({'retrieved_info': retrieved_info_str,  # Retrieved fact
-                                      'question': question_str})
+                                  'question': question_str})
         res_num = re.search(r'```(\d+)(°F)?```', res)
         assert res_num, f"result from LLM is {res}"
 
         logger.info(res_num.group(1))
+
 
 def __main__():
     securityChatbot = QASystem(
@@ -878,12 +909,14 @@ def __main__():
         demoMode=True,
         noInitialize=False)
 
-    res_answer, _, source_code_tool, source_code_ui = securityChatbot.ask_question("Generate me a python code to restrict in the firewall database "
-                                 "the following IPs: 123.123.321.32, 123.32.321.321",
-                                add_to_history=True,
-                                 use_history=True)
+    res_answer, _, source_code_tool, source_code_ui = securityChatbot.ask_question(
+        "Generate me a python code to restrict in the firewall database "
+        "the following IPs: 123.123.321.32, 123.32.321.321",
+        add_to_history=True,
+        use_history=True)
 
-    print(f"Debug: assistant Answer: {res_answer} \nProposed Code tool: {source_code_tool}\n Proposed code UI: {source_code_ui}")
+    print(
+        f"Debug: assistant Answer: {res_answer} \nProposed Code tool: {source_code_tool}\n Proposed code UI: {source_code_ui}")
 
     # securityChatbot.ask_question("What are the IPs of the servers hosting the DICOM and X-Ray records? Can you show me a graph of their resource utilization over the last 24 hours?")
 
@@ -910,7 +943,6 @@ def __main__():
     #securityChatbot.ask_question("What is a DDoS attack?")
 
     #securityChatbot.ask_question("How to avoid one?")
-
 
     """
     securityChatbot.llama_doc_chain_funccalls_firewallInsert({'input_documents': [],

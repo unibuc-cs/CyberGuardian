@@ -7,23 +7,20 @@
     <option name="proportionPopup" value="0.503125" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="Significant architectural optimizations, paths, etc">
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/column_layer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/temp/temp_avg_last24h.png" afterDir="false" />
+    <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="A temp file doc">
+      <change afterPath="$PROJECT_DIR$/userUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/DynabicPrompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/DynabicPrompts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLM/DynabicPrompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberguardianPrompts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/llm_params_inference.json" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/llm_params_inference.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/.env" beforeDir="false" afterPath="$PROJECT_DIR$/UI/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI" beforeDir="false" afterPath="$PROJECT_DIR$/UI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/Main_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main_Page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/clientserverUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/clientserverUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/dynabicagenttools.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/dynabicagenttools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/pages/Register_User.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pages/Register_User.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/pages/Work_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pages/Work_area.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/MapSim2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/TestSim.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/TestSim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/userUtils.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projsecrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/projsecrets.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +49,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/UI" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -172,10 +169,10 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\LLM" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\SyntheticGeneratorsAndExperiments" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI\localdata\credentials" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
   </component>
@@ -335,7 +332,10 @@
       <workItem from="1717939228327" duration="47655000" />
       <workItem from="1718104877158" duration="121812000" />
       <workItem from="1718519216888" duration="22353000" />
-      <workItem from="1718545642478" duration="6445000" />
+      <workItem from="1718545642478" duration="27528000" />
+      <workItem from="1718711225220" duration="8461000" />
+      <workItem from="1718723961659" duration="2212000" />
+      <workItem from="1718726199524" duration="1953000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -425,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718294252036</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="A temp file doc">
+      <option name="closed" value="true" />
+      <created>1718602978688</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1718602978688</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +502,8 @@
     <MESSAGE value="New demo Hospital work in progress" />
     <MESSAGE value="New demo Hospital work in progress - part 2" />
     <MESSAGE value="Significant architectural optimizations, paths, etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Significant architectural optimizations, paths, etc" />
+    <MESSAGE value="A temp file doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="A temp file doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -521,45 +530,50 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>245</line>
+          <line>270</line>
           <option name="timeStamp" value="686" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>438</line>
-          <option name="timeStamp" value="692" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <condition expression="tool_code_needs_confirm is True" language="Python" />
           <url>file://$PROJECT_DIR$/UI/pages/Work_area.py</url>
-          <line>558</line>
+          <line>603</line>
           <option name="timeStamp" value="693" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>326</line>
+          <line>344</line>
           <option name="timeStamp" value="699" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>348</line>
+          <line>366</line>
           <option name="timeStamp" value="700" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <condition expression="closing_bracket_idx &lt; 0" language="Python" />
           <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>287</line>
+          <line>313</line>
           <option name="timeStamp" value="709" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/UI/dynabicagenttools.py</url>
-          <line>22</line>
+          <line>26</line>
           <option name="timeStamp" value="711" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py</url>
-          <line>286</line>
-          <option name="timeStamp" value="720" />
+          <url>file://$PROJECT_DIR$/UI/pages/Work_area.py</url>
+          <line>357</line>
+          <option name="timeStamp" value="761" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/UI/pages/Work_area.py</url>
+          <line>382</line>
+          <option name="timeStamp" value="762" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/UI/pages/Work_area.py</url>
+          <line>377</line>
+          <option name="timeStamp" value="763" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -587,11 +601,13 @@
         <watch expression="words_in_func_call[10][0]=='&quot;'" language="Python" />
         <watch expression="words_in_func_call[5]" language="Python" />
         <watch expression="row[0]" language="Python" />
+        <watch expression="cybprompts" />
+        <watch expression="csu" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest_NO_LOGIN.coverage" NAME="UITest_NO_LOGIN Coverage Results" MODIFIED="1718546667410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest_NO_LOGIN.coverage" NAME="UITest_NO_LOGIN Coverage Results" MODIFIED="1718727552158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717149510442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug__1_.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717070715688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$asccelerate_tests_gpt2.coverage" NAME="asccelerate_tests_gpt2 Coverage Results" MODIFIED="1716976279653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments" />
