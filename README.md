@@ -2,7 +2,8 @@
 
 ## Model loading, usage, demo
 * Step 1: Check our huggingface repository and download the model
-https://huggingface.co/datasets/unibuc-cs/CyberGuardianDataset
+  https://huggingface.co/unibuc-cs/CyberGuardian
+
 
 * Step 2: Use Ollama or llama.cpp to do local inference of the model, indepedently of the architecture you run on (e.g., you can use MacOS, CPU only, GPUs, etc.).
 
@@ -13,6 +14,11 @@ https://huggingface.co/datasets/unibuc-cs/CyberGuardianDataset
 * Notes:
    - Check our video demos, create a profile, and test your skills.
    - To run our demo in the presentations, define a OS env variable: DEMO_USE_CASE=hospital
+ 
+## Dataset
+   - Our dataset is uploaded to https://huggingface.co/datasets/unibuc-cs/CyberGuardianDataset
+   - Note that the repository contains scripts to inject your own data, update the dataset and even include your data in RAG.
+   - Check the documentation in the Readme.
 
 ## Development 
 We created a set of Pycharm confirmation to sustain development. If you load the project you will see various setups to speed to things.
