@@ -1,25 +1,20 @@
 # CyberGuardian chatbot
 
-## TODO: 
- - Write a proper documentation!
- - Difference in responses between EXPERT and beginner expertise + how risks from user evaluation are taken into consideration by the LLM  etc.
- - Sync https://huggingface.co/datasets/unibuc-cs/CyberGuardianDataset as a submodule, cleanup things here and use that subfolder!
- - Clarify the FinetuningModel.py and if LoRA weights can be uploaded on hugging face.
- - Maybe put the UI Interface here too ?
- - toolTypeSimilarity, params = self.similarityToTool(question)
- - Dockerize.
- - ETL for RAG for custom user data!
- - Make training data public in HuggingFace
- - Fix belows logic:
-``` 
-        self.vector_index = vecstore.connect_to_vector_index
-```
+## Model loading and usage 
+* Step 1: Check our huggingface repository and download the model
+https://huggingface.co/datasets/unibuc-cs/CyberGuardianDataset
 
-- FIX the python code added to history and not working properly afterwards! History is messing with LLM after sending a python code . Start from this:
-```
-    securityChatbot.ask_question(
-        "Generate me a python code to insert in a pandas dataframe named Firewalls a new IP 10.20.30.40 as blocked under the name of IoTDevice", add_to_history=False)
-```
+* Step 2: Use Ollama or Lama.cpp to do local inference of the model, indepedently of the architecture you run on (e.g., you can use MacOS, CPU only, GPUs, etc.).
+
+* Step 3: Install the UI/requirements.txt packages to run the project.
+
+* Step 4: While the UI interface is currently built with Streamlit library, use run MainPage.py to start.
+   - Check our video demos, create a profile, and test your skills.
+   - Note that it by default it will run our demo in the presentations.
+
+## TODO: 
+ - Final paper ICSOFT cite 
+ - Upload documentation folder with demos and paper, presentations.
 
 Acknowledgements: This research was supported by European Union’s Horizon Europe research and innovation programme under grant agreement no. 101070455, [project DYNABIC](https://dynabic.eu), where we use the code for the Chat4Operator component.
 
