@@ -38,7 +38,6 @@ class Preference_Emojis(IntEnum):
 class Preference_FeedbackArea(IntEnum):
     ALLOW_FEEDBACK_ON_HISTORY = 0
     ALLOW_FEEDBACK_ONLY_ON_LAST_MSG = 1
-
 class ACL_Role(IntEnum):
     ADMIN = 0
     USER = 1

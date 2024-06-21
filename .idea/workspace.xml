@@ -8,19 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="A temp file doc">
-      <change afterPath="$PROJECT_DIR$/userUtils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/langgraph_rag_agent_llama3_local.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/DynabicPrompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberguardianPrompts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI" beforeDir="false" afterPath="$PROJECT_DIR$/UI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/Main_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Main_Page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/clientserverUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/clientserverUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/dynabicagenttools.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/dynabicagenttools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/pages/Register_User.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pages/Register_User.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/pages/Work_area.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pages/Work_area.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/userUtils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/visualizationSamples/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/UI/visualizationSamples/test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/userUtils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +39,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/UI" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -89,45 +79,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.CleanDataset.executor": "Debug",
-    "Python.CyberGuardianLLM_InferenceTest.executor": "Debug",
-    "Python.CyberGuardianLLM_Training_accelerate.executor": "Debug",
-    "Python.CyberGuardianLLM_Training_debug (1).executor": "Run",
-    "Python.CyberGuardianLLM_Training_debug.executor": "Run",
-    "Python.DatasetUtils.executor": "Run",
-    "Python.DatasetUtils_EA_PC.executor": "Run",
-    "Python.FinetuningModel.executor": "Debug",
-    "Python.UITest.executor": "Debug",
-    "Python.UITest_NO_LOGIN.executor": "Run",
-    "Python.VisualizationSample_testSim.executor": "Debug",
-    "Python.asccelerate_tests_gpt2.executor": "Run",
-    "Python.docstoreplay.executor": "Run",
-    "Python.docstoreplay_EA_PC.executor": "Debug",
-    "Python.main_qa.executor": "Run",
-    "Python.main_qa_EA_PC.executor": "Run",
-    "Python.test_copilot.executor": "Debug",
-    "Python.tests (1).executor": "Debug",
-    "Python.tests_accelerate.executor": "Debug",
-    "Python.tests_debug.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "two.files.diff.last.used.file": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/Data/projsecrets.py",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.CleanDataset.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.CyberGuardianLLM_InferenceTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.CyberGuardianLLM_Training_accelerate.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.CyberGuardianLLM_Training_debug (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.CyberGuardianLLM_Training_debug.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DatasetUtils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.DatasetUtils_EA_PC.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FinetuningModel.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.UITest.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.UITest_NO_LOGIN.executor&quot;: &quot;Run&quot;,
+    &quot;Python.VisualizationSample_testSim.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.asccelerate_tests_gpt2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.docstoreplay.executor&quot;: &quot;Run&quot;,
+    &quot;Python.docstoreplay_EA_PC.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.main_qa.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_qa_EA_PC.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_copilot.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.tests (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Python.tests_accelerate.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.tests_debug.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/RAGSupport/dataForRAG/Hospital_DDoSSnapshot_Data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/Data/projsecrets.py&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
@@ -176,7 +166,7 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.UITest_NO_LOGIN">
+  <component name="RunManager" selected="Python.CyberGuardianLLM_Training_debug">
     <configuration name="CyberGuardianLLM_PushToHub_EA_PC" type="PythonConfigurationType" factoryName="Python">
       <module name="dynabicChatbot" />
       <option name="ENV_FILES" value="" />
@@ -335,7 +325,9 @@
       <workItem from="1718545642478" duration="27528000" />
       <workItem from="1718711225220" duration="8461000" />
       <workItem from="1718723961659" duration="2212000" />
-      <workItem from="1718726199524" duration="1953000" />
+      <workItem from="1718726199524" duration="8299000" />
+      <workItem from="1718796286613" duration="1019000" />
+      <workItem from="1718882635713" duration="3992000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -574,6 +566,11 @@
           <url>file://$PROJECT_DIR$/UI/pages/Work_area.py</url>
           <line>377</line>
           <option name="timeStamp" value="763" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+          <url>notebook:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/langgraph_rag_agent_llama3_local.ipynb</url>
+          <line>110</line>
+          <option name="timeStamp" value="765" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
