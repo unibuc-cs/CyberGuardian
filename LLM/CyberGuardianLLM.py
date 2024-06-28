@@ -99,7 +99,7 @@ class CyberGuardianLLM:
             datefmt="%m/%d/%Y %H:%M:%S",
             level=logging.INFO,
         )
-        logger.info(self.accelerator.state, main_process_only=False)
+        logger.info(self.accelerator.state)
         if self.accelerator.is_local_main_process:
             datasets.utils.logging.set_verbosity_warning()
             transformers.utils.logging.set_verbosity_info()
