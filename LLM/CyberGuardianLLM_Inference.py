@@ -12,6 +12,7 @@ from CyberGuardianLLM import CyberGuardianLLM
 
 def main():
     # Load default arguments
+    path_to_inference_params = pathlib.Path(os.environ["LLM_PARAMS_PATH_INFERENCE"])
     args = parse_args(with_json_args=path_to_inference_params )
     cg = CyberGuardianLLM(args)
     cg.do_inference(push_to_hub=False)

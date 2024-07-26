@@ -9,7 +9,7 @@ from langchain_community.vectorstores import FAISS
 
 import langchain
 from Data.utils import pretty_log
-from langchain_huggingface import HuggingFacePipeline
+from langchain_community.llms import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
 from userUtils import SecurityOfficer
 

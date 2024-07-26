@@ -23,7 +23,7 @@ def connect_to_vector_index(index_path, index_name, embedding_engine):
 
 def get_embedding_engine(**kwargs):
     """Retrieves the embedding engine."""
-    from langchain_huggingface import HuggingFaceEmbeddings
+    from langchain_community.embeddings import HuggingFaceEmbeddings
     embed_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
     return embed_model
 

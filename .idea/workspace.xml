@@ -8,27 +8,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="A temp file doc">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/AdvancedRAGSupport.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.virtual_documents/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/play.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/.idea/SyntheticGeneratorsAndExperiments.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/.ipynb_checkpoints/play-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RAGPromptsFactory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/chroma.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/advancedRagUtils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/play.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Llama3-structured formated output in JSON.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dynabicChatbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dynabicChatbot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/CyberGuardianLLM_Training_debug.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/CyberGuardianLLM_Training_debug.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AdvancedRAG/Demo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/data_level0.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/length.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AdvancedRAG/test_AgentRAGWithWebSearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/AdvancedRAGSupport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/test_AgentRAGWithWeb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAGSupport/Demo1_langchain.png" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/Demo1_langchain_example.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/.ipynb_checkpoints/play-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/.ipynb_checkpoints/play-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RAGPromptsFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/RAGPromptsFactory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/data_level0.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/header.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/header.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/length.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/link_lists.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/link_lists.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/chroma.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/chroma.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/advancedRagUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/advancedRagUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/main_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/test_AdaptiveRAGSupport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/play.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/play.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/LLama-3_adaptiveRAG_langchain.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/LLama-3_adaptiveRAG_langchain.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Llama-3_Finetuning_on_custom_dataset_and_gguf_llamacpp.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Llama-3_Finetuning_on_custom_dataset_and_gguf_llamacpp.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Llama3-WIP.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Llama3-modelInference_basicRAG.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Llama3-modelInference_basicRAG.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play with REACT and tools including custom.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play with REACT and tools including custom.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/data_level0.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/header.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/index_metadata.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/length.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/link_lists.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/chroma.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projsecrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/projsecrets.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +130,7 @@
     &quot;Python.docstoreplay_EA_PC.executor&quot;: &quot;Debug&quot;,
     &quot;Python.main_qa.executor&quot;: &quot;Run&quot;,
     &quot;Python.main_qa_EA_PC.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_AgentRAGWithWeb.executor&quot;: &quot;Debug&quot;,
     &quot;Python.test_copilot.executor&quot;: &quot;Debug&quot;,
     &quot;Python.tests (1).executor&quot;: &quot;Debug&quot;,
     &quot;Python.tests_accelerate.executor&quot;: &quot;Debug&quot;,
@@ -186,14 +199,14 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\AdvancedRAG" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\SyntheticGeneratorsAndExperiments\AdvancedRAGSupport" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\LLM" />
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\SyntheticGeneratorsAndExperiments" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI\localdata\credentials" />
-      <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.AdvancedRAGSupport">
+  <component name="RunManager" selected="Python.test_AgentRAGWithWeb">
     <configuration name="CyberGuardianLLM_PushToHub_EA_PC" type="PythonConfigurationType" factoryName="Python">
       <module name="dynabicChatbot" />
       <option name="ENV_FILES" value="" />
@@ -281,7 +294,7 @@
       <item itemvalue="Python.main_qa" />
       <item itemvalue="Python.VisualizationSample_testSim" />
       <item itemvalue="Python.CyberGuardianLLM_InferenceTest" />
-      <item itemvalue="Python.AdvancedRAGSupport" />
+      <item itemvalue="Python.test_AgentRAGWithWeb" />
       <item itemvalue="Python.docstoreplay" />
       <item itemvalue="Python.docstoreplay_EA_PC" />
       <item itemvalue="Python.DatasetUtils" />
@@ -291,8 +304,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
-        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -363,6 +376,9 @@
       <workItem from="1719302573436" duration="309000" />
       <workItem from="1719302893976" duration="4474000" />
       <workItem from="1719308606279" duration="77000" />
+      <workItem from="1719308690446" duration="8791000" />
+      <workItem from="1719594166812" duration="34095000" />
+      <workItem from="1722001830904" duration="1410000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -603,13 +619,13 @@
           <option name="timeStamp" value="763" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py</url>
-          <line>169</line>
+          <url>file://$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py</url>
+          <line>181</line>
           <option name="timeStamp" value="771" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py</url>
-          <line>219</line>
+          <url>file://$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py</url>
+          <line>234</line>
           <option name="timeStamp" value="773" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -618,34 +634,79 @@
           <option name="timeStamp" value="774" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py</url>
-          <line>88</line>
+          <url>file://$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py</url>
+          <line>102</line>
           <option name="timeStamp" value="775" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py</url>
-          <line>138</line>
-          <option name="timeStamp" value="786" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/advancedRagUtils.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="789" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="790" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="791" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py</url>
-          <line>92</line>
+          <url>file://$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py</url>
+          <line>106</line>
           <option name="timeStamp" value="792" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/advancedRagUtils.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="800" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py</url>
+          <line>250</line>
+          <option name="timeStamp" value="801" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py</url>
+          <line>214</line>
+          <option name="timeStamp" value="802" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py</url>
+          <line>164</line>
+          <option name="timeStamp" value="803" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py</url>
+          <line>217</line>
+          <option name="timeStamp" value="805" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-862429092/-1298038738/langchain_core/output_parsers/json.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="807" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="808" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="809" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py</url>
+          <line>189</line>
+          <option name="timeStamp" value="810" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py</url>
+          <line>233</line>
+          <option name="timeStamp" value="811" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py</url>
+          <line>251</line>
+          <option name="timeStamp" value="812" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py</url>
+          <line>287</line>
+          <option name="timeStamp" value="813" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py</url>
+          <line>266</line>
+          <option name="timeStamp" value="815" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>notebook:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/langgraph_rag_agent_llama3_local.ipynb</url>
@@ -662,6 +723,21 @@
           <line>4</line>
           <option name="timeStamp" value="768" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+          <url>notebook:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/play.ipynb</url>
+          <line>90</line>
+          <option name="timeStamp" value="793" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+          <url>notebook:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/play.ipynb</url>
+          <line>104</line>
+          <option name="timeStamp" value="794" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+          <url>notebook:////wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/play.ipynb</url>
+          <line>177</line>
+          <option name="timeStamp" value="795" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint enabled="true" type="django-exception">
@@ -676,9 +752,14 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="logger" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/dynabicChatbot$AdvancedRAGSupport.coverage" NAME="AdvancedRAGSupport Coverage Results" MODIFIED="1719307425517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$AdvancedRAGSupport.coverage" NAME="test_AgentRAGWithWeb Coverage Results" MODIFIED="1720025517207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$UITest_NO_LOGIN.coverage" NAME="UITest_NO_LOGIN Coverage Results" MODIFIED="1718727552158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717149510442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug__1_.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717070715688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

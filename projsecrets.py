@@ -26,3 +26,6 @@ os.environ["MONGODB_USER"] = "paduraru2009"
 os.environ["MONGODB_DATABASE"] = "dynabicChatbot"
 os.environ["MONGODB_CLIENT"] = ""
 os.environ["MONGODB_COLLECTION"] = "dynabicChatbot"
+os.environ["TAVILY_API_KEY"] = "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"
+
+
