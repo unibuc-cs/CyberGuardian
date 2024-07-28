@@ -1,4 +1,4 @@
-# CyberGuardian chatbot
+# CyberGuardian assistant
 
 ## Model loading, usage, demo
 * Step 1: Check our huggingface repository and download the model
