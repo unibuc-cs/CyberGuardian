@@ -28,10 +28,21 @@ For example:
   - Dataset handling can be done using **DatasetUtils** config
   - To interact with the model and ask questions in a reproduceable way, use **main_qa**.
 
-## TODO: 
- - Final paper ICSOFT cite 
- - Upload documentation folder with demos and paper, presentations.
- - Make both repositories public
+## Please cite our work properly if you find it useful in any way:
+```
+@conference{CyberGuardian,
+author={Ciprian Paduraru. and Catalina Patilea. and Alin Stefanescu.},
+title={CyberGuardian: An Interactive Assistant for Cybersecurity Specialists Using Large Language Models},
+booktitle={Proceedings of the 19th International Conference on Software Technologies - ICSOFT},
+year={2024},
+pages={442-449},
+publisher={SciTePress},
+organization={INSTICC},
+doi={10.5220/0012811700003753},
+isbn={978-989-758-706-1},
+issn={2184-2833},
+}
+```
 
 Acknowledgements: This research was supported by European Union’s Horizon Europe research and innovation programme under grant agreement no. 101070455, [project DYNABIC](https://dynabic.eu), where we use the code for the Chat4Operator component.
 
