@@ -7,40 +7,8 @@
     <option name="proportionPopup" value="0.503125" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="A temp file doc">
-      <change afterPath="$PROJECT_DIR$/AdvancedRAG/CyberguardianAgentWithRagAndWebSearch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdvancedRAG/Demo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/data_level0.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/length.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdvancedRAG/test_AgentRAGWithWebSearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/AdvancedRAGSupport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/test_AgentRAGWithWeb.xml" afterDir="false" />
+    <list default="true" id="27857ade-cc76-4743-b341-a1fb449f1a1f" name="Changes" comment="Many improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/etlUtils/vecstore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/CyberGuardianLLM_Inference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/LLM/QuestionAndAnswerUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAGSupport/Demo1_langchain.png" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/Demo1_langchain_example.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/.ipynb_checkpoints/play-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/.ipynb_checkpoints/play-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/AdaptiveRAGSupport.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/AdaptiveRAGSupport.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RAGPromptsFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/RAGPromptsFactory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/data_level0.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/header.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/header.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/length.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/link_lists.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/0dd13621-03e8-400b-97be-262c05303799/link_lists.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/RagSupport_test/chroma.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/RagSupport_test/chroma.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/advancedRagUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/advancedRagUtils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/main_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/test_AdaptiveRAGSupport.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/play.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AdvancedRAG/play.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/LLama-3_adaptiveRAG_langchain.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/LLama-3_adaptiveRAG_langchain.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play with REACT and tools including custom.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/Play with REACT and tools including custom.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/data_level0.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/header.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/index_metadata.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/length.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/75c8c17e-4c7a-46e4-bd49-2dc452014d82/link_lists.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SyntheticGeneratorsAndExperiments/chroma_db/chroma.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projsecrets.py" beforeDir="false" afterPath="$PROJECT_DIR$/projsecrets.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +38,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/UI" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -90,7 +58,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-1777440594/-1298038738/tokenizers/__init__.pyi" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-862429092/-1298038738/langchain_core/prompts/prompt.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/JetBrains/PyCharm2024.1/remote_sources/-862429092/-1298038738/langgraph/graph/state.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -110,47 +79,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.AdvancedRAGSupport.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CleanDataset.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.CyberGuardianLLM_InferenceTest.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.CyberGuardianLLM_Training_accelerate.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.CyberGuardianLLM_Training_debug (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.CyberGuardianLLM_Training_debug.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DatasetUtils.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DatasetUtils_EA_PC.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FinetuningModel.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.UITest.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.UITest_NO_LOGIN.executor&quot;: &quot;Run&quot;,
-    &quot;Python.VisualizationSample_testSim.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.asccelerate_tests_gpt2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.docstoreplay.executor&quot;: &quot;Run&quot;,
-    &quot;Python.docstoreplay_EA_PC.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.main_qa.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_qa_EA_PC.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_AgentRAGWithWeb.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.test_copilot.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.tests (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Python.tests_accelerate.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.tests_debug.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/SyntheticGeneratorsAndExperiments/AdvancedRAGSupport/main_test.py&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/Data/projsecrets.py&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.AdvancedRAGSupport.executor": "Run",
+    "Python.CleanDataset.executor": "Debug",
+    "Python.CyberGuardianLLM_InferenceTest.executor": "Debug",
+    "Python.CyberGuardianLLM_Training_accelerate.executor": "Debug",
+    "Python.CyberGuardianLLM_Training_debug (1).executor": "Run",
+    "Python.CyberGuardianLLM_Training_debug.executor": "Run",
+    "Python.DatasetUtils.executor": "Run",
+    "Python.DatasetUtils_EA_PC.executor": "Run",
+    "Python.FinetuningModel.executor": "Debug",
+    "Python.UITest.executor": "Debug",
+    "Python.UITest_NO_LOGIN.executor": "Run",
+    "Python.VisualizationSample_testSim.executor": "Debug",
+    "Python.asccelerate_tests_gpt2.executor": "Run",
+    "Python.docstoreplay.executor": "Run",
+    "Python.docstoreplay_EA_PC.executor": "Debug",
+    "Python.main_qa.executor": "Run",
+    "Python.main_qa_EA_PC.executor": "Run",
+    "Python.test_AgentRAGWithWeb.executor": "Debug",
+    "Python.test_copilot.executor": "Debug",
+    "Python.tests (1).executor": "Debug",
+    "Python.tests_accelerate.executor": "Debug",
+    "Python.tests_debug.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "two.files.diff.last.used.file": "//wsl.localhost/Ubuntu-22.04/home/ciprian/dynabicChatbot/Data/projsecrets.py",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" show_stripe_button="false" side_tool="true" />
@@ -206,7 +175,7 @@
       <recent name="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\SyntheticGeneratorsAndExperiments" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_AgentRAGWithWeb">
+  <component name="RunManager" selected="Python.UITest_NO_LOGIN">
     <configuration name="CyberGuardianLLM_PushToHub_EA_PC" type="PythonConfigurationType" factoryName="Python">
       <module name="dynabicChatbot" />
       <option name="ENV_FILES" value="" />
@@ -287,18 +256,18 @@
       <item itemvalue="Python.CyberGuardianLLM_PushToHub_EA_PC" />
       <item itemvalue="Python.CyberGuardianLLM_Training_accelerate" />
       <item itemvalue="Python.DatasetUtils_EA_PC" />
-      <item itemvalue="Python.UITest" />
+      <item itemvalue="Python.main_qa_EA_PC" />
+      <item itemvalue="Python.CyberGuardianLLM_InferenceTest" />
+      <item itemvalue="Python.VisualizationSample_testSim" />
+      <item itemvalue="Python.docstoreplay_EA_PC" />
       <item itemvalue="Python.UITest_EA_PC" />
-      <item itemvalue="Python.CyberGuardianLLM_Training_debug" />
+      <item itemvalue="Python.UITest" />
       <item itemvalue="Python.UITest_NO_LOGIN" />
       <item itemvalue="Python.main_qa" />
-      <item itemvalue="Python.VisualizationSample_testSim" />
-      <item itemvalue="Python.CyberGuardianLLM_InferenceTest" />
       <item itemvalue="Python.test_AgentRAGWithWeb" />
       <item itemvalue="Python.docstoreplay" />
-      <item itemvalue="Python.docstoreplay_EA_PC" />
       <item itemvalue="Python.DatasetUtils" />
-      <item itemvalue="Python.main_qa_EA_PC" />
+      <item itemvalue="Python.CyberGuardianLLM_Training_debug" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -378,7 +347,12 @@
       <workItem from="1719308606279" duration="77000" />
       <workItem from="1719308690446" duration="8791000" />
       <workItem from="1719594166812" duration="34095000" />
-      <workItem from="1722001830904" duration="1410000" />
+      <workItem from="1722001830904" duration="6374000" />
+      <workItem from="1722166236593" duration="7789000" />
+      <workItem from="1722517590752" duration="4354000" />
+      <workItem from="1722615620578" duration="29000" />
+      <workItem from="1727600436965" duration="229000" />
+      <workItem from="1727600764007" duration="2110000" />
     </task>
     <task id="LOCAL-00001" summary="First phase update - datasets and scripts">
       <option name="closed" value="true" />
@@ -476,7 +450,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718602978688</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Many improvements">
+      <option name="closed" value="true" />
+      <created>1722004189090</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722004189090</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +528,8 @@
     <MESSAGE value="New demo Hospital work in progress - part 2" />
     <MESSAGE value="Significant architectural optimizations, paths, etc" />
     <MESSAGE value="A temp file doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="A temp file doc" />
+    <MESSAGE value="Many improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Many improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,7 +743,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dynabicChatbot$AdvancedRAGSupport.coverage" NAME="test_AgentRAGWithWeb Coverage Results" MODIFIED="1720025517207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
-    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest_NO_LOGIN.coverage" NAME="UITest_NO_LOGIN Coverage Results" MODIFIED="1718727552158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
+    <SUITE FILE_PATH="coverage/dynabicChatbot$UITest_NO_LOGIN.coverage" NAME="UITest_NO_LOGIN Coverage Results" MODIFIED="1727601257176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04_new\home\ciprian\dynabicChatbot\UI" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_InferenceTest.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717149510442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$CyberGuardianLLM_Training_debug__1_.coverage" NAME="CyberGuardianLLM_InferenceTest Coverage Results" MODIFIED="1717070715688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/dynabicChatbot$main_qa.coverage" NAME="main_qa Coverage Results" MODIFIED="1718367796005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

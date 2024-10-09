@@ -2,8 +2,8 @@ __pycache__/*.*
 etl/__pycache__/*.*
 *Zone.Identifier
 vectors/*.*
- __pycache__/*.*
 */ __pycache__/*.*
 /LLM/rawtrainedmodel/
 **/__pycache__/
 **/__pycache__/*.*
+**/*.pyc

@@ -11,7 +11,7 @@
     </envs>
     <option name="SDK_HOME" value="" />
     <option name="SDK_NAME" value="/home/ciprian/anaconda3" />
-    <option name="WORKING_DIRECTORY" value="\\wsl.localhost\Ubuntu-22.04\home\ciprian\dynabicChatbot\UI" />
+    <option name="WORKING_DIRECTORY" value="\\wsl.localhost\Ubuntu-22.04_new\home\ciprian\dynabicChatbot\UI" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
