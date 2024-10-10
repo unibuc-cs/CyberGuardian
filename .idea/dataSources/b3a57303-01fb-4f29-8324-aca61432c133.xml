@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="chroma">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.52">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.53">
     <root id="1"/>
     <collation id="2" parent="1" name="BINARY"/>
     <collation id="3" parent="1" name="NOCASE"/>
@@ -1617,29 +1617,29 @@ tokenize=&apos;trigram&apos;</Arguments>
       <ModuleName>fts5</ModuleName>
     </virtual-table>
     <column id="573" parent="555" name="collection_id">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="574" parent="555" name="key">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="575" parent="555" name="str_value">
-      <DasType>TEXT|0s</DasType>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="576" parent="555" name="int_value">
-      <DasType>INTEGER|0s</DasType>
       <Position>4</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="577" parent="555" name="float_value">
-      <DasType>REAL|0s</DasType>
       <Position>5</Position>
+      <StoredType>REAL|0s</StoredType>
     </column>
     <column id="578" parent="555" name="bool_value">
-      <DasType>INTEGER|0s</DasType>
       <Position>6</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <foreign-key id="579" parent="555">
       <ColNames>collection_id</ColNames>
@@ -1660,22 +1660,22 @@ key</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_collection_metadata_1</UnderlyingIndexName>
     </key>
     <column id="582" parent="556" name="id">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="583" parent="556" name="name">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="584" parent="556" name="dimension">
-      <DasType>INTEGER|0s</DasType>
       <Position>3</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="585" parent="556" name="database_id">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <foreign-key id="586" parent="556">
       <ColNames>database_id</ColNames>
@@ -1705,18 +1705,18 @@ database_id</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_collections_2</UnderlyingIndexName>
     </key>
     <column id="591" parent="557" name="id">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="592" parent="557" name="name">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="593" parent="557" name="tenant_id">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <foreign-key id="594" parent="557">
       <ColNames>tenant_id</ColNames>
@@ -1763,8 +1763,8 @@ name</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_embedding_fulltext_search_config_1</UnderlyingIndexName>
     </key>
     <column id="603" parent="559" name="id">
-      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="604" parent="559" name="c0">
       <Position>2</Position>
@@ -1774,24 +1774,24 @@ name</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="606" parent="560" name="id">
-      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="607" parent="560" name="block">
-      <DasType>BLOB|0s</DasType>
       <Position>2</Position>
+      <StoredType>BLOB|0s</StoredType>
     </column>
     <key id="608" parent="560">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="609" parent="561" name="id">
-      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="610" parent="561" name="sz">
-      <DasType>BLOB|0s</DasType>
       <Position>2</Position>
+      <StoredType>BLOB|0s</StoredType>
     </column>
     <key id="611" parent="561">
       <ColNames>id</ColNames>
@@ -1821,29 +1821,29 @@ term</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_embedding_fulltext_search_idx_1</UnderlyingIndexName>
     </key>
     <column id="617" parent="563" name="id">
-      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="618" parent="563" name="key">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="619" parent="563" name="string_value">
-      <DasType>TEXT|0s</DasType>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="620" parent="563" name="int_value">
-      <DasType>INTEGER|0s</DasType>
       <Position>4</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="621" parent="563" name="float_value">
-      <DasType>REAL|0s</DasType>
       <Position>5</Position>
+      <StoredType>REAL|0s</StoredType>
     </column>
     <column id="622" parent="563" name="bool_value">
-      <DasType>INTEGER|0s</DasType>
       <Position>6</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <foreign-key id="623" parent="563">
       <ColNames>id</ColNames>
@@ -1863,29 +1863,29 @@ key</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_embedding_metadata_1</UnderlyingIndexName>
     </key>
     <column id="626" parent="564" name="id">
-      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="627" parent="564" name="segment_id">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="628" parent="564" name="embedding_id">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="629" parent="564" name="seq_id">
-      <DasType>BLOB|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
+      <StoredType>BLOB|0s</StoredType>
     </column>
     <column id="630" parent="564" name="created_at">
-      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
+      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <index id="631" parent="564" name="sqlite_autoindex_embeddings_1">
       <ColNames>segment_id
@@ -1903,54 +1903,54 @@ embedding_id</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_embeddings_1</UnderlyingIndexName>
     </key>
     <column id="634" parent="565" name="seq_id">
-      <DasType>INTEGER|0s</DasType>
       <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="635" parent="565" name="created_at">
-      <DasType>TIMESTAMP|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <column id="636" parent="565" name="operation">
-      <DasType>INTEGER|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="637" parent="565" name="topic">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="638" parent="565" name="id">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="639" parent="565" name="vector">
-      <DasType>BLOB|0s</DasType>
       <Position>6</Position>
+      <StoredType>BLOB|0s</StoredType>
     </column>
     <column id="640" parent="565" name="encoding">
-      <DasType>TEXT|0s</DasType>
       <Position>7</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="641" parent="565" name="metadata">
-      <DasType>TEXT|0s</DasType>
       <Position>8</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <key id="642" parent="565">
       <ColNames>seq_id</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="643" parent="566" name="segment_id">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="644" parent="566" name="seq_id">
-      <DasType>BLOB|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>BLOB|0s</StoredType>
     </column>
     <index id="645" parent="566" name="sqlite_autoindex_max_seq_id_1">
       <ColNames>segment_id</ColNames>
@@ -1963,29 +1963,29 @@ embedding_id</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_max_seq_id_1</UnderlyingIndexName>
     </key>
     <column id="647" parent="567" name="dir">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="648" parent="567" name="version">
-      <DasType>INTEGER|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="649" parent="567" name="filename">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="650" parent="567" name="sql">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="651" parent="567" name="hash">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <index id="652" parent="567" name="sqlite_autoindex_migrations_1">
       <ColNames>dir
@@ -2000,29 +2000,29 @@ version</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_migrations_1</UnderlyingIndexName>
     </key>
     <column id="654" parent="568" name="segment_id">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="655" parent="568" name="key">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="656" parent="568" name="str_value">
-      <DasType>TEXT|0s</DasType>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="657" parent="568" name="int_value">
-      <DasType>INTEGER|0s</DasType>
       <Position>4</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="658" parent="568" name="float_value">
-      <DasType>REAL|0s</DasType>
       <Position>5</Position>
+      <StoredType>REAL|0s</StoredType>
     </column>
     <column id="659" parent="568" name="bool_value">
-      <DasType>INTEGER|0s</DasType>
       <Position>6</Position>
+      <StoredType>INTEGER|0s</StoredType>
     </column>
     <foreign-key id="660" parent="568">
       <ColNames>segment_id</ColNames>
@@ -2043,22 +2043,22 @@ key</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_segment_metadata_1</UnderlyingIndexName>
     </key>
     <column id="663" parent="569" name="id">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="664" parent="569" name="type">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="665" parent="569" name="scope">
-      <DasType>TEXT|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="666" parent="569" name="collection">
-      <DasType>TEXT|0s</DasType>
       <Position>4</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <foreign-key id="667" parent="569">
       <ColNames>collection</ColNames>
@@ -2076,28 +2076,28 @@ key</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_segments_1</UnderlyingIndexName>
     </key>
     <column id="670" parent="570" name="type">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="671" parent="570" name="name">
-      <DasType>TEXT|0s</DasType>
       <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="672" parent="570" name="tbl_name">
-      <DasType>TEXT|0s</DasType>
       <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="673" parent="570" name="rootpage">
-      <DasType>INT|0s</DasType>
       <Position>4</Position>
+      <StoredType>INT|0s</StoredType>
     </column>
     <column id="674" parent="570" name="sql">
-      <DasType>TEXT|0s</DasType>
       <Position>5</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <column id="675" parent="571" name="id">
-      <DasType>TEXT|0s</DasType>
       <Position>1</Position>
+      <StoredType>TEXT|0s</StoredType>
     </column>
     <index id="676" parent="571" name="sqlite_autoindex_tenants_1">
       <ColNames>id</ColNames>

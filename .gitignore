@@ -7,3 +7,5 @@ vectors/*.*
 **/__pycache__/
 **/__pycache__/*.*
 **/*.pyc
+ Data/etlUtils/__pycache__/*.*
+LLM/__pycache__/*.*

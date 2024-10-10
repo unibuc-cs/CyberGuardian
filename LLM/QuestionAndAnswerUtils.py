@@ -698,6 +698,7 @@ class QASystem():
         else:
             args.update({"chat_history": []})
 
+
         if self.streamingOnAnotherThread:
             from threading import Thread
             self.temp_modelevaluate_thread = Thread(target=chainToUse.invoke, args=(args,))

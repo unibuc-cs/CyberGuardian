@@ -5,3 +5,10 @@ vectors/knowledgedb.pkl filter=lfs diff=lfs merge=lfs -text
 *.fkl filter=lfs diff=lfs merge=lfs -text
 RAGSupport/vectors/knowledgedb.faiss filter=lfs diff=lfs merge=lfs -text
 RAGSupport/vectors/knowledgedb.pkl filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.sqlite3 filter=lfs diff=lfs merge=lfs -text
+RagSupport_test/chroma.sqlite3 filter=lfs diff=lfs merge=lfs -text
+RagSupport_test/8149dfe8-e010-42cc-8c6a-551b33187746/data_level0.bin filter=lfs diff=lfs merge=lfs -text
+RagSupport_test/8149dfe8-e010-42cc-8c6a-551b33187746/header.bin filter=lfs diff=lfs merge=lfs -text
+RagSupport_test/8149dfe8-e010-42cc-8c6a-551b33187746/length.bin filter=lfs diff=lfs merge=lfs -text
+RagSupport_test/8149dfe8-e010-42cc-8c6a-551b33187746/link_lists.bin filter=lfs diff=lfs merge=lfs -text

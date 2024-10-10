@@ -6,7 +6,7 @@ DEFAULT_QUESTION_PROMPT = "Question: {question}"
 
 
 from enum import Enum
-from UI.demoSupport import UseCase, USE_CASE
+from UI.demoSupport import UseCase, get_demo_usecase
 from userUtils import (SecurityOfficerExpertise, getUserExpertiseStr,
                        Response_Preferences, Preference_Politely, Preference_Emojis, SecurityOfficer)
 
@@ -76,8 +76,8 @@ def init_templates(userProfile: SecurityOfficer):
         {str_prompt_Preference_Politely}
         """
 
-
-    if USE_CASE == UseCase.Default or USE_CASE == UseCase.SmartHome:
+    demo_usecase: UseCase = get_demo_usecase()
+    if demo_usecase == UseCase.Default or demo_usecase == UseCase.SmartHome:
         template_securityOfficer_instruction_rag_nosources_default = """\
         Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
         {context}
@@ -105,16 +105,8 @@ def init_templates(userProfile: SecurityOfficer):
                 {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_firewallInsert = """\
-                Write only the following string and no other words, do not start your response with Sure. Do not write like I provided you the code.
-                '''
-                df1 = pd.read_csv("SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
-        
-                new_row = ('IP': {param_ip}, 'NAME': {param_name}, 'DATE': datetime.now(), 'BLOCKED':1)
-        
-                df1=pd.concat([df1, pd.DataFrame([new_row])], ignore_index=True)
-        
-                df1.to_csv("SmartHome_DDoSSnapshot_Data/FIREWALL_PROCESSES.csv")
-                '''
+                Write only the following string and no other words, do not start your response with sure.
+                "Ok, I will call dynabicagenttools.firewallUpdate to analyze the request first. TOKEN_DO_NOT_SHOW: FUNC_CALL dynabicagenttools.firewallUpdate Params {params}".
                 {context}"""
 
         template_securityOfficer_instruction_rag_withsources_default = """
@@ -129,9 +121,7 @@ def init_templates(userProfile: SecurityOfficer):
         FINAL ANSWER:"""
 
         llama_condense_template = "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\n\nChat History:\n{chat_history}\nFollow Up Input: {question}\nStandalone Question:"
-    elif USE_CASE == UseCase.Hospital:
-       
-
+    elif demo_usecase == UseCase.Hospital:
         template_securityOfficer_instruction_rag_nosources_default = """\
         Use the following pieces of context to answer the question. If no context provided, answer like a AI assistant.
         {context}
