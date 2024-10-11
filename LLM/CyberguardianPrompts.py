@@ -83,15 +83,17 @@ def init_templates(userProfile: SecurityOfficer):
         {context}
         Question: {question}"""
 
+
+
         template_securityOfficer_instruction_rag_nosources_funccalls_resourceUtilization = """\
                 Write only the following string and no other words, do not start your response with Sure. 
-                "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison Params 'SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' 'SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv' "
+                "Ok, I will show you two histograms of usage by invoking FUNC_CALL dynabicagenttools.showResourceUtilizationComparison_v2. TOKEN_DO_NOT_SHOW FUNC_CALL dynabicagenttools.showResourceUtilizationComparison_v2 Params 'SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_False.csv' 'SmartHome_DDoSSnapshot_Data/good_RESOURCES_OCCUPANCY_HACKED_True.csv' "        
                 {context}
                 Question: {question}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs = """\
                 Write only the following string and no other words, do not start your response with Sure.
-                "Ok, I will show you the pandas dataset according to your request. I will invoke FUNC_CALL dynabicagenttools.show_outlier_ips_usage Params 'SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' 'SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' "
+                "Ok, I will show you the pandas dataset according to your request. I will invoke FUNC_CALL dynabicagenttools.show_outlier_ips_usage_v2. TOKEN_DO_NOT_SHOW FUNC_CALL dynabicagenttools.show_outlier_ips_usage_v2 Params 'SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' 'SmartHome_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' "
                 {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS = """\
@@ -134,7 +136,7 @@ def init_templates(userProfile: SecurityOfficer):
 
         template_securityOfficer_instruction_rag_nosources_funccalls_devicesByIPLogs = """\
                 Write only the following string and no other words, do not start your response with Sure.
-                "Ok, I will show you the pandas dataset according to your request. I will invoke FUNC_CALL dynabicagenttools.show_outlier_ips_usage Params 'Hospital_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' 'Hospital_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' "
+                "Ok, I will show you the pandas dataset according to your request. I will invoke FUNC_CALL dynabicagenttools.show_outlier_ips_usage_v2. TOKEN_DO_NOT_SHOW FUNC_CALL dynabicagenttools.show_outlier_ips_usage_v2 Params 'Hospital_DDoSSnapshot_Data/DATASET_LOGS_HACKED_False.csv' 'Hospital_DDoSSnapshot_Data/DATASET_LOGS_HACKED_True.csv' "
                 {context}"""
 
         template_securityOfficer_instruction_rag_nosources_funccalls_topDemandingIPS = """\
